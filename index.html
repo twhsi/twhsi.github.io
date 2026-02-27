@@ -2,526 +2,151 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>朱光潛式寫作流程｜九宮網站</title>
-  <style>
-    :root {
-      --bg: #f4efe6;
-      --bg-2: #e8dfd1;
-      --panel: #fffaf2;
-      --cell: #fffef9;
-      --ink: #221a12;
-      --ink-soft: #5d5143;
-      --line: #dbc8ae;
-      --line-strong: #b17a3a;
-      --accent: #9f5925;
-      --accent-soft: #f4dfca;
-      --shadow: 0 18px 38px rgba(74, 50, 24, 0.2);
-      --dock-h: 250px;
-      --dock-h-mobile: 300px;
-    }
-
-    body.dark {
-      --bg: #18130f;
-      --bg-2: #241d16;
-      --panel: #211a13;
-      --cell: #2a2118;
-      --ink: #f7ead8;
-      --ink-soft: #d8c5ac;
-      --line: #4f3c2b;
-      --line-strong: #daa874;
-      --accent: #efbb85;
-      --accent-soft: #3b2c1f;
-      --shadow: 0 22px 38px rgba(0, 0, 0, 0.42);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
-      color: var(--ink);
-      line-height: 1.65;
-      background:
-        radial-gradient(circle at 12% 10%, rgba(160, 95, 45, 0.18), transparent 35%),
-        radial-gradient(circle at 88% 14%, rgba(44, 122, 106, 0.13), transparent 28%),
-        linear-gradient(160deg, var(--bg), var(--bg-2));
-      transition: background 220ms ease, color 220ms ease;
-    }
-
-    .shell {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 14px;
-    }
-
-    .workspace {
-      display: flex;
-      gap: 16px;
-      align-items: stretch;
-      min-height: calc(100vh - 28px);
-    }
-
-    .board-pane {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: linear-gradient(155deg, rgba(255, 255, 255, 0.45), rgba(255, 248, 236, 0.35));
-      box-shadow: var(--shadow);
-    }
-
-    .board {
-      width: min(100%, calc(100vh - 64px));
-      aspect-ratio: 1 / 1;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .cell {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: linear-gradient(165deg, var(--cell), rgba(255, 248, 235, 0.9));
-      color: var(--ink);
-      text-align: left;
-      cursor: pointer;
-      padding: 10px 10px 8px;
-      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 180ms ease;
-    }
-
-    .cell:hover {
-      transform: translateY(-2px);
-      border-color: var(--line-strong);
-    }
-
-    .cell.active {
-      border-color: var(--accent);
-      background: linear-gradient(165deg, var(--accent-soft), rgba(255, 238, 214, 0.9));
-      box-shadow: inset 0 0 0 1px rgba(159, 89, 37, 0.24);
-    }
-
-    .cell-id {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 4px;
-      letter-spacing: 0.04em;
-    }
-
-    .cell-title {
-      display: block;
-      font-size: clamp(15px, 1.2vw, 20px);
-      line-height: 1.3;
-      font-weight: 700;
-    }
-
-    .cell-center {
-      border: 2px solid var(--accent);
-    }
-
-    .note-pane {
-      width: min(460px, 34vw);
-      min-width: 300px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .note-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .note-title {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.2;
-    }
-
-    .btn-row{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      margin-left:auto;
-    }
-
-    .theme-btn {
-      border: 1px solid var(--line);
-      background: var(--cell);
-      color: var(--ink);
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .meta {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .note-card h2 {
-      margin: 2px 0 8px;
-      font-size: clamp(22px, 1.8vw, 30px);
-      line-height: 1.2;
-    }
-
-    .note-card p {
-      margin: 0;
-      font-size: clamp(16px, 1.1vw, 19px);
-      line-height: 1.75;
-      color: var(--ink-soft);
-      white-space: pre-wrap;
-    }
-
-    .hint {
-      margin-top: auto;
-      font-size: 13px;
-      color: var(--ink-soft);
-      border-top: 1px dashed var(--line);
-      padding-top: 10px;
-    }
-
-    .toast{
-      position: fixed;
-      left: 50%;
-      bottom: 18px;
-      transform: translateX(-50%);
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 12px;
-      color: var(--ink);
-      box-shadow: var(--shadow);
-      opacity: 0;
-      pointer-events:none;
-      transition: opacity 160ms ease, transform 160ms ease;
-      z-index: 50;
-      font-size: 13px;
-    }
-    .toast.show{
-      opacity: 1;
-      transform: translateX(-50%) translateY(-2px);
-    }
-
-    @media (max-width: 980px) {
-      :root { --dock-h: var(--dock-h-mobile); }
-
-      body { overflow: hidden; }
-
-      .shell {
-        max-width: none;
-        height: 100vh;
-        padding: 12px 12px 0;
-      }
-
-      .workspace {
-        height: 100%;
-        min-height: 0;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .note-pane {
-        order: 1;
-        width: 100%;
-        min-width: 0;
-        height: calc(100vh - var(--dock-h) - 24px);
-        overflow: auto;
-        padding: 18px 16px 40px;
-      }
-
-      .board-pane {
-        order: 2;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 20;
-        height: var(--dock-h);
-        padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
-        border-radius: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 0;
-        background: var(--panel);
-        backdrop-filter: blur(10px);
-      }
-
-      .board {
-        width: 100%;
-        max-width: none;
-        height: 100%;
-        aspect-ratio: auto;
-        gap: 8px;
-      }
-
-      .cell {
-        border-radius: 12px;
-        min-height: 0;
-        padding: 9px;
-      }
-
-      .cell-title {
-        font-size: clamp(12px, 2.9vw, 14px);
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .cell-id {
-        font-size: 11px;
-        margin-bottom: 2px;
-      }
-
-      .note-card p {
-        font-size: clamp(16px, 4.2vw, 20px);
-      }
-
-      .toast{ bottom: calc(var(--dock-h) + 14px); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>［直播精华总结］傅盛14天龙虾养成日记｜九宮格</title>
+  <link rel="stylesheet" href="./mandala-style.css" />
 </head>
 
 <body>
-  <main class="shell">
+  <div class="shell">
     <div class="workspace">
-      <section class="board-pane" aria-label="朱光潛式寫作流程九宮格">
-        <div class="board" id="grid"></div>
+      <!-- LEFT: 3×3 Grid -->
+      <section class="board-pane" aria-label="Mandala Grid">
+        <div id="grid" class="board" role="grid" aria-label="Nine-grid navigation"></div>
       </section>
 
-      <aside class="note-pane" aria-live="polite">
+      <!-- RIGHT: Note pane -->
+      <aside class="note-pane" aria-label="Card detail">
         <div class="note-top">
-          <h1 class="note-title">朱光潛式寫作流程｜九宮網站</h1>
-          <div class="btn-row">
-            <button class="theme-btn" id="copy-btn" type="button">複製本格</button>
-            <button class="theme-btn" id="download-btn" type="button">下載 Markdown</button>
-            <button class="theme-btn" id="theme-btn" type="button">切換明暗</button>
+          <div>
+            <div class="meta" id="page-meta">Mandala / 3×3</div>
+            <h1 class="note-title" id="page-title">［直播精华总结］傅盛14天龙虾养成日记</h1>
+            <div class="hint" id="page-hint">點格子切換內容；下方可貼全文自動切成九宮，再複製 Markdown。</div>
           </div>
+          <button class="theme-btn" id="theme-btn" type="button">切換成暗色</button>
         </div>
 
-        <div class="meta" id="card-id">B2 中心</div>
-        <section class="note-card">
-          <h2 id="card-title">折衷法：先輪廓、再生發</h2>
+        <div class="note-card">
+          <div class="meta" id="card-id">5 核心</div>
+          <h2 id="card-title">中心摘要</h2>
           <p id="card-body"></p>
-        </section>
+        </div>
 
-        <div class="hint">
-          使用方式：點九宮切換內容。桌機左九宮/右內容；手機上方可捲動/下方固定九宮 Dock。<br/>
-          核心流程：自由聯想 → 小標題 → 刪除無關 → 線索次第 → 逐段寫 → 完稿整合一次。
+        <div class="tool-box">
+          <div class="tool-actions">
+            <button class="tool-btn" id="copy-template-btn" type="button">複製 Markdown</button>
+            <button class="tool-btn" id="run-check-btn" type="button">切成九宮</button>
+          </div>
+
+          <textarea id="heading-input" spellcheck="false"></textarea>
+          <div id="check-result" class="check-result"></div>
         </div>
       </aside>
     </div>
-  </main>
-
-  <div class="toast" id="toast">已複製</div>
+  </div>
 
   <script>
-    // 3×3：A1 A2 A3 / B1 B2 B3 / C1 C2 C3（中心固定 B2）
-    const cards = [
-      {
-        id: "A1",
-        title: "線索關聯 vs 心力耗損",
-        body: "寫作要追線索、看關聯，但不必一直硬推進。\n\n要點：\n1) 同時顧字句段的線索連結。\n2) 避免為了“向前”造成無謂耗損。\n3) 需要方法：既能追主線，也能省心力。"
-      },
-      {
-        id: "A2",
-        title: "想到就寫：先佔地築牆",
-        body: "想到一點意思，就先把它寫下來。\n\n比喻：\n- 像打仗先佔一塊地；寫下來等於築牆守住。\n- 也成為下一步突擊（延伸）的基地。"
-      },
-      {
-        id: "A3",
-        title: "寫作讓心更專注",
-        body: "寫本身是集中注意力的助力。\n\n效果：\n1) 一旦動筆，心不易旁騖。\n2) 先寫下來，比一直想更能推進到下一步。"
-      },
-      {
-        id: "B1",
-        title: "字句反過來刺激思想",
-        body: "寫成的字句常反過來刺激思想。\n\n現象：\n1) 寫著寫著新意湧現。\n2) 原先預想的一段話，可能需要整段改寫。\n3) 所謂“由文生情/興會淋漓”多在此刻發生。"
-      },
-      {
-        id: "B2 中心",
-        title: "折衷法：先輪廓、再生發",
-        body: "介於“全用腹稿”與“全不用腹稿”之間的折衷。\n\n兩個同時成立：\n1) 先有綱要與輪廓 → 保證層次、條理、輕重。\n2) 每段不預先定死 → 寫時隨機生發，保留氣韻與生動。"
-      },
-      {
-        id: "B3",
-        title: "定題後：自由聯想 + 小標題",
-        body: "定題之後，抱著題目四方八面地想。\n\n做法：\n1) 近似“自由聯想”：不拘大小、不問次序。\n2) 想到一點，就用三五字小標題記下。\n3) 一直記到能想到的都寫完。"
-      },
-      {
-        id: "C1",
-        title: "刪除無關：衡量、取捨",
-        body: "把亂雜小標題掃一眼，仔細衡量。\n\n取捨：\n1) 無關重要、無須說的：丟掉。\n2) 應該說、能支撐主線的：留下。"
-      },
-      {
-        id: "C2",
-        title: "排線索與次第：寫成綱要",
-        body: "在留下的點之中，理出線索與順序。\n\n輸出：\n1) 依線索與次第把小標題寫成綱要。\n2) 綱要完成，文章輪廓已具。\n3) 每個小標題＝一段的總綱。"
-      },
-      {
-        id: "C3",
-        title: "逐段寫 → 完稿整合一次",
-        body: "依綱要逐段寫下去。\n\n節奏：\n1) 寫一段前先想大意；寫一句前也先想大意。\n2) 新意湧現就立刻修改；不要半途擱下。\n3) 完稿後再通讀整合一次，省去大清大改。"
-      }
-    ];
-
-    const grid = document.getElementById("grid");
-    const cardId = document.getElementById("card-id");
-    const cardTitle = document.getElementById("card-title");
-    const cardBody = document.getElementById("card-body");
-    const themeBtn = document.getElementById("theme-btn");
-    const copyBtn = document.getElementById("copy-btn");
-    const downloadBtn = document.getElementById("download-btn");
-    const toastEl = document.getElementById("toast");
-
-    let activeIndex = 4; // center
-
-    function renderGrid() {
-      grid.innerHTML = "";
-      cards.forEach((card, index) => {
-        const button = document.createElement("button");
-        const isCenter = index === 4;
-        button.type = "button";
-        button.className = "cell" + (index === activeIndex ? " active" : "") + (isCenter ? " cell-center" : "");
-        button.innerHTML = `<span class="cell-id">${card.id}</span><span class="cell-title">${card.title}</span>`;
-        button.addEventListener("click", () => setActive(index));
-        grid.appendChild(button);
-      });
-    }
-
-    function setActive(index) {
-      activeIndex = index;
-      const card = cards[index];
-      cardId.textContent = card.id;
-      cardTitle.textContent = card.title;
-      cardBody.textContent = card.body;
-      renderGrid();
-    }
-
-    function applyTheme(theme) {
-      const isDark = theme === "dark";
-      document.body.classList.toggle("dark", isDark);
-      themeBtn.textContent = isDark ? "切換成明亮" : "切換成暗色";
-    }
-
-    function initTheme() {
-      const saved = localStorage.getItem("mandala-theme");
-      if (saved === "dark" || saved === "light") {
-        applyTheme(saved);
-      } else {
-        const preferDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        applyTheme(preferDark ? "dark" : "light");
-      }
-    }
-
-    function toast(msg){
-      toastEl.textContent = msg;
-      toastEl.classList.add("show");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(()=>toastEl.classList.remove("show"), 900);
-    }
-
-    function copyCurrent(){
-      const c = cards[activeIndex];
-      const text = `${c.id}｜${c.title}\n\n${c.body}`;
-      navigator.clipboard.writeText(text).then(()=>toast("已複製本格內容")).catch(()=>toast("複製失敗（請手動複製）"));
-    }
-
-    function buildMarkdown(){
-      // 依你常用 section 格式輸出（中心 + 八格 + 第二章節流程拆解）
-      const center = cards[4];
-      const map = {
-        "1.1": cards[0], // A1
-        "1.2": cards[1], // A2
-        "1.3": cards[2], // A3
-        "1.4": cards[3], // B1
-        "1.5": cards[5], // B3
-        "1.6": cards[6], // C1
-        "1.7": cards[7], // C2
-        "1.8": cards[8], // C3
-      };
-
-      const md = [];
-      md.push("<!--section: 1-->");
-      md.push("九宮");
-      md.push("");
-      md.push("## 中心");
-      md.push(`**${center.title}**`);
-      md.push("");
-      md.push(center.body.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>"- " + l).join("\n"));
-      md.push("");
-
-      Object.entries(map).forEach(([sec, item])=>{
-        md.push(`<!--section: ${sec}-->`);
-        md.push(`### ${item.id}｜${item.title}`);
-        md.push("");
-        md.push(item.body.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>"- " + l).join("\n"));
-        md.push("");
-      });
-
-      md.push("<!--section: 2-->");
-      md.push("九宮2");
-      md.push("");
-      md.push("## 流程總結（可直接當文章骨架）");
-      md.push("");
-      md.push("- 定題 → 自由聯想（小標題）");
-      md.push("- 刪除無關 → 挑重要");
-      md.push("- 排線索與次第 → 段落綱要");
-      md.push("- 逐段寫（折衷法）→ 新意即改");
-      md.push("- 完稿通讀 → 整合一次");
-      md.push("");
-
-      return md.join("\n");
-    }
-
-    function downloadMarkdown(){
-      const md = buildMarkdown();
-      const blob = new Blob([md], {type:"text/markdown;charset=utf-8"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "朱光潛式寫作流程_九宮.md";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      toast("已下載 Markdown");
-    }
-
-    themeBtn.addEventListener("click", () => {
-      const next = document.body.classList.contains("dark") ? "light" : "dark";
-      applyTheme(next);
-      localStorage.setItem("mandala-theme", next);
-    });
-
-    copyBtn.addEventListener("click", copyCurrent);
-    downloadBtn.addEventListener("click", downloadMarkdown);
-
-    // init
-    setActive(activeIndex);
-    initTheme();
+    // 3×3 cards array order: 0..8 (center is index 4)
+    window.MANDALA_CONFIG = {
+      pageTitle: "［直播精华总结］傅盛14天龙虾养成日记",
+      hint: "點九宮格切換；或把全文貼到下方 → 按「切成九宮」→ 再按「複製 Markdown」貼回 Obsidian。",
+      cards: [
+        {
+          id: "1",
+          title: "定义：龙虾是“自进化工具AGI”",
+          body:
+`龙虾（EasyClaw / 0penClaw）被定义为“可自进化的工具AGI”：
+- 本质差异：不是传统软件的固定功能，而是能“自我进化”
+- 关键能力：对整台电脑的掌控（像人一样操作系统与应用）
+- 目标形态：持续积累、持续增强、越用越强的工作体
+一句话：它不是一个App，而是一套会成长的生产系统。`
+        },
+        {
+          id: "2",
+          title: "核心架构：大脑×记忆×技能×自动化",
+          body:
+`龙虾的底层结构可拆成四件套：
+1) 大模型（大脑）：负责推理与生成
+2) 记忆（文件）：把用过的经验沉淀下来
+3) 技能（Skill 操作手册）：把“会做”固化成可复用步骤
+4) 自动化（Cron）：让流程定时/触发运行
+结果：形成“人歇机器不歇”的 7×24 小时运转。`
+        },
+        {
+          id: "3",
+          title: "方法论：AI是一把手工程",
+          body:
+`傅盛用 14 天实战强调：AI 是“一把手工程”。
+- 领导者必须亲自调教，才能真正洞察痛点
+- 不是把AI交给下属“试试看”，而是用亲手实践建立判断力
+- 调教本身就是产品与组织能力的一部分
+核心：不亲自上手，就无法知道该把 Skill 写在哪里、写多细、怎么迭代。`
+        },
+        {
+          id: "4",
+          title: "团队化：把“三万”养成多Agent同事",
+          body:
+`他把名为“三万”的AI，从零培养成 Agent 团队（更像“同事”而不是工具）：
+- 总指挥：拆解目标、分派任务、组织产出
+- 笔杆子：写作与表达
+- 参谋：补洞、找资料、提供选项
+- 进化官：复盘错误、固化Skill、减少重复踩坑
+关键转念：Agent 不只是一个助手，而是可编队、可协作的生产单元。`
+        },
+        {
+          id: "5 核心",
+          title: "中心摘要：龙虾=可进化生产系统",
+          body:
+`这份“14天养成日记”的核心信息可以压成三句话：
+1) 龙虾不是传统软件，而是“可自进化的工具AGI”，能掌控整台电脑执行任务。
+2) 真正壁垒不在模型，而在 Skill 的持续积累：把每次踩坑/报错/幻觉复盘成可复用操作手册。
+3) 当记忆（文件/向量化检索）+ 自动化（Cron）跑起来，就会出现“人歇机器不歇”的 7×24 生产力跃迁。`
+        },
+        {
+          id: "6",
+          title: "原则：踩坑即学习（报错/幻觉→Skill）",
+          body:
+`技术逻辑遵循“踩坑即学习”：
+- 每一次报错：不是“失败”，而是下一版 Skill 的素材
+- 每一次幻觉：不是“算了”，而是要复盘并加护栏
+做法：把问题→原因→修复→防再犯，写进 Skill
+效果：确保“下次不再犯”，让系统持续变稳、变快、变可靠。`
+        },
+        {
+          id: "7",
+          title: "记忆观：用过没记录=没用过",
+          body:
+`记忆系统坚持一句硬标准：
+“用过没记录，等于没用过。”
+- 用文件做长期记忆，形成可追溯的工作资产
+- 通过三层记忆架构 + 本地向量化部署
+- 达成深度语义检索：能找到“意思相近”的资料，而不是只靠关键词
+结论：记忆不是收藏，而是能被检索、能被复用、能反哺Skill的生产资料。`
+        },
+        {
+          id: "8",
+          title: "成果：22万字交互、爆款文章、PPT自走",
+          body:
+`实验展示极高生产力：
+- 14天内交互总字数约 22 万字
+- 产出多篇“百万阅读量”的爆款文章
+- 在 2–3 小时内自主完成 30+ 页高质量 PPT
+含义：当 Agent 团队 + Skill + 记忆 + 自动化成立，产出速度与质量会进入新量级。`
+        },
+        {
+          id: "9",
+          title: "预言与学习观：2026龙虾之年、学用不分离",
+          body:
+`傅盛的判断与主张：
+- 产业预言：软件行业将发生史诗级变革；2026 可能是“龙虾之年”，未来 80% 现有 App 可能消失
+- 学习观转向：倡导“学用不分离”
+- 最佳学习法：亲自使用、消耗 Token（把试错当成学习成本）
+一句话：别问“学会了吗”，先问“用起来了吗”。`
+        }
+      ]
+    };
   </script>
+
+  <script src="./mandala-app.js"></script>
 </body>
 </html>
