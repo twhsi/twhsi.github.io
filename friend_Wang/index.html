@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>朱光潛式寫作流程｜九宮網站</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#101824; --card:#0f1621; --card2:#0c121b;
+      --text:#e9eef5; --muted:#a7b3c5; --line:#233044;
+      --accent:#7dd3fc; --accent2:#a78bfa; --good:#34d399;
+      --warn:#fbbf24; --danger:#fb7185;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --dockH: 280px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+      background: radial-gradient(1200px 600px at 30% 0%, rgba(167,139,250,.18), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(125,211,252,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+
+    /* Layout: top scroller + bottom dock */
+    .wrap{min-height:100vh; padding-bottom: calc(var(--dockH) + env(safe-area-inset-bottom, 0px));}
+    header{
+      position: sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,20,.72);
+      border-bottom:1px solid rgba(35,48,68,.6);
+    }
+    .bar{
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      padding: 12px 14px;
+      max-width: 1100px; margin:0 auto;
+    }
+    .title{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .title h1{margin:0; font-size:16px; letter-spacing:.3px}
+    .title .sub{font-size:12px; color:var(--muted)}
+    .actions{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    button{
+      border:1px solid rgba(35,48,68,.9);
+      background: rgba(16,24,36,.75);
+      color:var(--text);
+      padding: 8px 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      cursor:pointer;
+      font-size:12px;
+    }
+    button:hover{border-color:rgba(125,211,252,.65)}
+    button:active{transform: translateY(1px)}
+    button.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.22), rgba(167,139,250,.18));
+      border-color: rgba(125,211,252,.55);
+    }
+    .container{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      background: rgba(16,24,36,.55);
+      border:1px solid rgba(35,48,68,.7);
+      border-radius:999px;
+      color: var(--muted);
+      font-size:12px;
+      margin: 6px 0 14px;
+    }
+    .pill b{color:var(--text); font-weight:600}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns: 1fr;}
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(15,22,33,.9), rgba(12,18,27,.88));
+      border:1px solid rgba(35,48,68,.75);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{
+      margin:0 0 8px;
+      font-size: 15px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .card h3{
+      margin: 14px 0 8px;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing:.2px;
+    }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 2px;
+      color: var(--muted); font-size: 12px;
+    }
+    .meta span{
+      padding: 4px 8px;
+      background: rgba(16,24,36,.55);
+      border:1px solid rgba(35,48,68,.6);
+      border-radius:999px;
+    }
+    .hr{height:1px; background: rgba(35,48,68,.75); margin: 12px 0;}
+    .list{margin:0; padding-left: 18px; color: var(--text); line-height:1.7}
+    .list li{margin:6px 0}
+    .quote{
+      margin: 12px 0 0;
+      padding: 12px;
+      border-left: 3px solid rgba(125,211,252,.55);
+      background: rgba(16,24,36,.45);
+      border-radius: 12px;
+      color: var(--muted);
+      line-height:1.75;
+    }
+
+    /* Dock */
+    .dock{
+      position: fixed; left:0; right:0; bottom:0; z-index:30;
+      height: calc(var(--dockH) + env(safe-area-inset-bottom, 0px));
+      background: rgba(10,14,19,.86);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(35,48,68,.8);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .dockInner{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 14px 14px;
+      height: var(--dockH);
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .dockTop{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .dockTop .now{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .dockTop .now .k{font-size:12px; color: var(--muted)}
+    .dockTop .now .v{font-size:14px; font-weight:650}
+    .dockTop .miniActions{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    .dockGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      height: calc(var(--dockH) - 58px);
+    }
+    .cell{
+      border:1px solid rgba(35,48,68,.85);
+      background: rgba(16,24,36,.55);
+      border-radius: 18px;
+      padding: 10px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      cursor:pointer;
+      transition: transform .08s ease, border-color .15s ease, background .15s ease;
+      overflow:hidden;
+      position:relative;
+    }
+    .cell:hover{border-color: rgba(125,211,252,.65)}
+    .cell:active{transform: translateY(1px)}
+    .cell .pos{font-size:11px; color: var(--muted); letter-spacing:.3px}
+    .cell .txt{font-size:12px; line-height:1.45}
+    .cell.center{
+      background: linear-gradient(135deg, rgba(125,211,252,.20), rgba(167,139,250,.18));
+      border-color: rgba(125,211,252,.55);
+    }
+    .cell.active{
+      outline: 2px solid rgba(125,211,252,.35);
+      box-shadow: 0 10px 26px rgba(0,0,0,.35);
+    }
+
+    /* Toast */
+    .toast{
+      position: fixed;
+      left:50%;
+      bottom: calc(var(--dockH) + 16px + env(safe-area-inset-bottom, 0px));
+      transform: translateX(-50%);
+      background: rgba(16,24,36,.92);
+      border:1px solid rgba(35,48,68,.85);
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 12px;
+      box-shadow: var(--shadow);
+      opacity:0;
+      pointer-events:none;
+      transition: opacity .18s ease, transform .18s ease;
+      z-index:50;
+    }
+    .toast.show{opacity:1; transform: translateX(-50%) translateY(-2px);}
+    a{color: var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    code{
+      background: rgba(16,24,36,.7);
+      border:1px solid rgba(35,48,68,.7);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="bar">
+        <div class="title">
+          <h1>朱光潛式寫作流程｜九宮網站</h1>
+          <div class="sub">以截圖文章為核心：自由聯想 → 小標題 → 刪除無關 → 線索次第 → 逐段寫 → 寫後整合</div>
+        </div>
+        <div class="actions">
+          <button class="primary" id="btnScrollTop">回到上方</button>
+          <button id="btnPrev">上一格</button>
+          <button id="btnNext">下一格</button>
+          <button id="btnCopy">複製本格內容</button>
+          <button id="btnDownloadMD">下載 Markdown</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" id="content">
+      <div class="pill">目前焦點：<b id="focusName">中心</b>　<span id="focusHint">（點下方九宮格切換內容）</span></div>
+
+      <section class="grid">
+        <article class="card" id="panelMain">
+          <h2>🧭 邏輯線（拎出主線）</h2>
+          <div class="meta">
+            <span>輸入：題目/主題</span>
+            <span>處理：自由聯想 + 裁剪</span>
+            <span>輸出：綱要 + 文章</span>
+          </div>
+          <div class="hr"></div>
+          <ol class="list">
+            <li><b>同時注意線索關聯</b>：寫作要追線索，但也要避免心力無謂耗損（不必一直「硬推進」）。</li>
+            <li><b>想到就寫下來</b>：像「打仗先佔地」——把想法寫下來，就等於築牆守住，還能做進一步突擊的基地。</li>
+            <li><b>寫本身會聚焦</b>：一旦動筆，心就不易旁騖；字句反過來刺激思想，新意常在書寫時湧現。</li>
+            <li><b>採取折衷法</b>：介於「全靠腹稿」與「完全不用腹稿」之間——先有輪廓，再保留即興生成。</li>
+            <li><b>自由聯想→小標題</b>：定題後用紙條/紙張記三五字小標題，想到就記，直到把能想到的都寫下。</li>
+            <li><b>刪除無關→挑重要</b>：把不重要、無須說的點丟掉；留下應該說的點。</li>
+            <li><b>排線索與次第→寫綱要</b>：將小標題整理成「線索」與「順序」，形成段落級綱要。</li>
+            <li><b>逐段寫→整合一次</b>：按綱要寫下去；寫時允許新意改稿；全篇完成後再通讀整合（文字更省返工）。</li>
+          </ol>
+          <div class="quote">
+            ✅ 核心精神：<b>先把「能想的」收集全</b>，再做<strong>刪除</strong>與<strong>排序</strong>，最後<strong>寫作中生成</strong>，完稿後<strong>再整合一次</strong>。
+          </div>
+        </article>
+
+        <article class="card" id="panelDetail">
+          <h2>🧩 本格內容（點九宮格切換）</h2>
+          <div class="meta">
+            <span id="tag1">#方法</span>
+            <span id="tag2">#步驟</span>
+            <span id="tag3">#可複用</span>
+          </div>
+          <div class="hr"></div>
+
+          <div id="detailBody"></div>
+
+          <div class="hr"></div>
+          <h3>✍️ 寫作提示（可直接拿去當段落）</h3>
+          <ul class="list" id="promptList"></ul>
+        </article>
+
+        <article class="card">
+          <h2>🧱 章節組合（刪除無關關鍵詞後）</h2>
+          <div class="meta">
+            <span>章1：尋思</span>
+            <span>章2：成綱</span>
+            <span>章3：起稿</span>
+            <span>章4：整合</span>
+          </div>
+          <div class="hr"></div>
+          <ol class="list">
+            <li><b>章1｜尋思（自由聯想）</b>：定題後放開想，想到就記成「三五字小標題」，把腦中可用材料先收齊。</li>
+            <li><b>章2｜成綱（刪除 + 排序）</b>：快速瀏覽全部小標題，丟掉無關與多餘；留下應該說的點，理出線索與次第，寫成段落綱要。</li>
+            <li><b>章3｜起稿（折衷法）</b>：每段先想大意再寫；每句先想大意再落筆；新意湧現就立刻修正，允許改寫原本預想。</li>
+            <li><b>章4｜整合（通讀一次）</b>：完稿後整體檢查：主線是否清楚？段落是否承接？是否有可刪之贅？最後再整合一次收束。</li>
+          </ol>
+          <div class="quote">🎯 這四章，就是你要的：「列關鍵詞 → 組章節 → 拎邏輯線 → 寫文章 → 再整合一次」。</div>
+        </article>
+
+        <article class="card">
+          <h2>🗝️ 關鍵詞清單（可直接放九宮格/卡片）</h2>
+          <div class="hr"></div>
+          <div class="meta">
+            <span>線索關聯</span><span>心力耗損</span><span>想到就寫</span><span>築牆守住</span>
+            <span>注意力聚焦</span><span>字句刺激思想</span><span>新意湧現</span><span>折衷法</span>
+            <span>自由聯想</span><span>小標題</span><span>刪除無關</span><span>衙量（衡量）</span>
+            <span>線索與次第</span><span>綱要</span><span>逐段寫</span><span>完稿整合</span>
+          </div>
+          <div class="quote">🧹 刪除方向：純重複、過度枝節、與主題無關的例子或情緒句，先丟掉；保留能支撐主線的點。</div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- Dock -->
+  <div class="dock">
+    <div class="dockInner">
+      <div class="dockTop">
+        <div class="now">
+          <div class="k">九宮格 Dock（固定 3×3）</div>
+          <div class="v" id="dockNowTitle">中心：折衷法寫作流程</div>
+        </div>
+        <div class="miniActions">
+          <button id="btnCopyMD" title="複製整份 Markdown 內容">複製整份 Markdown</button>
+          <button id="btnCopyCellMD" title="複製本格 Markdown">複製本格 Markdown</button>
+        </div>
+      </div>
+
+      <div class="dockGrid" id="dockGrid"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">已複製</div>
+
+  <script>
+    // ====== Data (九宮內容) ======
+    // A1 A2 A3 / B1 B2 B3 / C1 C2 C3
+    const grid = [
+      { id:"A1", title:"線索關聯 vs 心力耗損", tags:["#注意力","#成本"], keywords:["線索關聯","心力耗損","不必硬推進"], 
+        body:[
+          "寫作時同時注意「字、句、段」的線索關聯，確實能推進文章往前。",
+          "但若要求自己一直硬推進，會變成不必要的心力損耗。",
+          "所以需要一個方法：既能追主線，又不把自己拖垮。"
+        ],
+        prompts:[
+          "我想寫的是什麼？主線一句話先定下來。",
+          "哪些關聯是必要的？哪些只是「想太多」？",
+          "我現在耗的是必要的力，還是無謂的力？"
+        ]
+      },
+      { id:"A2", title:"想到就寫：先佔地築牆", tags:["#隨手記","#卡片"], keywords:["想到就寫","佔地","築牆","基地"],
+        body:[
+          "想到一點意思，就立刻寫下來。",
+          "像打仗先佔一塊地：寫下來就等於築一座堡壘，把它守住。",
+          "更重要的是：它還能成為下一步突擊（延伸）的基地。"
+        ],
+        prompts:[
+          "這個想法一句話怎麼說？",
+          "它能守住什麼？能支撐後面哪一段？",
+          "我下一步想從它往哪裡延伸？"
+        ]
+      },
+      { id:"A3", title:"寫作讓心更專注", tags:["#專注","#進入狀態"], keywords:["集中注意力","不易旁騖"],
+        body:[
+          "動筆本身就是把注意力收攏的助力。",
+          "既然在寫，心思就不容易跑到別處去。",
+          "先寫下來，往往比一直想更能讓你走到下一步。"
+        ],
+        prompts:[
+          "我現在最想寫下的那一句是什麼？",
+          "先寫「粗句」，再回頭修。",
+          "不求完美，先求把心拉回來。"
+        ]
+      },
+
+      { id:"B1", title:"字句反過來刺激思想", tags:["#生成","#新意"], keywords:["刺激","新意湧現","改寫預想"],
+        body:[
+          "寫成的字句常常反過來刺激思想。",
+          "本來預想的一段話，寫著寫著新意源源而來，結果整段都要改掉。",
+          "很多所謂「由文生情」與「興會淋漓」，就是在這種時刻出現。"
+        ],
+        prompts:[
+          "我寫到哪裡開始「有新意」？把它加粗留下。",
+          "原本的預想哪裡該放棄？",
+          "新意跟主線的關係是補強還是岔路？"
+        ]
+      },
+      { id:"B2", title:"中心：折衷法（有輪廓也能即興）", tags:["#核心","#方法論"], keywords:["折衷法","腹稿","不死腹稿"],
+        body:[
+          "作者採用的是「全用腹稿」與「全不用腹稿」兩極之間的折衷法。",
+          "先有文章輪廓與綱要，保證層次與條理。",
+          "同時每段不必預先定死，臨時觸機，寫時可以隨意生發，保留氣韻與生動。"
+        ],
+        prompts:[
+          "先畫大輪廓：我這篇要走哪條路？",
+          "每段只定「大意」，不定「死句」。",
+          "允許臨場生成，但要回到中心。"
+        ]
+      },
+      { id:"B3", title:"定題後：自由聯想 + 小標題", tags:["#尋思","#收集"], keywords:["定題","紙條","小標題","三五字"],
+        body:[
+          "在定了題目之後，把紙條擺在面前，抱著題目四方八面地想。",
+          "像心理學所謂「自由聯想」：不拘大小，不問次序。",
+          "想到一點意思，就用三五個字的小標題記下來，一直記到把能想到的都記完。"
+        ],
+        prompts:[
+          "我能想到的角度有哪些？先不排序。",
+          "每個角度用 3–5 字命名。",
+          "想到就記，直到枯竭。"
+        ]
+      },
+
+      { id:"C1", title:"刪除無關：衙量、取捨", tags:["#裁剪","#選擇"], keywords:["刪除無關","衡量","取捨"],
+        body:[
+          "把亂雜無章的小標題掃一眼，仔細衡量一番。",
+          "把無關重要的、無須說的點一齊丟掉。",
+          "把應該說的挑出來，為主線服務。"
+        ],
+        prompts:[
+          "這個點支撐中心嗎？不支撐就刪。",
+          "它是必要的一次說明，還是重複？",
+          "我願意為它付出一段篇幅嗎？"
+        ]
+      },
+      { id:"C2", title:"排線索與次第：寫成綱要", tags:["#結構","#綱要"], keywords:["線索","次第","綱要","段落總綱"],
+        body:[
+          "在留下的點之中，理出線索與次第。",
+          "再取一張紙，順著線索與次第把小標題寫成綱要。",
+          "綱要寫好，文章輪廓已具：每個小標題就是一段的總綱。"
+        ],
+        prompts:[
+          "這篇文章的『路線圖』是什麼？",
+          "段落之間用什麼關係連起來？（因果/對比/遞進/例證）",
+          "每段一句話總綱先寫出來。"
+        ]
+      },
+      { id:"C3", title:"逐段寫 → 完稿整合一次", tags:["#起稿","#整合"], keywords:["逐段寫","半途廢稿","完稿省返工","通讀整合"],
+        body:[
+          "依次第逐段寫下去：寫一段前先想大意；寫一句前也先想大意。",
+          "寫時若新意湧現就立刻修改；段落未寫完前不輕易擱下，而是繼續寫。",
+          "這法子的好處：綱要先想好，文章更有層次；寫完後不必大清大改，最後再整合一次即可。"
+        ],
+        prompts:[
+          "先寫完再修：不要在半途追求完美。",
+          "新意湧現就吸收，但段落要收束。",
+          "完稿後做一次『整合檢查』：主線、承接、刪贅、收束。"
+        ]
+      },
+    ];
+
+    // Convenience: index mapping to 3x3 positions
+    const order = ["A1","A2","A3","B1","B2","B3","C1","C2","C3"];
+    const centerId = "B2";
+
+    function byId(id){ return grid.find(x=>x.id===id); }
+
+    // ====== Render Dock Grid ======
+    const dock = document.getElementById("dockGrid");
+    const focusName = document.getElementById("focusName");
+    const focusHint = document.getElementById("focusHint");
+    const dockNowTitle = document.getElementById("dockNowTitle");
+
+    let current = centerId;
+
+    function renderDock(){
+      dock.innerHTML = "";
+      order.forEach((pos)=>{
+        const item = byId(pos);
+        const div = document.createElement("div");
+        div.className = "cell" + (pos===centerId ? " center" : "") + (pos===current ? " active" : "");
+        div.dataset.id = pos;
+        div.innerHTML = `
+          <div class="pos">${pos}</div>
+          <div class="txt"><b>${escapeHtml(item.title)}</b></div>
+          <div class="txt" style="color:var(--muted)">${escapeHtml(item.keywords.slice(0,2).join(" · "))}${item.keywords.length>2?" · …":""}</div>
+        `;
+        div.addEventListener("click", ()=> setCurrent(pos, true));
+        dock.appendChild(div);
+      });
+    }
+
+    // ====== Render Detail Panel ======
+    const detailBody = document.getElementById("detailBody");
+    const promptList = document.getElementById("promptList");
+    const tag1 = document.getElementById("tag1");
+    const tag2 = document.getElementById("tag2");
+    const tag3 = document.getElementById("tag3");
+
+    function renderDetail(){
+      const item = byId(current);
+      focusName.textContent = (current===centerId) ? "中心" : current;
+      focusHint.textContent = "｜" + item.title;
+      dockNowTitle.textContent = ((current===centerId) ? "中心：" : (current+"：")) + item.title;
+
+      const tags = item.tags || ["#九宮","#寫作","#方法"];
+      tag1.textContent = tags[0] || "#方法";
+      tag2.textContent = tags[1] || "#步驟";
+      tag3.textContent = tags[2] || "#可複用";
+
+      detailBody.innerHTML = `
+        <h3>📌 關鍵詞</h3>
+        <div class="meta">${item.keywords.map(k=>`<span>${escapeHtml(k)}</span>`).join("")}</div>
+        <div class="hr"></div>
+        <h3>📝 核心說法</h3>
+        <ul class="list">${item.body.map(s=>`<li>${escapeHtml(s)}</li>`).join("")}</ul>
+      `;
+
+      promptList.innerHTML = "";
+      item.prompts.forEach(p=>{
+        const li = document.createElement("li");
+        li.textContent = p;
+        promptList.appendChild(li);
+      });
+      renderDock();
+
+      // scroll to top of scroller when switching (as you asked before)
+      const scroller = document.querySelector('#content');
+      scroller.scrollTo({ top: 0, behavior: 'auto' });
+    }
+
+    function setCurrent(id, fromClick=false){
+      current = id;
+      renderDetail();
+      if(fromClick) toast("已切換：" + byId(current).title);
+    }
+
+    // ====== Markdown Export (依你指定格式) ======
+    function buildMarkdown(){
+      const center = byId(centerId);
+      const cells = {
+        "1.1": byId("A1"),
+        "1.2": byId("A2"),
+        "1.3": byId("A3"),
+        "1.4": byId("B1"),
+        "1.5": byId("B3"),
+        "1.6": byId("C1"),
+        "1.7": byId("C2"),
+        "1.8": byId("C3"),
+      };
+
+      const md = [];
+      md.push("<!--section: 1-->");
+      md.push("九宮");
+      md.push("");
+      md.push("## 中心");
+      md.push(`**${center.title}**`);
+      md.push("");
+      md.push(center.body.map(s=>"- " + s).join("\n"));
+      md.push("");
+      md.push("---");
+      md.push("");
+
+      Object.entries(cells).forEach(([sec, item])=>{
+        md.push(`<!--section: ${sec}-->`);
+        md.push(`### ${item.title}`);
+        md.push("");
+        md.push("**關鍵詞：** " + item.keywords.join("、"));
+        md.push("");
+        md.push(item.body.map(s=>"- " + s).join("\n"));
+        md.push("");
+      });
+
+      md.push("<!--section: 2-->");
+      md.push("九宮2");
+      md.push("");
+      md.push("## 章節組合（四章）");
+      md.push("");
+      md.push("- 章1｜尋思：自由聯想 → 小標題收集");
+      md.push("- 章2｜成綱：刪除無關 → 排線索與次第 → 段落綱要");
+      md.push("- 章3｜起稿：折衷法逐段寫（先大意後落筆，允許新意改稿）");
+      md.push("- 章4｜整合：完稿通讀一次，檢查主線、承接、刪贅、收束");
+      md.push("");
+
+      // 2.1~2.8：把流程拆成 8 小節
+      const ch = [
+        {sec:"2.1", t:"輸入：定題", b:["先用一句話定主線：本文到底要說什麼。","題目定下來，就開始收集材料。"]},
+        {sec:"2.2", t:"收集：自由聯想", b:["不問次序、不拘大小，四方八面想。","想到就記成小標題。"]},
+        {sec:"2.3", t:"標記：小標題卡片化", b:["每個點用 3–5 字命名。","一直記到材料枯竭。"]},
+        {sec:"2.4", t:"裁剪：刪無關、去贅", b:["丟掉不重要、無須說的點。","只留下能支撐主線的點。"]},
+        {sec:"2.5", t:"排序：線索與次第", b:["把留下的點排成路線圖。","明確段落之間的關係（遞進/對比/因果/例證）。"]},
+        {sec:"2.6", t:"成綱：段落總綱", b:["每個小標題變成一段總綱。","輪廓先立好，文章就有層次。"]},
+        {sec:"2.7", t:"起稿：逐段寫（折衷法）", b:["每段先想大意再寫；每句亦然。","新意湧現就吸收並即時修正。"]},
+        {sec:"2.8", t:"整合：完稿通讀一次", b:["檢查主線是否清楚、段落是否承接。","刪贅、收束、完成最後整合。"]},
+      ];
+
+      ch.forEach(x=>{
+        md.push(`<!--section: ${x.sec}-->`);
+        md.push(`### ${x.t}`);
+        md.push("");
+        md.push(x.b.map(s=>"- " + s).join("\n"));
+        md.push("");
+      });
+
+      return md.join("\n");
+    }
+
+    function downloadMarkdown(){
+      const md = buildMarkdown();
+      const blob = new Blob([md], {type:"text/markdown;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "朱光潜式寫作流程_九宮.md";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      toast("已下載 Markdown");
+    }
+
+    function cellMarkdown(id){
+      const item = byId(id);
+      const lines = [];
+      lines.push(`### ${item.title}`);
+      lines.push("");
+      lines.push("**關鍵詞：** " + item.keywords.join("、"));
+      lines.push("");
+      item.body.forEach(s=>lines.push("- " + s));
+      lines.push("");
+      item.prompts.forEach(p=>lines.push("- 提示：" + p));
+      return lines.join("\n");
+    }
+
+    // ====== Clipboard helpers ======
+    function copyText(text){
+      navigator.clipboard.writeText(text).then(()=>toast("已複製")).catch(()=>toast("複製失敗（請手動複製）"));
+    }
+
+    // ====== Utilities ======
+    const toastEl = document.getElementById("toast");
+    let toastTimer = null;
+    function toast(msg){
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(()=>toastEl.classList.remove("show"), 1100);
+    }
+    function escapeHtml(s){
+      return String(s)
+        .replaceAll("&","&amp;").replaceAll("<","&lt;")
+        .replaceAll(">","&gt;").replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    // ====== Controls ======
+    document.getElementById("btnScrollTop").addEventListener("click", ()=>{
+      const scroller = document.querySelector('#content');
+      scroller.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("btnPrev").addEventListener("click", ()=>{
+      const i = order.indexOf(current);
+      const next = order[(i - 1 + order.length) % order.length];
+      setCurrent(next, true);
+    });
+
+    document.getElementById("btnNext").addEventListener("click", ()=>{
+      const i = order.indexOf(current);
+      const next = order[(i + 1) % order.length];
+      setCurrent(next, true);
+    });
+
+    document.getElementById("btnCopy").addEventListener("click", ()=>{
+      const item = byId(current);
+      const text = [
+        item.title,
+        "",
+        "關鍵詞：" + item.keywords.join("、"),
+        "",
+        ...item.body.map(s=>"- " + s),
+        "",
+        "寫作提示：",
+        ...item.prompts.map(p=>"- " + p),
+      ].join("\n");
+      copyText(text);
+    });
+
+    document.getElementById("btnDownloadMD").addEventListener("click", downloadMarkdown);
+
+    document.getElementById("btnCopyMD").addEventListener("click", ()=>{
+      copyText(buildMarkdown());
+    });
+
+    document.getElementById("btnCopyCellMD").addEventListener("click", ()=>{
+      copyText(cellMarkdown(current));
+    });
+
+    // Init
+    renderDock();
+    renderDetail();
+  </script>
+</body>
+</html>
