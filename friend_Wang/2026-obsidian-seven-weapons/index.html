@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026年王博士直播，七種兵器之Obsidian｜九宮網站</title>
+  <style>
+    :root {
+      --bg: #f3efe7;
+      --bg-2: #ddd1bf;
+      --panel: #fffaf2;
+      --cell: #fffef9;
+      --ink: #231a12;
+      --ink-soft: #5d5245;
+      --line: #d8c6af;
+      --line-strong: #b46d34;
+      --accent: #9a4f1d;
+      --accent-soft: #f3dfc8;
+      --shadow: 0 20px 44px rgba(70, 46, 24, 0.18);
+      --dock-h: 280px;
+      --dock-h-mobile: 320px;
+    }
+
+    body.dark {
+      --bg: #17120e;
+      --bg-2: #251c15;
+      --panel: #221a13;
+      --cell: #2c2219;
+      --ink: #f5e8d7;
+      --ink-soft: #d8c6ae;
+      --line: #4d3a2b;
+      --line-strong: #d8a36d;
+      --accent: #edbb88;
+      --accent-soft: #3b2b1e;
+      --shadow: 0 24px 44px rgba(0, 0, 0, 0.42);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(163, 87, 35, 0.16), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(39, 112, 94, 0.12), transparent 28%),
+        linear-gradient(155deg, var(--bg), var(--bg-2));
+      transition: background 220ms ease, color 220ms ease;
+    }
+
+    .shell {
+      max-width: 1540px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .top-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .action-btn {
+      border: 1px solid var(--line);
+      background: var(--cell);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .workspace {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      min-height: calc(100vh - 28px);
+    }
+
+    .board-pane {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(155deg, rgba(255, 255, 255, 0.45), rgba(255, 247, 233, 0.36));
+      box-shadow: var(--shadow);
+    }
+
+    .board-wrap {
+      width: min(100%, calc(100vh - 74px));
+      display: grid;
+      gap: 10px;
+    }
+
+    .axis-label {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-align: center;
+    }
+
+    .board {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .cell {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(165deg, var(--cell), rgba(255, 248, 235, 0.92));
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      padding: 10px 10px 8px;
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 180ms ease;
+    }
+
+    .cell:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+    }
+
+    .cell.active {
+      border-color: var(--accent);
+      background: linear-gradient(165deg, var(--accent-soft), rgba(255, 237, 216, 0.92));
+      box-shadow: inset 0 0 0 1px rgba(159, 89, 37, 0.24);
+    }
+
+    .cell-id {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .cell-title {
+      display: block;
+      font-size: clamp(15px, 1.2vw, 20px);
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .cell-center {
+      border: 2px solid var(--accent);
+    }
+
+    .note-pane {
+      width: min(620px, 44vw);
+      min-width: 420px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+    }
+
+    .note-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .note-title {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .theme-btn {
+      border: 1px solid var(--line);
+      background: var(--cell);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .meta {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .note-card h2 {
+      margin: 2px 0 8px;
+      font-size: clamp(24px, 2vw, 32px);
+      line-height: 1.2;
+    }
+
+    .note-card p {
+      margin: 0;
+      font-size: clamp(16px, 1.25vw, 20px);
+      line-height: 1.8;
+      color: var(--ink-soft);
+      white-space: pre-wrap;
+    }
+
+    .steps {
+      border-top: 1px dashed var(--line);
+      padding-top: 10px;
+    }
+
+    .steps h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: var(--accent);
+    }
+
+    .steps ol {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+
+    .hint {
+      margin-top: auto;
+      font-size: 13px;
+      color: var(--ink-soft);
+      border-top: 1px dashed var(--line);
+      padding-top: 10px;
+    }
+
+    @media (max-width: 980px) {
+      :root { --dock-h: var(--dock-h-mobile); }
+
+      body { overflow: hidden; }
+
+      .shell {
+        max-width: none;
+        height: 100vh;
+        padding: 12px 12px 0;
+      }
+
+      .workspace {
+        height: 100%;
+        min-height: 0;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .note-pane {
+        order: 1;
+        width: 100%;
+        min-width: 0;
+        height: calc(100vh - var(--dock-h) - 24px);
+        overflow: auto;
+        padding: 18px 16px 40px;
+      }
+
+      .board-pane {
+        order: 2;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        height: var(--dock-h);
+        padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        background: var(--panel);
+        backdrop-filter: blur(10px);
+      }
+
+      .board-wrap {
+        width: 100%;
+      }
+
+      .board {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        aspect-ratio: auto;
+        gap: 8px;
+      }
+
+      .cell {
+        border-radius: 12px;
+        min-height: 0;
+        padding: 9px;
+      }
+
+      .cell-title {
+        font-size: clamp(12px, 2.9vw, 14px);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .cell-id {
+        font-size: 11px;
+        margin-bottom: 2px;
+      }
+
+      .note-card p {
+        font-size: clamp(16px, 4.2vw, 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="top-actions">
+      <button class="action-btn" id="copy-url-btn" type="button">複製文章網址</button>
+      <button class="action-btn" id="download-md-btn" type="button">下載九宮 Markdown</button>
+    </div>
+
+    <div class="workspace">
+      <section class="board-pane" aria-label="2026年王博士直播，七種兵器之Obsidian九宮格">
+        <div class="board-wrap">
+          <p class="axis-label">九四快輸出：觀全貌、想問題、變成八面、通往行動</p>
+          <div class="board" id="grid"></div>
+        </div>
+      </section>
+
+      <aside class="note-pane" aria-live="polite">
+        <div class="note-top">
+          <h1 class="note-title">2026年王博士直播，七種兵器之Obsidian</h1>
+          <button class="theme-btn" id="theme-btn" type="button">切換明暗</button>
+        </div>
+
+        <div class="meta" id="card-id">1 核心</div>
+        <section class="note-card">
+          <h2 id="card-title">九宮、Graph View、Jump 的寫書結構</h2>
+          <p id="card-body"></p>
+        </section>
+
+        <section class="steps">
+          <h3>這次九宮的兩個核心論點</h3>
+          <ol>
+            <li>格子與格子的連結，用 Graph View 就能建立。</li>
+            <li>書稿的非線性思考，來自九宮的 top-down、Graph View 的 bottom-up，還有 Jump 的反向連結思維。</li>
+            <li>九宮代表章節與字數目標，Graph View 代表索引與主題網路。</li>
+            <li>每個九宮內的關鍵字與陳述句，都能再被 Local Graph View 反查弱點與缺口。</li>
+          </ol>
+        </section>
+
+        <div class="hint">點九宮任一格可看完整段落。內容已改寫自你指定的 Markdown，主軸放在二分網路、Graph View 與 Jump 連結。</div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const siteUrl = "https://twhsi.github.io/friend_Wang/2026-obsidian-seven-weapons/";
+
+    const cards = [
+      {
+        id: "1.1",
+        title: "Graph View 建連結",
+        body: "格子與格子的連結，不必再另外發明一套系統，直接用 Graph View 就能建立。章節與章節之間的關係、關鍵字與關鍵字之間的關係，都可以透過 Markdown 的雙向連結被視覺化，看出哪些地方已經連通，哪些地方仍然斷裂。"
+      },
+      {
+        id: "1.2",
+        title: "二分網路",
+        body: "這份筆記最重要的架構，是把檔案分成兩種：一種是九宮千字稿，代表章節與角度；另一種是關鍵字卡片，代表可被反覆引用的概念。兩者組合後，就形成二分網路。這讓寫書不只是堆內容，而是把章節與概念同時佈線。"
+      },
+      {
+        id: "1.3",
+        title: "Markdown 與九宮視圖",
+        body: "九宮視圖負責 top-down 的章節規劃，Markdown 負責最小單位的文字與連結，Graph View 則把它們重新拉成網路。這三層不是分開的工具，而是一套連動寫作法：在九宮裡先定角度，在 Markdown 裡寫成陳述句，再回到 Graph View 找結構缺口。"
+      },
+      {
+        id: "1.4",
+        title: "用 Graph View 寫書",
+        body: "王博士的啟發，不只是文章和文章互連，而是把寫書拆成至少兩層網路。第一層是章節與章節的連結，第二層是關鍵字與關鍵字的連結。九宮格代表章節與字數目標，Graph View 就像索引系統，能看出全局，也能反查局部。"
+      },
+      {
+        id: "1",
+        title: "九宮、Graph View、Jump 的寫書結構",
+        body: "這次 2026 年 2 月和王博士的 Obsidian 直播，可以視為七種兵器之一的實戰示範：九宮格先由上而下定章節、字數與論述位置；Graph View 再由下而上把零散筆記、關鍵字與章節慢慢長成網路；最後靠 Jump 式的遠距連結與反向思考，把原本不相鄰的兩個格子突然接通。於是書稿不再只是線性展開，而是一個會生長、會回饋、會暴露弱點的系統。"
+      },
+      {
+        id: "1.5",
+        title: "Local Graph View",
+        body: "全局圖適合看 7000 字等級的整體思考，Local Graph View 則適合回到某一格、某一章、某一個關鍵字來檢查優點與弱點。當一個章節沒有足夠連結，或一個關鍵字只孤立存在時，弱點就會直接浮出來。這讓修改不再只是憑感覺，而是有視覺證據。"
+      },
+      {
+        id: "1.6",
+        title: "Forced Elaboration",
+        body: "九宮格和 Graph View 都有一個共同優勢，就是迫使闡述。九宮網站會逼你把每格都寫成可閱讀的陳述；Graph View 會逼你面對哪些連結還不存在。只要把頁面打開，或把 Local Graph View 展開，你就很難再逃避自己的論證漏洞。"
+      },
+      {
+        id: "1.7",
+        title: "CLI 與 Codex 協作",
+        body: "這份筆記也明確指出 CLI 的角色。可以用 Codex 整理 Markdown、修改九宮文件、刪除不需要的結點、回收 YAML 與引用，最後把九宮筆記直接做成網站，再交給 Git 維護對外版本。這代表 Obsidian 不只是筆記工具，而是網站與書稿的上游工廠。"
+      },
+      {
+        id: "1.8",
+        title: "長期寫作系統",
+        body: "最終目標不是做出一張漂亮的圖，而是建立一條能伴隨一生的思想鍊。九宮提供標準化模板，Graph View 提供由下而上的生長，Jump 連結提供遠距創意。三者合起來，才可能把多年的直播、筆記、文章與書稿接成一張真正可演化的知識網路。"
+      }
+    ];
+
+    const grid = document.getElementById("grid");
+    const cardId = document.getElementById("card-id");
+    const cardTitle = document.getElementById("card-title");
+    const cardBody = document.getElementById("card-body");
+    const themeBtn = document.getElementById("theme-btn");
+    const downloadMdBtn = document.getElementById("download-md-btn");
+    const copyUrlBtn = document.getElementById("copy-url-btn");
+
+    let activeIndex = 4;
+
+    function renderGrid() {
+      grid.innerHTML = "";
+      cards.forEach((card, index) => {
+        const button = document.createElement("button");
+        const isCenter = index === 4;
+        button.type = "button";
+        button.className = "cell" + (index === activeIndex ? " active" : "") + (isCenter ? " cell-center" : "");
+        button.innerHTML = `<span class="cell-id">${card.id}</span><span class="cell-title">${card.title}</span>`;
+        button.addEventListener("click", () => setActive(index));
+        grid.appendChild(button);
+      });
+    }
+
+    function setActive(index) {
+      activeIndex = index;
+      const card = cards[index];
+      cardId.textContent = card.id;
+      cardTitle.textContent = card.title;
+      cardBody.textContent = card.body;
+      renderGrid();
+    }
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+      document.body.classList.toggle("dark", isDark);
+      themeBtn.textContent = isDark ? "切換成明亮" : "切換成暗色";
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem("wang-live-review-theme");
+      if (saved === "dark" || saved === "light") {
+        applyTheme(saved);
+      } else {
+        const preferDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(preferDark ? "dark" : "light");
+      }
+    }
+
+    function buildMandalaMarkdown() {
+      const orderedSections = [
+        { key: "1", card: cards[4] },
+        { key: "1.1", card: cards[0] },
+        { key: "1.2", card: cards[1] },
+        { key: "1.3", card: cards[2] },
+        { key: "1.4", card: cards[3] },
+        { key: "1.5", card: cards[5] },
+        { key: "1.6", card: cards[6] },
+        { key: "1.7", card: cards[7] },
+        { key: "1.8", card: cards[8] }
+      ];
+
+      return orderedSections.map(({ key, card }) => {
+        if (key === "1") {
+          return `<!--section: ${key}-->\n${card.title}\n${card.body}\n`;
+        }
+        return `<!--section: ${key}-->\n### ${card.title}\n\n${card.body}\n`;
+      }).join("\n");
+    }
+
+    function downloadMandalaMarkdown() {
+      const md = buildMandalaMarkdown();
+      const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Mandala-Grid-2026年王博士直播-七種兵器之Obsidian.md";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    async function copyUrl() {
+      try {
+        await navigator.clipboard.writeText(siteUrl);
+        copyUrlBtn.textContent = "已複製網址";
+        window.setTimeout(() => {
+          copyUrlBtn.textContent = "複製預計網址";
+        }, 1200);
+      } catch (error) {
+        window.alert(siteUrl);
+      }
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const next = document.body.classList.contains("dark") ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("wang-live-review-theme", next);
+    });
+
+    downloadMdBtn.addEventListener("click", downloadMandalaMarkdown);
+    copyUrlBtn.addEventListener("click", copyUrl);
+
+    setActive(activeIndex);
+    initTheme();
+  </script>
+</body>
+</html>

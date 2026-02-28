@@ -126,6 +126,42 @@
       line-height:1.75;
     }
 
+    .seriesNav{
+      display:grid;
+      gap:10px;
+      margin: 0 0 14px;
+    }
+    .seriesLink{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(35,48,68,.8);
+      background: rgba(16,24,36,.48);
+      color: var(--text);
+      text-decoration:none;
+      transition: border-color .15s ease, background .15s ease, transform .08s ease;
+    }
+    .seriesLink:hover{
+      border-color: rgba(125,211,252,.65);
+      background: rgba(125,211,252,.08);
+    }
+    .seriesLink:active{transform: translateY(1px)}
+    .seriesLink strong{
+      display:block;
+      font-size:14px;
+      line-height:1.4;
+    }
+    .seriesLink small{
+      display:block;
+      margin-top:4px;
+      color: var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
     /* Dock */
     .dock{
       position: fixed; left:0; right:0; bottom:0; z-index:30;
@@ -238,6 +274,23 @@
 
     <main class="container" id="content">
       <div class="pill">目前焦點：<b id="focusName">中心</b>　<span id="focusHint">（點下方九宮格切換內容）</span></div>
+
+      <section class="seriesNav" aria-label="系列入口">
+        <a class="seriesLink" href="/">
+          <span>
+            <strong>回總首頁｜九宮格入口</strong>
+            <small>回到 twhsi.github.io 的總入口，之後文章都會從那裡整合。</small>
+          </span>
+          <span>↗</span>
+        </a>
+        <a class="seriesLink" href="/friend_Wang/2026-obsidian-seven-weapons/">
+          <span>
+            <strong>最新文章｜2026年王博士直播，七種兵器之Obsidian</strong>
+            <small>九宮、Graph View、Jump 連結思維，正式收進主站文章路徑。</small>
+          </span>
+          <span>→</span>
+        </a>
+      </section>
 
       <section class="grid">
         <article class="card" id="panelMain">
