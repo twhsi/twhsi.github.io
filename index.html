@@ -6,11 +6,9 @@
   <title>永錫的九宮格入口｜twhsi.github.io</title>
   <style>
     :root{
-      --bg:#0b0f14; --panel:#0f1620; --panel2:#0c121a;
-      --text:#e8eef7; --muted:#a6b3c2;
+      --bg:#0b0f14; --text:#e8eef7; --muted:#a6b3c2;
       --line:rgba(255,255,255,.10);
-      --accent:#7aa7ff;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --accent:#7aa7ff; --shadow:0 10px 30px rgba(0,0,0,.35);
       --r:16px;
     }
     *{box-sizing:border-box}
@@ -31,7 +29,6 @@
     .wrap{max-width:1100px; margin:0 auto; padding:0 18px 30px;}
     h1{margin:0; font-size:22px; letter-spacing:.5px;}
     .sub{color:var(--muted); font-size:13px; line-height:1.6; margin-top:8px; max-width:80ch;}
-    .note{color:var(--muted); font-size:12px; margin-top:10px;}
     .panel{
       margin-top:14px;
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
@@ -54,7 +51,7 @@
       border-radius: 16px;
       border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.04);
-      min-height: 76px;
+      min-height: 78px;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -70,11 +67,7 @@
                   rgba(255,255,255,.06);
       border-color: rgba(122,167,255,.40);
     }
-    a{
-      color:var(--text);
-      text-decoration:none;
-    }
-    a:hover{ text-decoration:none; }
+    a{color:var(--text); text-decoration:none}
     .links{
       margin-top:16px;
       border-top:1px dashed rgba(255,255,255,.14);
@@ -99,10 +92,7 @@
     }
     .muted{color:var(--muted); font-size:12px;}
     footer{padding:18px 18px 24px; color:var(--muted); font-size:12px;}
-    @media (max-width:520px){
-      .grid{gap:10px;}
-      .cell{min-height:80px;}
-    }
+    code{color:rgba(232,238,247,.9)}
   </style>
 </head>
 
@@ -111,10 +101,10 @@
     <div class="wrap">
       <h1>永錫的九宮格入口</h1>
       <div class="sub">
-        這裡是我的「九宮格網站」總入口：中心是我（寫作與工具實驗），八格是不同系列。
+        這裡是我的九宮格網站總入口：中心是我（寫作 × 九宮格 × AI Coding），八格是不同系列。
         我會把每個系列都做成自己的索引頁，並在系列底下持續長出文章。
       </div>
-      <div class="note">站點規則：<span class="muted">首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）</span></div>
+      <div class="sub muted">站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）</div>
     </div>
   </header>
 
@@ -122,55 +112,46 @@
     <div class="panel">
       <div class="content">
         <div class="grid">
-          <!-- A1 -->
           <a class="cell" href="/friend_Wang/">
             <strong>friend_Wang 系列</strong>
             <small>/friend_Wang/</small>
           </a>
 
-          <!-- A2 -->
           <a class="cell" href="/zhu-guangqian/">
-            <strong>朱光潛｜寫作方法九宮</strong>
+            <strong>朱光潛（預留）</strong>
             <small>/zhu-guangqian/</small>
           </a>
 
-          <!-- A3 -->
           <a class="cell" href="/devonthink/">
-            <strong>DEVONthink｜甜蜜長度九宮</strong>
+            <strong>DEVONthink（預留）</strong>
             <small>/devonthink/</small>
           </a>
 
-          <!-- B1 -->
           <a class="cell" href="/notes/">
             <strong>筆記索引（預留）</strong>
             <small>/notes/</small>
           </a>
 
-          <!-- B2 center -->
           <div class="cell center">
             <strong>中心｜我在做什麼</strong>
-            <small>九宮格×寫作×AI Coding×知識系統</small>
+            <small>九宮格 × 寫作 × 知識系統</small>
           </div>
 
-          <!-- B3 -->
           <a class="cell" href="/tools/">
             <strong>工具箱（預留）</strong>
             <small>/tools/</small>
           </a>
 
-          <!-- C1 -->
           <a class="cell" href="/about/">
             <strong>About（預留）</strong>
             <small>/about/</small>
           </a>
 
-          <!-- C2 -->
           <a class="cell" href="/latest/">
             <strong>最新更新（預留）</strong>
             <small>/latest/</small>
           </a>
 
-          <!-- C3 -->
           <a class="cell" href="https://github.com/twhsi" target="_blank" rel="noopener">
             <strong>GitHub</strong>
             <small>@twhsi</small>
@@ -178,15 +159,13 @@
         </div>
 
         <div class="links">
-          <div class="muted">快速入口（你說的「至少三篇」先掛上）：</div>
-          <a href="/zhu-guangqian/"><span>朱光潛｜寫作方法九宮</span><span class="muted">→</span></a>
+          <div class="muted">快速入口：</div>
           <a href="/friend_Wang/"><span>friend_Wang｜系列索引（九宮）</span><span class="muted">→</span></a>
-          <a href="/devonthink/"><span>DEVONthink｜甜蜜長度九宮</span><span class="muted">→</span></a>
         </div>
       </div>
 
       <footer>
-        小提醒：如果你尚未建立 <code>/zhu-guangqian/</code> 或 <code>/devonthink/</code> 這些資料夾，先點會 404；我們下一步就把它們補齊或改成你目前實際存在的路徑。
+        <div>預留入口先不用管：之後你建立 <code>/zhu-guangqian/</code>、<code>/devonthink/</code> 等資料夾後，就會自動變成可用連結。</div>
       </footer>
     </div>
   </div>
