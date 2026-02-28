@@ -2,526 +2,193 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>朱光潛式寫作流程｜九宮網站</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>永錫的九宮格入口｜twhsi.github.io</title>
   <style>
-    :root {
-      --bg: #f4efe6;
-      --bg-2: #e8dfd1;
-      --panel: #fffaf2;
-      --cell: #fffef9;
-      --ink: #221a12;
-      --ink-soft: #5d5143;
-      --line: #dbc8ae;
-      --line-strong: #b17a3a;
-      --accent: #9f5925;
-      --accent-soft: #f4dfca;
-      --shadow: 0 18px 38px rgba(74, 50, 24, 0.2);
-      --dock-h: 250px;
-      --dock-h-mobile: 300px;
+    :root{
+      --bg:#0b0f14; --panel:#0f1620; --panel2:#0c121a;
+      --text:#e8eef7; --muted:#a6b3c2;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa7ff;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --r:16px;
     }
-
-    body.dark {
-      --bg: #18130f;
-      --bg-2: #241d16;
-      --panel: #211a13;
-      --cell: #2a2118;
-      --ink: #f7ead8;
-      --ink-soft: #d8c5ac;
-      --line: #4f3c2b;
-      --line-strong: #daa874;
-      --accent: #efbb85;
-      --accent-soft: #3b2c1f;
-      --shadow: 0 22px 38px rgba(0, 0, 0, 0.42);
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "PingFang TC","Noto Sans TC","Microsoft JhengHei", sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,167,255,.18), transparent 60%),
+                  radial-gradient(1200px 600px at 90% 0%, rgba(120,255,210,.10), transparent 60%),
+                  var(--bg);
+      color:var(--text);
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
-      color: var(--ink);
-      line-height: 1.65;
-      background:
-        radial-gradient(circle at 12% 10%, rgba(160, 95, 45, 0.18), transparent 35%),
-        radial-gradient(circle at 88% 14%, rgba(44, 122, 106, 0.13), transparent 28%),
-        linear-gradient(160deg, var(--bg), var(--bg-2));
-      transition: background 220ms ease, color 220ms ease;
+    header{
+      padding:22px 18px 12px;
+      position:sticky; top:0; z-index:20;
+      background: linear-gradient(to bottom, rgba(11,15,20,.95), rgba(11,15,20,.65), transparent);
+      backdrop-filter: blur(10px);
     }
-
-    .shell {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 14px;
-    }
-
-    .workspace {
-      display: flex;
-      gap: 16px;
-      align-items: stretch;
-      min-height: calc(100vh - 28px);
-    }
-
-    .board-pane {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
+    .wrap{max-width:1100px; margin:0 auto; padding:0 18px 30px;}
+    h1{margin:0; font-size:22px; letter-spacing:.5px;}
+    .sub{color:var(--muted); font-size:13px; line-height:1.6; margin-top:8px; max-width:80ch;}
+    .note{color:var(--muted); font-size:12px; margin-top:10px;}
+    .panel{
+      margin-top:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border: 1px solid var(--line);
-      border-radius: 20px;
-      background: linear-gradient(155deg, rgba(255, 255, 255, 0.45), rgba(255, 248, 236, 0.35));
+      border-radius: var(--r);
       box-shadow: var(--shadow);
+      overflow:hidden;
     }
-
-    .board {
-      width: min(100%, calc(100vh - 64px));
-      aspect-ratio: 1 / 1;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+    .content{
+      padding:18px;
+      background: linear-gradient(180deg, rgba(15,22,32,.55), rgba(12,18,26,.35));
     }
-
-    .cell {
-      border: 1px solid var(--line);
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .cell{
+      padding:14px 12px;
       border-radius: 16px;
-      background: linear-gradient(165deg, var(--cell), rgba(255, 248, 235, 0.9));
-      color: var(--ink);
-      text-align: left;
-      cursor: pointer;
-      padding: 10px 10px 8px;
-      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 180ms ease;
-    }
-
-    .cell:hover {
-      transform: translateY(-2px);
-      border-color: var(--line-strong);
-    }
-
-    .cell.active {
-      border-color: var(--accent);
-      background: linear-gradient(165deg, var(--accent-soft), rgba(255, 238, 214, 0.9));
-      box-shadow: inset 0 0 0 1px rgba(159, 89, 37, 0.24);
-    }
-
-    .cell-id {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 4px;
-      letter-spacing: 0.04em;
-    }
-
-    .cell-title {
-      display: block;
-      font-size: clamp(15px, 1.2vw, 20px);
-      line-height: 1.3;
-      font-weight: 700;
-    }
-
-    .cell-center {
-      border: 2px solid var(--accent);
-    }
-
-    .note-pane {
-      width: min(460px, 34vw);
-      min-width: 300px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .note-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .note-title {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.2;
-    }
-
-    .btn-row{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      min-height: 76px;
       display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:6px;
+      transition: transform .06s ease, border-color .12s ease, background .12s ease;
+    }
+    .cell:hover{border-color: rgba(122,167,255,.55); background: rgba(122,167,255,.10);}
+    .cell:active{transform: scale(.99);}
+    .cell small{color:var(--muted); font-size:11px; line-height:1.2}
+    .cell strong{font-size:13px; letter-spacing:.2px}
+    .center{
+      background: radial-gradient(500px 140px at 50% 20%, rgba(122,167,255,.30), transparent 70%),
+                  rgba(255,255,255,.06);
+      border-color: rgba(122,167,255,.40);
+    }
+    a{
+      color:var(--text);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:none; }
+    .links{
+      margin-top:16px;
+      border-top:1px dashed rgba(255,255,255,.14);
+      padding-top:14px;
+      display:grid;
       gap:8px;
+    }
+    .links a{
+      color: rgba(232,238,247,.92);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding:10px 12px;
+      border-radius: 14px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
       align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      margin-left:auto;
     }
-
-    .theme-btn {
-      border: 1px solid var(--line);
-      background: var(--cell);
-      color: var(--ink);
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 13px;
-      cursor: pointer;
+    .links a:hover{
+      border-color: rgba(122,167,255,.55);
+      background: rgba(122,167,255,.08);
     }
-
-    .meta {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .note-card h2 {
-      margin: 2px 0 8px;
-      font-size: clamp(22px, 1.8vw, 30px);
-      line-height: 1.2;
-    }
-
-    .note-card p {
-      margin: 0;
-      font-size: clamp(16px, 1.1vw, 19px);
-      line-height: 1.75;
-      color: var(--ink-soft);
-      white-space: pre-wrap;
-    }
-
-    .hint {
-      margin-top: auto;
-      font-size: 13px;
-      color: var(--ink-soft);
-      border-top: 1px dashed var(--line);
-      padding-top: 10px;
-    }
-
-    .toast{
-      position: fixed;
-      left: 50%;
-      bottom: 18px;
-      transform: translateX(-50%);
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 12px;
-      color: var(--ink);
-      box-shadow: var(--shadow);
-      opacity: 0;
-      pointer-events:none;
-      transition: opacity 160ms ease, transform 160ms ease;
-      z-index: 50;
-      font-size: 13px;
-    }
-    .toast.show{
-      opacity: 1;
-      transform: translateX(-50%) translateY(-2px);
-    }
-
-    @media (max-width: 980px) {
-      :root { --dock-h: var(--dock-h-mobile); }
-
-      body { overflow: hidden; }
-
-      .shell {
-        max-width: none;
-        height: 100vh;
-        padding: 12px 12px 0;
-      }
-
-      .workspace {
-        height: 100%;
-        min-height: 0;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .note-pane {
-        order: 1;
-        width: 100%;
-        min-width: 0;
-        height: calc(100vh - var(--dock-h) - 24px);
-        overflow: auto;
-        padding: 18px 16px 40px;
-      }
-
-      .board-pane {
-        order: 2;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 20;
-        height: var(--dock-h);
-        padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
-        border-radius: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 0;
-        background: var(--panel);
-        backdrop-filter: blur(10px);
-      }
-
-      .board {
-        width: 100%;
-        max-width: none;
-        height: 100%;
-        aspect-ratio: auto;
-        gap: 8px;
-      }
-
-      .cell {
-        border-radius: 12px;
-        min-height: 0;
-        padding: 9px;
-      }
-
-      .cell-title {
-        font-size: clamp(12px, 2.9vw, 14px);
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .cell-id {
-        font-size: 11px;
-        margin-bottom: 2px;
-      }
-
-      .note-card p {
-        font-size: clamp(16px, 4.2vw, 20px);
-      }
-
-      .toast{ bottom: calc(var(--dock-h) + 14px); }
+    .muted{color:var(--muted); font-size:12px;}
+    footer{padding:18px 18px 24px; color:var(--muted); font-size:12px;}
+    @media (max-width:520px){
+      .grid{gap:10px;}
+      .cell{min-height:80px;}
     }
   </style>
 </head>
 
 <body>
-  <main class="shell">
-    <div class="workspace">
-      <section class="board-pane" aria-label="朱光潛式寫作流程九宮格">
-        <div class="board" id="grid"></div>
-      </section>
-
-      <aside class="note-pane" aria-live="polite">
-        <div class="note-top">
-          <h1 class="note-title">朱光潛式寫作流程｜九宮網站</h1>
-          <div class="btn-row">
-            <button class="theme-btn" id="copy-btn" type="button">複製本格</button>
-            <button class="theme-btn" id="download-btn" type="button">下載 Markdown</button>
-            <button class="theme-btn" id="theme-btn" type="button">切換明暗</button>
-          </div>
-        </div>
-
-        <div class="meta" id="card-id">B2 中心</div>
-        <section class="note-card">
-          <h2 id="card-title">折衷法：先輪廓、再生發</h2>
-          <p id="card-body"></p>
-        </section>
-
-        <div class="hint">
-          使用方式：點九宮切換內容。桌機左九宮/右內容；手機上方可捲動/下方固定九宮 Dock。<br/>
-          核心流程：自由聯想 → 小標題 → 刪除無關 → 線索次第 → 逐段寫 → 完稿整合一次。
-        </div>
-      </aside>
+  <header>
+    <div class="wrap">
+      <h1>永錫的九宮格入口</h1>
+      <div class="sub">
+        這裡是我的「九宮格網站」總入口：中心是我（寫作與工具實驗），八格是不同系列。
+        我會把每個系列都做成自己的索引頁，並在系列底下持續長出文章。
+      </div>
+      <div class="note">站點規則：<span class="muted">首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）</span></div>
     </div>
-  </main>
+  </header>
 
-  <div class="toast" id="toast">已複製</div>
+  <div class="wrap">
+    <div class="panel">
+      <div class="content">
+        <div class="grid">
+          <!-- A1 -->
+          <a class="cell" href="/friend_Wang/">
+            <strong>friend_Wang 系列</strong>
+            <small>/friend_Wang/</small>
+          </a>
 
-  <script>
-    // 3×3：A1 A2 A3 / B1 B2 B3 / C1 C2 C3（中心固定 B2）
-    const cards = [
-      {
-        id: "A1",
-        title: "線索關聯 vs 心力耗損",
-        body: "寫作要追線索、看關聯，但不必一直硬推進。\n\n要點：\n1) 同時顧字句段的線索連結。\n2) 避免為了“向前”造成無謂耗損。\n3) 需要方法：既能追主線，也能省心力。"
-      },
-      {
-        id: "A2",
-        title: "想到就寫：先佔地築牆",
-        body: "想到一點意思，就先把它寫下來。\n\n比喻：\n- 像打仗先佔一塊地；寫下來等於築牆守住。\n- 也成為下一步突擊（延伸）的基地。"
-      },
-      {
-        id: "A3",
-        title: "寫作讓心更專注",
-        body: "寫本身是集中注意力的助力。\n\n效果：\n1) 一旦動筆，心不易旁騖。\n2) 先寫下來，比一直想更能推進到下一步。"
-      },
-      {
-        id: "B1",
-        title: "字句反過來刺激思想",
-        body: "寫成的字句常反過來刺激思想。\n\n現象：\n1) 寫著寫著新意湧現。\n2) 原先預想的一段話，可能需要整段改寫。\n3) 所謂“由文生情/興會淋漓”多在此刻發生。"
-      },
-      {
-        id: "B2 中心",
-        title: "折衷法：先輪廓、再生發",
-        body: "介於“全用腹稿”與“全不用腹稿”之間的折衷。\n\n兩個同時成立：\n1) 先有綱要與輪廓 → 保證層次、條理、輕重。\n2) 每段不預先定死 → 寫時隨機生發，保留氣韻與生動。"
-      },
-      {
-        id: "B3",
-        title: "定題後：自由聯想 + 小標題",
-        body: "定題之後，抱著題目四方八面地想。\n\n做法：\n1) 近似“自由聯想”：不拘大小、不問次序。\n2) 想到一點，就用三五字小標題記下。\n3) 一直記到能想到的都寫完。"
-      },
-      {
-        id: "C1",
-        title: "刪除無關：衡量、取捨",
-        body: "把亂雜小標題掃一眼，仔細衡量。\n\n取捨：\n1) 無關重要、無須說的：丟掉。\n2) 應該說、能支撐主線的：留下。"
-      },
-      {
-        id: "C2",
-        title: "排線索與次第：寫成綱要",
-        body: "在留下的點之中，理出線索與順序。\n\n輸出：\n1) 依線索與次第把小標題寫成綱要。\n2) 綱要完成，文章輪廓已具。\n3) 每個小標題＝一段的總綱。"
-      },
-      {
-        id: "C3",
-        title: "逐段寫 → 完稿整合一次",
-        body: "依綱要逐段寫下去。\n\n節奏：\n1) 寫一段前先想大意；寫一句前也先想大意。\n2) 新意湧現就立刻修改；不要半途擱下。\n3) 完稿後再通讀整合一次，省去大清大改。"
-      }
-    ];
+          <!-- A2 -->
+          <a class="cell" href="/zhu-guangqian/">
+            <strong>朱光潛｜寫作方法九宮</strong>
+            <small>/zhu-guangqian/</small>
+          </a>
 
-    const grid = document.getElementById("grid");
-    const cardId = document.getElementById("card-id");
-    const cardTitle = document.getElementById("card-title");
-    const cardBody = document.getElementById("card-body");
-    const themeBtn = document.getElementById("theme-btn");
-    const copyBtn = document.getElementById("copy-btn");
-    const downloadBtn = document.getElementById("download-btn");
-    const toastEl = document.getElementById("toast");
+          <!-- A3 -->
+          <a class="cell" href="/devonthink/">
+            <strong>DEVONthink｜甜蜜長度九宮</strong>
+            <small>/devonthink/</small>
+          </a>
 
-    let activeIndex = 4; // center
+          <!-- B1 -->
+          <a class="cell" href="/notes/">
+            <strong>筆記索引（預留）</strong>
+            <small>/notes/</small>
+          </a>
 
-    function renderGrid() {
-      grid.innerHTML = "";
-      cards.forEach((card, index) => {
-        const button = document.createElement("button");
-        const isCenter = index === 4;
-        button.type = "button";
-        button.className = "cell" + (index === activeIndex ? " active" : "") + (isCenter ? " cell-center" : "");
-        button.innerHTML = `<span class="cell-id">${card.id}</span><span class="cell-title">${card.title}</span>`;
-        button.addEventListener("click", () => setActive(index));
-        grid.appendChild(button);
-      });
-    }
+          <!-- B2 center -->
+          <div class="cell center">
+            <strong>中心｜我在做什麼</strong>
+            <small>九宮格×寫作×AI Coding×知識系統</small>
+          </div>
 
-    function setActive(index) {
-      activeIndex = index;
-      const card = cards[index];
-      cardId.textContent = card.id;
-      cardTitle.textContent = card.title;
-      cardBody.textContent = card.body;
-      renderGrid();
-    }
+          <!-- B3 -->
+          <a class="cell" href="/tools/">
+            <strong>工具箱（預留）</strong>
+            <small>/tools/</small>
+          </a>
 
-    function applyTheme(theme) {
-      const isDark = theme === "dark";
-      document.body.classList.toggle("dark", isDark);
-      themeBtn.textContent = isDark ? "切換成明亮" : "切換成暗色";
-    }
+          <!-- C1 -->
+          <a class="cell" href="/about/">
+            <strong>About（預留）</strong>
+            <small>/about/</small>
+          </a>
 
-    function initTheme() {
-      const saved = localStorage.getItem("mandala-theme");
-      if (saved === "dark" || saved === "light") {
-        applyTheme(saved);
-      } else {
-        const preferDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        applyTheme(preferDark ? "dark" : "light");
-      }
-    }
+          <!-- C2 -->
+          <a class="cell" href="/latest/">
+            <strong>最新更新（預留）</strong>
+            <small>/latest/</small>
+          </a>
 
-    function toast(msg){
-      toastEl.textContent = msg;
-      toastEl.classList.add("show");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(()=>toastEl.classList.remove("show"), 900);
-    }
+          <!-- C3 -->
+          <a class="cell" href="https://github.com/twhsi" target="_blank" rel="noopener">
+            <strong>GitHub</strong>
+            <small>@twhsi</small>
+          </a>
+        </div>
 
-    function copyCurrent(){
-      const c = cards[activeIndex];
-      const text = `${c.id}｜${c.title}\n\n${c.body}`;
-      navigator.clipboard.writeText(text).then(()=>toast("已複製本格內容")).catch(()=>toast("複製失敗（請手動複製）"));
-    }
+        <div class="links">
+          <div class="muted">快速入口（你說的「至少三篇」先掛上）：</div>
+          <a href="/zhu-guangqian/"><span>朱光潛｜寫作方法九宮</span><span class="muted">→</span></a>
+          <a href="/friend_Wang/"><span>friend_Wang｜系列索引（九宮）</span><span class="muted">→</span></a>
+          <a href="/devonthink/"><span>DEVONthink｜甜蜜長度九宮</span><span class="muted">→</span></a>
+        </div>
+      </div>
 
-    function buildMarkdown(){
-      // 依你常用 section 格式輸出（中心 + 八格 + 第二章節流程拆解）
-      const center = cards[4];
-      const map = {
-        "1.1": cards[0], // A1
-        "1.2": cards[1], // A2
-        "1.3": cards[2], // A3
-        "1.4": cards[3], // B1
-        "1.5": cards[5], // B3
-        "1.6": cards[6], // C1
-        "1.7": cards[7], // C2
-        "1.8": cards[8], // C3
-      };
-
-      const md = [];
-      md.push("<!--section: 1-->");
-      md.push("九宮");
-      md.push("");
-      md.push("## 中心");
-      md.push(`**${center.title}**`);
-      md.push("");
-      md.push(center.body.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>"- " + l).join("\n"));
-      md.push("");
-
-      Object.entries(map).forEach(([sec, item])=>{
-        md.push(`<!--section: ${sec}-->`);
-        md.push(`### ${item.id}｜${item.title}`);
-        md.push("");
-        md.push(item.body.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>"- " + l).join("\n"));
-        md.push("");
-      });
-
-      md.push("<!--section: 2-->");
-      md.push("九宮2");
-      md.push("");
-      md.push("## 流程總結（可直接當文章骨架）");
-      md.push("");
-      md.push("- 定題 → 自由聯想（小標題）");
-      md.push("- 刪除無關 → 挑重要");
-      md.push("- 排線索與次第 → 段落綱要");
-      md.push("- 逐段寫（折衷法）→ 新意即改");
-      md.push("- 完稿通讀 → 整合一次");
-      md.push("");
-
-      return md.join("\n");
-    }
-
-    function downloadMarkdown(){
-      const md = buildMarkdown();
-      const blob = new Blob([md], {type:"text/markdown;charset=utf-8"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "朱光潛式寫作流程_九宮.md";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      toast("已下載 Markdown");
-    }
-
-    themeBtn.addEventListener("click", () => {
-      const next = document.body.classList.contains("dark") ? "light" : "dark";
-      applyTheme(next);
-      localStorage.setItem("mandala-theme", next);
-    });
-
-    copyBtn.addEventListener("click", copyCurrent);
-    downloadBtn.addEventListener("click", downloadMarkdown);
-
-    // init
-    setActive(activeIndex);
-    initTheme();
-  </script>
+      <footer>
+        小提醒：如果你尚未建立 <code>/zhu-guangqian/</code> 或 <code>/devonthink/</code> 這些資料夾，先點會 404；我們下一步就把它們補齊或改成你目前實際存在的路徑。
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
