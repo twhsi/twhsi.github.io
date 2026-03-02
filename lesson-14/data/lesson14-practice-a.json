@@ -1,0 +1,226 @@
+{
+  "grammar": [
+    {
+      "id": "grammar-te-kudasai",
+      "pattern": "Vてください",
+      "meaning": "請求",
+      "explanation": "先把動詞換成て形，再接 ください，表示請對方做某動作。",
+      "examples": [
+        {
+          "jp": "問題を読んでください。",
+          "zh": "請讀題目。"
+        },
+        {
+          "jp": "電話番号を教えてください。",
+          "zh": "請告訴我電話號碼。"
+        }
+      ]
+    },
+    {
+      "id": "grammar-mashouka",
+      "pattern": "V2 + ましょうか",
+      "meaning": "提案",
+      "explanation": "主動提議幫忙或釋出善意，語氣接近「要不要我來……？」。",
+      "examples": [
+        {
+          "jp": "手伝いましょうか。",
+          "zh": "要不要我幫忙？"
+        },
+        {
+          "jp": "窓を閉めましょうか。",
+          "zh": "要不要我來關窗？"
+        }
+      ]
+    },
+    {
+      "id": "grammar-teimasu",
+      "pattern": "Vています",
+      "meaning": "進行／持續",
+      "explanation": "可表示正在進行、習慣持續，或某個狀態維持著。",
+      "examples": [
+        {
+          "jp": "ミラーさんは今レポートを読んでいます。",
+          "zh": "米勒先生現在正在看報告。"
+        },
+        {
+          "jp": "私は日本語を勉強しています。",
+          "zh": "我一直在學日文。"
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sentence-read-problem",
+      "section": "格 1",
+      "jp": "問題を読んでください。",
+      "zh": "請讀題目。",
+      "romaji": "Mondai o yonde kudasai.",
+      "grammar_points": ["grammar-te-kudasai"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 4,
+        "end": 8,
+        "label": "問題を読んでください"
+      },
+      "start": 4,
+      "end": 8,
+      "source": "課本 P32 練習A",
+      "note": "初始秒數已建立，可直接在 JSON 微調。"
+    },
+    {
+      "id": "sentence-write-here",
+      "section": "格 2",
+      "jp": "ここに書いてください。",
+      "zh": "請寫在這裡。",
+      "romaji": "Koko ni kaite kudasai.",
+      "grammar_points": ["grammar-te-kudasai"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 8,
+        "end": 12,
+        "label": "ここに書いてください"
+      },
+      "start": 8,
+      "end": 12,
+      "source": "課本 P32 練習A",
+      "note": "可用來對照五段動詞 `く -> いて`。"
+    },
+    {
+      "id": "sentence-teach-phone",
+      "section": "格 3",
+      "jp": "電話番号を教えてください。",
+      "zh": "請告訴我電話號碼。",
+      "romaji": "Denwa bangou o oshiete kudasai.",
+      "grammar_points": ["grammar-te-kudasai"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 21,
+        "end": 26,
+        "label": "電話番号を教えてください"
+      },
+      "start": 21,
+      "end": 26,
+      "source": "課本 P32 練習A",
+      "note": "也是單字 `教えます` 的回查入口。"
+    },
+    {
+      "id": "sentence-center",
+      "section": "中心格",
+      "jp": "て形 -> 〜てください / 〜ましょうか / 〜ています",
+      "zh": "第14課重點是先把動詞變成て形，再套進三個核心句型。",
+      "romaji": "Te-kei kara mittsu no bunkei e.",
+      "grammar_points": ["grammar-te-kudasai", "grammar-mashouka", "grammar-teimasu"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 0,
+        "end": 4,
+        "label": "第14課 練習A 導覽"
+      },
+      "start": 0,
+      "end": 4,
+      "source": "九宮複習筆記整理",
+      "note": "中心卡用來當九宮式閱讀的總覽，不是課本原句。",
+      "layout": "center"
+    },
+    {
+      "id": "sentence-help-offer",
+      "section": "格 5",
+      "jp": "手伝いましょうか。",
+      "zh": "要不要我幫忙？",
+      "romaji": "Tetsudaimashou ka.",
+      "grammar_points": ["grammar-mashouka"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 36,
+        "end": 40,
+        "label": "手伝いましょうか"
+      },
+      "start": 36,
+      "end": 40,
+      "source": "課本 P32 練習A",
+      "note": "主動提議幫忙的典型句。"
+    },
+    {
+      "id": "sentence-close-window",
+      "section": "格 6",
+      "jp": "窓を閉めましょうか。",
+      "zh": "要不要我來關窗？",
+      "romaji": "Mado o shimemashou ka.",
+      "grammar_points": ["grammar-mashouka"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 44,
+        "end": 49,
+        "label": "窓を閉めましょうか"
+      },
+      "start": 44,
+      "end": 49,
+      "source": "課本 P32 練習A",
+      "note": "對照物理開關 `閉めます`。"
+    },
+    {
+      "id": "sentence-aircon-offer",
+      "section": "格 7",
+      "jp": "エアコンをつけましょうか。",
+      "zh": "要不要我來開冷氣？",
+      "romaji": "Ea-kon o tsukemashou ka.",
+      "grammar_points": ["grammar-mashouka"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 49,
+        "end": 54,
+        "label": "エアコンをつけましょうか"
+      },
+      "start": 49,
+      "end": 54,
+      "source": "課堂補充例句",
+      "note": "這句來自現有 Google Doc 補充，不綁死在課本原例。"
+    },
+    {
+      "id": "sentence-miller-reading",
+      "section": "格 8",
+      "jp": "ミラーさんは今レポートを読んでいます。",
+      "zh": "米勒先生現在正在看報告。",
+      "romaji": "Miraa-san wa ima repooto o yonde imasu.",
+      "grammar_points": ["grammar-teimasu"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 54,
+        "end": 58,
+        "label": "ミラーさんは今レポートを読んでいます"
+      },
+      "start": 54,
+      "end": 58,
+      "source": "課本 P32 練習A",
+      "note": "進行中的典型句。"
+    },
+    {
+      "id": "sentence-study-now",
+      "section": "格 9",
+      "jp": "私は日本語を勉強しています。",
+      "zh": "我一直在學日文。",
+      "romaji": "Watashi wa nihongo o benkyou shite imasu.",
+      "grammar_points": ["grammar-teimasu"],
+      "audio": {
+        "mode": "segment",
+        "file": "大家的日本語 初級二 p32.mp3",
+        "start": 58,
+        "end": 63,
+        "label": "私は日本語を勉強しています"
+      },
+      "start": 58,
+      "end": 63,
+      "source": "課堂補充例句",
+      "note": "可代表習慣持續的 `Vています`。"
+    }
+  ]
+}

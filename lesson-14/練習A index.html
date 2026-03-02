@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第14課 練習A 九宮網站</title>
+  <style>
+    :root {
+      --bg-1: #eef7ef;
+      --bg-2: #d8ecdc;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-strong: #ffffff;
+      --ink: #163124;
+      --muted: #5f776a;
+      --line: rgba(22, 49, 36, 0.12);
+      --accent: #2f8b57;
+      --accent-2: #8fcf9f;
+      --accent-3: #e6f6e8;
+      --shadow: 0 22px 60px rgba(32, 82, 47, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans CJK TC", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 139, 87, 0.2), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(143, 207, 159, 0.28), transparent 24%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    }
+
+    .page {
+      width: min(1200px, calc(100vw - 28px));
+      margin: 20px auto 40px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .hero,
+    .panel,
+    .cell {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero {
+      padding: 28px;
+      display: grid;
+      gap: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -30px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(143, 207, 159, 0.6), rgba(143, 207, 159, 0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(47, 139, 87, 0.1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4.3vw, 52px);
+      line-height: 1.05;
+      max-width: 12ch;
+    }
+
+    .hero p,
+    .panel p,
+    .cell-note {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .hero-top {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .hero-actions {
+      display: grid;
+      gap: 10px;
+      justify-items: end;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(22, 49, 36, 0.06);
+      color: #244535;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    audio {
+      width: min(100%, 420px);
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nine-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .cell {
+      padding: 18px;
+      min-height: 250px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+    }
+
+    .cell:hover {
+      transform: translateY(-2px);
+      border-color: rgba(47, 139, 87, 0.28);
+      box-shadow: 0 20px 48px rgba(47, 139, 87, 0.16);
+    }
+
+    .cell.center {
+      background:
+        linear-gradient(180deg, rgba(47, 139, 87, 0.12), rgba(255, 255, 255, 0.92)),
+        var(--surface);
+    }
+
+    .cell.active {
+      border-color: rgba(47, 139, 87, 0.46);
+      box-shadow: 0 22px 54px rgba(47, 139, 87, 0.22);
+    }
+
+    .cell-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .cell-index,
+    .cell-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 38px;
+      padding: 0 12px;
+      border-radius: 14px;
+      background: var(--accent-3);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .cell-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .cell-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .lines {
+      display: grid;
+      gap: 8px;
+    }
+
+    .line {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(47, 139, 87, 0.06);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .line strong {
+      color: var(--accent);
+    }
+
+    .cell-footer {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .button,
+    .ghost {
+      appearance: none;
+      border: 0;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .button {
+      background: #173828;
+      color: white;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      background: #204933;
+    }
+
+    .ghost {
+      background: white;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    .ghost:hover {
+      border-color: rgba(47, 139, 87, 0.32);
+    }
+
+    .panel {
+      padding: 22px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    code {
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(22, 49, 36, 0.06);
+      font-family: "SFMono-Regular", "Menlo", monospace;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-top {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        justify-items: start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nine-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cell {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow">Lesson 14 / Practice A</div>
+          <h1>第14課 練習A 九宮網站</h1>
+          <p>把課本 P32 的練習 A 拆成九宮格。每一格保留日文內容與聲音按鈕；聲音按鈕會優先用林君的聲音朗讀該格日文，避免整段 MP3 和句子對不上的問題。</p>
+        </div>
+        <div class="hero-actions">
+          <span class="badge">參考音檔：<code>大家的日本語 初級二 p32.mp3</code></span>
+          <audio id="lesson-audio" controls preload="metadata" src="./大家的日本語 初級二 p32.mp3"></audio>
+        </div>
+      </div>
+      <div class="status-row">
+        <span class="badge">目前朗讀：<strong id="current-label">尚未播放</strong></span>
+        <span class="badge">模式：<strong>日文朗讀</strong></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>九宮格內容</h2>
+      <p>中間是本頁重點，外圍八格整理了て形變化、句型與例句。每格的聲音按鈕會優先用林君的聲音朗讀該格全部日文內容；上方播放器保留整段課本音檔供你自行比對。</p>
+      <div id="nine-grid" class="nine-grid"></div>
+    </section>
+  </main>
+
+  <script>
+    const cellData = [
+      {
+        id: 1,
+        tag: "I-A",
+        title: "五段動詞 て形 1",
+        subtitle: "く・ぐ・す 的變化",
+        note: "依掃描頁面整理，若原書有差異可再修。",
+        lines: [
+          "書きます → <strong>書いて</strong>",
+          "泳ぎます → <strong>泳いで</strong>",
+          "話します → <strong>話して</strong>"
+        ]
+      },
+      {
+        id: 2,
+        tag: "I-B",
+        title: "五段動詞 て形 2",
+        subtitle: "つ・ぬ・む 的變化",
+        note: "練習 1 的第二組。",
+        lines: [
+          "立ちます → <strong>立って</strong>",
+          "死にます → <strong>死んで</strong>",
+          "読みます → <strong>読んで</strong>"
+        ]
+      },
+      {
+        id: 3,
+        tag: "I-C",
+        title: "一段 / 變格",
+        subtitle: "て形基本型",
+        note: "見ます、借ります、来ます、散歩します。",
+        lines: [
+          "見ます → <strong>見て</strong>",
+          "借ります → <strong>借りて</strong>",
+          "来ます → <strong>来て</strong>",
+          "散歩します → <strong>散歩して</strong>"
+        ]
+      },
+      {
+        id: 4,
+        tag: "II",
+        title: "〜てください",
+        subtitle: "請做某件事",
+        note: "第二題是請求句型練習。",
+        lines: [
+          "問題を <strong>読んで</strong> ください。",
+          "塩を <strong>取って</strong> ください。",
+          "電話番号を <strong>教えて</strong> ください。",
+          "たくさん <strong>食べて</strong> ください。",
+          "ゆっくり <strong>休んで</strong> ください。"
+        ]
+      },
+      {
+        id: 5,
+        tag: "III",
+        title: "〜ましょうか",
+        subtitle: "主動提議幫忙",
+        note: "第三題重點是『要不要我來…？』。",
+        lines: [
+          "手伝いましょうか。",
+          "迎えに行きましょうか。",
+          "窓を閉めましょうか。"
+        ]
+      },
+      {
+        id: 6,
+        tag: "IV-A",
+        title: "〜ています 例句",
+        subtitle: "現在正在做",
+        note: "第四題是進行式。",
+        lines: [
+          "ミラーさんは 今 レポートを <strong>読んで</strong> います。",
+          "ミラーさんは 今 テレビを <strong>見て</strong> います。",
+          "ミラーさんは 今 日本語を <strong>勉強して</strong> います。"
+        ]
+      },
+      {
+        id: 7,
+        tag: "IV-B",
+        title: "問句整理",
+        subtitle: "何をしていますか",
+        note: "從第四題延伸的問答。",
+        lines: [
+          "ミラーさんは 今 何を していますか。",
+          "レポートを 読んで います。",
+          "日本語を 勉強して います。"
+        ]
+      },
+      {
+        id: 8,
+        tag: "A",
+        title: "本頁句型摘要",
+        subtitle: "て形三個核心功能",
+        note: "把本頁三個主要用途放在一起背。",
+        lines: [
+          "〜て ください",
+          "〜ましょうか",
+          "〜て います"
+        ]
+      },
+      {
+        id: 9,
+        tag: "中心",
+        title: "第14課 練習A",
+        subtitle: "て形的進入點",
+        note: "中心格用來總覽整頁內容。",
+        lines: [
+          "て形變化",
+          "請求：〜てください",
+          "提議：〜ましょうか",
+          "進行：〜ています"
+        ]
+      }
+    ];
+
+    const audio = document.getElementById("lesson-audio");
+    const currentLabel = document.getElementById("current-label");
+    const grid = document.getElementById("nine-grid");
+    let activeCellId = null;
+
+    function stopSegmentPlayback() {
+      activeCellId = null;
+      currentLabel.textContent = "尚未播放";
+      document.querySelectorAll(".cell").forEach((cell) => cell.classList.remove("active"));
+    }
+
+    function stripHtml(html) {
+      const box = document.createElement("div");
+      box.innerHTML = html;
+      return box.textContent || box.innerText || "";
+    }
+
+    function getPreferredJapaneseVoice() {
+      const voices = window.speechSynthesis.getVoices?.() || [];
+      const namedVoice = voices.find((voice) => (voice.name || "").includes("林君"));
+      if (namedVoice) return namedVoice;
+      return voices.find((voice) => (voice.lang || "").toLowerCase().startsWith("ja")) || null;
+    }
+
+    function speakJapanese(text) {
+      if (!("speechSynthesis" in window)) {
+        alert("這個瀏覽器不支援日文朗讀。");
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      const preferredVoice = getPreferredJapaneseVoice();
+      if (preferredVoice) utterance.voice = preferredVoice;
+      utterance.lang = preferredVoice?.lang || "ja-JP";
+      utterance.rate = 0.92;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function speakCell(id) {
+      const item = cellData.find((entry) => entry.id === id);
+      if (!item) return;
+      stopSegmentPlayback();
+      window.speechSynthesis.cancel();
+      activeCellId = item.id;
+      currentLabel.textContent = `${item.tag} ${item.title}`;
+      const card = document.querySelector(`[data-cell-id="${id}"]`);
+      if (card) card.classList.add("active");
+      const text = item.lines.map((line) => stripHtml(line)).join("。");
+      speakJapanese(text);
+    }
+
+    function renderGrid() {
+      const order = [1, 2, 3, 4, 9, 5, 6, 7, 8];
+      grid.innerHTML = order.map((id) => {
+        const item = cellData.find((entry) => entry.id === id);
+        return `
+          <article class="cell${item.id === 9 ? " center" : ""}" data-cell-id="${item.id}">
+            <div class="cell-head">
+              <div>
+                <div class="cell-tag">${item.tag}</div>
+              </div>
+              <div class="cell-index">${String(item.id).padStart(2, "0")}</div>
+            </div>
+            <div>
+              <h3 class="cell-title">${item.title}</h3>
+              <p class="cell-subtitle">${item.subtitle}</p>
+            </div>
+            <div class="lines">
+              ${item.lines.map((line) => `<div class="line">${line}</div>`).join("")}
+            </div>
+            <p class="cell-note">${item.note}</p>
+            <div class="cell-footer">
+              <button class="button" type="button" data-play-id="${item.id}">朗讀這格</button>
+              <span class="badge">${item.subtitle}</span>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      grid.querySelectorAll("[data-play-id]").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          speakCell(Number(button.dataset.playId));
+        });
+      });
+
+      grid.querySelectorAll(".cell").forEach((cell) => {
+        cell.addEventListener("click", () => {
+          speakCell(Number(cell.dataset.cellId));
+        });
+      });
+    }
+
+    renderGrid();
+    audio.addEventListener("play", () => {
+      stopSegmentPlayback();
+      currentLabel.textContent = "整段 MP3 播放中";
+    });
+    audio.addEventListener("pause", () => {
+      if (!activeCellId) currentLabel.textContent = "尚未播放";
+    });
+  </script>
+</body>
+</html>
