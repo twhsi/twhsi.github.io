@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsidian Publish Clone</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="panel-header">
+          <div>
+            <div class="eyebrow">Vault</div>
+            <h1>01 Project 3.2</h1>
+          </div>
+          <input id="search-input" type="search" placeholder="Search notes" />
+        </div>
+        <nav id="file-tree" class="tree"></nav>
+      </aside>
+
+      <main class="content">
+        <header class="note-header">
+          <div>
+            <div class="eyebrow">Publish-style Reader</div>
+            <h2 id="note-title">Loading...</h2>
+          </div>
+          <div id="note-meta" class="note-meta"></div>
+        </header>
+        <section id="mandala-shell" class="mandala-shell" hidden></section>
+        <article id="note-body" class="markdown-body"></article>
+      </main>
+
+      <aside class="inspector">
+        <section class="graph-panel">
+          <div class="panel-header compact">
+            <div>
+              <div class="eyebrow">Graph</div>
+              <h3>Local Graph View</h3>
+            </div>
+          </div>
+          <div id="graph-root" class="graph-root"></div>
+          <div id="graph-legend" class="graph-legend"></div>
+        </section>
+
+        <section class="links-panel">
+          <div class="panel-header compact">
+            <div>
+              <div class="eyebrow">Links</div>
+              <h3>Backlinks</h3>
+            </div>
+          </div>
+          <div id="backlinks" class="backlinks"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
