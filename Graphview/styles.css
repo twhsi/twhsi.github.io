@@ -623,9 +623,9 @@ h2 {
 
 @media (max-width: 820px) {
   :root {
-    --mobile-topbar-height: 48px;
+    --mobile-topbar-height: 46px;
     --mobile-gap: 10px;
-    --mobile-square-size: min(calc(100vw - 28px), 34svh);
+    --mobile-board-size: min(calc(100vw - 28px), 42svh);
   }
 
   html,
@@ -667,9 +667,9 @@ h2 {
   }
 
   .mandala-shell {
-    width: var(--mobile-square-size);
-    margin: 0 auto 12px;
-    gap: 8px;
+    width: var(--mobile-board-size);
+    margin: 0 auto var(--mobile-gap);
+    gap: 0;
   }
 
   .mandala-toolbar {
@@ -690,7 +690,7 @@ h2 {
   }
 
   .content {
-    padding: 10px 14px 8px;
+    padding: 8px 14px 6px;
     background: transparent;
   }
 
@@ -703,9 +703,10 @@ h2 {
   }
 
   .note-header {
+    width: var(--mobile-board-size);
+    margin: 0 auto var(--mobile-gap);
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8px;
     padding-top: 0;
     gap: 10px;
     min-height: var(--mobile-topbar-height);
@@ -713,13 +714,14 @@ h2 {
 
   .sidebar-btn,
   .mobile-view-btn {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     padding: 0;
-    border-radius: 14px;
-    background: rgba(27, 33, 45, 0.82);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-    color: #f3f6ff;
+    border-radius: 12px;
+    border-color: rgba(120, 129, 152, 0.28);
+    background: linear-gradient(180deg, rgba(97, 103, 118, 0.96), rgba(81, 87, 102, 0.96));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+    color: #f5f7fb;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -727,22 +729,24 @@ h2 {
 
   .mobile-view-btn {
     display: inline-flex;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
   }
 
   .mobile-view-btn.active {
-    background: rgba(255, 77, 87, 0.88);
-    color: #fff7f3;
+    border-color: rgba(236, 206, 206, 0.9);
+    background: linear-gradient(180deg, rgba(233, 221, 221, 0.98), rgba(217, 204, 204, 0.98));
+    color: #826f6f;
   }
 
   .mandala-grid {
-    width: var(--mobile-square-size);
+    width: var(--mobile-board-size);
     aspect-ratio: 1 / 1;
     margin: 0 auto;
     gap: 2px;
     padding: 0;
-    background: #42495b;
+    background: #485064;
+    border: 1px solid rgba(84, 92, 112, 0.85);
   }
 
   .mandala-card {
@@ -785,21 +789,21 @@ h2 {
   .inspector {
     grid-template-columns: 1fr;
     padding: 0 14px 10px;
-    gap: 8px;
+    gap: 0;
   }
 
   .graph-panel {
-    width: var(--mobile-square-size);
+    width: var(--mobile-board-size);
     margin: 0 auto;
     border-radius: 0;
-    border: 0;
+    border: 1px solid rgba(84, 92, 112, 0.85);
     box-shadow: none;
     padding: 0;
-    background: #17191f;
+    background: #11141b;
   }
 
   .graph-root {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     min-height: 0;
     border-radius: 0;
   }
