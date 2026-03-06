@@ -295,6 +295,84 @@ h2 {
   flex-wrap: wrap;
 }
 
+.grid81-wrap {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 6px;
+  background: rgba(10, 15, 24, 0.88);
+}
+
+.grid81-board {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid81-cell {
+  position: relative;
+  min-height: 96px;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.grid81-cell.major-top {
+  border-top: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.grid81-cell.major-left {
+  border-left: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.grid81-cell.major-bottom {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.grid81-cell.major-right {
+  border-right: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.grid81-label {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.mandala-mini {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(140, 167, 255, 0.4);
+  background: rgba(17, 26, 44, 0.88);
+  border-radius: 2px;
+  padding: 6px;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mandala-mini .slot {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9cb4ff;
+  margin-bottom: 4px;
+}
+
+.mandala-mini h5 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #9d8aff;
+}
+
+.mandala-mini p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.25;
+  color: #dbe6f9;
+}
+
 .mandala-card {
   min-height: 180px;
   padding: 18px;
@@ -524,6 +602,10 @@ h2 {
   .mandala-grid,
   .mandala-subgrid {
     grid-template-columns: 1fr;
+  }
+
+  .grid81-cell {
+    min-height: 72px;
   }
 
   .sidebar,

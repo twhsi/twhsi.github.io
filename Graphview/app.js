@@ -6,7 +6,6 @@ const state = {
   graphDrag: null,
   graphFocusFn: null,
   contentViewByNote: new Map(),
-  mandalaSubgridByNote: new Map(),
 };
 
 const fileTreeEl = document.querySelector("#file-tree");
@@ -286,6 +285,85 @@ function buildMandalaCard(slot, section, center = false) {
   `;
 }
 
+function slotToGridPosition(slotValue) {
+  const value = Number(slotValue);
+  if (!Number.isFinite(value) || value < 1 || value > 9) return null;
+  const row = Math.floor((value - 1) / 3);
+  const col = (value - 1) % 3;
+  return { row, col };
+}
+
+function buildMandalaMiniCard(section) {
+  return `
+    <button class="mandala-mini" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" type="button">
+      <div class="slot">${escapeHtml(section?.slot || "")}</div>
+      <h5>${escapeHtml(section?.title || "Empty")}</h5>
+      <p>${escapeHtml(section?.excerpt || "")}</p>
+    </button>
+  `;
+}
+
+function buildGrid81(sectionMap) {
+  const byCell = new Map();
+  const keys = [...sectionMap.keys()];
+
+  // Place sub-grid sections first so they override anchor cells.
+  keys
+    .map((slot) => {
+      const match = slot.match(/^(\d+)\.(\d+)$/);
+      if (!match) return null;
+      const major = slotToGridPosition(match[1]);
+      const minor = slotToGridPosition(match[2]);
+      if (!major || !minor) return null;
+      return {
+        cellRow: major.row * 3 + minor.row,
+        cellCol: major.col * 3 + minor.col,
+        section: sectionMap.get(slot),
+      };
+    })
+    .filter(Boolean)
+    .forEach((entry) => {
+      byCell.set(`${entry.cellRow}-${entry.cellCol}`, entry.section);
+    });
+
+  // Main sections anchor to the center of each 3x3 block if empty.
+  for (let major = 1; major <= 9; major += 1) {
+    const section = sectionMap.get(String(major));
+    if (!section) continue;
+    const majorPos = slotToGridPosition(major);
+    const centerRow = majorPos.row * 3 + 1;
+    const centerCol = majorPos.col * 3 + 1;
+    const key = `${centerRow}-${centerCol}`;
+    if (!byCell.has(key)) {
+      byCell.set(key, section);
+    }
+  }
+
+  const cells = [];
+  for (let row = 0; row < 9; row += 1) {
+    for (let col = 0; col < 9; col += 1) {
+      const major = Math.floor(row / 3) * 3 + Math.floor(col / 3) + 1;
+      const minor = (row % 3) * 3 + (col % 3) + 1;
+      const section = byCell.get(`${row}-${col}`);
+      const classes = [
+        "grid81-cell",
+        row % 3 === 0 ? "major-top" : "",
+        col % 3 === 0 ? "major-left" : "",
+        row === 8 ? "major-bottom" : "",
+        col === 8 ? "major-right" : "",
+      ].filter(Boolean).join(" ");
+
+      cells.push(`
+        <div class="${classes}">
+          <div class="grid81-label">${major}.${minor}</div>
+          ${section ? buildMandalaMiniCard(section) : ""}
+        </div>
+      `);
+    }
+  }
+  return cells.join("");
+}
+
 function attachMandalaHandlers() {
   mandalaShellEl.querySelectorAll("[data-mandala-card]").forEach((card) => {
     const focusPath = card.dataset.focus || null;
@@ -313,14 +391,6 @@ function attachMandalaHandlers() {
     });
   });
 
-  mandalaShellEl.querySelectorAll("[data-subgrid]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const subgrid = button.dataset.subgrid;
-      if (!subgrid || !state.currentPath) return;
-      state.mandalaSubgridByNote.set(state.currentPath, subgrid);
-      navigateTo(state.currentPath);
-    });
-  });
 }
 
 function renderMandala(note) {
@@ -364,13 +434,6 @@ function renderMandala(note) {
   const allowedViews = has81 ? new Set(["markdown", "9", "81"]) : new Set(["markdown", "9"]);
   const selectedContentView = state.contentViewByNote.get(note.path) || defaultView;
   const resolvedContentView = allowedViews.has(selectedContentView) ? selectedContentView : defaultView;
-  const selectedView = resolvedContentView === "81" ? "81" : "9";
-  const selectedSubgrid =
-    state.mandalaSubgridByNote.get(note.path) ||
-    availableSubgrids.find((slot) => slot !== "5") ||
-    availableSubgrids[0] ||
-    "1";
-  const subSlots = Array.from({ length: 9 }, (_, index) => `${selectedSubgrid}.${index + 1}`);
 
   mandalaShellEl.hidden = false;
   noteBodyEl.hidden = resolvedContentView !== "markdown";
@@ -386,29 +449,18 @@ function renderMandala(note) {
     ${
       resolvedContentView === "markdown"
         ? `<div class="mandala-empty">目前使用 Markdown 視圖，九宮卡片已隱藏。</div>`
-        : `
+        : resolvedContentView === "9"
+        ? `
     <div class="mandala-grid">
       ${mainSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
     </div>
-    ${
-      selectedView === "81"
-        ? `
-      <div class="subgrid-wrap">
-        <div class="subgrid-toolbar">
-          ${availableSubgrids
-            .map(
-              (group) =>
-                `<button class="subgrid-chip ${group === selectedSubgrid ? "active" : ""}" data-subgrid="${group}" type="button">${group} 區</button>`,
-            )
-            .join("")}
-        </div>
-        <div class="mandala-subgrid">
-          ${subSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
-        </div>
-      </div>
     `
-        : ""
-    }
+        : `
+    <div class="grid81-wrap">
+      <div class="grid81-board">
+        ${buildGrid81(sections)}
+      </div>
+    </div>
     `
     }
   `;
