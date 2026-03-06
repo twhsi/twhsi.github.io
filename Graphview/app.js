@@ -740,9 +740,9 @@ async function init() {
   setupSearch();
 
   const requestedPath = decodeURIComponent(location.hash.slice(1));
-  const featuredMandala =
-    state.data.notes.find((note) => note.path === "01 Project/魯曼的卡片（8張）.md") ||
-    state.data.notes.find((note) => note.mandala);
+  const featuredMandala = state.data.notes
+    .filter((note) => note.mandala)
+    .sort((a, b) => new Date(b.modifiedAt || 0).getTime() - new Date(a.modifiedAt || 0).getTime())[0];
   const firstPath = requestedPath || featuredMandala?.path || state.data.notes[0]?.path;
   navigateTo(firstPath);
 }
