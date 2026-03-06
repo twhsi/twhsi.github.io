@@ -4,6 +4,9 @@ const state = {
   currentPath: null,
   graphFrame: null,
   graphDrag: null,
+  graphFocusFn: null,
+  mandalaViewByNote: new Map(),
+  mandalaSubgridByNote: new Map(),
 };
 
 const fileTreeEl = document.querySelector("#file-tree");
@@ -244,22 +247,13 @@ function renderMeta(note) {
   `;
 }
 
-function renderMandala(note) {
-  if (!note.mandala) {
-    mandalaShellEl.hidden = true;
-    mandalaShellEl.innerHTML = "";
-    return;
-  }
-
+function parseMandalaSections(note) {
   const sectionRegex = /<!--section:\s*([^>]+)-->/g;
   const matches = [...note.content.matchAll(sectionRegex)];
-  if (!matches.length) {
-    mandalaShellEl.hidden = true;
-    mandalaShellEl.innerHTML = "";
-    return;
-  }
+  const sectionMap = new Map();
 
-  const cards = matches.slice(0, 9).map((match, index) => {
+  matches.forEach((match, index) => {
+    const slot = match[1].trim();
     const start = match.index + match[0].length;
     const end = matches[index + 1]?.index ?? note.content.length;
     const raw = note.content.slice(start, end).trim();
@@ -269,24 +263,143 @@ function renderMandala(note) {
       .replace(/\n+/g, " ")
       .trim();
     const lines = cleaned.split(/(?<=[.!?。])/).map((line) => line.trim()).filter(Boolean);
-    return {
-      slot: match[1].trim(),
+    const firstLink = raw.match(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/);
+    const target = firstLink ? resolveNote(firstLink[1].trim()) : null;
+    sectionMap.set(slot, {
+      slot,
       title: lines[0] || "Mandala slot",
       excerpt: lines.slice(1).join(" ").slice(0, 140) || "Empty section",
-      center: index === 4,
-    };
+      targetPath: target?.path || null,
+    });
   });
 
+  return sectionMap;
+}
+
+function buildMandalaCard(slot, section, center = false) {
+  return `
+    <button class="mandala-card ${center ? "center" : ""}" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" type="button">
+      <div class="slot">${escapeHtml(slot)}</div>
+      <h4>${escapeHtml(section?.title || "Empty slot")}</h4>
+      <p>${escapeHtml(section?.excerpt || "Add section content in your Obsidian note to fill this cell.")}</p>
+    </button>
+  `;
+}
+
+function attachMandalaHandlers() {
+  mandalaShellEl.querySelectorAll("[data-mandala-card]").forEach((card) => {
+    const focusPath = card.dataset.focus || null;
+    const targetPath = card.dataset.target || null;
+
+    card.addEventListener("mouseenter", () => {
+      if (focusPath && state.graphFocusFn) state.graphFocusFn(focusPath);
+    });
+
+    card.addEventListener("mouseleave", () => {
+      if (state.graphFocusFn) state.graphFocusFn(null);
+    });
+
+    card.addEventListener("click", () => {
+      if (targetPath && targetPath !== state.currentPath) navigateTo(targetPath);
+    });
+  });
+
+  mandalaShellEl.querySelectorAll("[data-mandala-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const view = button.dataset.mandalaView;
+      if (!view || !state.currentPath) return;
+      state.mandalaViewByNote.set(state.currentPath, view);
+      navigateTo(state.currentPath);
+    });
+  });
+
+  mandalaShellEl.querySelectorAll("[data-subgrid]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const subgrid = button.dataset.subgrid;
+      if (!subgrid || !state.currentPath) return;
+      state.mandalaSubgridByNote.set(state.currentPath, subgrid);
+      navigateTo(state.currentPath);
+    });
+  });
+}
+
+function renderMandala(note) {
+  if (!note.mandala) {
+    mandalaShellEl.hidden = true;
+    mandalaShellEl.innerHTML = "";
+    return;
+  }
+
+  const sections = parseMandalaSections(note);
+  if (!sections.size) {
+    mandalaShellEl.hidden = true;
+    mandalaShellEl.innerHTML = "";
+    return;
+  }
+
+  const mainSlots = Array.from({ length: 9 }, (_, index) => String(index + 1));
+  const subgridGroups = [...sections.keys()]
+    .map((slot) => slot.match(/^(\d+)\.(\d+)$/))
+    .filter(Boolean)
+    .map((match) => ({
+      group: match[1],
+      child: Number(match[2]),
+    }))
+    .reduce((map, entry) => {
+      if (!map.has(entry.group)) map.set(entry.group, new Set());
+      map.get(entry.group).add(entry.child);
+      return map;
+    }, new Map());
+
+  const availableSubgrids = [...subgridGroups.keys()]
+    .map((group) => Number(group))
+    .filter((value) => Number.isFinite(value))
+    .sort((a, b) => a - b)
+    .map(String);
+
+  const has81 = availableSubgrids.length > 0;
+  const defaultView = has81 ? "81" : "9";
+  const selectedView = state.mandalaViewByNote.get(note.path) || defaultView;
+  const selectedSubgrid =
+    state.mandalaSubgridByNote.get(note.path) ||
+    availableSubgrids.find((slot) => slot !== "5") ||
+    availableSubgrids[0] ||
+    "1";
+  const subSlots = Array.from({ length: 9 }, (_, index) => `${selectedSubgrid}.${index + 1}`);
+
   mandalaShellEl.hidden = false;
-  mandalaShellEl.innerHTML = cards
-    .map((card) => `
-      <section class="mandala-card ${card.center ? "center" : ""}">
-        <div class="slot">${escapeHtml(card.slot)}</div>
-        <h4>${escapeHtml(card.title)}</h4>
-        <p>${escapeHtml(card.excerpt)}</p>
-      </section>
-    `)
-    .join("");
+  mandalaShellEl.innerHTML = `
+    <div class="mandala-toolbar">
+      <div class="mandala-switch">
+        <button class="mandala-chip ${selectedView === "9" ? "active" : ""}" data-mandala-view="9" type="button">9宮</button>
+        <button class="mandala-chip ${selectedView === "81" ? "active" : ""}" data-mandala-view="81" type="button" ${has81 ? "" : "disabled"}>81宮</button>
+      </div>
+      <div class="mandala-hint">Hover 卡片可同步高亮右側 Graph；點擊卡片可進入連結筆記。</div>
+    </div>
+    <div class="mandala-grid">
+      ${mainSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
+    </div>
+    ${
+      selectedView === "81"
+        ? `
+      <div class="subgrid-wrap">
+        <div class="subgrid-toolbar">
+          ${availableSubgrids
+            .map(
+              (group) =>
+                `<button class="subgrid-chip ${group === selectedSubgrid ? "active" : ""}" data-subgrid="${group}" type="button">${group} 區</button>`,
+            )
+            .join("")}
+        </div>
+        <div class="mandala-subgrid">
+          ${subSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
+        </div>
+      </div>
+    `
+        : ""
+    }
+  `;
+  attachMandalaHandlers();
 }
 
 function renderBacklinks(note) {
@@ -381,6 +494,7 @@ function renderGraphLegend() {
 
 function renderGraph(note) {
   if (state.graphFrame) cancelAnimationFrame(state.graphFrame);
+  state.graphFocusFn = null;
 
   const { nodes, links } = buildLocalGraph(note);
   const nodeMap = new Map(nodes.map((nodeItem) => [nodeItem.id, nodeItem]));
@@ -493,6 +607,7 @@ function renderGraph(note) {
       linkElements[index].setAttribute("stroke-opacity", visible ? "1" : "0.08");
     });
   };
+  state.graphFocusFn = applyGraphFocus;
 
   const tick = () => {
     iteration += 1;
@@ -590,11 +705,11 @@ function navigateTo(path) {
   location.hash = encodeURIComponent(path);
   noteTitleEl.textContent = note.title;
   renderMeta(note);
+  renderGraph(note);
   renderMandala(note);
   noteBodyEl.innerHTML = renderMarkdown(note);
   attachNoteLinkHandlers();
   renderBacklinks(note);
-  renderGraph(note);
   setActiveTreeButton();
 }
 

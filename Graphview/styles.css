@@ -223,10 +223,68 @@ h2 {
 }
 
 .mandala-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 28px;
+}
+
+.mandala-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.mandala-switch,
+.subgrid-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mandala-chip,
+.subgrid-chip {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.mandala-chip.active,
+.subgrid-chip.active {
+  color: var(--text);
+  border-color: rgba(255, 77, 87, 0.45);
+  background: var(--accent-soft);
+}
+
+.mandala-chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mandala-hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mandala-grid,
+.mandala-subgrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  margin: 0 0 28px;
+}
+
+.subgrid-wrap {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.subgrid-toolbar {
+  margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .mandala-card {
@@ -238,6 +296,23 @@ h2 {
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.02)),
     rgba(10, 15, 24, 0.8);
   box-shadow: var(--shadow);
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.mandala-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 77, 87, 0.35);
+}
+
+.mandala-card:focus-visible {
+  outline: 2px solid rgba(255, 77, 87, 0.45);
+  outline-offset: 2px;
 }
 
 .mandala-card.center {
@@ -430,6 +505,16 @@ h2 {
   }
 
   .mandala-shell {
+    gap: 10px;
+  }
+
+  .mandala-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mandala-grid,
+  .mandala-subgrid {
     grid-template-columns: 1fr;
   }
 

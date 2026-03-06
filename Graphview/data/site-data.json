@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T11:35:34.781Z",
+  "generatedAt": "2026-03-04T11:42:50.161Z",
   "sourceVault": "3.２ 81宮＊Graph View=7000字",
   "graphConfig": {
     "collapse-filter": false,
@@ -221,6 +221,8 @@
       "basename": "00 3.2 開疆闢土",
       "title": "00 3.2 開疆闢土",
       "folder": "01 Project",
+      "frontmatter": {},
+      "mandala": false,
       "content": "<!--section: 1-->\n2026-03-04\n08:23 \n\n- [ ] 術語，從3.1移動過來？\n\t- [ ] 立刻產生Graph View的資料庫，太好玩了\n\t- [ ] ![[截圖 2026-03-04 at 08.28.10 1.png|400]]\n\t\t- [ ] 翁明漢也可以如此做？\n- [ ] 想要玩\n\t- [ ] 魯曼的卡片 Heptbase 卡片盒有鬼\n\t- [ ] 投影片 81＊Graph View\n- [ ] 魯曼的卡片盒結構用Lineage可以裝進去\n\t- [ ] 但用九宮及81宮格看不清楚",
       "links": [],
       "embeds": [
@@ -239,6 +241,10 @@
       "basename": "魯曼的卡片（8張）",
       "title": "魯曼的卡片（8張）",
       "folder": "01 Project",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
       "content": "<!--section: 1-->\n# 9/8\n\n卡片盒，一個模控學（cybernetic）系統\n\n次序與失序的組合，一堆無法預測的組合，\n\n透過特別路徑得以體現。\n\n前提：不依固定順序。\n\n先前的分化：尋找協助vs.內容，紀錄、問題、概念vs.\n\n將現有紀錄重塑，\n\n並使那些用內部順序來假設的變為多餘。＊\n\n<!--section: 1.1-->\n# 9/8,1\n\n主題：與卡片盒溝通:如何開發出適當的夥伴，資淺夥伴？重要。\n\n與幕僚共事越來越難，越來越貴。\n\n卡片紙的現實。\n\n<!--section: 1.2-->\n# 9/8,3\n\n卡片盒裡有鬼？\n\n訪客來。全都給他們看，看光光－如A片。\n\n不意外他們感到失望。\n\n<!--section: 1.3-->\n# 9/8a\n\n產能的問題與關係有關，亦即與「卡片盒與使用者的關係」有關。\n\n<!--section: 1.3.1-->\n# 9/8a1\n\n卡片盒筆記不斷增長，我盡全力讓自己從中獲益，\n\n盡全力去探索。\n\n<!--section: 1.3.1.1-->\n9／8a12\n\n<!--section: 1.3.1.2-->\n\n\n<!--section: 1.3.1.3-->\n\n\n<!--section: 1.3.1.4-->\n\n\n<!--section: 1.3.1.5-->\n\n\n<!--section: 1.3.1.6-->\n\n\n<!--section: 1.3.1.7-->\n\n\n<!--section: 1.3.1.8-->\n\n\n<!--section: 1.3.2-->\n# 9/8a2\n\n卡片盒就是化糞池－勿放入澄清版的筆記。\n\n暫緩測試，速下決定－速度是關鍵。\n\n<!--section: 1.3.3-->\n\n\n<!--section: 1.3.4-->\n\n\n<!--section: 1.3.5-->\n\n\n<!--section: 1.3.6-->\n\n\n<!--section: 1.3.7-->\n\n\n<!--section: 1.3.8-->\n\n\n<!--section: 1.4-->\n# 9/8b\n\n記憶的整體結構，參見Ashby 1967，p.103.\n\n人不應該依賴大量逐點式（point-by-point）的存取方式，\n而是應該依靠筆記之間的關係（relations），\n也就是透過**[[graph view]]**來運作。\n這樣的引用關係，\n能夠一次讓更多內容變得可用，\n遠遠超過我們在一次搜尋衝動\n或一次固定某個想法時\n原本能想到的範圍\n[[原本卡片盒筆記的翻譯]]\n\n<!--section: 1.5-->\n# 9/8j\n\n卡片盒筆記裡面有一張卡片，上面記載的內容駁斥了整個卡片盒筆記裡面每一則筆記的論點。\n\n但只要你一打開卡片盒，這則筆記就會自動消失。\n\n也就是說，它換了個編號，跑到別的地方去了，找不到了。\n\n鬼牌一張。\n\n<!--section: 1.6-->\n\n\n<!--section: 1.7-->\n\n\n<!--section: 1.8-->",
       "links": [
         {
@@ -262,6 +268,8 @@
       "basename": "1000字",
       "title": "1000字",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -274,6 +282,8 @@
       "basename": "150字",
       "title": "150字",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -286,6 +296,8 @@
       "basename": "RoamResearch",
       "title": "RoamResearch",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -298,6 +310,8 @@
       "basename": "keystone species",
       "title": "keystone species",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -310,6 +324,8 @@
       "basename": "◊字型九宮 1",
       "title": "◊字型九宮 1",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "松村寧雄先生發展出來的九宮格，簡稱為鑽石型九宮\n有標題及內文",
       "links": [],
       "embeds": [],
@@ -324,6 +340,8 @@
       "basename": "上下文 Context",
       "title": "上下文 Context",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "GTD的概念，依照動詞來分類\n寫作，標題＋上下文",
       "links": [],
       "embeds": [],
@@ -336,6 +354,8 @@
       "basename": "人名",
       "title": "人名",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -348,6 +368,10 @@
       "basename": "日記",
       "title": "日記",
       "folder": "98 術語拷貝",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
       "content": "<!--section: 1-->\n\n<!--section: 1.1-->\n\n\n<!--section: 1.2-->\n\n\n<!--section: 1.3-->\n\n\n<!--section: 1.4-->\n\n\n<!--section: 1.5-->\n\n\n<!--section: 1.6-->\n\n\n<!--section: 1.7-->\n\n\n<!--section: 1.8-->",
       "links": [],
       "embeds": [],
@@ -360,6 +384,8 @@
       "basename": "標準化",
       "title": "標準化",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面，\n\n例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place就是九宮格。",
       "links": [],
       "embeds": [],
@@ -372,6 +398,8 @@
       "basename": "索引",
       "title": "索引",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -384,6 +412,8 @@
       "basename": "緩慢預感",
       "title": "緩慢預感",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "創意從何而來？\n[[🟦 達爾文]]、[[🟦 魯曼]]",
       "links": [
         {
@@ -409,6 +439,8 @@
       "basename": "語音",
       "title": "語音",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -421,6 +453,8 @@
       "basename": "關鍵字",
       "title": "關鍵字",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "不是找到筆記\n而是創作者\n\n舉例：\n\n定義\n\nGraph view",
       "links": [],
       "embeds": [],
@@ -436,6 +470,8 @@
       "basename": "雙向筆記",
       "title": "雙向筆記",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
@@ -448,6 +484,10 @@
       "basename": "🟥  九宮",
       "title": "🟥  九宮",
       "folder": "98 術語拷貝",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
       "content": "父連結:[[🐦 九宮]]\n---\n東密流傳下來的[[金剛界曼陀羅]]\n延伸\n1. 三乘三思考法(Triz)\n2. Research Canvas\n\n[[◊字型九宮 1]]\n[[の字型九宮]]\n[[井字型九宮]]",
       "links": [
         {
@@ -469,6 +509,8 @@
       "basename": "🟦 達爾文",
       "title": "🟦 達爾文",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "達爾文的[[緩慢預感]]是他發展天擇說的重要原因，經過長時間深入研究，發展出典範轉移等級的理論。\n相對於[[環礁]]，就不是緩慢預感風格。",
       "links": [
         {
@@ -489,6 +531,8 @@
       "basename": "🟦 魯曼",
       "title": "🟦 魯曼",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "德國社會學家",
       "links": [],
       "embeds": [],
@@ -504,6 +548,8 @@
       "basename": "🟨 八頁小書",
       "title": "🟨 八頁小書",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "[[🟨 日計劃]]\n[[讀書筆記]]",
       "links": [
         {
@@ -524,6 +570,8 @@
       "basename": "🟨 日計劃",
       "title": "🟨 日計劃",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "FAST心法",
       "links": [],
       "embeds": [],
@@ -539,6 +587,8 @@
       "basename": "🟩  九四快",
       "title": "🟩  九四快",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "[[3.1.3 ➡️ 用九宮寫出好文章好網站（1）用紙本九四快捕捉稍縱即逝的靈感]]、[[3.1.4 ❓ 用九宮寫出好文章好網站（2）數位筆記的九四快]]、[[3.1.5 用九宮寫出好文章好網站（3）AI生成九四快的讀書筆記可行嗎？]]三個章節討論，用四個九宮的九四快讀書法。\n蔡巨鵬老師發展的快速閱讀法，\n四個[[🟥  九宮]]\n和[[🟩 Fleeting Note]]的關係是什麼？\n\n\n[[🟨 八頁小書]]的反面就是很棒的手寫位置，又做[[🟨 日計劃]]，又做九四快",
       "links": [
         {
@@ -572,6 +622,8 @@
       "basename": "🟩 Fleeting Note",
       "title": "🟩 Fleeting Note",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "[[3.1.7 達爾文如何從筆記到洞見]]\n- 中文名稱翻譯\n\n1. 捕捉靈光一閃的點子，我是用Todoist,Flow這些工具\n2. 捕捉書本中的靈感，我是紙本，雙向筆記，AI等工具\n3.",
       "links": [],
       "embeds": [],
@@ -586,6 +638,8 @@
       "basename": "🟩 卡片盒",
       "title": "🟩 卡片盒",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "[[🟦 魯曼]]\n申克博士\n[[FIRE]]\nFleeeting Note\n產生洞見的永久筆記網\n連結\n核裂變",
       "links": [
         {
@@ -604,6 +658,8 @@
       "basename": "🟪 obsidian",
       "title": "🟪 obsidian",
       "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
       "content": "Jan 19, 2026# 由HyperCard來學習互動設計方法強化Obsidian的使用\n\n像是HyperCard，Obsidian的插件模擬各種App使用\n\n1. 快速輸入 電腦及手機，手機版也相當不錯，但是會壞掉\n    \n\n2. 有夠多的上下文讓我回到我做事的地方，Search是\n    \n\n3. 雙方框做的雙向連結就是主題索引\n    \n\n4. Obsidian是快速原型工具，九宮格、Lineage則是優異的插件。\n    \n    1. 寫文章／寫書\n        \n        1. 互動原型用Lineage：核心可以做到樹枝狀寫作且有雙向連結\n            \n            1. ❌ 不用九宮格視角看，容易亂碼\n                \n            \n            2. 多寫一陣子，測試穩定度\n                \n            \n            3. 殺手運用是可以寫雙向筆記\n                \n        \n        2. 穩定運作用Ulysses?\n            \n        \n        3. ❌ 寫電子報的結構就簡單，只有靶心人，可以到穩定的Gingko Writer去寫\n            \n    \n    2. 日計劃 九宮格\n        \n        1. 九宮格＋Table變成81宮格\n            \n            1. Table可以快速打字\n                \n            \n            2. 和Excalidraw的類表格對應\n                \n        \n        2. 中間放圖片：格誌日記的九宮規劃，成為中心，為81宮格的核心\n            \n        \n        3. 有Excalidraw，可以快速打字或手寫書入\n            \n    \n    3. TheBrain插件 人脈管理\n\n2026-02-27 和王博士演講，把九宮格和[[graph view]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中\n\n\n[[🟥  九宮]]\n[[graph view]]",
       "links": [
         {
@@ -632,6 +688,10 @@
       "basename": "Mandala",
       "title": "Mandala",
       "folder": "",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
       "content": "<!--section: 1-->\n<!--section: 2-->\n<!--section: 3-->\n<!--section: 4-->\n<!--section: 5-->\n<!--section: 6-->\n<!--section: 7-->\n<!--section: 8-->\n<!--section: 9-->",
       "links": [],
       "embeds": [],
@@ -644,6 +704,8 @@
       "basename": "graph view",
       "title": "graph view",
       "folder": "",
+      "frontmatter": {},
+      "mandala": false,
       "content": "| [[關鍵字]]   | [[連結]]與[[反向連結]] | 商像箭頭      |\n| --------- | --------------- | --------- |\n|           | ⭕               |           |\n|           |                 |           |\n| ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─       | ㄧㄧㄧㄧㄧㄧㄧㄧ─ |\n\n\n\n\n[[Obsidian]]中的官方 Plunin，非常有效率地查詢到整本書的任何地方\n\n我在書裡面的[[關鍵字]]要這樣整理\n有兩種視角\n1. [[graph view]]\n2. [[反向連結]]",
       "links": [
         {
@@ -677,6 +739,8 @@
       "basename": "原本卡片盒筆記的翻譯",
       "title": "原本卡片盒筆記的翻譯",
       "folder": "",
+      "frontmatter": {},
+      "mandala": false,
       "content": "因此這點很重要:別倚靠巨量的點對點管道，反而該倚賴筆記之間的關聯，也就是說，倚賴立即可得的參考資料，因為它會比一陣搜尋脈衝或腦裡的固定記憶點\n\n更快出現。",
       "links": [],
       "embeds": [],
