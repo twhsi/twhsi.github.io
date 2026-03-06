@@ -21,6 +21,8 @@ const searchInputEl = document.querySelector("#search-input");
 const sidebarToggleEl = document.querySelector("#sidebar-toggle");
 const sidebarCloseEl = document.querySelector("#sidebar-close");
 const sidebarBackdropEl = document.querySelector("#sidebar-backdrop");
+const mobileMarkdownToggleEl = document.querySelector("#mobile-markdown-toggle");
+const mobileMandalaToggleEl = document.querySelector("#mobile-mandala-toggle");
 
 function isMobileViewport() {
   return window.matchMedia("(max-width: 820px)").matches;
@@ -34,6 +36,26 @@ function setupSidebarControls() {
   sidebarToggleEl?.addEventListener("click", () => setSidebarOpen(true));
   sidebarCloseEl?.addEventListener("click", () => setSidebarOpen(false));
   sidebarBackdropEl?.addEventListener("click", () => setSidebarOpen(false));
+}
+
+function setMobileViewButtons(note) {
+  const currentView = state.contentViewByNote.get(note.path) || "9";
+  mobileMarkdownToggleEl?.classList.toggle("active", currentView === "markdown");
+  mobileMandalaToggleEl?.classList.toggle("active", currentView === "9");
+}
+
+function setupMobileViewControls() {
+  mobileMarkdownToggleEl?.addEventListener("click", () => {
+    if (!state.currentPath) return;
+    state.contentViewByNote.set(state.currentPath, "markdown");
+    navigateTo(state.currentPath);
+  });
+
+  mobileMandalaToggleEl?.addEventListener("click", () => {
+    if (!state.currentPath) return;
+    state.contentViewByNote.set(state.currentPath, "9");
+    navigateTo(state.currentPath);
+  });
 }
 
 async function loadData() {
@@ -716,6 +738,7 @@ function navigateTo(path) {
   noteBodyEl.innerHTML = renderMarkdown(note);
   attachNoteLinkHandlers();
   renderBacklinks(note);
+  setMobileViewButtons(note);
   setActiveTreeButton();
 }
 
@@ -729,6 +752,7 @@ function setupSearch() {
 async function init() {
   await loadData();
   setupSidebarControls();
+  setupMobileViewControls();
   renderTree();
   renderGraphLegend();
   setupSearch();
