@@ -625,7 +625,7 @@ h2 {
   :root {
     --mobile-topbar-height: 46px;
     --mobile-gap: 10px;
-    --mobile-board-size: min(calc(100vw - 28px), 42svh);
+    --mobile-board-size: min(calc(100vw - 12px), 42svh);
   }
 
   html,
@@ -689,8 +689,12 @@ h2 {
     display: none;
   }
 
+  .mandala-empty {
+    display: none;
+  }
+
   .content {
-    padding: 8px 14px 6px;
+    padding: 6px 6px 4px;
     background: transparent;
   }
 
@@ -749,6 +753,34 @@ h2 {
     border: 1px solid rgba(84, 92, 112, 0.85);
   }
 
+  .markdown-body {
+    width: var(--mobile-board-size);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto var(--mobile-gap);
+    overflow: auto;
+    padding: 12px;
+    background: #262a37;
+    color: #eef2ff;
+    border: 1px solid rgba(84, 92, 112, 0.85);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .markdown-body a {
+    color: #b496ff;
+    border-bottom-color: rgba(180, 150, 255, 0.35);
+  }
+
   .mandala-card {
     min-height: 0;
     border-radius: 0;
@@ -788,7 +820,7 @@ h2 {
 
   .inspector {
     grid-template-columns: 1fr;
-    padding: 0 14px 10px;
+    padding: 0 6px 10px;
     gap: 0;
   }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T06:51:51.470Z",
+  "generatedAt": "2026-03-06T06:56:58.223Z",
   "sourceVault": "3.２ 81宮＊Graph View=7000字",
   "graphConfig": {
     "collapse-filter": false,
@@ -511,27 +511,7 @@
           "heading": null
         },
         {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
-          "alias": null,
-          "heading": null
-        },
-        {
           "target": "98 術語拷貝/關係.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
           "alias": null,
           "heading": null
         },
@@ -542,21 +522,6 @@
         },
         {
           "target": "relations.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
           "alias": null,
           "heading": null
         }
@@ -804,11 +769,6 @@
           "heading": null
         },
         {
-          "target": "98 術語拷貝/關鍵字.md",
-          "alias": null,
-          "heading": null
-        },
-        {
           "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
           "alias": null,
           "heading": null
@@ -817,7 +777,6 @@
       "embeds": [],
       "backlinks": [
         "01 Project/3.2 關鍵術語/🟩  Graph View.md",
-        "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
         "01 Project/3.2 關鍵術語/🟪 Obsidian.md"
       ],
       "preview": "| [[關鍵字]] | [[連結]]與[[反向連結]] | 雙向[[箭頭]] | | --------- | --------------- | -------------------- | | | ⭕ | [[local graph view]] | | | 早期：[[TheBrain]] | | | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧ"
@@ -851,13 +810,6 @@
       ],
       "embeds": [],
       "backlinks": [
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
-        "00章節／小節/魯曼卡片_雙向連結加工版.md",
         "00章節／小節/魯曼卡片_雙向連結加工版.md"
       ],
       "preview": "[[🟦 魯曼]] [[魯曼卡片_雙向連結加工版]] 申克博士 [[FIRE]] Fleeeting Note 產生洞見的永久筆記網 連結 核裂變 1. 讀書筆記＝文獻筆記 2. Fleeting＝讀書筆記＋上下文 3. Fleeting Notee要變成永久筆記 1981宮格＊多個Markdown檔案＊Graph View＝專案筆記 目錄鷹架*定義or書的"
@@ -911,11 +863,6 @@
         },
         {
           "target": "01 Project/3.2 關鍵術語/雙向連結.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
           "alias": null,
           "heading": null
         }
@@ -1128,7 +1075,6 @@
       "links": [],
       "embeds": [],
       "backlinks": [
-        "01 Project/3.2 關鍵術語/🟩  Graph View.md",
         "01 Project/3.2 關鍵術語/🟩  Graph View.md"
       ],
       "preview": "不是找到筆記 而是創作者 舉例： 定義 Graph view"
@@ -1467,23 +1413,7 @@
     },
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
       "target": "98 術語拷貝/關係.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
     },
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
@@ -1492,18 +1422,6 @@
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
       "target": "relations.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
-    },
-    {
-      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
-      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
     },
     {
       "source": "01 Project/3.2 關鍵術語/箭頭.md",
@@ -1532,10 +1450,6 @@
     {
       "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
       "target": "98 術語拷貝/Obsidian.md"
-    },
-    {
-      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
-      "target": "98 術語拷貝/關鍵字.md"
     },
     {
       "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
@@ -1572,10 +1486,6 @@
     {
       "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
       "target": "01 Project/3.2 關鍵術語/雙向連結.md"
-    },
-    {
-      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
-      "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md"
     },
     {
       "source": "98 術語拷貝/緩慢預感.md",
