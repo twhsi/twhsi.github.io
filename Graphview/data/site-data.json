@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T05:57:49.685Z",
+  "generatedAt": "2026-03-06T06:33:41.656Z",
   "sourceVault": "3.２ 81宮＊Graph View=7000字",
   "graphConfig": {
     "collapse-filter": false,
@@ -277,6 +277,11 @@
       },
       {
         "type": "note",
+        "name": "分化",
+        "path": "分化.md"
+      },
+      {
+        "type": "note",
         "name": "卡片牆",
         "path": "卡片牆.md"
       },
@@ -299,6 +304,11 @@
         "type": "note",
         "name": "Mandala",
         "path": "Mandala.md"
+      },
+      {
+        "type": "note",
+        "name": "relations",
+        "path": "relations.md"
       },
       {
         "type": "note",
@@ -496,6 +506,11 @@
           "heading": null
         },
         {
+          "target": "分化.md",
+          "alias": null,
+          "heading": null
+        },
+        {
           "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
           "alias": null,
           "heading": null
@@ -522,6 +537,11 @@
         },
         {
           "target": "筆記與筆記.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "relations.md",
           "alias": null,
           "heading": null
         },
@@ -1328,6 +1348,40 @@
       "preview": "人際關係記憶超強 2013年開始使用的App"
     },
     {
+      "id": "relations.md",
+      "path": "relations.md",
+      "basename": "relations",
+      "title": "relations",
+      "folder": "",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-06T06:20:10.837Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00章節／小節/魯曼卡片_雙向連結加工版.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "分化.md",
+      "path": "分化.md",
+      "basename": "分化",
+      "title": "分化",
+      "folder": "",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-06T06:20:15.877Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00章節／小節/魯曼卡片_雙向連結加工版.md"
+      ],
+      "preview": ""
+    },
+    {
       "id": "卡片牆.md",
       "path": "卡片牆.md",
       "basename": "卡片牆",
@@ -1409,6 +1463,10 @@
     },
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
+      "target": "分化.md"
+    },
+    {
+      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
       "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
     },
     {
@@ -1430,6 +1488,10 @@
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
       "target": "筆記與筆記.md"
+    },
+    {
+      "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
+      "target": "relations.md"
     },
     {
       "source": "00章節／小節/魯曼卡片_雙向連結加工版.md",
