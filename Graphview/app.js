@@ -6,6 +6,7 @@ const state = {
   graphDrag: null,
   graphFocusFn: null,
   contentViewByNote: new Map(),
+  sessionRootByNote: new Map(),
 };
 
 const fileTreeEl = document.querySelector("#file-tree");
@@ -292,93 +293,14 @@ function parseMandalaSections(note) {
   return sectionMap;
 }
 
-function buildMandalaCard(slot, section, center = false) {
+function buildMandalaCard(slot, section, center = false, drill = "") {
   return `
-    <button class="mandala-card ${center ? "center" : ""}" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" type="button">
+    <button class="mandala-card ${center ? "center" : ""}" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" data-drill="${escapeHtml(drill)}" type="button">
       <div class="slot">${escapeHtml(slot)}</div>
       <h4>${escapeHtml(section?.title || "Empty slot")}</h4>
       <p>${escapeHtml(section?.excerpt || "Add section content in your Obsidian note to fill this cell.")}</p>
     </button>
   `;
-}
-
-function slotToGridPosition(slotValue) {
-  const value = Number(slotValue);
-  if (!Number.isFinite(value) || value < 1 || value > 9) return null;
-  const row = Math.floor((value - 1) / 3);
-  const col = (value - 1) % 3;
-  return { row, col };
-}
-
-function buildMandalaMiniCard(section) {
-  return `
-    <button class="mandala-mini" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" type="button">
-      <div class="slot">${escapeHtml(section?.slot || "")}</div>
-      <h5>${escapeHtml(section?.title || "Empty")}</h5>
-      <p>${escapeHtml(section?.excerpt || "")}</p>
-    </button>
-  `;
-}
-
-function buildGrid81(sectionMap) {
-  const byCell = new Map();
-  const keys = [...sectionMap.keys()];
-
-  // Place sub-grid sections first so they override anchor cells.
-  keys
-    .map((slot) => {
-      const match = slot.match(/^(\d+)\.(\d+)$/);
-      if (!match) return null;
-      const major = slotToGridPosition(match[1]);
-      const minor = slotToGridPosition(match[2]);
-      if (!major || !minor) return null;
-      return {
-        cellRow: major.row * 3 + minor.row,
-        cellCol: major.col * 3 + minor.col,
-        section: sectionMap.get(slot),
-      };
-    })
-    .filter(Boolean)
-    .forEach((entry) => {
-      byCell.set(`${entry.cellRow}-${entry.cellCol}`, entry.section);
-    });
-
-  // Main sections anchor to the center of each 3x3 block if empty.
-  for (let major = 1; major <= 9; major += 1) {
-    const section = sectionMap.get(String(major));
-    if (!section) continue;
-    const majorPos = slotToGridPosition(major);
-    const centerRow = majorPos.row * 3 + 1;
-    const centerCol = majorPos.col * 3 + 1;
-    const key = `${centerRow}-${centerCol}`;
-    if (!byCell.has(key)) {
-      byCell.set(key, section);
-    }
-  }
-
-  const cells = [];
-  for (let row = 0; row < 9; row += 1) {
-    for (let col = 0; col < 9; col += 1) {
-      const major = Math.floor(row / 3) * 3 + Math.floor(col / 3) + 1;
-      const minor = (row % 3) * 3 + (col % 3) + 1;
-      const section = byCell.get(`${row}-${col}`);
-      const classes = [
-        "grid81-cell",
-        row % 3 === 0 ? "major-top" : "",
-        col % 3 === 0 ? "major-left" : "",
-        row === 8 ? "major-bottom" : "",
-        col === 8 ? "major-right" : "",
-      ].filter(Boolean).join(" ");
-
-      cells.push(`
-        <div class="${classes}">
-          <div class="grid81-label">${major}.${minor}</div>
-          ${section ? buildMandalaMiniCard(section) : ""}
-        </div>
-      `);
-    }
-  }
-  return cells.join("");
 }
 
 function attachMandalaHandlers() {
@@ -395,6 +317,12 @@ function attachMandalaHandlers() {
     });
 
     card.addEventListener("click", () => {
+      const drillSlot = card.dataset.drill || "";
+      if (drillSlot && drillSlot !== state.sessionRootByNote.get(state.currentPath)) {
+        state.sessionRootByNote.set(state.currentPath, drillSlot);
+        navigateTo(state.currentPath);
+        return;
+      }
       if (targetPath && targetPath !== state.currentPath) navigateTo(targetPath);
     });
   });
@@ -426,31 +354,25 @@ function renderMandala(note) {
     return;
   }
 
-  const mainSlots = Array.from({ length: 9 }, (_, index) => String(index + 1));
-  const subgridGroups = [...sections.keys()]
-    .map((slot) => slot.match(/^(\d+)\.(\d+)$/))
-    .filter(Boolean)
-    .map((match) => ({
-      group: match[1],
-      child: Number(match[2]),
-    }))
-    .reduce((map, entry) => {
-      if (!map.has(entry.group)) map.set(entry.group, new Set());
-      map.get(entry.group).add(entry.child);
-      return map;
-    }, new Map());
-
-  const availableSubgrids = [...subgridGroups.keys()]
-    .map((group) => Number(group))
-    .filter((value) => Number.isFinite(value))
-    .sort((a, b) => a - b)
-    .map(String);
-
-  const has81 = availableSubgrids.length > 0;
-  const defaultView = has81 ? "81" : "9";
-  const allowedViews = has81 ? new Set(["markdown", "9", "81"]) : new Set(["markdown", "9"]);
+  const roots = [...sections.keys()].filter((slot) => /^\d+$/.test(slot)).sort((a, b) => Number(a) - Number(b));
+  const defaultRoot = roots[0] || "1";
+  const currentRoot = state.sessionRootByNote.get(note.path) || defaultRoot;
+  const childSlots = [
+    `${currentRoot}.1`,
+    `${currentRoot}.2`,
+    `${currentRoot}.3`,
+    `${currentRoot}.4`,
+    currentRoot,
+    `${currentRoot}.5`,
+    `${currentRoot}.6`,
+    `${currentRoot}.7`,
+    `${currentRoot}.8`,
+  ];
+  const defaultView = "9";
+  const allowedViews = new Set(["markdown", "9"]);
   const selectedContentView = state.contentViewByNote.get(note.path) || defaultView;
   const resolvedContentView = allowedViews.has(selectedContentView) ? selectedContentView : defaultView;
+  const parentRoot = currentRoot.includes(".") ? currentRoot.slice(0, currentRoot.lastIndexOf(".")) : "";
 
   mandalaShellEl.hidden = false;
   noteBodyEl.hidden = resolvedContentView !== "markdown";
@@ -459,24 +381,25 @@ function renderMandala(note) {
       <div class="mandala-switch">
         <button class="mandala-chip ${resolvedContentView === "markdown" ? "active" : ""}" data-content-view="markdown" type="button">Markdown</button>
         <button class="mandala-chip ${resolvedContentView === "9" ? "active" : ""}" data-content-view="9" type="button">九宮</button>
-        <button class="mandala-chip ${resolvedContentView === "81" ? "active" : ""}" data-content-view="81" type="button" ${has81 ? "" : "disabled"}>81宮</button>
+      </div>
+      <div class="mandala-switch">
+        ${parentRoot ? `<button class="mandala-chip" data-mandala-card data-drill="${escapeHtml(parentRoot)}" data-focus="" data-target="" type="button">← ${escapeHtml(parentRoot)}</button>` : ""}
+        <span class="tag">Session ${escapeHtml(currentRoot)}</span>
       </div>
       <div class="mandala-hint">Hover 卡片可同步高亮右側 Graph；點擊卡片可進入連結筆記。</div>
     </div>
     ${
       resolvedContentView === "markdown"
         ? `<div class="mandala-empty">目前使用 Markdown 視圖，九宮卡片已隱藏。</div>`
-        : resolvedContentView === "9"
-        ? `
-    <div class="mandala-grid">
-      ${mainSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
-    </div>
-    `
         : `
-    <div class="grid81-wrap">
-      <div class="grid81-board">
-        ${buildGrid81(sections)}
-      </div>
+    <div class="mandala-grid">
+      ${childSlots
+        .map((slot, index) => {
+          const hasChildren = [...sections.keys()].some((key) => key.startsWith(`${slot}.`));
+          const drill = hasChildren && slot !== currentRoot ? slot : "";
+          return buildMandalaCard(slot, sections.get(slot), index === 4, drill);
+        })
+        .join("")}
     </div>
     `
     }
