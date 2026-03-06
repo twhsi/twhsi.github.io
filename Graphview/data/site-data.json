@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T06:56:58.223Z",
+  "generatedAt": "2026-03-06T07:26:52.837Z",
   "sourceVault": "3.２ 81宮＊Graph View=7000字",
   "graphConfig": {
     "collapse-filter": false,
@@ -324,14 +324,16 @@
       "basename": "00 3.2 開疆闢土",
       "title": "00 3.2 開疆闢土",
       "folder": "00章節／小節",
-      "frontmatter": {},
-      "mandala": false,
-      "modifiedAt": "2026-03-05T04:52:24.383Z",
-      "content": "- [ ] 3.1\n\t- [ ] 還需要修改\n\t- [ ] 3.1 書稿初稿檢查\n\n- [ ] 術語，從3.1移動過來？\n\t- [ ] 立刻產生Graph View的資料庫，太好玩了\n- [ ]  翁明漢 This is a book\n\t- [ ] 7000字解析度\n- [ ] 想要玩\n\t- [ ] 魯曼的卡片 Heptbase 卡片盒有鬼\n\t- [ ] 投影片 81＊Graph View\n- [ ] 魯曼的卡片盒結構用Lineage可以裝進去\n\t- [ ] 但用九宮及81宮格看不清楚\n- [ ] 大結構\n\t- [ ] 讀書筆記\n\t- [ ] 1981\n\t- [ ] Graph View\n\t- [ ] 出版",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-06T07:24:52.178Z",
+      "content": "<!--section: 1-->\n\n\n\n\n\n- \n<!--section: 1.1-->\n- [ ] 術語，從3.1移動過來？\n\t- [ ] 立刻產生Graph View的資料庫，太好玩了\n<!--section: 1.2-->\n\n- [ ] 想要玩\n\t- [ ] 魯曼的卡片 Heptbase 卡片盒有鬼\n\t- [ ] 投影片 81＊Graph View\n<!--section: 1.3-->\n\n- [ ] 魯曼的卡片盒結構用Lineage可以裝進去\n\t- [ ] 但用九宮及81宮格看不清楚\n<!--section: 1.4-->\n- [ ] 大結構\n\t- [ ] 讀書筆記 九四快\n\t- [ ] 會生長的永久筆記 細胞寫作法\n\t- [ ] Graph View\n\t- [ ] 出版\n<!--section: 1.5-->\n[ ]  Moleskine筆記本寫到3.2\n<!--section: 1.6-->\n<!--section: 1.7-->\n\n- [ ]  翁明漢 This is a book\n\t- [ ] 7000字解析度\n<!--section: 1.8-->\n- [ ] 3.1\n\t- [ ] 還需要修改\n\t- [ ] 3.1 書稿初稿檢查",
       "links": [],
       "embeds": [],
       "backlinks": [],
-      "preview": "- [ ] 3.1 - [ ] 還需要修改 - [ ] 3.1 書稿初稿檢查 - [ ] 術語，從3.1移動過來？ - [ ] 立刻產生Graph View的資料庫，太好玩了 - [ ] 翁明漢 This is a book - [ ] 7000字解析度 - [ ] 想要玩 - [ ] 魯曼的卡片 Heptbase 卡片盒有鬼 - [ ] 投影片 81＊Gr"
+      "preview": "<!--section: 1--> - <!--section: 1.1--> - [ ] 術語，從3.1移動過來？ - [ ] 立刻產生Graph View的資料庫，太好玩了 <!--section: 1.2--> - [ ] 想要玩 - [ ] 魯曼的卡片 Heptbase 卡片盒有鬼 - [ ] 投影片 81＊Graph View <!--sectio"
     },
     {
       "id": "00章節／小節/未命名 2.md",
@@ -431,8 +433,8 @@
       "folder": "00章節／小節",
       "frontmatter": {},
       "mandala": false,
-      "modifiedAt": "2026-03-06T05:24:03.590Z",
-      "content": "由[[一宮格]]\n[[九宮格]]\n\n由[[150字]]\n到[[1000字]]\n\n生長靠[[筆記與筆記]]的[[關係]]是",
+      "modifiedAt": "2026-03-06T07:26:51.038Z",
+      "content": "由[[一宮格]]\n[[九宮格]]\n\n由[[150字]]\n到[[1000字]]\n\n生長靠[[筆記與筆記]]的[[關係]]是\n\n好像可以增加一個Skill的蓋ㄋㄧㄢ",
       "links": [
         {
           "target": "01 Project/3.2 關鍵術語/150字.md",
@@ -457,7 +459,7 @@
       ],
       "embeds": [],
       "backlinks": [],
-      "preview": "由[[一宮格]] [[九宮格]] 由[[150字]] 到[[1000字]] 生長靠[[筆記與筆記]]的[[關係]]是"
+      "preview": "由[[一宮格]] [[九宮格]] 由[[150字]] 到[[1000字]] 生長靠[[筆記與筆記]]的[[關係]]是 好像可以增加一個Skill的蓋ㄋㄧㄢ"
     },
     {
       "id": "00章節／小節/細胞寫作法.md",

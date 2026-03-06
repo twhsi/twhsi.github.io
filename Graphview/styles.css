@@ -625,7 +625,7 @@ h2 {
   :root {
     --mobile-topbar-height: 46px;
     --mobile-gap: 10px;
-    --mobile-board-size: min(calc(100vw - 12px), 42svh);
+    --mobile-board-size: calc(100vw - 12px);
   }
 
   html,
