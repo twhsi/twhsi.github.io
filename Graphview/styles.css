@@ -36,6 +36,10 @@ body {
   min-height: 100vh;
 }
 
+body.sidebar-open {
+  overflow: hidden;
+}
+
 .shell {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr) 380px;
@@ -73,6 +77,31 @@ body {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 18px;
+}
+
+.sidebar-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sidebar-toggle,
+.sidebar-close,
+.sidebar-backdrop {
+  display: none;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(1px);
+  z-index: 34;
 }
 
 .panel-header.compact {
@@ -590,6 +619,33 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: min(86vw, 360px);
+    z-index: 35;
+    transform: translateX(-104%);
+    transition: transform 180ms ease;
+    overflow-y: auto;
+  }
+
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  body.sidebar-open .sidebar-backdrop {
+    display: block;
+  }
+
+  .sidebar-toggle,
+  .sidebar-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .mandala-shell {
     gap: 10px;
   }
@@ -613,6 +669,10 @@ h2 {
   .inspector {
     border: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .note-header {
+    align-items: center;
   }
 
   .inspector {

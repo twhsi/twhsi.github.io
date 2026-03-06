@@ -17,6 +17,23 @@ const backlinksEl = document.querySelector("#backlinks");
 const graphRootEl = document.querySelector("#graph-root");
 const graphLegendEl = document.querySelector("#graph-legend");
 const searchInputEl = document.querySelector("#search-input");
+const sidebarToggleEl = document.querySelector("#sidebar-toggle");
+const sidebarCloseEl = document.querySelector("#sidebar-close");
+const sidebarBackdropEl = document.querySelector("#sidebar-backdrop");
+
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 820px)").matches;
+}
+
+function setSidebarOpen(isOpen) {
+  document.body.classList.toggle("sidebar-open", isOpen);
+}
+
+function setupSidebarControls() {
+  sidebarToggleEl?.addEventListener("click", () => setSidebarOpen(true));
+  sidebarCloseEl?.addEventListener("click", () => setSidebarOpen(false));
+  sidebarBackdropEl?.addEventListener("click", () => setSidebarOpen(false));
+}
 
 async function loadData() {
   const response = await fetch("./data/site-data.json");
@@ -766,6 +783,7 @@ function attachNoteLinkHandlers() {
 function navigateTo(path) {
   const note = state.data.notes.find((item) => item.path === path);
   if (!note) return;
+  if (isMobileViewport()) setSidebarOpen(false);
   state.currentPath = path;
   location.hash = encodeURIComponent(path);
   noteTitleEl.textContent = note.title;
@@ -787,6 +805,7 @@ function setupSearch() {
 
 async function init() {
   await loadData();
+  setupSidebarControls();
   renderTree();
   renderGraphLegend();
   setupSearch();
@@ -796,6 +815,9 @@ async function init() {
     .filter((note) => note.mandala)
     .sort((a, b) => new Date(b.modifiedAt || 0).getTime() - new Date(a.modifiedAt || 0).getTime())[0];
   const firstPath = requestedPath || featuredMandala?.path || state.data.notes[0]?.path;
+  if (isMobileViewport() && featuredMandala?.path) {
+    state.contentViewByNote.set(featuredMandala.path, "9");
+  }
   navigateTo(firstPath);
 }
 
