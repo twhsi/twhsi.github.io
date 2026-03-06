@@ -1,0 +1,781 @@
+{
+  "generatedAt": "2026-03-06T07:16:39.988Z",
+  "sourceVault": "02 Area_Mandlal Diary 曼陀羅手帳",
+  "siteTitle": "02 Area_Mandlal Diary 曼陀羅手帳",
+  "graphConfig": {
+    "collapse-filter": true,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": true,
+    "collapse-color-groups": false,
+    "colorGroups": [
+      {
+        "query": "path:\"Monthly Play\"  ",
+        "color": {
+          "a": 1,
+          "rgb": 14701138
+        }
+      },
+      {
+        "query": "path:\"Weekly Plan\"  ",
+        "color": {
+          "a": 1,
+          "rgb": 14725458
+        }
+      },
+      {
+        "query": "path:\"01 Project\"  ",
+        "color": {
+          "a": 1,
+          "rgb": 11657298
+        }
+      }
+    ],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 3.01192708333333,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": false,
+    "centerStrength": 0.518713248970312,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 250,
+    "scale": 0.31390706966563353,
+    "close": true
+  },
+  "localGraphOptions": null,
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "folder",
+        "name": "00 日計劃",
+        "children": [
+          {
+            "type": "note",
+            "name": "00 ◊ 🐸 日計劃 🐸",
+            "path": "00 日計劃/00 ◊ 🐸 日計劃 🐸.md"
+          },
+          {
+            "type": "note",
+            "name": "2026年第10週",
+            "path": "00 日計劃/2026年第10週.md"
+          },
+          {
+            "type": "note",
+            "name": "2026年第11週",
+            "path": "00 日計劃/2026年第11週.md"
+          },
+          {
+            "type": "note",
+            "name": "mandala-templates",
+            "path": "00 日計劃/mandala-templates.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "01 Project",
+        "children": [
+          {
+            "type": "folder",
+            "name": "翁明漢",
+            "children": [
+              {
+                "type": "note",
+                "name": "翁明漢",
+                "path": "01 Project/翁明漢/翁明漢.md"
+              }
+            ]
+          },
+          {
+            "type": "note",
+            "name": "🇺🇸　美國之旅",
+            "path": "01 Project/🇺🇸　美國之旅.md"
+          },
+          {
+            "type": "note",
+            "name": "🎤 大志 Podcast Codex",
+            "path": "01 Project/🎤 大志 Podcast Codex.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "02 Area",
+        "children": [
+          {
+            "type": "note",
+            "name": "🏸 民生羽球賽",
+            "path": "02 Area/🏸 民生羽球賽.md"
+          },
+          {
+            "type": "note",
+            "name": "🐦🐦 鳥眼看永錫",
+            "path": "02 Area/🐦🐦 鳥眼看永錫.md"
+          },
+          {
+            "type": "note",
+            "name": "🕵️🕵️九宮週檢視",
+            "path": "02 Area/🕵️🕵️九宮週檢視.md"
+          },
+          {
+            "type": "note",
+            "name": "百年人生計劃",
+            "path": "02 Area/百年人生計劃.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "03 Resource",
+        "children": [
+          {
+            "type": "folder",
+            "name": "Monthly Play",
+            "children": [
+              {
+                "type": "note",
+                "name": "2026 April",
+                "path": "03 Resource/Monthly Play/2026 April.md"
+              },
+              {
+                "type": "note",
+                "name": "2026 March",
+                "path": "03 Resource/Monthly Play/2026 March.md"
+              }
+            ]
+          },
+          {
+            "type": "note",
+            "name": "0325 清明",
+            "path": "03 Resource/0325 清明.md"
+          },
+          {
+            "type": "note",
+            "name": "社會局演講 6月",
+            "path": "03 Resource/社會局演講 6月.md"
+          },
+          {
+            "type": "note",
+            "name": "品韻合唱團演出",
+            "path": "03 Resource/品韻合唱團演出.md"
+          },
+          {
+            "type": "note",
+            "name": "新北演講 四月",
+            "path": "03 Resource/新北演講 四月.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "031 人脈管理",
+        "children": [
+          {
+            "type": "note",
+            "name": "品臻邸",
+            "path": "031 人脈管理/品臻邸.md"
+          },
+          {
+            "type": "note",
+            "name": "品韻合唱團",
+            "path": "031 人脈管理/品韻合唱團.md"
+          },
+          {
+            "type": "note",
+            "name": "龍寶建設",
+            "path": "031 人脈管理/龍寶建設.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Mandala Grid Section Edit Sessions",
+        "children": [
+          {
+            "type": "note",
+            "name": "1772427173600-61-3",
+            "path": "Mandala Grid Section Edit Sessions/1772427173600-61-3.md"
+          },
+          {
+            "type": "note",
+            "name": "1772578388655-63-3",
+            "path": "Mandala Grid Section Edit Sessions/1772578388655-63-3.md"
+          },
+          {
+            "type": "note",
+            "name": "1772639518511-64-3",
+            "path": "Mandala Grid Section Edit Sessions/1772639518511-64-3.md"
+          },
+          {
+            "type": "note",
+            "name": "1772684993304-64-4",
+            "path": "Mandala Grid Section Edit Sessions/1772684993304-64-4.md"
+          },
+          {
+            "type": "note",
+            "name": "1772767623254-65-3",
+            "path": "Mandala Grid Section Edit Sessions/1772767623254-65-3.md"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "00 日計劃/00 ◊ 🐸 日計劃 🐸.md",
+      "path": "00 日計劃/00 ◊ 🐸 日計劃 🐸.md",
+      "basename": "00 ◊ 🐸 日計劃 🐸",
+      "title": "00 ◊ 🐸 日計劃 🐸",
+      "folder": "00 日計劃",
+      "frontmatter": {
+        "children": "\"[[第三部 FIRE]]\"",
+        "parents": "\"[[🐙 永錫的Hub]], [[02 Areas拷貝/📚📚📚 已經完成的書稿/📚 第二部/2.4 系統1/🐙 永錫的Hub]]\"",
+        "mandala_pinned_sections": "",
+        "mandala": true,
+        "mandala_plan": "",
+        "enabled": true,
+        "year": "2026",
+        "daily_only_3x3": true,
+        "center_date_h2": "\"## 2026-03-01\"",
+        "slots": "",
+        "\"1\"": "接收太陽的能量，開心一天",
+        "\"2\"": "09-12",
+        "\"3\"": "12-14",
+        "\"4\"": "14-16",
+        "\"5\"": "16-18",
+        "\"6\"": "18-19",
+        "\"7\"": "19-21",
+        "\"8\"": "日記"
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-06T02:35:17.065Z",
+      "content": "<!--section: 1-->\n## 2026-01-01\n\n<!--section: 1.1-->\n\n\n<!--section: 1.2-->\n\n\n<!--section: 1.3-->\n\n\n<!--section: 1.4-->\n\n\n<!--section: 1.5-->\n\n\n<!--section: 1.6-->\n\n\n<!--section: 1.7-->\n\n\n<!--section: 1.8-->\n\n\n<!--section: 2-->\n## 2026-01-02\n\n<!--section: 3-->\n## 2026-01-03\n\n<!--section: 4-->\n## 2026-01-04\n\n<!--section: 5-->\n## 2026-01-05\n\n<!--section: 6-->\n## 2026-01-06\n\n<!--section: 7-->\n## 2026-01-07\n\n<!--section: 8-->\n## 2026-01-08\n\n<!--section: 9-->\n## 2026-01-09\n\n<!--section: 10-->\n## 2026-01-10\n\n<!--section: 11-->\n## 2026-01-11\n\n<!--section: 12-->\n## 2026-01-12\n\n<!--section: 13-->\n## 2026-01-13\n\n<!--section: 14-->\n## 2026-01-14\n\n<!--section: 15-->\n## 2026-01-15\n\n<!--section: 16-->\n## 2026-01-16\n\n<!--section: 17-->\n## 2026-01-17\n\n<!--section: 18-->\n## 2026-01-18\n\n<!--section: 19-->\n## 2026-01-19\n\n<!--section: 20-->\n## 2026-01-20\n\n<!--section: 21-->\n## 2026-01-21\n\n<!--section: 22-->\n## 2026-01-22\n\n<!--section: 23-->\n## 2026-01-23\n\n<!--section: 24-->\n## 2026-01-24\n\n<!--section: 25-->\n## 2026-01-25\n\n<!--section: 26-->\n## 2026-01-26\n\n<!--section: 27-->\n## 2026-01-27\n\n<!--section: 28-->\n## 2026-01-28\n\n<!--section: 29-->\n## 2026-01-29\n\n<!--section: 30-->\n## 2026-01-30\n\n<!--section: 31-->\n## 2026-01-31\n\n<!--section: 32-->\n## 2026-02-01\n\n<!--section: 33-->\n## 2026-02-02\n\n<!--section: 34-->\n## 2026-02-03\n\n<!--section: 35-->\n## 2026-02-04\n\n<!--section: 36-->\n## 2026-02-05\n\n<!--section: 37-->\n## 2026-02-06\n\n<!--section: 38-->\n## 2026-02-07\n\n<!--section: 39-->\n## 2026-02-08\n\n<!--section: 40-->\n## 2026-02-09\n\n<!--section: 41-->\n## 2026-02-10\n\n<!--section: 42-->\n## 2026-02-11\n\n<!--section: 43-->\n## 2026-02-12\n![[Pasted image 20260212143608.png]]\n\n<!--section: 43.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 43.2-->\n### 09-12\n\n<!--section: 43.3-->\n### 12-14\n\n<!--section: 43.4-->\n### 14-16\n- [ ] 這裡是子彈筆記用法\n- 這裡是子彈\n\t- 讚啦\n\n|           |           |           |\n| --------- | --------- | --------- |\n|           | ⭕ 寫書      |           |\n|           |           |           |\n| ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ |\n\n<!--section: 43.5-->\n### 16-18\n- [ ] 回覆小張\n\n<!--section: 43.6-->\n### 18-19\n\n<!--section: 43.7-->\n### 19-21\n\n<!--section: 43.8-->\n### 睡覺準備\n\n<!--section: 44-->\n## 2026-02-13\n![[截圖 2026-02-13 at 18.06.27.png]]\n\n<!--section: 44.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 44.2-->\n### 09-12\n\n<!--section: 44.3-->\n### 12-14\n\n<!--section: 44.4-->\n### 14-16\n\n<!--section: 44.5-->\n### 16-18\n\n<!--section: 44.6-->\n### 18-19\n- [x] [[PARA整理OB左欄的強固方法]]\n\n<!--section: 44.7-->\n### 19-21\n- [ ] 完成讀書筆記\n- [ ] 開始第三部\n\n<!--section: 44.8-->\n### 睡覺準備\n\n<!--section: 45-->\n## 2026-02-14\n\n<!--section: 45.1-->\n\n\n<!--section: 45.2-->\n\n\n<!--section: 45.3-->\n\n\n<!--section: 45.4-->\n\n\n<!--section: 45.5-->\n\n\n<!--section: 45.6-->\n\n\n<!--section: 45.7-->\n\n\n<!--section: 45.8-->\n\n\n<!--section: 46-->\n## 2026-02-15\n\n<!--section: 46.1-->\n\n\n<!--section: 46.2-->\n\n\n<!--section: 46.3-->\n\n\n<!--section: 46.4-->\n\n\n<!--section: 46.5-->\n\n\n<!--section: 46.6-->\n\n\n<!--section: 46.7-->\n\n\n<!--section: 46.8-->\n\n\n<!--section: 47-->\n## 2026-02-16\n\n<!--section: 48-->\n## 2026-02-17\n\n<!--section: 49-->\n## 2026-02-18\n\n<!--section: 49.1-->\n\n\n<!--section: 49.2-->\n\n\n<!--section: 49.3-->\n\n\n<!--section: 49.4-->\n\n\n<!--section: 49.5-->\n\n\n<!--section: 49.6-->\n\n\n<!--section: 49.7-->\n\n\n<!--section: 49.8-->\n\n\n<!--section: 50-->\n## 2026-02-19\n\n<!--section: 50.1-->\n### 接收太陽的能量，開心一天\n類似Daily Note\n\n<!--section: 50.2-->\n### 09-12\n![[3.2 如何寫好7000字的長文]]\n\n<!--section: 50.3-->\n\n\n<!--section: 50.4-->\n\n\n<!--section: 50.5-->\n\n\n<!--section: 50.6-->\n\n\n<!--section: 50.7-->\n\n\n<!--section: 50.8-->\n\n\n<!--section: 51-->\n## 2026-02-20\n\n<!--section: 51.1-->\n### 接收太陽的能量，開心一天\nHeptabase可以在每日 的Journal放置可以打 字的九宮還可以插入 圖，可以做為日計劃的 Mandala Support\n\n<!--section: 51.2-->\n\n\n<!--section: 51.3-->\n\n\n<!--section: 51.4-->\n\n\n<!--section: 51.5-->\n\n\n<!--section: 51.6-->\n\n\n<!--section: 51.7-->\n\n\n<!--section: 51.8-->\n\n\n<!--section: 52-->\n## 2026-02-21\n\n<!--section: 52.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 52.2-->\n### 09-12\n\n<!--section: 52.3-->\n### 12-14\n\n<!--section: 52.4-->\n### 14-16\n\n<!--section: 52.5-->\n### 16-18\n\n<!--section: 52.6-->\n### 18-19\n\n<!--section: 52.7-->\n### 19-21\n\n<!--section: 52.8-->\n### 睡覺準備\n\n<!--section: 53-->\n## 2026-02-22\n\n<!--section: 53.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 53.2-->\n### 09-12\n\n<!--section: 53.3-->\n### 12-14\n\n<!--section: 53.4-->\n### 14-16\n\n<!--section: 53.5-->\n### 16-18\n\n<!--section: 53.6-->\n### 18-19\n\n<!--section: 53.7-->\n### 19-21\n\n<!--section: 53.8-->\n### 睡覺準備\n\n<!--section: 54-->\n## 2026-02-23\n[[3.1 捕捉艘縱即逝的靈感 2026-02-23]]\n\n<!--section: 54.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 54.2-->\n### 09-12\n\n<!--section: 54.3-->\n### 12-14\n\n<!--section: 54.4-->\n### 14-16\n\n<!--section: 54.5-->\n### 16-18\n\n<!--section: 54.6-->\n### 18-19\n\n<!--section: 54.7-->\n### 19-21\n\n<!--section: 54.8-->\n### 睡覺準備\n\n<!--section: 55-->\n## 2026-02-24\n\n<!--section: 55.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 55.2-->\n### 09-12\n\n<!--section: 55.3-->\n### 12-14\n\n<!--section: 55.4-->\n### 14-16\n\n<!--section: 55.5-->\n### 16-18\n\n<!--section: 55.6-->\n### 18-19\n\n<!--section: 55.7-->\n### 19-21\n\n<!--section: 55.8-->\n### 睡覺準備\n\n<!--section: 56-->\n## 2026-02-25\n◊  3*3思考法\n\n<!--section: 56.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 56.2-->\n### 09-12\n\n<!--section: 56.3-->\n### 12-14\n夜市 買\n\n|     | 壽司🍣 |     |\n| --- | ---- | --- |\n| 涼麵  | 買    |     |\n|     | 排骨酥  |     |\n\n<!--section: 56.4-->\n### 14-16\nKeynote\n用吉他樂趣作網站\n閱讀[[❌ 3*3思考法]]\n\n<!--section: 56.5-->\n### 16-18\n\n<!--section: 56.6-->\n### 18-19\n\n<!--section: 56.7-->\n### 19-21\n合唱團\n\n<!--section: 56.8-->\n### 睡覺準備\n\n<!--section: 57-->\n## 2026-02-26\n\n<!--section: 57.1-->\n### 接收太陽的能量，開心一天\nKeynote：王博士 Obsidian\n\n<!--section: 57.2-->\n### 09-12\n羽球\n抽籤\n\n<!--section: 57.3-->\n### 12-14\n貢丸湯油豆腐湯綜合湯兩個\n\n<!--section: 57.4-->\n### 14-16\n- [ ] 3.1.1\n- [ ] 3.1.2\n- [ ] 3.1.3\n- [ ] 3.1.4\n- [ ] -3.15 永久筆記標題＋關鍵字\n\n<!--section: 57.5-->\n### 16-18\n\n<!--section: 57.6-->\n### 18-19\n- [ ] 給美國網站\n\n<!--section: 57.7-->\n### 19-21\n\n<!--section: 57.8-->\n### 睡覺準備\n\n<!--section: 58-->\n## 2026-02-27\n🐸 直播\n\n<!--section: 58.1-->\n### 接收太陽的能量，開心一天\n- [x] 跑步一公里\n\n<!--section: 58.2-->\n### 09-12\n- [x] Keyntote\n- [x] Marni搭車\n\n<!--section: 58.3-->\n### 12-14\n- [x] 美國旅遊網站4/1和4/4對調\n- [x] 蓮霧可以吃，拿下給管理室\n- [ ] ---\n\n- 12334\n- 34214\n- 52134321\n- 2432134\n- ![[截圖 2026-02-27 at 20.52.40.png]]\n\n<!--section: 58.4-->\n### 14-16\n- [x] 投影片\n\n<!--section: 58.5-->\n### 16-18\n\n<!--section: 58.6-->\n### 18-19\n\n<!--section: 58.7-->\n### 19-21\n\n<!--section: 58.8-->\n### 睡覺準備\n\n<!--section: 59-->\n## 2026-02-28\n\n<!--section: 59.1-->\n### 接收太陽的能量，開心一天\n跑步\n\n<!--section: 59.2-->\n### 09-12\n\n<!--section: 59.3-->\n### 12-14\n\n<!--section: 59.4-->\n### 14-16\n\n<!--section: 59.5-->\n### 16-18\n\n<!--section: 59.6-->\n### 18-19\n\n<!--section: 59.7-->\n### 19-21\n\n<!--section: 59.8-->\n### 睡覺準備\n老實寫書\n\n<!--section: 60-->\n## 2026-03-01\n\n<!--section: 60.1-->\n### 接收太陽的能量，開心一天\n\n<!--section: 60.2-->\n### 09-12\n老實寫書\n<!--section: 60.3-->\n### 12-14\nMarni\n<!--section: 60.4-->\n### 14-16\n週檢視\n<!--section: 60.5-->\n### 16-18\n\n<!--section: 60.6-->\n### 18-19\nMarni\n<!--section: 60.7-->\n### 19-21\n老實寫書\n<!--section: 60.8-->\n### 睡覺準備\n\n<!--section: 61-->\n## 2026-03-02\n賣股票\n\n<!--section: 61.1-->\n### 接收太陽的能量，開心一天\n希賢事情\n\n<!--section: 61.2-->\n### 09-12\n日文\n<!--section: 61.3-->\n### 12-14\n\n<!--section: 61.4-->\n### 14-16\n老實寫書\n<!--section: 61.5-->\n### 16-18\n\n<!--section: 61.6-->\n### 18-19\n\n<!--section: 61.7-->\n### 19-21\n\n<!--section: 61.8-->\n### 睡覺準備\n\n<!--section: 62-->\n## 2026-03-03\n\n<!--section: 62.1-->\n### 接收太陽的能量，開心一天\n<!--section: 62.2-->\n### 09-12\nSing the song with lyric\n<!--section: 62.3-->\n### 12-14\n照片可以拿\n<!--section: 62.4-->\n### 14-16\n開車 張媽\n<!--section: 62.5-->\n### 16-18\n<!--section: 62.6-->\n### 18-19\n<!--section: 62.7-->\n### 19-21\n<!--section: 62.8-->\n### 睡覺準備\n<!--section: 63-->\n## 2026-03-04\n\n<!--section: 63.1-->\n### 接收太陽的能量，開心一天\n<!--section: 63.2-->\n### 09-12\n老實寫書\n<!--section: 63.3-->\n### 12-14\n翁明漢 投影片\n<!--section: 63.4-->\n### 14-16\n<!--section: 63.5-->\n### 16-18\n<!--section: 63.6-->\n### 18-19\n<!--section: 63.7-->\n### 19-21\n合唱團\n<!--section: 63.8-->\n### 睡覺準備\n1. 羽毛球私教，雖然手痛，教練用切球，今天手也不痛，感謝\n2. 寫完了3.1初稿，太棒了\n<!--section: 64-->\n## 2026-03-05\n理髮？\n合唱團衣服\n<!--section: 64.1-->\n### 接收太陽的能量，開心一天\n\n壽桃\n\n<!--section: 64.2-->\n### 09-12\n羽毛球\n\n<!--section: 64.3-->\n### 12-14\n午餐：自助餐？\n<!--section: 64.4-->\n### 14-16\n翁明漢\n老實寫書\n細胞寫作法\n\n<!--section: 64.5-->\n### 16-18\nLED燈泡 菩薩\n<!--section: 64.6-->\n### 18-19\n<!--section: 64.7-->\n### 19-21\n老實寫書\nMOC和Graph Viw結合\n<!--section: 64.8-->\n### 日記\n1. 和老婆去張媽家，A\n2. 寫出OB Publish網站\n3. 開始進入3.2章節，讚\n4. Codex控制理解\n<!--section: 65-->\n## 2026-03-06\n\n🐸 品韻\n<!--section: 65.1-->\n### 接收太陽的能量，開心一天\n<!--section: 65.2-->\n### 09-12\n週檢視\n理頭髮 蘇子美學\n<!--section: 65.3-->\n### 12-14\n午餐 龍品？\n<!--section: 65.4-->\n### 14-16\n- [ ] 洗澡\n衣服\n- [ ] 搬琴 [[Marrni]] SWEET 16:00\n合唱團彩排\n<!--section: 65.5-->\n### 16-18\n<!--section: 65.6-->\n### 18-19\n<!--section: 65.7-->\n### 19-21\n頂粵吉品\n[[品韻合唱團演出]]\n臺中市西屯區市政南一路288號\n<!--section: 65.8-->\n### 日記\n1. 老婆說因為天氣潮濕，所以情緒很多\n2. 晚上的效率低，沒關係，不用完美\n3. 完成細胞寫作的讀書心得，不錯\n4. 翁明漢的投影片推進\n<!--section: 66-->\n## 2026-03-07\n\n<!--section: 66.1-->\n### 接收太陽的能量，開心一天\n<!--section: 66.2-->\n### 09-12\n<!--section: 66.3-->\n### 12-14\n翁明漢的投影片推進\n\n<!--section: 66.4-->\n### 14-16\n<!--section: 66.5-->\n### 16-18\n<!--section: 66.6-->\n### 18-19\n<!--section: 66.7-->\n### 19-21\n<!--section: 66.8-->\n### 日記\n\n<!--section: 67-->\n## 2026-03-08\n\n<!--section: 67.1-->\n### 接收太陽的能量，開心一天\n<!--section: 67.2-->\n### 09-12\n<!--section: 67.3-->\n### 12-14\n<!--section: 67.4-->\n### 14-16\n<!--section: 67.5-->\n### 16-18\n<!--section: 67.6-->\n### 18-19\n<!--section: 67.7-->\n### 19-21\n<!--section: 67.8-->\n### 日記\n<!--section: 68-->\n## 2026-03-09\n\n<!--section: 68.1-->\n### 接收太陽的能量，開心一天\n<!--section: 68.2-->\n### 09-12\n<!--section: 68.3-->\n### 12-14\n<!--section: 68.4-->\n### 14-16\n<!--section: 68.5-->\n### 16-18\n<!--section: 68.6-->\n### 18-19\n<!--section: 68.7-->\n### 19-21\n<!--section: 68.8-->\n### 睡覺準備\n<!--section: 69-->\n## 2026-03-10\n\n<!--section: 69.1-->\n### 接收太陽的能量，開心一天\n<!--section: 69.2-->\n### 09-12\n<!--section: 69.3-->\n### 12-14\n<!--section: 69.4-->\n### 14-16\n<!--section: 69.5-->\n### 16-18\n<!--section: 69.6-->\n### 18-19\n<!--section: 69.7-->\n### 19-21\n<!--section: 69.8-->\n### 睡覺準備\n<!--section: 70-->\n## 2026-03-11\n\n<!--section: 70.1-->\n### 接收太陽的能量，開心一天\n<!--section: 70.2-->\n### 09-12\n<!--section: 70.3-->\n### 12-14\n<!--section: 70.4-->\n### 14-16\n<!--section: 70.5-->\n### 16-18\n<!--section: 70.6-->\n### 18-19\n<!--section: 70.7-->\n### 19-21\n<!--section: 70.8-->\n### 睡覺準備\n<!--section: 71-->\n## 2026-03-12\n\n<!--section: 72-->\n## 2026-03-13\n\n<!--section: 73-->\n## 2026-03-14\n\n<!--section: 74-->\n## 2026-03-15\n\n<!--section: 75-->\n## 2026-03-16\n\n<!--section: 76-->\n## 2026-03-17\n\n<!--section: 77-->\n## 2026-03-18\n\n<!--section: 78-->\n## 2026-03-19\n\n<!--section: 79-->\n## 2026-03-20\n\n<!--section: 80-->\n## 2026-03-21\n\n<!--section: 81-->\n## 2026-03-22\n\n<!--section: 82-->\n## 2026-03-23\n\n<!--section: 83-->\n## 2026-03-24\n\n<!--section: 84-->\n## 2026-03-25\n\n<!--section: 85-->\n## 2026-03-26\n\n<!--section: 86-->\n## 2026-03-27\n\n<!--section: 87-->\n## 2026-03-28\n\n<!--section: 88-->\n## 2026-03-29\n\n<!--section: 89-->\n## 2026-03-30\n\n<!--section: 90-->\n## 2026-03-31\n\n<!--section: 91-->\n## 2026-04-01\n\n<!--section: 92-->\n## 2026-04-02\n\n<!--section: 93-->\n## 2026-04-03\n\n<!--section: 94-->\n## 2026-04-04\n\n<!--section: 95-->\n## 2026-04-05\n\n<!--section: 96-->\n## 2026-04-06\n\n<!--section: 97-->\n## 2026-04-07\n\n<!--section: 98-->\n## 2026-04-08\n\n<!--section: 99-->\n## 2026-04-09\n\n<!--section: 100-->\n## 2026-04-10\n\n<!--section: 101-->\n## 2026-04-11\n\n<!--section: 102-->\n## 2026-04-12\n\n<!--section: 103-->\n## 2026-04-13\n\n<!--section: 104-->\n## 2026-04-14\n\n<!--section: 105-->\n## 2026-04-15\n\n<!--section: 106-->\n## 2026-04-16\n\n<!--section: 107-->\n## 2026-04-17\n\n<!--section: 108-->\n## 2026-04-18\n\n<!--section: 109-->\n## 2026-04-19\n\n<!--section: 110-->\n## 2026-04-20\n\n<!--section: 111-->\n## 2026-04-21\n\n<!--section: 112-->\n## 2026-04-22\n\n<!--section: 113-->\n## 2026-04-23\n\n<!--section: 114-->\n## 2026-04-24\n\n<!--section: 115-->\n## 2026-04-25\n\n<!--section: 116-->\n## 2026-04-26\n\n<!--section: 117-->\n## 2026-04-27\n\n<!--section: 118-->\n## 2026-04-28\n\n<!--section: 119-->\n## 2026-04-29\n\n<!--section: 120-->\n## 2026-04-30\n\n<!--section: 121-->\n## 2026-05-01\n\n<!--section: 122-->\n## 2026-05-02\n\n<!--section: 123-->\n## 2026-05-03\n\n<!--section: 124-->\n## 2026-05-04\n\n<!--section: 125-->\n## 2026-05-05\n\n<!--section: 126-->\n## 2026-05-06\n\n<!--section: 127-->\n## 2026-05-07\n\n<!--section: 128-->\n## 2026-05-08\n\n<!--section: 129-->\n## 2026-05-09\n\n<!--section: 130-->\n## 2026-05-10\n\n<!--section: 131-->\n## 2026-05-11\n\n<!--section: 132-->\n## 2026-05-12\n\n<!--section: 133-->\n## 2026-05-13\n\n<!--section: 134-->\n## 2026-05-14\n\n<!--section: 135-->\n## 2026-05-15\n\n<!--section: 136-->\n## 2026-05-16\n\n<!--section: 137-->\n## 2026-05-17\n\n<!--section: 138-->\n## 2026-05-18\n\n<!--section: 139-->\n## 2026-05-19\n\n<!--section: 140-->\n## 2026-05-20\n\n<!--section: 141-->\n## 2026-05-21\n\n<!--section: 142-->\n## 2026-05-22\n\n<!--section: 143-->\n## 2026-05-23\n\n<!--section: 144-->\n## 2026-05-24\n\n<!--section: 145-->\n## 2026-05-25\n\n<!--section: 146-->\n## 2026-05-26\n\n<!--section: 147-->\n## 2026-05-27\n\n<!--section: 148-->\n## 2026-05-28\n\n<!--section: 149-->\n## 2026-05-29\n\n<!--section: 150-->\n## 2026-05-30\n\n<!--section: 151-->\n## 2026-05-31\n\n<!--section: 152-->\n## 2026-06-01\n\n<!--section: 153-->\n## 2026-06-02\n\n<!--section: 154-->\n## 2026-06-03\n\n<!--section: 155-->\n## 2026-06-04\n\n<!--section: 156-->\n## 2026-06-05\n\n<!--section: 157-->\n## 2026-06-06\n\n<!--section: 158-->\n## 2026-06-07\n\n<!--section: 159-->\n## 2026-06-08\n\n<!--section: 160-->\n## 2026-06-09\n\n<!--section: 161-->\n## 2026-06-10\n\n<!--section: 162-->\n## 2026-06-11\n\n<!--section: 163-->\n## 2026-06-12\n\n<!--section: 164-->\n## 2026-06-13\n\n<!--section: 165-->\n## 2026-06-14\n\n<!--section: 166-->\n## 2026-06-15\n\n<!--section: 167-->\n## 2026-06-16\n\n<!--section: 168-->\n## 2026-06-17\n\n<!--section: 169-->\n## 2026-06-18\n\n<!--section: 170-->\n## 2026-06-19\n\n<!--section: 171-->\n## 2026-06-20\n\n<!--section: 172-->\n## 2026-06-21\n\n<!--section: 173-->\n## 2026-06-22\n\n<!--section: 174-->\n## 2026-06-23\n\n<!--section: 175-->\n## 2026-06-24\n\n<!--section: 176-->\n## 2026-06-25\n\n<!--section: 177-->\n## 2026-06-26\n\n<!--section: 178-->\n## 2026-06-27\n\n<!--section: 179-->\n## 2026-06-28\n\n<!--section: 180-->\n## 2026-06-29\n\n<!--section: 181-->\n## 2026-06-30\n\n<!--section: 182-->\n## 2026-07-01\n\n<!--section: 183-->\n## 2026-07-02\n\n<!--section: 184-->\n## 2026-07-03\n\n<!--section: 185-->\n## 2026-07-04\n\n<!--section: 186-->\n## 2026-07-05\n\n<!--section: 187-->\n## 2026-07-06\n\n<!--section: 188-->\n## 2026-07-07\n\n<!--section: 189-->\n## 2026-07-08\n\n<!--section: 190-->\n## 2026-07-09\n\n<!--section: 191-->\n## 2026-07-10\n\n<!--section: 192-->\n## 2026-07-11\n\n<!--section: 193-->\n## 2026-07-12\n\n<!--section: 194-->\n## 2026-07-13\n\n<!--section: 195-->\n## 2026-07-14\n\n<!--section: 196-->\n## 2026-07-15\n\n<!--section: 197-->\n## 2026-07-16\n\n<!--section: 198-->\n## 2026-07-17\n\n<!--section: 199-->\n## 2026-07-18\n\n<!--section: 200-->\n## 2026-07-19\n\n<!--section: 201-->\n## 2026-07-20\n\n<!--section: 202-->\n## 2026-07-21\n\n<!--section: 203-->\n## 2026-07-22\n\n<!--section: 204-->\n## 2026-07-23\n\n<!--section: 205-->\n## 2026-07-24\n\n<!--section: 206-->\n## 2026-07-25\n\n<!--section: 207-->\n## 2026-07-26\n\n<!--section: 208-->\n## 2026-07-27\n\n<!--section: 209-->\n## 2026-07-28\n\n<!--section: 210-->\n## 2026-07-29\n\n<!--section: 211-->\n## 2026-07-30\n\n<!--section: 212-->\n## 2026-07-31\n\n<!--section: 213-->\n## 2026-08-01\n\n<!--section: 214-->\n## 2026-08-02\n\n<!--section: 215-->\n## 2026-08-03\n\n<!--section: 216-->\n## 2026-08-04\n\n<!--section: 217-->\n## 2026-08-05\n\n<!--section: 218-->\n## 2026-08-06\n\n<!--section: 219-->\n## 2026-08-07\n\n<!--section: 220-->\n## 2026-08-08\n\n<!--section: 221-->\n## 2026-08-09\n\n<!--section: 222-->\n## 2026-08-10\n\n<!--section: 223-->\n## 2026-08-11\n\n<!--section: 224-->\n## 2026-08-12\n\n<!--section: 225-->\n## 2026-08-13\n\n<!--section: 226-->\n## 2026-08-14\n\n<!--section: 227-->\n## 2026-08-15\n\n<!--section: 228-->\n## 2026-08-16\n\n<!--section: 229-->\n## 2026-08-17\n\n<!--section: 230-->\n## 2026-08-18\n\n<!--section: 231-->\n## 2026-08-19\n\n<!--section: 232-->\n## 2026-08-20\n\n<!--section: 233-->\n## 2026-08-21\n\n<!--section: 234-->\n## 2026-08-22\n\n<!--section: 235-->\n## 2026-08-23\n\n<!--section: 236-->\n## 2026-08-24\n\n<!--section: 237-->\n## 2026-08-25\n\n<!--section: 238-->\n## 2026-08-26\n\n<!--section: 239-->\n## 2026-08-27\n\n<!--section: 240-->\n## 2026-08-28\n\n<!--section: 241-->\n## 2026-08-29\n\n<!--section: 242-->\n## 2026-08-30\n\n<!--section: 243-->\n## 2026-08-31\n\n<!--section: 244-->\n## 2026-09-01\n\n<!--section: 245-->\n## 2026-09-02\n\n<!--section: 246-->\n## 2026-09-03\n\n<!--section: 247-->\n## 2026-09-04\n\n<!--section: 248-->\n## 2026-09-05\n\n<!--section: 249-->\n## 2026-09-06\n\n<!--section: 250-->\n## 2026-09-07\n\n<!--section: 251-->\n## 2026-09-08\n\n<!--section: 252-->\n## 2026-09-09\n\n<!--section: 253-->\n## 2026-09-10\n\n<!--section: 254-->\n## 2026-09-11\n\n<!--section: 255-->\n## 2026-09-12\n\n<!--section: 256-->\n## 2026-09-13\n\n<!--section: 257-->\n## 2026-09-14\n\n<!--section: 258-->\n## 2026-09-15\n\n<!--section: 259-->\n## 2026-09-16\n\n<!--section: 260-->\n## 2026-09-17\n\n<!--section: 261-->\n## 2026-09-18\n\n<!--section: 262-->\n## 2026-09-19\n\n<!--section: 263-->\n## 2026-09-20\n\n<!--section: 264-->\n## 2026-09-21\n\n<!--section: 265-->\n## 2026-09-22\n\n<!--section: 266-->\n## 2026-09-23\n\n<!--section: 267-->\n## 2026-09-24\n\n<!--section: 268-->\n## 2026-09-25\n\n<!--section: 269-->\n## 2026-09-26\n\n<!--section: 270-->\n## 2026-09-27\n\n<!--section: 271-->\n## 2026-09-28\n\n<!--section: 272-->\n## 2026-09-29\n\n<!--section: 273-->\n## 2026-09-30\n\n<!--section: 274-->\n## 2026-10-01\n\n<!--section: 275-->\n## 2026-10-02\n\n<!--section: 276-->\n## 2026-10-03\n\n<!--section: 277-->\n## 2026-10-04\n\n<!--section: 278-->\n## 2026-10-05\n\n<!--section: 279-->\n## 2026-10-06\n\n<!--section: 280-->\n## 2026-10-07\n\n<!--section: 281-->\n## 2026-10-08\n\n<!--section: 282-->\n## 2026-10-09\n\n<!--section: 283-->\n## 2026-10-10\n\n<!--section: 284-->\n## 2026-10-11\n\n<!--section: 285-->\n## 2026-10-12\n\n<!--section: 286-->\n## 2026-10-13\n\n<!--section: 287-->\n## 2026-10-14\n\n<!--section: 288-->\n## 2026-10-15\n\n<!--section: 289-->\n## 2026-10-16\n\n<!--section: 290-->\n## 2026-10-17\n\n<!--section: 291-->\n## 2026-10-18\n\n<!--section: 292-->\n## 2026-10-19\n\n<!--section: 293-->\n## 2026-10-20\n\n<!--section: 294-->\n## 2026-10-21\n\n<!--section: 295-->\n## 2026-10-22\n\n<!--section: 296-->\n## 2026-10-23\n\n<!--section: 297-->\n## 2026-10-24\n\n<!--section: 298-->\n## 2026-10-25\n\n<!--section: 299-->\n## 2026-10-26\n\n<!--section: 300-->\n## 2026-10-27\n\n<!--section: 301-->\n## 2026-10-28\n\n<!--section: 302-->\n## 2026-10-29\n\n<!--section: 303-->\n## 2026-10-30\n\n<!--section: 304-->\n## 2026-10-31\n\n<!--section: 305-->\n## 2026-11-01\n\n<!--section: 306-->\n## 2026-11-02\n\n<!--section: 307-->\n## 2026-11-03\n\n<!--section: 308-->\n## 2026-11-04\n\n<!--section: 309-->\n## 2026-11-05\n\n<!--section: 310-->\n## 2026-11-06\n\n<!--section: 311-->\n## 2026-11-07\n\n<!--section: 312-->\n## 2026-11-08\n\n<!--section: 313-->\n## 2026-11-09\n\n<!--section: 314-->\n## 2026-11-10\n\n<!--section: 315-->\n## 2026-11-11\n\n<!--section: 316-->\n## 2026-11-12\n\n<!--section: 317-->\n## 2026-11-13\n\n<!--section: 318-->\n## 2026-11-14\n\n<!--section: 319-->\n## 2026-11-15\n\n<!--section: 320-->\n## 2026-11-16\n\n<!--section: 321-->\n## 2026-11-17\n\n<!--section: 322-->\n## 2026-11-18\n\n<!--section: 323-->\n## 2026-11-19\n\n<!--section: 324-->\n## 2026-11-20\n\n<!--section: 325-->\n## 2026-11-21\n\n<!--section: 326-->\n## 2026-11-22\n\n<!--section: 327-->\n## 2026-11-23\n\n<!--section: 328-->\n## 2026-11-24\n\n<!--section: 329-->\n## 2026-11-25\n\n<!--section: 330-->\n## 2026-11-26\n\n<!--section: 331-->\n## 2026-11-27\n\n<!--section: 332-->\n## 2026-11-28\n\n<!--section: 333-->\n## 2026-11-29\n\n<!--section: 334-->\n## 2026-11-30\n\n<!--section: 335-->\n## 2026-12-01\n\n<!--section: 336-->\n## 2026-12-02\n\n<!--section: 337-->\n## 2026-12-03\n\n<!--section: 338-->\n## 2026-12-04\n\n<!--section: 339-->\n## 2026-12-05\n\n<!--section: 340-->\n## 2026-12-06\n\n<!--section: 341-->\n## 2026-12-07\n\n<!--section: 342-->\n## 2026-12-08\n\n<!--section: 343-->\n## 2026-12-09\n\n<!--section: 344-->\n## 2026-12-10\n\n<!--section: 345-->\n## 2026-12-11\n\n<!--section: 346-->\n## 2026-12-12\n\n<!--section: 347-->\n## 2026-12-13\n\n<!--section: 348-->\n## 2026-12-14\n\n<!--section: 349-->\n## 2026-12-15\n\n<!--section: 350-->\n## 2026-12-16\n\n<!--section: 351-->\n## 2026-12-17\n\n<!--section: 352-->\n## 2026-12-18\n\n<!--section: 353-->\n## 2026-12-19\n\n<!--section: 354-->\n## 2026-12-20\n\n<!--section: 355-->\n## 2026-12-21\n\n<!--section: 356-->\n## 2026-12-22\n\n<!--section: 357-->\n## 2026-12-23\n\n<!--section: 358-->\n## 2026-12-24\n\n<!--section: 359-->\n## 2026-12-25\n\n<!--section: 360-->\n## 2026-12-26\n\n<!--section: 361-->\n## 2026-12-27\n\n<!--section: 362-->\n## 2026-12-28\n\n<!--section: 363-->\n## 2026-12-29\n\n<!--section: 364-->\n## 2026-12-30\n\n<!--section: 365-->\n## 2026-12-31",
+      "links": [
+        {
+          "target": "03 Resource/品韻合唱團演出.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "<!--section: 1--> ## 2026-01-01 <!--section: 1.1--> <!--section: 1.2--> <!--section: 1.3--> <!--section: 1.4--> <!--section: 1.5--> <!--section: 1.6--> <!--section: 1.7--> <!--sect"
+    },
+    {
+      "id": "00 日計劃/2026年第10週.md",
+      "path": "00 日計劃/2026年第10週.md",
+      "basename": "2026年第10週",
+      "title": "2026年第10週",
+      "folder": "00 日計劃",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-02T16:14:21.960Z",
+      "content": "<!--section: 1-->\n# 2026W11\n\n- [ ] [[品韻合唱團演出]]\n<!--section: 1.1-->\nMon 03-02\n- [x] 日文\n\n<!--section: 1.2-->\nTue 03-03\n- [ ] 羽球\n- [ ] Shary\n<!--section: 1.3-->\nWed 03-04\n- [ ] 合唱團？\n<!--section: 1.4-->\nThr 03-05\n- [ ] 羽球\n<!--section: 1.5-->\nFri 03-06\n[[品韻合唱團演出]]\n<!--section: 1.6-->\nSat 03-07\n\n<!--section: 1.7-->\nSun 03-08\n\n<!--section: 1.8-->\n<!--section: 2-->\n<!--section: 2.1-->\n<!--section: 2.2-->\n<!--section: 2.3-->\n<!--section: 2.4-->\n- [ ] [[🏸 民生羽球賽]]\n<!--section: 2.5-->\n<!--section: 2.6-->\n<!--section: 2.7-->\n<!--section: 2.8-->\n<!--section: 3-->\n<!--section: 4-->\n<!--section: 5-->\n<!--section: 6-->\n<!--section: 7-->\n<!--section: 8-->\n<!--section: 9-->",
+      "links": [
+        {
+          "target": "03 Resource/品韻合唱團演出.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 Area/🏸 民生羽球賽.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/🎤 大志 Podcast Codex.md"
+      ],
+      "preview": "<!--section: 1--> # 2026W11 - [ ] [[品韻合唱團演出]] <!--section: 1.1--> Mon 03-02 - [x] 日文 <!--section: 1.2--> Tue 03-03 - [ ] 羽球 - [ ] Shary <!--section: 1.3--> Wed 03-04 - [ ] 合唱團？ <!-"
+    },
+    {
+      "id": "00 日計劃/2026年第11週.md",
+      "path": "00 日計劃/2026年第11週.md",
+      "basename": "2026年第11週",
+      "title": "2026年第11週",
+      "folder": "00 日計劃",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-06T07:07:58.009Z",
+      "content": "<!--section: 1-->\n<!--section: 1.1-->\n2026-03-09\n\n[[林君日文課]]\n<!--section: 1.2-->\n2026-03-10\n[[週二陳俊融羽球]]\n<!--section: 1.3-->\n2026-03-11\n<!--section: 1.4-->\n2026-03-12\n[[🏸 民生羽球賽]]\n<!--section: 1.5-->\n2026-03-13\n<!--section: 1.6-->\n2026-03-14\n<!--section: 1.7-->\n2026-03-15\n<!--section: 1.8-->\n<!--section: 2-->\n<!--section: 3-->\n<!--section: 4-->\n<!--section: 5-->\n<!--section: 6-->\n<!--section: 7-->\n<!--section: 8-->\n<!--section: 9-->",
+      "links": [
+        {
+          "target": "02 Area/🏸 民生羽球賽.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 Area/🕵️🕵️九宮週檢視.md"
+      ],
+      "preview": "<!--section: 1--> <!--section: 1.1--> 2026-03-09 [[林君日文課]] <!--section: 1.2--> 2026-03-10 [[週二陳俊融羽球]] <!--section: 1.3--> 2026-03-11 <!--section: 1.4--> 2026-03-12 [[🏸 民生羽球賽]] <!-"
+    },
+    {
+      "id": "00 日計劃/mandala-templates.md",
+      "path": "00 日計劃/mandala-templates.md",
+      "basename": "mandala-templates",
+      "title": "mandala-templates",
+      "folder": "00 日計劃",
+      "frontmatter": {
+        "mandala-templates": true
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-06T01:40:13.775Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "01 Project/翁明漢/翁明漢.md",
+      "path": "01 Project/翁明漢/翁明漢.md",
+      "basename": "翁明漢",
+      "title": "翁明漢",
+      "folder": "01 Project/翁明漢",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-04T08:15:36.078Z",
+      "content": "<!--section: 1-->\n<!--section: 1.1-->\n把整份 PDF 壓成這 10 張就夠有力：\n\n1. **封面**：翁明漢 × 鮮樂活 × 烏殼綠竹筍\n    \n2. **一句話定位**：餐桌上的綠寶石｜一筍三吃｜產地直送（品牌語言）\n    \n3. **規模三數字**：20.82ha／750t／113→114：1067→1962萬\n    \n4. **通路與背書**：家樂福、全聯…＋團膳＋饗賓（Logo 牆）\n    \n5. **你解決的產業痛點**：沒有合規集貨廠→外銷接不了單\n    \n6. **根因圖**：田間熱/預冷不足→良率與儲架壽命下降\n    \n7. **解法主投資**：HACCP 冷鏈集貨加工場＋節能設備＋太陽能\n    \n8. **創新/永續**：碎木機、竹屑回田、循環農業（用一張流程圖）\n    \n9. **地方連結＋政策對齊**：冷鏈示範、食農教育、淨零\n    \n10. **未來 3 年 KPI**：外銷接單能力、加工量體、冷鏈良率提升（把「要輔導什麼」講清楚）\n<!--section: 1.2-->\n\n| 溫度<br>田間熱<br>預冷不足 | 通路        | 未來三年KPI                |\n| ----------------- | --------- | ---------------------- |\n| **規模**            | ⭕         | 現有集貨場<br>HACCP 冷鏈集貨加工場 |\n| 外銷接單              | 烏殼綠竹筍     |                        |\n| ㄧㄧㄧㄧㄧㄧㄧㄧ─         | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─              |\n\n<!--section: 1.3-->\n<!--section: 1.4-->\n<!--section: 1.5-->\n<!--section: 1.6-->\n<!--section: 1.7-->\n<!--section: 1.8-->\n<!--section: 2-->\n<!--section: 3-->\n<!--section: 4-->\n<!--section: 5-->\n<!--section: 6-->\n<!--section: 7-->\n<!--section: 8-->\n<!--section: 9-->",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "<!--section: 1--> <!--section: 1.1--> 把整份 PDF 壓成這 10 張就夠有力： 1. **封面**：翁明漢 × 鮮樂活 × 烏殼綠竹筍 2. **一句話定位**：餐桌上的綠寶石｜一筍三吃｜產地直送（品牌語言） 3. **規模三數字**：20.82ha／750t／113→114：1067→1962萬 4. **通路與背書"
+    },
+    {
+      "id": "01 Project/🇺🇸　美國之旅.md",
+      "path": "01 Project/🇺🇸　美國之旅.md",
+      "basename": "🇺🇸　美國之旅",
+      "title": "🇺🇸　美國之旅",
+      "folder": "01 Project",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:21:55.022Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "03 Resource/Monthly Play/2026 April.md",
+        "03 Resource/Monthly Play/2026 March.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "01 Project/🎤 大志 Podcast Codex.md",
+      "path": "01 Project/🎤 大志 Podcast Codex.md",
+      "basename": "🎤 大志 Podcast Codex",
+      "title": "🎤 大志 Podcast Codex",
+      "folder": "01 Project",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-02T16:15:23.415Z",
+      "content": "[[2026年第10週]]",
+      "links": [
+        {
+          "target": "00 日計劃/2026年第10週.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "[[2026年第10週]]"
+    },
+    {
+      "id": "02 Area/百年人生計劃.md",
+      "path": "02 Area/百年人生計劃.md",
+      "basename": "百年人生計劃",
+      "title": "百年人生計劃",
+      "folder": "02 Area",
+      "frontmatter": {
+        "mandala": true,
+        "mandala_section_colors": "",
+        "2_rose": "",
+        "3_amber": "",
+        "5_green": "",
+        "6_blue": "",
+        "mandala_pinned_active_section": "\"1.2\""
+      },
+      "mandala": true,
+      "modifiedAt": "2026-02-20T09:16:52.339Z",
+      "content": "<!--section: 1-->\n# 永錫人生百年計劃\n![[截圖 2026-01-04 at 10.39.16 1.png]]\n\n建檔日期：2019/12/08\n最新修訂：2025-12-05\n\n松村剛志先生六小時課堂後筆記的打字版本\n不管是羚羊或獅子，就拼命地跑吧\n\n<!--section: 1.1-->\n# 60-69歲 2030-2040年 精進期\n身心安頓\n佈道者\n老伴的相陪＝ 走向相互依存\n運動,合唱團，形成社群，並教授大家\n十年紮實的個人品牌轉型，成為一個服務更多人的品牌，成為一個就算是我不在裡面努力，還是會持續成長的IP\n\n<!--section: 1.1.1-->\n# 內在\n持續和好朋友社群學習佛法 像是成遠小松yaoyao胡維\n心的管理者，因無所住而生其心\n內在探索，實像與信念\n\n<!--section: 1.1.2-->\n# 財務\nApp記帳\n繼續演講\n三環系統，開始為我們帶來財務的回報\n成遠的一起創業，打造出Cash Machine\n我還住在品臻邸，享受老朋友一起變老的樂趣\n\n<!--section: 1.1.3-->\n# 學習\n日語語境(N5-N4) 用九宮格生成法來學習，AI語音\n東密（Murphy）佛學舍，王老師，幫助博士出書）\n\n<!--section: 1.1.4-->\n# 工作\n演講及出版（Publish）內容，出書和線上課搭配商業模式\n到企業做上課＋輔導、顧問三個月\nAI世代出現\n從互動到生成，用九宮格格式出發，建立商業模式\n\n<!--section: 1.1.5-->\n# 家庭\n老伴的相陪 Clare，就剩下我們兩個了，我們繼續在人生中精進吧\n兒子越走越遠，各自成家了生小孩，我變爺爺了，孫子有時候時候會住在家裡面\n兒子26、28開始準備賺錢了\n\n<!--section: 1.1.6-->\n# 社交\n無名傳法者\n台中的朋友，尤其是品臻邸的朋友，羽毛球朋友，MonoSpace朋友，BNI華One在台中朋友，好學校\n\n交一些同年齡的朋友 玉新，阿雷，Kevin\n\n<!--section: 1.1.7-->\n# 健康\n本想要打白鶴拳,現在變成羽毛球及合唱,結合運動和社群，並教授大家\n把身體照顧好，到70歲之前，腳踏實地做一個時間管理講師\n游泳，羽毛球，散步，一週七天運動\n\n<!--section: 1.1.8-->\n# 休閒\n接近大自然（目前沒有）\n享受藝術（合唱團）\n\n<!--section: 1.2-->\n# 30-39歲 2000-2010 創造期\n結婚生子啦,辛苦了,這近20年,好多事情,跑酷人生\n轉職：土木工程師到小鎮美語老師\n英文及Apps研究（研究Apps讓我走在技術前緣）\nBlogger及遇上「鄒景平」老師，進入第八個習慣社群\n員林青商會舉辦全縣演講比賽六屆，任理事\n學習GTD，教授GTD，變成幸福行動家課程\n►勇於改變，才能走向新旅程\n\n<!--section: 1.2.1-->\n# 內在\n你超過學歷限制，用自己的專長，成為網紅，太強了\n藉由社群活動、辦活動、擔任講師，從內向的人變得外向（記得還在陽台練習演講大聲喊，練習音量）\n這時候的你，得到成就感，真好，逐漸有更多的自信，擺脫之前對人生的負面想法，真不簡單。\n\n<!--section: 1.2.2-->\n# 財務\n離開土木後，失去專業，後來在iKid時創業，打造出公司，成就第一筆被動收入\n37歲從iKid辭職第二次創業\n你真的是有勇氣，從此走上一條少有人走的路，一路上認識很多夥伴呢，繼續加油，既然走了，就不要後悔吧，一輩子走好。\n專業是時間走出來的，只有拋棄過去，才能找到未來的機會。\n\n<!--section: 1.2.2.1-->\n\n\n<!--section: 1.2.2.2-->\n1\n\n<!--section: 1.2.2.2.1-->\n\n\n<!--section: 1.2.2.2.2-->\n\n\n<!--section: 1.2.2.2.3-->\n\n\n<!--section: 1.2.2.2.4-->\n\n\n<!--section: 1.2.2.2.5-->\n\n\n<!--section: 1.2.2.2.6-->\n\n\n<!--section: 1.2.2.2.7-->\n\n\n<!--section: 1.2.2.2.8-->\n\n\n<!--section: 1.2.2.3-->\n\n\n<!--section: 1.2.2.4-->\n\n\n<!--section: 1.2.2.5-->\n\n\n<!--section: 1.2.2.6-->\n\n\n<!--section: 1.2.2.7-->\n\n\n<!--section: 1.2.2.8-->\n\n\n<!--section: 1.2.3-->\n# ✅ 學習\n上孫易新老師教授的心智圖課程（讓我連接九宮及其他圖法），後來還有青商會講師訓、陳安之、林偉賢M&Y(爛草莓)等\n➡️ 讓我想要連結大師，當講師賺錢\n中彥賣我PALM(轉捩點,提早接觸利器)，下載Apps\n接觸GTD的書，去美國兩次上GTD的課程\n\n<!--section: 1.2.4-->\n# 工作\nDarren邀請，艾奇德（iKid）第一次創業，小鎮交通車\n開始寫twhsi s blog，成為有名部落客（工具取向），並成為新浪微博大V，谷歌演講\n開始做時間管理收費課程，幸福行動家第一屆啟動，北京第10期，並且做出社群，一直寫文，一直收費？\n做了Getideaz for iPad\n我居然敢創業，真是猛，永錫超強，人生不怕，不悔\n➡️ 做自己熱愛的事情，確實難也會努力，37歲開始，也二十年了，不簡單。堅持才是最難的。\n\n<!--section: 1.2.5-->\n# 家庭\n遇上Clare是我這輩子重要的事情吧，很重要\n在美國談戀愛，泰國女孩Lek及日本女孩\n►和Clare結婚，Kris及Marni出生，一輩子責任的開始\n從iKid到台北民權國小,台中忠信國小\n小舅子沈富凱過世\n到了台北後，家人都住在一起摩擦變很大,幸好到了現在,傳過水無痕\n和爸爸住的幾年，能夠講一些話，真是無比的幸福\n\n<!--section: 1.2.6-->\n# 社交\nGoogle Group：落實第八個習慣＋感動，後來Rainbow退出，我成了論壇的主持人（Leader）\n第一次老K幫我辦演講活動，來了90人，講3小時，認識高雄宋老師，擁有高雄社群\n在員林青商會舉辦全縣演講比賽六屆\n去大陸演講，並開幸福行動家研習會，架構出兩岸多城的部落\n我在艾奇德，同事全部是女生；家長變成粉絲\n\n<!--section: 1.2.7-->\n# 健康\n多次憂鬱症，屢敗屢起（你超讚的）\n因為這些故事,我被很多人喜歡\n我要開始用更高的層次來破，加油\n\n<!--section: 1.2.8-->\n# 休閒\n看書就是休閒，但其實這已經變成工作\n還有就是喜歡玩硬體及Apps\n\n<!--section: 1.3-->\n# 70歲到99歲 2040-2070年成就期\n健康\n被動收入為主要收入\n有信仰\n和價值觀相同的人一起\n好師傅：David Allen，陳朝益，證嚴法師、松村寧雄、鄒景平、中彥、Kai、空海,茂伯\n\n<!--section: 1.3.1-->\n# 內在\n有信仰\n找到榜樣\n學習生老病死\n快樂很重要\n\n<!--section: 1.3.2-->\n# 財務\n用以前的被動收入(Cash Machine)為主要收入\n部分自己去演講、開課獲利\n\n<!--section: 1.3.3-->\n# 學習\n學習變老的學問，我會變的無法學習嗎？Bill Gates\n宗教的寄託\n長期演化，就成大師，不用搶快\n\n<!--section: 1.3.3.1-->\n\n\n<!--section: 1.3.3.2-->\n\n\n<!--section: 1.3.3.3-->\n\n\n<!--section: 1.3.3.4-->\n\n\n<!--section: 1.3.3.5-->\n\n\n<!--section: 1.3.3.6-->\n\n\n<!--section: 1.3.3.7-->\n\n\n<!--section: 1.3.3.8-->\n\n\n<!--section: 1.3.4-->\n# 工作\n一代宗師\n借力使用不費力\n70-80是否能繼續工作研究,日本，觀察Davie Allen，松村寧雄，有社群再經營的人\n完成七本書的寫作啦，接著是授權\n\n<!--section: 1.3.5-->\n# 家庭\n有孫子的年紀，兒子開始要我們帶小孩\n或許是學生常常來找我\nleave the lengacy to kids\n\n<!--section: 1.3.6-->\n# 社交\n有可以每天對話的朋友\n順勢而為，和親近、價值觀相同的人一起\n同齡人幫同齡人，我要幫助和我年紀一樣的人\n認識不同的人群\n\n<!--section: 1.3.7-->\n# 健康\n身體病痛可以控制\n長跑，重訓，羽球三個運動持續進行，讓我身體機能很棒，感謝以前的我\n觀察長輩，如何變老\n\n<!--section: 1.3.8-->\n# 休閒\n可以動一動，看看大自然\n\n<!--section: 1.4-->\n# 20-29歲 1990-2000年 修行期\n![[截圖 2026-01-15 at 14.42.00@2x.png]]\n英文（關鍵技能）這個階段真的苦背許多英文單字＝ 現在要用AI背誦日文單字了\n考取預官，中正理工當兵\n考土木技師\n慈濟營建部花蓮工作；國開營造 土木工程師\n員林青商\n\n<!--section: 1.4.1-->\n# 內在\n初出社會的我其實非常軟弱，我拼足全力奮戰（感謝你，永錫，你這麼軟又這麼勇敢）\n考取預官，分發到中正理工學員，因為當預官業務負責繳交水電費壓力很大，組織下問題，珍貴的負面經驗\n慈濟上人，做早課，念咒語，人生不容易，但是一群人一起過是可能的\n\n<!--section: 1.4.2-->\n# 財務\n開始賺錢啦，哈哈，國開營造薪資報酬，請凱翔吃生魚片,哈哈\n上班賺錢很重要\n爸爸給我一間房子住，有屋的獨居青年，感謝爸爸讓我變成有產\n有錢也辛苦，沒錢也辛苦，還是要有好心，永錫加油\n\n<!--section: 1.4.3-->\n# 學習\n卡內基訓練，第一個商業培訓\n淡江大學 學Fortran 開始學習英文\n學好了MS Excel（資料庫），開始學習工具\n買Palm ＝ 這件事情太重要了\nUCB念ESL及Business Extension\n超級熱愛閱讀\n英文是我輩子學習雙向接續最有用途的工具,感謝以前努力的永錫,謝謝你\n\n<!--section: 1.4.4-->\n# 工作\n大三開始不上課自讀；大四紅茶店第一次打工；考土木技師兩次沒考取\n花蓮慈濟功德會營造部，國開營造，E404標（核心伙伴的力量），貫弘營造，做得覺得很辛苦，辛苦了永錫，我知道你超努力了\n\n<!--section: 1.4.5-->\n# 家庭\n媽媽紀桂英過世，享年56歲，我也因此停止出國留學，在台灣考土木技師（為別人的個性展現）\n到員林國開營造時，住在叔叔家\n和紀家親戚就很少聯繫了\n\n<!--section: 1.4.6-->\n# 社交\n大三四和義國租屋住\n入社會和甲方業主小燕子不合，上卡內基訓練\n認識Darren，創業iKid\n28歲 加入員林青商會 870621\n青商訓練，讓我知自己的活動能力及人際關係很好\n嘗試開始交女朋友，有經驗了，哈\n其實我人際能力很好的\n\n<!--section: 1.4.7-->\n# 健康\n第一次看醫生的憂鬱症，台大醫院從精神外科到精神科，確診是中度憂鬱症\n= 就算有憂鬱症，還是能有精彩人生的，永錫你是有故事的人\n後來在iKid（哈佛）創業後，還是憂鬱，去美國休養一年\n打排球時間下降\n\n<!--section: 1.4.8-->\n# 休閒\n看書，看漫畫是我的休閒\n也會去打排球\n去生研社是我的休閒，感謝大家\n\n<!--section: 1.5-->\n# 40-49歲 2010-2020年 初惑期\n![[IMG_9938.jpg]]\n轉職：小鎮美語老師到兩岸時間管理講師（我是個好老師）\n意外頻頻的十年,突發狀況特別多\n破繭而出，從小鎮走到大千世界\n大範圍開研習會，建立幸福行動家社群\n接觸曼陀羅九宮格\n台北搬到台中\n住院，台中榮總精神病院\nClare創了Bambio品牌，現在和我一起創\n\n<!--section: 1.5.1-->\n# 內在\n把大陸的成就放下，往下一步走,建造了的河床,但是要重新面對河流,有髒水,有乾淨的水,也有榜樣\n每週固定王蓉範老師心理諮商\n住精神病院（療養院）真的住到好怕,出來還有兩位醫生照顧,感謝這幾年的專業付出\n开始持续养成每周检视习惯,這個非常重要\n\n<!--section: 1.5.2-->\n# 財務\n爸爸過世後，賣掉台北房子，處理好遺產\n兄弟爭產真的非常傷呀(10年時間就過了),幸好展旭律師指導,一步步走過來\n買品臻邸（幸福的開始），昇平街店面，還有台Benz的車子\n後來出租給餐廳\n\n<!--section: 1.5.3-->\n# 學習\n幫松村寧雄老師的書寫序，接觸到課程，聽演講外，並到日本參加曼陀羅九宮格年會\nGTD課程認證講師培訓，但是沒有拿到資格\n又開始自學，這次從歷史學，從GTD走出進入九宮格，加上自己的青蛙，讚。\n看了很多大陸的書吧,還是很不錯\n\n<!--section: 1.5.4-->\n# 工作\n開始用團隊方式作品牌形象及接案，小師娘一起做\n►幸福行動家舉辦60屆，真的是太棒了，做了有意義的事情\n也成為我二度加入BNI的重要產品,準備打國際戰,做BNI國際內部的生意\nTo B，做了餐飲，物流、外商\n寫書，繁體兩本，簡體一本\n線上課：好學校、生鮮時書\n開始知乎專欄\n\n<!--section: 1.5.5-->\n# 家庭\n爸爸張椿培過世，台北搬到台中\n大兒子考上台中一中小兒子向上國中,興大附中\nClare創了Bambio品牌，賣掉；騎馬，真的感謝Clare陪我走過精彩人生\n想改善和永澤關係,但是很艱難,後來成功了,永錫好棒棒\n\n<!--section: 1.5.6-->\n# 社交\n西南航空策略：各大城市群開研習會，引導幸福行動家四處飛,讚啦,未來即將啟程\n台中交朋友，羽毛球，品臻邸，王老師\n\n<!--section: 1.5.7-->\n# 健康\n住院台中榮總精神病院，50天上下，真的好痛苦，如同從飛奔的雲霄飛車衝出軌道，直直落下到落地，痛，連婚姻也差點消失\n► 但也讓我更樂觀\n►出院後還拿藥物\n以前不運動\n►Ted邀請我去打羽毛球,持續六年，感恩\n\n<!--section: 1.5.8-->\n# 休閒\n出差兼遊玩\n東京、北京、上海、杭州、深圳、重慶\n這時候看,頗常移動的呢,不簡單\n喜歡打羽毛球\n\n<!--section: 1.6-->\n# 50-59歲 2020-2030年 立志期\n![[1AFD9533-029E-4497-A348-1E8B981E029C_1_105_c.jpeg]]\n(直播，線上出版，演講）,講師業務要轉型\n→做Youtuber、出暢銷書\n用六度波羅密，讓自己成為內在強大的領導人\n影像傳播 知乎直播+城邦＋好學校拍片\n？成遠 Kai 區瑋 A級人脈＊Network＋遠距連結者\n有RoamResearch，更會說故事，講師演講和線上課程都進步了\n\n<!--section: 1.6.1-->\n# 內在\n- 六度波羅密，成為內在強大的領導人。為佛教，為眾生\n- 讀游牧人生、奈良美智，人生就是不斷的戰鬥\n- 別人需要幫助之時，幫助別人\n- 王榮範老師諮商三年告一段落\n- 夫妻感情變好＝ 進如複雜\n- 我居然會情緒勒索老婆，因金錢的壓力?加油，老婆愛我呀＝ 相互情勒\n－這些天心情不好,找本好書看看吧\n- 活在今天的方格中\n\n<!--section: 1.6.2-->\n# 財務\n- 投資未來，建立60歲後的收入\n- 在James和Harry的教學下，開始記帳\n- iKid退股\n- 從成遠 Kai等A級人脈學習財務\n- 財務壓力增加，兒子上大學，收入沒增加，哈\n- 疫情升溫，確實不容易，加油\n- Youtube頻道建立，這是我的事業，加油\n- 運用大量電腦工具強化電腦能力花費也變高，要賺回來\n\n<!--section: 1.6.3-->\n# 學習\n魯曼-手寫文字、印刷術、卡比腦（電的卡片筆記）可以讓自己變化超大\n- 跟著黃湘學佛法研究：阿賴耶識，見識成智，中觀\n- Notion，Heptas Alan\n- How to take smart notes，感謝李娟，陳希文，趕上了理論與工具結合的快速路\n- 讀魯曼，卡片盒比書重要，還要做成網站\n- 九宮格─小世界網路 是第三本書，「為什麼這個世界比心智圖還複雜？」\n\n<!--section: 1.6.4-->\n# 工作\n- 和靜舍王老師到深圳演講\n- 辦今井先生的Zoom年計劃課程，邁向第十年大成功\n- AI出現，第三本書，用了TheBrain及heptabase,RoamResearch等多方法，爽\n- 好學校卡片筆記術賣超好，拍得好，團隊好\n- ToB也製作了兩堂課程，賣超好，第一名\n- 和知乎、好學校、城邦\n\n- Youtube,知乎直播、小紅書 IG 幫助我打造超能力\n－63th台北研習會\n\n<!--section: 1.6.5-->\n# 家庭\n- 和老婆的關係，進入複雜\n- 和永澤的關係越來越好 Yes 一起找屘姨\n►這幾年的努力及堅持，有豐碩結果，繼續找永澤121\n- 進入空巢期\n- Kris考完大學 日本美國,休學一次\n- Marni國中畢業啦進高中，買筆電設計電玩,想休學\n\n<!--section: 1.6.6-->\n# 社交\n- ️台中新朋友，羽球隊、MonoSpace（群工作）、梓書房等，Harry，被某人Unfriend，表示這世界公平\n- 多城市人脈圈TheBrain、莎莎、成遠，泊言、革非、李娟、區瑋、Kai、Alex\n- 建立年輕人的團隊；環島小聚成功\n- 幸福行動家 3.0啟動 代號：雲\n- 參加BNI華One分會,打群架,做了80場的121\n\n<!--section: 1.6.7-->\n# 健康\n我相信，即使我再次得到憂鬱症，我還是會痊癒的\n遇到可怕的憂鬱症，在2024年卡了4個月\n- ️打羽毛球， 咖啡\n- 和球隊成員一起出遊，參與活動\n－兩場打好\n- 運動和社群的結合，在台中市紮根人脈 小關\n\n<!--section: 1.6.8-->\n# 休閒\n彈吉他學日文，這是可以堅持的路線\n- 培養一些休閒習慣，以拉、拍照\n- 看書、看電影、舞蹈\n\n<!--section: 1.7-->\n# 0-19歲1970-1990年想見期成人之前\n![[掃描全能王 2026-1-15 14.43_1.jpg]]\n》我要從從小的柔軟劣勢，變成優勢\n》我的見識不凡，看很多地方，看很多東西及人\n受人喜愛的員林小孩，喜歡去台北玩，鄉村老鼠，都市老鼠\n大量閱讀（感謝當年的永錫，這是我現在知識的基礎）\n員林搬家到台北\n國中被霸淩\n打排球\n加入生研社和樸毅團\n交到孟韋和義國當好朋友 開始學習理解他人\n\n<!--section: 1.7.1-->\n# 內在\n我是對人和善的人，這就是我的價值，不用擔心\n我是內向的小鎮小孩，躲起來看漫畫，書，不用和外界接觸，被動內向\n國小階段看電影被騷擾，被勝德公寓建昌性騷擾(壞人,太可怕,行動很壞)；在員林國中被霸凌,＃metoo(被后座男生）；從員林轉學到介壽國中，發生被同學霸凌(謝吟誠和我說)\n我該改寫我的劇本了\n\n<!--section: 1.7.2-->\n# 財務\n華豐股票上市，改變了張家財務的地位,也讓爸爸有底氣繼續創業,30歲多真的辛苦\n= 我這輩子就是要轉化由工業股票金錢到虛擬時代的信任貨幣，要建立複利系統（反脆弱的心智和模式）\n買車，一開始Toyota，後來買了BMW 520，一輩子的記憶\n爸爸和叔叔開始做不動產，成功累積財富\n爸爸從華豐離職，到台北開始創業\n\n<!--section: 1.7.3-->\n# 學習\n最愛去漫畫店看漫畫／國語日報，文字就是我的超能力\n書店是我好朋友\n小書店找書看，閱讀大量報紙、文學、推理、歷史，開始有雜學家的樣式\n高中上課常常睡覺，但是和生研社伙伴很好，聯考考不好，\n大學普通，很不愛考試及課內課，大三後就不上課，全靠自讀\n\n<!--section: 1.7.4-->\n# 工作\n幼幼幼稚園／橋信國／員林／介壽國中／中正高中／淡江大學\n幼稚園被紅豆湯淋到\n喜歡社團，打排球、生研社（第一個社群）、樸毅團\n國中在員林和介壽國中都有被霸凌經驗,謝吟誠,鲍建國\n感謝愛看書的永錫,你找出了一輩子的路,現在還會創造更多奇蹟\n感謝軟弱卻永遠不屈服的的永錫,你是個有信用的人,你得到真正的朋友和伴侶\n\n<!--section: 1.7.5-->\n# 家庭\n媽媽紀桂英很溫柔，我們也會去台北玩，下午會在房間睡覺，覺得好暗的房間，媽媽很累的樣子\n爸爸張椿培工作壓力大，會生氣，我們都很怕，每週末都打麻將\n爸媽吵架一次爸爸敲破啤酒瓶，對媽媽大叫\n我和阿嬤也很好，有幾年在二樓住一層樓,不過偷過她的錢，阿嬤教我很多\n國三從員林搬家到台北，這是我青春期的大事情，但是我不喜歡台北\n\n<!--section: 1.7.6-->\n# 社交\n和張家及紀家親戚很好，过年去沟皂過年,我好像沒有和紀家聚會\n爸爸好友張老師，很常來拜訪，但是早逝，印象很深\n勝德公寓遇到性騷擾，不知道如何解決\n生研社是我第一群社群伙伴，有孟韋等好友，永遠不愁沒事做。\n大學則是義國、樸毅團山服隊朋友，擔任山服隊隊長，讓我知道要做好領導者角色不容易\n年輕有好朋友,讓我賺很大，我很有自信可以交到朋友\n\n<!--section: 1.7.7-->\n# 健康\n小時候在勝德公寓打棒球\n想跑步很快，但是沒有實現過，和Marni一樣\n小時候很瘦，綽號叫做竹竿，不愛吃飯，被媽媽追餵食\n從來不運動，在中正高中二年級開始打排球\n\n<!--section: 1.7.8-->\n# 休閒\n看電視天眼,科學小飛俠,無敵鐵金剛\n看報紙，每個字都看，wordholic\n看漫畫、看書、看報紙娛樂版新聞(喜歡次文化，時事及八卦)\n爸爸買中國科幻大全小說,這是一件大事情,和爸爸要錢，柏楊版資治通鑑（瘋狂）\n\n<!--section: 1.8-->\n# 100歲 2070年 完成期\n永錫，你很努力，很棒了\nClare，你是我最輩子最愛的人，一起追求成長，我真的幸運遇見你\nKris，你讓我以你為榮\nMarni，感謝你陪伴我的人生，聽我的話\n永澤，謝謝有機會當你哥哥，讓我持續成長\nFion，謝謝你和永澤一起，成為張家人，祝福你，健康、無事\n\n<!--section: 1.8.1-->\n# 內在\n能跑到終點,就是那瞬間的第一名\n永錫真的很棒\n一輩子要持續找到榜樣\n\n<!--section: 1.8.2-->\n# 財務\n我也不需要錢了\n但是如何給予?\n我的IP如何能對這個世界更好，我的榜樣是誰呢？\n\n<!--section: 1.8.3-->\n# 學習\n學習✱ 九宮，꩜ AI(龍),◊ 北極星就很幸福\n\n<!--section: 1.8.4-->\n# 工作\n網紅?\n我這輩子不要什麼？\n不強求\n重視知識，重視朋友，瞭解別人\n感謝Esor讓我完成出七本書的願望，也成為陪伴我最久的Project\n\n<!--section: 1.8.5-->\n# 家庭\n永錫，你很努力，很棒了\nClare，你是我最輩子最愛的人，關關難過，關關過\nKris，你讓我以你為榮\nMarni，感謝你陪伴我的人生，你的一直進步，讓我很開心\n永澤，謝謝有機會當你哥哥，讓我持續成長\n\n<!--section: 1.8.6-->\n# 社交\n空，以前架構的人際網路回來幫我了\n設計、數據主義和人文主義並存\n相對論黑洞結構(結構洞)\n我在日本，台灣，大陸都有很多朋友，很幸福了\n\n<!--section: 1.8.7-->\n# 健康\n我對死亡的研究？死亡前健康狀況\n或許我就和超人哥一樣死了\n年輕跑步，肌肉累積，羽毛球讓老年比較舒服\n無常\n\n<!--section: 1.8.8-->\n# 休閒\n不痛苦，小小樂趣\n打打羽毛球\n\n<!--section: 2-->\n\n\n<!--section: 2.1-->\n\n\n<!--section: 2.2-->\n\n\n<!--section: 2.3-->\n\n\n<!--section: 2.4-->\n\n\n<!--section: 2.5-->\n\n\n<!--section: 2.6-->\n\n\n<!--section: 2.7-->\n\n\n<!--section: 2.8-->",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "02 Area/🕵️🕵️九宮週檢視.md"
+      ],
+      "preview": "<!--section: 1--> # 永錫人生百年計劃 ![[截圖 2026-01-04 at 10.39.16 1.png]] 建檔日期：2019/12/08 最新修訂：2025-12-05 松村剛志先生六小時課堂後筆記的打字版本 不管是羚羊或獅子，就拼命地跑吧 <!--section: 1.1--> # 60-69歲 2030-2040年 精進期 身心"
+    },
+    {
+      "id": "02 Area/🏸 民生羽球賽.md",
+      "path": "02 Area/🏸 民生羽球賽.md",
+      "basename": "🏸 民生羽球賽",
+      "title": "🏸 民生羽球賽",
+      "folder": "02 Area",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-06T03:12:57.794Z",
+      "content": "- [ ] 負責拍照 賽後 \n- [ ] 秀珍\n- [ ] 偉豪 冠瑩 江江\n比賽完贏得攝影上場權，總共會有 60 組，分在兩個場地。\n\n每個攝影師在各自的場地主要拍出 30 張照片，兩邊合計 60 張照片。\n\n\n[[黃麗娟]]\nA隊\n1.彭a&[[楊醫師]]\n2.[[小鐵]]&ㄚP\n3.尼克&樂咖\n4.東雄&洪律師\n5.君麟&志福\n\nB隊\n1.君玲&華教授\n2. 何董&Cindy\n3.永錫&[[玉茹]]\n4.素蓮&張老師\n5.忠憲&ㄚ正\nC隊\n3. Y𧙗&碧娥\n2.安安&小夏\n3鳳娥&kimi\n4.宥希&[[千禾]]\n5.小龍&昱鑫",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 日計劃/2026年第10週.md",
+        "00 日計劃/2026年第11週.md"
+      ],
+      "preview": "- [ ] 負責拍照 賽後 - [ ] 秀珍 - [ ] 偉豪 冠瑩 江江 比賽完贏得攝影上場權，總共會有 60 組，分在兩個場地。 每個攝影師在各自的場地主要拍出 30 張照片，兩邊合計 60 張照片。 [[黃麗娟]] A隊 1.彭a&[[楊醫師]] 2.[[小鐵]]&ㄚP 3.尼克&樂咖 4.東雄&洪律師 5.君麟&志福 B隊 1.君玲&華教授 2. 何"
+    },
+    {
+      "id": "02 Area/🐦🐦 鳥眼看永錫.md",
+      "path": "02 Area/🐦🐦 鳥眼看永錫.md",
+      "basename": "🐦🐦 鳥眼看永錫",
+      "title": "🐦🐦 鳥眼看永錫",
+      "folder": "02 Area",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-01T06:37:16.541Z",
+      "content": "<!--section: 1-->\n![[99 Archive/99 🧟 封存/🗂️ Resources/🖼️ inages/截圖 2026-01-04 at 10.39.16.png]]\n\n<!--section: 1.1-->\n# 內在\n[[Mandala─100 Years]]\n\n<!--section: 1.2-->\n# 財務\n春雄\nSell一張\n\n<!--section: 1.2.1-->\n\n\n<!--section: 1.2.2-->\n\n\n<!--section: 1.2.3-->\n\n\n<!--section: 1.2.4-->\n\n\n<!--section: 1.2.5-->\n\n\n<!--section: 1.2.6-->\n\n\n<!--section: 1.2.7-->\n\n\n<!--section: 1.2.8-->\n\n\n<!--section: 1.3-->\n# 學習\n[[➡️ 🇯🇵 第13課]]\n上V大賣書的課\n做一些網頁\n- [ ] 處理BBB本來是Mandala-grid的網頁檔案，現在被8為作家佔據\n\n<!--section: 1.3.1-->\n\n\n<!--section: 1.3.2-->\n\n\n<!--section: 1.3.3-->\n\n\n<!--section: 1.3.4-->\n\n\n<!--section: 1.3.5-->\n\n\n<!--section: 1.3.6-->\n\n\n<!--section: 1.3.7-->\n\n\n<!--section: 1.3.8-->\n\n\n<!--section: 1.4-->\n### 工作\n- [[手帳]]寫書記錄進度\n- 2.4\n- 3.1\n\n<!--section: 1.4.1-->\n\n\n<!--section: 1.4.2-->\n\n\n<!--section: 1.4.3-->\n\n\n<!--section: 1.4.4-->\n\n\n<!--section: 1.4.5-->\n\n\n<!--section: 1.4.6-->\n\n\n<!--section: 1.4.7-->\n\n\n<!--section: 1.4.8-->\n\n\n<!--section: 1.5-->\n# 家庭\n[[三月美國之旅]]\n\n<!--section: 1.6-->\n## 社群\n- [[TheBrain]]一輩子人脈\n- 品臻邸，羽毛球，網友經營\n\n<!--section: 1.6.1-->\n\n\n<!--section: 1.6.2-->\n\n\n<!--section: 1.6.3-->\n\n\n<!--section: 1.6.4-->\n\n\n<!--section: 1.6.5-->\n\n\n<!--section: 1.6.6-->\n\n\n<!--section: 1.6.7-->\n\n\n<!--section: 1.6.8-->\n\n\n<!--section: 1.7-->\n### 健康\n- 每天跑一公里，[[TickTick熱力表]]\n- [[民生三月羽毛球比賽]]\n- 适当加一点阻抗训练也很重要。耐力和阻抗结合起来对身体的好处更全面。\n\n<!--section: 1.7.1-->\n\n\n<!--section: 1.7.2-->\n\n\n<!--section: 1.7.3-->\n\n\n<!--section: 1.7.4-->\n\n\n<!--section: 1.7.5-->\n\n\n<!--section: 1.7.6-->\n\n\n<!--section: 1.7.7-->\n\n\n<!--section: 1.7.8-->\n\n\n<!--section: 1.8-->\n# 休閒\n[[鄉村路]]\n[[淚光閃閃]]\n[[千與千尋]]",
+      "links": [],
+      "embeds": [
+        {
+          "type": "asset",
+          "target": "./assets/vault/截圖 2026-01-04 at 10.39.16.png",
+          "alias": null
+        }
+      ],
+      "backlinks": [],
+      "preview": "<!--section: 1--> ![[99 Archive/99 🧟 封存/🗂️ Resources/🖼️ inages/截圖 2026-01-04 at 10.39.16.png]] <!--section: 1.1--> # 內在 [[Mandala─100 Years]] <!--section: 1.2--> # 財務 春雄 Sell一張 "
+    },
+    {
+      "id": "02 Area/🕵️🕵️九宮週檢視.md",
+      "path": "02 Area/🕵️🕵️九宮週檢視.md",
+      "basename": "🕵️🕵️九宮週檢視",
+      "title": "🕵️🕵️九宮週檢視",
+      "folder": "02 Area",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-06T07:11:55.446Z",
+      "content": "<!--section: 1-->\n![[截圖 2026-01-04 at 10.39.16.png]]\n<!--section: 1.1-->\nⒾ 左手直立檔案系統 19:46\n\n<!--section: 1.2-->\nⒸ 右收件匣 15:04 \n\n\n<!--section: 1.3-->\nⒼ百年人生計劃 17:17 \n[[百年人生計劃]]\n![[截圖 2026-01-31 at 10.32.08.png]]\n\n<!--section: 1.4-->\nⒷ 記錄庫\n- [x] 日記\n- [ ] TB14週月年計劃\n\t- [ ] [[2026年第11週]]\n- [x] Photos\n- [ ] 脆FB 10:20\n\n<!--section: 1.5-->\nⒹ月检视 ：  \n- [x] 行事曆\n- [x] 由年而下規劃\n- [ ] 整理OB中PARA，整體Project,單筆\n\n<!--section: 1.6-->\nⒻ Check List 19:46 \n[[紀念日及祭拜日]]\n\n<!--section: 1.7-->\nⒶ inbox Zero 16:09\n\n<!--section: 1.8-->\nⒽ 週/月計畫 \nTheBrain週月規劃",
+      "links": [
+        {
+          "target": "02 Area/百年人生計劃.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "00 日計劃/2026年第11週.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [
+        {
+          "type": "asset",
+          "target": "./assets/vault/截圖 2026-01-04 at 10.39.16.png",
+          "alias": null
+        }
+      ],
+      "backlinks": [],
+      "preview": "<!--section: 1--> ![[截圖 2026-01-04 at 10.39.16.png]] <!--section: 1.1--> Ⓘ 左手直立檔案系統 19:46 <!--section: 1.2--> Ⓒ 右收件匣 15:04 <!--section: 1.3--> Ⓖ百年人生計劃 17:17 [[百年人生計劃]] ![[截圖 2026-0"
+    },
+    {
+      "id": "03 Resource/0325 清明.md",
+      "path": "03 Resource/0325 清明.md",
+      "basename": "0325 清明",
+      "title": "0325 清明",
+      "folder": "03 Resource",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:44:30.662Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "03 Resource/Monthly Play/2026 April.md",
+      "path": "03 Resource/Monthly Play/2026 April.md",
+      "basename": "2026 April",
+      "title": "2026 April",
+      "folder": "03 Resource/Monthly Play",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:25:43.606Z",
+      "content": "[[🇺🇸　美國之旅]]",
+      "links": [
+        {
+          "target": "01 Project/🇺🇸　美國之旅.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "[[🇺🇸 美國之旅]]"
+    },
+    {
+      "id": "03 Resource/Monthly Play/2026 March.md",
+      "path": "03 Resource/Monthly Play/2026 March.md",
+      "basename": "2026 March",
+      "title": "2026 March",
+      "folder": "03 Resource/Monthly Play",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:25:51.260Z",
+      "content": "[[🇺🇸　美國之旅]]",
+      "links": [
+        {
+          "target": "01 Project/🇺🇸　美國之旅.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "[[🇺🇸 美國之旅]]"
+    },
+    {
+      "id": "03 Resource/品韻合唱團演出.md",
+      "path": "03 Resource/品韻合唱團演出.md",
+      "basename": "品韻合唱團演出",
+      "title": "品韻合唱團演出",
+      "folder": "03 Resource",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-02T15:44:45.580Z",
+      "content": "<!--section: 1-->\n[[英傑]] \n 主桌：[[莊璧華]]老師、\n \n 林秀蓁\n- [[張偉喬]]、朱瓊芳、張永錫、林瀛祿、李秋梅、林惠貞、潘桂免、王雪惠、徐若瑩\n- 張智荃\n<!--section: 2-->\n<!--section: 3-->\n<!--section: 4-->\n<!--section: 5-->\n<!--section: 6-->\n<!--section: 7-->\n<!--section: 8-->\n<!--section: 9-->",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 日計劃/00 ◊ 🐸 日計劃 🐸.md",
+        "00 日計劃/2026年第10週.md"
+      ],
+      "preview": "<!--section: 1--> [[英傑]] 主桌：[[莊璧華]]老師、 林秀蓁 - [[張偉喬]]、朱瓊芳、張永錫、林瀛祿、李秋梅、林惠貞、潘桂免、王雪惠、徐若瑩 - 張智荃 <!--section: 2--> <!--section: 3--> <!--section: 4--> <!--section: 5--> <!--section: 6-->"
+    },
+    {
+      "id": "03 Resource/新北演講 四月.md",
+      "path": "03 Resource/新北演講 四月.md",
+      "basename": "新北演講 四月",
+      "title": "新北演講 四月",
+      "folder": "03 Resource",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:24:34.937Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "03 Resource/社會局演講 6月.md",
+      "path": "03 Resource/社會局演講 6月.md",
+      "basename": "社會局演講 6月",
+      "title": "社會局演講 6月",
+      "folder": "03 Resource",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T16:24:49.174Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "031 人脈管理/品臻邸.md",
+      "path": "031 人脈管理/品臻邸.md",
+      "basename": "品臻邸",
+      "title": "品臻邸",
+      "folder": "031 人脈管理",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-02T15:40:50.089Z",
+      "content": "<!--section: 1-->\n管理中心\n經理：佳音\n<!--section: 1.1-->\n<!--section: 1.2-->\n 劉冠伯 林漢章 盧俊偉 張仕和 曾彥鈞 陳景華 王芷青 郭麗華 廖明遠\n<!--section: 1.3-->\n<!--section: 1.4-->\n林佳音 曾盈淑 羅于婷 黃秝昀\n<!--section: 1.5-->\n[[管委會]]\n[[品韻合唱團]]\n<!--section: 1.6-->\n<!--section: 1.7-->\n社區經理 早班秘書 晚班秘書 機動秘書 早班保全 早班保全 機動保全 夜班保全 夜班保全 甲楝環保 乙楝環保 大廳環保 外圍環保 \n<!--section: 1.8-->\n<!--section: 2-->\n二樓\n\n\n<!--section: 2.1-->\n<!--section: 2.2-->\n2B-Lin\n<!--section: 2.3-->\n<!--section: 2.4-->\n<!--section: 2.5-->\n<!--section: 2.6-->\n<!--section: 2.7-->\n<!--section: 2.8-->\n<!--section: 3-->\n三樓\n<!--section: 4-->\n四樓\n<!--section: 4.1-->\n👦👧 4A 哥哥妹妹 （美,英文）YTer \n<!--section: 4.2-->\n4B [[王雪惠]]\n<!--section: 4.3-->\n4C林雋于 \n清新溫泉 建設 老公中風\n兒子紐約 高鐵\n孫女兩人\n\n<!--section: 4.4-->\n<!--section: 4.5-->\n<!--section: 4.6-->\n<!--section: 4.7-->\n<!--section: 4.8-->\n<!--section: 5-->\n五樓\n<!--section: 5.1-->\n5A 童先生\n徐若瑩\n<!--section: 5.2-->\n5B大豆媽 狗狗 醫療？\n<!--section: 5.3-->\n5C 我們家\n<!--section: 5.4-->\n<!--section: 5.5-->\n<!--section: 5.6-->\n<!--section: 5.7-->\n<!--section: 5.8-->\n<!--section: 6-->\n六樓\n<!--section: 6.1-->\n6A [[李秋梅]][[Louis 林瀛祿]]\n<!--section: 6.2-->\n<!--section: 6.3-->\n👦👧 6C 林昱成鄭文茹，兒子女兒 \n<!--section: 6.4-->\n<!--section: 6.5-->\n<!--section: 6.6-->\n<!--section: 6.7-->\n<!--section: 6.8-->\n<!--section: 7-->\n七樓\n<!--section: 8-->\n八樓\n<!--section: 8.1-->\n<!--section: 8.2-->\n👦👧 8B [[吳青芸]]\n<!--section: 8.3-->\n👦👧8C [[Yi-hui Lee 李怡慧]]\n陳醫生 腎臟\n<!--section: 8.4-->\n<!--section: 8.5-->\n<!--section: 8.6-->\n<!--section: 8.7-->\n<!--section: 8.8-->\n<!--section: 9-->\n九樓\n<!--section: 9.1-->\n<!--section: 9.2-->\n👧 9B 黃先生電腦，黃太太陳小姐,\n幼稚園孫女氣喘 \n<!--section: 9.3-->\n<!--section: 9.4-->\n<!--section: 9.5-->\n<!--section: 9.6-->\n<!--section: 9.7-->\n<!--section: 9.8-->\n<!--section: 10-->\n十樓\n<!--section: 10.1-->\n👶 10A \n<!--section: 10.2-->\n👧？10B 范太太 Coco，盧先生 學英文\n<!--section: 10.3-->\n10C曉梅\n<!--section: 10.4-->\n<!--section: 10.5-->\n<!--section: 10.6-->\n<!--section: 10.7-->\n<!--section: 10.8-->\n<!--section: 11-->\n十一樓\n<!--section: 11.1-->\n<!--section: 11.2-->\n👧11B 梁小姐？高中女\n<!--section: 11.3-->\n<!--section: 11.4-->\n<!--section: 11.5-->\n<!--section: 11.6-->\n<!--section: 11.7-->\n<!--section: 11.8-->\n<!--section: 12-->\n十二樓\n<!--section: 12.1-->\n12 A[[王麗裕]] 主持人\n<!--section: 12.2-->\n<!--section: 12.3-->\n12C Thai\n<!--section: 12.4-->\n<!--section: 12.5-->\n<!--section: 12.6-->\n<!--section: 12.7-->\n<!--section: 12.8-->\n<!--section: 13-->\n十三樓\n<!--section: 13.1-->\n👦👦 13A 莫庚翰 台中一中＋哥哥\n\n<!--section: 13.2-->\n<!--section: 13.3-->\n<!--section: 13.4-->\n<!--section: 13.5-->\n<!--section: 13.6-->\n<!--section: 13.7-->\n<!--section: 13.8-->\n<!--section: 14-->\n十四樓\n<!--section: 14.1-->\n<!--section: 14.2-->\n<!--section: 14.3-->\n👧👧 14C 邢醫師(^^搬走了^^)；胡\n<!--section: 14.4-->\n<!--section: 14.5-->\n<!--section: 14.6-->\n<!--section: 14.7-->\n<!--section: 14.8-->\n<!--section: 15-->\n十五樓\n<!--section: 15.1-->\n15A趙文華\n老婆臺北市政府\n<!--section: 15.2-->\n👧👦15B，黃醫生(男)，國小／幼稚\n<!--section: 15.3-->\n15C [[范正欣]]\n15C [[張偉喬]] 主委\n<!--section: 15.4-->\n<!--section: 15.5-->\n<!--section: 15.6-->\n<!--section: 15.7-->\n<!--section: 15.8-->\n<!--section: 16-->\n十六樓\n<!--section: 16.1-->\n<!--section: 16.2-->\n👧👦16B 陳兒子✅高中，女兒國中？？\n<!--section: 16.3-->\n<!--section: 16.4-->\n<!--section: 16.5-->\n<!--section: 16.6-->\n<!--section: 16.7-->\n<!--section: 16.8-->\n<!--section: 17-->\n十七樓\n<!--section: 17.1-->\n👦👦 17A 楊大宇 混血美女\n<!--section: 17.2-->\n<!--section: 17.3-->\n<!--section: 17.4-->\n<!--section: 17.5-->\n<!--section: 17.6-->\n<!--section: 17.7-->\n<!--section: 17.8-->\n<!--section: 18-->\n十八樓\n<!--section: 18.1-->\n18A [[陳正輝]]、[[英美惠]]爺爺\n王品公主\n陳祈亦\n<!--section: 18.2-->\n<!--section: 18.3-->\n18C 游會 黃秋源\n<!--section: 18.4-->\n<!--section: 18.5-->\n<!--section: 18.6-->\n<!--section: 18.7-->\n<!--section: 18.8-->",
+      "links": [
+        {
+          "target": "031 人脈管理/品韻合唱團.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "<!--section: 1--> 管理中心 經理：佳音 <!--section: 1.1--> <!--section: 1.2--> 劉冠伯 林漢章 盧俊偉 張仕和 曾彥鈞 陳景華 王芷青 郭麗華 廖明遠 <!--section: 1.3--> <!--section: 1.4--> 林佳音 曾盈淑 羅于婷 黃秝昀 <!--section: 1.5-->"
+    },
+    {
+      "id": "031 人脈管理/品韻合唱團.md",
+      "path": "031 人脈管理/品韻合唱團.md",
+      "basename": "品韻合唱團",
+      "title": "品韻合唱團",
+      "folder": "031 人脈管理",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-02T15:41:31.409Z",
+      "content": "[[張偉喬]]\n\n[[ 莊璧華]]老師、林秀蓁\n- 張偉喬、朱瓊芳、張永錫、林瀛祿、李秋梅、林惠貞、潘桂免、王雪惠、徐若瑩",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "031 人脈管理/品臻邸.md"
+      ],
+      "preview": "[[張偉喬]] [[ 莊璧華]]老師、林秀蓁 - 張偉喬、朱瓊芳、張永錫、林瀛祿、李秋梅、林惠貞、潘桂免、王雪惠、徐若瑩"
+    },
+    {
+      "id": "031 人脈管理/龍寶建設.md",
+      "path": "031 人脈管理/龍寶建設.md",
+      "basename": "龍寶建設",
+      "title": "龍寶建設",
+      "folder": "031 人脈管理",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-02T15:43:49.965Z",
+      "content": "Vic Liao [[英傑]]\n黃泰達",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "Vic Liao [[英傑]] 黃泰達"
+    },
+    {
+      "id": "Mandala Grid Section Edit Sessions/1772427173600-61-3.md",
+      "path": "Mandala Grid Section Edit Sessions/1772427173600-61-3.md",
+      "basename": "1772427173600-61-3",
+      "title": "1772427173600-61-3",
+      "folder": "Mandala Grid Section Edit Sessions",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-02T04:53:46.000Z",
+      "content": "### 12-14\n用九四塊讀書法的模式來讀第 14 課日文的練習 A，還有單字的部分\nThis is a book.",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "### 12-14 用九四塊讀書法的模式來讀第 14 課日文的練習 A，還有單字的部分 This is a book."
+    },
+    {
+      "id": "Mandala Grid Section Edit Sessions/1772578388655-63-3.md",
+      "path": "Mandala Grid Section Edit Sessions/1772578388655-63-3.md",
+      "basename": "1772578388655-63-3",
+      "title": "1772578388655-63-3",
+      "folder": "Mandala Grid Section Edit Sessions",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-04T15:50:50.000Z",
+      "content": "### 12-14",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "### 12-14"
+    },
+    {
+      "id": "Mandala Grid Section Edit Sessions/1772639518511-64-3.md",
+      "path": "Mandala Grid Section Edit Sessions/1772639518511-64-3.md",
+      "basename": "1772639518511-64-3",
+      "title": "1772639518511-64-3",
+      "folder": "Mandala Grid Section Edit Sessions",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-04T15:52:04.000Z",
+      "content": "### 12-14\n翁明漢 投影片\nCheck usa",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "### 12-14 翁明漢 投影片 Check usa"
+    },
+    {
+      "id": "Mandala Grid Section Edit Sessions/1772684993304-64-4.md",
+      "path": "Mandala Grid Section Edit Sessions/1772684993304-64-4.md",
+      "basename": "1772684993304-64-4",
+      "title": "1772684993304-64-4",
+      "folder": "Mandala Grid Section Edit Sessions",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-05T04:30:05.000Z",
+      "content": "### 14-16\n老實寫書\n翁明漢This is a book",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "### 14-16 老實寫書 翁明漢This is a book"
+    },
+    {
+      "id": "Mandala Grid Section Edit Sessions/1772767623254-65-3.md",
+      "path": "Mandala Grid Section Edit Sessions/1772767623254-65-3.md",
+      "basename": "1772767623254-65-3",
+      "title": "1772767623254-65-3",
+      "folder": "Mandala Grid Section Edit Sessions",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-06T03:51:17.000Z",
+      "content": "### 12-14\n午餐 龍品？\nOB publish 週計劃\n檢查成長中的永久筆記\n讀書心得增加盜夢空間\n發展雙向連結就是ㄓㄤ ㄗㄝ ㄗ˙ ㄌㄚ",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "### 12-14 午餐 龍品？ OB publish 週計劃 檢查成長中的永久筆記 讀書心得增加盜夢空間 發展雙向連結就是ㄓㄤ ㄗㄝ ㄗ˙ ㄌㄚ"
+    }
+  ],
+  "edges": [
+    {
+      "source": "00 日計劃/00 ◊ 🐸 日計劃 🐸.md",
+      "target": "03 Resource/品韻合唱團演出.md"
+    },
+    {
+      "source": "00 日計劃/2026年第10週.md",
+      "target": "03 Resource/品韻合唱團演出.md"
+    },
+    {
+      "source": "00 日計劃/2026年第10週.md",
+      "target": "02 Area/🏸 民生羽球賽.md"
+    },
+    {
+      "source": "00 日計劃/2026年第11週.md",
+      "target": "02 Area/🏸 民生羽球賽.md"
+    },
+    {
+      "source": "01 Project/🎤 大志 Podcast Codex.md",
+      "target": "00 日計劃/2026年第10週.md"
+    },
+    {
+      "source": "02 Area/🕵️🕵️九宮週檢視.md",
+      "target": "02 Area/百年人生計劃.md"
+    },
+    {
+      "source": "02 Area/🕵️🕵️九宮週檢視.md",
+      "target": "00 日計劃/2026年第11週.md"
+    },
+    {
+      "source": "03 Resource/Monthly Play/2026 April.md",
+      "target": "01 Project/🇺🇸　美國之旅.md"
+    },
+    {
+      "source": "03 Resource/Monthly Play/2026 March.md",
+      "target": "01 Project/🇺🇸　美國之旅.md"
+    },
+    {
+      "source": "031 人脈管理/品臻邸.md",
+      "target": "031 人脈管理/品韻合唱團.md"
+    }
+  ],
+  "assets": {
+    "截圖 2026-01-04 at 10.39.16.png": "./assets/vault/截圖 2026-01-04 at 10.39.16.png"
+  }
+}
