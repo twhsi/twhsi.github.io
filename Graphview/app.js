@@ -5,7 +5,7 @@ const state = {
   graphFrame: null,
   graphDrag: null,
   graphFocusFn: null,
-  mandalaViewByNote: new Map(),
+  contentViewByNote: new Map(),
   mandalaSubgridByNote: new Map(),
 };
 
@@ -304,11 +304,11 @@ function attachMandalaHandlers() {
     });
   });
 
-  mandalaShellEl.querySelectorAll("[data-mandala-view]").forEach((button) => {
+  mandalaShellEl.querySelectorAll("[data-content-view]").forEach((button) => {
     button.addEventListener("click", () => {
-      const view = button.dataset.mandalaView;
+      const view = button.dataset.contentView;
       if (!view || !state.currentPath) return;
-      state.mandalaViewByNote.set(state.currentPath, view);
+      state.contentViewByNote.set(state.currentPath, view);
       navigateTo(state.currentPath);
     });
   });
@@ -327,6 +327,7 @@ function renderMandala(note) {
   if (!note.mandala) {
     mandalaShellEl.hidden = true;
     mandalaShellEl.innerHTML = "";
+    noteBodyEl.hidden = false;
     return;
   }
 
@@ -334,6 +335,7 @@ function renderMandala(note) {
   if (!sections.size) {
     mandalaShellEl.hidden = true;
     mandalaShellEl.innerHTML = "";
+    noteBodyEl.hidden = false;
     return;
   }
 
@@ -359,7 +361,10 @@ function renderMandala(note) {
 
   const has81 = availableSubgrids.length > 0;
   const defaultView = has81 ? "81" : "9";
-  const selectedView = state.mandalaViewByNote.get(note.path) || defaultView;
+  const allowedViews = has81 ? new Set(["markdown", "9", "81"]) : new Set(["markdown", "9"]);
+  const selectedContentView = state.contentViewByNote.get(note.path) || defaultView;
+  const resolvedContentView = allowedViews.has(selectedContentView) ? selectedContentView : defaultView;
+  const selectedView = resolvedContentView === "81" ? "81" : "9";
   const selectedSubgrid =
     state.mandalaSubgridByNote.get(note.path) ||
     availableSubgrids.find((slot) => slot !== "5") ||
@@ -368,14 +373,20 @@ function renderMandala(note) {
   const subSlots = Array.from({ length: 9 }, (_, index) => `${selectedSubgrid}.${index + 1}`);
 
   mandalaShellEl.hidden = false;
+  noteBodyEl.hidden = resolvedContentView !== "markdown";
   mandalaShellEl.innerHTML = `
     <div class="mandala-toolbar">
       <div class="mandala-switch">
-        <button class="mandala-chip ${selectedView === "9" ? "active" : ""}" data-mandala-view="9" type="button">9宮</button>
-        <button class="mandala-chip ${selectedView === "81" ? "active" : ""}" data-mandala-view="81" type="button" ${has81 ? "" : "disabled"}>81宮</button>
+        <button class="mandala-chip ${resolvedContentView === "markdown" ? "active" : ""}" data-content-view="markdown" type="button">Markdown</button>
+        <button class="mandala-chip ${resolvedContentView === "9" ? "active" : ""}" data-content-view="9" type="button">九宮</button>
+        <button class="mandala-chip ${resolvedContentView === "81" ? "active" : ""}" data-content-view="81" type="button" ${has81 ? "" : "disabled"}>81宮</button>
       </div>
       <div class="mandala-hint">Hover 卡片可同步高亮右側 Graph；點擊卡片可進入連結筆記。</div>
     </div>
+    ${
+      resolvedContentView === "markdown"
+        ? `<div class="mandala-empty">目前使用 Markdown 視圖，九宮卡片已隱藏。</div>`
+        : `
     <div class="mandala-grid">
       ${mainSlots.map((slot, index) => buildMandalaCard(slot, sections.get(slot), index === 4)).join("")}
     </div>
@@ -397,6 +408,8 @@ function renderMandala(note) {
       </div>
     `
         : ""
+    }
+    `
     }
   `;
   attachMandalaHandlers();

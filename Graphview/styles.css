@@ -270,6 +270,14 @@ h2 {
   font-size: 12px;
 }
 
+.mandala-empty {
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .mandala-grid,
 .mandala-subgrid {
   display: grid;

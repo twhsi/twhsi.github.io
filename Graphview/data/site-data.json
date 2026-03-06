@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T11:42:50.161Z",
+  "generatedAt": "2026-03-06T05:16:36.178Z",
   "sourceVault": "3.２ 81宮＊Graph View=7000字",
   "graphConfig": {
     "collapse-filter": false,
@@ -28,7 +28,7 @@
     "repelStrength": 10,
     "linkStrength": 1,
     "linkDistance": 250,
-    "scale": 0.8005394726312177,
+    "scale": 1.1943838349715439,
     "close": true
   },
   "localGraphOptions": {
@@ -65,14 +65,95 @@
         "name": "01 Project",
         "children": [
           {
+            "type": "folder",
+            "name": "3.2 關鍵術語",
+            "children": [
+              {
+                "type": "note",
+                "name": "🟥  九宮",
+                "path": "01 Project/3.2 關鍵術語/🟥  九宮.md"
+              },
+              {
+                "type": "note",
+                "name": "🟥 81宮格",
+                "path": "01 Project/3.2 關鍵術語/🟥 81宮格.md"
+              },
+              {
+                "type": "note",
+                "name": "🟦 魯曼",
+                "path": "01 Project/3.2 關鍵術語/🟦 魯曼.md"
+              },
+              {
+                "type": "note",
+                "name": "🟩  Graph View",
+                "path": "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+              },
+              {
+                "type": "note",
+                "name": "🟩 卡片盒",
+                "path": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+              },
+              {
+                "type": "note",
+                "name": "🟩 細胞寫作法",
+                "path": "01 Project/3.2 關鍵術語/🟩 細胞寫作法.md"
+              },
+              {
+                "type": "note",
+                "name": "🟪 Obsidian",
+                "path": "01 Project/3.2 關鍵術語/🟪 Obsidian.md"
+              },
+              {
+                "type": "note",
+                "name": "1000字",
+                "path": "01 Project/3.2 關鍵術語/1000字.md"
+              },
+              {
+                "type": "note",
+                "name": "150字",
+                "path": "01 Project/3.2 關鍵術語/150字.md"
+              },
+              {
+                "type": "note",
+                "name": "上下文 Context",
+                "path": "01 Project/3.2 關鍵術語/上下文 Context.md"
+              },
+              {
+                "type": "note",
+                "name": "索引",
+                "path": "01 Project/3.2 關鍵術語/索引.md"
+              },
+              {
+                "type": "note",
+                "name": "概念圖",
+                "path": "01 Project/3.2 關鍵術語/概念圖.md"
+              },
+              {
+                "type": "note",
+                "name": "標準化",
+                "path": "01 Project/3.2 關鍵術語/標準化.md"
+              },
+              {
+                "type": "note",
+                "name": "箭頭",
+                "path": "01 Project/3.2 關鍵術語/箭頭.md"
+              },
+              {
+                "type": "note",
+                "name": "雙向連結",
+                "path": "01 Project/3.2 關鍵術語/雙向連結.md"
+              }
+            ]
+          },
+          {
             "type": "note",
             "name": "00 3.2 開疆闢土",
             "path": "01 Project/00 3.2 開疆闢土.md"
           },
           {
             "type": "note",
-            "name": "魯曼的卡片（8張）",
-            "path": "01 Project/魯曼的卡片（8張）.md"
+            "name": "魯曼卡片_雙向連結加工版",
+            "path": "01 Project/魯曼卡片_雙向連結加工版.md"
           }
         ]
       },
@@ -87,18 +168,8 @@
           },
           {
             "type": "note",
-            "name": "🟥  九宮",
-            "path": "98 術語拷貝/🟥  九宮.md"
-          },
-          {
-            "type": "note",
             "name": "🟦 達爾文",
             "path": "98 術語拷貝/🟦 達爾文.md"
-          },
-          {
-            "type": "note",
-            "name": "🟦 魯曼",
-            "path": "98 術語拷貝/🟦 魯曼.md"
           },
           {
             "type": "note",
@@ -117,28 +188,8 @@
           },
           {
             "type": "note",
-            "name": "🟩 卡片盒",
-            "path": "98 術語拷貝/🟩 卡片盒.md"
-          },
-          {
-            "type": "note",
             "name": "🟩 Fleeting Note",
             "path": "98 術語拷貝/🟩 Fleeting Note.md"
-          },
-          {
-            "type": "note",
-            "name": "🟪 obsidian",
-            "path": "98 術語拷貝/🟪 obsidian.md"
-          },
-          {
-            "type": "note",
-            "name": "1000字",
-            "path": "98 術語拷貝/1000字.md"
-          },
-          {
-            "type": "note",
-            "name": "150字",
-            "path": "98 術語拷貝/150字.md"
           },
           {
             "type": "note",
@@ -147,28 +198,13 @@
           },
           {
             "type": "note",
-            "name": "上下文 Context",
-            "path": "98 術語拷貝/上下文 Context.md"
-          },
-          {
-            "type": "note",
             "name": "日記",
             "path": "98 術語拷貝/日記.md"
           },
           {
             "type": "note",
-            "name": "索引",
-            "path": "98 術語拷貝/索引.md"
-          },
-          {
-            "type": "note",
             "name": "語音",
             "path": "98 術語拷貝/語音.md"
-          },
-          {
-            "type": "note",
-            "name": "標準化",
-            "path": "98 術語拷貝/標準化.md"
           },
           {
             "type": "note",
@@ -182,6 +218,11 @@
           },
           {
             "type": "note",
+            "name": "關係",
+            "path": "98 術語拷貝/關係.md"
+          },
+          {
+            "type": "note",
             "name": "關鍵字",
             "path": "98 術語拷貝/關鍵字.md"
           },
@@ -192,10 +233,30 @@
           },
           {
             "type": "note",
+            "name": "local graph view",
+            "path": "98 術語拷貝/local graph view.md"
+          },
+          {
+            "type": "note",
+            "name": "Obsidian",
+            "path": "98 術語拷貝/Obsidian.md"
+          },
+          {
+            "type": "note",
             "name": "RoamResearch",
             "path": "98 術語拷貝/RoamResearch.md"
           }
         ]
+      },
+      {
+        "type": "note",
+        "name": "3*3 思考法",
+        "path": "3*3 思考法.md"
+      },
+      {
+        "type": "note",
+        "name": "卡片牆",
+        "path": "卡片牆.md"
       },
       {
         "type": "note",
@@ -204,13 +265,18 @@
       },
       {
         "type": "note",
-        "name": "graph view",
-        "path": "graph view.md"
+        "name": "HyperCard",
+        "path": "HyperCard.md"
       },
       {
         "type": "note",
         "name": "Mandala",
         "path": "Mandala.md"
+      },
+      {
+        "type": "note",
+        "name": "TheBrain",
+        "path": "TheBrain.md"
       }
     ]
   },
@@ -223,51 +289,18 @@
       "folder": "01 Project",
       "frontmatter": {},
       "mandala": false,
-      "content": "<!--section: 1-->\n2026-03-04\n08:23 \n\n- [ ] 術語，從3.1移動過來？\n\t- [ ] 立刻產生Graph View的資料庫，太好玩了\n\t- [ ] ![[截圖 2026-03-04 at 08.28.10 1.png|400]]\n\t\t- [ ] 翁明漢也可以如此做？\n- [ ] 想要玩\n\t- [ ] 魯曼的卡片 Heptbase 卡片盒有鬼\n\t- [ ] 投影片 81＊Graph View\n- [ ] 魯曼的卡片盒結構用Lineage可以裝進去\n\t- [ ] 但用九宮及81宮格看不清楚",
+      "content": "- [ ] 3.1\n\t- [ ] 還需要修改\n\t- [ ] 3.1 書稿初稿檢查\n\n- [ ] 術語，從3.1移動過來？\n\t- [ ] 立刻產生Graph View的資料庫，太好玩了\n- [ ]  翁明漢 This is a book\n\t- [ ] 7000字解析度\n- [ ] 想要玩\n\t- [ ] 魯曼的卡片 Heptbase 卡片盒有鬼\n\t- [ ] 投影片 81＊Graph View\n- [ ] 魯曼的卡片盒結構用Lineage可以裝進去\n\t- [ ] 但用九宮及81宮格看不清楚\n- [ ] 大結構\n\t- [ ] 讀書筆記\n\t- [ ] 1981\n\t- [ ] Graph View\n\t- [ ] 出版",
       "links": [],
-      "embeds": [
-        {
-          "type": "asset",
-          "target": "./assets/vault/03 Resources/截圖 2026-03-04 at 08.28.10 1.png",
-          "alias": "400"
-        }
-      ],
-      "backlinks": [],
-      "preview": "<!--section: 1--> 2026-03-04 08:23 - [ ] 術語，從3.1移動過來？ - [ ] 立刻產生Graph View的資料庫，太好玩了 - [ ] ![[截圖 2026-03-04 at 08.28.10 1.png|400]] - [ ] 翁明漢也可以如此做？ - [ ] 想要玩 - [ ] 魯曼的卡片 Heptbase 卡"
-    },
-    {
-      "id": "01 Project/魯曼的卡片（8張）.md",
-      "path": "01 Project/魯曼的卡片（8張）.md",
-      "basename": "魯曼的卡片（8張）",
-      "title": "魯曼的卡片（8張）",
-      "folder": "01 Project",
-      "frontmatter": {
-        "mandala": true
-      },
-      "mandala": true,
-      "content": "<!--section: 1-->\n# 9/8\n\n卡片盒，一個模控學（cybernetic）系統\n\n次序與失序的組合，一堆無法預測的組合，\n\n透過特別路徑得以體現。\n\n前提：不依固定順序。\n\n先前的分化：尋找協助vs.內容，紀錄、問題、概念vs.\n\n將現有紀錄重塑，\n\n並使那些用內部順序來假設的變為多餘。＊\n\n<!--section: 1.1-->\n# 9/8,1\n\n主題：與卡片盒溝通:如何開發出適當的夥伴，資淺夥伴？重要。\n\n與幕僚共事越來越難，越來越貴。\n\n卡片紙的現實。\n\n<!--section: 1.2-->\n# 9/8,3\n\n卡片盒裡有鬼？\n\n訪客來。全都給他們看，看光光－如A片。\n\n不意外他們感到失望。\n\n<!--section: 1.3-->\n# 9/8a\n\n產能的問題與關係有關，亦即與「卡片盒與使用者的關係」有關。\n\n<!--section: 1.3.1-->\n# 9/8a1\n\n卡片盒筆記不斷增長，我盡全力讓自己從中獲益，\n\n盡全力去探索。\n\n<!--section: 1.3.1.1-->\n9／8a12\n\n<!--section: 1.3.1.2-->\n\n\n<!--section: 1.3.1.3-->\n\n\n<!--section: 1.3.1.4-->\n\n\n<!--section: 1.3.1.5-->\n\n\n<!--section: 1.3.1.6-->\n\n\n<!--section: 1.3.1.7-->\n\n\n<!--section: 1.3.1.8-->\n\n\n<!--section: 1.3.2-->\n# 9/8a2\n\n卡片盒就是化糞池－勿放入澄清版的筆記。\n\n暫緩測試，速下決定－速度是關鍵。\n\n<!--section: 1.3.3-->\n\n\n<!--section: 1.3.4-->\n\n\n<!--section: 1.3.5-->\n\n\n<!--section: 1.3.6-->\n\n\n<!--section: 1.3.7-->\n\n\n<!--section: 1.3.8-->\n\n\n<!--section: 1.4-->\n# 9/8b\n\n記憶的整體結構，參見Ashby 1967，p.103.\n\n人不應該依賴大量逐點式（point-by-point）的存取方式，\n而是應該依靠筆記之間的關係（relations），\n也就是透過**[[graph view]]**來運作。\n這樣的引用關係，\n能夠一次讓更多內容變得可用，\n遠遠超過我們在一次搜尋衝動\n或一次固定某個想法時\n原本能想到的範圍\n[[原本卡片盒筆記的翻譯]]\n\n<!--section: 1.5-->\n# 9/8j\n\n卡片盒筆記裡面有一張卡片，上面記載的內容駁斥了整個卡片盒筆記裡面每一則筆記的論點。\n\n但只要你一打開卡片盒，這則筆記就會自動消失。\n\n也就是說，它換了個編號，跑到別的地方去了，找不到了。\n\n鬼牌一張。\n\n<!--section: 1.6-->\n\n\n<!--section: 1.7-->\n\n\n<!--section: 1.8-->",
-      "links": [
-        {
-          "target": "graph view.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "原本卡片盒筆記的翻譯.md",
-          "alias": null,
-          "heading": null
-        }
-      ],
       "embeds": [],
       "backlinks": [],
-      "preview": "<!--section: 1--> # 9/8 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.內容，紀錄、問題、概念vs. 將現有紀錄重塑， 並使那些用內部順序來假設的變為多餘。＊ <!--section: 1.1--> # 9/8,1 主題：與"
+      "preview": "- [ ] 3.1 - [ ] 還需要修改 - [ ] 3.1 書稿初稿檢查 - [ ] 術語，從3.1移動過來？ - [ ] 立刻產生Graph View的資料庫，太好玩了 - [ ] 翁明漢 This is a book - [ ] 7000字解析度 - [ ] 想要玩 - [ ] 魯曼的卡片 Heptbase 卡片盒有鬼 - [ ] 投影片 81＊Gr"
     },
     {
-      "id": "98 術語拷貝/1000字.md",
-      "path": "98 術語拷貝/1000字.md",
+      "id": "01 Project/3.2 關鍵術語/1000字.md",
+      "path": "01 Project/3.2 關鍵術語/1000字.md",
       "basename": "1000字",
       "title": "1000字",
-      "folder": "98 術語拷貝",
+      "folder": "01 Project/3.2 關鍵術語",
       "frontmatter": {},
       "mandala": false,
       "content": "",
@@ -277,17 +310,423 @@
       "preview": ""
     },
     {
-      "id": "98 術語拷貝/150字.md",
-      "path": "98 術語拷貝/150字.md",
+      "id": "01 Project/3.2 關鍵術語/150字.md",
+      "path": "01 Project/3.2 關鍵術語/150字.md",
       "basename": "150字",
       "title": "150字",
-      "folder": "98 術語拷貝",
+      "folder": "01 Project/3.2 關鍵術語",
       "frontmatter": {},
       "mandala": false,
       "content": "",
       "links": [],
       "embeds": [],
       "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/上下文 Context.md",
+      "path": "01 Project/3.2 關鍵術語/上下文 Context.md",
+      "basename": "上下文 Context",
+      "title": "上下文 Context",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "GTD的概念，依照動詞來分類\n寫作，標題＋上下文",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "GTD的概念，依照動詞來分類 寫作，標題＋上下文"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/概念圖.md",
+      "path": "01 Project/3.2 關鍵術語/概念圖.md",
+      "basename": "概念圖",
+      "title": "概念圖",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "類似Graph View的概念",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/箭頭.md"
+      ],
+      "preview": "類似Graph View的概念"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/標準化.md",
+      "path": "01 Project/3.2 關鍵術語/標準化.md",
+      "basename": "標準化",
+      "title": "標準化",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面，\n\n例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place就是九宮格。",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面， 例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/箭頭.md",
+      "path": "01 Project/3.2 關鍵術語/箭頭.md",
+      "basename": "箭頭",
+      "title": "箭頭",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "王博士說雙向箭頭很重要\n手寫的[[概念圖]]也有很多箭頭",
+      "links": [
+        {
+          "target": "01 Project/3.2 關鍵術語/概念圖.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+      ],
+      "preview": "王博士說雙向箭頭很重要 手寫的[[概念圖]]也有很多箭頭"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/索引.md",
+      "path": "01 Project/3.2 關鍵術語/索引.md",
+      "basename": "索引",
+      "title": "索引",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩 細胞寫作法.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/雙向連結.md",
+      "path": "01 Project/3.2 關鍵術語/雙向連結.md",
+      "basename": "雙向連結",
+      "title": "雙向連結",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "引用\n雙向箭頭\n[[目錄]]\n[[🟩 Graph View]]\n[[反向連結]]\n\nGoal在九宮格目錄裝上雙向連結，就變神器了",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+        "98 術語拷貝/雙向筆記.md"
+      ],
+      "preview": "引用 雙向箭頭 [[目錄]] [[🟩 Graph View]] [[反向連結]] Goal在九宮格目錄裝上雙向連結，就變神器了"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟥  九宮.md",
+      "path": "01 Project/3.2 關鍵術語/🟥  九宮.md",
+      "basename": "🟥  九宮",
+      "title": "🟥  九宮",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "content": "父連結:[[🐦 九宮]]\n---\n東密流傳下來的[[金剛界曼陀羅]]\n延伸\n1. 三乘三思考法(Triz)\n2. Research Canvas\n\n[[◊字型九宮 1]]\n[[の字型九宮]]\n[[井字型九宮]]",
+      "links": [
+        {
+          "target": "98 術語拷貝/◊字型九宮 1.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+        "98 術語拷貝/🟨 日計劃.md",
+        "98 術語拷貝/🟩  九四快.md"
+      ],
+      "preview": "父連結:[[🐦 九宮]] --- 東密流傳下來的[[金剛界曼陀羅]] 延伸 1. 三乘三思考法(Triz) 2. Research Canvas [[◊字型九宮 1]] [[の字型九宮]] [[井字型九宮]]"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟥 81宮格.md",
+      "path": "01 Project/3.2 關鍵術語/🟥 81宮格.md",
+      "basename": "🟥 81宮格",
+      "title": "🟥 81宮格",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "[[金剛界曼陀羅]]\n[[大谷翔平]]\n寫書的目錄\n章節7000的大綱\n[[百年人生計劃]]",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "[[金剛界曼陀羅]] [[大谷翔平]] 寫書的目錄 章節7000的大綱 [[百年人生計劃]]"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟦 魯曼.md",
+      "path": "01 Project/3.2 關鍵術語/🟦 魯曼.md",
+      "basename": "🟦 魯曼",
+      "title": "🟦 魯曼",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "德國社會學家\n\n是老婆幫忙整理，還是他獨立運作卡片盒",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+        "98 術語拷貝/緩慢預感.md"
+      ],
+      "preview": "德國社會學家 是老婆幫忙整理，還是他獨立運作卡片盒"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "path": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "basename": "🟩  Graph View",
+      "title": "🟩  Graph View",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "| [[關鍵字]]   | [[連結]]與[[反向連結]] | 雙向[[箭頭]]             |\n| --------- | --------------- | -------------------- |\n|           | ⭕               | [[local graph view]] |\n|           | 早期：[[TheBrain]] |                      |\n| ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─       | ㄧㄧㄧㄧㄧㄧㄧㄧ─            |\n|           |                 |                      |\n\n\n\n1. [[Obsidian]] Publish收費功能，中的官方 Plunin，非常有效率地查詢到整本書的任何地方\nhttps://publish.obsidian.md/twhsi/\n\n2. 我自己山寨還增加了[[反向連結]]\nhttps://twhsi.github.io/Graphview\n\n3. 我在書裡面的[[關鍵字]]要這樣整理，有兩種視角\n4. [[🟩  Graph View]]\n5. [[反向連結]]\n6. 以前我有一個[[寫作]]字典的概念，還有工作字典和人脈字典\n7. \n---\n九宮做為目錄＋Graph View做為索引＝Thisi is a book，這個概念寫成Skill\n1. 加上細胞寫作法，就可以寫書\n2. 人脈管理\n3. 時間管理週月計劃，Mandala Diary完成了，做成週月計劃的模版即可，順風123說：「不會忘」\n4. 日文課本，目錄，14課，八種分頁，索引\n5. 紙本摘錄本；牛津字典的索引；讀書筆記",
+      "links": [
+        {
+          "target": "98 術語拷貝/關鍵字.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/箭頭.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/local graph view.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "TheBrain.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/Obsidian.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/關鍵字.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+        "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+        "01 Project/3.2 關鍵術語/🟪 Obsidian.md"
+      ],
+      "preview": "| [[關鍵字]] | [[連結]]與[[反向連結]] | 雙向[[箭頭]] | | --------- | --------------- | -------------------- | | | ⭕ | [[local graph view]] | | | 早期：[[TheBrain]] | | | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧ"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+      "path": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+      "basename": "🟩 卡片盒",
+      "title": "🟩 卡片盒",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "[[🟦 魯曼]]\n[[魯曼卡片_雙向連結加工版]]\n申克博士\n[[FIRE]]\nFleeeting Note\n產生洞見的永久筆記網\n連結\n核裂變\n\n1. 讀書筆記＝文獻筆記\n2. Fleeting＝讀書筆記＋上下文\n3. Fleeting Notee要變成永久筆記\n1981宮格＊多個Markdown檔案＊Graph View＝專案筆記\n目錄鷹架*定義or書的內容（字數）*主題索引\n\n\n還有[[卡片牆]]類似MOC的技巧\n由上而下看索引還有最大連通分支的概念",
+      "links": [
+        {
+          "target": "01 Project/3.2 關鍵術語/🟦 魯曼.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/魯曼卡片_雙向連結加工版.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "卡片牆.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md",
+        "01 Project/魯曼卡片_雙向連結加工版.md"
+      ],
+      "preview": "[[🟦 魯曼]] [[魯曼卡片_雙向連結加工版]] 申克博士 [[FIRE]] Fleeeting Note 產生洞見的永久筆記網 連結 核裂變 1. 讀書筆記＝文獻筆記 2. Fleeting＝讀書筆記＋上下文 3. Fleeting Notee要變成永久筆記 1981宮格＊多個Markdown檔案＊Graph View＝專案筆記 目錄鷹架*定義or書的"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟩 細胞寫作法.md",
+      "path": "01 Project/3.2 關鍵術語/🟩 細胞寫作法.md",
+      "basename": "🟩 細胞寫作法",
+      "title": "🟩 細胞寫作法",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "以字數為目標\n口訣：1981+Graph View，就是150，1000，7000＋主體索引\n往上到15萬字\n野口幽紀雄沒提到[[索引]]的樣子",
+      "links": [
+        {
+          "target": "01 Project/3.2 關鍵術語/索引.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "以字數為目標 口訣：1981+Graph View，就是150，1000，7000＋主體索引 往上到15萬字 野口幽紀雄沒提到[[索引]]的樣子"
+    },
+    {
+      "id": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "path": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "basename": "🟪 Obsidian",
+      "title": "🟪 Obsidian",
+      "folder": "01 Project/3.2 關鍵術語",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "1. [[HyperCard]]來學習互動設計方法強化Obsidian的使用\n\n\n2. 2026-02-27 和王博士演講，把[[🟥  九宮]]格和[[🟩  Graph View]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中。寫書變得可以從術語開始，太棒了。\n3. [[Codex]]這類工具非常重要\n\t1. 管理檔案\n\t2. CLI等級終端機操控\n4. 學習Markdown語法\n\t1. [[雙方框]]形成[[雙向連結]]\n\n\n[[🟩  Graph View]]",
+      "links": [
+        {
+          "target": "HyperCard.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟥  九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "1. [[HyperCard]]來學習互動設計方法強化Obsidian的使用 2. 2026-02-27 和王博士演講，把[[🟥 九宮]]格和[[🟩 Graph View]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中。寫書變得可以從術語開始，太棒了。 3. [[Codex]]這類工具非常重要 1"
+    },
+    {
+      "id": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "path": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "basename": "魯曼卡片_雙向連結加工版",
+      "title": "魯曼卡片_雙向連結加工版",
+      "folder": "01 Project",
+      "frontmatter": {
+        "mandala": true,
+        "title": "魯曼卡片_雙向連結加工版",
+        "created": "2026-03-04"
+      },
+      "mandala": true,
+      "content": "<!--section: 1-->\n# 9/8\n\n[[🟩 卡片盒]]，一個模控學（cybernetic）系統\n\n[[次序與失序]]的組合，一堆無法預測的組合，\n\n透過特別路徑得以體現。\n\n前提：不依固定順序。\n\n先前的[[分化]]：尋找協助vs.內容，紀錄、問題、[[概念]]vs.\n\n將現有紀錄重塑，\n\n並使那些用內部順序來假設的變為多餘。＊\n\n<!--section: 1.1-->\n# 9/8,1\n\n主題：與[[🟩 卡片盒]]溝通:如何開發出適當的夥伴，資淺夥伴？重要。\n\n與幕僚共事越來越難，越來越貴。\n\n卡片紙的現實\n\n資淺夥伴，就是新增的讀書筆記\n資深夥伴，就是以前寫的Moleskine筆記，部落格文章，出的書\n\n<!--section: 1.2-->\n# 9/8,3\n\n[[🟩 卡片盒]]裡有鬼？\n\n訪客來。全都給他們看，看光光－如A片。\n\n不意外他們感到失望。\n\n<!--section: 1.3-->\n# 9/8a\n\n產能的問題與[[關係]]有關，亦即與「[[卡片盒與使用者的關係]]」有關。\n\n<!--section: 1.3.1-->\n# 9/8a1\n\n[[🟩 卡片盒]]筆記不斷增長，我盡全力讓自己從中獲益，\n\n盡全力去探索。\n\n我用書的章節作編號來控制卡片盒增長的數量，每個章節有獨立的[[🟩 Graph View]]\n\n<!--section: 1.3.1.1-->\n9／8a12\n\n<!--section: 1.3.1.2-->\n\n\n<!--section: 1.3.1.3-->\n\n\n<!--section: 1.3.1.4-->\n\n\n<!--section: 1.3.1.5-->\n\n\n<!--section: 1.3.1.6-->\n\n\n<!--section: 1.3.1.7-->\n\n\n<!--section: 1.3.1.8-->\n\n\n<!--section: 1.3.2-->\n# 9/8a2\n\n[[🟩 卡片盒]]就是化糞池－勿放入澄清版的筆記。\n\n暫緩測試，速下決定－速度是關鍵。\n\n天下武功，唯快不破\n\n<!--section: 1.3.3-->\n\n\n<!--section: 1.3.4-->\n\n\n<!--section: 1.3.5-->\n\n\n<!--section: 1.3.6-->\n\n\n<!--section: 1.3.7-->\n\n\n<!--section: 1.3.8-->\n\n\n<!--section: 1.4-->\n# 9/8b\n\n[[記憶]]的整體結構，參見Ashby 1967，p.103.\n\n人不應該依賴大量逐點式（point-by-point）的存取方式，\n而是應該依靠筆記之間的關係（[[relations]]），\n也就是透過**[[🟩 Graph View]]**來運作。\n這樣的引用關係，\n能夠一次讓更多內容變得可用，\n遠遠超過我們在一次搜尋衝動\n或一次固定某個想法時\n原本能想到的範圍\n[[原本[[🟩 卡片盒]]筆記的翻譯]]\n\n<!--section: 1.5-->\n# 9/8j\n\n[[🟩 卡片盒]]筆記裡面有一張卡片，上面記載的內容駁斥了整個[[🟩 卡片盒]]筆記裡面每一則筆記的論點。\n\n但只要你一打開[[🟩 卡片盒]]，這則筆記就會自動消失。\n\n也就是說，它換了個編號，跑到別的地方去了，找不到了。\n\n鬼牌一張。\n\n<!--section: 1.6-->\n\n\n<!--section: 1.7-->\n\n\n<!--section: 1.8-->",
+      "links": [
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/關係.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+      ],
+      "preview": "<!--section: 1--> # 9/8 [[🟩 卡片盒]]，一個模控學（cybernetic）系統 [[次序與失序]]的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的[[分化]]：尋找協助vs.內容，紀錄、問題、[[概念]]vs. 將現有紀錄重塑， 並使那些用內部順序來假設的變為多餘。＊ <!--section: "
+    },
+    {
+      "id": "3*3 思考法.md",
+      "path": "3*3 思考法.md",
+      "basename": "3*3 思考法",
+      "title": "3*3 思考法",
+      "folder": "",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "系統軸：超系統，系統，子系統",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "系統軸：超系統，系統，子系統"
+    },
+    {
+      "id": "98 術語拷貝/Obsidian.md",
+      "path": "98 術語拷貝/Obsidian.md",
+      "basename": "Obsidian",
+      "title": "Obsidian",
+      "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+        "HyperCard.md"
+      ],
       "preview": ""
     },
     {
@@ -319,6 +758,22 @@
       "preview": ""
     },
     {
+      "id": "98 術語拷貝/local graph view.md",
+      "path": "98 術語拷貝/local graph view.md",
+      "basename": "local graph view",
+      "title": "local graph view",
+      "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "加上[[反向連結]]形成一種[[中觀]]\n詹雨安：",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+      ],
+      "preview": "加上[[反向連結]]形成一種[[中觀]] 詹雨安："
+    },
+    {
       "id": "98 術語拷貝/◊字型九宮 1.md",
       "path": "98 術語拷貝/◊字型九宮 1.md",
       "basename": "◊字型九宮 1",
@@ -330,23 +785,9 @@
       "links": [],
       "embeds": [],
       "backlinks": [
-        "98 術語拷貝/🟥  九宮.md"
+        "01 Project/3.2 關鍵術語/🟥  九宮.md"
       ],
       "preview": "松村寧雄先生發展出來的九宮格，簡稱為鑽石型九宮 有標題及內文"
-    },
-    {
-      "id": "98 術語拷貝/上下文 Context.md",
-      "path": "98 術語拷貝/上下文 Context.md",
-      "basename": "上下文 Context",
-      "title": "上下文 Context",
-      "folder": "98 術語拷貝",
-      "frontmatter": {},
-      "mandala": false,
-      "content": "GTD的概念，依照動詞來分類\n寫作，標題＋上下文",
-      "links": [],
-      "embeds": [],
-      "backlinks": [],
-      "preview": "GTD的概念，依照動詞來分類 寫作，標題＋上下文"
     },
     {
       "id": "98 術語拷貝/人名.md",
@@ -379,34 +820,6 @@
       "preview": "<!--section: 1--> <!--section: 1.1--> <!--section: 1.2--> <!--section: 1.3--> <!--section: 1.4--> <!--section: 1.5--> <!--section: 1.6--> <!--section: 1.7--> <!--section: 1.8-->"
     },
     {
-      "id": "98 術語拷貝/標準化.md",
-      "path": "98 術語拷貝/標準化.md",
-      "basename": "標準化",
-      "title": "標準化",
-      "folder": "98 術語拷貝",
-      "frontmatter": {},
-      "mandala": false,
-      "content": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面，\n\n例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place就是九宮格。",
-      "links": [],
-      "embeds": [],
-      "backlinks": [],
-      "preview": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面， 例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place"
-    },
-    {
-      "id": "98 術語拷貝/索引.md",
-      "path": "98 術語拷貝/索引.md",
-      "basename": "索引",
-      "title": "索引",
-      "folder": "98 術語拷貝",
-      "frontmatter": {},
-      "mandala": false,
-      "content": "",
-      "links": [],
-      "embeds": [],
-      "backlinks": [],
-      "preview": ""
-    },
-    {
       "id": "98 術語拷貝/緩慢預感.md",
       "path": "98 術語拷貝/緩慢預感.md",
       "basename": "緩慢預感",
@@ -422,7 +835,7 @@
           "heading": null
         },
         {
-          "target": "98 術語拷貝/🟦 魯曼.md",
+          "target": "01 Project/3.2 關鍵術語/🟦 魯曼.md",
           "alias": null,
           "heading": null
         }
@@ -448,6 +861,22 @@
       "preview": ""
     },
     {
+      "id": "98 術語拷貝/關係.md",
+      "path": "98 術語拷貝/關係.md",
+      "basename": "關係",
+      "title": "關係",
+      "folder": "98 術語拷貝",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/魯曼卡片_雙向連結加工版.md"
+      ],
+      "preview": ""
+    },
+    {
       "id": "98 術語拷貝/關鍵字.md",
       "path": "98 術語拷貝/關鍵字.md",
       "basename": "關鍵字",
@@ -459,8 +888,8 @@
       "links": [],
       "embeds": [],
       "backlinks": [
-        "graph view.md",
-        "graph view.md"
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md"
       ],
       "preview": "不是找到筆記 而是創作者 舉例： 定義 Graph view"
     },
@@ -472,36 +901,17 @@
       "folder": "98 術語拷貝",
       "frontmatter": {},
       "mandala": false,
-      "content": "",
-      "links": [],
-      "embeds": [],
-      "backlinks": [],
-      "preview": ""
-    },
-    {
-      "id": "98 術語拷貝/🟥  九宮.md",
-      "path": "98 術語拷貝/🟥  九宮.md",
-      "basename": "🟥  九宮",
-      "title": "🟥  九宮",
-      "folder": "98 術語拷貝",
-      "frontmatter": {
-        "mandala": true
-      },
-      "mandala": true,
-      "content": "父連結:[[🐦 九宮]]\n---\n東密流傳下來的[[金剛界曼陀羅]]\n延伸\n1. 三乘三思考法(Triz)\n2. Research Canvas\n\n[[◊字型九宮 1]]\n[[の字型九宮]]\n[[井字型九宮]]",
+      "content": "[[雙向連結]]",
       "links": [
         {
-          "target": "98 術語拷貝/◊字型九宮 1.md",
+          "target": "01 Project/3.2 關鍵術語/雙向連結.md",
           "alias": null,
           "heading": null
         }
       ],
       "embeds": [],
-      "backlinks": [
-        "98 術語拷貝/🟩  九四快.md",
-        "98 術語拷貝/🟪 obsidian.md"
-      ],
-      "preview": "父連結:[[🐦 九宮]] --- 東密流傳下來的[[金剛界曼陀羅]] 延伸 1. 三乘三思考法(Triz) 2. Research Canvas [[◊字型九宮 1]] [[の字型九宮]] [[井字型九宮]]"
+      "backlinks": [],
+      "preview": "[[雙向連結]]"
     },
     {
       "id": "98 術語拷貝/🟦 達爾文.md",
@@ -526,23 +936,6 @@
       "preview": "達爾文的[[緩慢預感]]是他發展天擇說的重要原因，經過長時間深入研究，發展出典範轉移等級的理論。 相對於[[環礁]]，就不是緩慢預感風格。"
     },
     {
-      "id": "98 術語拷貝/🟦 魯曼.md",
-      "path": "98 術語拷貝/🟦 魯曼.md",
-      "basename": "🟦 魯曼",
-      "title": "🟦 魯曼",
-      "folder": "98 術語拷貝",
-      "frontmatter": {},
-      "mandala": false,
-      "content": "德國社會學家",
-      "links": [],
-      "embeds": [],
-      "backlinks": [
-        "98 術語拷貝/緩慢預感.md",
-        "98 術語拷貝/🟩 卡片盒.md"
-      ],
-      "preview": "德國社會學家"
-    },
-    {
       "id": "98 術語拷貝/🟨 八頁小書.md",
       "path": "98 術語拷貝/🟨 八頁小書.md",
       "basename": "🟨 八頁小書",
@@ -550,10 +943,15 @@
       "folder": "98 術語拷貝",
       "frontmatter": {},
       "mandala": false,
-      "content": "[[🟨 日計劃]]\n[[讀書筆記]]",
+      "content": "[[🟨 日計劃]]\n[[讀書筆記]]\n\n正面，用[[FAST]]法則，有五個九宮，一個行動清單\n反面，用[[🟩  九四快]]整理",
       "links": [
         {
           "target": "98 術語拷貝/🟨 日計劃.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/🟩  九四快.md",
           "alias": null,
           "heading": null
         }
@@ -562,7 +960,7 @@
       "backlinks": [
         "98 術語拷貝/🟩  九四快.md"
       ],
-      "preview": "[[🟨 日計劃]] [[讀書筆記]]"
+      "preview": "[[🟨 日計劃]] [[讀書筆記]] 正面，用[[FAST]]法則，有五個九宮，一個行動清單 反面，用[[🟩 九四快]]整理"
     },
     {
       "id": "98 術語拷貝/🟨 日計劃.md",
@@ -572,14 +970,20 @@
       "folder": "98 術語拷貝",
       "frontmatter": {},
       "mandala": false,
-      "content": "FAST心法",
-      "links": [],
+      "content": "FAST心法\n九宮格其實滲入了日計劃之中，例如八頁小書\nObsidian的截圖，其實也是[[🟥  九宮]]構圖",
+      "links": [
+        {
+          "target": "01 Project/3.2 關鍵術語/🟥  九宮.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
       "embeds": [],
       "backlinks": [
         "98 術語拷貝/🟨 八頁小書.md",
         "98 術語拷貝/🟩  九四快.md"
       ],
-      "preview": "FAST心法"
+      "preview": "FAST心法 九宮格其實滲入了日計劃之中，例如八頁小書 Obsidian的截圖，其實也是[[🟥 九宮]]構圖"
     },
     {
       "id": "98 術語拷貝/🟩  九四快.md",
@@ -589,10 +993,10 @@
       "folder": "98 術語拷貝",
       "frontmatter": {},
       "mandala": false,
-      "content": "[[3.1.3 ➡️ 用九宮寫出好文章好網站（1）用紙本九四快捕捉稍縱即逝的靈感]]、[[3.1.4 ❓ 用九宮寫出好文章好網站（2）數位筆記的九四快]]、[[3.1.5 用九宮寫出好文章好網站（3）AI生成九四快的讀書筆記可行嗎？]]三個章節討論，用四個九宮的九四快讀書法。\n蔡巨鵬老師發展的快速閱讀法，\n四個[[🟥  九宮]]\n和[[🟩 Fleeting Note]]的關係是什麼？\n\n\n[[🟨 八頁小書]]的反面就是很棒的手寫位置，又做[[🟨 日計劃]]，又做九四快",
+      "content": "[[3.1.3 ➡️ 用九宮寫出好文章好網站（1）用紙本九四快捕捉稍縱即逝的靈感]]、[[3.1.4 ❓ 用九宮寫出好文章好網站（2）數位筆記的九四快]]、[[3.1.5 用九宮寫出好文章好網站（3）AI生成九四快的讀書筆記可行嗎？]]三個章節討論，用四個九宮的九四快讀書法。\n蔡巨鵬老師發展的快速閱讀法，\n四個[[🟥  九宮]]\n和[[🟩 Fleeting Note]]的關係是什麼？\n\n\n[[🟨 八頁小書]]的反面就是很棒的手寫位置，又做[[🟨 日計劃]]，又做九四快\n\n我做出了八步驟",
       "links": [
         {
-          "target": "98 術語拷貝/🟥  九宮.md",
+          "target": "01 Project/3.2 關鍵術語/🟥  九宮.md",
           "alias": null,
           "heading": null
         },
@@ -613,7 +1017,9 @@
         }
       ],
       "embeds": [],
-      "backlinks": [],
+      "backlinks": [
+        "98 術語拷貝/🟨 八頁小書.md"
+      ],
       "preview": "[[3.1.3 ➡️ 用九宮寫出好文章好網站（1）用紙本九四快捕捉稍縱即逝的靈感]]、[[3.1.4 ❓ 用九宮寫出好文章好網站（2）數位筆記的九四快]]、[[3.1.5 用九宮寫出好文章好網站（3）AI生成九四快的讀書筆記可行嗎？]]三個章節討論，用四個九宮的九四快讀書法。 蔡巨鵬老師發展的快速閱讀法， 四個[[🟥 九宮]] 和[[🟩 Fleeting"
     },
     {
@@ -633,54 +1039,32 @@
       "preview": "[[3.1.7 達爾文如何從筆記到洞見]] - 中文名稱翻譯 1. 捕捉靈光一閃的點子，我是用Todoist,Flow這些工具 2. 捕捉書本中的靈感，我是紙本，雙向筆記，AI等工具 3."
     },
     {
-      "id": "98 術語拷貝/🟩 卡片盒.md",
-      "path": "98 術語拷貝/🟩 卡片盒.md",
-      "basename": "🟩 卡片盒",
-      "title": "🟩 卡片盒",
-      "folder": "98 術語拷貝",
+      "id": "HyperCard.md",
+      "path": "HyperCard.md",
+      "basename": "HyperCard",
+      "title": "HyperCard",
+      "folder": "",
       "frontmatter": {},
       "mandala": false,
-      "content": "[[🟦 魯曼]]\n申克博士\n[[FIRE]]\nFleeeting Note\n產生洞見的永久筆記網\n連結\n核裂變",
+      "content": "Jan 19, 2026# 由[[HyperCard]]來學習互動設計方法強化[[Obsidian]]的使用\n\n像是HyperCard，Obsidian的插件模擬各種App使用\n\n1. 快速輸入 電腦及手機，手機版也相當不錯，但是會壞掉\n    \n\n2. 有夠多的上下文讓我回到我做事的地方，Search是\n    \n\n3. 雙方框做的雙向連結就是主題索引\n    \n\n4. Obsidian是快速原型工具，九宮格、Lineage則是優異的插件。\n    \n    1. 寫文章／寫書\n        \n        1. 互動原型用Lineage：核心可以做到樹枝狀寫作且有雙向連結\n            \n            1. ❌ 不用九宮格視角看，容易亂碼\n                \n            \n            2. 多寫一陣子，測試穩定度\n                \n            \n            3. 殺手運用是可以寫雙向筆記\n                \n        \n        2. 穩定運作用Ulysses?\n            \n        \n        3. ❌ 寫電子報的結構就簡單，只有靶心人，可以到穩定的Gingko Writer去寫\n            \n    \n    2. 日計劃 九宮格\n        \n        1. 九宮格＋Table變成81宮格\n            \n            1. Table可以快速打字\n                \n            \n            2. 和Excalidraw的類表格對應\n                \n        \n        2. 中間放圖片：格誌日記的九宮規劃，成為中心，為81宮格的核心\n            \n        \n        3. 有Excalidraw，可以快速打字或手寫書入\n            \n    \n    3. TheBrain插件 人脈管理",
       "links": [
         {
-          "target": "98 術語拷貝/🟦 魯曼.md",
+          "target": "HyperCard.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "98 術語拷貝/Obsidian.md",
           "alias": null,
           "heading": null
         }
       ],
       "embeds": [],
-      "backlinks": [],
-      "preview": "[[🟦 魯曼]] 申克博士 [[FIRE]] Fleeeting Note 產生洞見的永久筆記網 連結 核裂變"
-    },
-    {
-      "id": "98 術語拷貝/🟪 obsidian.md",
-      "path": "98 術語拷貝/🟪 obsidian.md",
-      "basename": "🟪 obsidian",
-      "title": "🟪 obsidian",
-      "folder": "98 術語拷貝",
-      "frontmatter": {},
-      "mandala": false,
-      "content": "Jan 19, 2026# 由HyperCard來學習互動設計方法強化Obsidian的使用\n\n像是HyperCard，Obsidian的插件模擬各種App使用\n\n1. 快速輸入 電腦及手機，手機版也相當不錯，但是會壞掉\n    \n\n2. 有夠多的上下文讓我回到我做事的地方，Search是\n    \n\n3. 雙方框做的雙向連結就是主題索引\n    \n\n4. Obsidian是快速原型工具，九宮格、Lineage則是優異的插件。\n    \n    1. 寫文章／寫書\n        \n        1. 互動原型用Lineage：核心可以做到樹枝狀寫作且有雙向連結\n            \n            1. ❌ 不用九宮格視角看，容易亂碼\n                \n            \n            2. 多寫一陣子，測試穩定度\n                \n            \n            3. 殺手運用是可以寫雙向筆記\n                \n        \n        2. 穩定運作用Ulysses?\n            \n        \n        3. ❌ 寫電子報的結構就簡單，只有靶心人，可以到穩定的Gingko Writer去寫\n            \n    \n    2. 日計劃 九宮格\n        \n        1. 九宮格＋Table變成81宮格\n            \n            1. Table可以快速打字\n                \n            \n            2. 和Excalidraw的類表格對應\n                \n        \n        2. 中間放圖片：格誌日記的九宮規劃，成為中心，為81宮格的核心\n            \n        \n        3. 有Excalidraw，可以快速打字或手寫書入\n            \n    \n    3. TheBrain插件 人脈管理\n\n2026-02-27 和王博士演講，把九宮格和[[graph view]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中\n\n\n[[🟥  九宮]]\n[[graph view]]",
-      "links": [
-        {
-          "target": "graph view.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "98 術語拷貝/🟥  九宮.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "graph view.md",
-          "alias": null,
-          "heading": null
-        }
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+        "HyperCard.md"
       ],
-      "embeds": [],
-      "backlinks": [],
-      "preview": "Jan 19, 2026# 由HyperCard來學習互動設計方法強化Obsidian的使用 像是HyperCard，Obsidian的插件模擬各種App使用 1. 快速輸入 電腦及手機，手機版也相當不錯，但是會壞掉 2. 有夠多的上下文讓我回到我做事的地方，Search是 3. 雙方框做的雙向連結就是主題索引 4. Obsidian是快速原型工具，九宮格、"
+      "preview": "Jan 19, 2026# 由[[HyperCard]]來學習互動設計方法強化[[Obsidian]]的使用 像是HyperCard，Obsidian的插件模擬各種App使用 1. 快速輸入 電腦及手機，手機版也相當不錯，但是會壞掉 2. 有夠多的上下文讓我回到我做事的地方，Search是 3. 雙方框做的雙向連結就是主題索引 4. Obsidian是快速原"
     },
     {
       "id": "Mandala.md",
@@ -699,39 +1083,36 @@
       "preview": "<!--section: 1--> <!--section: 2--> <!--section: 3--> <!--section: 4--> <!--section: 5--> <!--section: 6--> <!--section: 7--> <!--section: 8--> <!--section: 9-->"
     },
     {
-      "id": "graph view.md",
-      "path": "graph view.md",
-      "basename": "graph view",
-      "title": "graph view",
+      "id": "TheBrain.md",
+      "path": "TheBrain.md",
+      "basename": "TheBrain",
+      "title": "TheBrain",
       "folder": "",
       "frontmatter": {},
       "mandala": false,
-      "content": "| [[關鍵字]]   | [[連結]]與[[反向連結]] | 商像箭頭      |\n| --------- | --------------- | --------- |\n|           | ⭕               |           |\n|           |                 |           |\n| ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─       | ㄧㄧㄧㄧㄧㄧㄧㄧ─ |\n\n\n\n\n[[Obsidian]]中的官方 Plunin，非常有效率地查詢到整本書的任何地方\n\n我在書裡面的[[關鍵字]]要這樣整理\n有兩種視角\n1. [[graph view]]\n2. [[反向連結]]",
-      "links": [
-        {
-          "target": "98 術語拷貝/關鍵字.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "98 術語拷貝/關鍵字.md",
-          "alias": null,
-          "heading": null
-        },
-        {
-          "target": "graph view.md",
-          "alias": null,
-          "heading": null
-        }
-      ],
+      "content": "人際關係記憶超強\n2013年開始使用的App",
+      "links": [],
       "embeds": [],
       "backlinks": [
-        "01 Project/魯曼的卡片（8張）.md",
-        "98 術語拷貝/🟪 obsidian.md",
-        "98 術語拷貝/🟪 obsidian.md",
-        "graph view.md"
+        "01 Project/3.2 關鍵術語/🟩  Graph View.md"
       ],
-      "preview": "| [[關鍵字]] | [[連結]]與[[反向連結]] | 商像箭頭 | | --------- | --------------- | --------- | | | ⭕ | | | | | | | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | ㄧㄧㄧㄧㄧㄧㄧㄧ─ | [[Obsidian]]中的官方 Plunin，非常有效率地查詢到整本書的任何地方 我"
+      "preview": "人際關係記憶超強 2013年開始使用的App"
+    },
+    {
+      "id": "卡片牆.md",
+      "path": "卡片牆.md",
+      "basename": "卡片牆",
+      "title": "卡片牆",
+      "folder": "",
+      "frontmatter": {},
+      "mandala": false,
+      "content": "工具：\nPPT\n🐸 MandalaChart\n🐸 Tinderbox\nScrivener\nHeptabase\nObsidian",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+      ],
+      "preview": "工具： PPT 🐸 MandalaChart 🐸 Tinderbox Scrivener Heptabase Obsidian"
     },
     {
       "id": "原本卡片盒筆記的翻譯.md",
@@ -744,20 +1125,118 @@
       "content": "因此這點很重要:別倚靠巨量的點對點管道，反而該倚賴筆記之間的關聯，也就是說，倚賴立即可得的參考資料，因為它會比一陣搜尋脈衝或腦裡的固定記憶點\n\n更快出現。",
       "links": [],
       "embeds": [],
-      "backlinks": [
-        "01 Project/魯曼的卡片（8張）.md"
-      ],
+      "backlinks": [],
       "preview": "因此這點很重要:別倚靠巨量的點對點管道，反而該倚賴筆記之間的關聯，也就是說，倚賴立即可得的參考資料，因為它會比一陣搜尋脈衝或腦裡的固定記憶點 更快出現。"
     }
   ],
   "edges": [
     {
-      "source": "01 Project/魯曼的卡片（8張）.md",
-      "target": "graph view.md"
+      "source": "01 Project/3.2 關鍵術語/箭頭.md",
+      "target": "01 Project/3.2 關鍵術語/概念圖.md"
     },
     {
-      "source": "01 Project/魯曼的卡片（8張）.md",
-      "target": "原本卡片盒筆記的翻譯.md"
+      "source": "01 Project/3.2 關鍵術語/🟥  九宮.md",
+      "target": "98 術語拷貝/◊字型九宮 1.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "98 術語拷貝/關鍵字.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "01 Project/3.2 關鍵術語/箭頭.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "98 術語拷貝/local graph view.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "TheBrain.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "98 術語拷貝/Obsidian.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "98 術語拷貝/關鍵字.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩  Graph View.md",
+      "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+      "target": "01 Project/3.2 關鍵術語/🟦 魯曼.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+      "target": "01 Project/魯曼卡片_雙向連結加工版.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩 卡片盒.md",
+      "target": "卡片牆.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟩 細胞寫作法.md",
+      "target": "01 Project/3.2 關鍵術語/索引.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "target": "HyperCard.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "target": "01 Project/3.2 關鍵術語/🟥  九宮.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "target": "01 Project/3.2 關鍵術語/雙向連結.md"
+    },
+    {
+      "source": "01 Project/3.2 關鍵術語/🟪 Obsidian.md",
+      "target": "01 Project/3.2 關鍵術語/🟩  Graph View.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "98 術語拷貝/關係.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 Project/魯曼卡片_雙向連結加工版.md",
+      "target": "01 Project/3.2 關鍵術語/🟩 卡片盒.md"
     },
     {
       "source": "98 術語拷貝/緩慢預感.md",
@@ -765,11 +1244,11 @@
     },
     {
       "source": "98 術語拷貝/緩慢預感.md",
-      "target": "98 術語拷貝/🟦 魯曼.md"
+      "target": "01 Project/3.2 關鍵術語/🟦 魯曼.md"
     },
     {
-      "source": "98 術語拷貝/🟥  九宮.md",
-      "target": "98 術語拷貝/◊字型九宮 1.md"
+      "source": "98 術語拷貝/雙向筆記.md",
+      "target": "01 Project/3.2 關鍵術語/雙向連結.md"
     },
     {
       "source": "98 術語拷貝/🟦 達爾文.md",
@@ -780,8 +1259,16 @@
       "target": "98 術語拷貝/🟨 日計劃.md"
     },
     {
+      "source": "98 術語拷貝/🟨 八頁小書.md",
+      "target": "98 術語拷貝/🟩  九四快.md"
+    },
+    {
+      "source": "98 術語拷貝/🟨 日計劃.md",
+      "target": "01 Project/3.2 關鍵術語/🟥  九宮.md"
+    },
+    {
       "source": "98 術語拷貝/🟩  九四快.md",
-      "target": "98 術語拷貝/🟥  九宮.md"
+      "target": "01 Project/3.2 關鍵術語/🟥  九宮.md"
     },
     {
       "source": "98 術語拷貝/🟩  九四快.md",
@@ -796,32 +1283,12 @@
       "target": "98 術語拷貝/🟨 日計劃.md"
     },
     {
-      "source": "98 術語拷貝/🟩 卡片盒.md",
-      "target": "98 術語拷貝/🟦 魯曼.md"
+      "source": "HyperCard.md",
+      "target": "HyperCard.md"
     },
     {
-      "source": "98 術語拷貝/🟪 obsidian.md",
-      "target": "graph view.md"
-    },
-    {
-      "source": "98 術語拷貝/🟪 obsidian.md",
-      "target": "98 術語拷貝/🟥  九宮.md"
-    },
-    {
-      "source": "98 術語拷貝/🟪 obsidian.md",
-      "target": "graph view.md"
-    },
-    {
-      "source": "graph view.md",
-      "target": "98 術語拷貝/關鍵字.md"
-    },
-    {
-      "source": "graph view.md",
-      "target": "98 術語拷貝/關鍵字.md"
-    },
-    {
-      "source": "graph view.md",
-      "target": "graph view.md"
+      "source": "HyperCard.md",
+      "target": "98 術語拷貝/Obsidian.md"
     }
   ],
   "assets": {
