@@ -1,0 +1,1689 @@
+{
+  "generatedAt": "2026-03-08T14:00:31.610Z",
+  "sourceVault": "Inception_三層九宮魔方_更新版",
+  "site": {
+    "title": "Inception 三層九宮魔方 更新版",
+    "eyebrow": "Inception",
+    "description": "Markdown / 九宮 / Local Graph",
+    "featuredPath": "Inception_三層九宮魔方_更新版.md"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "collapse-color-groups": false,
+    "colorGroups": [
+      {
+        "query": "path:\"01 永久問題\"",
+        "color": {
+          "a": 1,
+          "rgb": 16091842
+        }
+      },
+      {
+        "query": "path:\"02 人物\"",
+        "color": {
+          "a": 1,
+          "rgb": 7315162
+        }
+      },
+      {
+        "query": "path:\"03 場景\"",
+        "color": {
+          "a": 1,
+          "rgb": 14725458
+        }
+      },
+      {
+        "query": "path:\"04 其他與規則\"",
+        "color": {
+          "a": 1,
+          "rgb": 11657298
+        }
+      }
+    ],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.52,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 220,
+    "scale": 1,
+    "close": false,
+    "localBacklinks": true,
+    "localForelinks": true,
+    "localInterlinks": false,
+    "localJumps": 2
+  },
+  "localGraphOptions": {
+    "collapse-filter": true,
+    "search": "",
+    "localJumps": 1,
+    "localBacklinks": true,
+    "localForelinks": true,
+    "localInterlinks": false,
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "collapse-color-groups": false,
+    "colorGroups": [],
+    "collapse-display": true,
+    "showArrow": false,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.52,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 220,
+    "scale": 0.82,
+    "close": true
+  },
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "folder",
+        "name": "01 永久問題",
+        "children": [
+          {
+            "type": "note",
+            "name": "1.1 下降－植入－上升",
+            "path": "01 永久問題/1.1 下降－植入－上升.md"
+          },
+          {
+            "type": "note",
+            "name": "1.2 飛機現實支點",
+            "path": "01 永久問題/1.2 飛機現實支點.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "02 人物",
+        "children": [
+          {
+            "type": "note",
+            "name": "Ariadne",
+            "path": "02 人物/Ariadne.md"
+          },
+          {
+            "type": "note",
+            "name": "Arthur",
+            "path": "02 人物/Arthur.md"
+          },
+          {
+            "type": "note",
+            "name": "Cobb",
+            "path": "02 人物/Cobb.md"
+          },
+          {
+            "type": "note",
+            "name": "Eames",
+            "path": "02 人物/Eames.md"
+          },
+          {
+            "type": "note",
+            "name": "Fischer",
+            "path": "02 人物/Fischer.md"
+          },
+          {
+            "type": "note",
+            "name": "Mal",
+            "path": "02 人物/Mal.md"
+          },
+          {
+            "type": "note",
+            "name": "Saito",
+            "path": "02 人物/Saito.md"
+          },
+          {
+            "type": "note",
+            "name": "Yusuf",
+            "path": "02 人物/Yusuf.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "03 場景",
+        "children": [
+          {
+            "type": "note",
+            "name": "飛機 現實層",
+            "path": "03 場景/飛機 現實層.md"
+          },
+          {
+            "type": "note",
+            "name": "第一層 Kick",
+            "path": "03 場景/第一層 Kick.md"
+          },
+          {
+            "type": "note",
+            "name": "第二層 Kick",
+            "path": "03 場景/第二層 Kick.md"
+          },
+          {
+            "type": "note",
+            "name": "雪峰 第三層",
+            "path": "03 場景/雪峰 第三層.md"
+          },
+          {
+            "type": "note",
+            "name": "飯店 第二層",
+            "path": "03 場景/飯店 第二層.md"
+          },
+          {
+            "type": "note",
+            "name": "LA 第一層",
+            "path": "03 場景/LA 第一層.md"
+          },
+          {
+            "type": "note",
+            "name": "Limbo",
+            "path": "03 場景/Limbo.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "04 其他與規則",
+        "children": [
+          {
+            "type": "note",
+            "name": "植入任務設計",
+            "path": "04 其他與規則/植入任務設計.md"
+          },
+          {
+            "type": "note",
+            "name": "夢境規則與 Kick",
+            "path": "04 其他與規則/夢境規則與 Kick.md"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "name": "Inception_三層九宮魔方_更新版",
+        "path": "Inception_三層九宮魔方_更新版.md"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "01 永久問題/1.1 下降－植入－上升.md",
+      "path": "01 永久問題/1.1 下降－植入－上升.md",
+      "basename": "1.1 下降－植入－上升",
+      "title": "1.1 下降－植入－上升",
+      "folder": "01 永久問題",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# 1.1 下降－植入－上升\n\n《Inception》的結構不是單向闖關，而是先下降、再植入、再上升。這個形狀使它像一顆三層九宮魔方：任務往下穿越[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]，但真正的敘事張力發生在回程，因為每一層都必須等待對應的[[第一層 Kick]]或[[第二層 Kick]]才能同步上升。\n\n這個模型讓電影同時處理兩條線。一條是技術線，也就是[[夢境規則與 Kick]]如何運作；另一條是情感線，也就是[[Cobb]]如何穿越[[Mal]]留下的內在殘響，最後回到[[飛機 現實層]]。如果少了下降，故事沒有深度；如果少了上升，故事沒有驗證。植入真正成立，是因為下降與上升形成閉環。",
+      "links": [
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/夢境規則與 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飛機 現實層.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 1.1 下降－植入－上升 《Inception》的結構不是單向闖關，而是先下降、再植入、再上升。這個形狀使它像一顆三層九宮魔方：任務往下穿越[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]，但真正的敘事張力發生在回程，因為每一層都必須等待對應的[[第一層 Kick]]或[[第二層 Kick]]才能同步上升。 這個模型讓"
+    },
+    {
+      "id": "01 永久問題/1.2 飛機現實支點.md",
+      "path": "01 永久問題/1.2 飛機現實支點.md",
+      "basename": "1.2 飛機現實支點",
+      "title": "1.2 飛機現實支點",
+      "folder": "01 永久問題",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# 1.2 飛機現實支點\n\n[[飛機 現實層]]是整個系統的現實錨點。夢境再深、時間再慢、角色再迷失，觀眾都需要一個清楚的支點知道「任務其實還在飛機上」。因此飛機不是過場，而是讓所有層級有辦法被測量的基準。\n\n這個支點同時也是判準。[[Fischer]]是否被成功植入，[[Saito]]是否活著回來，[[Cobb]]是否真的到家，最後都要回到飛機與醒來之後的連續性來確認。沒有飛機，[[Limbo]]就可能吞掉一切差異；有了飛機，三層九宮魔方才不會變成純幻覺展示。",
+      "links": [
+        {
+          "target": "03 場景/飛機 現實層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 1.2 飛機現實支點 [[飛機 現實層]]是整個系統的現實錨點。夢境再深、時間再慢、角色再迷失，觀眾都需要一個清楚的支點知道「任務其實還在飛機上」。因此飛機不是過場，而是讓所有層級有辦法被測量的基準。 這個支點同時也是判準。[[Fischer]]是否被成功植入，[[Saito]]是否活著回來，[[Cobb]]是否真的到家，最後都要回到飛機與醒來之後的連續"
+    },
+    {
+      "id": "02 人物/Ariadne.md",
+      "path": "02 人物/Ariadne.md",
+      "basename": "Ariadne",
+      "title": "Ariadne",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Ariadne\n\n[[Ariadne]]是夢境空間的建築師，也是觀眾的代理人。她負責設計層級空間，並不斷追問[[Cobb]]的內在裂縫。因為有她，電影中的抽象規則才被翻譯成可理解的場景與問題。\n\n她的價值不只在造景，還在辨識[[Mal]]何時入侵任務，以及提醒 Cobb：再好的結構，如果心理核心腐蝕，整個[[Inception_三層九宮魔方_更新版]]都會失控。",
+      "links": [
+        {
+          "target": "02 人物/Ariadne.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Inception_三層九宮魔方_更新版.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Ariadne.md",
+        "02 人物/Cobb.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Ariadne [[Ariadne]]是夢境空間的建築師，也是觀眾的代理人。她負責設計層級空間，並不斷追問[[Cobb]]的內在裂縫。因為有她，電影中的抽象規則才被翻譯成可理解的場景與問題。 她的價值不只在造景，還在辨識[[Mal]]何時入侵任務，以及提醒 Cobb：再好的結構，如果心理核心腐蝕，整個[[Inception_三層九宮魔方_更新版]]都會失"
+    },
+    {
+      "id": "02 人物/Arthur.md",
+      "path": "02 人物/Arthur.md",
+      "basename": "Arthur",
+      "title": "Arthur",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Arthur\n\n[[Arthur]]是第二層的秩序維護者。他在[[飯店 第二層]]負責計畫節奏、偽裝配合與時間同步，也是製造[[第二層 Kick]]的關鍵人物。當上層開始失重，他反而成為整隊裡最冷靜、最像機械錶的人。\n\nArthur 的功能不是展示個性，而是讓複雜系統不崩潰。他代表任務中的「準確」。",
+      "links": [
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Arthur.md",
+        "02 人物/Cobb.md",
+        "03 場景/第一層 Kick.md",
+        "03 場景/第二層 Kick.md",
+        "03 場景/飯店 第二層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Arthur [[Arthur]]是第二層的秩序維護者。他在[[飯店 第二層]]負責計畫節奏、偽裝配合與時間同步，也是製造[[第二層 Kick]]的關鍵人物。當上層開始失重，他反而成為整隊裡最冷靜、最像機械錶的人。 Arthur 的功能不是展示個性，而是讓複雜系統不崩潰。他代表任務中的「準確」。"
+    },
+    {
+      "id": "02 人物/Cobb.md",
+      "path": "02 人物/Cobb.md",
+      "basename": "Cobb",
+      "title": "Cobb",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Cobb\n\n[[Cobb]]是任務的總指揮，也是《Inception》最大的風險源。他最懂[[植入任務設計]]，卻也最容易被[[Mal]]干擾。技術上，他負責統合[[Arthur]]、[[Ariadne]]、[[Eames]]、[[Yusuf]]與[[Saito]]；情感上，他必須在[[Limbo]]與記憶中的婚姻殘影決裂，才有辦法回到[[飛機 現實層]]。\n\n因此 Cobb 不是單純主角，而是「任務成功條件」與「任務失敗條件」的重疊點。",
+      "links": [
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/植入任務設計.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Ariadne.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Eames.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Yusuf.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飛機 現實層.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "01 永久問題/1.2 飛機現實支點.md",
+        "02 人物/Ariadne.md",
+        "02 人物/Cobb.md",
+        "02 人物/Mal.md",
+        "02 人物/Saito.md",
+        "03 場景/Limbo.md",
+        "03 場景/飛機 現實層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Cobb [[Cobb]]是任務的總指揮，也是《Inception》最大的風險源。他最懂[[植入任務設計]]，卻也最容易被[[Mal]]干擾。技術上，他負責統合[[Arthur]]、[[Ariadne]]、[[Eames]]、[[Yusuf]]與[[Saito]]；情感上，他必須在[[Limbo]]與記憶中的婚姻殘影決裂，才有辦法回到[[飛機 現實層]]"
+    },
+    {
+      "id": "02 人物/Eames.md",
+      "path": "02 人物/Eames.md",
+      "basename": "Eames",
+      "title": "Eames",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Eames\n\n[[Eames]]負責偽裝、 improvisation 與戰術彈性。他在[[飯店 第二層]]與[[雪峰 第三層]]都很關鍵，因為植入任務不是照表操課，而是要在對方的防衛機制變形時迅速換招。\n\nEames 讓團隊不會過度僵化，也讓[[Fischer]]相信眼前的戲碼是真的。他代表任務中的「變形能力」。",
+      "links": [
+        {
+          "target": "02 人物/Eames.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Cobb.md",
+        "02 人物/Eames.md",
+        "03 場景/飯店 第二層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Eames [[Eames]]負責偽裝、 improvisation 與戰術彈性。他在[[飯店 第二層]]與[[雪峰 第三層]]都很關鍵，因為植入任務不是照表操課，而是要在對方的防衛機制變形時迅速換招。 Eames 讓團隊不會過度僵化，也讓[[Fischer]]相信眼前的戲碼是真的。他代表任務中的「變形能力」。"
+    },
+    {
+      "id": "02 人物/Fischer.md",
+      "path": "02 人物/Fischer.md",
+      "basename": "Fischer",
+      "title": "Fischer",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Fischer\n\n[[Fischer]]是被植入者，也是整套任務的中心目標。表面上他是企業繼承人，實際上他承受的是父子關係斷裂與自我認同不足。因此團隊不能只用暴力控制他，而要在[[飯店 第二層]]與[[雪峰 第三層]]中，讓他「自己得出」想法。\n\n這就是 [[Inception_三層九宮魔方_更新版]] 的精髓：真正有效的植入，必須被目標誤認為是自己的決定。",
+      "links": [
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Inception_三層九宮魔方_更新版.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.2 飛機現實支點.md",
+        "02 人物/Eames.md",
+        "02 人物/Fischer.md",
+        "03 場景/雪峰 第三層.md",
+        "03 場景/飛機 現實層.md",
+        "03 場景/飯店 第二層.md",
+        "04 其他與規則/植入任務設計.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Fischer [[Fischer]]是被植入者，也是整套任務的中心目標。表面上他是企業繼承人，實際上他承受的是父子關係斷裂與自我認同不足。因此團隊不能只用暴力控制他，而要在[[飯店 第二層]]與[[雪峰 第三層]]中，讓他「自己得出」想法。 這就是 [[Inception_三層九宮魔方_更新版]] 的精髓：真正有效的植入，必須被目標誤認為是自己的決定。"
+    },
+    {
+      "id": "02 人物/Mal.md",
+      "path": "02 人物/Mal.md",
+      "basename": "Mal",
+      "title": "Mal",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Mal\n\n[[Mal]]是 Cobb 記憶中的殘影，也是整個系統最危險的不確定因子。她不只是前妻，而是被 Cobb 深植一個念頭後留下的反噬。她每次現身都在提醒觀眾：植入不只會改變別人，也會改變施作者自己。\n\n只要 Mal 還在，[[Cobb]]就不可能完全信任自己的任務設計；而只要 Cobb 無法放手，[[Limbo]]就始終有回頭的引力。",
+      "links": [
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "02 人物/Ariadne.md",
+        "02 人物/Cobb.md",
+        "02 人物/Mal.md",
+        "03 場景/Limbo.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Mal [[Mal]]是 Cobb 記憶中的殘影，也是整個系統最危險的不確定因子。她不只是前妻，而是被 Cobb 深植一個念頭後留下的反噬。她每次現身都在提醒觀眾：植入不只會改變別人，也會改變施作者自己。 只要 Mal 還在，[[Cobb]]就不可能完全信任自己的任務設計；而只要 Cobb 無法放手，[[Limbo]]就始終有回頭的引力。"
+    },
+    {
+      "id": "02 人物/Saito.md",
+      "path": "02 人物/Saito.md",
+      "basename": "Saito",
+      "title": "Saito",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Saito\n\n[[Saito]]是委託人，也是把整件事推向高風險的人。他提供報酬與合法回國承諾，迫使[[Cobb]]接下這個任務；同時，他在夢境中受傷過深，讓團隊不得不面對[[Limbo]]與長時差老化的後果。\n\nSaito 讓任務不只是職業操作，而是現實條件下的賭局。",
+      "links": [
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.2 飛機現實支點.md",
+        "02 人物/Cobb.md",
+        "02 人物/Saito.md",
+        "03 場景/Limbo.md",
+        "03 場景/飛機 現實層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Saito [[Saito]]是委託人，也是把整件事推向高風險的人。他提供報酬與合法回國承諾，迫使[[Cobb]]接下這個任務；同時，他在夢境中受傷過深，讓團隊不得不面對[[Limbo]]與長時差老化的後果。 Saito 讓任務不只是職業操作，而是現實條件下的賭局。"
+    },
+    {
+      "id": "02 人物/Yusuf.md",
+      "path": "02 人物/Yusuf.md",
+      "basename": "Yusuf",
+      "title": "Yusuf",
+      "folder": "02 人物",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# Yusuf\n\n[[Yusuf]]掌管鎮靜劑與第一層穩定度，直接對應[[LA 第一層]]。若沒有他的藥效與駕駛能力，整個多層夢境就沒有足夠時間完成[[植入任務設計]]。但藥效拉長時間，也把所有人推得更深，讓[[Limbo]]的風險同步上升。\n\n他代表任務中的「時間擴張」。",
+      "links": [
+        {
+          "target": "02 人物/Yusuf.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/植入任務設計.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Cobb.md",
+        "02 人物/Yusuf.md",
+        "03 場景/LA 第一層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Yusuf [[Yusuf]]掌管鎮靜劑與第一層穩定度，直接對應[[LA 第一層]]。若沒有他的藥效與駕駛能力，整個多層夢境就沒有足夠時間完成[[植入任務設計]]。但藥效拉長時間，也把所有人推得更深，讓[[Limbo]]的風險同步上升。 他代表任務中的「時間擴張」。"
+    },
+    {
+      "id": "03 場景/LA 第一層.md",
+      "path": "03 場景/LA 第一層.md",
+      "basename": "LA 第一層",
+      "title": "LA 第一層",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# LA 第一層\n\n[[LA 第一層]]是多層夢境的入口場景，由[[Yusuf]]維持。它看似最接近現實，實際上負責把人從現實節奏推進更深層，因此追逐戲、封鎖、綁架與墜橋都集中在這裡。第一層像是巨大輸送帶，一旦啟動，整個團隊就只能往下。\n\n這一層最重要的不是景觀，而是它製造出[[第一層 Kick]]，並把時間壓力一路傳導到[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]。",
+      "links": [
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Yusuf.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "02 人物/Yusuf.md",
+        "03 場景/LA 第一層.md",
+        "03 場景/飛機 現實層.md",
+        "04 其他與規則/植入任務設計.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# LA 第一層 [[LA 第一層]]是多層夢境的入口場景，由[[Yusuf]]維持。它看似最接近現實，實際上負責把人從現實節奏推進更深層，因此追逐戲、封鎖、綁架與墜橋都集中在這裡。第一層像是巨大輸送帶，一旦啟動，整個團隊就只能往下。 這一層最重要的不是景觀，而是它製造出[[第一層 Kick]]，並把時間壓力一路傳導到[[飯店 第二層]]、[[雪峰 第三層]"
+    },
+    {
+      "id": "03 場景/Limbo.md",
+      "path": "03 場景/Limbo.md",
+      "basename": "Limbo",
+      "title": "Limbo",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.952Z",
+      "content": "# Limbo\n\n[[Limbo]]是共享潛意識深淵，也是所有規則失去穩定邊界的地方。這裡的時間幾乎無限延展，人的自我認定也變得脆弱。對[[Cobb]]來說，Limbo 不是附加關卡，而是他與[[Mal]]共同建造過的內在廢墟。\n\n當[[Saito]]在這裡老去，當 Cobb 必須親手放下 Mal，電影的技術層就退到背景，只剩下「你願不願意回去」這個最根本的問題。",
+      "links": [
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "01 永久問題/1.2 飛機現實支點.md",
+        "02 人物/Cobb.md",
+        "02 人物/Mal.md",
+        "02 人物/Saito.md",
+        "02 人物/Yusuf.md",
+        "03 場景/LA 第一層.md",
+        "03 場景/Limbo.md",
+        "03 場景/第一層 Kick.md",
+        "03 場景/第二層 Kick.md",
+        "03 場景/飛機 現實層.md",
+        "04 其他與規則/夢境規則與 Kick.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# Limbo [[Limbo]]是共享潛意識深淵，也是所有規則失去穩定邊界的地方。這裡的時間幾乎無限延展，人的自我認定也變得脆弱。對[[Cobb]]來說，Limbo 不是附加關卡，而是他與[[Mal]]共同建造過的內在廢墟。 當[[Saito]]在這裡老去，當 Cobb 必須親手放下 Mal，電影的技術層就退到背景，只剩下「你願不願意回去」這個最根本的問題"
+    },
+    {
+      "id": "03 場景/第一層 Kick.md",
+      "path": "03 場景/第一層 Kick.md",
+      "basename": "第一層 Kick",
+      "title": "第一層 Kick",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# 第一層 Kick\n\n[[第一層 Kick]]由廂型車墜橋落水觸發，是整個回升系統的第一顆齒輪。它不只是一個動作事件，而是讓更深層的任務必須在限定時間內完成的節奏閘門。\n\n一旦第一層啟動 Kick，[[Arthur]]就得在[[飯店 第二層]]準備同步，[[雪峰 第三層]]的攻堅必須壓縮，掉入[[Limbo]]的人也得在更短窗口內被拉回來。",
+      "links": [
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "03 場景/LA 第一層.md",
+        "03 場景/第一層 Kick.md",
+        "03 場景/第二層 Kick.md",
+        "04 其他與規則/夢境規則與 Kick.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 第一層 Kick [[第一層 Kick]]由廂型車墜橋落水觸發，是整個回升系統的第一顆齒輪。它不只是一個動作事件，而是讓更深層的任務必須在限定時間內完成的節奏閘門。 一旦第一層啟動 Kick，[[Arthur]]就得在[[飯店 第二層]]準備同步，[[雪峰 第三層]]的攻堅必須壓縮，掉入[[Limbo]]的人也得在更短窗口內被拉回來。"
+    },
+    {
+      "id": "03 場景/第二層 Kick.md",
+      "path": "03 場景/第二層 Kick.md",
+      "basename": "第二層 Kick",
+      "title": "第二層 Kick",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.952Z",
+      "content": "# 第二層 Kick\n\n[[第二層 Kick]]發生在失重飯店裡，由[[Arthur]]以電梯爆破和綁帶系統人工製造。它的難度比[[第一層 Kick]]更高，因為它不是自然發生，而是必須在失重狀態下被精準排程。\n\n這個 Kick 的作用是把從[[雪峰 第三層]]和[[Limbo]]回來的人接住，避免他們錯過上升窗口。它代表《Inception》最極端的同步控制。",
+      "links": [
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "02 人物/Arthur.md",
+        "03 場景/第二層 Kick.md",
+        "03 場景/飯店 第二層.md",
+        "04 其他與規則/夢境規則與 Kick.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 第二層 Kick [[第二層 Kick]]發生在失重飯店裡，由[[Arthur]]以電梯爆破和綁帶系統人工製造。它的難度比[[第一層 Kick]]更高，因為它不是自然發生，而是必須在失重狀態下被精準排程。 這個 Kick 的作用是把從[[雪峰 第三層]]和[[Limbo]]回來的人接住，避免他們錯過上升窗口。它代表《Inception》最極端的同步控制。"
+    },
+    {
+      "id": "03 場景/雪峰 第三層.md",
+      "path": "03 場景/雪峰 第三層.md",
+      "basename": "雪峰 第三層",
+      "title": "雪峰 第三層",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.952Z",
+      "content": "# 雪峰 第三層\n\n[[雪峰 第三層]]是植入任務的攻堅場，也是情感轉折的戰場。表面上它像軍事基地滲透，實際上是在為[[Fischer]]創造一個足夠戲劇化、足夠私密的心理時刻，讓他願意改寫與父親的關係。\n\n這一層把策略與情感推到同一條線上。任務成功不只靠爆破與突擊，還靠 Fischer 在保險室裡讀出屬於自己的新解釋。",
+      "links": [
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "02 人物/Eames.md",
+        "02 人物/Fischer.md",
+        "03 場景/LA 第一層.md",
+        "03 場景/第一層 Kick.md",
+        "03 場景/第二層 Kick.md",
+        "03 場景/雪峰 第三層.md",
+        "03 場景/飛機 現實層.md",
+        "04 其他與規則/植入任務設計.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 雪峰 第三層 [[雪峰 第三層]]是植入任務的攻堅場，也是情感轉折的戰場。表面上它像軍事基地滲透，實際上是在為[[Fischer]]創造一個足夠戲劇化、足夠私密的心理時刻，讓他願意改寫與父親的關係。 這一層把策略與情感推到同一條線上。任務成功不只靠爆破與突擊，還靠 Fischer 在保險室裡讀出屬於自己的新解釋。"
+    },
+    {
+      "id": "03 場景/飛機 現實層.md",
+      "path": "03 場景/飛機 現實層.md",
+      "basename": "飛機 現實層",
+      "title": "飛機 現實層",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# 飛機 現實層\n\n[[飛機 現實層]]是所有夢境層的時間原點。團隊在這裡入睡、在這裡醒來，任務是否成功也只能在這裡被確認。因為有這個現實支點，[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]才不是散亂的場景，而是一個可回收的系統。\n\n它同時也是情感終點。[[Cobb]]回家的可能性、[[Saito]]兌現承諾的能力、[[Fischer]]是否把新念頭帶回現實，全部都要在飛機後的連續性裡成立。",
+      "links": [
+        {
+          "target": "03 場景/飛機 現實層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "01 永久問題/1.2 飛機現實支點.md",
+        "02 人物/Cobb.md",
+        "03 場景/飛機 現實層.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 飛機 現實層 [[飛機 現實層]]是所有夢境層的時間原點。團隊在這裡入睡、在這裡醒來，任務是否成功也只能在這裡被確認。因為有這個現實支點，[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]才不是散亂的場景，而是一個可回收的系統。 它同時也是情感終點。[[Cobb]]回家的可能性、[[Saito]]兌現承諾的能力、[[Fi"
+    },
+    {
+      "id": "03 場景/飯店 第二層.md",
+      "path": "03 場景/飯店 第二層.md",
+      "basename": "飯店 第二層",
+      "title": "飯店 第二層",
+      "folder": "03 場景",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "# 飯店 第二層\n\n[[飯店 第二層]]是最像舞台劇的一層。空間封閉、角色換裝、心理操控精準，所有行動都圍繞著如何讓[[Fischer]]相信這是一場可信的局。這裡由[[Arthur]]掌握節奏，[[Eames]]提供臨場變形，任務的說服力在此成形。\n\n當上層失重，這個飯店也進入失重狀態，進一步把抽象時間倍率轉成具體危機。這讓[[第二層 Kick]]成為整部片最精準的機械裝置之一。",
+      "links": [
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Eames.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "02 人物/Arthur.md",
+        "02 人物/Eames.md",
+        "02 人物/Fischer.md",
+        "03 場景/LA 第一層.md",
+        "03 場景/第一層 Kick.md",
+        "03 場景/飛機 現實層.md",
+        "03 場景/飯店 第二層.md",
+        "04 其他與規則/植入任務設計.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 飯店 第二層 [[飯店 第二層]]是最像舞台劇的一層。空間封閉、角色換裝、心理操控精準，所有行動都圍繞著如何讓[[Fischer]]相信這是一場可信的局。這裡由[[Arthur]]掌握節奏，[[Eames]]提供臨場變形，任務的說服力在此成形。 當上層失重，這個飯店也進入失重狀態，進一步把抽象時間倍率轉成具體危機。這讓[[第二層 Kick]]成為整部片最"
+    },
+    {
+      "id": "04 其他與規則/夢境規則與 Kick.md",
+      "path": "04 其他與規則/夢境規則與 Kick.md",
+      "basename": "夢境規則與 Kick",
+      "title": "夢境規則與 Kick",
+      "folder": "04 其他與規則",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.952Z",
+      "content": "# 夢境規則與 Kick\n\n《Inception》的可看性建立在規則夠清楚。基本規則有三個：時間往下層會放大、死亡在強鎮靜下可能掉進[[Limbo]]、上升必須依賴[[第一層 Kick]]與[[第二層 Kick]]這樣的同步震動。\n\n因為規則穩定，觀眾才能在多層切換時仍然理解張力在哪裡。規則不是冷知識，而是讓[[植入任務設計]]成立的骨架。當一層的物理狀態改變，其他層就會一起受影響，於是整部片形成罕見的垂直剪輯節奏。",
+      "links": [
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/植入任務設計.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 永久問題/1.1 下降－植入－上升.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 夢境規則與 Kick 《Inception》的可看性建立在規則夠清楚。基本規則有三個：時間往下層會放大、死亡在強鎮靜下可能掉進[[Limbo]]、上升必須依賴[[第一層 Kick]]與[[第二層 Kick]]這樣的同步震動。 因為規則穩定，觀眾才能在多層切換時仍然理解張力在哪裡。規則不是冷知識，而是讓[[植入任務設計]]成立的骨架。當一層的物理狀態改變，"
+    },
+    {
+      "id": "04 其他與規則/植入任務設計.md",
+      "path": "04 其他與規則/植入任務設計.md",
+      "basename": "植入任務設計",
+      "title": "植入任務設計",
+      "folder": "04 其他與規則",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T14:00:25.952Z",
+      "content": "# 植入任務設計\n\n植入不是把一句話塞進別人腦中，而是設計一條讓目標自己抵達結論的路徑。這條路徑必須經過場景、情緒、信任與誤認。團隊在[[LA 第一層]]抓住[[Fischer]]，在[[飯店 第二層]]重組他的認知框架，在[[雪峰 第三層]]交付情感線的最終觸發，最後讓念頭隨著返回現實而固定。\n\n這就是為什麼《Inception》像九宮魔方。每一層都不是獨立關卡，而是某個關鍵面向的轉動。只要有一層失控，整個立體結構都會錯位；只要所有面向同步轉正，一個念頭就會被誤認為來自自己。",
+      "links": [
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Cobb.md",
+        "02 人物/Yusuf.md",
+        "04 其他與規則/夢境規則與 Kick.md",
+        "Inception_三層九宮魔方_更新版.md"
+      ],
+      "preview": "# 植入任務設計 植入不是把一句話塞進別人腦中，而是設計一條讓目標自己抵達結論的路徑。這條路徑必須經過場景、情緒、信任與誤認。團隊在[[LA 第一層]]抓住[[Fischer]]，在[[飯店 第二層]]重組他的認知框架，在[[雪峰 第三層]]交付情感線的最終觸發，最後讓念頭隨著返回現實而固定。 這就是為什麼《Inception》像九宮魔方。每一層都不是獨立關"
+    },
+    {
+      "id": "Inception_三層九宮魔方_更新版.md",
+      "path": "Inception_三層九宮魔方_更新版.md",
+      "basename": "Inception_三層九宮魔方_更新版",
+      "title": "Inception 三層九宮魔方 更新版",
+      "folder": "",
+      "frontmatter": {
+        "mandala": true,
+        "title": "Inception 三層九宮魔方 更新版",
+        "aliases": "",
+        "tags": ""
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T14:00:25.951Z",
+      "content": "<!--section: 1-->\n# Inception\n中心主題：這不是單一夢境，而是一個由[[飛機 現實層]]錨定的三層九宮魔方。任務從[[1.1 下降－植入－上升]]開始，穿過[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]，最後回到現實。這個結構同時串起角色群：[[Cobb]]、[[Arthur]]、[[Ariadne]]、[[Eames]]、[[Yusuf]]、[[Saito]]、[[Fischer]]、[[Mal]]，並受到[[夢境規則與 Kick]]的時間倍率與同步機制控制。\n\n<!--section: 1.1-->\n# 1. 下降入口\n中心主題：由[[1.1 下降－植入－上升]]負責說明整個任務為何要往下走，再往上回來。這一格是全站入口，連到[[飛機 現實層]]、[[LA 第一層]]與角色分工。\n\n<!--section: 1.2-->\n# 2. LA 第一層\n中心主題：[[LA 第一層]]是第一層夢境容器，由[[Yusuf]]維持穩定，也是追逐、綁架與第一個[[第一層 Kick]]的來源。\n\n<!--section: 1.3-->\n# 3. 第一層 Kick\n中心主題：[[第一層 Kick]]由廂型車墜橋落水觸發，會把[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]的節奏綁成一條同步鏈。\n\n<!--section: 1.4-->\n# 4. 飯店第二層\n中心主題：[[飯店 第二層]]是心理操控層，由[[Arthur]]主導，[[Eames]]協助偽裝，目標是把[[Fischer]]送進可接受植入的狀態。\n\n<!--section: 1.5-->\n# 5. 第二層 Kick\n中心主題：[[第二層 Kick]]由[[Arthur]]在失重飯店中人工製造，是把人從[[雪峰 第三層]]與[[Limbo]]往上接回來的中繼站。\n\n<!--section: 1.6-->\n# 6. 雪峰第三層\n中心主題：[[雪峰 第三層]]把抽象的植入概念變成具體攻堅任務，讓[[Fischer]]面對父親記憶，並讓[[Cobb]]走向自己的心理崩口。\n\n<!--section: 1.7-->\n# 7. Limbo 第四層\n中心主題：[[Limbo]]是共享潛意識深淵，連到[[Cobb]]與[[Mal]]的舊世界，也把[[Saito]]推向年老、迷失與現實感鬆脫。\n\n<!--section: 1.8-->\n# 8. 最終返回\n中心主題：所有上升都要回到[[飛機 現實層]]。真正的問題不只是人有沒有醒，而是[[Fischer]]是否接受新的念頭，以及[[Cobb]]是否願意離開[[Mal]]的幻影。\n\n## 導覽\n\n- [[01 永久問題/1.1 下降－植入－上升]]\n- [[01 永久問題/1.2 飛機現實支點]]\n- [[02 人物/Cobb]]\n- [[02 人物/Fischer]]\n- [[03 場景/LA 第一層]]\n- [[03 場景/飯店 第二層]]\n- [[03 場景/雪峰 第三層]]\n- [[03 場景/Limbo]]\n- [[04 其他與規則/夢境規則與 Kick]]\n- [[04 其他與規則/植入任務設計]]",
+      "links": [
+        {
+          "target": "03 場景/飛機 現實層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 永久問題/1.1 下降－植入－上升.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/LA 第一層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/飯店 第二層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/雪峰 第三層.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/Limbo.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Cobb.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Arthur.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Ariadne.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Eames.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Yusuf.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Saito.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Fischer.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 人物/Mal.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/夢境規則與 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第一層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 場景/第二層 Kick.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 永久問題/1.2 飛機現實支點.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 其他與規則/植入任務設計.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "02 人物/Ariadne.md",
+        "02 人物/Fischer.md"
+      ],
+      "preview": "<!--section: 1--> # Inception 中心主題：這不是單一夢境，而是一個由[[飛機 現實層]]錨定的三層九宮魔方。任務從[[1.1 下降－植入－上升]]開始，穿過[[LA 第一層]]、[[飯店 第二層]]、[[雪峰 第三層]]與[[Limbo]]，最後回到現實。這個結構同時串起角色群：[[Cobb]]、[[Arthur]]、[[Aria"
+    }
+  ],
+  "edges": [
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "04 其他與規則/夢境規則與 Kick.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "01 永久問題/1.1 下降－植入－上升.md",
+      "target": "03 場景/飛機 現實層.md"
+    },
+    {
+      "source": "01 永久問題/1.2 飛機現實支點.md",
+      "target": "03 場景/飛機 現實層.md"
+    },
+    {
+      "source": "01 永久問題/1.2 飛機現實支點.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "01 永久問題/1.2 飛機現實支點.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "01 永久問題/1.2 飛機現實支點.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "01 永久問題/1.2 飛機現實支點.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "02 人物/Ariadne.md",
+      "target": "02 人物/Ariadne.md"
+    },
+    {
+      "source": "02 人物/Ariadne.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "02 人物/Ariadne.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "02 人物/Ariadne.md",
+      "target": "Inception_三層九宮魔方_更新版.md"
+    },
+    {
+      "source": "02 人物/Arthur.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "02 人物/Arthur.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "02 人物/Arthur.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "04 其他與規則/植入任務設計.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Ariadne.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Eames.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Yusuf.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "02 人物/Cobb.md",
+      "target": "03 場景/飛機 現實層.md"
+    },
+    {
+      "source": "02 人物/Eames.md",
+      "target": "02 人物/Eames.md"
+    },
+    {
+      "source": "02 人物/Eames.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "02 人物/Eames.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "02 人物/Eames.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "02 人物/Fischer.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "02 人物/Fischer.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "02 人物/Fischer.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "02 人物/Fischer.md",
+      "target": "Inception_三層九宮魔方_更新版.md"
+    },
+    {
+      "source": "02 人物/Mal.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "02 人物/Mal.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "02 人物/Mal.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "02 人物/Saito.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "02 人物/Saito.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "02 人物/Saito.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "02 人物/Yusuf.md",
+      "target": "02 人物/Yusuf.md"
+    },
+    {
+      "source": "02 人物/Yusuf.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "02 人物/Yusuf.md",
+      "target": "04 其他與規則/植入任務設計.md"
+    },
+    {
+      "source": "02 人物/Yusuf.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "02 人物/Yusuf.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "03 場景/LA 第一層.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/Limbo.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/Limbo.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "03 場景/Limbo.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "03 場景/Limbo.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "03 場景/第一層 Kick.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "03 場景/第一層 Kick.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "03 場景/第一層 Kick.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "03 場景/第一層 Kick.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "03 場景/第一層 Kick.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/第二層 Kick.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "03 場景/第二層 Kick.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "03 場景/第二層 Kick.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "03 場景/第二層 Kick.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "03 場景/第二層 Kick.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/雪峰 第三層.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "03 場景/雪峰 第三層.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "03 場景/飛機 現實層.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "03 場景/飛機 現實層.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "03 場景/飯店 第二層.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "03 場景/飯店 第二層.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "03 場景/飯店 第二層.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "03 場景/飯店 第二層.md",
+      "target": "02 人物/Eames.md"
+    },
+    {
+      "source": "03 場景/飯店 第二層.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "04 其他與規則/夢境規則與 Kick.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "04 其他與規則/夢境規則與 Kick.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "04 其他與規則/夢境規則與 Kick.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "04 其他與規則/夢境規則與 Kick.md",
+      "target": "04 其他與規則/植入任務設計.md"
+    },
+    {
+      "source": "04 其他與規則/植入任務設計.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "04 其他與規則/植入任務設計.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "04 其他與規則/植入任務設計.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "04 其他與規則/植入任務設計.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/飛機 現實層.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "01 永久問題/1.1 下降－植入－上升.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/LA 第一層.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/飯店 第二層.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/雪峰 第三層.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/Limbo.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Cobb.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Arthur.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Ariadne.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Eames.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Yusuf.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Saito.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Fischer.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "02 人物/Mal.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "04 其他與規則/夢境規則與 Kick.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/第一層 Kick.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "03 場景/第二層 Kick.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "01 永久問題/1.2 飛機現實支點.md"
+    },
+    {
+      "source": "Inception_三層九宮魔方_更新版.md",
+      "target": "04 其他與規則/植入任務設計.md"
+    }
+  ],
+  "assets": {}
+}
