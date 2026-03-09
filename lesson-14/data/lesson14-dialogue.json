@@ -1,0 +1,147 @@
+{
+  "lesson": {
+    "id": "lesson14-dialogue-p31",
+    "title": "第14課 會話播放器",
+    "subtitle": "大家的日本語 初級二 P31 會話",
+    "topic_jp": "みどり町までお願いします",
+    "topic_zh": "請去綠町",
+    "audio_file": "大家的日本語 初級二 p31.mp3",
+    "duration": 114.6,
+    "duration_label": "01:54",
+    "notes": "本版先用句段級時間標記，後續若要精修秒數，只要更新這份 JSON。"
+  },
+  "architecture": [
+    {
+      "step": "① 資料結構",
+      "title": "audio + transcript + timing",
+      "body": "一頁只讀一份 JSON。音檔、課文、說話者、中文與時間段放在一起，之後要加課本圖片也只需要補欄位。",
+      "snippet": "lesson-14-site/\\n  index.html\\n  大家的日本語 初級二 p31.mp3\\n  data/lesson14-dialogue.json"
+    },
+    {
+      "step": "② 時間標記",
+      "title": "句段級 alignment",
+      "body": "每句都有 start/end 秒數。播放整段時用 `timeupdate` 判斷目前句子；點句子時則跳到該段並在結尾自動停住。",
+      "snippet": "{ \"speaker\": \"カリナ\", \"start\": 8.0, \"end\": 14.0, \"jp\": \"みどり町まで お願いします。\" }"
+    },
+    {
+      "step": "③ 網站播放",
+      "title": "一頁式播放器",
+      "body": "同一頁同時放音檔控制、目前播放句、時間軸列表與完整課文。手機版會收成單欄，適合直接拿來當教材頁。",
+      "snippet": "audio.currentTime -> 找 active line\\nclick line -> seek + play segment\\nJSON 不變，UI 可持續擴充"
+    }
+  ],
+  "transcript": {
+    "heading_jp": "みどり町まで お願いします",
+    "heading_zh": "請去綠町",
+    "lines": [
+      {
+        "id": "line-01",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "みどり町まで お願いします。",
+        "zh": "請去綠町。",
+        "start": 8.0,
+        "end": 14.0
+      },
+      {
+        "id": "line-02",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "はい。",
+        "zh": "好的。",
+        "start": 14.2,
+        "end": 17.3
+      },
+      {
+        "id": "line-03",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "すみません。あの信号を 右へ 曲がって ください。",
+        "zh": "對不起。請在那個紅綠燈右轉。",
+        "start": 21.0,
+        "end": 33.2
+      },
+      {
+        "id": "line-04",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "右ですね。",
+        "zh": "往右對嗎？",
+        "start": 33.5,
+        "end": 38.0
+      },
+      {
+        "id": "line-05",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "ええ。",
+        "zh": "對。",
+        "start": 38.2,
+        "end": 41.0
+      },
+      {
+        "id": "line-06",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "まっすぐですか。",
+        "zh": "一直走嗎？",
+        "start": 45.0,
+        "end": 50.0
+      },
+      {
+        "id": "line-07",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "ええ、まっすぐ 行って ください。",
+        "zh": "對，請一直走。",
+        "start": 50.3,
+        "end": 58.8
+      },
+      {
+        "id": "line-08",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "あの 花屋の 前で 止めて ください。",
+        "zh": "請在那間花店前面停下來。",
+        "start": 64.0,
+        "end": 73.4
+      },
+      {
+        "id": "line-09",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "はい。",
+        "zh": "好的。",
+        "start": 73.8,
+        "end": 76.2
+      },
+      {
+        "id": "line-10",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "1800円です。",
+        "zh": "1800日圓。",
+        "start": 81.0,
+        "end": 86.0
+      },
+      {
+        "id": "line-11",
+        "speaker": "カリナ",
+        "speaker_zh": "Karina",
+        "jp": "これで お願いします。",
+        "zh": "給您錢。",
+        "start": 86.2,
+        "end": 92.0
+      },
+      {
+        "id": "line-12",
+        "speaker": "運転手",
+        "speaker_zh": "司機",
+        "jp": "3200円の お釣りです。ありがとう ございました。",
+        "zh": "找您3200日圓。謝謝您。",
+        "start": 98.0,
+        "end": 110.8
+      }
+    ]
+  }
+}
