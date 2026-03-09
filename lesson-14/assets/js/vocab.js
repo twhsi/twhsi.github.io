@@ -4,16 +4,22 @@ import { mountLocalGraph } from "./local-graph.js";
 import { loadSiteGraph } from "./site-graph.js";
 import { TtsPlayer } from "./tts-player.js";
 
-function buildSentenceMap(sentences) {
-  return new Map(sentences.map((sentence) => [sentence.id, sentence]));
+function sentenceLink(sentence) {
+  return `<a class="tag-link" href="./practice-a.html#${sentence.id}">${sentence.jp}</a>`;
 }
 
-function renderSentenceLink(sentence) {
+function buildVocabCard(item, activeId) {
+  const activeClass = item.id === activeId ? " center" : "";
   return `
-    <a class="anchor-link" href="./practice-a.html#${sentence.id}">
-      ${sentence.jp}
-    </a>
-    <p class="small">${sentence.zh}</p>
+    <button type="button" class="mandala-cell${activeClass}" data-vocab-card="${item.id}">
+      <div class="mandala-label">${item.pos}</div>
+      <div class="mandala-title">${item.kanji || item.kana}</div>
+      <p class="mandala-caption">${item.meaning_zh}</p>
+      <div class="mandala-meta">
+        <span class="pill">${item.kana}</span>
+        <span class="pill">${item.romaji}</span>
+      </div>
+    </button>
   `;
 }
 
@@ -22,35 +28,34 @@ async function init() {
   const vocabData = await loadJson("data/lesson14-vocab.json");
   const practice = await loadJson("data/lesson14-practice-a.json");
   const graph = await loadSiteGraph();
-  const sentenceMap = buildSentenceMap(practice.sentences);
+  const sentenceMap = new Map(practice.sentences.map((sentence) => [sentence.id, sentence]));
   const posOptions = ["全部", ...uniq(vocabData.items.map((item) => item.pos))];
 
   app.innerHTML = `
     ${createNav()}
     ${createHero({
-      eyebrow: "Vocabulary Index",
-      title: "第14課 單語頁",
-      lead: "以形音義為核心。搜尋單語、篩選詞性、查看原句引用，再反查練習A。",
+      eyebrow: "Vocabulary Mandala",
+      title: "第14課 單語九宮",
+      lead: "先用九宮看核心單語，再點任一格，右側展開原句、發音與關聯圖。",
       metrics: [
-        `${vocabData.items.length} 個核心單語`,
+        `${vocabData.items.length} 個單語`,
         `${posOptions.length - 1} 種詞性`,
-        "形音義結構",
-        "機器發音可用"
+        "九宮入口",
+        "句子回查"
       ],
       aside: `
         <div class="section-heading">
-          <h3>資料模型</h3>
-          <p>每個單語都有 kana、kanji、romaji、中文解釋、詞性、補充、音檔欄位，並可連回練習A句子。若句子可造例，就直接引用原句。</p>
+          <h3>使用方式</h3>
+          <p>左邊先選九宮中的一格。右側會顯示這個單語的詳細資訊、原句引用、機器發音與 Local Graph View。</p>
         </div>
-        <div class="pill-row" id="vocab-hero-tags"></div>
       `
     })}
     <section class="workspace">
       <div class="workspace-grid">
         <div class="panel">
           <div class="section-heading">
-            <h2>單語列表</h2>
-            <p>先輸入假名、漢字、羅馬拼音或中文。再用詞性篩選縮小範圍。</p>
+            <h2>單語九宮</h2>
+            <p>先用詞性篩選，再點選九宮中的詞卡。</p>
           </div>
           <div class="controls">
             <input class="input" id="search" type="search" placeholder="搜尋：読んで、教える、交通..." />
@@ -58,7 +63,7 @@ async function init() {
               ${posOptions.map((pos) => `<option value="${pos}">${pos}</option>`).join("")}
             </select>
           </div>
-          <div class="list" id="vocab-list"></div>
+          <div class="mandala-grid" id="vocab-grid"></div>
         </div>
         <aside class="detail-panel">
           <div id="vocab-detail"></div>
@@ -73,10 +78,7 @@ async function init() {
   const audioPlayer = new SegmentAudioPlayer();
   const ttsPlayer = new TtsPlayer();
 
-  const heroTags = document.getElementById("vocab-hero-tags");
-  posOptions.slice(1).forEach((pos) => heroTags.appendChild(createTag(pos)));
-
-  const listEl = document.getElementById("vocab-list");
+  const gridEl = document.getElementById("vocab-grid");
   const detailEl = document.getElementById("vocab-detail");
   const searchEl = document.getElementById("search");
   const filterEl = document.getElementById("pos-filter");
@@ -85,77 +87,46 @@ async function init() {
 
   function renderDetail(item) {
     const relatedSentences = item.related_sentences.map((id) => sentenceMap.get(id)).filter(Boolean);
-    const audioState = item.audio?.file ? "已設定人聲來源" : "以機器發音為主";
     detailEl.innerHTML = `
-      <div class="detail-top">
-        <div>
-          <div class="romaji">${item.romaji}</div>
-          <h2>${item.kanji || item.kana}</h2>
-          <p class="lead">${item.kana}${item.kanji ? ` ・ ${item.kanji}` : ""}</p>
-        </div>
-        <span class="pill">${item.pos}</span>
+      <div class="section-heading">
+        <h2>${item.kanji || item.kana}</h2>
+        <p class="lead">${item.kana} / ${item.romaji}</p>
       </div>
-      <dl class="meta-list">
-        <div class="meta-row">
-          <dt>中文</dt>
-          <dd>${item.meaning_zh}</dd>
-        </div>
-        <div class="meta-row">
-          <dt>語法用途</dt>
-          <dd>${item.notes}</dd>
-        </div>
-        <div class="meta-row">
-          <dt>音檔狀態</dt>
-          <dd>${audioState}</dd>
-        </div>
-        <div class="meta-row">
-          <dt>來源</dt>
-          <dd>${item.source_note}</dd>
-        </div>
-      </dl>
-      <div class="tag-row" id="detail-tags"></div>
-      <div class="divider"></div>
+      <div class="tag-row">
+        <span class="pill">${item.pos}</span>
+        <span class="pill">${item.meaning_zh}</span>
+      </div>
+      <p>${item.notes}</p>
       <div class="section-heading">
         <h3>原句引用</h3>
-        <p>從單語直接回到練習A原句，不必靠記憶硬找。</p>
+        <p>從單語直接跳回練習A。</p>
       </div>
-      <div class="related-list">
-        ${relatedSentences.length ? relatedSentences.map((sentence) => `
-          <blockquote class="sentence-quote">
-            ${renderSentenceLink(sentence)}
-            <p class="footnote">引用來源：${sentence.source}</p>
-          </blockquote>
-        `).join("") : `<p class="muted">目前尚未連到句子。</p>`}
+      <div class="tag-row">
+        ${relatedSentences.length ? relatedSentences.map(sentenceLink).join("") : `<span class="muted">目前尚未連到句子。</span>`}
       </div>
       <div class="button-row">
         <button class="button" id="tts-vocab">機器發音</button>
         <button class="ghost-button" id="play-vocab" ${item.audio?.file ? "" : "disabled"}>播放老師音檔</button>
       </div>
+      <p class="footnote">來源：${item.source_note}</p>
     `;
 
-    const tagHost = detailEl.querySelector("#detail-tags");
-    item.related_sentences.forEach((sentenceId) => {
-      const sentence = sentenceMap.get(sentenceId);
-      if (sentence) tagHost.appendChild(createTag(sentence.section));
-    });
-
-    detailEl.querySelector("#play-vocab")?.addEventListener("click", () => {
-      audioPlayer.play(item.audio, `${item.kana} ${item.meaning_zh}`);
-    });
     detailEl.querySelector("#tts-vocab")?.addEventListener("click", () => {
       ttsPlayer.speak(item.kanji ? `${item.kanji} ${item.kana}` : item.kana);
     });
-
+    detailEl.querySelector("#play-vocab")?.addEventListener("click", () => {
+      audioPlayer.play(item.audio, `${item.kana} ${item.meaning_zh}`);
+    });
     mountLocalGraph(document.getElementById("vocab-graph"), graph, {
       focusId: item.id,
-      description: "右側只保留目前單語與直接相連的句子、文法、導引節點。"
+      description: "這個單語直接連到哪些句子與文法，右側一眼就能看見。"
     });
   }
 
-  function renderList() {
+  function filteredItems() {
     const query = searchEl.value.trim().toLowerCase();
     const pos = filterEl.value;
-    const items = vocabData.items.filter((item) => {
+    return vocabData.items.filter((item) => {
       const matchesText = [item.kana, item.kanji, item.romaji, item.meaning_zh, item.notes]
         .filter(Boolean)
         .join(" ")
@@ -163,44 +134,31 @@ async function init() {
         .includes(query);
       const matchesPos = pos === "全部" || item.pos === pos;
       return matchesText && matchesPos;
-    });
+    }).slice(0, 9);
+  }
 
-    if (!items.some((item) => item.id === activeId)) {
-      activeId = items[0]?.id || null;
-    }
+  function renderGrid() {
+    const items = filteredItems();
+    if (!items.some((item) => item.id === activeId)) activeId = items[0]?.id || null;
+    gridEl.innerHTML = items.length
+      ? items.map((item) => buildVocabCard(item, activeId)).join("")
+      : `<article class="mandala-cell center"><div class="mandala-title">沒有符合的單語</div><p class="mandala-caption">請調整搜尋或詞性。</p></article>`;
 
-    listEl.innerHTML = items.length ? "" : `<p class="muted">沒有符合的單語。</p>`;
-    items.forEach((item) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = `vocab-item${item.id === activeId ? " active" : ""}`;
-      button.innerHTML = `
-        <div class="vocab-top">
-          <div>
-            <div class="jp">${item.kanji || item.kana}</div>
-            <div class="romaji">${item.kana} / ${item.romaji}</div>
-          </div>
-          <span class="pill">${item.pos}</span>
-        </div>
-        <p>${item.meaning_zh}</p>
-      `;
+    gridEl.querySelectorAll("[data-vocab-card]").forEach((button) => {
       button.addEventListener("click", () => {
-        activeId = item.id;
-        history.replaceState(null, "", `#${item.id}`);
-        renderList();
-        renderDetail(item);
+        activeId = button.dataset.vocabCard;
+        history.replaceState(null, "", `#${activeId}`);
+        renderGrid();
       });
-      listEl.appendChild(button);
     });
 
     const activeItem = byId(vocabData.items, activeId);
     if (activeItem) renderDetail(activeItem);
-    else detailEl.innerHTML = `<p class="muted">請選擇一個單語。</p>`;
   }
 
-  searchEl.addEventListener("input", renderList);
-  filterEl.addEventListener("change", renderList);
-  renderList();
+  searchEl.addEventListener("input", renderGrid);
+  filterEl.addEventListener("change", renderGrid);
+  renderGrid();
 }
 
 init().catch((error) => {

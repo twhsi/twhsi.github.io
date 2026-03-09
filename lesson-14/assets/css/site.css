@@ -242,7 +242,8 @@ h1 {
 .workspace-grid,
 .sentence-grid,
 .content-grid,
-.mapping-grid {
+.mapping-grid,
+.mandala-grid {
   display: grid;
   gap: 16px;
 }
@@ -257,6 +258,10 @@ h1 {
 
 .dashboard {
   grid-template-columns: 1.15fr 0.85fr;
+}
+
+.mandala-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .workspace {
@@ -282,6 +287,63 @@ h1 {
   padding: 18px;
   display: grid;
   gap: 12px;
+}
+
+.mandala-cell {
+  min-height: 200px;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.mandala-cell:hover {
+  transform: translateY(-2px);
+  border-color: rgba(24, 92, 83, 0.35);
+  box-shadow: 0 20px 42px rgba(24, 92, 83, 0.16);
+}
+
+.mandala-cell.center {
+  background:
+    linear-gradient(180deg, rgba(24, 92, 83, 0.14), rgba(255, 253, 250, 0.96)),
+    var(--surface);
+}
+
+.mandala-label {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.mandala-title {
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.mandala-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mandala-caption {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.mandala-stack {
+  display: grid;
+  gap: 10px;
 }
 
 .card h3,
@@ -596,7 +658,8 @@ h1 {
   .workspace-grid,
   .sentence-grid,
   .grid-3,
-  .grid-2 {
+  .grid-2,
+  .mandala-grid {
     grid-template-columns: 1fr;
   }
 }
