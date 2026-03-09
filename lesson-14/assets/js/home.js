@@ -41,7 +41,7 @@ async function init() {
     <section class="panel dashboard">
       <div class="section-heading">
         <h2>This is a lesson 14 book</h2>
-        <p class="lead">這不是展示頁，而是第十四課的學習工作台。來源是 `第十四課 網站/P.28 單語` 與 `第十四課 網站/P.32 練習A` 兩份資料，並把兩者之間的雙向連結做成網站。</p>
+        <p class="lead">這不是展示頁，而是第十四課的學習工作台。來源是 <code>第十四課 網站/P.28 單語</code> 與 <code>第十四課 網站/P.32 練習A</code> 兩份資料，並把兩者之間的雙向連結做成網站。</p>
       </div>
       <div class="card">
         <h3>使用方式</h3>
