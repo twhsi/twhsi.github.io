@@ -1,44 +1,54 @@
 {
   "blocks": [
     {
-      "id": "content-te-overview",
-      "title": "て形變化總覽",
+      "id": "content-source-notes",
+      "title": "來源筆記",
       "type": "note",
-      "body": "第14課的主軸是把 `ます形` 轉為 `て形`。Google Doc 已整理五段、一段、不規則變化與例外字群，網站先把這些內容收成一個可擴充的 block。",
+      "body": "網站目前以 `第十四課 網站/P.28 單語/第14課單語.md` 與 `第十四課 網站/P.32 練習A/第14課 練習A 九宮複習筆記.md` 兩份來源為主。單語負責詞目，練習A負責原句與 timestamp。",
       "related_vocab": ["読みます", "書きます", "教えます"],
-      "related_grammar": ["Vてください", "Vています"]
+      "related_vocab_ids": ["vocab-yomu", "vocab-kaku", "vocab-oshieru"],
+      "related_grammar": ["Vてください", "Vています"],
+      "related_grammar_ids": ["grammar-te-kudasai", "grammar-teimasu"]
     },
     {
-      "id": "content-request-tone",
-      "title": "請求句語感",
+      "id": "content-reading-order",
+      "title": "推薦閱讀順序",
       "type": "note",
-      "body": "`Vてください` 是課本練習A的直接應用。老師筆記裡也補了 `静かにしてください` 與較直接的 `静かにして`，之後可以在這區補進語感差異與使用情境。",
-      "related_vocab": ["教えます"],
-      "related_grammar": ["Vてください"]
+      "body": "先從單語頁看詞目與機器發音，再點原句引用回到練習A。若從句子出發，右側 graph 與標籤會把你帶回相關單語與文法。",
+      "related_vocab": ["読みます", "手伝います"],
+      "related_vocab_ids": ["vocab-yomu", "vocab-tetsudau"],
+      "related_grammar": ["Vてください", "V2 + ましょうか"],
+      "related_grammar_ids": ["grammar-te-kudasai", "grammar-mashouka"]
     },
     {
-      "id": "content-offer-tone",
-      "title": "提案／幫忙句型",
+      "id": "content-local-graph",
+      "title": "Local Graph View 用法",
       "type": "note",
-      "body": "`V2 + ましょうか` 目前先收錄 `手伝いましょうか`、`窓を閉めましょうか`、`エアコンをつけましょうか`。後續可擴成服務業敬語與日常會話兩條路線。",
+      "body": "右側圖只顯示目前節點的局部關聯。你在單語頁會看到它連到哪些句子；在練習A頁會看到句子掛在哪些文法與單語下面；在導引頁則用來說明整體結構。",
       "related_vocab": ["手伝います", "閉めます", "つけます"],
-      "related_grammar": ["V2 + ましょうか"]
+      "related_vocab_ids": ["vocab-tetsudau", "vocab-shimemasu", "vocab-tsukeru"],
+      "related_grammar": ["V2 + ましょうか"],
+      "related_grammar_ids": ["grammar-mashouka"]
     },
     {
-      "id": "content-teimasu-usage",
-      "title": "Vています 三種用法",
+      "id": "content-audio-strategy",
+      "title": "音檔策略",
       "type": "note",
-      "body": "老師筆記已提到正在進行、習慣持續、狀態持續三種讀法。這個 block 之後適合拆成三個子區塊，並加上例句與反例。",
+      "body": "練習A 先直接使用 `大家的日本語 初級二 p32.mp3` 的 start/end timestamp；單語頁則先用機器發音。若之後補上逐詞人聲 timestamp，只要改 JSON，不用重寫頁面。",
       "related_vocab": ["勉強します", "読みます"],
-      "related_grammar": ["Vています"]
+      "related_vocab_ids": ["vocab-benkyou", "vocab-yomu"],
+      "related_grammar": ["Vています"],
+      "related_grammar_ids": ["grammar-teimasu"]
     },
     {
       "id": "content-vocab-extension",
       "title": "延伸詞彙與補充例句",
       "type": "placeholder",
-      "body": "預留給 Google Doc 後半段補充單字，例如 `交通の便がいい`、`便利な`、`気を付けないと` 等。之後可拆成場景詞彙、評價詞、提醒用語三類。",
+      "body": "預留給後續補充單語，例如 `交通の便がいい`、`便利な`、`気を付けないと` 等。之後可拆成場景詞彙、評價詞、提醒用語三類。",
       "related_vocab": ["交通の便", "便利", "気を付けます"],
-      "related_grammar": []
+      "related_vocab_ids": ["vocab-koutsuu", "vocab-benri", "vocab-kiwotsukeru"],
+      "related_grammar": [],
+      "related_grammar_ids": []
     },
     {
       "id": "content-transcript",
@@ -46,7 +56,9 @@
       "type": "placeholder",
       "body": "這裡預留完整逐字稿內容。建議未來每段逐字稿也切成 block，並附上 related_vocab、related_grammar、source_audio。",
       "related_vocab": [],
-      "related_grammar": []
+      "related_vocab_ids": [],
+      "related_grammar": [],
+      "related_grammar_ids": []
     }
   ]
 }

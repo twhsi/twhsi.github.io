@@ -46,13 +46,13 @@ export function createNav() {
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark">This is a lesson 14 book</span>
-        <div class="brand-title">大家的日本語 第十四課複習系統</div>
+        <div class="brand-title">大家的日本語 第十四課網站</div>
       </div>
       <nav class="nav">
         <a data-nav href="${siteRoot}/index.html">首頁</a>
-        <a data-nav href="${siteRoot}/pages/vocab.html">單字</a>
+        <a data-nav href="${siteRoot}/pages/vocab.html">單語</a>
         <a data-nav href="${siteRoot}/pages/practice-a.html">練習A</a>
-        <a data-nav href="${siteRoot}/pages/content.html">內容</a>
+        <a data-nav href="${siteRoot}/pages/content.html">導引</a>
         <a data-nav href="${siteRoot}/pages/index-map.html">索引</a>
       </nav>
     </header>

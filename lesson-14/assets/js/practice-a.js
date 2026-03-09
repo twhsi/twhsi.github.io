@@ -1,11 +1,20 @@
 import { SegmentAudioPlayer } from "./audio-player.js";
-import { byId, createHero, createNav, createTag, loadJson, setActiveNav } from "./common.js";
+import { byId, createHero, createNav, loadJson, setActiveNav } from "./common.js";
+import { mountLocalGraph } from "./local-graph.js";
+import { loadSiteGraph } from "./site-graph.js";
+import { TtsPlayer } from "./tts-player.js";
 
-function sentenceCard(sentence, grammarMap) {
+function sentenceCard(sentence, vocabMap, grammarMap) {
   const grammarTags = sentence.grammar_points
     .map((id) => grammarMap.get(id)?.pattern)
     .filter(Boolean)
     .map((pattern) => `<span class="tag">${pattern}</span>`)
+    .join("");
+
+  const vocabTags = (sentence.linked_vocab || [])
+    .map((id) => vocabMap.get(id))
+    .filter(Boolean)
+    .map((item) => `<a class="tag-link" href="./vocab.html#${item.id}">${item.kanji || item.kana}</a>`)
     .join("");
 
   return `
@@ -15,11 +24,15 @@ function sentenceCard(sentence, grammarMap) {
           <div class="romaji">${sentence.section}</div>
           <h3>${sentence.jp}</h3>
         </div>
-        <button class="button" type="button" data-play="${sentence.id}">播放句子</button>
+        <div class="button-row">
+          <button class="button" type="button" data-play="${sentence.id}">播放句子</button>
+          <button class="ghost-button" type="button" data-tts="${sentence.id}">機器發音</button>
+        </div>
       </div>
       <p>${sentence.zh}</p>
       <p class="small">${sentence.romaji}</p>
       <div class="sentence-tags">${grammarTags}</div>
+      <div class="tag-row">${vocabTags}</div>
       <div class="timeline">
         <span>${sentence.audio?.label || "課本音檔"}</span>
         <span>${sentence.start}s to ${sentence.end}s</span>
@@ -33,6 +46,9 @@ async function init() {
   const app = document.getElementById("app");
   const lessonData = await loadJson("data/lesson14-meta.json");
   const practice = await loadJson("data/lesson14-practice-a.json");
+  const vocab = await loadJson("data/lesson14-vocab.json");
+  const graph = await loadSiteGraph();
+  const vocabMap = new Map(vocab.items.map((item) => [item.id, item]));
   const grammarMap = new Map(practice.grammar.map((item) => [item.id, item]));
 
   app.innerHTML = `
@@ -40,22 +56,23 @@ async function init() {
     ${createHero({
       eyebrow: "Practice A",
       title: "第14課 練習A",
-      lead: "用句子卡片整理第十四課練習A。每句都從資料檔讀入，播放邏輯統一支援整段 MP3 + start/end 或單獨音檔。",
+      lead: "用句子卡片整理第十四課練習A。每句都從資料檔讀入，播放邏輯統一支援整段 MP3 + start/end，並反查對應單語。",
       metrics: [
         `${practice.sentences.length} 張句子卡`,
         `${practice.grammar.length} 個文法點`,
-        lessonData.audio_sources[0].label,
-        "九宮式閱讀"
+        lessonData.audio_sources[1].label,
+        "句子主導"
       ],
       aside: `
         <div class="section-heading">
           <h3>播放規則</h3>
-          <p>這版優先使用課本整段 MP3 與秒數切段。你之後如果切成逐句 MP3，只要改 JSON 的 audio.mode 與 file，不必重寫頁面。</p>
+          <p>這版優先使用課本整段 MP3 與秒數切段。右側 graph 會把句子跟單語連回去，讓練習A不再是孤立頁面。</p>
         </div>
         <div class="pill-row">
           <span class="pill">整段 MP3 + 秒數</span>
           <span class="pill">逐句 MP3 相容</span>
           <span class="pill">文法標籤</span>
+          <span class="pill">單語反查</span>
         </div>
       `
     })}
@@ -71,9 +88,10 @@ async function init() {
         <aside class="detail-panel">
           <div class="section-heading">
             <h2>文法索引</h2>
-            <p>句子不是單獨背。每張卡都掛回文法點，之後也能從單字頁與內容頁交叉連結。</p>
+            <p>句子不是單獨背。每張卡都掛回文法點，並且會列出對應單語。</p>
           </div>
           <div class="list" id="grammar-list"></div>
+          <div id="practice-graph"></div>
           <div data-audio-dock></div>
         </aside>
       </div>
@@ -82,13 +100,28 @@ async function init() {
 
   setActiveNav();
   const audioPlayer = new SegmentAudioPlayer();
+  const ttsPlayer = new TtsPlayer();
+  const initialFocus = decodeURIComponent(location.hash.replace(/^#/, "")) || practice.sentences[0]?.id || lessonData.lesson.id;
 
   const grid = document.getElementById("sentence-grid");
-  grid.innerHTML = practice.sentences.map((sentence) => sentenceCard(sentence, grammarMap)).join("");
+  grid.innerHTML = practice.sentences.map((sentence) => sentenceCard(sentence, vocabMap, grammarMap)).join("");
   grid.querySelectorAll("[data-play]").forEach((button) => {
     button.addEventListener("click", () => {
       const sentence = byId(practice.sentences, button.dataset.play);
-      if (sentence) audioPlayer.play(sentence.audio, sentence.jp);
+      if (!sentence) return;
+      audioPlayer.play(sentence.audio, sentence.jp);
+      mountLocalGraph(document.getElementById("practice-graph"), graph, {
+        focusId: sentence.id,
+        description: "點任何一句後，右側圖會改成這句的局部關聯。"
+      });
+      history.replaceState(null, "", `#${sentence.id}`);
+    });
+  });
+
+  grid.querySelectorAll("[data-tts]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const sentence = byId(practice.sentences, button.dataset.tts);
+      if (sentence) ttsPlayer.speak(sentence.jp);
     });
   });
 
@@ -96,6 +129,11 @@ async function init() {
   practice.grammar.forEach((item) => {
     const article = document.createElement("article");
     article.className = "card";
+    article.id = item.id;
+    const linkedSentences = practice.sentences.filter((sentence) => sentence.grammar_points.includes(item.id));
+    const linkedVocab = [...new Set(linkedSentences.flatMap((sentence) => sentence.linked_vocab || []))]
+      .map((id) => vocabMap.get(id))
+      .filter(Boolean);
     article.innerHTML = `
       <div class="detail-top">
         <h3>${item.pattern}</h3>
@@ -105,8 +143,16 @@ async function init() {
       <div class="bullet-list">
         ${item.examples.map((example) => `<p>${example.jp}<br><span class="small">${example.zh}</span></p>`).join("")}
       </div>
+      <div class="tag-row">
+        ${linkedVocab.map((vocabItem) => `<a class="tag-link" href="./vocab.html#${vocabItem.id}">${vocabItem.kanji || vocabItem.kana}</a>`).join("")}
+      </div>
     `;
     grammarList.appendChild(article);
+  });
+
+  mountLocalGraph(document.getElementById("practice-graph"), graph, {
+    focusId: initialFocus,
+    description: "右側是練習A的 Local Graph View。點句子播放後也會同步更新。"
   });
 }
 

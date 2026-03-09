@@ -1,17 +1,20 @@
 import { createHero, createNav, createTag, loadJson, setActiveNav } from "./common.js";
+import { mountLocalGraph } from "./local-graph.js";
+import { loadSiteGraph } from "./site-graph.js";
 
 async function init() {
   const app = document.getElementById("app");
   const lessonData = await loadJson("data/lesson14-meta.json");
   const lesson = lessonData.lesson;
   const content = await loadJson("data/lesson14-content.json");
+  const graph = await loadSiteGraph();
 
   app.innerHTML = `
     ${createNav()}
     ${createHero({
-      eyebrow: "Google Doc Content",
-      title: "上課內容頁",
-      lead: "這頁先把 Google Doc / 上課逐字稿的資料容器建好。內容區塊已經可按類型、關聯單字、關聯文法擴充，不再把長文直接塞進 HTML。",
+      eyebrow: "Study Guide",
+      title: "第14課 導引頁",
+      lead: "這頁不直接塞滿長文，而是放課程導引、來源筆記、音檔策略與 Local Graph View 的閱讀方式。",
       metrics: [
         `${content.blocks.length} 個內容區塊`,
         `${content.blocks.filter((block) => block.type === "note").length} 個摘要區塊`,
@@ -20,17 +23,24 @@ async function init() {
       ],
       aside: `
         <div class="section-heading">
-          <h3>資料結構</h3>
-          <p>每個 block 都有 id、title、type、body、related_vocab、related_grammar。後續從 Google Docs 補資料時，直接更新 JSON 即可。</p>
+          <h3>閱讀順序</h3>
+          <p>先看單語，再看練習A句子。若想知道某句牽涉哪些單語與文法，就用右側 graph 追過去。</p>
         </div>
       `
     })}
-    <section class="panel">
-      <div class="section-heading">
-        <h2>內容區塊</h2>
-        <p class="lead">目前先把老師講解、補充筆記與待整理段落分開，方便逐步擴寫。</p>
+    <section class="workspace">
+      <div class="workspace-grid">
+        <div class="panel">
+          <div class="section-heading">
+            <h2>導引區塊</h2>
+            <p class="lead">目前先把來源筆記、課程導引、補充筆記與待整理段落分開，方便逐步擴寫。</p>
+          </div>
+          <div class="content-grid" id="content-grid"></div>
+        </div>
+        <aside class="detail-panel">
+          <div id="content-graph"></div>
+        </aside>
       </div>
-      <div class="content-grid" id="content-grid"></div>
     </section>
   `;
 
@@ -54,7 +64,20 @@ async function init() {
     const tagRow = article.querySelector(".tag-row");
     block.related_vocab.forEach((item) => tagRow.appendChild(createTag(item)));
     block.related_grammar.forEach((item) => tagRow.appendChild(createTag(item, "warn")));
+    article.addEventListener("click", () => {
+      history.replaceState(null, "", `#${block.id}`);
+      mountLocalGraph(document.getElementById("content-graph"), graph, {
+        focusId: block.id,
+        description: "導引頁右側會顯示目前區塊牽涉到的單語與文法。"
+      });
+    });
     grid.appendChild(article);
+  });
+
+  const initialFocus = decodeURIComponent(location.hash.replace(/^#/, "")) || content.blocks[0]?.id || lesson.id;
+  mountLocalGraph(document.getElementById("content-graph"), graph, {
+    focusId: initialFocus,
+    description: "這裡用來解釋右側 Local Graph View 的閱讀方式。"
   });
 }
 

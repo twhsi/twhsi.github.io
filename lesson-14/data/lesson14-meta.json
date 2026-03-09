@@ -1,22 +1,18 @@
 {
   "lesson": {
-    "id": "minna-nihongo-2-lesson-14",
+    "id": "lesson-14-root",
     "title": "This is a lesson 14 book",
     "subtitle": "大家的日本語 初級二 第14課",
-    "description": "第十四課複習系統把課本句子、練習A、單字、Google Doc 課堂內容整理成同一個可擴充的靜態網站。這一版先完成可操作的 MVP，並保留與 Obsidian 同步的資料結構。"
+    "description": "第十四課網站把 `第十四課 網站/P.28 單語` 與 `第十四課 網站/P.32 練習A` 兩份來源整理成同一個可擴充的靜態網站。這一版先完成單語、練習A、導引、索引四個入口，並保留與 Obsidian 同步的資料結構。"
   },
   "audio_sources": [
     {
+      "file": "大家的日本語 初級二 p28.mp3",
+      "label": "課本 P28 單語整段錄音"
+    },
+    {
       "file": "大家的日本語 初級二 p32.mp3",
       "label": "課本 P32 練習A 整段錄音"
-    },
-    {
-      "file": "大家的日本語 初級二 p31.mp3",
-      "label": "課本 P31 補充錄音"
-    },
-    {
-      "file": "大家的日本語 初級二 p30.mp3",
-      "label": "課本 P30 補充錄音"
     }
   ]
 }

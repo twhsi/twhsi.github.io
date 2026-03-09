@@ -20,7 +20,7 @@
       "id": "grammar-mashouka",
       "pattern": "V2 + ましょうか",
       "meaning": "提案",
-      "explanation": "主動提議幫忙或釋出善意，語氣接近「要不要我來……？」。",
+      "explanation": "主動提議幫忙或釋出善意，語氣接近「要不要我來......？」。",
       "examples": [
         {
           "jp": "手伝いましょうか。",
@@ -57,6 +57,7 @@
       "zh": "請讀題目。",
       "romaji": "Mondai o yonde kudasai.",
       "grammar_points": ["grammar-te-kudasai"],
+      "linked_vocab": ["vocab-yomu"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -67,7 +68,7 @@
       "start": 4,
       "end": 8,
       "source": "課本 P32 練習A",
-      "note": "初始秒數已建立，可直接在 JSON 微調。"
+      "note": "對應單語：読みます。"
     },
     {
       "id": "sentence-write-here",
@@ -76,6 +77,7 @@
       "zh": "請寫在這裡。",
       "romaji": "Koko ni kaite kudasai.",
       "grammar_points": ["grammar-te-kudasai"],
+      "linked_vocab": ["vocab-kaku"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -95,6 +97,7 @@
       "zh": "請告訴我電話號碼。",
       "romaji": "Denwa bangou o oshiete kudasai.",
       "grammar_points": ["grammar-te-kudasai"],
+      "linked_vocab": ["vocab-oshieru"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -105,7 +108,7 @@
       "start": 21,
       "end": 26,
       "source": "課本 P32 練習A",
-      "note": "也是單字 `教えます` 的回查入口。"
+      "note": "也是單語 `教えます` 的回查入口。"
     },
     {
       "id": "sentence-center",
@@ -114,6 +117,7 @@
       "zh": "第14課重點是先把動詞變成て形，再套進三個核心句型。",
       "romaji": "Te-kei kara mittsu no bunkei e.",
       "grammar_points": ["grammar-te-kudasai", "grammar-mashouka", "grammar-teimasu"],
+      "linked_vocab": ["vocab-yomu", "vocab-oshieru", "vocab-tetsudau", "vocab-benkyou"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -123,7 +127,7 @@
       },
       "start": 0,
       "end": 4,
-      "source": "九宮複習筆記整理",
+      "source": "第14課 練習A 九宮複習筆記",
       "note": "中心卡用來當九宮式閱讀的總覽，不是課本原句。",
       "layout": "center"
     },
@@ -134,6 +138,7 @@
       "zh": "要不要我幫忙？",
       "romaji": "Tetsudaimashou ka.",
       "grammar_points": ["grammar-mashouka"],
+      "linked_vocab": ["vocab-tetsudau"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -153,6 +158,7 @@
       "zh": "要不要我來關窗？",
       "romaji": "Mado o shimemashou ka.",
       "grammar_points": ["grammar-mashouka"],
+      "linked_vocab": ["vocab-shimemasu"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -172,6 +178,7 @@
       "zh": "要不要我來開冷氣？",
       "romaji": "Ea-kon o tsukemashou ka.",
       "grammar_points": ["grammar-mashouka"],
+      "linked_vocab": ["vocab-tsukeru"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -182,7 +189,7 @@
       "start": 49,
       "end": 54,
       "source": "課堂補充例句",
-      "note": "這句來自現有 Google Doc 補充，不綁死在課本原例。"
+      "note": "這句來自老師補充，不綁死在課本原例。"
     },
     {
       "id": "sentence-miller-reading",
@@ -191,6 +198,7 @@
       "zh": "米勒先生現在正在看報告。",
       "romaji": "Miraa-san wa ima repooto o yonde imasu.",
       "grammar_points": ["grammar-teimasu"],
+      "linked_vocab": ["vocab-yomu"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",
@@ -210,6 +218,7 @@
       "zh": "我一直在學日文。",
       "romaji": "Watashi wa nihongo o benkyou shite imasu.",
       "grammar_points": ["grammar-teimasu"],
+      "linked_vocab": ["vocab-benkyou"],
       "audio": {
         "mode": "segment",
         "file": "大家的日本語 初級二 p32.mp3",

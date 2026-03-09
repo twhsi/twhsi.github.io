@@ -7,14 +7,9 @@
       "romaji": "yomimasu",
       "meaning_zh": "閱讀、讀",
       "pos": "動詞",
-      "notes": "第14課常用在 Vてください 與 Vています。資料模型已預留老師人聲欄位。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 4,
-        "end": 7,
-        "label": "読みます / 読んでください"
-      },
+      "notes": "第14課常用在 Vてください 與 Vています。這個詞會回連到「問題を読んでください」和「ミラーさんは今レポートを読んでいます」。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-read-problem", "sentence-miller-reading"]
     },
     {
@@ -25,13 +20,8 @@
       "meaning_zh": "寫",
       "pos": "動詞",
       "notes": "五段動詞 `く -> いて` 的代表例。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 8,
-        "end": 11,
-        "label": "書きます / 書いて"
-      },
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-write-here"]
     },
     {
@@ -42,13 +32,8 @@
       "meaning_zh": "教、告訴",
       "pos": "動詞",
       "notes": "常出現在 `電話番号を教えてください` 與 `教えましょうか`。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 21,
-        "end": 26,
-        "label": "教えてください"
-      },
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-teach-phone", "sentence-teach-help"]
     },
     {
@@ -59,13 +44,8 @@
       "meaning_zh": "幫忙、協助",
       "pos": "動詞",
       "notes": "第14課主動提案句型 `V2 + ましょうか` 的代表例。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 36,
-        "end": 40,
-        "label": "手伝いましょうか"
-      },
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-help-offer"]
     },
     {
@@ -76,6 +56,7 @@
       "meaning_zh": "打開電器",
       "pos": "動詞",
       "notes": "常與 エアコン 搭配，用來對比 `消します`。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": ["sentence-aircon-offer"]
     },
@@ -86,7 +67,8 @@
       "romaji": "keshimasu",
       "meaning_zh": "關閉電器",
       "pos": "動詞",
-      "notes": "與 `つけます` 對照，適合之後放進動作類單字索引。",
+      "notes": "與 `つけます` 對照，適合之後放進動作類單語索引。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": []
     },
@@ -98,6 +80,7 @@
       "meaning_zh": "打開門窗",
       "pos": "動詞",
       "notes": "物理打開，和電器的 `つけます` 不同。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": []
     },
@@ -109,13 +92,8 @@
       "meaning_zh": "關上門窗",
       "pos": "動詞",
       "notes": "常與 `窓を閉めましょうか` 連用。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 44,
-        "end": 49,
-        "label": "窓を閉めましょうか"
-      },
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-close-window"]
     },
     {
@@ -126,13 +104,8 @@
       "meaning_zh": "學習、讀書",
       "pos": "動詞",
       "notes": "第三類動詞，常出現在 `Vています` 的習慣或進行用法。",
-      "audio": {
-        "mode": "segment",
-        "file": "大家的日本語 初級二 p32.mp3",
-        "start": 58,
-        "end": 63,
-        "label": "日本語を勉強しています"
-      },
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
+      "audio": null,
       "related_sentences": ["sentence-study-now"]
     },
     {
@@ -142,7 +115,8 @@
       "romaji": "koutsuu no ben",
       "meaning_zh": "交通的方便程度",
       "pos": "名詞",
-      "notes": "來自 Google Doc 補充，適合在內容頁作延伸詞彙。",
+      "notes": "來自補充語彙，適合在導引頁作延伸詞彙。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": []
     },
@@ -153,7 +127,8 @@
       "romaji": "benri",
       "meaning_zh": "方便",
       "pos": "な形容詞",
-      "notes": "可在內容頁與補充單字區擴成應用例句。",
+      "notes": "可在導引頁與補充單語區擴成應用例句。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": []
     },
@@ -164,7 +139,8 @@
       "romaji": "ki o tsukemasu",
       "meaning_zh": "小心、注意",
       "pos": "動詞",
-      "notes": "來自 Google Doc 補充語彙，未來可連到場景句。",
+      "notes": "來自補充語彙，未來可連到場景句。",
+      "source_note": "第十四課 網站/P.28 單語/第14課單語.md",
       "audio": null,
       "related_sentences": []
     }
