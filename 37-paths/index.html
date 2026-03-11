@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>三十七道品九宮格</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --bg-2: #e8dfd1;
+      --panel: #fffaf2;
+      --cell: #fffef9;
+      --ink: #221a12;
+      --ink-soft: #5d5143;
+      --line: #dbc8ae;
+      --line-strong: #b17a3a;
+      --accent: #9f5925;
+      --accent-soft: #f4dfca;
+      --shadow: 0 18px 38px rgba(74, 50, 24, 0.2);
+      --dock-h: 250px;
+      --dock-h-mobile: 300px;
+    }
+
+    body.dark {
+      --bg: #18130f;
+      --bg-2: #241d16;
+      --panel: #211a13;
+      --cell: #2a2118;
+      --ink: #f7ead8;
+      --ink-soft: #d8c5ac;
+      --line: #4f3c2b;
+      --line-strong: #daa874;
+      --accent: #efbb85;
+      --accent-soft: #3b2c1f;
+      --shadow: 0 22px 38px rgba(0, 0, 0, 0.42);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(160, 95, 45, 0.18), transparent 35%),
+        radial-gradient(circle at 88% 14%, rgba(44, 122, 106, 0.13), transparent 28%),
+        linear-gradient(160deg, var(--bg), var(--bg-2));
+      transition: background 220ms ease, color 220ms ease;
+    }
+
+    .shell {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .workspace {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      min-height: calc(100vh - 28px);
+    }
+
+    .board-pane {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(155deg, rgba(255, 255, 255, 0.45), rgba(255, 248, 236, 0.35));
+      box-shadow: var(--shadow);
+    }
+
+    .board {
+      width: min(100%, calc(100vh - 64px));
+      aspect-ratio: 1 / 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .cell {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(165deg, var(--cell), rgba(255, 248, 235, 0.9));
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      padding: 10px 10px 8px;
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 180ms ease;
+    }
+
+    .cell:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+    }
+
+    .cell.active {
+      border-color: var(--accent);
+      background: linear-gradient(165deg, var(--accent-soft), rgba(255, 238, 214, 0.9));
+      box-shadow: inset 0 0 0 1px rgba(159, 89, 37, 0.24);
+    }
+
+    .cell-id {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .cell-title {
+      display: block;
+      font-size: clamp(15px, 1.2vw, 20px);
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .cell-center {
+      border: 2px solid var(--accent);
+    }
+
+    .note-pane {
+      width: min(420px, 32vw);
+      min-width: 300px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .note-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .note-title {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .note-title-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .note-title-link:hover {
+      color: var(--accent);
+    }
+
+    .theme-btn {
+      border: 1px solid var(--line);
+      background: var(--cell);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .meta {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .note-card h2 {
+      margin: 2px 0 8px;
+      font-size: clamp(24px, 2vw, 32px);
+      line-height: 1.2;
+    }
+
+    .note-card p {
+      margin: 0;
+      font-size: clamp(16px, 1.25vw, 20px);
+      line-height: 1.75;
+      color: var(--ink-soft);
+      white-space: pre-wrap;
+    }
+
+    .hint {
+      margin-top: auto;
+      font-size: 13px;
+      color: var(--ink-soft);
+      border-top: 1px dashed var(--line);
+      padding-top: 10px;
+    }
+
+    @media (max-width: 980px) {
+      :root { --dock-h: var(--dock-h-mobile); }
+
+      body { overflow: hidden; }
+
+      .shell {
+        max-width: none;
+        height: 100vh;
+        padding: 12px 12px 0;
+      }
+
+      .workspace {
+        height: 100%;
+        min-height: 0;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .note-pane {
+        order: 1;
+        width: 100%;
+        min-width: 0;
+        height: calc(100vh - var(--dock-h) - 24px);
+        overflow: auto;
+        padding: 18px 16px 40px;
+      }
+
+      .board-pane {
+        order: 2;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        height: var(--dock-h);
+        padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 12px);
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        background: var(--panel);
+        backdrop-filter: blur(10px);
+      }
+
+      .board {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        aspect-ratio: auto;
+        gap: 8px;
+      }
+
+      .cell {
+        border-radius: 12px;
+        min-height: 0;
+        padding: 9px;
+      }
+
+      .cell-title {
+        font-size: clamp(12px, 2.9vw, 14px);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .cell-id {
+        font-size: 11px;
+        margin-bottom: 2px;
+      }
+
+      .note-card p {
+        font-size: clamp(16px, 4.2vw, 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="workspace">
+      <section class="board-pane" aria-label="三十七道品九宮格">
+        <div class="board" id="grid"></div>
+      </section>
+
+      <aside class="note-pane" aria-live="polite">
+        <div class="note-top">
+          <h1 class="note-title"><a class="note-title-link" href="./">37道品</a></h1>
+          <button class="theme-btn" id="theme-btn" type="button">切換明暗</button>
+        </div>
+
+        <div class="meta" id="card-id">5 核心</div>
+        <section class="note-card">
+          <h2 id="card-title">三十七道品總綱</h2>
+          <p id="card-body"></p>
+        </section>
+
+        <div class="hint">左側九宮切換條目，右側為 50-300 字說明。核心分類：三四、二五、隻七、單八。</div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const cards = [
+      {
+        id: "1",
+        title: "四念處",
+        body: "四念處是觀照入門：觀身不淨、觀受是苦、觀心無常、觀法無我。它把修行者從習慣性的顛倒見拉回現前，如實面對身心與境界，不再把無常當常、把苦當樂。四念處既是智慧訓練，也是後續戒定慧的基底，若能在日常中反覆提起正念，遇境時就較不容易被貪瞋癡牽走。"
+      },
+      {
+        id: "2",
+        title: "四正勤",
+        body: "四正勤是把觀照落實成行動：已生惡令斷、未生惡不生、未生善令生、已生善令增長。它不是空泛的努力，而是對心行做持續校正。先看見惡念已起就立刻止息，再守護尚未起的惡因；同時培養善念善行，並讓已生善法穩定擴大。修四正勤可避免修行只停留在理解層次，真正形成習慣與力量。"
+      },
+      {
+        id: "3",
+        title: "四如意足",
+        body: "四如意足是令修行得力的定學條件：欲、念、進、慧。欲是發願與樂欲，讓心願意長期投入；念是繫心不忘所修法門；進是穩定精進而非衝動用力；慧是選擇與調整方法，避免盲修。四者相互支持，能讓散亂心逐漸專注，修行從斷續轉為連續，進而形成可持續的內在動能。"
+      },
+      {
+        id: "4",
+        title: "五根",
+        body: "五根是修行成熟後的五種內在能力：信、進、念、定、慧。信令方向不疑，進令實踐不退，念令覺察不失，定令心不散亂，慧令抉擇不迷。稱為根，是因為它們能生長一切善法，如植物之根能持續輸送養分。五根並非分離的科目，而是互相增上，從信起修，最後由定發慧，形成穩固修道體質。"
+      },
+      {
+        id: "5 核心",
+        title: "三十七道品總綱",
+        body: "三十七道品可統攝為四組：三四、二五、隻七、單八。三四是四念處、四正勤、四如意足，偏重戒定慧的基本訓練；二五是五根五力，代表能力從生起到堅固；隻七是七覺支，調整昏沈與散亂，令心入於正定；單八是八正道，將正見貫穿語言、行為與生活。由此可見，三十七道品不是零散名相，而是一條可操作的修行地圖。"
+      },
+      {
+        id: "6",
+        title: "五力",
+        body: "五力是五根進一步不被動搖的狀態：信力、進力、念力、定力、慧力。當外境衝擊或煩惱現前時，若只是五根可能仍會退失；成為五力後，便具備對治與承擔的韌性。這表示修行不只在靜中有效，也能在忙亂、逆境、衝突中保持方向。五力的重點在於『不可屈伏』，是由反覆實踐累積出的穩定力量。"
+      },
+      {
+        id: "7",
+        title: "七覺支",
+        body: "七覺支是入定與覺悟的調節系統：念、擇法、精進、喜、輕安、定、捨。當心昏沈時，可強化擇法、精進、喜；當心散亂時，則培養輕安、定、捨，使心回到平衡。念覺支如守門者，讓修行不離正法。七覺支的價值在於『依狀態調整方法』，不是僵化用功，而是隨時觀察、隨時校準。"
+      },
+      {
+        id: "8",
+        title: "八正道",
+        body: "八正道把智慧落在生活全域：正見、正思惟、正語、正業、正命、正精進、正念、正定。正見是總綱，確立因果與離苦方向；其餘七項是具體實踐，涵蓋思想、語言、行為、工作與心性訓練。八正道不是只給出家人，也可作為在家修學的倫理與心法框架，讓修行不脫離現實，而在每個選擇裡逐步修正。"
+      },
+      {
+        id: "9",
+        title: "修行次第",
+        body: "從次第看，先以四念處建立如實觀，再以四正勤斷惡修善，配合四如意足安住於定；進而生起五根，鍛鍊為五力；在定中運用七覺支調心；最後以八正道貫穿日常。這條路徑顯示：佛法修行不是只求片刻感受，而是從見地、行為、習慣到生命方向的整體轉化。每一步都可互攝，重點在長期、穩定、可驗證。"
+      }
+    ];
+
+    const grid = document.getElementById("grid");
+    const cardId = document.getElementById("card-id");
+    const cardTitle = document.getElementById("card-title");
+    const cardBody = document.getElementById("card-body");
+    const themeBtn = document.getElementById("theme-btn");
+
+    let activeIndex = 4;
+
+    function renderGrid() {
+      grid.innerHTML = "";
+      cards.forEach((card, index) => {
+        const button = document.createElement("button");
+        const isCenter = index === 4;
+        button.type = "button";
+        button.className = "cell" + (index === activeIndex ? " active" : "") + (isCenter ? " cell-center" : "");
+        button.innerHTML = `<span class="cell-id">${card.id}</span><span class="cell-title">${card.title}</span>`;
+        button.addEventListener("click", () => setActive(index));
+        grid.appendChild(button);
+      });
+    }
+
+    function setActive(index) {
+      activeIndex = index;
+      const card = cards[index];
+      cardId.textContent = card.id;
+      cardTitle.textContent = card.title;
+      cardBody.textContent = card.body;
+      renderGrid();
+    }
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+      document.body.classList.toggle("dark", isDark);
+      themeBtn.textContent = isDark ? "切換成明亮" : "切換成暗色";
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem("mandala-theme");
+      if (saved === "dark" || saved === "light") {
+        applyTheme(saved);
+      } else {
+        const preferDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(preferDark ? "dark" : "light");
+      }
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const next = document.body.classList.contains("dark") ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("mandala-theme", next);
+    });
+
+    setActive(activeIndex);
+    initTheme();
+  </script>
+</body>
+</html>
