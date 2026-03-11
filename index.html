@@ -43,82 +43,11 @@
       padding:18px;
       background: linear-gradient(180deg, rgba(15,22,32,.55), rgba(12,18,26,.35));
     }
-    .hero{
-      padding:22px;
-      border-radius: 18px;
-      border:1px solid rgba(122,167,255,.18);
-      background:
-        radial-gradient(700px 220px at 0% 0%, rgba(122,167,255,.18), transparent 60%),
-        radial-gradient(680px 260px at 100% 0%, rgba(120,255,210,.10), transparent 65%),
-        rgba(255,255,255,.03);
-    }
-    .eyebrow{
-      color: var(--accent-2);
-      font-size: 12px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-    .hero h2{
-      margin:10px 0 12px;
-      font-size: 30px;
-      line-height: 1.15;
-    }
-    .hero p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-      max-width:72ch;
-    }
-    .section{
-      margin-top:18px;
-      padding-top:18px;
-      border-top:1px dashed rgba(255,255,255,.14);
-    }
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:end;
-      margin-bottom:12px;
-    }
-    .section-head h2{
-      margin:0;
-      font-size:18px;
-    }
-    .section-head p{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
-      max-width:70ch;
-    }
-    .architecture{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-    }
-    .stage{
-      padding:16px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .stage strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:15px;
-    }
-    .stage p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
-    }
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:12px;
-      margin-top:10px;
+      margin-top:2px;
     }
     .cell{
       padding:14px 12px;
@@ -174,12 +103,8 @@
     footer{padding:18px 18px 24px; color:var(--muted); font-size:12px;}
     code{color:rgba(232,238,247,.9)}
     @media (max-width: 820px){
-      .architecture,
       .grid{
         grid-template-columns: 1fr;
-      }
-      .hero h2{
-        font-size:24px;
       }
     }
   </style>
@@ -199,44 +124,7 @@
   <div class="wrap">
     <div class="panel">
       <div class="content">
-        <section class="hero">
-          <div class="eyebrow">Mandala Index</div>
-          <h2>永錫的九宮網站</h2>
-          <p>
-            這個首頁不再只是連結集合，而是整站的導航中樞。中間是永錫正在經營的主題，外圈是各系列入口，每個系列再往下展開成自己的九宮索引與文章頁。
-          </p>
-        </section>
-
-        <section class="section">
-          <div class="section-head">
-            <div>
-              <h2>整體架構</h2>
-              <p>先定義網站的三層結構，之後新增系列時就能沿用同一套規則。</p>
-            </div>
-          </div>
-          <div class="architecture">
-            <div class="stage">
-              <strong>1. 總站首頁</strong>
-              <p>負責定義站名、九宮中心定位，以及所有系列的主入口。</p>
-            </div>
-            <div class="stage">
-              <strong>2. 系列首頁</strong>
-              <p>每個主題各自有一個索引頁，例如讀書、寫書、羽球、旅行、日語。</p>
-            </div>
-            <div class="stage">
-              <strong>3. 單篇內容</strong>
-              <p>每篇文章或每個專案放進自己的資料夾，維持可擴充、可維護的結構。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-head">
-            <div>
-              <h2>九宮入口</h2>
-              <p>以下九格是目前網站的主題分區，中心格代表整站核心方向。</p>
-            </div>
-          </div>
+        <section>
           <div class="grid">
             <a class="cell" href="/37-paths/">
               <strong>37道品</strong>
