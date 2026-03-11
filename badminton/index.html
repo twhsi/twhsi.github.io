@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>羽毛球九宮格｜twhsi.github.io</title>
+  <style>
+    :root{
+      --bg:#07111b;
+      --bg2:#0e1b29;
+      --panel:rgba(255,255,255,.05);
+      --line:rgba(255,255,255,.10);
+      --text:#eef4ff;
+      --muted:#9eb0c9;
+      --accent:#7db8ff;
+      --accent2:#7ff0c8;
+      --shadow:0 18px 48px rgba(0,0,0,.35);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(125,184,255,.18), transparent 60%),
+        radial-gradient(900px 560px at 90% 10%, rgba(127,240,200,.08), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 18px 48px}
+    .back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);margin-bottom:18px}
+    .hero{padding:24px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));box-shadow:var(--shadow)}
+    h1{margin:0;font-size:clamp(28px,4.4vw,48px);letter-spacing:.5px}
+    .lead{max-width:72ch;color:var(--muted);line-height:1.7;margin-top:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+    .cell{min-height:138px;padding:18px;border-radius:20px;border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}
+    .cell strong{font-size:18px}
+    .cell p{margin:10px 0 0;color:var(--muted);line-height:1.55;font-size:14px}
+    .center{background:radial-gradient(420px 160px at 50% 18%, rgba(125,184,255,.28), transparent 70%), rgba(255,255,255,.08);border-color:rgba(125,184,255,.45)}
+    .meta{display:inline-flex;align-self:flex-start;padding:6px 10px;border:1px solid rgba(125,184,255,.28);border-radius:999px;color:#d7e6ff;background:rgba(125,184,255,.08);font-size:12px}
+    .section{margin-top:18px;padding:20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.03)}
+    .section h2{margin:0 0 12px;font-size:20px}
+    .list{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+    .list li{padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);line-height:1.6}
+    .modules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .module{padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04);text-align:center;color:#d9e7fa}
+    @media (max-width: 900px){
+      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width: 640px){
+      .wrap{padding:18px 14px 36px}
+      .hero{padding:18px}
+      .grid{grid-template-columns:1fr}
+      .modules{grid-template-columns:1fr}
+      .cell{min-height:116px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← 回首頁</a>
+
+    <section class="hero">
+      <span class="meta">九宮格入口 Beta</span>
+      <h1>羽毛球九宮格</h1>
+      <div class="lead">
+        以羽毛球為中心，先把體能、殺球、防守、雙打、步法、運氣、心理、品格八個面向整理成可擴充的九宮格入口；下方再往近期練習、問題清單與網站模組延伸，後續可直接長成 81 宮。
+      </div>
+
+      <div class="grid">
+        <article class="cell"><strong>體能</strong><p>爆發力、核心穩定、耐力與恢復節奏。</p></article>
+        <article class="cell"><strong>殺球</strong><p>揮拍速度、擊點、落點與連續進攻品質。</p></article>
+        <article class="cell"><strong>防守</strong><p>接殺、擋網、被動轉主動的穩定度。</p></article>
+        <article class="cell"><strong>雙打</strong><p>輪轉、補位、發接發與搭檔默契。</p></article>
+        <article class="cell center"><strong>羽毛球</strong><p>以九宮格整理訓練方向，逐步擴成可追蹤、可回顧、可部署的系統。</p></article>
+        <article class="cell"><strong>步法</strong><p>啟動、回中、交叉步與節奏控制。</p></article>
+        <article class="cell"><strong>運氣</strong><p>場上細節、準備品質、習慣與臨場感。</p></article>
+        <article class="cell"><strong>心理</strong><p>專注、抗壓、比分波動下的判斷。</p></article>
+        <article class="cell"><strong>品格</strong><p>紀律、尊重、合作與長期鍛鍊態度。</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>近期練習紀錄</h2>
+      <ul class="list">
+        <li>這裡之後可接每週訓練摘要、練球感受與下次修正重點。</li>
+        <li>建議同步保留日期、訓練主題、當日最佳球與最大失誤。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>目前最大的 5 個問題</h2>
+      <ul class="list">
+        <li>可在這裡固定維護當前最卡的技術或比賽問題，方便每週回看。</li>
+        <li>例如：步法回中慢、接殺品質不穩、雙打輪轉判斷遲、殺球後續銜接不足、比分落後時出手急。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>網站模組區</h2>
+      <div class="modules">
+        <div class="module">練習日誌</div>
+        <div class="module">比賽反思</div>
+        <div class="module">影片分析</div>
+        <div class="module">體能恢復</div>
+        <div class="module">心理品格</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
