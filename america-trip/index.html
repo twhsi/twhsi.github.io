@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美國之旅｜舊金山行前九宮格</title>
+  <meta name="description" content="2026 美國之旅行前規劃：左側九宮格導覽，右側查看航班、住宿、行程與預算。" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #111a2a;
+      --surface-soft: #162136;
+      --panel: #0f1726;
+      --line: #253655;
+      --line-strong: #3f5a85;
+      --text: #eaf0fb;
+      --muted: #9fb1cf;
+      --accent: #7ec7ff;
+      --accent-soft: rgba(126, 199, 255, 0.18);
+      --accent-2: #8be6c0;
+      --warn: #ffd390;
+      --radius-xl: 20px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --content-max: 1400px;
+      --grid-max: 760px;
+      --transition: 0.15s ease;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      background:
+        radial-gradient(1200px 700px at 75% -15%, rgba(126, 199, 255, 0.18), transparent 55%),
+        radial-gradient(900px 520px at 8% 110%, rgba(139, 230, 192, 0.15), transparent 55%),
+        var(--bg);
+    }
+
+    .app {
+      min-height: 100dvh;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: minmax(320px, 40%) 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .left,
+    .right {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(17, 26, 42, 0.95), rgba(15, 23, 38, 0.86));
+      box-shadow: var(--shadow);
+    }
+
+    .left {
+      padding: 18px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 16px;
+      height: calc(100dvh - 36px);
+      position: sticky;
+      top: 18px;
+      overflow: hidden;
+      align-self: start;
+    }
+
+    .right {
+      padding: 20px;
+      min-height: calc(100dvh - 36px);
+      overflow: visible;
+      align-self: start;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(36, 52, 80, 0.95), rgba(23, 35, 56, 0.95));
+      border: 1px solid var(--line-strong);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .grid-wrap {
+      width: min(100%, var(--grid-max), calc(100dvh - 240px));
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+      place-self: center;
+    }
+
+    .grid {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .cell {
+      min-width: 0;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(23, 34, 54, 0.95), rgba(18, 28, 45, 0.95));
+      padding: clamp(8px, 1.2vw, 12px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      color: var(--text);
+      text-align: left;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+
+    .cell:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+    }
+
+    .cell.active {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 2px var(--accent-soft), 0 0 0 1px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(180deg, rgba(31, 48, 74, 0.98), rgba(20, 32, 50, 0.98));
+    }
+
+    .cell.center {
+      border-color: var(--line-strong);
+      background: linear-gradient(180deg, rgba(34, 56, 88, 0.98), rgba(23, 37, 58, 0.98));
+    }
+
+    .cell .k {
+      font-size: clamp(11px, 1.2vw, 14px);
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.35px;
+    }
+
+    .cell .t {
+      font-size: clamp(14px, 1.65vw, 30px);
+      font-weight: 700;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    .hint {
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .hint b { color: var(--text); }
+
+    .panel-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-header h2 {
+      margin: 0;
+      font-size: clamp(21px, 2.2vw, 30px);
+      line-height: 1.22;
+      letter-spacing: 0.2px;
+    }
+
+    .panel-tag {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      padding-top: 5px;
+    }
+
+    .md {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(234, 240, 251, 0.96);
+    }
+
+    .md h3 {
+      margin: 20px 0 10px;
+      font-size: 21px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .md h4 {
+      margin: 16px 0 8px;
+      font-size: 16px;
+      color: var(--accent-2);
+    }
+
+    .md ul { margin: 8px 0 12px 20px; }
+    .md li { margin: 7px 0; }
+
+    .md code {
+      background: #0a1322;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 2px 7px;
+      font-size: 0.94em;
+    }
+
+    .md blockquote {
+      margin: 12px 0;
+      padding: 10px 14px;
+      border-left: 3px solid var(--line-strong);
+      border-radius: 8px;
+      background: rgba(17, 26, 42, 0.75);
+      color: #dbe6f9;
+    }
+
+    .md-image {
+      margin: 14px 0;
+    }
+
+    .md-image img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .divider {
+      height: 1px;
+      margin: 14px 0;
+      background: var(--line);
+    }
+
+    .muted-line { color: var(--muted); }
+
+    @media (max-width: 1100px) {
+      .app {
+        grid-template-columns: 1fr;
+        width: min(100%, 940px);
+      }
+
+      .left,
+      .right {
+        min-height: auto;
+      }
+
+      .left {
+        position: static;
+        top: auto;
+        height: auto;
+        overflow: visible;
+      }
+
+      .right {
+        overflow: visible;
+      }
+
+      .grid-wrap {
+        width: min(100%, 620px);
+        place-self: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .app { padding: 12px; gap: 12px; }
+      .left, .right { border-radius: 16px; }
+      .left { padding: 12px; }
+      .right { padding: 14px; }
+      .grid { gap: 8px; }
+      .cell { border-radius: 12px; }
+      .cell .k { font-size: 12px; }
+      .cell .t { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="left">
+      <div class="brand">
+        <div class="badge">九</div>
+        <div>
+          <h1>美國之旅｜舊金山行前九宮格</h1>
+          <p>2026-03-31 出發 · 左九宮導航，右側查看完整規劃</p>
+        </div>
+      </div>
+
+      <div class="grid-wrap">
+        <div class="grid" id="grid"></div>
+      </div>
+
+      <div class="hint">
+        這頁整理「美國之旅」的行前規劃重點。<br />
+        點任一格，右側會顯示對應完整內容。
+      </div>
+    </aside>
+
+    <main class="right" id="rightPane">
+      <div class="panel-header">
+        <h2 id="panelTitle"></h2>
+        <div class="panel-tag" id="panelTag"></div>
+      </div>
+      <article class="md" id="panelBody"></article>
+    </main>
+  </div>
+
+  <script>
+    // =========================================================
+    // 你平常只改這兩段 Markdown
+    // =========================================================
+    const NAV_MD = `
+<!--section: 1-->
+1 | 美國之旅
+舊金山總覽
+
+<!--section: 1.1-->
+1.1 | 航班資訊
+去回程與訂單
+
+<!--section: 1.2-->
+1.2 | 要見的人
+這趟要約的人
+
+<!--section: 1.3-->
+1.3 | 想去地方
+舊金山景點清單
+
+<!--section: 1.4-->
+1.4 | 行前文件
+護照與保險文件
+
+<!--section: 1.5-->
+1.5 | 交通安排
+到達與移動方式
+
+<!--section: 1.6-->
+1.6 | 住宿規劃
+住宿與入住確認
+
+<!--section: 1.7-->
+1.7 | 每日行程
+每天主軸節奏
+
+<!--section: 1.8-->
+1.8 | 預算與備援
+費用、備案、緩衝
+    `.trim();
+
+    const CONTENT_MD = `
+<!--section: 1-->
+1 | 美國之旅
+
+# 美國之旅行前規劃
+
+這份頁面把 2026 年「美國之旅」的準備內容整理成九宮格。
+點左邊任何主題，右邊就顯示對應的詳細筆記。
+
+> 舊金山行程先看全局，再逐格補細節，避免出發前遺漏重要事項。
+
+<!--section: 1.1-->
+1.1 | 航班資訊
+
+## 去回程與訂單資訊
+
+- 去程：2026-03-31（週二）00:05 TPE T2 -> 2026-03-30 20:30 SFO
+- 回程：2026-04-06（週一）00:50 SFO -> 2026-04-07 05:25 TPE T2
+- 訂單編號：ORDO028554847
+- 訂單金額：TWD 50,080
+
+### 建議
+- 提前 24 小時完成線上報到與座位確認
+- 把護照、機票、住宿地址都存成可離線查看
+
+<!--section: 1.2-->
+1.2 | 要見的人
+
+## 這趟要見的人
+
+- 中彥
+
+### 行前確認
+- 出發前一週確認可見面時段
+- 約定碰面地點與備援聯絡方式
+
+<!--section: 1.3-->
+1.3 | 想去地方
+
+## 想去的地方
+
+- 半月灣
+- 漁人碼頭
+- 金門大橋周邊
+
+### 現場安排
+- 出發前先看天氣與風況
+- 排定停留時間與回程時段
+- 同一天不要塞太多遠距景點
+
+<!--section: 1.4-->
+1.4 | 行前文件
+
+## 出發前要帶的文件
+
+- 護照（有效期 6 個月以上）
+- 國際駕照
+- 旅遊保險與緊急聯絡資訊
+
+### 出發前檢查
+- 護照有效期限
+- 駕照與保險文件
+- 重要文件雲端備份
+
+<!--section: 1.5-->
+1.5 | 交通安排
+
+## 到達後的移動規劃
+
+- SFO 抵達後租車或叫車
+- 城市間移動優先安排白天
+- 預留塞車與停車緩衝時間
+
+### 原則
+- 第一段交通先求穩，不要一落地就安排太複雜
+- 每天只放一個主要跨區移動
+
+<!--section: 1.6-->
+1.6 | 住宿規劃
+
+## 住宿與動線
+
+- 以每日主要活動區為中心選住宿
+- 優先可免費取消方案
+- 晚到入住先和飯店確認
+
+### 住宿提醒
+- 抵達日若太晚，先確認 check-in 截止時間
+- 停車費與早餐是否另計要先查清楚
+
+<!--section: 1.7-->
+1.7 | 每日行程
+
+## 每日節奏
+
+- Day 1：抵達、休息、附近採買
+- Day 2：拜訪與市區行程
+- Day 3：半月灣與景點
+- Day 4：彈性行程與備案
+
+### 建議
+- 每天最多安排 2 件核心任務
+- 其餘留給交通與臨時調整
+
+<!--section: 1.8-->
+1.8 | 預算與備援
+
+## 預算、保險、風險備案
+
+- 預算拆分：交通 / 住宿 / 餐飲 / 購物
+- 保留 15% 突發預算
+- 重要行程準備 Plan B（天氣或延誤）
+
+### 行前最後確認
+- 文件齊全
+- 聯絡人與地址可離線查閱
+- 航班與住宿皆已二次確認
+    `.trim();
+
+    // =========================================================
+    // Section parser
+    // =========================================================
+    function splitBySection(md) {
+      const re = /<!--\s*section:\s*([0-9]+(?:\.[0-9]+)*)\s*-->/g;
+      const matches = [...md.matchAll(re)];
+      const blocks = [];
+
+      for (let i = 0; i < matches.length; i += 1) {
+        const section = matches[i][1];
+        const start = matches[i].index + matches[i][0].length;
+        const end = i + 1 < matches.length ? matches[i + 1].index : md.length;
+        const raw = md.slice(start, end).trim();
+        blocks.push({ section, raw });
+      }
+
+      return blocks;
+    }
+
+    function parseNavBlocks(navMd) {
+      return splitBySection(navMd).map((block) => {
+        const lines = block.raw.split("\n").map((s) => s.trim()).filter(Boolean);
+        const head = lines[0] || "";
+        const [label, title] = head.split("|").map((s) => (s || "").trim());
+
+        return {
+          section: block.section,
+          label: label || `S${block.section}`,
+          title: title || "",
+        };
+      });
+    }
+
+    function parseContentBlocks(contentMd) {
+      const out = {};
+      splitBySection(contentMd).forEach((block) => {
+        const lines = block.raw.split("\n").map((line) => line.trimEnd());
+        const first = lines.find((line) => line.trim().length > 0) || "";
+
+        out[block.section] = {
+          section: block.section,
+          tag: `section ${block.section}`,
+          title: first.includes("|") ? first : `section ${block.section}`,
+          md: block.raw,
+        };
+      });
+      return out;
+    }
+
+    // =========================================================
+    // Mini markdown renderer
+    // =========================================================
+    function mdToHtml(md) {
+      const escapeHtml = (s) => s
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+
+      const lines = md.replaceAll("\r\n", "\n").split("\n");
+      let html = "";
+      let inUl = false;
+      let inQuote = false;
+
+      const closeUl = () => {
+        if (inUl) {
+          html += "</ul>";
+          inUl = false;
+        }
+      };
+
+      const closeQuote = () => {
+        if (inQuote) {
+          html += "</blockquote>";
+          inQuote = false;
+        }
+      };
+
+      for (const raw of lines) {
+        const line = raw.trimEnd();
+        const t = line.trim();
+
+        if (!t) {
+          closeUl();
+          closeQuote();
+          html += "<div style='height:10px'></div>";
+          continue;
+        }
+
+        if (t === "---") {
+          closeUl();
+          closeQuote();
+          html += "<div class='divider'></div>";
+          continue;
+        }
+
+        if (t.startsWith(">")) {
+          closeUl();
+          if (!inQuote) {
+            html += "<blockquote>";
+            inQuote = true;
+          }
+          html += `<div>${escapeHtml(t.replace(/^>\s?/, ""))}</div>`;
+          continue;
+        }
+        closeQuote();
+
+        if (t.startsWith("# ")) {
+          closeUl();
+          html += `<div style="font-size:30px;font-weight:800;line-height:1.2;margin:8px 0 10px">${escapeHtml(t.slice(2))}</div>`;
+          continue;
+        }
+
+        if (t.startsWith("## ")) {
+          closeUl();
+          html += `<h3>${escapeHtml(t.slice(3))}</h3>`;
+          continue;
+        }
+
+        if (t.startsWith("### ")) {
+          closeUl();
+          html += `<h4>${escapeHtml(t.slice(4))}</h4>`;
+          continue;
+        }
+
+        if (t.startsWith("- ")) {
+          if (!inUl) {
+            html += "<ul>";
+            inUl = true;
+          }
+          html += `<li>${escapeHtml(t.slice(2))}</li>`;
+          continue;
+        }
+        closeUl();
+
+        if (/^Step\s+\d+\./i.test(t)) {
+          html += `<div><strong style="color:var(--warn)">${escapeHtml(t)}</strong></div>`;
+          continue;
+        }
+
+        const imageMatch = t.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+        if (imageMatch) {
+          closeUl();
+          const alt = escapeHtml(imageMatch[1] || "");
+          const src = imageMatch[2].trim();
+          html += `<figure class="md-image"><img src="${src}" alt="${alt}" loading="lazy" /></figure>`;
+          continue;
+        }
+
+        const p = escapeHtml(line)
+          .replaceAll(/`([^`]+)`/g, "<code>$1</code>")
+          .replaceAll(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+          .replace(/  $/, "<br>");
+
+        html += `<div>${p}</div>`;
+      }
+
+      closeUl();
+      closeQuote();
+      return html;
+    }
+
+    // =========================================================
+    // UI controller
+    // =========================================================
+    function sortNavToMandala(navItems) {
+      const rank = (section) => {
+        if (section === "1") return 5;
+        const match = section.match(/^1\.(\d)$/);
+        if (!match) return 999;
+
+        const n = Number.parseInt(match[1], 10);
+        const map = { 1: 1, 2: 2, 3: 3, 4: 4, 5: 6, 6: 7, 7: 8, 8: 9 };
+        return map[n] ?? 999;
+      };
+
+      return [...navItems].sort((a, b) => rank(a.section) - rank(b.section));
+    }
+
+    const NAV = sortNavToMandala(parseNavBlocks(NAV_MD));
+    const CONTENT = parseContentBlocks(CONTENT_MD);
+
+    const gridEl = document.getElementById("grid");
+    const panelTitle = document.getElementById("panelTitle");
+    const panelTag = document.getElementById("panelTag");
+    const panelBody = document.getElementById("panelBody");
+    const rightPane = document.getElementById("rightPane");
+
+    function setActiveSection(section) {
+      document.querySelectorAll(".cell").forEach((el) => {
+        el.classList.toggle("active", el.dataset.section === section);
+      });
+
+      const item = CONTENT[section];
+      if (!item) {
+        panelTitle.textContent = "找不到內容";
+        panelTag.textContent = "";
+        panelBody.innerHTML = `<div class='muted-line'>CONTENT_MD 找不到 section ${section}</div>`;
+        return;
+      }
+
+      panelTitle.textContent = item.title;
+      panelTag.textContent = item.tag;
+      panelBody.innerHTML = mdToHtml(item.md);
+
+      rightPane.scrollTo({ top: 0, behavior: "smooth" });
+      history.replaceState(null, "", `#${section}`);
+    }
+
+    function renderNavGrid() {
+      gridEl.innerHTML = "";
+
+      NAV.forEach((nav) => {
+        const cell = document.createElement("button");
+        cell.type = "button";
+        cell.className = `cell${nav.section === "1" ? " center" : ""}`;
+        cell.dataset.section = nav.section;
+        cell.innerHTML = `
+          <span class="k">${nav.label}</span>
+          <span class="t">${nav.title}</span>
+        `;
+
+        cell.addEventListener("click", () => setActiveSection(nav.section));
+        gridEl.appendChild(cell);
+      });
+    }
+
+    renderNavGrid();
+
+    const fromHash = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
+    if (fromHash && CONTENT[fromHash]) {
+      setActiveSection(fromHash);
+    } else {
+      setActiveSection("1");
+    }
+  </script>
+</body>
+</html>
