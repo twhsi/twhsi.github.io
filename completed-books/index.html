@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>已完成書箱｜寫書</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar left-panel">
+        <div class="panel-head">
+          <p class="eyebrow">Manuscript</p>
+          <h1 id="site-title">九宮書稿網站</h1>
+        </div>
+        <nav id="library-nav" class="library-nav" aria-label="書稿導覽"></nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Nine-grid Reader</p>
+            <h2 id="view-title">全書九宮導覽</h2>
+          </div>
+          <p id="view-summary" class="hero-summary"></p>
+        </header>
+
+        <section class="board-shell">
+          <div id="board-tabs" class="board-tabs" aria-label="九宮切換"></div>
+          <div id="mandala-grid" class="mandala-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="reading-shell">
+          <article class="reading-card article-card">
+            <div class="article-head">
+              <div>
+                <p class="eyebrow">Article</p>
+                <h3 id="article-title">全書導覽</h3>
+              </div>
+              <div id="article-meta" class="article-meta"></div>
+            </div>
+            <div id="article-content" class="md"></div>
+          </article>
+        </section>
+      </main>
+
+      <aside class="sidebar right-panel">
+        <div class="panel-head">
+          <p class="eyebrow">Local Graph</p>
+          <h2 id="graph-title">導航</h2>
+        </div>
+        <div id="graph-modes" class="graph-modes"></div>
+        <label class="search-box">
+          <span class="sr-only">搜尋關鍵字</span>
+          <input id="keyword-search" type="search" placeholder="搜尋關鍵字或章節" />
+        </label>
+        <div id="graph-focus" class="graph-focus"></div>
+        <div id="keyword-chips" class="keyword-chips"></div>
+        <div id="keyword-results" class="keyword-results"></div>
+      </aside>
+    </div>
+
+    <script src="./site-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
