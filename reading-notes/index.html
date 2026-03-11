@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>讀書心得網站</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="title-block">
+        <p class="eyebrow">Reading Notes Prototype</p>
+        <h1>讀書心得網站</h1>
+        <p class="subtitle">以書名 folder 為主體，每本書可切換多個九宮。中央專注閱讀，右側改為可操作的關鍵字導覽器。</p>
+      </div>
+      <div class="actions">
+        <button id="theme-toggle" type="button">切換明暗</button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="panel sidebar">
+        <div class="panel-head">
+          <h2>Books</h2>
+          <p>左側列出每本書。先選書，再切換九宮，再讀單格內容。</p>
+        </div>
+        <div class="book-list" id="book-list"></div>
+      </aside>
+
+      <section class="panel center-pane">
+        <div class="book-hero">
+          <div>
+            <p class="eyebrow" id="book-folder"></p>
+            <h2 id="book-title"></h2>
+            <p class="book-summary" id="book-summary"></p>
+          </div>
+          <div class="meta-chips" id="book-keywords"></div>
+        </div>
+
+        <div class="board-strip" id="board-strip"></div>
+
+        <article class="card overview-card">
+          <div class="card-head overview-head">
+            <div>
+              <p class="eyebrow" id="board-source"></p>
+              <h3 id="board-title"></h3>
+            </div>
+            <p class="board-summary" id="board-summary"></p>
+          </div>
+          <div class="mandala-grid" id="mandala-grid"></div>
+        </article>
+
+        <section class="reader-layout">
+          <aside class="card focus-card">
+            <p class="eyebrow">目前焦點</p>
+            <h3 id="cell-title"></h3>
+            <p class="focus-id" id="cell-id"></p>
+            <p class="focus-summary" id="cell-summary"></p>
+            <div class="focus-keywords" id="cell-keywords"></div>
+          </aside>
+
+          <article class="card reader-card">
+            <div class="markdown-body" id="markdown-body"></div>
+          </article>
+        </section>
+      </section>
+
+      <aside class="panel graph-pane">
+        <div class="panel-head">
+          <h2>關鍵字導覽</h2>
+          <p>右側不再顯示不可操作的 Local Graph。改成可搜尋、可點擊、可直接跳到命中九宮與格子的索引面板。</p>
+        </div>
+        <input id="keyword-search" class="search" type="search" placeholder="搜尋關鍵字，例如：理解、Graph View、關鍵種" />
+        <div class="graph-keywords" id="graph-keywords"></div>
+        <div class="navigator-meta" id="navigator-meta"></div>
+        <div class="graph-related" id="graph-related"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="./library-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
