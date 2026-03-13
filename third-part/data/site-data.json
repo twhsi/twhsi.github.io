@@ -1,0 +1,1205 @@
+{
+  "generatedAt": "2026-03-13T11:35:53.452Z",
+  "sourceVault": "0001 Project 3.２",
+  "site": {
+    "title": "第三部｜九宮 × Graph View",
+    "eyebrow": "Part III",
+    "description": "Mandala / Markdown / Local Graph",
+    "featuredPath": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": true,
+    "collapse-color-groups": false,
+    "colorGroups": [
+      {
+        "query": "path:\"00 入口導航\"",
+        "color": {
+          "a": 1,
+          "rgb": 13200187
+        }
+      },
+      {
+        "query": "path:\"01 卡片主線\"",
+        "color": {
+          "a": 1,
+          "rgb": 3968379
+        }
+      },
+      {
+        "query": "path:\"02 術語庫\"",
+        "color": {
+          "a": 1,
+          "rgb": 6588615
+        }
+      },
+      {
+        "query": "path:\"03 細胞寫作系統\"",
+        "color": {
+          "a": 1,
+          "rgb": 10522483
+        }
+      }
+    ],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.518713248970312,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 250,
+    "scale": 1.146485732408738,
+    "close": true
+  },
+  "localGraphOptions": null,
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "folder",
+        "name": "00 入口導航",
+        "children": [
+          {
+            "type": "note",
+            "name": "00 總索引",
+            "path": "00 入口導航/00 總索引.md"
+          },
+          {
+            "type": "note",
+            "name": "01 卡片序列 Hub",
+            "path": "00 入口導航/01 卡片序列 Hub.md"
+          },
+          {
+            "type": "note",
+            "name": "02 術語 Hub",
+            "path": "00 入口導航/02 術語 Hub.md"
+          },
+          {
+            "type": "note",
+            "name": "03 細胞寫作 Hub",
+            "path": "00 入口導航/03 細胞寫作 Hub.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "01 卡片主線",
+        "children": [
+          {
+            "type": "folder",
+            "name": "01 卡片序列",
+            "children": [
+              {
+                "type": "note",
+                "name": "✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3",
+                "path": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️ 九宮和Graph View如何結合？",
+                "path": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️ 生長的容器 3.1",
+                "path": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️ Codex把筆記變成網站",
+                "path": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️ Obsidian裡面的關鍵字如何成長？3.2.1",
+                "path": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️✡️ 3.2 目錄／81宮格",
+                "path": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+              },
+              {
+                "type": "note",
+                "name": "✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4",
+                "path": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "02 術語庫",
+        "children": [
+          {
+            "type": "folder",
+            "name": "01 核心術語庫",
+            "children": [
+              {
+                "type": "folder",
+                "name": "03 工具與介面",
+                "children": [
+                  {
+                    "type": "note",
+                    "name": "🟩 卡片盒",
+                    "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md"
+                  },
+                  {
+                    "type": "note",
+                    "name": "🟩 Graph View",
+                    "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+                  },
+                  {
+                    "type": "note",
+                    "name": "🟪 Obsidian",
+                    "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md"
+                  },
+                  {
+                    "type": "note",
+                    "name": "標準化",
+                    "path": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md"
+                  }
+                ]
+              },
+              {
+                "type": "note",
+                "name": "00 術語索引",
+                "path": "02 術語庫/01 核心術語庫/00 術語索引.md"
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "name": "02 關係與連結",
+            "children": [
+              {
+                "type": "note",
+                "name": "索引",
+                "path": "02 術語庫/02 關係與連結/索引.md"
+              },
+              {
+                "type": "note",
+                "name": "箭頭",
+                "path": "02 術語庫/02 關係與連結/箭頭.md"
+              },
+              {
+                "type": "note",
+                "name": "雙向連結",
+                "path": "02 術語庫/02 關係與連結/雙向連結.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "00 入口導航/00 總索引.md",
+      "path": "00 入口導航/00 總索引.md",
+      "basename": "00 總索引",
+      "title": "00 總索引",
+      "folder": "00 入口導航",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T11:00:50.775Z",
+      "content": "# 總索引\n\n這個 vault 目前以三個主軸整理：\n\n- [[01 卡片序列 Hub]]\n- [[02 術語 Hub]]\n- [[03 細胞寫作 Hub]]\n\n## 使用順序\n\n1. 從 `01 卡片序列 Hub` 進主線閱讀\n2. 從 `02 術語 Hub` 追重要概念與引用節點\n3. 從 `03 細胞寫作 Hub` 看字數層級與方法系統\n\n## 目前的欄位對應\n\n- 左邊：`01 卡片主線`\n- 中間：九宮格 / 81 宮格優先\n- 右邊：`02 術語庫` 與 Local Graph\n\n## 封存區\n\n- `90 封存` 放舊稿、散稿、舊術語\n- `99 資源` 放圖片與參考資料",
+      "links": [
+        {
+          "target": "00 入口導航/01 卡片序列 Hub.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "00 入口導航/02 術語 Hub.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "00 入口導航/03 細胞寫作 Hub.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "# 總索引 這個 vault 目前以三個主軸整理： - [[01 卡片序列 Hub]] - [[02 術語 Hub]] - [[03 細胞寫作 Hub]] ## 使用順序 1. 從 `01 卡片序列 Hub` 進主線閱讀 2. 從 `02 術語 Hub` 追重要概念與引用節點 3. 從 `03 細胞寫作 Hub` 看字數層級與方法系統 ## 目前的欄位對應 "
+    },
+    {
+      "id": "00 入口導航/01 卡片序列 Hub.md",
+      "path": "00 入口導航/01 卡片序列 Hub.md",
+      "basename": "01 卡片序列 Hub",
+      "title": "01 卡片序列 Hub",
+      "folder": "00 入口導航",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T11:25:34.644Z",
+      "content": "# 01 卡片序列 Hub\n\n卡片序列是這個 vault 的主線。凡是帶表情符號的卡片型 Markdown，優先視為卡片序列內容。\n\n## 主入口\n\n- [[01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格]]\n- [[01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1]]\n- [[01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4]]\n\n## 第三部九宮主線\n\n- [[01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格]]\n- [[01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1]]\n- [[01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3]]\n- [[01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？]]\n- [[01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站]]\n\n## 目錄型卡片\n\n- [[01 卡片主線/01 卡片序列/💥 目錄]]\n- [[01 卡片主線/01 卡片序列/💥 Moc]]\n- [[01 卡片主線/01 卡片序列/💥 Subject index]]\n- [[01 卡片主線/02 章節地圖/00 3.2 開疆闢土]]\n\n## 閱讀提示\n\n- 字數多、`section` 多的筆記，優先升級成九宮或 81 宮\n- 與術語連結密的筆記，優先拿來做 Local Graph 主幹\n- 第三部建議從 `3.2` 中心頁進入，再用右側 Local Graph 看概念如何擴散",
+      "links": [
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/00 總索引.md"
+      ],
+      "preview": "# 01 卡片序列 Hub 卡片序列是這個 vault 的主線。凡是帶表情符號的卡片型 Markdown，優先視為卡片序列內容。 ## 主入口 - [[01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格]] - [[01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1]] - [[01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，"
+    },
+    {
+      "id": "00 入口導航/02 術語 Hub.md",
+      "path": "00 入口導航/02 術語 Hub.md",
+      "basename": "02 術語 Hub",
+      "title": "02 術語 Hub",
+      "folder": "00 入口導航",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T11:00:50.776Z",
+      "content": "# 02 術語 Hub\n\n術語庫負責讓重要概念在右欄與 Local Graph 中凸顯出來。\n\n## 核心入口\n\n- [[02 術語庫/01 核心術語庫/00 術語索引]]\n- [[02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View]]\n- [[02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian]]\n- [[02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒]]\n\n## 關係術語\n\n- [[02 術語庫/02 關係與連結/索引]]\n- [[02 術語庫/02 關係與連結/雙向連結]]\n- [[02 術語庫/02 關係與連結/箭頭]]\n- [[02 術語庫/02 關係與連結/上下文 Context]]\n\n## 整理原則\n\n- 字數多的術語要凸顯\n- 被引用多的術語要凸顯\n- 內部 section 多的術語要升成核心術語",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/00 術語索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/00 總索引.md"
+      ],
+      "preview": "# 02 術語 Hub 術語庫負責讓重要概念在右欄與 Local Graph 中凸顯出來。 ## 核心入口 - [[02 術語庫/01 核心術語庫/00 術語索引]] - [[02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View]] - [[02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian]] - [[02 術"
+    },
+    {
+      "id": "00 入口導航/03 細胞寫作 Hub.md",
+      "path": "00 入口導航/03 細胞寫作 Hub.md",
+      "basename": "03 細胞寫作 Hub",
+      "title": "03 細胞寫作 Hub",
+      "folder": "00 入口導航",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T11:00:50.776Z",
+      "content": "# 03 細胞寫作 Hub\n\n這裡整理字數層級、細胞寫作法、以及可生長成九宮 / 81 宮的文字容器。\n\n## 主入口\n\n- [[03 細胞寫作系統/01 細胞寫作系統/00 細胞寫作系統索引]]\n- [[03 細胞寫作系統/02 寫作尺度/150字 99.3]]\n- [[03 細胞寫作系統/02 寫作尺度/1000字 99.4]]\n- [[03 細胞寫作系統/02 寫作尺度/7000字 99.5]]\n- [[03 細胞寫作系統/02 寫作尺度/81宮格 99.2]]\n\n## 方法入口\n\n- [[03 細胞寫作系統/01 細胞寫作系統/01 細胞寫作法總論]]\n- [[03 細胞寫作系統/01 細胞寫作系統/02 A級細胞 150字]]\n- [[03 細胞寫作系統/01 細胞寫作系統/03 B級小節 1000字]]\n- [[03 細胞寫作系統/01 細胞寫作系統/04 C級章節 7000字]]\n\n## 整理原則\n\n- 字數高且 section 多的筆記，優先升級\n- 九宮格是結構容器\n- Markdown 是正文\n- Graph View 是索引層",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/00 總索引.md"
+      ],
+      "preview": "# 03 細胞寫作 Hub 這裡整理字數層級、細胞寫作法、以及可生長成九宮 / 81 宮的文字容器。 ## 主入口 - [[03 細胞寫作系統/01 細胞寫作系統/00 細胞寫作系統索引]] - [[03 細胞寫作系統/02 寫作尺度/150字 99.3]] - [[03 細胞寫作系統/02 寫作尺度/1000字 99.4]] - [[03 細胞寫作系統/0"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+      "path": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+      "basename": "✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3",
+      "title": "✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-13T09:17:50.182Z",
+      "content": "<!--section: 1-->\n\n這三層是長出來的Style，風格，因為在方形的螢幕上很合適。\n\n一宮格：九宮格的一格子，或者是Markdown內的內容，好大呀，但是我可以大量寫\n- 隨然只有一個，也有編號，也有Title,也有關鍵字,Linking word和陳述句。\n- 比喻成混凝土灌漿，\n\n九宮格：也可以一開始就九宮\n- 中間格子和周圍八個是不同層級的\n\n81宮格：[[由上而下]]，建立大綱用，就是一個章節，[[7000字 99.5]]\n- 書的目錄\n- 章節內的內容\n\n**九宮／81宮格是結構目錄，Markdown 是內容正文，[[🟩 Graph View]] 是關係索引。**\n2.\n<!--section: 1.1-->\n把81宮格拆分成九宮\n<!--section: 1.2-->\n<!--section: 1.3-->\n<!--section: 1.4-->\n<!--section: 1.5-->\n<!--section: 1.6-->\n<!--section: 1.7-->\n<!--section: 1.8-->\n如果你在单条笔记中创建笔记序列时，一些笔记很快就会变得过于复杂而难以处理",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+      ],
+      "preview": "<!--section: 1--> 這三層是長出來的Style，風格，因為在方形的螢幕上很合適。 一宮格：九宮格的一格子，或者是Markdown內的內容，好大呀，但是我可以大量寫 - 隨然只有一個，也有編號，也有Title,也有關鍵字,Linking word和陳述句。 - 比喻成混凝土灌漿， 九宮格：也可以一開始就九宮 - 中間格子和周圍八個是不同層級的 "
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md",
+      "path": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md",
+      "basename": "✡️ Codex把筆記變成網站",
+      "title": "✡️ Codex把筆記變成網站",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-11T12:49:39.785Z",
+      "content": "九四快的讀書筆記變成筆記\n應該要有兩層的索引\n\t1. 一本書的索引：這是九四快的讀書筆記\n\t2. 整個庫的索引：這是Homepage的首頁，有兩層\n\n左邊的binder\n\t左邊是兩位數的目錄章節\n\t\t中間是三位數\n中間的九宮\n\n我的書可以嗎",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+      ],
+      "preview": "九四快的讀書筆記變成筆記 應該要有兩層的索引 1. 一本書的索引：這是九四快的讀書筆記 2. 整個庫的索引：這是Homepage的首頁，有兩層 左邊的binder 左邊是兩位數的目錄章節 中間是三位數 中間的九宮 我的書可以嗎"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md",
+      "path": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md",
+      "basename": "✡️ Obsidian裡面的關鍵字如何成長？3.2.1",
+      "title": "✡️ Obsidian裡面的關鍵字如何成長？3.2.1",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T09:15:02.719Z",
+      "content": "Obsidian寫作的時候，會有左邊的多Markdown檔案，中間的編輯區，右邊的Local Graph View，當我們用雙方框打[[關鍵字]]，就會發現除了編輯區增加字數，[[local graph view]]的點生長出來。",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+      ],
+      "preview": "Obsidian寫作的時候，會有左邊的多Markdown檔案，中間的編輯區，右邊的Local Graph View，當我們用雙方框打[[關鍵字]]，就會發現除了編輯區增加字數，[[local graph view]]的點生長出來。"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "path": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "basename": "✡️ 九宮和Graph View如何結合？",
+      "title": "✡️ 九宮和Graph View如何結合？",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-13T11:25:34.644Z",
+      "content": "<!--section: 1-->\n九宮和 [[🟩 Graph View]] 的最佳分工是：\n\n- 九宮處理「附近格子」與章節次序\n- Graph View 處理「遠距跳躍」與主題索引\n\n兩者不是互相取代，而是同一份 Markdown 的兩種視角。\n\n<!--section: 1.1-->\n九宮像是家譜或章節地圖。\n\n它回答的是：\n\n- 現在這一格位在整個章節的哪裡？\n- 周圍八格跟中心主題是什麼關係？\n- 這一格應該寫成 [[150字 99.3]]、[[1000字 99.4]] 還是 [[7000字 99.5]]？\n\n<!--section: 1.2-->\nGraph View 像是主題索引，不是線性目錄。\n\n它回答的是：\n\n- 哪些術語被反覆提到？\n- 哪些章節共享同一個概念？\n- 哪些卡片其實還沒有接回主線？\n\n所以它比較接近書末索引加上電話簿，而不是章節目錄。\n\n<!--section: 1.3-->\n第三部可以用這個操作順序：\n\n1. 先在 [[✡️✡️ 3.2 目錄／81宮格]] 放中心九宮\n2. 每一格連到一張主線卡片\n3. 主線卡片再連到 [[🟩 Graph View]]、[[🟪 Obsidian]]、[[🟩 卡片盒]] 等術語\n4. 術語彼此再用 [[雙向連結]]、[[箭頭]]、[[索引]] 接起來\n\n這樣 Graph 不會只剩零碎點，而會長出清楚的骨架。\n\n<!--section: 1.4-->\n建議看的不是全域 Graph，而是每張主線卡片右側的 Local Graph。\n\nLocal Graph 比較適合回答：\n\n- 這一張卡片連到哪些術語？\n- 哪些連結只出現一次，還不夠穩？\n- 這一張是不是已經形成自己的小九宮？\n\n<!--section: 1.5-->\n第三部目前最適合做 Graph 核心節點的是這些筆記：\n\n- [[✡️✡️ 3.2 目錄／81宮格]]\n- [[✡️ 生長的容器 3.1]]\n- [[✡️ Obsidian裡面的關鍵字如何成長？3.2.1]]\n- [[🟩 Graph View]]\n- [[🟪 Obsidian]]\n- [[標準化]]\n- [[02 術語庫/02 關係與連結/索引]]\n\n<!--section: 1.6-->\n第三部的 Graph 顏色分組可以先用資料夾做：\n\n- `path:\"00 入口導航\"`：入口與 Hub\n- `path:\"01 卡片主線\"`：主線文章\n- `path:\"02 術語庫\"`：術語與關係\n- `path:\"03 細胞寫作系統\"`：字數尺度與方法\n\n先用 path 分組最穩，之後需要更細時再加 shape 或 tag。\n\n<!--section: 1.7-->\n九宮會持續演化，所以 Graph 也要跟著修剪。\n\n一個實用原則是：\n\n- 新文章先接到主線中心頁\n- 新術語先接到術語索引\n- 孤立節點先補回至少一條可理解的關係\n\n這樣圖譜會越來越像索引，不會越長越亂。\n\n<!--section: 1.8-->\n一句話總結：\n\n九宮讓第三部可閱讀，Graph View 讓第三部可搜尋、可跳躍、可沉澱。",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "<!--section: 1--> 九宮和 [[🟩 Graph View]] 的最佳分工是： - 九宮處理「附近格子」與章節次序 - Graph View 處理「遠距跳躍」與主題索引 兩者不是互相取代，而是同一份 Markdown 的兩種視角。 <!--section: 1.1--> 九宮像是家譜或章節地圖。 它回答的是： - 現在這一格位在整個章節的哪裡"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+      "path": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+      "basename": "✡️ 生長的容器 3.1",
+      "title": "✡️ 生長的容器 3.1",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-09T12:56:03.154Z",
+      "content": "<!--section: 1-->\nObsidian就是我長植物的花盆\n\n<!--section: 1.1-->\n整個庫就是生長的容器，我們可以從一宮，九宮卡片寫，可以從術語寫\n\n<!--section: 1.2-->\n由[[一宮格 99.0]]從[[九宮格]]成長很正常，例如從一個問題出發，從一個概念詞出發，讓我們由[[150字 99.3]]開始吧，\n\n<!--section: 1.3-->\n➡️ 我們可以把九宮格和[[🟩 Graph View]]結合起來看，這樣可以做出更加精確的設計，再加上Search的功能，還有反向連結，我們可以定位一張卡片，並逐漸[[生長]]\n\n<!--section: 1.3.1-->\n我們還可以做出一些操作，按下右邊的[[local graph view]]的按鍵，可以打開左邊的圖片。\n\n<!--section: 1.3.2-->\n我們可以在[[local graph view]]設定規則，把這個圖變成彩色，更容易李這個複雜的概念，人腦寫文章的新境界。\n\n<!--section: 1.3.3-->\n左邊是九宮或Lineage的視圖，右邊是[[local graph view]]，\n1. 九宮可以看見附近的格子，也可以藉由[[關鍵字]]跳躍，就是魯曼看見附近的卡片。（例如：直接增加[[✡️ Codex控制Graph View]]）\n   2. 右邊的[[local graph view]]則是可以Jump，很多[[jump連結]]的概念，可以由此跳出去。\n\n<!--section: 1.3.4-->\n直接增加鄰近的卡片超級Cool，就引用了\n\n<!--section: 1.4-->\n生長靠\n1.九宮：格子及鄰近格子的關係，可能有[[靶心人 99.6]]、[[正反合]]等模式，\n\n2. [[筆記與筆記]]的[[關係]]是魯曼卡片盒重要的模式。這可以由,[[🟩 Graph View]]來作\n\n<!--section: 1.5-->\n管理九宮目錄和Graph View索引\n1. 兩個視窗比較好，一個太小了\n2. 原生Local Graph View無法用Codex控制，手動也不錯，三個點，連動，顏色，深度。\n\n<!--section: 1.6-->\n<!--section: 1.7-->\n<!--section: 1.8-->",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+      ],
+      "preview": "<!--section: 1--> Obsidian就是我長植物的花盆 <!--section: 1.1--> 整個庫就是生長的容器，我們可以從一宮，九宮卡片寫，可以從術語寫 <!--section: 1.2--> 由[[一宮格 99.0]]從[[九宮格]]成長很正常，例如從一個問題出發，從一個概念詞出發，讓我們由[[150字 99.3]]開始吧， <!--"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "path": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "basename": "✡️✡️ 3.2 目錄／81宮格",
+      "title": "✡️✡️ 3.2 目錄／81宮格",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-13T11:25:34.643Z",
+      "content": "<!--section: 1-->\n第三部的中心句是：**九宮／81宮格負責目錄，Markdown 負責正文，[[🟩 Graph View]] 負責主題索引。**\n\n這一頁不是單篇文章的正文，而是第三部的總控台。讀者先從九宮看整體結構，再沿著主線卡片閱讀，最後靠術語與關係筆記把重要概念沉澱成索引。\n\n第三部入口請從這幾個方向展開：\n\n- 主線閱讀：[[✡️ 生長的容器 3.1]]、[[✡️ Obsidian裡面的關鍵字如何成長？3.2.1]]\n- 架構驗證：[[✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3]]\n- 章節拆分：[[✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4]]\n- 發布出口：[[✡️ Codex把筆記變成網站]]\n- 圖譜操作：[[✡️ 九宮和Graph View如何結合？]]\n\n<!--section: 1.1-->\n[[✡️ 生長的容器 3.1]]\n\n第三部先回答「寫作長在什麼容器裡」。\n容器有兩條軸線：\n\n- 結構軸：[[一宮格 99.0]]、[[九宮]]、[[81宮格 99.2]]\n- 字數軸：[[150字 99.3]]、[[1000字 99.4]]、[[7000字 99.5]]\n\n先決定格數與字數，再決定這一張卡片要承擔什麼任務。\n\n<!--section: 1.2-->\n[[✡️ Obsidian裡面的關鍵字如何成長？3.2.1]]\n\n關鍵字不是最後補上的標籤，而是寫作過程中反覆被引用的節點。\n\n在 [[🟪 Obsidian]] 裡，一個詞只要持續被 `[[雙向連結]]`、`[[反向連結]]` 和正文引用，就會從句子裡長成術語 note，接著被 [[🟩 Graph View]] 看見。\n\n<!--section: 1.3-->\n[[✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3]]\n\n這一格負責回答第三部最重要的架構問題：\n\n- 九宮／81宮格處理章節與層級\n- Markdown 處理完整句子與段落\n- Graph View 處理主題之間的關係\n\n也就是說，目錄、正文、索引不再分散在三個系統，而是共用同一個 vault。\n\n<!--section: 1.4-->\n[[✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4]]\n\n81 宮格不是要人類一次面對 81 個同層單位，而是先做章節級總覽，再拆成可操作的中觀小節。\n\n可用的拆分節奏是：\n\n- 一個 `C` 級章節對應 [[7000字 99.5]]\n- 再切成 7 個左右的 `B` 級小節，每節約 [[1000字 99.4]]\n- 每個小節再長出一組自己的 Local Graph\n\n<!--section: 1.5-->\n第三部的真正成品不是只有文章，而是一個可以同時閱讀、搜尋、跳躍的書籍系統。\n\n這個系統的三個面向是：\n\n1. 九宮：讓讀者看見章節骨架\n2. Markdown：讓作者把句子寫完整\n3. Graph View：讓關鍵字形成第二層索引\n\n如果中心格成立，第三部就能同時支撐寫作、編輯、出版三種工作。\n\n<!--section: 1.6-->\n[[✡️ Codex把筆記變成網站]]\n\n第三部不只在 Obsidian 裡閱讀，也可以往網站輸出。\n\n網站版延續同一個三欄邏輯：\n\n- 左欄是入口與章節導航\n- 中欄是九宮與 Markdown 內文\n- 右欄是 Local Graph / 術語索引\n\n這個方向和你參考的 publish 站點一致，只是把第三部的九宮中心再做得更清楚。\n\n<!--section: 1.7-->\n[[✡️ 九宮和Graph View如何結合？]]\n\n九宮提供「附近格子」的閱讀感，Graph View 提供「跨主題跳躍」的閱讀感。\n\n兩者結合後，讀者可以：\n\n- 先沿九宮順序閱讀主線\n- 再從術語跳到其他章節\n- 用 Local Graph 追某個概念如何在整本書裡生長\n\n<!--section: 1.8-->\n第三部的 Graph 核心術語與關係筆記：\n\n- [[02 術語庫/01 核心術語庫/00 術語索引]]\n- [[🟩 Graph View]]\n- [[🟪 Obsidian]]\n- [[🟩 卡片盒]]\n- [[標準化]]\n- [[02 術語庫/02 關係與連結/索引]]\n- [[雙向連結]]\n- [[箭頭]]\n\n這些筆記會把第三部從「一組文章」提升成「可視化的主題索引」。",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/00 術語索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+        "02 術語庫/02 關係與連結/雙向連結.md"
+      ],
+      "preview": "<!--section: 1--> 第三部的中心句是：**九宮／81宮格負責目錄，Markdown 負責正文，[[🟩 Graph View]] 負責主題索引。** 這一頁不是單篇文章的正文，而是第三部的總控台。讀者先從九宮看整體結構，再沿著主線卡片閱讀，最後靠術語與關係筆記把重要概念沉澱成索引。 第三部入口請從這幾個方向展開： - 主線閱讀：[[✡️ 生長"
+    },
+    {
+      "id": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md",
+      "path": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md",
+      "basename": "✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4",
+      "title": "✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4",
+      "folder": "01 卡片主線/01 卡片序列",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T09:16:00.075Z",
+      "content": "天下，分九必合，合久必分\n\t1. > **把不可操作的大塊，變成可操作的[[中觀]],10-20個\n\t2. 人無法在81宮格的複雜中寫作，第一步是拆成七個中觀，也就是七個[[local graph view]]",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/01 卡片序列 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+      ],
+      "preview": "天下，分九必合，合久必分 1. > **把不可操作的大塊，變成可操作的[[中觀]],10-20個 2. 人無法在81宮格的複雜中寫作，第一步是拆成七個中觀，也就是七個[[local graph view]]"
+    },
+    {
+      "id": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "path": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "basename": "00 術語索引",
+      "title": "00 術語索引",
+      "folder": "02 術語庫/01 核心術語庫",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T11:25:34.646Z",
+      "content": "# 3.2 核心術語索引\n\n## 寫作尺度\n\n- [[150字 99.3]]\n- [[1000字 99.4]]\n[[graph]]\n## 結構方法\n\n- [[九宮]]\n- [[81宮格 99.2]]\n- [[🟩 3.  細胞寫作法]]\n- [[標準化]]\n- [[概念圖]]\n\n## 工具與介面\n\n- [[03 工具與介面/🟪 Obsidian]]\n- [[03 工具與介面/🟩 Graph View]]\n- [[03 工具與介面/🟩 卡片盒]]\n- [[03 工具與介面/🟦 魯曼]]\n\n## 關係與連結\n\n- [[上下文 Context]]\n- [[箭頭]]\n- [[索引]]\n- [[雙向連結]]\n\n## 第三部入口\n\n- [[✡️✡️ 3.2 目錄／81宮格]]\n- [[✡️ 九宮和Graph View如何結合？]]\n- [[03 工具與介面/🟩 Graph View]]",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "# 3.2 核心術語索引 ## 寫作尺度 - [[150字 99.3]] - [[1000字 99.4]] [[graph]] ## 結構方法 - [[九宮]] - [[81宮格 99.2]] - [[🟩 3. 細胞寫作法]] - [[標準化]] - [[概念圖]] ## 工具與介面 - [[03 工具與介面/🟪 Obsidian]] - [[03 工具"
+    },
+    {
+      "id": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+      "path": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+      "basename": "標準化",
+      "title": "標準化",
+      "folder": "02 術語庫/01 核心術語庫/03 工具與介面",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-02-28T07:30:24.439Z",
+      "content": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面，\n\n例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place就是九宮格。",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "卡片盒筆記，裡面放的就是已經標準化的卡片，我使用的卡片有個特色就是九宮格，我會把九宮格「藏」到所有的工具裡面， 例如Roam Research、Heptabase、紙本手帳、PDF等，樣我在不同的工具裡面，擁有標準化的模版。Track away all information slowly building in one place. 這個One Place"
+    },
+    {
+      "id": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "basename": "🟩 Graph View",
+      "title": "🟩 Graph View",
+      "folder": "02 術語庫/01 核心術語庫/03 工具與介面",
+      "frontmatter": {
+        "aliases": "",
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-13T11:25:34.645Z",
+      "content": "<!--section: 1-->\n[[✡️✡️ 3.2 目錄／81宮格]]\n\n在第三部裡，[[🟩 Graph View]] 不是裝飾，而是把 `九宮目錄 + Markdown 正文` 變成「主題索引」的那一層。\n\n最重要的分工是：\n\n- 九宮／81宮格處理章節位置\n- Markdown 處理完整內容\n- Graph View 處理概念之間的交叉引用\n<!--section: 1.1-->\n第三部主線會讓 Graph 長出來的原因，不是因為圖本身漂亮，而是因為主線卡片持續引用同一批術語。\n\n例如：[[🟪 Obsidian]]、[[🟩 卡片盒]]、[[標準化]]、[[雙向連結]]、[[箭頭]]。\n\n<!--section: 1.2-->\n若只看單篇文章，Graph 容易顯得空。\n若把第三部當成一整個系統來看，Graph 才會顯示出：\n\n1. 哪些術語是核心節點\n2. 哪些章節共享相同主題\n3. 哪些卡片仍然是孤點\n\n<!--section: 1.3-->\nGraph 的最佳入口不是全域圖，而是右側的 Local Graph。\n\n在 Local Graph 中，讀者可以追：\n\n- 這一張主線卡片連到哪些術語\n- 哪些術語回鏈最多\n- 某個概念是否已經長成獨立索引\n<!--section: 1.4-->\n第三部推薦的 Graph 群組規則：\n\n- `path:\"00 入口導航\"`：入口 / Hub\n- `path:\"01 卡片主線\"`：主線章節\n- `path:\"02 術語庫\"`：術語 / 關係\n- `path:\"03 細胞寫作系統\"`：寫作尺度 / 方法\n\n先用資料夾分組，會比人工維護 tag 更穩定。\n<!--section: 1.5-->\n第三部最值得釘住的 Graph 核心節點：\n\n- [[✡️✡️ 3.2 目錄／81宮格]]\n- [[✡️ 九宮和Graph View如何結合？]]\n- [[02 術語庫/01 核心術語庫/00 術語索引]]\n- [[02 術語庫/02 關係與連結/索引]]\n<!--section: 1.6-->\n九宮做為目錄，Graph View 做為索引，兩者放在同一個 vault 裡，第三部才會像一本真正可查找的書。\n<!--section: 1.7-->\n如果第三部後面還要擴成網站，Graph 的角色會更重要，因為它正好能接上右欄的主題導航。\n<!--section: 1.8-->\n一句定義：[[🟩 Graph View]] 是第三部的第二層目錄，也是正文長出來之後的可視化索引。",
+      "links": [
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/00 術語索引.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/索引.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+        "02 術語庫/02 關係與連結/索引.md",
+        "02 術語庫/02 關係與連結/雙向連結.md"
+      ],
+      "preview": "<!--section: 1--> [[✡️✡️ 3.2 目錄／81宮格]] 在第三部裡，[[🟩 Graph View]] 不是裝飾，而是把 `九宮目錄 + Markdown 正文` 變成「主題索引」的那一層。 最重要的分工是： - 九宮／81宮格處理章節位置 - Markdown 處理完整內容 - Graph View 處理概念之間的交叉引用 <!--s"
+    },
+    {
+      "id": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+      "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md",
+      "basename": "🟩 卡片盒",
+      "title": "🟩 卡片盒",
+      "folder": "02 術語庫/01 核心術語庫/03 工具與介面",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-04T15:33:21.863Z",
+      "content": "[[🟦 魯曼]]\n[[魯曼卡片_雙向連結加工版]]\n申克博士\n[[FIRE]]\nFleeeting Note\n產生洞見的永久筆記網\n連結\n核裂變\n\n1. 讀書筆記＝文獻筆記\n2. Fleeting＝讀書筆記＋上下文\n3. Fleeting Notee要變成永久筆記\n1981宮格＊多個Markdown檔案＊Graph View＝專案筆記\n目錄鷹架*定義or書的內容（字數）*主題索引\n\n\n還有[[卡片牆]]類似MOC的技巧\n由上而下看索引還有最大連通分支的概念",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "[[🟦 魯曼]] [[魯曼卡片_雙向連結加工版]] 申克博士 [[FIRE]] Fleeeting Note 產生洞見的永久筆記網 連結 核裂變 1. 讀書筆記＝文獻筆記 2. Fleeting＝讀書筆記＋上下文 3. Fleeting Notee要變成永久筆記 1981宮格＊多個Markdown檔案＊Graph View＝專案筆記 目錄鷹架*定義or書的"
+    },
+    {
+      "id": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+      "path": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+      "basename": "🟪 Obsidian",
+      "title": "🟪 Obsidian",
+      "folder": "02 術語庫/01 核心術語庫/03 工具與介面",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T08:00:52.014Z",
+      "content": "1. [[HyperCard]]來學習互動設計方法強化Obsidian的使用\n\n\n2. 2026-02-27 和王博士演講，把[[九宮]]格和[[🟩 Graph View]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中。寫書變得可以從術語開始，太棒了。\n3. [[Codex]]這類工具非常重要\n\t1. 管理檔案\n\t2. CLI等級終端機操控\n4. 學習Markdown語法\n\t1. [[雙方框]]形成[[雙向連結]]\n\n\n[[🟩 Graph View]]",
+      "links": [
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "1. [[HyperCard]]來學習互動設計方法強化Obsidian的使用 2. 2026-02-27 和王博士演講，把[[九宮]]格和[[🟩 Graph View]]整合到一個Markdown的兩個視角裡，這是[[二分網路]]的概念，等於是一本書的目錄及索引在一個庫中。寫書變得可以從術語開始，太棒了。 3. [[Codex]]這類工具非常重要 1. 管"
+    },
+    {
+      "id": "02 術語庫/02 關係與連結/箭頭.md",
+      "path": "02 術語庫/02 關係與連結/箭頭.md",
+      "basename": "箭頭",
+      "title": "箭頭",
+      "folder": "02 術語庫/02 關係與連結",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-04T14:55:42.100Z",
+      "content": "王博士說雙向箭頭很重要\n手寫的[[概念圖]]也有很多箭頭",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+        "02 術語庫/02 關係與連結/索引.md"
+      ],
+      "preview": "王博士說雙向箭頭很重要 手寫的[[概念圖]]也有很多箭頭"
+    },
+    {
+      "id": "02 術語庫/02 關係與連結/索引.md",
+      "path": "02 術語庫/02 關係與連結/索引.md",
+      "basename": "索引",
+      "title": "索引",
+      "folder": "02 術語庫/02 關係與連結",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-13T08:00:52.012Z",
+      "content": "# 索引\n\n在這個系統裡，索引不是最後補上的附錄，而是正文寫作過程中自然長出來的關係層。\n\n## 索引的來源\n\n1. 先有 `150字` 細胞\n2. 細胞內反覆出現 `關鍵字`\n3. 關鍵字被多個細胞共用\n4. 共用關鍵字長成獨立術語 note\n5. 術語 note 再透過 `反向連結` 與 `Graph View` 形成索引\n\n## 索引與章節的分工\n\n1. 章節處理 `順序`\n2. 索引處理 `關係`\n3. 九宮／81宮處理 `結構`\n4. Markdown 處理 `正文`\n5. Graph View 處理 `可視化關係`\n\n## ABC 編碼在索引中的用法\n\nABC 只標文字生長層級，不標章節位置：\n\n- `A` = 150 字細胞\n- `B` = 1000 字小節\n- `C` = 7000 字章節\n\n原來的章節系統維持原樣，例如：\n\n- `3.2`\n- `1.4`\n- `section 1.7`\n\n因此索引裡應該分兩欄看：\n\n| 類型 | 用途 | 例子 |\n| --- | --- | --- |\n| 原章節碼 | 定位章節位置 | `3.2`、`1.4` |\n| ABC 生長碼 | 定位文字層級 | `A03`、`B02`、`C01` |\n\n## 核心關鍵字索引\n\n### A. 寫作尺度\n\n- [[150字 99.3]]\n- [[1000字 99.4]]\n- [[7000字 99.5]]\n- [[🟩 3.  細胞寫作法]]\n\n### B. 結構容器\n\n- [[一宮格 99.0]]\n- [[九宮]]\n- [[81宮格 99.2]]\n\n### C. 關係層\n\n- [[關鍵字]]\n- [[雙向連結]]\n- [[反向連結]]\n- [[🟩 Graph View]]\n- [[上下文 Context]]\n- [[箭頭]]\n\n## 建議索引格式\n\n```md\n- 關鍵字：[[細胞寫作法]]\n  原章節碼：3.2\n  ABC碼：A01 B03 C01\n```\n\n## 一句定義\n\n索引是由細胞寫作過程長出來的關鍵字骨架，不是附加物，而是整個 vault 的第二層正文。",
+      "links": [
+        {
+          "target": "02 術語庫/02 關係與連結/雙向連結.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/02 關係與連結/箭頭.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+      ],
+      "preview": "# 索引 在這個系統裡，索引不是最後補上的附錄，而是正文寫作過程中自然長出來的關係層。 ## 索引的來源 1. 先有 `150字` 細胞 2. 細胞內反覆出現 `關鍵字` 3. 關鍵字被多個細胞共用 4. 共用關鍵字長成獨立術語 note 5. 術語 note 再透過 `反向連結` 與 `Graph View` 形成索引 ## 索引與章節的分工 1. 章節處"
+    },
+    {
+      "id": "02 術語庫/02 關係與連結/雙向連結.md",
+      "path": "02 術語庫/02 關係與連結/雙向連結.md",
+      "basename": "雙向連結",
+      "title": "雙向連結",
+      "folder": "02 術語庫/02 關係與連結",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-13T08:19:59.462Z",
+      "content": "<!--section: 1-->\n引用\n雙向箭頭\n[[✡️✡️ 3.2 目錄／81宮格]]\n[[🟩 Graph View]]\n[[反向連結]]\n\nGoal在九宮格目錄裝上雙向連結，就變神器了\n<!--section: 1.1-->\n正向連結\n指向所說的索引，通常是一個字字詞，\n<!--section: 1.2-->\n<!--section: 1.3-->\n<!--section: 1.4-->\n<!--section: 1.5-->\n<!--section: 1.6-->\n<!--section: 1.7-->\n<!--section: 1.8-->",
+      "links": [
+        {
+          "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "00 入口導航/02 術語 Hub.md",
+        "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+        "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+        "02 術語庫/01 核心術語庫/00 術語索引.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+        "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+        "02 術語庫/02 關係與連結/索引.md"
+      ],
+      "preview": "<!--section: 1--> 引用 雙向箭頭 [[✡️✡️ 3.2 目錄／81宮格]] [[🟩 Graph View]] [[反向連結]] Goal在九宮格目錄裝上雙向連結，就變神器了 <!--section: 1.1--> 正向連結 指向所說的索引，通常是一個字字詞， <!--section: 1.2--> <!--section: 1.3--> "
+    }
+  ],
+  "edges": [
+    {
+      "source": "00 入口導航/00 總索引.md",
+      "target": "00 入口導航/01 卡片序列 Hub.md"
+    },
+    {
+      "source": "00 入口導航/00 總索引.md",
+      "target": "00 入口導航/02 術語 Hub.md"
+    },
+    {
+      "source": "00 入口導航/00 總索引.md",
+      "target": "00 入口導航/03 細胞寫作 Hub.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md"
+    },
+    {
+      "source": "00 入口導航/01 卡片序列 Hub.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/01 核心術語庫/00 術語索引.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/02 關係與連結/索引.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "00 入口導航/02 術語 Hub.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/02 關係與連結/索引.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 生長的容器 3.1.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ Obsidian裡面的關鍵字如何成長？3.2.1.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️  九宮格／81宮格像是目錄，Markdown是內文,Graph View是主題索引，這樣的架構正確嗎？3.3.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️為什麼81宮格字數一多，會拆成 7 個小節、每節約 1000 字？  3.4.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ Codex把筆記變成網站.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/01 核心術語庫/00 術語索引.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/02 關係與連結/索引.md"
+    },
+    {
+      "source": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "02 術語庫/02 關係與連結/索引.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/00 術語索引.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 卡片盒.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/標準化.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "01 卡片主線/01 卡片序列/✡️ 九宮和Graph View如何結合？.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/01 核心術語庫/00 術語索引.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md",
+      "target": "02 術語庫/02 關係與連結/索引.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "02 術語庫/01 核心術語庫/03 工具與介面/🟪 Obsidian.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "02 術語庫/02 關係與連結/索引.md",
+      "target": "02 術語庫/02 關係與連結/雙向連結.md"
+    },
+    {
+      "source": "02 術語庫/02 關係與連結/索引.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    },
+    {
+      "source": "02 術語庫/02 關係與連結/索引.md",
+      "target": "02 術語庫/02 關係與連結/箭頭.md"
+    },
+    {
+      "source": "02 術語庫/02 關係與連結/雙向連結.md",
+      "target": "01 卡片主線/01 卡片序列/✡️✡️ 3.2 目錄／81宮格.md"
+    },
+    {
+      "source": "02 術語庫/02 關係與連結/雙向連結.md",
+      "target": "02 術語庫/01 核心術語庫/03 工具與介面/🟩 Graph View.md"
+    }
+  ],
+  "assets": {
+    "03 Resources/Pasted image 20260310203457.png": "./assets/vault/03 Resources/Pasted image 20260310203457.png",
+    "Pasted image 20260310203457.png": "./assets/vault/03 Resources/Pasted image 20260310203457.png",
+    "03 Resources/截圖 2026-03-06 at 23.45.56@2x.png": "./assets/vault/03 Resources/截圖 2026-03-06 at 23.45.56@2x.png",
+    "截圖 2026-03-06 at 23.45.56@2x.png": "./assets/vault/03 Resources/截圖 2026-03-06 at 23.45.56@2x.png",
+    "99 資源/圖片/截圖 2026-03-04 at 08.28.10 1.png": "./assets/vault/99 資源/圖片/截圖 2026-03-04 at 08.28.10 1.png",
+    "截圖 2026-03-04 at 08.28.10 1.png": "./assets/vault/99 資源/圖片/截圖 2026-03-04 at 08.28.10 1.png"
+  }
+}
