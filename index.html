@@ -4,202 +4,592 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>永錫的九宮網站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#0b0f14; --text:#e8eef7; --muted:#a6b3c2;
-      --line:rgba(255,255,255,.10);
-      --accent:#7aa7ff; --accent-2:#78ffd2; --shadow:0 10px 30px rgba(0,0,0,.35);
-      --r:16px;
+    :root {
+      color-scheme: dark;
+      --ink: #efe7d8;
+      --paper: #181510;
+      --paper-2: #211d16;
+      --paper-3: #14110c;
+      --bg: #0b0907;
+      --bg-2: #15110d;
+      --gold: #d0a24a;
+      --gold-light: #e2bb6e;
+      --sage: #6e7f74;
+      --muted: #b2a48d;
+      --border: rgba(239, 231, 216, 0.12);
+      --border-strong: rgba(239, 231, 216, 0.22);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "PingFang TC","Noto Sans TC","Microsoft JhengHei", sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,167,255,.18), transparent 60%),
-                  radial-gradient(1200px 600px at 90% 0%, rgba(120,255,210,.10), transparent 60%),
-                  var(--bg);
-      color:var(--text);
+
+    body[data-theme="light"] {
+      color-scheme: light;
+      --ink: #1a1510;
+      --paper: #f2ece2;
+      --paper-2: #ece4d8;
+      --paper-3: #faf6ef;
+      --bg: #efe8de;
+      --bg-2: #f7f2ea;
+      --gold: #b9872f;
+      --gold-light: #d8a84f;
+      --sage: #697c6d;
+      --muted: #756956;
+      --border: rgba(26, 21, 16, 0.12);
+      --border-strong: rgba(26, 21, 16, 0.22);
+      --shadow: 0 24px 70px rgba(76, 57, 28, 0.14);
     }
-    header{
-      padding:22px 18px 12px;
-      position:sticky; top:0; z-index:20;
-      background: linear-gradient(to bottom, rgba(11,15,20,.95), rgba(11,15,20,.65), transparent);
-      backdrop-filter: blur(10px);
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(208, 162, 74, 0.12), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(110, 127, 116, 0.12), transparent 34%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--ink);
+      font-family: "Noto Serif TC", serif;
+      overflow-x: hidden;
+      transition: background 0.25s ease, color 0.25s ease;
     }
-    .wrap{max-width:1100px; margin:0 auto; padding:0 18px 30px;}
-    h1{margin:0; font-size:22px; letter-spacing:.5px;}
-    .home-link{color:var(--text); text-decoration:none;}
-    .home-link:hover{color:var(--accent);}
-    .sub{color:var(--muted); font-size:13px; line-height:1.6; margin-top:8px; max-width:80ch;}
-    .panel{
-      margin-top:14px;
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      overflow:hidden;
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      opacity: 0.32;
+      pointer-events: none;
+      mix-blend-mode: soft-light;
     }
-    .content{
-      padding:18px;
-      background: linear-gradient(180deg, rgba(15,22,32,.55), rgba(12,18,26,.35));
+
+    .wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 28px;
     }
-    .grid{
-      display:grid;
+
+    header {
+      padding: 34px 0 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .site-kicker {
+      font-family: "Space Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-kicker::after {
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .theme-toggle {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--ink);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-family: "Space Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--gold);
+      background: rgba(208, 162, 74, 0.08);
+      transform: translateY(-1px);
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 300;
+      letter-spacing: -1.4px;
+      line-height: 1.02;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .header-rule {
+      margin: 24px 0;
+      border: none;
+      border-top: 1px solid var(--border-strong);
+      position: relative;
+    }
+
+    .header-rule::before {
+      content: "九";
+      position: absolute;
+      top: -10px;
+      right: 0;
+      padding: 0 6px;
+      background: var(--bg);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tagline {
+      max-width: 56ch;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .tagline strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .hero {
+      margin-top: 46px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      font-family: "Space Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 20px;
+      height: 1px;
+      background: var(--muted);
+      opacity: 0.4;
+    }
+
+    .grid-9 {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-      margin-top:2px;
+      gap: 0;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.14);
+      box-shadow: var(--shadow);
     }
-    .cell{
-      padding:14px 12px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      min-height: 78px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      gap:6px;
-      transition: transform .06s ease, border-color .12s ease, background .12s ease;
+
+    .cell {
+      position: relative;
+      min-height: 138px;
+      padding: 24px 22px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--paper), var(--paper-2));
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: background 0.18s ease, transform 0.18s ease;
     }
-    .cell:hover{border-color: rgba(122,167,255,.55); background: rgba(122,167,255,.10);}
-    .cell:active{transform: scale(.99);}
-    .cell small{color:var(--muted); font-size:11px; line-height:1.2}
-    .cell strong{font-size:13px; letter-spacing:.2px}
-    .cell p{
-      margin:0;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.5;
+
+    .cell:nth-child(3n) { border-right: none; }
+    .cell:nth-child(7),
+    .cell:nth-child(8),
+    .cell:nth-child(9) { border-bottom: none; }
+
+    .cell::after {
+      content: "→";
+      position: absolute;
+      right: 18px;
+      bottom: 14px;
+      font-family: "Space Mono", monospace;
+      font-size: 11px;
+      color: var(--gold);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
     }
-    .center{
-      background: radial-gradient(500px 140px at 50% 20%, rgba(122,167,255,.30), transparent 70%),
-                  rgba(255,255,255,.06);
-      border-color: rgba(122,167,255,.40);
+
+    .cell:hover {
+      background: linear-gradient(180deg, var(--paper-2), var(--paper));
+      transform: translateY(-2px);
     }
-    a{color:var(--text); text-decoration:none}
-    .links{
-      margin-top:16px;
-      border-top:1px dashed rgba(255,255,255,.14);
-      padding-top:14px;
-      display:grid;
-      gap:8px;
+
+    .cell:hover::after {
+      opacity: 1;
+      transform: translateX(0);
     }
-    .links a{
-      color: rgba(232,238,247,.92);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      padding:10px 12px;
-      border-radius: 14px;
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      align-items:center;
+
+    .cell.center {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: default;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(208, 162, 74, 0.24), transparent 56%),
+        radial-gradient(circle at 70% 70%, rgba(110, 127, 116, 0.18), transparent 56%),
+        linear-gradient(180deg, #1f1a14, #14100c);
     }
-    .links a:hover{
-      border-color: rgba(122,167,255,.55);
-      background: rgba(122,167,255,.08);
+
+    body[data-theme="light"] .cell.center {
+      background:
+        radial-gradient(circle at 30% 30%, rgba(185, 135, 47, 0.18), transparent 56%),
+        radial-gradient(circle at 70% 70%, rgba(105, 124, 109, 0.14), transparent 56%),
+        linear-gradient(180deg, #e9dfcf, #ddd1be);
     }
-    .muted{color:var(--muted); font-size:12px;}
-    footer{padding:18px 18px 24px; color:var(--muted); font-size:12px;}
-    code{color:rgba(232,238,247,.9)}
-    @media (max-width: 820px){
-      .grid{
-        grid-template-columns: 1fr;
+
+    .cell.center::after { display: none; }
+
+    .cell-number {
+      font-family: "Space Mono", monospace;
+      font-size: 9px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      opacity: 0.75;
+    }
+
+    .cell-title {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+    }
+
+    .cell.center .cell-title {
+      color: var(--gold-light);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .cell-path {
+      font-family: "Space Mono", monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.3px;
+    }
+
+    .cell.center .cell-path {
+      color: rgba(226, 187, 110, 0.68);
+    }
+
+    .cell-desc {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .links-section {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 52px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .links-group h2 {
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-family: "Space Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .links-group a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.45;
+      transition: color 0.15s ease;
+    }
+
+    .links-group a:last-child { border-bottom: none; }
+
+    .links-group a:hover,
+    .links-group a:hover .arrow {
+      color: var(--gold);
+    }
+
+    .arrow {
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding: 20px 0 38px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+    }
+
+    .footer-note {
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .footer-meta {
+      text-align: right;
+      color: var(--muted);
+      font-family: "Space Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 1px;
+      opacity: 0.72;
+      flex-shrink: 0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .site-kicker { animation: fadeUp 0.5s ease both; animation-delay: 0.05s; }
+    h1 { animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+    .theme-toggle { animation: fadeUp 0.5s ease both; animation-delay: 0.14s; }
+    .header-rule { animation: fadeUp 0.5s ease both; animation-delay: 0.18s; }
+    .tagline { animation: fadeUp 0.5s ease both; animation-delay: 0.24s; }
+    .hero { animation: fadeUp 0.6s ease both; animation-delay: 0.34s; }
+    .links-section { animation: fadeUp 0.6s ease both; animation-delay: 0.44s; }
+    footer { animation: fadeUp 0.5s ease both; animation-delay: 0.52s; }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 0 18px; }
+      .masthead {
+        flex-direction: column;
+        align-items: flex-start;
       }
+      .grid-9 { grid-template-columns: 1fr; }
+      .cell { border-right: none !important; }
+      .cell:last-child { border-bottom: none !important; }
+      .links-section { grid-template-columns: 1fr; gap: 24px; }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-meta { text-align: left; }
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="wrap">
-      <h1><a class="home-link" href="/">永錫的九宮網站</a></h1>
-      <div class="sub">
-        這裡是整個網站的總入口。首頁負責總覽，系列頁負責主題展開，文章頁負責單篇內容，讓每個九宮主題都能持續往下生長。
+      <div class="masthead">
+        <div>
+          <div class="site-kicker">Mandala Grid · 九宮網站</div>
+          <h1>永錫的<br /><em>九宮</em>網站</h1>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切換明暗背景">Light Mode</button>
       </div>
-      <div class="sub muted">站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）</div>
+      <hr class="header-rule" />
+      <p class="tagline">
+        這裡是整個網站的總入口。<strong>首頁</strong>負責總覽，<strong>系列頁</strong>負責主題展開，<strong>文章頁</strong>負責單篇內容，讓每個九宮主題都能持續往下生長。
+      </p>
     </div>
   </header>
 
   <div class="wrap">
-    <div class="panel">
-      <div class="content">
-        <section>
-          <div class="grid">
-            <a class="cell" href="/37-paths/">
-              <strong>37道品</strong>
-              <small>/37-paths/</small>
-              <p>佛法與修行主題的九宮入口。</p>
-            </a>
+    <section class="hero">
+      <div class="section-label">九宮格入口</div>
+      <div class="grid-9">
+        <a class="cell" href="/37-paths/">
+          <span class="cell-number">01</span>
+          <span class="cell-title">37道品</span>
+          <span class="cell-path">/37-paths/</span>
+          <span class="cell-desc">佛法與修行主題的九宮入口。</span>
+        </a>
 
-            <a class="cell" href="/reading-notes/">
-              <strong>讀書心得</strong>
-              <small>/reading-notes/</small>
-              <p>用 Obsidian 與九宮閱讀器整理書籍與筆記。</p>
-            </a>
+        <a class="cell" href="/reading-notes/">
+          <span class="cell-number">02</span>
+          <span class="cell-title">讀書心得</span>
+          <span class="cell-path">/reading-notes/</span>
+          <span class="cell-desc">用 Obsidian 與九宮閱讀器整理書籍與筆記。</span>
+        </a>
 
-            <a class="cell" href="/lesson-14/">
-              <strong>日語學習</strong>
-              <small>/lesson-14/</small>
-              <p>大家的日本語第 14 課與練習內容。</p>
-            </a>
+        <a class="cell" href="/lesson-14/">
+          <span class="cell-number">03</span>
+          <span class="cell-title">日語學習</span>
+          <span class="cell-path">/lesson-14/</span>
+          <span class="cell-desc">大家的日本語第 14 課與練習內容。</span>
+        </a>
 
-            <a class="cell" href="/third-part/">
-              <strong>第三部</strong>
-              <small>/third-part/</small>
-              <p>九宮、Graph View 與寫書第三部的入口。</p>
-            </a>
+        <a class="cell" href="/third-part/">
+          <span class="cell-number">04</span>
+          <span class="cell-title">第三部</span>
+          <span class="cell-path">/third-part/</span>
+          <span class="cell-desc">九宮、Graph View 與寫書第三部的入口。</span>
+        </a>
 
-            <div class="cell center">
-              <strong>中心｜永錫</strong>
-              <small>九宮格 × 寫作 × 知識系統</small>
-              <p>這是整個網站的核心主題與創作方向。</p>
-            </div>
-
-            <a class="cell" href="/america-trip/">
-              <strong>美國之旅</strong>
-              <small>/america-trip/</small>
-              <p>行前規劃與旅行相關的九宮整理。</p>
-            </a>
-
-            <a class="cell" href="/badminton/">
-              <strong>羽毛球</strong>
-              <small>/badminton/</small>
-              <p>訓練方向、技術拆解與持續追蹤入口。</p>
-            </a>
-
-            <a class="cell" href="/Inception/">
-              <strong>Inception</strong>
-              <small>/Inception/</small>
-              <p>三層九宮魔方與多層次結構實驗。</p>
-            </a>
-
-            <a class="cell" href="/mandala-diary/">
-              <strong>週月計劃</strong>
-              <small>/mandala-diary/</small>
-              <p>週計劃、月計劃與 Local Graph 的入口。</p>
-            </a>
-          </div>
-        </section>
-
-        <div class="links">
-          <div class="muted">系列入口：</div>
-          <a href="/third-part/"><span>第三部｜九宮 × Graph View</span><span class="muted">→</span></a>
-          <a href="/completed-books/"><span>已完成書箱｜寫書</span><span class="muted">→</span></a>
-          <a href="/reading-notes/"><span>讀書心得｜Obsidian reading-notes</span><span class="muted">→</span></a>
-          <a href="/pinzhen-people/"><span>品臻邸｜人物關係圖</span><span class="muted">→</span></a>
-          <a href="/america-trip/"><span>美國之旅｜舊金山行前九宮</span><span class="muted">→</span></a>
-          <a href="/friend_Wang/"><span>friend_Wang｜系列索引（九宮）</span><span class="muted">→</span></a>
-          <a href="/lesson-14/"><span>日語學習｜大家的日本語 第14課</span><span class="muted">→</span></a>
-          <a href="/friend_Wang/2026-obsidian-seven-weapons/"><span>2026年王博士直播，七種兵器之Obsidian</span><span class="muted">→</span></a>
-          <a href="/badminton/"><span>羽毛球｜九宮格入口</span><span class="muted">→</span></a>
+        <div class="cell center">
+          <span class="cell-number">中心</span>
+          <span class="cell-title">永錫</span>
+          <span class="cell-path">九宮格 × 寫作 × 知識系統</span>
+          <span class="cell-desc">整個網站的核心主題與創作方向。</span>
         </div>
+
+        <a class="cell" href="/america-trip/">
+          <span class="cell-number">06</span>
+          <span class="cell-title">美國之旅</span>
+          <span class="cell-path">/america-trip/</span>
+          <span class="cell-desc">行前規劃與旅行相關的九宮整理。</span>
+        </a>
+
+        <a class="cell" href="/badminton/">
+          <span class="cell-number">07</span>
+          <span class="cell-title">羽毛球</span>
+          <span class="cell-path">/badminton/</span>
+          <span class="cell-desc">訓練方向、技術拆解與持續追蹤入口。</span>
+        </a>
+
+        <a class="cell" href="/Inception/">
+          <span class="cell-number">08</span>
+          <span class="cell-title">Inception</span>
+          <span class="cell-path">/Inception/</span>
+          <span class="cell-desc">三層九宮魔方與多層次結構實驗。</span>
+        </a>
+
+        <a class="cell" href="/mandala-diary/">
+          <span class="cell-number">09</span>
+          <span class="cell-title">週月計劃</span>
+          <span class="cell-path">/mandala-diary/</span>
+          <span class="cell-desc">週計劃、月計劃與 Local Graph 的入口。</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="links-section">
+      <div class="links-group">
+        <h2>主要系列</h2>
+        <a href="/third-part/">
+          <span>第三部｜九宮 × Graph View</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/completed-books/">
+          <span>已完成書箱｜寫書</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/reading-notes/">
+          <span>讀書心得｜Obsidian reading-notes</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/pinzhen-people/">
+          <span>品臻邸｜人物關係圖</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/america-trip/">
+          <span>美國之旅｜舊金山行前九宮</span>
+          <span class="arrow">→</span>
+        </a>
       </div>
 
-      <footer>
-        <div>目前首頁已整理成總站層級，後續新增主題時只要補一個系列首頁，再往下接文章資料夾即可。</div>
-      </footer>
+      <div class="links-group">
+        <h2>更多入口</h2>
+        <a href="/friend_Wang/">
+          <span>friend_Wang｜系列索引（九宮）</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/lesson-14/">
+          <span>日語學習｜大家的日本語 第14課</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/friend_Wang/2026-obsidian-seven-weapons/">
+          <span>七種兵器之 Obsidian｜王博士直播</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/badminton/">
+          <span>羽毛球｜九宮格入口</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
+
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-note">
+          目前首頁已整理成總站層級，後續新增主題時只要補一個系列首頁，再往下接文章資料夾即可。<br />
+          站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）。
+        </p>
+        <div class="footer-meta">
+          MANDALA GRID<br />
+          © 永錫
+        </div>
+      </div>
+    </footer>
   </div>
+
+  <script>
+    (function () {
+      var storageKey = "twhsi-home-theme";
+      var body = document.body;
+      var button = document.getElementById("theme-toggle");
+      var savedTheme = localStorage.getItem(storageKey);
+      var initialTheme = savedTheme === "light" ? "light" : "dark";
+
+      function renderTheme(theme) {
+        body.setAttribute("data-theme", theme);
+        button.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+        button.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+      }
+
+      renderTheme(initialTheme);
+
+      button.addEventListener("click", function () {
+        var nextTheme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        localStorage.setItem(storageKey, nextTheme);
+        renderTheme(nextTheme);
+      });
+    })();
+  </script>
 </body>
 </html>
