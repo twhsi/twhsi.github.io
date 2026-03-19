@@ -8,59 +8,70 @@
   </head>
   <body>
     <div class="page-shell">
-      <aside class="sidebar left-panel">
-        <div class="panel-head">
-          <p class="eyebrow">Manuscript</p>
-          <h1 id="site-title">魯曼卡片盒｜雙向連結</h1>
+      <aside class="left-rail">
+        <div class="rail-inner">
+          <p class="rail-label">charpter3</p>
+          <h1 id="site-title" class="vault-title">魯曼卡片盒｜雙向連結</h1>
+          <p class="vault-note">Obsidian Publish 風格閱讀頁</p>
+          <nav id="library-nav" class="library-nav" aria-label="筆記導覽"></nav>
         </div>
-        <nav id="library-nav" class="library-nav" aria-label="書稿導覽"></nav>
       </aside>
 
       <main class="main-panel">
-        <header class="hero">
-          <div>
-            <p class="eyebrow">Nine-grid Reader</p>
-            <h2 id="view-title">魯曼卡片盒九宮導覽</h2>
+        <header class="article-hero">
+          <div class="hero-meta">
+            <p class="hero-path">+ 00 永久筆記 / 魯曼卡片盒一撇</p>
+            <div id="article-meta" class="hero-chips"></div>
           </div>
-          <p id="view-summary" class="hero-summary"></p>
+          <h2 id="article-title" class="article-title">魯曼卡片盒導覽</h2>
+          <p id="view-summary" class="article-summary"></p>
         </header>
 
-        <section class="board-shell">
+        <section class="board-panel">
+          <div class="board-panel-head">
+            <div>
+              <p class="section-kicker">Board</p>
+              <h3 id="view-title">魯曼卡片盒九宮導覽</h3>
+            </div>
+            <p class="board-note">像 Publish 裡的附加導覽區，不搶正文。</p>
+          </div>
           <div id="board-tabs" class="board-tabs" aria-label="九宮切換"></div>
           <div id="mandala-grid" class="mandala-grid" aria-live="polite"></div>
         </section>
 
-        <section class="reading-shell">
-          <article class="reading-card article-card">
-            <div class="article-head">
-              <div>
-                <p class="eyebrow">Article</p>
-              <h3 id="article-title">魯曼卡片盒導覽</h3>
-              </div>
-              <div id="article-meta" class="article-meta"></div>
-            </div>
-            <div id="article-content" class="md"></div>
-          </article>
-        </section>
+        <article class="article-card">
+          <div id="article-content" class="md"></div>
+        </article>
       </main>
 
-      <aside class="sidebar right-panel">
-        <div class="panel-head">
-          <p class="eyebrow">Local Graph</p>
-          <h2 id="graph-title">導航</h2>
+      <aside class="right-rail">
+        <div class="rail-inner right-inner">
+          <section class="side-section">
+            <p class="section-kicker">Outline</p>
+            <h2 class="side-title">大綱</h2>
+            <nav id="outline-nav" class="outline-nav" aria-label="文章大綱"></nav>
+          </section>
+
+          <section class="side-section">
+            <p class="section-kicker">Keywords</p>
+            <h2 id="graph-title" class="side-title">關鍵字</h2>
+            <label class="search-box">
+              <span class="sr-only">搜尋關鍵字</span>
+              <input id="keyword-search" type="search" placeholder="搜尋關鍵字或章節" />
+            </label>
+            <div id="keyword-chips" class="keyword-chips"></div>
+          </section>
+
+          <section class="side-section">
+            <p class="section-kicker">Related</p>
+            <h2 class="side-title">相關筆記</h2>
+            <div id="keyword-results" class="keyword-results"></div>
+          </section>
         </div>
-        <div id="graph-modes" class="graph-modes"></div>
-        <label class="search-box">
-          <span class="sr-only">搜尋關鍵字</span>
-          <input id="keyword-search" type="search" placeholder="搜尋關鍵字或章節" />
-        </label>
-        <div id="graph-focus" class="graph-focus"></div>
-        <div id="keyword-chips" class="keyword-chips"></div>
-        <div id="keyword-results" class="keyword-results"></div>
       </aside>
     </div>
 
     <script src="./site-data.js"></script>
     <script src="./app.js"></script>
   </body>
-  </html>
+</html>

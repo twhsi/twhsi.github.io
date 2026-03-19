@@ -2,7 +2,7 @@ window.__SITE_DATA__ = {
   "title": "魯曼卡片盒｜雙向連結",
   "subtitle": "luhmann-zk",
   "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.…",
-  "generatedAt": "2026-03-19T14:54:10.253Z",
+  "generatedAt": "2026-03-19T15:16:23.464Z",
   "homeBoard": {
     "id": "home-board",
     "title": "魯曼卡片盒九宮導覽",
