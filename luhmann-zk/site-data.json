@@ -1,0 +1,800 @@
+{
+  "title": "魯曼卡片盒｜雙向連結",
+  "subtitle": "luhmann-zk",
+  "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.…",
+  "generatedAt": "2026-03-19T14:54:10.253Z",
+  "homeBoard": {
+    "id": "home-board",
+    "title": "魯曼卡片盒九宮導覽",
+    "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.…",
+    "center": {
+      "title": "魯曼卡片_雙向連結加工版",
+      "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.…",
+      "html": "<h1>9/8</h1>\n<p>https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8_V <span class=\"wikilink\">卡片盒</span>，一個模控學（cybernetic）系統</p>\n<p><span class=\"wikilink\">次序與失序</span>的組合，一堆無法預測的組合，</p>\n<p>透過特別路徑得以體現。</p>\n<p>前提：不依固定順序。</p>\n<p>先前的<span class=\"wikilink\">分化</span>：尋找協助vs.內容，紀錄、問題、<span class=\"wikilink\">概念</span>vs.</p>\n<p>將現有紀錄重塑，</p>\n<p>並使那些用內部順序來假設的變為多餘。</p>\n<p>9/8 Zettelkasten <a href=\"https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8-1_V &amp;quot;ZK_2_NB_9-8-1_V&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">1</a> als kybernetisches System</p>\n<p>Kombination von Unordnung und Ordnung, von Klumpenbildung und unvorhersehbarer, im ad hoc Zugriff realisierter Kombination.</p>\n<p>Vorbedingung: Verzicht auf festgelegte Ordnung. Die vorgeschaltete Differenzierung: Suchhilfen vs. Inhalt; Register, Fragestellungen, Einfälle vs. Vorhandenes überformt und macht z.T. entbehrlich, das, was an innerer Ordnung vorausgesetzt werden muss.</p>"
+    },
+    "cells": [
+      {
+        "id": "home-1",
+        "title": "9/8",
+        "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 N…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-2",
+        "title": "9/8a",
+        "summary": "9/8a 產能的問題與關係有關，亦即與「卡片盒與使用者的關係」有關。 9/8a Das Produktivitätsproblem muss…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-3",
+        "title": "9/8b",
+        "summary": "9/8b 記憶的整體結構，參見Ashby 1967，p.103. 人不應該依賴大量逐點式（point by point）的存取方式， 而是應該…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-4",
+        "title": "9/8c",
+        "summary": "9/8c 可以思考一下「相互依賴中斷（Interdependenzunterbrechung）」這個問題。 Zu überlegen wäre…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-5",
+        "title": "9/8d",
+        "summary": "9/8d 對閱讀產生的回饋影響： 當人注意到「卡片化（分散記錄）」的可能性時，閱讀方式就會改變。 —— 而不是做「摘錄（Exzerpte）」！…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-6",
+        "title": "9/8e",
+        "summary": "9/8e 或許可以回到「資訊（Information）」這個概念， 它預設了某些「選擇的視域（horizons）」、「比較的框架」等等， 而這…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-7",
+        "title": "9/8f",
+        "summary": "9/8f 當以適當的方式將其導入（引導）到社會系統中時， 會產生一種整體一致的效果。 Einheitlicher Effekt entsteh…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      },
+      {
+        "id": "home-8",
+        "title": "9/8g",
+        "summary": "9/8g 在卡片盒技術背後，有一個經驗是： 如果不寫下來，人是無法思考的 —— 至少在那些要求高、並且需要對記憶進行選擇性調用的情境中，是做不…",
+        "targetId": "魯曼9-8卡片-雙向連結-md",
+        "targetType": "chapter"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "luhmann-zk",
+      "title": "魯曼卡片盒",
+      "path": "魯曼卡片盒",
+      "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不…",
+      "chapterCount": 1,
+      "shelves": [
+        {
+          "id": "luhmann-zk-bidirectional-links",
+          "title": "雙向連結",
+          "path": "魯曼卡片盒/雙向連結",
+          "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不…",
+          "chapters": [
+            {
+              "id": "魯曼9-8卡片-雙向連結-md",
+              "path": "魯曼9.8卡片_雙向連結.md",
+              "title": "魯曼卡片_雙向連結加工版",
+              "top": "魯曼卡片盒",
+              "shelf": "雙向連結",
+              "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不…",
+              "keywords": [
+                "魯曼卡片_雙向連結加工版",
+                "卡片盒",
+                "次序與失序",
+                "分化",
+                "概念",
+                "溝通",
+                "卡片盒與使用者的關係",
+                "Relation",
+                "記憶",
+                "relations",
+                "✡️ 🟩 Graph View",
+                "Verweisungen",
+                "引用",
+                "分支",
+                "二階觀察"
+              ],
+              "html": "<h1>9/8</h1>\n<p>https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8_V <span class=\"wikilink\">卡片盒</span>，一個模控學（cybernetic）系統</p>\n<p><span class=\"wikilink\">次序與失序</span>的組合，一堆無法預測的組合，</p>\n<p>透過特別路徑得以體現。</p>\n<p>前提：不依固定順序。</p>\n<p>先前的<span class=\"wikilink\">分化</span>：尋找協助vs.內容，紀錄、問題、<span class=\"wikilink\">概念</span>vs.</p>\n<p>將現有紀錄重塑，</p>\n<p>並使那些用內部順序來假設的變為多餘。</p>\n<p>9/8 Zettelkasten <a href=\"https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8-1_V &amp;quot;ZK_2_NB_9-8-1_V&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">1</a> als kybernetisches System</p>\n<p>Kombination von Unordnung und Ordnung, von Klumpenbildung und unvorhersehbarer, im ad hoc Zugriff realisierter Kombination.</p>\n<p>Vorbedingung: Verzicht auf festgelegte Ordnung. Die vorgeschaltete Differenzierung: Suchhilfen vs. Inhalt; Register, Fragestellungen, Einfälle vs. Vorhandenes überformt und macht z.T. entbehrlich, das, was an innerer Ordnung vorausgesetzt werden muss.</p>\n<h1>9/8,1</h1>\n<p>主題：與<span class=\"wikilink\">卡片盒</span><span class=\"wikilink\">溝通</span>:如何開發出適當的夥伴，資淺夥伴？重要。 ➡️ 資淺夥伴是指新卡片嗎？ 與幕僚共事越來越難，越來越貴。</p>\n<p>卡片紙的現實。</p>\n<p>9/8,2</p>\n<blockquote><p>人力早已短缺且昂貴，</p></blockquote>\n<blockquote><p>現在更變得難以控制、難以指揮。</p></blockquote>\n<p>Personal ist schon lange knapp und teuer, jetzt wird es zusätzlich ungebärdig und unleitbar. ➡️ AI的使用的沉沒成本越來越高？擅長處理關係，但是本質問題無法處理得好</p>\n<blockquote><p>微處理器已經被提出（預告），</p></blockquote>\n<blockquote><p>但實際上還無法真正使用。</p></blockquote>\n<p>Die Mikroprozessoren sind angekündigt, aber noch nicht wirklich verfügbar.</p>\n<p>➡️ AI的智能無法真正運作</p>\n<blockquote><p>自身的記憶力是有限的，</p></blockquote>\n<blockquote><p>並且需要被減輕負擔。</p></blockquote>\n<p>Das eigene Gedächtnis mangelhaft und entlastungsbedürftig. ➡️ AI的上下文受到限制，而且有很多問題，例如維護程式庫越來越大，犯錯也增多。</p>\n<blockquote><p>因此開始思考：</p></blockquote>\n<blockquote><p>嘗試為自己建立一個「第二記憶」。</p></blockquote>\n<p>Überlegungen zu einem Versuch, sich ein Zweitgedächtnis zu schaffen. ➡️ 人腦建立更強上下文的能力，可以強化AI和人的協作能力</p>\n<h1>9/8,3</h1>\n<p><span class=\"wikilink\">卡片盒</span>裡有鬼？ 訪客來。全都給他們看，看光光－如A片。 不意外他們感到失望。 ➡️ 別人看我的卡片盒沒有用，因為這是我的老朋友，不是他們的老朋友</p>\n<h1>9/8a</h1>\n<p>產能的問題與關係有關，亦即與「<span class=\"wikilink\">卡片盒與使用者的關係</span>」有關。 9/8a Das Produktivitätsproblem muss in bezug auf eine <span class=\"wikilink\">Relation</span> gestellt werden, nämlich in bezug auf die Relation von Zettelkasten und Benutzer.</p>\n<p>➡️ 關係的文是<span class=\"wikilink\">Relation</span></p>\n<h1>9/8a1</h1>\n<p><span class=\"wikilink\">卡片盒</span>筆記不斷增長，我盡全力讓自己從中獲益，</p>\n<p>盡全力去探索。</p>\n<p>➡️ 卡片盒的關係，也就是連結合乎 n*(n-1)／2幕次公式，所以</p>\n<p>9／8a12</p>\n<h1>9/8a2</h1>\n<p><span class=\"wikilink\">卡片盒</span>就是化糞池－勿放入澄清版的筆記。</p>\n<p>暫緩測試，速下決定－速度是關鍵。</p>\n<h1>9/8b</h1>\n<p><span class=\"wikilink\">記憶</span>的整體結構，參見Ashby 1967，p.103.</p>\n<p>人不應該依賴大量逐點式（point-by-point）的存取方式， 而是應該依靠筆記之間的關係（<span class=\"wikilink\">relations</span>）， 也就是透過<strong><span class=\"wikilink\">✡️ 🟩 Graph View</span></strong>來運作。 這樣的引用關係， 能夠一次讓更多內容變得可用， 遠遠超過我們在一次搜尋衝動 或一次固定某個想法時 原本能想到的範圍 [[原本<span class=\"wikilink\">卡片盒</span>筆記的翻譯]]</p>\n<p>9/8b Zur allg. Struktur von Gedächtnissen vgl. <a href=\"https://niklas-luhmann-archiv.de/bestand/literatur/item/ashby_1967_brain &amp;quot;ashby_1967_brain&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">Ashby 1967, S. 103</a>.</p>\n<p>Es ist danach wichtig, dass man nicht auf eine Unmenge von Punkt-für-Punkt Zugriffe angewiesen ist, sondern auf Relationen zwischen Notizen, also auf Verweisungen zurückgreifen kann, die mehr auf einmal verfügbar machen, als man bei einem Suchimpuls oder auch bei einer Gedanken- fixierung im Sinn hat.</p>\n<p>➡️ 在Obsidian的右欄，正是管理關係的地方，我們不看文檔而是一次看到關係</p>\n<h1>8b1</h1>\n<blockquote><p>由於上述觀點，很重要的一點是：</p></blockquote>\n<blockquote><p>卡片盒中的「秩序」，不應該只是在概念或複雜的單一主題之下進行聚合；</p></blockquote>\n<blockquote><p>雖然這樣做當然也是必要的。</p></blockquote>\n<blockquote><p>但是，「引用（連結）」不能只指向那些作為主導觀點的、用來聚合的總括性概念；</p></blockquote>\n<blockquote><p>而是必須能夠從這些概念之下所聚集的材料中，<strong>選擇性地把內容拉出來</strong>。</p></blockquote>\n<p>9/8b1 Wegen des vorstehenden Gesichtspunktes ist es wichtig, dass die Ordnung im Zettelkasten nicht nur unter Begriffen oder komplexen Einzelthemen aggregiert wird; obwohl das natürlich auch notwendig ist. Aber die <span class=\"wikilink\">Verweisungen</span> dürfen nicht nur die Leitgesichtspunkte aggregierenden Sammel- begriffe erfassen, sondern müssen das unter ihnen gesammelte Material selektiv wegziehen.</p>\n<p>👉 魯曼在說：</p>\n<ol>\n<li><strong>分類是必要的，但不夠</strong></li>\n<li>真正重要的是：</li>\n</ol>\n<ul>\n<li>連結不能只連到「大標題」</li>\n<li>而要能外部<span class=\"wikilink\">引用</span>，<span class=\"wikilink\">Verweisungen</span></li>\n</ul>\n<h1>8b2</h1>\n<blockquote><p>「多重儲存」（Multiple storage）作為一種必要性，</p></blockquote>\n<blockquote><p>用於儲存複雜的（亦即難以分析處理的）資訊。</p></blockquote>\n<p>9/8b2 &quot;Multiple storage&quot; als Notwendigkeit der Speicherung von komplexen (komplex auszu- wertenden) Informationen. ➡️ 不要怕Obsidian有重複的檔案資料，只要把最新的資料放在上方即可，化糞池的下方會有錯綜複雜的資料，是正常的。 ❓這裡的komplexen複雜和錯綜複雜的德文 Complicated</p>\n<ul>\n<li><code>kompliziert</code>：繁複、難處理、糾結</li>\n<li><code>komplex</code>：元素彼此交互作用，所以難以完全預測</li>\n</ul>\n<p>我們的創造要進入黑森林，也就是komplex，但是不錯綜複雜</p>\n<p>9/8c</p>\n<blockquote><p>可以思考一下「相互依賴中斷（Interdependenzunterbrechung）」這個問題。</p></blockquote>\n<p>Zu überlegen wäre etwas zum Problem</p>\n<p>der Interdependenzunterbrechung.</p>\n<p>➡️ 網狀結構的好處就是，即時某個連結中斷（編號寫作，放回卡片放錯位置），還是可以靠其他的網路來達到連結概念的功能。</p>\n<p>9/8d</p>\n<blockquote><p>對閱讀產生的回饋影響：</p></blockquote>\n<blockquote><p>當人注意到「卡片化（分散記錄）」的可能性時，閱讀方式就會改變。</p></blockquote>\n<blockquote><p>—— 而不是做「摘錄（Exzerpte）」！</p></blockquote>\n<p>Rückwirkungen auf die Lektüre: man liest anders, wenn man auf die Möglichkeiten der Verzettelung achtet – nicht: Exzerpte!</p>\n<p>➡️ 卡片筆記要求你用自己的話來寫卡片，雖然有點複雜，但是一旦學會了，你閱讀就會改變，不是抄書的句子，也不會把文字只留在書頁的上下文，而是會開始建立卡片盒，讓讀書筆記集中在卡片盒之中，發揮更大的效用。</p>\n<p>9/8e</p>\n<blockquote><p>或許可以回到「資訊（Information）」這個概念，</p></blockquote>\n<blockquote><p>它預設了某些「選擇的視域（horizons）」、「比較的框架」等等，</p></blockquote>\n<blockquote><p>而這些東西無法事先被確定。</p></blockquote>\n<p>Evtl. Rückgriff auf den Informationsbegriff, der Selektionshorizonte, Vergleichsschemata etc. voraussetzt, die nicht im Vorhinein festgelegt werden können.</p>\n<blockquote><p>因此，卡片盒之所以具有生產性，在於：</p></blockquote>\n<blockquote><p>它會把已記錄的內容，暴露在那些「未被記錄的背景」之中，</p></blockquote>\n<blockquote><p>並因此讓新的資訊產生——</p></blockquote>\n<blockquote><p>而這些資訊，原本並沒有被儲存。</p></blockquote>\n<p>Daher wird der Zettelkasten produktiv insofern, als er Notiertes nichtmitnotierten Hintergründen aussetzt und dadurch Information entstehen lässt, die so nicht gespeichert war. ➡️ 這裡「未被記錄的背景」，是有關Obsidian右欄的地方，二階觀察的地方，二階觀察可以讓大量的可能性發生 ❓ 我還搞不清楚<span class=\"wikilink\">分支</span>是幹嘛的，讓結構變複雜，能合乎像是Inception和Tenet這類複雜的結構作品放入資料</p>\n<p>9/8f</p>\n<blockquote><p>當以適當的方式將其導入（引導）到社會系統中時，</p></blockquote>\n<blockquote><p>會產生一種整體一致的效果。</p></blockquote>\n<p>Einheitlicher Effekt entsteht bei Kanalisierung in appropriate ways in das soziale System. ➡️ 卡片盒是自己的話，雖然是讀書筆記，但是有編號及引用這些卡片序列鷹架可以成長，所以有些一致性。</p>\n<blockquote><p>（從外界看來）會給人一種「精神上肌肉發達的整體人格」的印象。</p></blockquote>\n<p>Eindruck einer geistig muskulösen Gesamtper- sönlichkeit.</p>\n<p>➡️ 我覺得我讀書的方法，慢慢變成一輩子都不會忘記這本書了耶!<a href=\"https://static.xx.fbcdn.net/images/emoji.php/v9/t12/3/16/1f606.png\" target=\"_blank\" rel=\"noreferrer\">😆</a>OB來做讀書筆記真是神器</p>\n<p>9/8g</p>\n<blockquote><p>在卡片盒技術背後，有一個經驗是：</p></blockquote>\n<blockquote><p><strong>如果不寫下來，人是無法思考的</strong>——</p></blockquote>\n<blockquote><p>至少在那些要求高、並且需要對記憶進行選擇性調用的情境中，是做不到的。</p></blockquote>\n<p>➡️ 這個推論超強，也就是人類的思考與記憶，和寫下來有關，但是AI時代的出先，應該是AI如何幫助人腦來思考和記憶，例如我要考過N5，AI如何幫我呢。</p>\n<p>Hinter der Zettelkastentechnik steht die Erfahrung: Ohne zu schreiben kann man nicht denken – jedenfalls nicht in anspruchsvollen, selektiven Zugriff aufs Gedächtnis voraussehenden Zusammenhängen.</p>\n<blockquote><p>這也意味著：</p></blockquote>\n<blockquote><p><strong>如果不把「差異」刻劃出來，人就無法思考。</strong></p></blockquote>\n<p>Das heißt auch: ohne Differenzen einzukerben, kann man nicht denken. ➡️ 日語我要如何找出差異呢，要在筆記上寫出差異，AI可以幫我標出來</p>\n<p>9/8h</p>\n<blockquote><p>關於在 <a href=\"chatgpt://generic-entity?number=0\" target=\"_blank\" rel=\"noreferrer\">Royal Society</a> 中「知識登錄方式」的評論，</p></blockquote>\n<blockquote><p>出自 <a href=\"chatgpt://generic-entity?number=1\" target=\"_blank\" rel=\"noreferrer\">Thomas Sprat</a>（1667），第115頁以下。</p></blockquote>\n<blockquote><p></p></blockquote>\n<p>Bemerkungen über Registrierung des Wissens in der Royal Society bei <a href=\"https://niklas-luhmann-archiv.de/bestand/literatur/item/sprat_1667_royal-society &amp;quot;sprat_1667_royal-society&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">Sprat 1667, S. 115f.</a></p>\n<blockquote><p></p></blockquote>\n<blockquote><p>放棄過早的系統化與封閉，</p></blockquote>\n<blockquote><p>保持對未來的開放性：</p></blockquote>\n<p>Verzicht auf vorschnelle Systematisierung und Abschliessung, Zukunftsoffenheit: &quot;Nor ought this neglect of consequence and order, to be only thought to proceed from their carelessness; but from mature and well grounded premeditation.&quot; ➡️ 一開始不需要有系統，一開始更要封閉寫，這樣未來才能開放</p>\n<p>9/8i</p>\n<p>Zettelkasten mit dem komplizierten Verdauungssystem eines Wiederkäuers.</p>\n<blockquote><p>卡片盒，就像一個具有複雜消化系統的「反芻動物」。</p></blockquote>\n<p>➡️ 循環反饋，卡片盒是消化系統，這是<span class=\"wikilink\">二階觀察</span>的範圍</p>\n<p>Alle arbiträren Einfälle, alle Zufälle der Lektüren, können eingebracht werden.</p>\n<blockquote><p>所有任意的想法、所有閱讀中的偶然收穫，</p></blockquote>\n<blockquote><p>都可以被放入其中。</p></blockquote>\n<p>Es entscheidet dann die interne Anschlussfähig- keit. ➡️ 臨時筆記放入卡片盒的能力也很重要</p>\n<h1>9/8j</h1>\n<p><span class=\"wikilink\">卡片盒</span>筆記裡面有一張卡片，上面記載的內容駁斥了整個<span class=\"wikilink\">卡片盒</span>筆記裡面每一則筆記的論點。</p>\n<p>但只要你一打開<span class=\"wikilink\">卡片盒</span>，這則筆記就會自動消失。</p>\n<p>也就是說，它換了個編號，跑到別的地方去了，找不到了。</p>\n<p><span class=\"wikilink\">鬼</span>牌一張。</p>",
+              "boards": [
+                {
+                  "id": "board-1",
+                  "title": "9/8",
+                  "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic…",
+                  "center": {
+                    "title": "9/8",
+                    "summary": "9/8 https://niklas luhmann archiv.de/bestand/zettelkasten/zettel/ZK 2 NB 9 8 V 卡片盒，一個模控學（cybernetic）系統 次序與失序的組合，一堆無法預測的組合， 透過特別路徑得以體現。 前提：不依固定順序。 先前的分化：尋找協助vs.…",
+                    "html": "<h1>9/8</h1>\n<p>https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8_V <span class=\"wikilink\">卡片盒</span>，一個模控學（cybernetic）系統</p>\n<p><span class=\"wikilink\">次序與失序</span>的組合，一堆無法預測的組合，</p>\n<p>透過特別路徑得以體現。</p>\n<p>前提：不依固定順序。</p>\n<p>先前的<span class=\"wikilink\">分化</span>：尋找協助vs.內容，紀錄、問題、<span class=\"wikilink\">概念</span>vs.</p>\n<p>將現有紀錄重塑，</p>\n<p>並使那些用內部順序來假設的變為多餘。</p>\n<p>9/8 Zettelkasten <a href=\"https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_2_NB_9-8-1_V &amp;quot;ZK_2_NB_9-8-1_V&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">1</a> als kybernetisches System</p>\n<p>Kombination von Unordnung und Ordnung, von Klumpenbildung und unvorhersehbarer, im ad hoc Zugriff realisierter Kombination.</p>\n<p>Vorbedingung: Verzicht auf festgelegte Ordnung. Die vorgeschaltete Differenzierung: Suchhilfen vs. Inhalt; Register, Fragestellungen, Einfälle vs. Vorhandenes überformt und macht z.T. entbehrlich, das, was an innerer Ordnung vorausgesetzt werden muss.</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "1.1",
+                      "title": "9/8,1",
+                      "summary": "9/8,1 主題：與卡片盒溝通:如何開發出適當的夥伴，資淺夥伴？重要。 ➡️ 資淺夥伴是指新卡片嗎？ 與幕僚共事越來越難，越來越貴。 卡片紙的現實。",
+                      "html": "<h1>9/8,1</h1>\n<p>主題：與<span class=\"wikilink\">卡片盒</span><span class=\"wikilink\">溝通</span>:如何開發出適當的夥伴，資淺夥伴？重要。 ➡️ 資淺夥伴是指新卡片嗎？ 與幕僚共事越來越難，越來越貴。</p>\n<p>卡片紙的現實。</p>"
+                    },
+                    {
+                      "id": "1.2",
+                      "title": "9/8,2",
+                      "summary": "9/8,2 人力早已短缺且昂貴， 現在更變得難以控制、難以指揮。 Personal ist schon lange knapp und teuer, jetz…",
+                      "html": "<p>9/8,2</p>\n<blockquote><p>人力早已短缺且昂貴，</p></blockquote>\n<blockquote><p>現在更變得難以控制、難以指揮。</p></blockquote>\n<p>Personal ist schon lange knapp und teuer, jetzt wird es zusätzlich ungebärdig und unleitbar. ➡️ AI的使用的沉沒成本越來越高？擅長處理關係，但是本質問題無法處理得好</p>\n<blockquote><p>微處理器已經被提出（預告），</p></blockquote>\n<blockquote><p>但實際上還無法真正使用。</p></blockquote>\n<p>Die Mikroprozessoren sind angekündigt, aber noch nicht wirklich verfügbar.</p>\n<p>➡️ AI的智能無法真正運作</p>\n<blockquote><p>自身的記憶力是有限的，</p></blockquote>\n<blockquote><p>並且需要被減輕負擔。</p></blockquote>\n<p>Das eigene Gedächtnis mangelhaft und entlastungsbedürftig. ➡️ AI的上下文受到限制，而且有很多問題，例如維護程式庫越來越大，犯錯也增多。</p>\n<blockquote><p>因此開始思考：</p></blockquote>\n<blockquote><p>嘗試為自己建立一個「第二記憶」。</p></blockquote>\n<p>Überlegungen zu einem Versuch, sich ein Zweitgedächtnis zu schaffen. ➡️ 人腦建立更強上下文的能力，可以強化AI和人的協作能力</p>"
+                    },
+                    {
+                      "id": "1.3",
+                      "title": "9/8,3",
+                      "summary": "9/8,3 卡片盒裡有鬼？ 訪客來。全都給他們看，看光光－如A片。 不意外他們感到失望。 ➡️ 別人看我的卡片盒沒有用，因為這是我的老朋友，不是他們的老朋友",
+                      "html": "<h1>9/8,3</h1>\n<p><span class=\"wikilink\">卡片盒</span>裡有鬼？ 訪客來。全都給他們看，看光光－如A片。 不意外他們感到失望。 ➡️ 別人看我的卡片盒沒有用，因為這是我的老朋友，不是他們的老朋友</p>"
+                    },
+                    {
+                      "id": "1.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "1.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "1.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "1.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "1.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-2",
+                  "title": "9/8a",
+                  "summary": "9/8a 產能的問題與關係有關，亦即與「卡片盒與使用者的關係」有關。 9/8a Das Produktivitätsproblem muss in bezug auf eine Relation g…",
+                  "center": {
+                    "title": "9/8a",
+                    "summary": "9/8a 產能的問題與關係有關，亦即與「卡片盒與使用者的關係」有關。 9/8a Das Produktivitätsproblem muss in bezug auf eine Relation gestellt werden, nämlich in bezug auf die Relation von Zettel…",
+                    "html": "<h1>9/8a</h1>\n<p>產能的問題與關係有關，亦即與「<span class=\"wikilink\">卡片盒與使用者的關係</span>」有關。 9/8a Das Produktivitätsproblem muss in bezug auf eine <span class=\"wikilink\">Relation</span> gestellt werden, nämlich in bezug auf die Relation von Zettelkasten und Benutzer.</p>\n<p>➡️ 關係的文是<span class=\"wikilink\">Relation</span></p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "2.1",
+                      "title": "9/8a1",
+                      "summary": "9/8a1 卡片盒筆記不斷增長，我盡全力讓自己從中獲益， 盡全力去探索。 ➡️ 卡片盒的關係，也就是連結合乎 n (n 1)／2幕次公式，所以",
+                      "html": "<h1>9/8a1</h1>\n<p><span class=\"wikilink\">卡片盒</span>筆記不斷增長，我盡全力讓自己從中獲益，</p>\n<p>盡全力去探索。</p>\n<p>➡️ 卡片盒的關係，也就是連結合乎 n*(n-1)／2幕次公式，所以</p>"
+                    },
+                    {
+                      "id": "2.2",
+                      "title": "9/8a2",
+                      "summary": "9/8a2 卡片盒就是化糞池－勿放入澄清版的筆記。 暫緩測試，速下決定－速度是關鍵。",
+                      "html": "<h1>9/8a2</h1>\n<p><span class=\"wikilink\">卡片盒</span>就是化糞池－勿放入澄清版的筆記。</p>\n<p>暫緩測試，速下決定－速度是關鍵。</p>"
+                    },
+                    {
+                      "id": "2.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "2.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "2.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "2.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "2.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "2.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-3",
+                  "title": "9/8b",
+                  "summary": "9/8b 記憶的整體結構，參見Ashby 1967，p.103. 人不應該依賴大量逐點式（point by point）的存取方式， 而是應該依靠筆記之間的關係（relations）， 也就是透過…",
+                  "center": {
+                    "title": "9/8b",
+                    "summary": "9/8b 記憶的整體結構，參見Ashby 1967，p.103. 人不應該依賴大量逐點式（point by point）的存取方式， 而是應該依靠筆記之間的關係（relations）， 也就是透過 ✡️ 🟩 Graph View 來運作。 這樣的引用關係， 能夠一次讓更多內容變得可用， 遠遠超過我們在一次搜尋衝動…",
+                    "html": "<h1>9/8b</h1>\n<p><span class=\"wikilink\">記憶</span>的整體結構，參見Ashby 1967，p.103.</p>\n<p>人不應該依賴大量逐點式（point-by-point）的存取方式， 而是應該依靠筆記之間的關係（<span class=\"wikilink\">relations</span>）， 也就是透過<strong><span class=\"wikilink\">✡️ 🟩 Graph View</span></strong>來運作。 這樣的引用關係， 能夠一次讓更多內容變得可用， 遠遠超過我們在一次搜尋衝動 或一次固定某個想法時 原本能想到的範圍 [[原本<span class=\"wikilink\">卡片盒</span>筆記的翻譯]]</p>\n<p>9/8b Zur allg. Struktur von Gedächtnissen vgl. <a href=\"https://niklas-luhmann-archiv.de/bestand/literatur/item/ashby_1967_brain &amp;quot;ashby_1967_brain&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">Ashby 1967, S. 103</a>.</p>\n<p>Es ist danach wichtig, dass man nicht auf eine Unmenge von Punkt-für-Punkt Zugriffe angewiesen ist, sondern auf Relationen zwischen Notizen, also auf Verweisungen zurückgreifen kann, die mehr auf einmal verfügbar machen, als man bei einem Suchimpuls oder auch bei einer Gedanken- fixierung im Sinn hat.</p>\n<p>➡️ 在Obsidian的右欄，正是管理關係的地方，我們不看文檔而是一次看到關係</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "3.1",
+                      "title": "8b1",
+                      "summary": "8b1 由於上述觀點，很重要的一點是： 卡片盒中的「秩序」，不應該只是在概念或複雜的單一主題之下進行聚合； 雖然這樣做當然也是必要的。 但是，「引用（連結）」…",
+                      "html": "<h1>8b1</h1>\n<blockquote><p>由於上述觀點，很重要的一點是：</p></blockquote>\n<blockquote><p>卡片盒中的「秩序」，不應該只是在概念或複雜的單一主題之下進行聚合；</p></blockquote>\n<blockquote><p>雖然這樣做當然也是必要的。</p></blockquote>\n<blockquote><p>但是，「引用（連結）」不能只指向那些作為主導觀點的、用來聚合的總括性概念；</p></blockquote>\n<blockquote><p>而是必須能夠從這些概念之下所聚集的材料中，<strong>選擇性地把內容拉出來</strong>。</p></blockquote>\n<p>9/8b1 Wegen des vorstehenden Gesichtspunktes ist es wichtig, dass die Ordnung im Zettelkasten nicht nur unter Begriffen oder komplexen Einzelthemen aggregiert wird; obwohl das natürlich auch notwendig ist. Aber die <span class=\"wikilink\">Verweisungen</span> dürfen nicht nur die Leitgesichtspunkte aggregierenden Sammel- begriffe erfassen, sondern müssen das unter ihnen gesammelte Material selektiv wegziehen.</p>\n<p>👉 魯曼在說：</p>\n<ol>\n<li><strong>分類是必要的，但不夠</strong></li>\n<li>真正重要的是：</li>\n</ol>\n<ul>\n<li>連結不能只連到「大標題」</li>\n<li>而要能外部<span class=\"wikilink\">引用</span>，<span class=\"wikilink\">Verweisungen</span></li>\n</ul>"
+                    },
+                    {
+                      "id": "3.2",
+                      "title": "8b2",
+                      "summary": "8b2 「多重儲存」（Multiple storage）作為一種必要性， 用於儲存複雜的（亦即難以分析處理的）資訊。 9/8b2 \"Multiple stor…",
+                      "html": "<h1>8b2</h1>\n<blockquote><p>「多重儲存」（Multiple storage）作為一種必要性，</p></blockquote>\n<blockquote><p>用於儲存複雜的（亦即難以分析處理的）資訊。</p></blockquote>\n<p>9/8b2 &quot;Multiple storage&quot; als Notwendigkeit der Speicherung von komplexen (komplex auszu- wertenden) Informationen. ➡️ 不要怕Obsidian有重複的檔案資料，只要把最新的資料放在上方即可，化糞池的下方會有錯綜複雜的資料，是正常的。 ❓這裡的komplexen複雜和錯綜複雜的德文 Complicated</p>\n<ul>\n<li><code>kompliziert</code>：繁複、難處理、糾結</li>\n<li><code>komplex</code>：元素彼此交互作用，所以難以完全預測</li>\n</ul>\n<p>我們的創造要進入黑森林，也就是komplex，但是不錯綜複雜</p>"
+                    },
+                    {
+                      "id": "3.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "3.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "3.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "3.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "3.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "3.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-4",
+                  "title": "9/8c",
+                  "summary": "9/8c 可以思考一下「相互依賴中斷（Interdependenzunterbrechung）」這個問題。 Zu überlegen wäre etwas zum Problem der Inter…",
+                  "center": {
+                    "title": "9/8c",
+                    "summary": "9/8c 可以思考一下「相互依賴中斷（Interdependenzunterbrechung）」這個問題。 Zu überlegen wäre etwas zum Problem der Interdependenzunterbrechung. ➡️ 網狀結構的好處就是，即時某個連結中斷（編號寫作，放回卡片放錯位置）…",
+                    "html": "<p>9/8c</p>\n<blockquote><p>可以思考一下「相互依賴中斷（Interdependenzunterbrechung）」這個問題。</p></blockquote>\n<p>Zu überlegen wäre etwas zum Problem</p>\n<p>der Interdependenzunterbrechung.</p>\n<p>➡️ 網狀結構的好處就是，即時某個連結中斷（編號寫作，放回卡片放錯位置），還是可以靠其他的網路來達到連結概念的功能。</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "4.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "4.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-5",
+                  "title": "9/8d",
+                  "summary": "9/8d 對閱讀產生的回饋影響： 當人注意到「卡片化（分散記錄）」的可能性時，閱讀方式就會改變。 —— 而不是做「摘錄（Exzerpte）」！ Rückwirkungen auf die Lektü…",
+                  "center": {
+                    "title": "9/8d",
+                    "summary": "9/8d 對閱讀產生的回饋影響： 當人注意到「卡片化（分散記錄）」的可能性時，閱讀方式就會改變。 —— 而不是做「摘錄（Exzerpte）」！ Rückwirkungen auf die Lektüre: man liest anders, wenn man auf die Möglichkeiten der Ver…",
+                    "html": "<p>9/8d</p>\n<blockquote><p>對閱讀產生的回饋影響：</p></blockquote>\n<blockquote><p>當人注意到「卡片化（分散記錄）」的可能性時，閱讀方式就會改變。</p></blockquote>\n<blockquote><p>—— 而不是做「摘錄（Exzerpte）」！</p></blockquote>\n<p>Rückwirkungen auf die Lektüre: man liest anders, wenn man auf die Möglichkeiten der Verzettelung achtet – nicht: Exzerpte!</p>\n<p>➡️ 卡片筆記要求你用自己的話來寫卡片，雖然有點複雜，但是一旦學會了，你閱讀就會改變，不是抄書的句子，也不會把文字只留在書頁的上下文，而是會開始建立卡片盒，讓讀書筆記集中在卡片盒之中，發揮更大的效用。</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "5.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "5.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-6",
+                  "title": "9/8e",
+                  "summary": "9/8e 或許可以回到「資訊（Information）」這個概念， 它預設了某些「選擇的視域（horizons）」、「比較的框架」等等， 而這些東西無法事先被確定。 Evtl. Rückgriff…",
+                  "center": {
+                    "title": "9/8e",
+                    "summary": "9/8e 或許可以回到「資訊（Information）」這個概念， 它預設了某些「選擇的視域（horizons）」、「比較的框架」等等， 而這些東西無法事先被確定。 Evtl. Rückgriff auf den Informationsbegriff, der Selektionshorizonte, Vergle…",
+                    "html": "<p>9/8e</p>\n<blockquote><p>或許可以回到「資訊（Information）」這個概念，</p></blockquote>\n<blockquote><p>它預設了某些「選擇的視域（horizons）」、「比較的框架」等等，</p></blockquote>\n<blockquote><p>而這些東西無法事先被確定。</p></blockquote>\n<p>Evtl. Rückgriff auf den Informationsbegriff, der Selektionshorizonte, Vergleichsschemata etc. voraussetzt, die nicht im Vorhinein festgelegt werden können.</p>\n<blockquote><p>因此，卡片盒之所以具有生產性，在於：</p></blockquote>\n<blockquote><p>它會把已記錄的內容，暴露在那些「未被記錄的背景」之中，</p></blockquote>\n<blockquote><p>並因此讓新的資訊產生——</p></blockquote>\n<blockquote><p>而這些資訊，原本並沒有被儲存。</p></blockquote>\n<p>Daher wird der Zettelkasten produktiv insofern, als er Notiertes nichtmitnotierten Hintergründen aussetzt und dadurch Information entstehen lässt, die so nicht gespeichert war. ➡️ 這裡「未被記錄的背景」，是有關Obsidian右欄的地方，二階觀察的地方，二階觀察可以讓大量的可能性發生 ❓ 我還搞不清楚<span class=\"wikilink\">分支</span>是幹嘛的，讓結構變複雜，能合乎像是Inception和Tenet這類複雜的結構作品放入資料</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "6.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "6.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-7",
+                  "title": "9/8f",
+                  "summary": "9/8f 當以適當的方式將其導入（引導）到社會系統中時， 會產生一種整體一致的效果。 Einheitlicher Effekt entsteht bei Kanalisierung in appro…",
+                  "center": {
+                    "title": "9/8f",
+                    "summary": "9/8f 當以適當的方式將其導入（引導）到社會系統中時， 會產生一種整體一致的效果。 Einheitlicher Effekt entsteht bei Kanalisierung in appropriate ways in das soziale System. ➡️ 卡片盒是自己的話，雖然是讀書筆記，但是有編號…",
+                    "html": "<p>9/8f</p>\n<blockquote><p>當以適當的方式將其導入（引導）到社會系統中時，</p></blockquote>\n<blockquote><p>會產生一種整體一致的效果。</p></blockquote>\n<p>Einheitlicher Effekt entsteht bei Kanalisierung in appropriate ways in das soziale System. ➡️ 卡片盒是自己的話，雖然是讀書筆記，但是有編號及引用這些卡片序列鷹架可以成長，所以有些一致性。</p>\n<blockquote><p>（從外界看來）會給人一種「精神上肌肉發達的整體人格」的印象。</p></blockquote>\n<p>Eindruck einer geistig muskulösen Gesamtper- sönlichkeit.</p>\n<p>➡️ 我覺得我讀書的方法，慢慢變成一輩子都不會忘記這本書了耶!<a href=\"https://static.xx.fbcdn.net/images/emoji.php/v9/t12/3/16/1f606.png\" target=\"_blank\" rel=\"noreferrer\">😆</a>OB來做讀書筆記真是神器</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "7.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "7.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-8",
+                  "title": "9/8g",
+                  "summary": "9/8g 在卡片盒技術背後，有一個經驗是： 如果不寫下來，人是無法思考的 —— 至少在那些要求高、並且需要對記憶進行選擇性調用的情境中，是做不到的。 ➡️ 這個推論超強，也就是人類的思考與記憶，和寫…",
+                  "center": {
+                    "title": "9/8g",
+                    "summary": "9/8g 在卡片盒技術背後，有一個經驗是： 如果不寫下來，人是無法思考的 —— 至少在那些要求高、並且需要對記憶進行選擇性調用的情境中，是做不到的。 ➡️ 這個推論超強，也就是人類的思考與記憶，和寫下來有關，但是AI時代的出先，應該是AI如何幫助人腦來思考和記憶，例如我要考過N5，AI如何幫我呢。 Hinter de…",
+                    "html": "<p>9/8g</p>\n<blockquote><p>在卡片盒技術背後，有一個經驗是：</p></blockquote>\n<blockquote><p><strong>如果不寫下來，人是無法思考的</strong>——</p></blockquote>\n<blockquote><p>至少在那些要求高、並且需要對記憶進行選擇性調用的情境中，是做不到的。</p></blockquote>\n<p>➡️ 這個推論超強，也就是人類的思考與記憶，和寫下來有關，但是AI時代的出先，應該是AI如何幫助人腦來思考和記憶，例如我要考過N5，AI如何幫我呢。</p>\n<p>Hinter der Zettelkastentechnik steht die Erfahrung: Ohne zu schreiben kann man nicht denken – jedenfalls nicht in anspruchsvollen, selektiven Zugriff aufs Gedächtnis voraussehenden Zusammenhängen.</p>\n<blockquote><p>這也意味著：</p></blockquote>\n<blockquote><p><strong>如果不把「差異」刻劃出來，人就無法思考。</strong></p></blockquote>\n<p>Das heißt auch: ohne Differenzen einzukerben, kann man nicht denken. ➡️ 日語我要如何找出差異呢，要在筆記上寫出差異，AI可以幫我標出來</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "8.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "8.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-9",
+                  "title": "9/8h",
+                  "summary": "9/8h 關於在 Royal Society 中「知識登錄方式」的評論， 出自 Thomas Sprat（1667），第115頁以下。 Bemerkungen über Registrierung…",
+                  "center": {
+                    "title": "9/8h",
+                    "summary": "9/8h 關於在 Royal Society 中「知識登錄方式」的評論， 出自 Thomas Sprat（1667），第115頁以下。 Bemerkungen über Registrierung des Wissens in der Royal Society bei Sprat 1667, S. 115f. 放棄…",
+                    "html": "<p>9/8h</p>\n<blockquote><p>關於在 <a href=\"chatgpt://generic-entity?number=0\" target=\"_blank\" rel=\"noreferrer\">Royal Society</a> 中「知識登錄方式」的評論，</p></blockquote>\n<blockquote><p>出自 <a href=\"chatgpt://generic-entity?number=1\" target=\"_blank\" rel=\"noreferrer\">Thomas Sprat</a>（1667），第115頁以下。</p></blockquote>\n<blockquote><p></p></blockquote>\n<p>Bemerkungen über Registrierung des Wissens in der Royal Society bei <a href=\"https://niklas-luhmann-archiv.de/bestand/literatur/item/sprat_1667_royal-society &amp;quot;sprat_1667_royal-society&amp;quot;\" target=\"_blank\" rel=\"noreferrer\">Sprat 1667, S. 115f.</a></p>\n<blockquote><p></p></blockquote>\n<blockquote><p>放棄過早的系統化與封閉，</p></blockquote>\n<blockquote><p>保持對未來的開放性：</p></blockquote>\n<p>Verzicht auf vorschnelle Systematisierung und Abschliessung, Zukunftsoffenheit: &quot;Nor ought this neglect of consequence and order, to be only thought to proceed from their carelessness; but from mature and well grounded premeditation.&quot; ➡️ 一開始不需要有系統，一開始更要封閉寫，這樣未來才能開放</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "9.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "9.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-10",
+                  "title": "9/8i",
+                  "summary": "9/8i Zettelkasten mit dem komplizierten Verdauungssystem eines Wiederkäuers. 卡片盒，就像一個具有複雜消化系統的「反芻動物…",
+                  "center": {
+                    "title": "9/8i",
+                    "summary": "9/8i Zettelkasten mit dem komplizierten Verdauungssystem eines Wiederkäuers. 卡片盒，就像一個具有複雜消化系統的「反芻動物」。 ➡️ 循環反饋，卡片盒是消化系統，這是二階觀察的範圍 Alle arbiträren Einfälle, alle…",
+                    "html": "<p>9/8i</p>\n<p>Zettelkasten mit dem komplizierten Verdauungssystem eines Wiederkäuers.</p>\n<blockquote><p>卡片盒，就像一個具有複雜消化系統的「反芻動物」。</p></blockquote>\n<p>➡️ 循環反饋，卡片盒是消化系統，這是<span class=\"wikilink\">二階觀察</span>的範圍</p>\n<p>Alle arbiträren Einfälle, alle Zufälle der Lektüren, können eingebracht werden.</p>\n<blockquote><p>所有任意的想法、所有閱讀中的偶然收穫，</p></blockquote>\n<blockquote><p>都可以被放入其中。</p></blockquote>\n<p>Es entscheidet dann die interne Anschlussfähig- keit. ➡️ 臨時筆記放入卡片盒的能力也很重要</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "10.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "10.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "board-11",
+                  "title": "9/8j",
+                  "summary": "9/8j 卡片盒筆記裡面有一張卡片，上面記載的內容駁斥了整個卡片盒筆記裡面每一則筆記的論點。 但只要你一打開卡片盒，這則筆記就會自動消失。 也就是說，它換了個編號，跑到別的地方去了，找不到了。 鬼牌…",
+                  "center": {
+                    "title": "9/8j",
+                    "summary": "9/8j 卡片盒筆記裡面有一張卡片，上面記載的內容駁斥了整個卡片盒筆記裡面每一則筆記的論點。 但只要你一打開卡片盒，這則筆記就會自動消失。 也就是說，它換了個編號，跑到別的地方去了，找不到了。 鬼牌一張。",
+                    "html": "<h1>9/8j</h1>\n<p><span class=\"wikilink\">卡片盒</span>筆記裡面有一張卡片，上面記載的內容駁斥了整個<span class=\"wikilink\">卡片盒</span>筆記裡面每一則筆記的論點。</p>\n<p>但只要你一打開<span class=\"wikilink\">卡片盒</span>，這則筆記就會自動消失。</p>\n<p>也就是說，它換了個編號，跑到別的地方去了，找不到了。</p>\n<p><span class=\"wikilink\">鬼</span>牌一張。</p>"
+                  },
+                  "cells": [
+                    {
+                      "id": "11.1",
+                      "title": "第 1 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.2",
+                      "title": "第 2 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.3",
+                      "title": "第 3 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.4",
+                      "title": "第 4 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.5",
+                      "title": "第 5 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.6",
+                      "title": "第 6 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.7",
+                      "title": "第 7 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    },
+                    {
+                      "id": "11.8",
+                      "title": "第 8 格",
+                      "summary": "",
+                      "html": "<p>（待補）</p>"
+                    }
+                  ]
+                }
+              ],
+              "hasMandala": true,
+              "orderKey": "魯曼9.8卡片_雙向連結.md"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "✡️ 🟩 Graph View",
+    "二階觀察",
+    "分化",
+    "分支",
+    "引用",
+    "卡片盒",
+    "卡片盒與使用者的關係",
+    "次序與失序",
+    "記憶",
+    "概念",
+    "溝通",
+    "魯曼卡片_雙向連結加工版",
+    "Relation",
+    "relations",
+    "Verweisungen"
+  ]
+}
