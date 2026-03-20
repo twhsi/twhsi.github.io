@@ -27,14 +27,11 @@
   const refs = {
     siteTitle: document.querySelector("#site-title"),
     libraryNav: document.querySelector("#library-nav"),
-    viewTitle: document.querySelector("#view-title"),
-    viewSummary: document.querySelector("#view-summary"),
     viewModes: document.querySelector("#view-modes"),
     boardTabs: document.querySelector("#board-tabs"),
     mandalaGrid: document.querySelector("#mandala-grid"),
     articleShell: document.querySelector("#article-shell"),
     articleTitle: document.querySelector("#article-title"),
-    articleMeta: document.querySelector("#article-meta"),
     articleContent: document.querySelector("#article-content"),
     keywordSearch: document.querySelector("#keyword-search"),
     graphTitle: document.querySelector("#graph-title"),
@@ -103,16 +100,7 @@
   }
 
   function renderHeader(context, currentNode) {
-    refs.viewTitle.textContent = context.chapter.title;
-    refs.viewSummary.textContent = currentNode.summary || context.chapter.summary;
     refs.articleTitle.textContent = currentNode.title;
-    refs.articleMeta.innerHTML = [
-      context.group.title,
-      context.shelf.title,
-      currentNode.type === "root" ? "主分支" : "子分支",
-    ]
-      .map((item) => `<span class="chip">${escapeHtml(item)}</span>`)
-      .join("");
   }
 
   function renderBoardTabs(context, activeBoard) {
@@ -232,22 +220,24 @@
 
   function renderGraph(context, activeBoard, currentNode) {
     const neighbors = getGraphNeighbors(context, activeBoard, currentNode).slice(0, 8);
-    const positions = [
-      "top",
-      "top-right",
-      "right",
-      "bottom-right",
-      "bottom",
-      "bottom-left",
-      "left",
-      "top-left",
-    ];
+    const positioned = neighbors.map((node, index) => {
+      const angle = (-90 + (360 / Math.max(neighbors.length, 1)) * index) * (Math.PI / 180);
+      const radius = node.type === "keyword" ? 108 : 86;
+      const x = 50 + Math.cos(angle) * (radius / 2.2);
+      const y = 50 + Math.sin(angle) * (radius / 1.8);
+      return { ...node, x, y };
+    });
 
     refs.graphFocus.innerHTML = `
       <div class="graph-canvas">
+        <svg class="graph-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          ${positioned.map((node) => `
+            <line x1="50" y1="50" x2="${node.x.toFixed(2)}" y2="${node.y.toFixed(2)}" class="graph-line${node.type === "keyword" ? " is-keyword" : ""}"></line>
+          `).join("")}
+        </svg>
         <div class="graph-center-node">${escapeHtml(currentNode.title)}</div>
-        ${neighbors.map((node, index) => `
-          <button type="button" class="graph-node graph-node--${positions[index]}${node.type === "keyword" ? " graph-node--keyword" : ""}" data-node-id="${escapeHtml(node.id)}" data-board-id="${escapeHtml(node.boardId || "")}" data-node-type="${escapeHtml(node.type)}" data-node-title="${escapeHtml(node.title)}">
+        ${positioned.map((node, index) => `
+          <button type="button" class="graph-node${node.type === "keyword" ? " graph-node--keyword" : ""}" style="left:${node.x.toFixed(2)}%; top:${node.y.toFixed(2)}%; animation-delay:${(index * 45)}ms" data-node-id="${escapeHtml(node.id)}" data-board-id="${escapeHtml(node.boardId || "")}" data-node-type="${escapeHtml(node.type)}" data-node-title="${escapeHtml(node.title)}">
             ${escapeHtml(node.title)}
           </button>
         `).join("")}
@@ -397,9 +387,9 @@
     const source = `${node.title} ${node.summary}`.toLowerCase();
     const matched = context.chapter.keywords.filter((keyword) => source.includes(keyword.toLowerCase()));
     if (matched.length) {
-      return matched.slice(0, 4);
+      return matched.slice(0, 6);
     }
-    return context.chapter.keywords.slice(0, 4);
+    return context.chapter.keywords.slice(0, 6);
   }
 
   function escapeHtml(value) {
