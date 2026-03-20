@@ -19,6 +19,7 @@
   const state = {
     chapterId: chapterPool[0]?.chapter.id || "",
     boardId: "",
+    boardView: "grid",
     keyword: "",
     query: "",
   };
@@ -28,6 +29,7 @@
     libraryNav: document.querySelector("#library-nav"),
     viewTitle: document.querySelector("#view-title"),
     viewSummary: document.querySelector("#view-summary"),
+    viewModes: document.querySelector("#view-modes"),
     boardTabs: document.querySelector("#board-tabs"),
     mandalaGrid: document.querySelector("#mandala-grid"),
     articleTitle: document.querySelector("#article-title"),
@@ -119,6 +121,22 @@
     const activeBoard = context.boards.find((board) => board.id === state.boardId) || context.boards[0];
     const centerCell = normalizeCenterCell(context, activeBoard);
 
+    refs.viewModes.innerHTML = "";
+    [
+      { id: "grid", label: "九宮視圖" },
+      { id: "overview", label: "分支全覽" },
+    ].forEach((mode) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `view-mode${state.boardView === mode.id ? " is-active" : ""}`;
+      button.textContent = mode.label;
+      button.addEventListener("click", () => {
+        state.boardView = mode.id;
+        renderBoardArea(context);
+      });
+      refs.viewModes.append(button);
+    });
+
     refs.boardTabs.innerHTML = "";
     context.boards.forEach((board) => {
       const button = document.createElement("button");
@@ -133,18 +151,14 @@
     });
 
     refs.mandalaGrid.innerHTML = "";
-    const layout = [
-      { ...activeBoard.cells[0], displayIndex: "1" },
-      { ...activeBoard.cells[1], displayIndex: "2" },
-      { ...activeBoard.cells[2], displayIndex: "3" },
-      { ...activeBoard.cells[3], displayIndex: "4" },
-      { ...centerCell, displayIndex: "中", center: true },
-      { ...activeBoard.cells[4], displayIndex: "5" },
-      { ...activeBoard.cells[5], displayIndex: "6" },
-      { ...activeBoard.cells[6], displayIndex: "7" },
-      { ...activeBoard.cells[7], displayIndex: "8" },
-    ];
+    refs.mandalaGrid.className = state.boardView === "overview" ? "overview-grid" : "mandala-grid";
 
+    if (state.boardView === "overview") {
+      renderOverviewRows(context);
+      return;
+    }
+
+    const layout = buildBoardLayout(activeBoard, centerCell);
     layout.forEach((cell) => {
       const button = document.createElement("button");
       button.type = "button";
@@ -169,6 +183,51 @@
         }
       });
       refs.mandalaGrid.append(button);
+    });
+  }
+
+  function renderOverviewRows(context) {
+    context.boards.forEach((board, index) => {
+      const row = document.createElement("section");
+      row.className = "overview-row";
+
+      const rootButton = document.createElement("button");
+      rootButton.type = "button";
+      rootButton.className = `overview-root board-tone-${(index % 6) + 1}${board.id === state.boardId ? " is-active" : ""}`;
+      rootButton.innerHTML = `
+        <span class="overview-code">${escapeHtml(board.center?.title || board.title)}</span>
+        <span class="overview-index">${index + 1}</span>
+        <span class="overview-summary">${escapeHtml(makeShort(board.center?.summary || board.summary, 88))}</span>
+      `;
+      rootButton.addEventListener("click", () => {
+        state.boardId = board.id;
+        state.boardView = "grid";
+        render();
+      });
+      row.append(rootButton);
+
+      board.cells.forEach((cell) => {
+        const cellButton = document.createElement("button");
+        cellButton.type = "button";
+        cellButton.className = `overview-cell board-tone-${(index % 6) + 1}`;
+        cellButton.innerHTML = `
+          <span class="overview-code">${escapeHtml(cell.title)}</span>
+          <span class="overview-index">${escapeHtml(cell.id)}</span>
+          <span class="overview-summary">${escapeHtml(makeShort(cell.summary, 68))}</span>
+        `;
+        cellButton.addEventListener("click", () => {
+          state.boardId = board.id;
+          state.boardView = "grid";
+          render();
+          const heading = findHeadingByText(cell.title);
+          if (heading) {
+            heading.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+        row.append(cellButton);
+      });
+
+      refs.mandalaGrid.append(row);
     });
   }
 
@@ -328,6 +387,23 @@
     };
   }
 
+  function buildBoardLayout(activeBoard, centerCell) {
+    return [
+      { ...activeBoard.cells[0], displayIndex: "1.1" },
+      { ...activeBoard.cells[7], displayIndex: "1.8" },
+      { ...activeBoard.cells[6], displayIndex: "1.7" },
+      { ...activeBoard.cells[1], displayIndex: "1.2" },
+      { ...centerCell, displayIndex: "中", center: true },
+      { ...activeBoard.cells[5], displayIndex: "1.6" },
+      { ...activeBoard.cells[2], displayIndex: "1.3" },
+      { ...activeBoard.cells[3], displayIndex: "1.4" },
+      { ...activeBoard.cells[4], displayIndex: "1.5" },
+    ].map((cell) => ({
+      ...cell,
+      displayIndex: cell.center ? "中" : cell.id,
+    }));
+  }
+
   function openChapter(chapterId) {
     const found = chapterPool.find(({ chapter }) => chapter.id === chapterId);
     if (!found) {
@@ -353,6 +429,17 @@
 
   function shareKeywords(a, b) {
     return a.some((item) => b.includes(item));
+  }
+
+  function makeShort(value, length = 64) {
+    const text = String(value || "").trim();
+    if (!text) {
+      return "這個分支目前還沒有摘要。";
+    }
+    if (text.length <= length) {
+      return text;
+    }
+    return `${text.slice(0, Math.max(0, length - 1)).trim()}…`;
   }
 
   function slugify(value) {

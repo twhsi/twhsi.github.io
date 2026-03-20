@@ -218,6 +218,27 @@ input {
   margin-bottom: 12px;
 }
 
+.view-modes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.view-mode {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.view-mode.is-active {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  background: #f8fafc;
+}
+
 .tab {
   border: 1px solid var(--line);
   background: #fff;
@@ -238,6 +259,17 @@ input {
 .mandala-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.overview-row {
+  display: grid;
+  grid-template-columns: 1.05fr repeat(8, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -262,6 +294,56 @@ input {
   border-color: var(--line);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
 }
+
+.overview-root,
+.overview-cell {
+  min-height: 120px;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  padding: 14px;
+  text-align: left;
+  display: grid;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.overview-root.is-active {
+  outline: 2px solid rgba(91, 107, 136, 0.32);
+}
+
+.overview-code {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b85f51;
+}
+
+.overview-index {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.overview-summary {
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.board-tone-1,
+.board-tone-2,
+.board-tone-3,
+.board-tone-4,
+.board-tone-5,
+.board-tone-6 {
+  position: relative;
+}
+
+.board-tone-1 { background: linear-gradient(180deg, #e5efd8 0%, #dde9ce 100%); }
+.board-tone-2 { background: linear-gradient(180deg, #efe5a6 0%, #e8dc95 100%); }
+.board-tone-3 { background: linear-gradient(180deg, #dce1ff 0%, #d2d9fb 100%); }
+.board-tone-4 { background: linear-gradient(180deg, #f0e4c5 0%, #eadcb8 100%); }
+.board-tone-5 { background: linear-gradient(180deg, #f1ded7 0%, #ecd0c6 100%); }
+.board-tone-6 { background: linear-gradient(180deg, #dceaf0 0%, #d1e1e8 100%); }
 
 .mandala-center {
   background: linear-gradient(180deg, #f7f9fc 0%, #eef3f8 100%);
@@ -495,10 +577,18 @@ input {
   .article-card {
     padding: 22px 18px 36px;
   }
+
+  .overview-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
   .mandala-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-row {
     grid-template-columns: 1fr;
   }
 
