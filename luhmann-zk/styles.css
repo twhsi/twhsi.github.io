@@ -254,7 +254,7 @@ input {
 
 .mandala-cell,
 .mandala-center {
-  min-height: 160px;
+  height: 180px;
   border-radius: 12px;
   border: 1px solid var(--line-soft);
   background: #fff;
@@ -262,6 +262,8 @@ input {
   text-align: left;
   display: grid;
   gap: 6px;
+  align-content: start;
+  overflow: hidden;
 }
 
 .mandala-cell {
@@ -308,9 +310,29 @@ input {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-card { padding: 26px 30px 42px; }
+
+.article-card[data-mode="grid"] {
+  margin-top: 10px;
+  padding-top: 18px;
+}
+
+.article-card[data-mode="grid"]::before {
+  content: "筆記欄";
+  display: block;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
 .md {
   color: var(--text);
@@ -433,6 +455,12 @@ input {
 .graph-node {
   cursor: pointer;
   color: var(--text);
+}
+
+.graph-node--keyword {
+  border-style: dashed;
+  background: #f8fafc;
+  color: var(--accent);
 }
 
 .graph-node--top { top: 14px; left: 50%; transform: translateX(-50%); }

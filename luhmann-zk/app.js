@@ -152,8 +152,9 @@
   function renderCenter(context, activeBoard, currentNode) {
     refs.mandalaGrid.innerHTML = "";
     refs.articleContent.innerHTML = "";
-    refs.articleShell.hidden = state.contentMode !== "markdown";
+    refs.articleShell.hidden = false;
     refs.mandalaGrid.hidden = state.contentMode !== "grid";
+    refs.articleShell.dataset.mode = state.contentMode;
 
     if (state.contentMode === "grid") {
       const layout = buildBoardLayout(activeBoard);
@@ -175,6 +176,7 @@
         });
         refs.mandalaGrid.append(button);
       });
+      refs.articleContent.innerHTML = currentNode.html;
       return;
     }
 
@@ -183,9 +185,9 @@
 
   function renderRightPanel(context, activeBoard, currentNode) {
     refs.graphTitle.textContent = `Local Graph · ${currentNode.title}`;
-    renderGraph(activeBoard, currentNode);
+    renderGraph(context, activeBoard, currentNode);
 
-    const neighbors = getGraphNeighbors(activeBoard, currentNode);
+    const neighbors = getGraphNeighbors(context, activeBoard, currentNode);
     refs.keywordChips.innerHTML = "";
     neighbors.slice(0, 10).forEach((node) => {
       const button = document.createElement("button");
@@ -193,6 +195,12 @@
       button.className = "keyword-button";
       button.textContent = node.title;
       button.addEventListener("click", () => {
+        if (node.type === "keyword") {
+          state.query = node.title.toLowerCase();
+          refs.keywordSearch.value = node.title;
+          renderRightPanel(context, activeBoard, currentNode);
+          return;
+        }
         openNode(node.boardId, node.id);
         render();
       });
@@ -204,7 +212,7 @@
       if (!query) {
         return node.id !== currentNode.id && node.boardId === activeBoard.id;
       }
-      return `${node.title} ${node.summary}`.toLowerCase().includes(query);
+      return `${node.title} ${node.summary} ${getNodeKeywords(node, context).join(" ")}`.toLowerCase().includes(query);
     });
 
     refs.keywordResults.innerHTML = "";
@@ -222,8 +230,8 @@
     });
   }
 
-  function renderGraph(activeBoard, currentNode) {
-    const neighbors = getGraphNeighbors(activeBoard, currentNode).slice(0, 8);
+  function renderGraph(context, activeBoard, currentNode) {
+    const neighbors = getGraphNeighbors(context, activeBoard, currentNode).slice(0, 8);
     const positions = [
       "top",
       "top-right",
@@ -239,7 +247,7 @@
       <div class="graph-canvas">
         <div class="graph-center-node">${escapeHtml(currentNode.title)}</div>
         ${neighbors.map((node, index) => `
-          <button type="button" class="graph-node graph-node--${positions[index]}" data-node-id="${escapeHtml(node.id)}" data-board-id="${escapeHtml(node.boardId)}">
+          <button type="button" class="graph-node graph-node--${positions[index]}${node.type === "keyword" ? " graph-node--keyword" : ""}" data-node-id="${escapeHtml(node.id)}" data-board-id="${escapeHtml(node.boardId || "")}" data-node-type="${escapeHtml(node.type)}" data-node-title="${escapeHtml(node.title)}">
             ${escapeHtml(node.title)}
           </button>
         `).join("")}
@@ -248,6 +256,12 @@
 
     refs.graphFocus.querySelectorAll("[data-node-id]").forEach((button) => {
       button.addEventListener("click", () => {
+        if (button.dataset.nodeType === "keyword") {
+          state.query = button.dataset.nodeTitle.toLowerCase();
+          refs.keywordSearch.value = button.dataset.nodeTitle;
+          renderRightPanel(context, activeBoard, currentNode);
+          return;
+        }
         openNode(button.dataset.boardId, button.dataset.nodeId);
         render();
       });
@@ -333,8 +347,8 @@
     ];
   }
 
-  function getGraphNeighbors(activeBoard, currentNode) {
-    const nodes = [
+  function getGraphNeighbors(context, activeBoard, currentNode) {
+    const sectionNodes = [
       {
         id: activeBoard.id,
         boardId: activeBoard.id,
@@ -351,17 +365,23 @@
         })),
     ];
 
+    const keywordNodes = getNodeKeywords(currentNode, context).map((keyword, index) => ({
+      id: `keyword-${index}-${keyword}`,
+      title: keyword,
+      type: "keyword",
+    }));
+
     if (currentNode.type === "root") {
-      return nodes.filter((node) => node.id !== currentNode.id);
+      return [...sectionNodes.filter((node) => node.id !== currentNode.id), ...keywordNodes];
     }
 
-    const siblings = nodes.filter((node) => node.id !== currentNode.id);
+    const siblings = sectionNodes.filter((node) => node.id !== currentNode.id);
     const currentIndex = siblings.findIndex((node) => node.id === activeBoard.id);
     if (currentIndex > -1) {
       siblings.splice(currentIndex, 1);
-      siblings.unshift(nodes[0]);
+      siblings.unshift(sectionNodes[0]);
     }
-    return siblings;
+    return [...siblings, ...keywordNodes];
   }
 
   function findNodeByTitle(title, context) {
@@ -371,6 +391,15 @@
   function openNode(boardId, nodeId) {
     state.boardId = boardId;
     state.selectedNodeId = nodeId;
+  }
+
+  function getNodeKeywords(node, context) {
+    const source = `${node.title} ${node.summary}`.toLowerCase();
+    const matched = context.chapter.keywords.filter((keyword) => source.includes(keyword.toLowerCase()));
+    if (matched.length) {
+      return matched.slice(0, 4);
+    }
+    return context.chapter.keywords.slice(0, 4);
   }
 
   function escapeHtml(value) {
