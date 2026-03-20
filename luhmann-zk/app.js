@@ -68,6 +68,8 @@
     const activeBoard = getActiveBoard(context);
     const currentNode = getSelectedNode(context, activeBoard);
 
+    document.body.dataset.contentMode = state.contentMode;
+
     renderNav(context, currentNode);
     renderHeader(context, currentNode);
     renderBoardTabs(context, activeBoard);
