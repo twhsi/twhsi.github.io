@@ -315,7 +315,7 @@ function parseMandalaSections(note) {
     sectionMap.set(slot, {
       slot,
       title: lines[0] || "Mandala slot",
-      excerpt: lines.slice(1).join(" ").slice(0, 140) || "Empty section",
+      excerpt: lines.slice(1).join(" ").slice(0, 140),
       targetPath: target?.path || null,
     });
   });
@@ -327,8 +327,8 @@ function buildMandalaCard(slot, section, center = false, drill = "") {
   return `
     <button class="mandala-card ${center ? "center" : ""}" data-mandala-card data-focus="${escapeHtml(section?.targetPath || "")}" data-target="${escapeHtml(section?.targetPath || "")}" data-drill="${escapeHtml(drill)}" type="button">
       <div class="slot">${escapeHtml(slot)}</div>
-      <h4>${escapeHtml(section?.title || "Empty slot")}</h4>
-      <p>${escapeHtml(section?.excerpt || "Add section content in your Obsidian note to fill this cell.")}</p>
+      <h4>${escapeHtml(section?.title || slot)}</h4>
+      ${section?.excerpt ? `<p>${escapeHtml(section.excerpt)}</p>` : ""}
     </button>
   `;
 }

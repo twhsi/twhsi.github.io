@@ -848,3 +848,112 @@ h2 {
     display: none;
   }
 }
+
+
+/* TENET first-screen mandala optimization */
+.content {
+  padding-inline: min(4vw, 38px);
+}
+
+.note-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 10px 16px;
+  margin-bottom: 10px;
+  padding-top: 0;
+}
+
+.note-title-wrap {
+  min-width: 0;
+}
+
+#note-title {
+  font-size: clamp(18px, 3vw, 34px);
+  line-height: 1.06;
+  max-width: 15ch;
+}
+
+.note-meta {
+  max-width: 250px;
+  gap: 6px;
+}
+
+.tag {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.mandala-shell {
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.mandala-toolbar {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.mandala-switch {
+  gap: 6px;
+}
+
+.mandala-chip {
+  padding: 6px 10px;
+}
+
+.mandala-hint {
+  justify-self: end;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mandala-grid {
+  gap: 10px;
+}
+
+.mandala-card {
+  min-height: 0;
+  aspect-ratio: 1 / 0.72;
+  padding: 14px;
+  border-radius: 20px;
+}
+
+.mandala-card .slot {
+  margin-bottom: 6px;
+}
+
+.mandala-card h4 {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.08;
+}
+
+.mandala-card p {
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-line-clamp: 5;
+}
+
+@media (max-width: 1320px) {
+  #note-title {
+    max-width: 13ch;
+  }
+
+  .mandala-card {
+    aspect-ratio: 1 / 0.76;
+    padding: 12px;
+  }
+
+  .mandala-card h4 {
+    font-size: clamp(16px, 1.55vw, 22px);
+  }
+
+  .mandala-card p {
+    font-size: 13px;
+    -webkit-line-clamp: 4;
+  }
+}
