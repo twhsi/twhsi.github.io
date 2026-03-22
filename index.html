@@ -380,6 +380,25 @@
       font-weight: 300;
     }
 
+    .footer-mini-link {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-light);
+      font-family: "Space Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .footer-mini-link:hover {
+      color: var(--ink);
+      transform: translateX(2px);
+    }
+
     .footer-meta {
       text-align: right;
       color: var(--muted);
@@ -560,10 +579,15 @@
 
     <footer>
       <div class="footer-inner">
-        <p class="footer-note">
-          目前首頁已整理成總站層級，後續新增主題時只要補一個系列首頁，再往下接文章資料夾即可。<br />
-          站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）。
-        </p>
+        <div>
+          <p class="footer-note">
+            目前首頁已整理成總站層級，後續新增主題時只要補一個系列首頁，再往下接文章資料夾即可。<br />
+            站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）。
+          </p>
+          <a class="footer-mini-link" href="/pinyun-choir/">
+            品韻合唱團｜招生網站 →
+          </a>
+        </div>
         <div class="footer-meta">
           MANDALA GRID<br />
           © 永錫
