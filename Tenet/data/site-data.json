@@ -1,0 +1,2249 @@
+{
+  "generatedAt": "2026-03-22T13:13:43.074Z",
+  "sourceVault": "TENET",
+  "site": {
+    "title": "TENET｜九宮 × Local Graph",
+    "eyebrow": "TENET",
+    "description": "Mandala / Markdown / Local Graph",
+    "featuredPath": "03 核心/TENET 九宮中心.md"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "collapse-color-groups": false,
+    "colorGroups": [
+      {
+        "query": "path:\"01 劇情\"",
+        "color": {
+          "a": 1,
+          "rgb": 7315162
+        }
+      },
+      {
+        "query": "path:\"02 角色\"",
+        "color": {
+          "a": 1,
+          "rgb": 3968379
+        }
+      },
+      {
+        "query": "path:\"03 核心\"",
+        "color": {
+          "a": 1,
+          "rgb": 14725458
+        }
+      },
+      {
+        "query": "path:\"04 導覽\"",
+        "color": {
+          "a": 1,
+          "rgb": 13200187
+        }
+      }
+    ],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.52,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 220,
+    "scale": 1,
+    "close": false,
+    "localBacklinks": true,
+    "localForelinks": true,
+    "localInterlinks": false,
+    "localJumps": 2
+  },
+  "localGraphOptions": {
+    "collapse-filter": true,
+    "search": "",
+    "localJumps": 1,
+    "localBacklinks": true,
+    "localForelinks": true,
+    "localInterlinks": false,
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "collapse-color-groups": false,
+    "colorGroups": [],
+    "collapse-display": true,
+    "showArrow": false,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.52,
+    "repelStrength": 10,
+    "linkStrength": 1,
+    "linkDistance": 220,
+    "scale": 0.82,
+    "close": true
+  },
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "folder",
+        "name": "01 劇情",
+        "children": [
+          {
+            "type": "note",
+            "name": "TENET 1 劇情-歌劇院引爆點",
+            "path": "01 劇情/TENET 1 劇情-歌劇院引爆點.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 2 劇情-十誡與逆行規則",
+            "path": "01 劇情/TENET 2 劇情-十誡與逆行規則.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 3 劇情-孟買與薩托入口",
+            "path": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 4 劇情-自由港與自我對打",
+            "path": "01 劇情/TENET 4 劇情-自由港與自我對打.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 5 劇情-塔林鉗形與手提箱",
+            "path": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 6 劇情-逆行航程與越南遊艇",
+            "path": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 7 劇情-史塔斯克12與終局鉗形",
+            "path": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET 8 劇情-片尾回收與組織生成",
+            "path": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "02 角色",
+        "children": [
+          {
+            "type": "note",
+            "name": "Kat 角色九宮",
+            "path": "02 角色/Kat 角色九宮.md"
+          },
+          {
+            "type": "note",
+            "name": "Neil 角色九宮",
+            "path": "02 角色/Neil 角色九宮.md"
+          },
+          {
+            "type": "note",
+            "name": "Protagonist 角色九宮",
+            "path": "02 角色/Protagonist 角色九宮.md"
+          },
+          {
+            "type": "note",
+            "name": "Sator 角色九宮",
+            "path": "02 角色/Sator 角色九宮.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "03 核心",
+        "children": [
+          {
+            "type": "note",
+            "name": "TENET 九宮中心",
+            "path": "03 核心/TENET 九宮中心.md"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "04 導覽",
+        "children": [
+          {
+            "type": "note",
+            "name": "自由意志",
+            "path": "04 導覽/自由意志.md"
+          },
+          {
+            "type": "note",
+            "name": "東北",
+            "path": "04 導覽/東北.md"
+          },
+          {
+            "type": "note",
+            "name": "南",
+            "path": "04 導覽/南.md"
+          },
+          {
+            "type": "note",
+            "name": "逆行門",
+            "path": "04 導覽/逆行門.md"
+          },
+          {
+            "type": "note",
+            "name": "Kat",
+            "path": "04 導覽/Kat.md"
+          },
+          {
+            "type": "note",
+            "name": "Neil",
+            "path": "04 導覽/Neil.md"
+          },
+          {
+            "type": "note",
+            "name": "Protagonist",
+            "path": "04 導覽/Protagonist.md"
+          },
+          {
+            "type": "note",
+            "name": "README",
+            "path": "04 導覽/README.md"
+          },
+          {
+            "type": "note",
+            "name": "Sator",
+            "path": "04 導覽/Sator.md"
+          },
+          {
+            "type": "note",
+            "name": "TENET",
+            "path": "04 導覽/TENET.md"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "path": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "basename": "TENET 1 劇情-歌劇院引爆點",
+      "title": "歌劇院 ：任務、試煉與第一個閉環伏筆",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.208Z",
+      "content": "<!--section: 1-->\n# [[歌劇院]]：任務、試煉與第一個閉環伏筆\n\n[[歌劇院]] 是整部片最早的種子場景。它表面是恐攻救援與臥底失敗，深層卻是整個閉環的前奏：[[Protagonist]] 在這裡先展示了自己的倫理底色，[[Neil]] 也在無聲中完成第一次救援。觀眾當下看不懂那顆逆行子彈，但它其實已經把《[[TENET]]》的語法亮出來：先看見結果，再在後面補上原因。\n\n# [[中心]]：[[歌劇院]]\n\n這格不是單一開場，而是整個時間閉環的種子。首段任務的未知感、子彈逆行、神祕救援與假死測試，都在之後被逐一回收，使它成為首尾互咬的起點。\n\n<!--section: 1.1-->\n### 任務現場\n基輔歌劇院同時是恐攻現場、臥底任務與情報交接失控點，從一開始就把觀眾丟進資訊不足的壓力中。\n\n<!--section: 1.2-->\n### 倫理測試\n主角在混亂中優先選擇救人與阻止炸彈，先確立他不是只求完成命令的人。\n\n<!--section: 1.3-->\n### 逆行子彈\nNeil 的那一槍先以奇觀形式出現，後來才被觀眾理解為整部片語法的首次示範。\n\n<!--section: 1.4-->\n### 神祕救援\n背包吊飾成為回收伏筆，提醒這場營救不是偶然，而是未來安排早已介入過去。\n\n<!--section: 1.5-->\n### 假死轉場\n主角吞下膠囊後醒來，故事從諜報現場突然切換到更高層級的選拔與招募。\n\n<!--section: 1.6-->\n### 忠誠證明\n他拒絕出賣同伴的選擇，讓 Tenet 判定他值得被帶進更危險的時間戰爭。\n\n<!--section: 1.7-->\n### 閉環種子\n開場許多看似未解的細節，後面都被證明不是謎語，而是延後回收的因果片段。\n\n<!--section: 1.8-->\n### 延伸入口\n這一格直接把劇情送往 Tenet 規則層，也把 Neil、主角與未來組織的關係先埋進底層。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 2 劇情-十誡與逆行規則]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]\n\n## 04 關鍵字\n[[歌劇院]]、[[逆行子彈]]、[[Tenet 組織]]、[[Protagonist]]、[[Neil]]",
+      "links": [
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "歌劇院 是整部片最早的種子場景。它表面是恐攻救援與臥底失敗，深層卻是整個閉環的前奏： Protagonist 在這裡先展示了自己的倫理底色， Neil 也在無聲中完成第一次救援。觀眾當下看不懂那顆逆行子彈，但它其實已經把《 TENET 》的語法亮出來：先看見結果，再在後面補上原因"
+    },
+    {
+      "id": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "path": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "basename": "TENET 2 劇情-十誡與逆行規則",
+      "title": "Tenet 組織 ：從情報世界跨入時間戰爭",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:51:30.321Z",
+      "content": "<!--section: 1-->\n# [[Tenet 組織]]：從情報世界跨入時間戰爭\n\n這張卡負責把主角從一般諜報片的任務邏輯，推進到逆行世界的規則層。[[Protagonist]] 在此開始接觸 [[TENET]]、[[逆行子彈]] 與 [[Algorithm]] 的概念，片子也用「先感受，再理解」的方式，要求觀眾改變觀看方法。\n\n# [[中心]]：[[Tenet 組織]]\n\n中心不是名詞介紹，而是世界觀切換：從線性任務思維，轉入雙向時間戰場。這一格建立的是觀看規則，而不是只給資訊。\n\n<!--section: 1.1-->\n### 重返世界\n主角從假死測試後被重新啟用，象徵他已經離開普通情報員的任務層級。\n\n<!--section: 1.2-->\n### Tenet 密語\n「Tenet」不只是組織名稱，也像通關口令，代表一套只能逐步理解的封閉秩序。\n\n<!--section: 1.3-->\n### 逆行子彈實驗\n科學家示範子彈逆行時，片子刻意讓觀眾先接受現象，再去追問規則來源。\n\n<!--section: 1.4-->\n### 不要試著理解\n這句話不是拒絕思考，而是要求主角先用身體和行動去適應新語法。\n\n<!--section: 1.5-->\n### Algorithm 威脅\n主角得知未來有人試圖藉由 Algorithm 改寫整體世界，危機尺度由局部任務升成文明層級。\n\n<!--section: 1.6-->\n### 敵人輪廓\nSator 尚未完全出場，但他的名字與勢力已作為規則實戰化的第一個出口。\n\n<!--section: 1.7-->\n### 觀看方式改寫\n這一格真正建立的是觀影方法：因果不再只往前流，而會在後段回頭補全前段。\n\n<!--section: 1.8-->\n### 通往孟買\n當主角掌握基本規則後，劇情便轉入人物與勢力關係，從抽象世界觀走向具體接觸。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 1 劇情-歌劇院引爆點]]、[[TENET 3 劇情-孟買與薩托入口]]、[[Protagonist 角色九宮]]\n\n## 04 關鍵字\n[[Tenet 組織]]、[[逆行]]、[[Algorithm]]、[[Protagonist]]、[[Sator]]",
+      "links": [
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "這張卡負責把主角從一般諜報片的任務邏輯，推進到逆行世界的規則層。 Protagonist 在此開始接觸 TENET 、 逆行子彈 與 Algorithm 的概念，片子也用「先感受，再理解」的方式，要求觀眾改變觀看方法。"
+    },
+    {
+      "id": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "path": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "basename": "TENET 3 劇情-孟買與薩托入口",
+      "title": "孟買 ：進入 Sator 世界的社交入口",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[孟買]]：進入 [[Sator]] 世界的社交入口\n\n[[孟買]] 段落把故事從規則學習轉成敵我接觸。[[Protagonist]] 與 [[Neil]] 在這裡正式結盟，並透過 [[Priya]] 的情報轉向 [[Sator]] 線。關鍵是：要進入反派世界，必須先經過 [[Kat]]，因此主線從這裡起不再只是情報與武力，而是被婚姻、創傷與控制關係牽引。\n\n# [[中心]]：[[孟買]]\n\n這格的中心功能，是把「抽象規則」轉接成「人物關係」。真正的戰場不是只有武器，而是誰能透過人際裂縫進到核心。\n\n<!--section: 1.1-->\n### Neil 正式登場\n主角與 Neil 在這裡形成穩定搭檔，兩人的互信也成為後續所有高風險行動的基礎。\n\n<!--section: 1.2-->\n### 高樓滲透\n孟買段落用俐落的入侵行動，把故事從教學模式切回諜報片節奏。\n\n<!--section: 1.3-->\n### Priya 的情報\nPriya 讓主角理解軍火、逆行技術與 Sator 之間的關聯，敵人的輪廓開始成形。\n\n<!--section: 1.4-->\n### Kat 的入口\n要接近 Sator 必須先接近 Kat，因此主線正式與婚姻控制與私人創傷綁在一起。\n\n<!--section: 1.5-->\n### 偽畫勒索\n那幅畫不是裝飾道具，而是 Sator 用來控制 Kat、也讓主角得以切入家庭裂縫的槓桿。\n\n<!--section: 1.6-->\n### 反派世界的門\n從這裡開始，主角面對的不只是規則，而是有情緒、權力與暴力慾望的敵人。\n\n<!--section: 1.7-->\n### 關係替代火力\n這一格證明情報戰不只是槍與裝備，真正有效的是誰理解誰的弱點與需求。\n\n<!--section: 1.8-->\n### 通往自由港\n當人際通路被打開後，主角便能往更深的行動層推進，接著進入自由港與逆行門核心。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 4 劇情-自由港與自我對打]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]、[[Kat 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[孟買]]、[[Priya]]、[[Kat]]、[[Sator]]、[[偽造畫作]]",
+      "links": [
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "孟買 段落把故事從規則學習轉成敵我接觸。 Protagonist 與 Neil 在這裡正式結盟，並透過 Priya 的情報轉向 Sator 線。關鍵是：要進入反派世界，必須先經過 Kat ，因此主線從這裡起不再只是情報與武力，而是被婚姻、創傷與控制關係牽引。"
+    },
+    {
+      "id": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "path": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "basename": "TENET 4 劇情-自由港與自我對打",
+      "title": "奧斯陸自由港 ：自我交戰與逆行真相的第一次實體化",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[奧斯陸自由港]]：自我交戰與逆行真相的第一次實體化\n\n[[自由港]] 段落讓《[[TENET]]》的核心機關第一次以肉身衝突形式出現。第一次看像是潛入行動中遭遇陌生敵人，第二次才知道，[[Protagonist]] 打到的是逆行的自己。這一格證明本片的真相不是藏起來，而是被拆成兩次看。\n\n# [[中心]]：[[奧斯陸自由港]]\n\n中心不是打戲，而是「我與尚未理解的自己交手」這個結構。角色被時間折回來，親自與自己的另一向量碰撞。\n\n<!--section: 1.1-->\n### 潛入目標\n自由港表面是竊畫行動，實際上卻把主角引到逆行技術第一次完整出現的場所。\n\n<!--section: 1.2-->\n### 飛機撞倉\nNeil 的大膽掩護把商業空間瞬間改造成戰場，也讓整段行動帶著近乎荒謬的推進力。\n\n<!--section: 1.3-->\n### 逆行門現身\n那道旋轉門把抽象理論變成具體裝置，世界觀第一次有了能被看見的機械核心。\n\n<!--section: 1.4-->\n### 遮面敵人\n主角與神祕人近身纏鬥時，衝突本身已透露時間方向不一致帶來的異常感。\n\n<!--section: 1.5-->\n### 自我回收\n後段重返此地時，觀眾才知道那名敵人就是逆行的主角本人，整場打戲被重新定義。\n\n<!--section: 1.6-->\n### Neil 的半步領先\nNeil 在這段裡總像已經比主角多知道一些，卻仍選擇讓事件按應有軌道發生。\n\n<!--section: 1.7-->\n### 規則體感化\n自由港讓逆行不再只是科學說明，而是能撞擊身體、節奏與視角的具體經驗。\n\n<!--section: 1.8-->\n### 推往塔林\n當主角知道逆行門真的存在後，後續所有追逐、回收與反向行動才真正變得可能。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 5 劇情-塔林鉗形與手提箱]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]\n\n## 04 關鍵字\n[[奧斯陸自由港]]、[[逆行門]]、[[Protagonist]]、[[Neil]]、[[逆行]]",
+      "links": [
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/逆行門.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "自由港 段落讓《 TENET 》的核心機關第一次以肉身衝突形式出現。第一次看像是潛入行動中遭遇陌生敵人，第二次才知道， Protagonist 打到的是逆行的自己。這一格證明本片的真相不是藏起來，而是被拆成兩次看。"
+    },
+    {
+      "id": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "path": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "basename": "TENET 5 劇情-塔林鉗形與手提箱",
+      "title": "塔林高速公路 ：時間鉗形、錯位交接與因果混戰",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[塔林高速公路]]：時間鉗形、錯位交接與因果混戰\n\n[[塔林]] 是全片最複雜的中段樞紐。正向與逆向的車輛、角色與資訊在同一路面上交錯，觀眾一開始只能抓到碎片：手提箱、追逐、爆炸、劫持。直到角色逆行重返此段，這場戲才從混亂變成精密結構。\n\n# [[中心]]：[[塔林高速公路]]\n\n中心是時間鉗形在動作場面的完整展演。不同時間方向的隊伍從同一事件兩側夾擊，局部視角與全局視角彼此錯位。\n\n<!--section: 1.1-->\n### 交接佈局\n手提箱與假情報讓整場行動一開始就建立在多方誤導與測試之上。\n\n<!--section: 1.2-->\n### 高速追逐\n塔林公路把正向追車拍成碎裂訊號，觀眾先看見結果，再慢慢拼出誰在追誰。\n\n<!--section: 1.3-->\n### Kat 中槍\nKat 的傷勢讓這段不只是情報失誤，而是立刻產生必須逆行回補的迫切理由。\n\n<!--section: 1.4-->\n### Sator 壓迫\nSator 在這裡把控制慾推到極致，私人威脅與世界危機被他綁成同一條繩索。\n\n<!--section: 1.5-->\n### 空箱與 Algorithm\n觀眾原本以為核心是手提箱，後來才知道真正關鍵是更大的物件與時間布局。\n\n<!--section: 1.6-->\n### 逆向重看\n角色進入逆行後重返同一路段，原本混亂的追逐才被證明是精密設計的回收戲法。\n\n<!--section: 1.7-->\n### 鉗形成立\n這一格最重要的是展示同一事件如何被兩個時間方向同時塑形，形成雙向戰術。\n\n<!--section: 1.8-->\n### 推往逆行航程\n救 Kat 與補完資訊的需求迫使團隊反向前進，也讓故事從追逐轉入時間折返。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 6 劇情-逆行航程與越南遊艇]]、[[Protagonist 角色九宮]]、[[Kat 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[塔林高速公路]]、[[Algorithm]]、[[Kat]]、[[Sator]]、[[逆行]]",
+      "links": [
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "塔林 是全片最複雜的中段樞紐。正向與逆向的車輛、角色與資訊在同一路面上交錯，觀眾一開始只能抓到碎片：手提箱、追逐、爆炸、劫持。直到角色逆行重返此段，這場戲才從混亂變成精密結構。"
+    },
+    {
+      "id": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "path": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "basename": "TENET 6 劇情-逆行航程與越南遊艇",
+      "title": "越南遊艇 ：情感回收、時間折返與私人戰爭的終結",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[越南遊艇]]：情感回收、時間折返與私人戰爭的終結\n\n這張卡處理的是《[[TENET]]》最私人也最具詩意的一段。[[Kat]] 曾看見某位女子從遊艇躍入海中，並把那畫面視為自由象徵；後來她才知道，那個人正是未來的自己。與此同時，[[Sator]] 把這天視為自己最完美的時刻，想把死亡與世界終局綁在一起。\n\n# [[中心]]：[[越南遊艇]]\n\n中心功能是把最龐大的世界危機，壓縮到最私人的婚姻與自由問題上。這裡不是外在戰場，而是情感回收點。\n\n<!--section: 1.1-->\n### 為 Kat 逆行\n團隊決定逆行返回較早時間點，說明拯救一個人已經與拯救世界無法分開。\n\n<!--section: 1.2-->\n### 航程修復\n在封閉航程中，角色一邊替 Kat 爭取生機，一邊為後續回到自由港與終局做準備。\n\n<!--section: 1.3-->\n### Sator 的完美日\nSator 把越南遊艇那一天視為人生頂點，因此也選擇把自己的死亡與世界毀滅扣在一起。\n\n<!--section: 1.4-->\n### Kat 的自我目擊\n她曾羨慕那位跳海離開的女人，後來才知道那其實是成功奪回人生的自己。\n\n<!--section: 1.5-->\n### 私人戰爭\n這裡的核心衝突不是軍事對抗，而是 Kat 是否能終結長期被控制的關係。\n\n<!--section: 1.6-->\n### 情感與任務重疊\n主角之所以幫 Kat，不只是策略需求，也讓整體敘事有了真正的人性重量。\n\n<!--section: 1.7-->\n### 象徵回收\n跳海畫面從自由幻象變成現實行動，證明片中的回收不只發生在情報，也發生在情感。\n\n<!--section: 1.8-->\n### 推往史塔斯克12\n越南遊艇完成私人層的回收後，故事便把剩餘壓力集中到終局戰場與 Algorithm 的處置上。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 5 劇情-塔林鉗形與手提箱]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[Kat 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[越南遊艇]]、[[Kat]]、[[Sator]]、[[逆行]]、[[Algorithm]]",
+      "links": [
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "這張卡處理的是《 TENET 》最私人也最具詩意的一段。 Kat 曾看見某位女子從遊艇躍入海中，並把那畫面視為自由象徵；後來她才知道，那個人正是未來的自己。與此同時， Sator 把這天視為自己最完美的時刻，想把死亡與世界終局綁在一起。"
+    },
+    {
+      "id": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "path": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "basename": "TENET 7 劇情-史塔斯克12與終局鉗形",
+      "title": "史塔斯克12 ：時間鉗形戰術的終局與 Neil 的犧牲",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[史塔斯克12]]：時間鉗形戰術的終局與 [[Neil]] 的犧牲\n\n[[史塔斯克12]] 是全片所有機關最密集的終局容器。紅隊與藍隊沿正向與逆向同步作戰，把時間鉗形攻勢徹底軍事化。對 [[Protagonist]] 來說，這裡讓他從參與者變成理解整局的人；對 [[Neil]] 來說，這裡則是他明知而赴的命運現場。\n\n# [[中心]]：[[史塔斯克12]]\n\n這格的中心不是勝負，而是「誰願意補上那個註定缺一不可的位置」。那扇門、那條繩索與那顆子彈，共同完成了整部片最沉重的回收。\n\n<!--section: 1.1-->\n### 紅藍雙隊\n終局行動把正向紅隊與逆向藍隊並置，讓時間鉗形從概念正式變成軍事執行。\n\n<!--section: 1.2-->\n### 任務簡報\n角色先知道部分結果再出發，使作戰本身就帶著「結果先行、原因補上」的電影語法。\n\n<!--section: 1.3-->\n### 地下目標\nAlgorithm 所在的地底結構把整場戰鬥壓縮成一個必須準時閉合的死線任務。\n\n<!--section: 1.4-->\n### Ives 與協同\nIves 讓團隊行動更具制度感，證明 Tenet 不只是個想法，而是可執行的跨時間軍事組織。\n\n<!--section: 1.5-->\n### Neil 的回身\nNeil 理解缺口在哪裡後主動補位，正式把友情、命運與戰術責任疊成同一個選擇。\n\n<!--section: 1.6-->\n### 門與子彈\n那扇門的開啟、鎖死與逆行子彈的瞬間回收，構成整片最精準也最悲傷的機關。\n\n<!--section: 1.7-->\n### 主角的覺悟\n主角在這裡開始真正看懂 Neil 所背負的時間差，也看懂自己未來必須成為誰。\n\n<!--section: 1.8-->\n### 推往片尾\n戰術勝利之後，片子把剩下的力量集中到關係回收與組織生成，讓結尾比爆破更重要。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 8 劇情-片尾回收與組織生成]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[史塔斯克12]]、[[Neil]]、[[Protagonist]]、[[Sator]]、[[Algorithm]]",
+      "links": [
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "史塔斯克12 是全片所有機關最密集的終局容器。紅隊與藍隊沿正向與逆向同步作戰，把時間鉗形攻勢徹底軍事化。對 Protagonist 來說，這裡讓他從參與者變成理解整局的人；對 Neil 來說，這裡則是他明知而赴的命運現場。"
+    },
+    {
+      "id": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "path": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "basename": "TENET 8 劇情-片尾回收與組織生成",
+      "title": "片尾回收 ：未來創建過去，組織由結果反向生成",
+      "folder": "01 劇情",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "plot"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:51:30.323Z",
+      "content": "<!--section: 1-->\n# [[片尾回收]]：未來創建過去，組織由結果反向生成\n\n片尾真正的震撼不是世界得救，而是 [[Protagonist]] 發現自己不是被動加入 [[TENET]]，而是它的未來創建者。整部片裡他接受的命令、得到的保護與建立的關係，都是未來的自己已先行安排的結果。英雄因此不再只是完成任務的人，而是把自己延展成一個跨時間保護體系的人。\n\n# [[中心]]：[[片尾回收]]\n\n中心不是揭曉答案而已，而是把整部片重新定義：原來結局不是終點，而是系統生成的起點。\n\n<!--section: 1.1-->\n### 組織創建者\n主角終於理解自己不是被 Tenet 挑中，而是未來親手建立並回頭啟動這套體系的人。\n\n<!--section: 1.2-->\n### Neil 的告別\nNeil 以平靜口吻道別，使友情的重量在最後一刻才完整落到主角與觀眾身上。\n\n<!--section: 1.3-->\n### Priya 收尾\n主角處理 Priya，說明真正的結尾不是打贏敵人，而是守住系統的倫理邊界。\n\n<!--section: 1.4-->\n### 保護 Kat\nKat 與孩子得以活下去，證明所有宏大機關最後仍必須落回具體人生的安全。\n\n<!--section: 1.5-->\n### 未來招募過去\n整部片的各種援手與指令，現在都被重新理解成未來主角對過去自己的反向部署。\n\n<!--section: 1.6-->\n### 結果生成原因\n片尾把因果反過來展示，說明使命的完成同時就是使命本身的誕生。\n\n<!--section: 1.7-->\n### 身分翻轉\n主角從執行命令者變成佈局者，整部片的真正成長因此在最後一刻才被看見。\n\n<!--section: 1.8-->\n### 閉環落點\n故事不是停在真相揭露，而是停在一個仍將持續運作的時間保護系統之中。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]、[[Kat 角色九宮]]\n\n## 04 關鍵字\n[[片尾回收]]、[[Tenet 組織]]、[[Protagonist]]、[[Neil]]、[[Kat]]",
+      "links": [
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "片尾真正的震撼不是世界得救，而是 Protagonist 發現自己不是被動加入 TENET ，而是它的未來創建者。整部片裡他接受的命令、得到的保護與建立的關係，都是未來的自己已先行安排的結果。英雄因此不再只是完成任務的人，而是把自己延展成一個跨時間保護體系的人。"
+    },
+    {
+      "id": "02 角色/Kat 角色九宮.md",
+      "path": "02 角色/Kat 角色九宮.md",
+      "basename": "Kat 角色九宮",
+      "title": "Kat ：在時間機關中保住自我與未來的人",
+      "folder": "02 角色",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "character"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[Kat]]：在時間機關中保住自我與未來的人\n\n[[Kat]] 是《[[TENET]]》裡最重要的人性錨點。沒有她，電影很容易只剩逆行規則與閉環炫技；有了她，拯救世界才真正有情感上的代價。她的弧線不是從弱變強那麼簡單，而是從被觀看、被控制的客體，轉變成能做出決定、保護兒子並終結暴力關係的主體。\n\n# [[中心]]：[[Kat]]\n\nKat 的九宮中心在於「主體性奪回」：她不是被救而已，而是自己成為那個能完成自由的人。\n\n<!--section: 1.1-->\n### 被控制的起點\n她長期被 Sator 用偽畫、財力與恐懼壓制，人生像被囚在豪華容器裡。\n\n<!--section: 1.2-->\n### 母親身分\n孩子是她最深的牽掛，也是 Sator 最有效的控制手段之一。\n\n<!--section: 1.3-->\n### 與主角的聯盟\n主角不是單純拯救她，而是逐步把她視為必須被尊重與保護的行動主體。\n\n<!--section: 1.4-->\n### 塔林受傷\n她在塔林中槍後被拖進逆行世界核心，私人受害者身分因此與大局直接重疊。\n\n<!--section: 1.5-->\n### 遊艇記憶\n那位從船邊跳海離開的女子，原本是她對自由的想像，後來成為她真正的未來。\n\n<!--section: 1.6-->\n### 終結 Sator\n她殺死 Sator 不是單純復仇，而是親手切斷控制她人生的暴力秩序。\n\n<!--section: 1.7-->\n### 人性錨點\n整部片若沒有 Kat，世界被救就只剩技術成功；有她，拯救才有倫理與情感重量。\n\n<!--section: 1.8-->\n### 延伸落點\nKat 的存活與陪伴孩子的未來，正是 Tenet 系統值得被建立與守住的理由之一。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 3 劇情-孟買與薩托入口]]、[[TENET 5 劇情-塔林鉗形與手提箱]]、[[TENET 6 劇情-逆行航程與越南遊艇]]、[[Protagonist 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[Kat]]、[[Sator]]、[[Protagonist]]、[[越南遊艇]]、[[偽造畫作]]",
+      "links": [
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "Kat 是《 TENET 》裡最重要的人性錨點。沒有她，電影很容易只剩逆行規則與閉環炫技；有了她，拯救世界才真正有情感上的代價。她的弧線不是從弱變強那麼簡單，而是從被觀看、被控制的客體，轉變成能做出決定、保護兒子並終結暴力關係的主體。"
+    },
+    {
+      "id": "02 角色/Neil 角色九宮.md",
+      "path": "02 角色/Neil 角色九宮.md",
+      "basename": "Neil 角色九宮",
+      "title": "Neil ：知道終點的人，仍選擇把友情走完",
+      "folder": "02 角色",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "character"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[Neil]]：知道終點的人，仍選擇把友情走完\n\n[[Neil]] 是《[[TENET]]》最動人的角色，因為他集中承載了本片最難的倫理問題：若你知道一段關係會以悲劇作結，還會不會選擇進入？\n\n# [[中心]]：[[Neil]]\n\nNeil 的九宮中心不是「搭檔」，而是「守門人」：他知道閉環怎麼成立，也知道哪個位置最後要由自己補上。\n\n<!--section: 1.1-->\n### 歌劇院救援\n他在最早的任務現場就已經救過主角，卻要到很後面這份友情才被完整辨認。\n\n<!--section: 1.2-->\n### 從容能力\nNeil 總是輕鬆、精準、帶點玩笑感，像早已習慣在危險與結果已知之間行動。\n\n<!--section: 1.3-->\n### 與主角的友情\n對主角而言這段關係正在開始，對 Neil 而言卻已經走過更長、更深的時間。\n\n<!--section: 1.4-->\n### 總比別人早半步\n他經常像知道更多，卻只在必要時提供剛剛好的資訊，避免破壞閉環成立。\n\n<!--section: 1.5-->\n### 時間差身分\nNeil 的存在本身就是倒序友誼的證明，也讓整部片最冷的機關帶上最暖的情感。\n\n<!--section: 1.6-->\n### 史塔斯克12補位\n當他意識到關鍵缺口時，他不是猶豫而是回頭，因為那位置從一開始就屬於他。\n\n<!--section: 1.7-->\n### 告別重量\n最後那句關於友誼開始的話，把一段原本無法線性理解的關係壓成最簡潔的疼痛。\n\n<!--section: 1.8-->\n### 角色延伸\nNeil 讓觀眾看見 Tenet 不只靠規則運轉，也靠有人願意為關係與信任承受終點。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 1 劇情-歌劇院引爆點]]、[[TENET 3 劇情-孟買與薩托入口]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[TENET 8 劇情-片尾回收與組織生成]]、[[Protagonist 角色九宮]]\n\n## 04 關鍵字\n[[Neil]]、[[Protagonist]]、[[歌劇院]]、[[史塔斯克12]]、[[Tenet 組織]]",
+      "links": [
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "Neil 是《 TENET 》最動人的角色，因為他集中承載了本片最難的倫理問題：若你知道一段關係會以悲劇作結，還會不會選擇進入？"
+    },
+    {
+      "id": "02 角色/Protagonist 角色九宮.md",
+      "path": "02 角色/Protagonist 角色九宮.md",
+      "basename": "Protagonist 角色九宮",
+      "title": "Protagonist ：從執行任務的人，變成創建任務體系的人",
+      "folder": "02 角色",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "character"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[Protagonist]]：從執行任務的人，變成創建任務體系的人\n\n[[Protagonist]] 的弧線，是《[[TENET]]》最深的隱藏主線。表面看，他像典型諜報片主角；但真正的變化在於，他逐步從「被派去解決問題的人」，變成「未來設計整個問題與解法的人」。這使他的成長不是單純變強，而是從執行者上升為制度創建者。\n\n# [[中心]]：[[Protagonist]]\n\n他的九宮中心不是某一場勝利，而是角色身分的翻轉：從棋子變成佈局者，從被安排的人變成安排他人的人。\n\n<!--section: 1.1-->\n### 倫理底色\n歌劇院任務裡他先救人再求成事，先確立這不是靠冷酷效率立起來的主角。\n\n<!--section: 1.2-->\n### 規則適應力\n面對逆行、鉗形與不完整資訊，他最大的能力不是武力，而是快速重組理解方式。\n\n<!--section: 1.3-->\n### 與 Neil 的關係\n他在當下逐漸信任 Neil，卻不知道自己未來其實已是這段友情的發起者。\n\n<!--section: 1.4-->\n### 與 Kat 的保護線\nKat 讓他的任務不再只是抽象世界危機，而是落到一個具體需要保護的人。\n\n<!--section: 1.5-->\n### 與自己交手\n自由港那場打鬥把他的弧線具象化為對自身未理解版本的碰撞。\n\n<!--section: 1.6-->\n### 從執行者到策略者\n越到後段，他越不是只接收命令，而是在行動中開始主動承擔系統級判斷。\n\n<!--section: 1.7-->\n### 創建 Tenet\n片尾揭示他最終會成為組織創建者，讓整部片的主角成長延遲到最後一刻才完整成立。\n\n<!--section: 1.8-->\n### 角色延伸\n他真正贏得的不是一場任務，而是把自己延展成能跨時間保護他人與維持秩序的人。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 1 劇情-歌劇院引爆點]]、[[TENET 3 劇情-孟買與薩托入口]]、[[TENET 4 劇情-自由港與自我對打]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[TENET 8 劇情-片尾回收與組織生成]]、[[Neil 角色九宮]]、[[Kat 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[Protagonist]]、[[Tenet 組織]]、[[Neil]]、[[Kat]]、[[Sator]]",
+      "links": [
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "Protagonist 的弧線，是《 TENET 》最深的隱藏主線。表面看，他像典型諜報片主角；但真正的變化在於，他逐步從「被派去解決問題的人」，變成「未來設計整個問題與解法的人」。這使他的成長不是單純變強，而是從執行者上升為制度創建者。"
+    },
+    {
+      "id": "02 角色/Sator 角色九宮.md",
+      "path": "02 角色/Sator 角色九宮.md",
+      "basename": "Sator 角色九宮",
+      "title": "Sator ：把世界當作自我延伸的末日意志",
+      "folder": "02 角色",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "character"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:48:07.209Z",
+      "content": "<!--section: 1-->\n# [[Sator]]：把世界當作自我延伸的末日意志\n\n[[Sator]] 是一種極端控制慾的化身。他不只是因掌握逆行技術而強大，更關鍵的是，他把自己的生命、婚姻與世界都視為同一件事：若我無法擁有，就不該讓任何人擁有。這使他與未來的毀滅企圖完美對接。\n\n# [[中心]]：[[Sator]]\n\nSator 的九宮中心不是「反派」二字，而是「自戀式末日控制者」：他把私人毀滅衝動擴張成全球級威脅。\n\n<!--section: 1.1-->\n### 權力來源\n他憑財富、軍火與與未來勢力的接線能力，讓自己成為能左右局勢的中介者。\n\n<!--section: 1.2-->\n### 與未來交易\nSator 最危險之處在於，他願意拿當下世界去交換一種死後也要報復一切的快感。\n\n<!--section: 1.3-->\n### 對 Kat 的控制\n婚姻在他手上不是關係，而是所有權宣示；愛、嫉妒與暴力被他混成同一種占有。\n\n<!--section: 1.4-->\n### Algorithm 執念\n他把 Algorithm 視為最後按鈕，彷彿只要握有它，就能讓全世界服從自己的終局情緒。\n\n<!--section: 1.5-->\n### 病與末日\n身體正在走向死亡，使他更堅信若自己不能活，就不該留下任何未來給別人。\n\n<!--section: 1.6-->\n### 遊艇高點\n越南遊艇那天是他自認的人生巔峰，也因此成為他最想把世界一起拖下去的時刻。\n\n<!--section: 1.7-->\n### 主角的反面鏡像\n若主角是把個人生命擴展為保護系統，Sator 就是把個人毀滅衝動擴展成全球威脅。\n\n<!--section: 1.8-->\n### 角色延伸\nSator 不是只用來製造危機，他讓《TENET》把時間機械與人性黑洞直接扣在一起。\n\n## 04 導覽\n[[TENET 九宮中心]]、[[TENET 3 劇情-孟買與薩托入口]]、[[TENET 5 劇情-塔林鉗形與手提箱]]、[[TENET 6 劇情-逆行航程與越南遊艇]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[Kat 角色九宮]]、[[Protagonist 角色九宮]]\n\n## 04 關鍵字\n[[Sator]]、[[Kat]]、[[Algorithm]]、[[越南遊艇]]、[[末日]]",
+      "links": [
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "03 核心/TENET 九宮中心.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": "Sator 是一種極端控制慾的化身。他不只是因掌握逆行技術而強大，更關鍵的是，他把自己的生命、婚姻與世界都視為同一件事：若我無法擁有，就不該讓任何人擁有。這使他與未來的毀滅企圖完美對接。"
+    },
+    {
+      "id": "03 核心/TENET 九宮中心.md",
+      "path": "03 核心/TENET 九宮中心.md",
+      "basename": "TENET 九宮中心",
+      "title": "TENET ：逆行世界中的因果閉環",
+      "folder": "03 核心",
+      "frontmatter": {
+        "mandala": true,
+        "tags": [
+          "tenet",
+          "nolan",
+          "mandala",
+          "lineage"
+        ]
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:51:30.326Z",
+      "content": "<!--section: 1-->\n# [[TENET]]：逆行世界中的因果閉環\n\n**中心命題**：[[TENET]] 不是單純講時間旅行，而是在討論：當人能沿時間反向移動時，[[因果]]、[[信任]]、[[犧牲]] 與 [[自由意志]] 會如何重組。整部片的中心不是「看懂機關」而已，而是看見 [[Protagonist]] 如何從一個執行任務的人，逐步成為建立整套系統的人。對他來說，故事表面上是在阻止 [[Sator]] 毀滅世界，深層上卻是在完成一個早已由自己發起、再由他人陪自己走完的閉環。[[Neil]] 知道結局卻仍選擇同行，[[Kat]] 則提供了情感與倫理的座標，使這場龐大的時間戰爭不至於只剩理論推演。\n\n# [[中心]]：[[TENET]]\n\n這個九宮的中心不是單一事件，而是一個結構：未來與過去彼此招募，使命與身分互為因果，任務完成時也同時生成了任務本身。\n\n<!--section: 1.1-->\n### 歌劇院引爆點\n主角在基輔歌劇院任務中第一次接觸超出常規的時間異象，也第一次被更大的組織邏輯捲入。\n\n<!--section: 1.2-->\n### 十誡與逆行規則\n他通過測試後進入 Tenet 體系，開始理解逆行不是回到過去，而是在同一世界中反向移動。\n\n<!--section: 1.3-->\n### 孟買與薩托入口\n主角與 Neil 在孟買行動後接近 Sator 的世界，故事從情報任務轉成與核心反派的正面接觸。\n\n<!--section: 1.4-->\n### 自由港與自我對打\n奧斯陸自由港讓逆行規則第一次以肉身衝突呈現，主角後來才知道自己打到的是逆行的自己。\n\n<!--section: 1.5-->\n### 塔林鉗形與手提箱\n高速公路行動把正向與逆向兩條時間線交叉展開，劇情正式進入多重視角回收階段。\n\n<!--section: 1.6-->\n### 逆行航程與越南遊艇\n為了救 Kat，團隊逆行返回更早時間點，情節同時把私人情感與世界危機綁在一起。\n\n<!--section: 1.7-->\n### 史塔斯克12與終局鉗形\n最終戰以時間鉗形攻勢完成前後夾擊，各角色在不同時間方向上共同拼出任務全貌。\n\n<!--section: 1.8-->\n### 片尾回收與組織生成\n結尾揭示 Tenet 組織其實由主角未來建立，整部片因此從任務故事收束成自我生成的閉環。\n\n## 04 導覽\n[[TENET 1 劇情-歌劇院引爆點]]、[[TENET 2 劇情-十誡與逆行規則]]、[[TENET 3 劇情-孟買與薩托入口]]、[[TENET 4 劇情-自由港與自我對打]]、[[TENET 5 劇情-塔林鉗形與手提箱]]、[[TENET 6 劇情-逆行航程與越南遊艇]]、[[TENET 7 劇情-史塔斯克12與終局鉗形]]、[[TENET 8 劇情-片尾回收與組織生成]]、[[Protagonist 角色九宮]]、[[Neil 角色九宮]]、[[Kat 角色九宮]]、[[Sator 角色九宮]]\n\n## 04 關鍵字\n[[TENET]]、[[逆行]]、[[Algorithm]]、[[Protagonist]]、[[Neil]]、[[Kat]]、[[Sator]]",
+      "links": [
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/自由意志.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Protagonist 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Neil 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Kat 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "02 角色/Sator 角色九宮.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/TENET.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Kat.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "04 導覽/Sator.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md"
+      ],
+      "preview": "中心命題： TENET 不是單純講時間旅行，而是在討論：當人能沿時間反向移動時， 因果 、 信任 、 犧牲 與 自由意志 會如何重組。整部片的中心不是「看懂機關」而已，而是看見 Protagonist 如何從一個執行任務的人，逐步成為建立整套系統的人。對他來說，故事表面上是在阻止"
+    },
+    {
+      "id": "04 導覽/自由意志.md",
+      "path": "04 導覽/自由意志.md",
+      "basename": "自由意志",
+      "title": "自由意志",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:21:07.563Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/東北.md",
+      "path": "04 導覽/東北.md",
+      "basename": "東北",
+      "title": "東北",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:32:28.845Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/南.md",
+      "path": "04 導覽/南.md",
+      "basename": "南",
+      "title": "南",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:32:18.877Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/逆行門.md",
+      "path": "04 導覽/逆行門.md",
+      "basename": "逆行門",
+      "title": "逆行門",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:21:11.078Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/Kat.md",
+      "path": "04 導覽/Kat.md",
+      "basename": "Kat",
+      "title": "Kat",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:14:44.783Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/Neil.md",
+      "path": "04 導覽/Neil.md",
+      "basename": "Neil",
+      "title": "Neil",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:27:20.628Z",
+      "content": "救了男主角[[Protagonist]]",
+      "links": [
+        {
+          "target": "04 導覽/Protagonist.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md",
+        "04 導覽/Protagonist.md"
+      ],
+      "preview": "救了男主角 Protagonist"
+    },
+    {
+      "id": "04 導覽/Protagonist.md",
+      "path": "04 導覽/Protagonist.md",
+      "basename": "Protagonist",
+      "title": "Protagonist",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:26:37.498Z",
+      "content": "男主角\n沒有名字\n[[Neil]]",
+      "links": [
+        {
+          "target": "04 導覽/Neil.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md",
+        "04 導覽/Neil.md"
+      ],
+      "preview": "男主角"
+    },
+    {
+      "id": "04 導覽/README.md",
+      "path": "04 導覽/README.md",
+      "basename": "README",
+      "title": "TENET Obsidian 多檔版 v2",
+      "folder": "04 導覽",
+      "frontmatter": {
+        "mandala": true
+      },
+      "mandala": true,
+      "modifiedAt": "2026-03-08T04:38:55.462Z",
+      "content": "<!--section: 1-->\n# TENET Obsidian 多檔版 v2\n\n本版已統一為你指定的結構：\n- `<!--section: 1-->`\n- 中心標題 `# [[中心]]：[[...]]`\n\n共 13 檔：\n- 9 檔主劇情九宮\n- 4 檔角色九宮\n\n目前在 vault 內進一步整理為 4 個資料夾，方便用 Juggl 做視覺分類：\n\n- `01 劇情`：8 張主劇情卡，建議在 Juggl 顯示為藍色方形\n- `02 角色`：4 張角色九宮，建議在 Juggl 顯示為綠色三角形\n- `03 核心`：`TENET 九宮中心`，建議在 Juggl 顯示為金色圓形\n- `04 導覽`：本說明檔，建議在 Juggl 顯示為紅色菱形\n\n目前結構如下：\n\n- `01 Nolan/Tenet 天能/01 劇情/`\n- `01 Nolan/Tenet 天能/02 角色/`\n- `01 Nolan/Tenet 天能/03 核心/`\n- `01 Nolan/Tenet 天能/04 導覽/`\n\n可直接放入 Obsidian vault 使用，並配合 `.obsidian/plugins/juggl/graph.css` 呈現分類視圖。\n<!--section: 1.1-->\n<!--section: 1.2-->\n<!--section: 1.3-->\n<!--section: 1.4-->\n<!--section: 1.5-->\n<!--section: 1.6-->\n<!--section: 1.7-->\n<!--section: 1.8-->",
+      "links": [],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "本版已統一為你指定的結構："
+    },
+    {
+      "id": "04 導覽/Sator.md",
+      "path": "04 導覽/Sator.md",
+      "basename": "Sator",
+      "title": "Sator",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:46:26.224Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+        "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "02 角色/Sator 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "04 導覽/TENET.md",
+      "path": "04 導覽/TENET.md",
+      "basename": "TENET",
+      "title": "TENET",
+      "folder": "04 導覽",
+      "frontmatter": {},
+      "mandala": false,
+      "modifiedAt": "2026-03-08T04:25:26.411Z",
+      "content": "",
+      "links": [],
+      "embeds": [],
+      "backlinks": [
+        "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+        "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+        "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+        "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+        "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+        "02 角色/Kat 角色九宮.md",
+        "02 角色/Neil 角色九宮.md",
+        "02 角色/Protagonist 角色九宮.md",
+        "03 核心/TENET 九宮中心.md"
+      ],
+      "preview": ""
+    }
+  ],
+  "edges": [
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "01 劇情/TENET 2 劇情-十誡與逆行規則.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 1 劇情-歌劇院引爆點.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 2 劇情-十誡與逆行規則.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "01 劇情/TENET 3 劇情-孟買與薩托入口.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "04 導覽/逆行門.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 4 劇情-自由港與自我對打.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Kat 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "02 角色/Neil 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "02 角色/Protagonist 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "03 核心/TENET 九宮中心.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "02 角色/Sator 角色九宮.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/自由意志.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 1 劇情-歌劇院引爆點.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 2 劇情-十誡與逆行規則.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 3 劇情-孟買與薩托入口.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 4 劇情-自由港與自我對打.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 5 劇情-塔林鉗形與手提箱.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 6 劇情-逆行航程與越南遊艇.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 7 劇情-史塔斯克12與終局鉗形.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "01 劇情/TENET 8 劇情-片尾回收與組織生成.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "02 角色/Protagonist 角色九宮.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "02 角色/Neil 角色九宮.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "02 角色/Kat 角色九宮.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "02 角色/Sator 角色九宮.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/TENET.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Neil.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Kat.md"
+    },
+    {
+      "source": "03 核心/TENET 九宮中心.md",
+      "target": "04 導覽/Sator.md"
+    },
+    {
+      "source": "04 導覽/Neil.md",
+      "target": "04 導覽/Protagonist.md"
+    },
+    {
+      "source": "04 導覽/Protagonist.md",
+      "target": "04 導覽/Neil.md"
+    }
+  ],
+  "assets": {}
+}
