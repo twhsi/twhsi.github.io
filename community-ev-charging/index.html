@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>社區安裝充電樁方案說明</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#121a31;
+      --panel2:#182341;
+      --text:#eef2ff;
+      --muted:#b7c0e0;
+      --line:#2b3a67;
+      --accent:#7cc4ff;
+      --accent2:#8ef0c1;
+      --warn:#ffd27a;
+      --danger:#ff9a9a;
+      --shadow: 0 12px 30px rgba(0,0,0,.22);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      background: linear-gradient(180deg,#09101f 0%,#0d1530 100%);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:var(--accent)}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 64px}
+    .hero{
+      background: radial-gradient(circle at top right, rgba(124,196,255,.18), transparent 35%),
+                  radial-gradient(circle at top left, rgba(142,240,193,.12), transparent 28%),
+                  linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:36px 26px;
+      box-shadow:var(--shadow);
+    }
+    .eyebrow{
+      display:inline-block;
+      padding:6px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--accent2);
+      font-size:14px;
+      letter-spacing:.05em;
+      background: rgba(255,255,255,.03);
+    }
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:14px 0 10px}
+    .lead{font-size:18px;color:var(--muted);max-width:900px}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .section{margin-top:26px}
+    .card{
+      background: linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .card h2,.card h3{margin-top:0;line-height:1.3}
+    .kpi{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}
+    .kpi .item{
+      min-width:180px;
+      padding:16px 18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .big{font-size:28px;font-weight:800}
+    .muted{color:var(--muted)}
+    ul{padding-left:20px;margin:8px 0}
+    li{margin:6px 0}
+    .tag{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:13px;
+      margin-bottom:10px;
+      background:rgba(124,196,255,.12);
+      border:1px solid rgba(124,196,255,.28);
+      color:#cae7ff;
+    }
+    .tag.green{
+      background:rgba(142,240,193,.12);
+      border-color:rgba(142,240,193,.28);
+      color:#d5fff0;
+    }
+    .tag.warn{
+      background:rgba(255,210,122,.10);
+      border-color:rgba(255,210,122,.28);
+      color:#ffe7b0;
+    }
+    .compare{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      box-shadow:var(--shadow);
+    }
+    .compare th,.compare td{
+      border-bottom:1px solid var(--line);
+      padding:14px 12px;
+      vertical-align:top;
+      text-align:left;
+    }
+    .compare th{background:rgba(255,255,255,.04);font-size:15px}
+    .compare tr:last-child td{border-bottom:none}
+    .pillnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .pillnav a{
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+    .callout{
+      border-left:4px solid var(--accent);
+      padding:14px 16px;
+      background:rgba(124,196,255,.08);
+      border-radius:14px;
+      color:#e9f6ff;
+    }
+    .step{counter-increment: step;position:relative;padding-left:56px}
+    .step:before{
+      content: counter(step);
+      position:absolute;
+      left:0; top:2px;
+      width:36px;height:36px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      font-weight:800;
+      background:linear-gradient(180deg,#79c7ff,#5aa9f4);
+      color:#07111f;
+    }
+    .steps{counter-reset: step; display:grid; gap:14px}
+    footer{margin-top:34px;color:var(--muted);font-size:14px;text-align:center}
+    .small{font-size:14px}
+    @media (max-width: 900px){
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .hero{padding:28px 18px}
+      .compare{display:block;overflow:auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">社區充電樁提案網站</span>
+      <h1>社區安裝充電樁方案說明</h1>
+      <p class="lead">
+        這個頁面把簡報內容整理成住戶看得懂的版本：先說明為什麼要討論、再比較三種分攤方式，
+        最後提出較容易形成共識的推進步驟。
+      </p>
+      <div class="pillnav">
+        <a href="#why">為什麼要做</a>
+        <a href="#plans">三種方案</a>
+        <a href="#compare">差異比較</a>
+        <a href="#suggestion">建議路線</a>
+        <a href="#faq">常見問題</a>
+      </div>
+      <div class="kpi">
+        <div class="item"><div class="muted small">公共基礎費</div><div class="big">380 萬</div></div>
+        <div class="item"><div class="muted small">總戶數參考</div><div class="big">102 戶</div></div>
+        <div class="item"><div class="muted small">車主個別負擔</div><div class="big">5–7 萬/戶</div></div>
+      </div>
+    </section>
+
+    <section id="why" class="section card">
+      <h2>一、為什麼社區現在要討論充電樁</h2>
+      <div class="grid grid-3">
+        <div><h3>需求正在增加</h3><p class="muted">電動車住戶會逐步增加，若沒有先規劃，未來每一戶各自施工，社區管理與安全都會更複雜。</p></div>
+        <div><h3>這不只是設備問題</h3><p class="muted">真正要決定的不是「裝不裝」，而是「公共基礎建設由誰分攤、車主如何付費、未來如何擴充」。</p></div>
+        <div><h3>先定制度，比先買設備更重要</h3><p class="muted">如果分攤規則不清楚，再好的設備也很難通過住戶共識。</p></div>
+      </div>
+      <div class="callout" style="margin-top:14px">本案核心不是單純成本，而是分攤原則的選擇：<b>公平性、未來性、可擴充性</b> 要一起考慮。</div>
+    </section>
+
+    <section id="plans" class="section">
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="tag">方案 A</span>
+          <h2>由全住戶分攤</h2>
+          <ul>
+            <li><b>公共基礎費：</b>380 萬 ÷ 102 戶 ≈ 3.7 萬/戶</li>
+            <li><b>車主另負擔：</b>拉線／電動樁約 5–7 萬/戶</li>
+            <li><b>電費結構：</b>台電電費 + 合約商服務費 + 社區維護費</li>
+          </ul>
+          <p class="muted"><b>優點：</b>最像基礎建設，未來擴充最順。<br><b>挑戰：</b>沒有電動車的住戶可能會覺得不公平。</p>
+        </article>
+        <article class="card">
+          <span class="tag green">方案 B</span>
+          <h2>由申裝戶分攤</h2>
+          <ul>
+            <li><b>公共基礎費：</b>由申請安裝的住戶共同分攤</li>
+            <li>10 戶分攤：38 萬/戶</li>
+            <li>20 戶分攤：19 萬/戶</li>
+            <li>30 戶分攤：12.7 萬/戶</li>
+            <li><b>車主另負擔：</b>5–7 萬/戶</li>
+          </ul>
+          <p class="muted"><b>優點：</b>符合使用者付費。<br><b>挑戰：</b>前期參與人數不夠時，單戶負擔很高。</p>
+        </article>
+        <article class="card">
+          <span class="tag warn">方案 C</span>
+          <h2>由公共基金支付或其他分攤方式</h2>
+          <ul>
+            <li><b>公共基礎費：</b>380 萬可由基金或管委會另訂方式支出</li>
+            <li>例如基金 1,100 萬時，約占 34%；若部分支出，約可降到 17% 等級</li>
+            <li><b>車主另負擔：</b>5–7 萬/戶</li>
+            <li><b>電費結構：</b>台電 + 合約商 + 維護費</li>
+          </ul>
+          <p class="muted"><b>優點：</b>最有機會形成折衷方案。<br><b>挑戰：</b>管委會要評估基金用途與住戶接受度。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <h2>二、三種方案比較</h2>
+      <table class="compare">
+        <thead>
+          <tr><th>比較面向</th><th>方案 A 全住戶分攤</th><th>方案 B 申裝戶分攤</th><th>方案 C 基金／其他方式</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>公平感</b></td><td>偏向公共建設公平</td><td>偏向使用者付費公平</td><td>折衷，需要制度設計</td></tr>
+          <tr><td><b>前期通過難度</b></td><td>高</td><td>中</td><td>中到高</td></tr>
+          <tr><td><b>未來擴充性</b></td><td>最好</td><td>中，需看後續新增戶怎麼納入</td><td>好，但需先講清楚規則</td></tr>
+          <tr><td><b>住戶反彈風險</b></td><td>較高</td><td>較低</td><td>視基金用途說明而定</td></tr>
+          <tr><td><b>對車主負擔</b></td><td>較低</td><td>最高</td><td>中等</td></tr>
+          <tr><td><b>適合情境</b></td><td>社區已有長期共識</td><td>先由少數住戶試辦</td><td>希望兼顧公共利益與使用者負擔</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="suggestion" class="section card">
+      <h2>三、建議推進路線</h2>
+      <div class="steps">
+        <div class="step"><h3>先確認分攤原則</h3><p class="muted">先不要急著定設備品牌，先確認社區比較接受哪一種分攤邏輯：全體、申裝戶、或折衷混合。</p></div>
+        <div class="step"><h3>先做住戶需求調查</h3><p class="muted">統計目前已經有電動車、未來 1–3 年可能換車、可接受的個人負擔區間。</p></div>
+        <div class="step"><h3>請廠商提供 2–3 套報價</h3><p class="muted">至少比較「基礎建設費、車位施工費、電費管理方式、擴充到 10 / 20 / 30 戶的條件」。</p></div>
+        <div class="step"><h3>考慮混合方案</h3><p class="muted">例如：公共基金先支應一部分基礎工程，車主再負擔個別拉線與充電設備，較容易形成共識。</p></div>
+      </div>
+      <div class="callout" style="margin-top:16px">較容易通過的作法通常不是純 A、純 B、純 C，而是：<b>公共基礎建設部分由社區承擔一部分，個別使用部分由車主承擔</b>。</div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="grid grid-2">
+        <div class="card">
+          <h2>四、常見問題</h2>
+          <h3>Q1. 沒有電動車的人，為什麼要分攤？</h3><p class="muted">如果社區認為充電系統屬於未來公共基礎建設，就可能由全體或部分基金支應；如果強調使用者付費，則可採申裝戶或混合方式。</p>
+          <h3>Q2. 電費怎麼算？</h3><p class="muted">通常會包含台電電費、平台或合約商服務費，以及社區的維護管理費。</p>
+          <h3>Q3. 先做少數戶，未來能擴充嗎？</h3><p class="muted">可以，但要在一開始就把線槽、容量、管理制度規劃好，不然後面追加反而更貴。</p>
+        </div>
+        <div class="card">
+          <h2>五、會議可直接使用的結論</h2>
+          <ul>
+            <li>本案不是只討論設備，而是討論社區的長期基礎建設制度。</li>
+            <li>三種方案各有立場，關鍵在於住戶是否接受其分攤邏輯。</li>
+            <li>若要提高通過率，建議優先評估「公共基金 + 車主自付」的混合方案。</li>
+            <li>在正式表決前，最好先完成需求調查與擴充條件比較。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>單頁網站版本｜可再延伸成提案頁、投票頁、FAQ頁或九宮格導覽版</footer>
+  </div>
+</body>
+</html>
