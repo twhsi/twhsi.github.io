@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淚光閃閃｜吉他彈唱教學</title>
+  <style>
+    :root {
+      --bg: #f7efe5;
+      --bg-soft: #fff9f2;
+      --ink: #2d241f;
+      --muted: #6f6157;
+      --accent: #b35c44;
+      --accent-deep: #7f3f2e;
+      --line: rgba(77, 54, 42, 0.12);
+      --card: rgba(255, 249, 242, 0.82);
+      --shadow: 0 24px 70px rgba(86, 53, 35, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(234, 171, 132, 0.35), transparent 32%),
+        radial-gradient(circle at top right, rgba(213, 121, 96, 0.22), transparent 28%),
+        linear-gradient(180deg, #f4eadf 0%, #f7efe5 42%, #fdf7f0 100%);
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.22), transparent 40%),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 38px,
+          rgba(122, 85, 63, 0.025) 38px,
+          rgba(122, 85, 63, 0.025) 39px
+        );
+      opacity: 0.75;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .panel,
+    .card,
+    .lyric-block {
+      border: 1px solid var(--line);
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(179, 92, 68, 0.28), transparent 70%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(179, 92, 68, 0.1);
+      color: var(--accent-deep);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.4rem, 5vw, 4.9rem);
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      margin: 16px 0 20px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 42rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .meta span {
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    .chord-set {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .chord {
+      min-width: 72px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(247, 231, 219, 0.95));
+      border: 1px solid rgba(127, 63, 46, 0.12);
+      text-align: center;
+    }
+
+    .chord strong {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--accent-deep);
+    }
+
+    .pattern {
+      font-family: "Courier New", monospace;
+      padding: 14px 16px;
+      background: #2f221d;
+      color: #fff4ec;
+      border-radius: 18px;
+      letter-spacing: 0.08em;
+      margin-top: 12px;
+      overflow-x: auto;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .steps div {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: rgba(255, 255, 255, 0.58);
+      border-radius: 16px;
+    }
+
+    .lyrics {
+      display: grid;
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .lyric-block {
+      padding: 22px;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--accent-deep);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .line {
+      margin-bottom: 14px;
+    }
+
+    .line:last-child {
+      margin-bottom: 0;
+    }
+
+    .chords-line,
+    .lyrics-line,
+    .reading-line {
+      white-space: pre-wrap;
+      word-break: keep-all;
+    }
+
+    .chords-line {
+      color: var(--accent-deep);
+      font-family: "Courier New", monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    .lyrics-line {
+      font-size: 1.08rem;
+    }
+
+    .reading-line {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .tip-list {
+      margin: 12px 0 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .span-4,
+      .span-6,
+      .span-8,
+      .span-12 {
+        grid-column: auto;
+      }
+
+      .panel,
+      .card,
+      .lyric-block {
+        border-radius: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <article class="panel">
+        <div class="eyebrow">涙そうそう • Guitar Singing Guide</div>
+        <h1>淚光閃閃</h1>
+        <p class="subtitle">
+          這是一頁式的吉他彈唱教學版本，主打「先能唱、再唱穩、最後唱出情感」。
+          我把它整理成簡化和弦、固定刷法、分段歌詞與讀音提示，適合自彈自唱練習。
+        </p>
+        <div class="meta">
+          <span>建議調性：C 大調</span>
+          <span>建議速度：72-76 BPM</span>
+          <span>適合程度：初中階</span>
+          <span>重點：抒情、穩定拍感</span>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <section class="card">
+          <h3>彈唱核心</h3>
+          <p>這首歌不靠複雜技巧，靠的是和弦切換乾淨、句尾留白，以及副歌時的情緒推進。</p>
+        </section>
+        <section class="card">
+          <h3>練習順序</h3>
+          <p>先練主歌兩組和弦循環，再加刷法，最後把副歌的長句唱順。</p>
+        </section>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="card span-4">
+        <h2>常用和弦</h2>
+        <div class="chord-set">
+          <div class="chord"><strong>C</strong><span>x32010</span></div>
+          <div class="chord"><strong>G</strong><span>320003</span></div>
+          <div class="chord"><strong>Am</strong><span>x02210</span></div>
+          <div class="chord"><strong>Em</strong><span>022000</span></div>
+          <div class="chord"><strong>F</strong><span>133211</span></div>
+          <div class="chord"><strong>Dm7</strong><span>xx0211</span></div>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <h2>推薦刷法</h2>
+        <p>用 4/4 拍的抒情刷法，先從簡化版開始。</p>
+        <div class="pattern">Down  Down-Up  Up-Down-Up</div>
+        <ul class="tip-list">
+          <li>主歌刷輕一點，像在陪唱。</li>
+          <li>副歌第一句可以加重第一拍。</li>
+          <li>句尾停半拍，情緒會更漂亮。</li>
+        </ul>
+      </article>
+
+      <article class="card span-4">
+        <h2>三步練會</h2>
+        <div class="steps">
+          <div>先只彈 `C - G - Am - Em`，把切換變流暢。</div>
+          <div>再把 `F - G - C` 接進副歌，注意不要搶拍。</div>
+          <div>最後配著歌詞唱，長句先慢唱再回原速。</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card span-6">
+        <h2>段落編排</h2>
+        <p>
+          主歌可以先維持低動態，到了「涙そうそう」再讓刷弦更完整。
+          如果你想更好唱，前半段甚至可以只刷低音加一下掃弦，會更穩。
+        </p>
+      </article>
+      <article class="card span-6">
+        <h2>演唱提示</h2>
+        <p>
+          日文母音要拉順，像「そうそう」、「あえる」、「おもい」都不要太急收尾。
+          這首歌的感動感來自氣息連續，而不是用力吼。
+        </p>
+      </article>
+    </section>
+
+    <section class="card span-12">
+      <h2>彈唱分段</h2>
+      <p>下面是適合練習的簡化版和弦配置。你可以先照這個版本唱熟，再依自己的音域調整。</p>
+
+      <div class="lyrics">
+        <article class="lyric-block">
+          <span class="section-label">Verse 1</span>
+          <div class="line">
+            <div class="chords-line">C               G          Am         Em</div>
+            <div class="lyrics-line">古いアルバムめくり　ありがとうってつぶやいた</div>
+            <div class="reading-line">ふるい アルバム めくり　ありがとうって つぶやいた</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">F             C          Dm7         G</div>
+            <div class="lyrics-line">いつもいつも　胸の中　励ましてくれる人よ</div>
+            <div class="reading-line">いつも いつも　むね の なか　はげまして くれる ひと よ</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">C             G          Am          Em</div>
+            <div class="lyrics-line">晴れ渡る日も　雨の日も　浮かぶあの笑顔</div>
+            <div class="reading-line">はれわたる ひ も　あめ の ひ も　うかぶ あの えがお</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">F           G           C      Am</div>
+            <div class="lyrics-line">想い出　遠くあせても</div>
+            <div class="reading-line">おもいで　とおく あせても</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">Dm7         G           C</div>
+            <div class="lyrics-line">おもかげ探して　よみがえる日は　涙そうそう</div>
+            <div class="reading-line">おもかげ さがして　よみがえる ひ は　なみだ そうそう</div>
+          </div>
+        </article>
+
+        <article class="lyric-block">
+          <span class="section-label">Verse 2</span>
+          <div class="line">
+            <div class="chords-line">C              G          Am         Em</div>
+            <div class="lyrics-line">一番星に祈る　それが私のくせになり</div>
+            <div class="reading-line">いちばんぼし に いのる　それ が わたし の くせ に なり</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">F             C           Dm7         G</div>
+            <div class="lyrics-line">夕暮れに見上げる空　心いっぱいあなた探す</div>
+            <div class="reading-line">ゆうぐれ に みあげる そら　こころ いっぱい あなた さがす</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">C             G          Am          Em</div>
+            <div class="lyrics-line">悲しみにも　喜びにも　おもうあの笑顔</div>
+            <div class="reading-line">かなしみ に も　よろこび に も　おもう あの えがお</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">F           G           Em        Am</div>
+            <div class="lyrics-line">あなたの場所から私が</div>
+            <div class="reading-line">あなた の ばしょ から わたし が</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">Dm7            G               C</div>
+            <div class="lyrics-line">見えたら　きっといつか　会えると信じ　生きてゆく</div>
+            <div class="reading-line">みえたら　きっと いつか　あえる と しんじ　いきて ゆく</div>
+          </div>
+        </article>
+
+        <article class="lyric-block">
+          <span class="section-label">Final Chorus</span>
+          <div class="line">
+            <div class="chords-line">C             G          Am          Em</div>
+            <div class="lyrics-line">晴れ渡る日も　雨の日も　浮かぶあの笑顔</div>
+            <div class="reading-line">はれわたる ひ も　あめ の ひ も　うかぶ あの えがお</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">F           G           C      Am</div>
+            <div class="lyrics-line">想い出　遠くあせても</div>
+            <div class="reading-line">おもいで　とおく あせても</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">Dm7         G           Em         Am</div>
+            <div class="lyrics-line">さみしくて　恋しくて　君への想い　涙そうそう</div>
+            <div class="reading-line">さみしくて　こいしくて　きみ への おもい　なみだ そうそう</div>
+          </div>
+          <div class="line">
+            <div class="chords-line">Dm7         G           C</div>
+            <div class="lyrics-line">会いたくて　会いたくて　君への想い　涙そうそう</div>
+            <div class="reading-line">あいたくて　あいたくて　きみ への おもい　なみだ そうそう</div>
+          </div>
+        </article>
+      </div>
+
+      <p class="footer-note">
+        練習時如果覺得 F 和弦太卡，可以先用簡化 F（xx3211 或 x33211）過渡，
+        等整首能順唱後再回來補完整按法。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
