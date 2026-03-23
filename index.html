@@ -23,6 +23,10 @@
       --border: rgba(239, 231, 216, 0.12);
       --border-strong: rgba(239, 231, 216, 0.22);
       --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      --card-ink: #fff4e3;
+      --card-muted: rgba(255, 244, 227, 0.78);
+      --card-line: rgba(255, 244, 227, 0.18);
+      --photo-board: url("mandala-diary/assets/vault/06 Assets/images/截圖 2026-01-04 at 10.39.16.png");
     }
 
     body[data-theme="light"] {
@@ -147,14 +151,15 @@
     }
 
     .header-rule::before {
-      content: "九";
+      content: "2026";
       position: absolute;
-      top: -10px;
+      top: -9px;
       right: 0;
       padding: 0 6px;
       background: var(--bg);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 10px;
+      letter-spacing: 1.4px;
     }
 
     .tagline {
@@ -199,116 +204,200 @@
     .grid-9 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      border: 1.5px solid var(--border-strong);
-      border-radius: 8px;
+      gap: 1px;
+      padding: 1px;
+      border: 1px solid var(--border-strong);
+      border-radius: 28px;
       overflow: hidden;
-      background: rgba(0, 0, 0, 0.14);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+        rgba(0, 0, 0, 0.22);
       box-shadow: var(--shadow);
     }
 
     .cell {
+      --glow: rgba(208, 162, 74, 0.18);
+      --cover-position: center;
       position: relative;
-      min-height: 138px;
-      padding: 24px 22px;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--paper), var(--paper-2));
-      color: inherit;
+      aspect-ratio: 1 / 1;
+      min-height: 288px;
+      padding: 20px 20px 18px;
+      color: var(--card-ink);
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      transition: background 0.18s ease, transform 0.18s ease;
+      justify-content: space-between;
+      gap: 16px;
+      overflow: hidden;
+      isolation: isolate;
+      background: rgba(11, 8, 6, 0.92);
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
     }
 
-    .cell:nth-child(3n) { border-right: none; }
-    .cell:nth-child(7),
-    .cell:nth-child(8),
-    .cell:nth-child(9) { border-bottom: none; }
+    .cell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(10, 8, 7, 0.14) 0%, rgba(10, 8, 7, 0.46) 48%, rgba(10, 8, 7, 0.9) 100%),
+        radial-gradient(circle at 18% 18%, var(--glow), transparent 34%),
+        linear-gradient(145deg, rgba(8, 6, 5, 0.08), rgba(8, 6, 5, 0.64)),
+        var(--photo-board);
+      background-repeat: no-repeat;
+      background-size: auto, auto, auto, 300% 300%;
+      background-position: center, center, center, var(--cover-position);
+      filter: saturate(0.94) contrast(1.04) brightness(0.9);
+      transform: scale(1.015);
+      transition: transform 0.45s ease, filter 0.45s ease;
+    }
 
     .cell::after {
-      content: "→";
+      content: "↗";
       position: absolute;
       right: 18px;
-      bottom: 14px;
+      bottom: 16px;
       font-family: "Space Mono", monospace;
       font-size: 11px;
-      color: var(--gold);
+      color: var(--card-ink);
       opacity: 0;
-      transform: translateX(-4px);
+      transform: translate3d(-4px, 4px, 0);
       transition: opacity 0.15s ease, transform 0.15s ease;
+      z-index: 2;
     }
 
     .cell:hover {
-      background: linear-gradient(180deg, var(--paper-2), var(--paper));
-      transform: translateY(-2px);
+      transform: translateY(-4px);
+      box-shadow: inset 0 0 0 1px var(--card-line);
     }
 
     .cell:hover::after {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
 
-    .cell.center {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      cursor: default;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(208, 162, 74, 0.24), transparent 56%),
-        radial-gradient(circle at 70% 70%, rgba(110, 127, 116, 0.18), transparent 56%),
-        linear-gradient(180deg, #1f1a14, #14100c);
+    .cell:hover::before {
+      transform: scale(1.06);
+      filter: saturate(1.02) contrast(1.08) brightness(0.98);
     }
 
-    body[data-theme="light"] .cell.center {
-      background:
-        radial-gradient(circle at 30% 30%, rgba(185, 135, 47, 0.18), transparent 56%),
-        radial-gradient(circle at 70% 70%, rgba(105, 124, 109, 0.14), transparent 56%),
-        linear-gradient(180deg, #e9dfcf, #ddd1be);
+    .cell > * {
+      position: relative;
+      z-index: 1;
     }
 
-    .cell.center::after { display: none; }
+    .cell-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
     .cell-number {
       font-family: "Space Mono", monospace;
+      font-size: 10px;
+      color: rgba(255, 244, 227, 0.74);
+      letter-spacing: 1.2px;
+      opacity: 0.96;
+    }
+
+    .cell-tag {
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 244, 227, 0.12);
+      border-radius: 999px;
+      background: rgba(11, 8, 6, 0.22);
+      backdrop-filter: blur(8px);
+      font-family: "Space Mono", monospace;
       font-size: 9px;
-      color: var(--muted);
-      letter-spacing: 1px;
-      opacity: 0.75;
+      letter-spacing: 1.1px;
+      color: rgba(255, 244, 227, 0.82);
+      text-transform: uppercase;
+    }
+
+    .cell-main,
+    .cell-bottom {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cell-main {
+      gap: 7px;
+      margin-top: auto;
+    }
+
+    .cell-bottom {
+      gap: 8px;
     }
 
     .cell-title {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 0.2px;
-      line-height: 1.2;
+      font-size: clamp(34px, 4.2vw, 62px);
+      font-weight: 700;
+      letter-spacing: -1.8px;
+      line-height: 0.94;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
     }
 
-    .cell.center .cell-title {
-      color: var(--gold-light);
-      font-size: 20px;
-      font-weight: 700;
+    .cell-subtitle {
+      color: rgba(255, 244, 227, 0.84);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 400;
     }
 
     .cell-path {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 244, 227, 0.18);
+      border-radius: 999px;
+      background: rgba(11, 8, 6, 0.28);
+      backdrop-filter: blur(8px);
       font-family: "Space Mono", monospace;
       font-size: 10px;
-      color: var(--gold);
-      letter-spacing: 0.3px;
+      color: rgba(255, 244, 227, 0.92);
+      letter-spacing: 0.4px;
     }
 
-    .cell.center .cell-path {
-      color: rgba(226, 187, 110, 0.68);
+    .cell-year {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 244, 227, 0.18);
+      border-radius: 999px;
+      background: rgba(11, 8, 6, 0.22);
+      backdrop-filter: blur(8px);
+      font-family: "Space Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      color: rgba(255, 244, 227, 0.84);
     }
 
     .cell-desc {
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 11.5px;
+      max-width: 24ch;
+      color: var(--card-muted);
+      font-size: 12px;
       line-height: 1.6;
       font-weight: 300;
     }
+
+    .cell.center .cell-title {
+      font-size: clamp(40px, 4.8vw, 72px);
+    }
+
+    .cell.center .cell-subtitle,
+    .cell.center .cell-desc {
+      max-width: 26ch;
+    }
+
+    .theme-faith { --cover-position: 0% 0%; --glow: rgba(197, 126, 89, 0.28); }
+    .theme-reading { --cover-position: 50% 0%; --glow: rgba(120, 144, 189, 0.24); }
+    .theme-japanese { --cover-position: 100% 0%; --glow: rgba(214, 164, 101, 0.28); }
+    .theme-writing { --cover-position: 0% 50%; --glow: rgba(196, 206, 225, 0.12); }
+    .theme-annual { --cover-position: 50% 50%; --glow: rgba(216, 164, 74, 0.34); }
+    .theme-family { --cover-position: 100% 50%; --glow: rgba(214, 176, 108, 0.24); }
+    .theme-choir { --cover-position: 0% 100%; --glow: rgba(184, 112, 96, 0.24); }
+    .theme-rehab { --cover-position: 50% 100%; --glow: rgba(92, 169, 173, 0.22); }
+    .theme-music { --cover-position: 100% 100%; --glow: rgba(232, 156, 112, 0.24); }
 
     .links-section {
       margin-top: 46px;
@@ -423,6 +512,85 @@
     .links-section { animation: fadeUp 0.6s ease both; animation-delay: 0.44s; }
     footer { animation: fadeUp 0.5s ease both; animation-delay: 0.52s; }
 
+    @media (min-width: 900px) {
+      .wrap {
+        max-width: 1220px;
+        padding: 0 20px;
+      }
+
+      header {
+        padding: 20px 0 0;
+      }
+
+      .site-kicker {
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: clamp(34px, 4.2vw, 58px);
+        line-height: 0.98;
+      }
+
+      .theme-toggle {
+        padding: 8px 12px;
+      }
+
+      .header-rule {
+        margin: 14px 0 10px;
+      }
+
+      .tagline {
+        max-width: 74ch;
+        font-size: 12px;
+        line-height: 1.62;
+      }
+
+      .hero {
+        margin-top: 20px;
+      }
+
+      .section-label {
+        margin-bottom: 10px;
+      }
+
+      .grid-9 {
+        height: clamp(420px, calc(100svh - 210px), 680px);
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+      }
+
+      .cell {
+        aspect-ratio: auto;
+        min-height: 0;
+        padding: 16px 16px 14px;
+        gap: 10px;
+      }
+
+      .cell-title {
+        font-size: clamp(26px, 3.4vw, 52px);
+      }
+
+      .cell.center .cell-title {
+        font-size: clamp(34px, 4vw, 62px);
+      }
+
+      .cell-subtitle {
+        font-size: 12px;
+      }
+
+      .cell-desc {
+        max-width: 28ch;
+        font-size: 10.5px;
+        line-height: 1.45;
+      }
+
+      .cell-tag,
+      .cell-year,
+      .cell-path {
+        padding: 6px 8px;
+        font-size: 9px;
+      }
+    }
+
     @media (max-width: 760px) {
       .wrap { padding: 0 18px; }
       .masthead {
@@ -430,8 +598,10 @@
         align-items: flex-start;
       }
       .grid-9 { grid-template-columns: 1fr; }
-      .cell { border-right: none !important; }
-      .cell:last-child { border-bottom: none !important; }
+      .cell {
+        aspect-ratio: 4 / 3;
+        min-height: 240px;
+      }
       .links-section { grid-template-columns: 1fr; gap: 24px; }
       .footer-inner {
         flex-direction: column;
@@ -446,92 +616,165 @@
     <div class="wrap">
       <div class="masthead">
         <div>
-          <div class="site-kicker">Mandala Grid · 九宮網站</div>
-          <h1>永錫的<br /><em>九宮</em>網站</h1>
+          <div class="site-kicker">Mandala Grid · 2026 Life Map</div>
+          <h1>永錫的<br /><em>2026</em>九宮</h1>
         </div>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切換明暗背景">Light Mode</button>
       </div>
       <hr class="header-rule" />
       <p class="tagline">
-        這裡是整個網站的總入口。<strong>首頁</strong>負責總覽，<strong>系列頁</strong>負責主題展開，<strong>文章頁</strong>負責單篇內容，讓每個九宮主題都能持續往下生長。
+        這裡不只是網站清單，而是 <strong>2026 年的主題地圖</strong>。九宮格先呈現今年最重要的生活面向，再往下進到各自的系列頁與單篇內容，讓主題、行動與記錄慢慢長成同一片網絡。
       </p>
     </div>
   </header>
 
   <div class="wrap">
     <section class="hero">
-      <div class="section-label">九宮格入口</div>
+      <div class="section-label">2026 人生九宮</div>
       <div class="grid-9">
-        <a class="cell" href="/37-paths/">
-          <span class="cell-number">01</span>
-          <span class="cell-title">37道品</span>
-          <span class="cell-path">/37-paths/</span>
-          <span class="cell-desc">佛法與修行主題的九宮入口。</span>
+        <a class="cell theme-faith" href="/37-paths/">
+          <div class="cell-top">
+            <span class="cell-number">01</span>
+            <span class="cell-tag">Faith</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">佛教</span>
+            <span class="cell-subtitle">37道品</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">法會、修行與佛法實踐，整理成可以長期走下去的九宮入口。</span>
+            <span class="cell-path">/37-paths/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/reading-notes/">
-          <span class="cell-number">02</span>
-          <span class="cell-title">讀書心得</span>
-          <span class="cell-path">/reading-notes/</span>
-          <span class="cell-desc">用 Obsidian 與九宮閱讀器整理書籍與筆記。</span>
+        <a class="cell theme-reading" href="/reading-notes/">
+          <div class="cell-top">
+            <span class="cell-number">02</span>
+            <span class="cell-tag">Notes</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">讀書筆記</span>
+            <span class="cell-subtitle">Obsidian 系統</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把讀過的書、卡片盒與重點摘要變成可以回頭使用的知識網。</span>
+            <span class="cell-path">/reading-notes/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/lesson-14/">
-          <span class="cell-number">03</span>
-          <span class="cell-title">日語學習</span>
-          <span class="cell-path">/lesson-14/</span>
-          <span class="cell-desc">大家的日本語第 14 課與練習內容。</span>
+        <a class="cell theme-japanese" href="/lesson-14/">
+          <div class="cell-top">
+            <span class="cell-number">03</span>
+            <span class="cell-tag">Language</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">日文</span>
+            <span class="cell-subtitle">JLPT N5 Pass</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把課程、練習與考試成果放在同一格，讓語言學習看得見進展。</span>
+            <span class="cell-path">/lesson-14/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/third-part/">
-          <span class="cell-number">04</span>
-          <span class="cell-title">第三部</span>
-          <span class="cell-path">/third-part/</span>
-          <span class="cell-desc">九宮、Graph View 與寫書第三部的入口。</span>
+        <a class="cell theme-writing" href="/third-part/">
+          <div class="cell-top">
+            <span class="cell-number">04</span>
+            <span class="cell-tag">Writing</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">寫書</span>
+            <span class="cell-subtitle">第三部工作台</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把第三部、Graph View 與寫作主題整合成一條能持續推進的創作線。</span>
+            <span class="cell-path">/third-part/</span>
+          </div>
         </a>
 
-        <div class="cell center">
-          <span class="cell-number">中心</span>
-          <span class="cell-title">永錫</span>
-          <span class="cell-path">九宮格 × 寫作 × 知識系統</span>
-          <span class="cell-desc">整個網站的核心主題與創作方向。</span>
-        </div>
-
-        <a class="cell" href="/america-trip/">
-          <span class="cell-number">06</span>
-          <span class="cell-title">美國之旅</span>
-          <span class="cell-path">/america-trip/</span>
-          <span class="cell-desc">行前規劃與旅行相關的九宮整理。</span>
+        <a class="cell center theme-annual" href="/mandala-diary/">
+          <div class="cell-top">
+            <span class="cell-number">05</span>
+            <span class="cell-tag">Core</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-year">2026</span>
+            <span class="cell-title">年計劃</span>
+            <span class="cell-subtitle">聚焦・整合・前進</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">用九宮把今年最重要的主題放進同一張地圖，讓每天的行動都有中心。</span>
+            <span class="cell-path">/mandala-diary/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/namida-soso/">
-          <span class="cell-number">07</span>
-          <span class="cell-title">淚光閃閃</span>
-          <span class="cell-path">/namida-soso/</span>
-          <span class="cell-desc">日文歌曲的吉他彈唱教學與分段練習入口。</span>
+        <a class="cell theme-family" href="/america-trip/">
+          <div class="cell-top">
+            <span class="cell-number">06</span>
+            <span class="cell-tag">Family</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">家庭</span>
+            <span class="cell-subtitle">美國之旅</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">旅行不只是行程，而是一起留下的記憶、照片與家庭故事。</span>
+            <span class="cell-path">/america-trip/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/Inception/">
-          <span class="cell-number">08</span>
-          <span class="cell-title">Inception</span>
-          <span class="cell-path">/Inception/</span>
-          <span class="cell-desc">三層九宮魔方與多層次結構實驗。</span>
+        <a class="cell theme-choir" href="/pinyun-choir/">
+          <div class="cell-top">
+            <span class="cell-number">07</span>
+            <span class="cell-tag">Choir</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">合唱團</span>
+            <span class="cell-subtitle">品韻合唱團</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把每週練唱、社區陪伴與舞台演出，放進一個有溫度的群體入口。</span>
+            <span class="cell-path">/pinyun-choir/</span>
+          </div>
         </a>
 
-        <a class="cell" href="/mandala-diary/">
-          <span class="cell-number">09</span>
-          <span class="cell-title">週月計劃</span>
-          <span class="cell-path">/mandala-diary/</span>
-          <span class="cell-desc">週計劃、月計劃與 Local Graph 的入口。</span>
+        <a class="cell theme-rehab" href="/badminton/">
+          <div class="cell-top">
+            <span class="cell-number">08</span>
+            <span class="cell-tag">Recovery</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">網球肘</span>
+            <span class="cell-subtitle">治療・伸展・恢復</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把疼痛管理、復健節奏與重新回到球場的身體修復記錄在一起。</span>
+            <span class="cell-path">/badminton/</span>
+          </div>
+        </a>
+
+        <a class="cell theme-music" href="/namida-soso/">
+          <div class="cell-top">
+            <span class="cell-number">09</span>
+            <span class="cell-tag">Music</span>
+          </div>
+          <div class="cell-main">
+            <span class="cell-title">吉他</span>
+            <span class="cell-subtitle">淚光閃閃</span>
+          </div>
+          <div class="cell-bottom">
+            <span class="cell-desc">把歌聲、彈唱與夜晚的情感記憶留在這一格，成為音樂主題入口。</span>
+            <span class="cell-path">/namida-soso/</span>
+          </div>
         </a>
       </div>
     </section>
 
     <div class="links-section">
       <div class="links-group">
-        <h2>主要系列</h2>
+        <h2>主要主題</h2>
         <a href="/third-part/">
-          <span>第三部｜九宮 × Graph View</span>
+          <span>寫書｜第三部工作台</span>
           <span class="arrow">→</span>
         </a>
         <a href="/completed-books/">
@@ -543,35 +786,55 @@
           <span class="arrow">→</span>
         </a>
         <a href="/reading-notes/">
-          <span>讀書心得｜Obsidian reading-notes</span>
+          <span>讀書筆記｜Obsidian reading-notes</span>
           <span class="arrow">→</span>
         </a>
-        <a href="/pinzhen-people/">
-          <span>品臻邸｜人物關係圖</span>
+        <a href="/37-paths/">
+          <span>佛教｜37道品與修行九宮</span>
           <span class="arrow">→</span>
         </a>
         <a href="/america-trip/">
-          <span>美國之旅｜舊金山行前九宮</span>
+          <span>家庭｜美國之旅與回憶整理</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/pinyun-choir/">
+          <span>合唱團｜練唱與演出入口</span>
           <span class="arrow">→</span>
         </a>
       </div>
 
       <div class="links-group">
-        <h2>更多入口</h2>
-        <a href="/friend_Wang/">
-          <span>friend_Wang｜系列索引（九宮）</span>
+        <h2>工作台與延伸</h2>
+        <a href="/mandala-diary/">
+          <span>年計劃｜週月規劃工作台</span>
           <span class="arrow">→</span>
         </a>
         <a href="/lesson-14/">
-          <span>日語學習｜大家的日本語 第14課</span>
+          <span>日文｜JLPT N5 與課程練習</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/badminton/">
+          <span>網球肘｜復健與恢復記錄</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/namida-soso/">
+          <span>吉他｜淚光閃閃彈唱入口</span>
           <span class="arrow">→</span>
         </a>
         <a href="/friend_Wang/2026-obsidian-seven-weapons/">
           <span>七種兵器之 Obsidian｜王博士直播</span>
           <span class="arrow">→</span>
         </a>
-        <a href="/badminton/">
-          <span>羽毛球｜九宮格入口</span>
+        <a href="/friend_Wang/">
+          <span>friend_Wang｜系列索引（九宮）</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/pinzhen-people/">
+          <span>品臻邸｜人物關係圖</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/Inception/">
+          <span>Inception｜多層次結構實驗</span>
           <span class="arrow">→</span>
         </a>
       </div>
@@ -581,8 +844,8 @@
       <div class="footer-inner">
         <div>
           <p class="footer-note">
-            目前首頁已整理成總站層級，後續新增主題時只要補一個系列首頁，再往下接文章資料夾即可。<br />
-            站點規則：首頁 → 系列首頁 → 單篇文章（每篇文章一個資料夾）。
+            首頁現在先用九個人生主題帶路，再進到各自的系列頁與單篇內容。<br />
+            站點規則仍是：首頁 → 系列首頁 → 單篇文章，尚未完成的主題先保留位置，之後補頁即可接上。
           </p>
           <a class="footer-mini-link" href="/pinyun-choir/">
             品韻合唱團｜招生網站 →
