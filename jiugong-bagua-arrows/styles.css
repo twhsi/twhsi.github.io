@@ -284,6 +284,9 @@ h2 {
 .board-wrap {
   position: relative;
   margin-top: 10px;
+  width: min(100%, 780px);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
   border-radius: 16px;
   padding: 10px;
   border: 1px solid var(--line);
@@ -296,6 +299,8 @@ h2 {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  height: 100%;
   gap: 8px;
   z-index: 1;
 }
@@ -304,7 +309,8 @@ h2 {
   border: 1px solid var(--line-strong);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.68);
-  min-height: 108px;
+  min-height: 0;
+  overflow: hidden;
   padding: 10px;
   cursor: pointer;
   text-align: left;
@@ -355,7 +361,8 @@ h2 {
 }
 
 .board-detail {
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.25;
   color: var(--muted);
 }
 
@@ -590,7 +597,7 @@ h2 {
   }
 
   .board-cell {
-    min-height: 98px;
+    min-height: 0;
   }
 
   .flow-strip {
