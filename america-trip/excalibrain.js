@@ -926,7 +926,7 @@ function renderExcalibrainStatus(note) {
 function renderExcalibrain(note) {
   if (!excalRootEl) return;
   const width = excalRootEl.clientWidth || 340;
-  const height = 540;
+  const height = Math.max(320, Math.round(excalRootEl.clientHeight || 540));
   const sidePad = 10;
   const topPad = 18;
   const bottomPad = 14;
@@ -1054,11 +1054,25 @@ function setupExcalibrainControls() {
   if (!excalFilterEl) return;
   excalFilterEl.addEventListener("input", () => {
     state.excalFilter = excalFilterEl.value.trim().toLowerCase();
-    if (!state.currentPath) return;
-    const note = state.data.notes.find((item) => item.path === state.currentPath);
+    const note = getCurrentNote();
     if (!note) return;
     renderExcalibrain(note);
   });
+}
+
+function getCurrentNote() {
+  if (!state.currentPath) return null;
+  return state.data.notes.find((item) => item.path === state.currentPath) || null;
+}
+
+function rerenderCurrentVisualization() {
+  const note = getCurrentNote();
+  if (!note) return;
+  if (viewMode === "excalibrain") {
+    renderExcalibrain(note);
+    return;
+  }
+  renderGraph(note);
 }
 
 function attachNoteLinkHandlers() {
@@ -1111,6 +1125,14 @@ async function init() {
     renderGraphLegend();
   }
   setupSearch();
+  let resizeFrame = null;
+  window.addEventListener("resize", () => {
+    if (resizeFrame) cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = null;
+      rerenderCurrentVisualization();
+    });
+  });
 
   const requestedPath = decodeURIComponent(location.hash.slice(1));
   const configuredPath =
