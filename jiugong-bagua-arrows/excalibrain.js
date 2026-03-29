@@ -32,7 +32,7 @@
   }
 
   function createRenderer({ rootEl, onNodeClick }) {
-    function render({ currentNodeId, nodeMap, activeRelationTypes, activeFlowEdge }) {
+    function render({ currentNodeId, nodeMap, activeRelationTypes, activeFlowEdge, flowSteps }) {
       if (!rootEl || !nodeMap?.size) return;
 
       const currentRaw = nodeMap.get(currentNodeId) || null;
@@ -90,11 +90,25 @@
         });
       });
 
-      if (activeFlowEdge?.from && activeFlowEdge?.to) {
-        addEdge(String(activeFlowEdge.from), String(activeFlowEdge.to), "flow", true);
-      }
+      (flowSteps || []).forEach((step) => {
+        const isActive = String(step.from) === String(activeFlowEdge?.from || "") && String(step.to) === String(activeFlowEdge?.to || "");
+        addEdge(String(step.from), String(step.to), "flow", isActive);
+      });
 
-      rootEl.innerHTML = `<svg class="excal-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Excalibrain nine-node graph"><g data-links></g><g data-nodes></g></svg>`;
+      rootEl.innerHTML = `
+        <svg class="excal-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Excalibrain nine-node graph">
+          <defs>
+            <marker id="excal-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,6 L6,3 z" fill="rgba(47, 127, 141, 0.8)"></path>
+            </marker>
+            <marker id="excal-arrow-active" markerWidth="10" markerHeight="10" refX="7.5" refY="4" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,8 L8,4 z" fill="rgba(171, 79, 42, 0.98)"></path>
+            </marker>
+          </defs>
+          <g data-links></g>
+          <g data-nodes></g>
+        </svg>
+      `;
       const svg = rootEl.querySelector("svg");
       const linksLayer = svg.querySelector("[data-links]");
       const nodesLayer = svg.querySelector("[data-nodes]");
@@ -113,6 +127,7 @@
         line.setAttribute("y1", String(source.y));
         line.setAttribute("x2", String(target.x));
         line.setAttribute("y2", String(target.y));
+        line.setAttribute("marker-end", edge.active ? "url(#excal-arrow-active)" : "url(#excal-arrow)");
         linksLayer.appendChild(line);
 
         neighborMap.get(edge.source)?.add(edge.target);

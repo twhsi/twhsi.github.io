@@ -540,7 +540,8 @@ h2 {
 }
 
 .excal-link.kind-flow {
-  stroke: rgba(171, 79, 42, 0.95);
+  stroke: rgba(171, 79, 42, 0.52);
+  stroke-opacity: 0.45;
 }
 
 .excal-node {

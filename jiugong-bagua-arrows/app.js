@@ -350,25 +350,16 @@
       };
     };
 
-    const topPoint = (id) => {
-      const node = getNode(id);
-      if (!node || typeof node.row !== "number" || typeof node.col !== "number") return null;
-      return {
-        x: (node.col + 0.5) * 100,
-        y: (node.row + 0.14) * 100,
-      };
-    };
-
     const lines = [];
     const labels = [];
     for (let index = 0; index < steps.length; index += 1) {
       const step = steps[index];
       const source = centerPoint(step.from);
-      const target = topPoint(step.to);
+      const target = centerPoint(step.to);
       if (!source || !target) continue;
       const activeClass = index === state.activeStepIndex ? " active" : "";
       lines.push(`<line class="flow-line${activeClass}" x1="${source.x}" y1="${source.y}" x2="${target.x}" y2="${target.y}" marker-end="url(#arrow-tip)"></line>`);
-      labels.push(`<text class="flow-label" x="${(source.x + target.x) / 2}" y="${(source.y + target.y) / 2 - 3}" text-anchor="middle">${index + 1}</text>`);
+      labels.push(`<text class="flow-label" x="${(source.x + target.x) / 2}" y="${(source.y + target.y) / 2 - 4}" text-anchor="middle">${index + 1}</text>`);
     }
 
     const origin = centerPoint(steps[0].from);
@@ -465,6 +456,7 @@
       nodeMap: state.nodeMap,
       activeRelationTypes: [...state.activeRelations],
       activeFlowEdge: flowStep,
+      flowSteps: state.flowSteps,
     });
   }
 
