@@ -781,14 +781,58 @@ function pickHubPath(note, usedPaths) {
   return null;
 }
 
-function layoutStrip(items, axis, anchor, spacing, centerAlign = true) {
-  if (!items.length) return [];
-  const start = centerAlign ? anchor - ((items.length - 1) * spacing) / 2 : anchor;
-  return items.map((item, index) => {
-    if (axis === "x") {
-      return { ...item, x: start + index * spacing };
+function splitLabelLines(label, maxChars = 16, maxLines = 2) {
+  const source = String(label || "").trim();
+  if (!source) return [""];
+
+  const hasWhitespace = /\s/.test(source);
+  const tokens = hasWhitespace ? source.split(/\s+/) : Array.from(source);
+  const lines = [""];
+
+  for (const token of tokens) {
+    const current = lines[lines.length - 1];
+    const separator = hasWhitespace && current ? " " : "";
+    const candidate = `${current}${separator}${token}`;
+
+    if (candidate.length <= maxChars || !current) {
+      lines[lines.length - 1] = candidate;
+      continue;
     }
-    return { ...item, y: start + index * spacing };
+
+    if (lines.length < maxLines) {
+      lines.push(token);
+      continue;
+    }
+
+    lines[lines.length - 1] = `${current.slice(0, Math.max(0, maxChars - 1))}…`;
+    break;
+  }
+
+  if (lines.length > maxLines) {
+    return lines.slice(0, maxLines);
+  }
+  return lines;
+}
+
+function assignVertical(nodes, centerY, minY, maxY, gap = 12) {
+  if (!nodes.length) return;
+  const total = nodes.reduce((sum, nodeItem) => sum + nodeItem.height, 0) + gap * (nodes.length - 1);
+  const start = Math.max(minY, Math.min(maxY - total, centerY - total / 2));
+  let cursor = start;
+  nodes.forEach((nodeItem) => {
+    nodeItem.y = cursor + nodeItem.height / 2;
+    cursor += nodeItem.height + gap;
+  });
+}
+
+function assignHorizontal(nodes, centerX, minX, maxX, gap = 12) {
+  if (!nodes.length) return;
+  const total = nodes.reduce((sum, nodeItem) => sum + nodeItem.width, 0) + gap * (nodes.length - 1);
+  const start = Math.max(minX, Math.min(maxX - total, centerX - total / 2));
+  let cursor = start;
+  nodes.forEach((nodeItem) => {
+    nodeItem.x = cursor + nodeItem.width / 2;
+    cursor += nodeItem.width + gap;
   });
 }
 
@@ -812,12 +856,17 @@ function buildExcalibrainGraph(note) {
   const createNode = (path, kind) => {
     const target = state.data.notes.find((item) => item.path === path);
     if (!target) return null;
+    const lines = splitLabelLines(target.title, 16, 2);
+    const longest = Math.max(...lines.map((line) => line.length), 6);
+    const lineHeight = 12;
     return {
       id: path,
       label: target.title,
+      lines,
       kind,
-      width: Math.max(92, Math.min(238, target.title.length * 8 + 28)),
-      height: 30,
+      lineHeight,
+      width: Math.max(76, Math.min(172, longest * 6.8 + 18)),
+      height: Math.max(24, Math.min(40, lines.length * lineHeight + 12)),
     };
   };
 
@@ -877,38 +926,53 @@ function renderExcalibrainStatus(note) {
 function renderExcalibrain(note) {
   if (!excalRootEl) return;
   const width = excalRootEl.clientWidth || 340;
-  const height = 560;
-  const centerX = width * 0.53;
-  const centerY = height * 0.62;
+  const height = 540;
+  const sidePad = 10;
+  const topPad = 18;
+  const bottomPad = 14;
+  const centerX = width * 0.52;
+  const centerY = height * 0.59;
   const layout = buildExcalibrainGraph(note);
   const nodeMap = new Map(layout.nodes.map((nodeItem) => [nodeItem.id, nodeItem]));
-
-  layout.buckets.parent.forEach((nodeItem, index) => {
-    nodeItem.x = centerX + (index - (layout.buckets.parent.length - 1) / 2) * 146;
-    nodeItem.y = Math.max(86, centerY - 150);
-  });
-  layout.buckets.child.forEach((nodeItem, index) => {
-    nodeItem.x = centerX + (index - (layout.buckets.child.length - 1) / 2) * 146;
-    nodeItem.y = Math.min(height - 64, centerY + 92);
-  });
-  layout.buckets.prev.forEach((nodeItem, index) => {
-    nodeItem.x = Math.max(102, centerX - 168);
-    nodeItem.y = centerY - 20 + (index - (layout.buckets.prev.length - 1) / 2) * 84;
-  });
-  layout.buckets.next.forEach((nodeItem, index) => {
-    nodeItem.x = Math.min(width - 106, centerX + 170);
-    nodeItem.y = centerY - 40 + (index - (layout.buckets.next.length - 1) / 2) * 58;
-  });
-  layout.buckets.hub.forEach((nodeItem) => {
-    nodeItem.x = Math.max(96, centerX - 172);
-    nodeItem.y = Math.min(height - 86, centerY + 10);
-  });
 
   const center = nodeMap.get(note.path);
   if (center) {
     center.x = centerX;
     center.y = centerY;
   }
+
+  const parentY = Math.max(topPad + 18, centerY - 165);
+  const childY = Math.min(height - bottomPad - 18, centerY + 108);
+  assignHorizontal(layout.buckets.parent, centerX, sidePad + 6, width - sidePad - 6, 12);
+  layout.buckets.parent.forEach((nodeItem) => {
+    nodeItem.y = parentY;
+  });
+  assignHorizontal(layout.buckets.child, centerX, sidePad + 6, width - sidePad - 6, 12);
+  layout.buckets.child.forEach((nodeItem) => {
+    nodeItem.y = childY;
+  });
+
+  layout.buckets.prev.forEach((nodeItem) => {
+    nodeItem.x = sidePad + nodeItem.width / 2 + 2;
+  });
+  assignVertical(layout.buckets.prev, centerY - 20, topPad + 44, height - bottomPad - 84, 14);
+
+  layout.buckets.next.forEach((nodeItem) => {
+    nodeItem.x = width - sidePad - nodeItem.width / 2 - 2;
+  });
+  assignVertical(layout.buckets.next, centerY - 10, topPad + 54, height - bottomPad - 66, 12);
+
+  const prevBottom = layout.buckets.prev.reduce(
+    (maxValue, nodeItem) => Math.max(maxValue, nodeItem.y + nodeItem.height / 2),
+    centerY - 18,
+  );
+  layout.buckets.hub.forEach((nodeItem) => {
+    nodeItem.x = sidePad + nodeItem.width / 2 + 4;
+    nodeItem.y = Math.min(height - bottomPad - nodeItem.height / 2, prevBottom + 18 + nodeItem.height / 2);
+    if (Math.abs(nodeItem.y - centerY) < nodeItem.height) {
+      nodeItem.y = Math.min(height - bottomPad - nodeItem.height / 2, centerY + nodeItem.height + 24);
+    }
+  });
 
   excalRootEl.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Excalibrain relation view">
@@ -953,9 +1017,14 @@ function renderExcalibrain(note) {
     rect.setAttribute("ry", "8");
 
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    text.setAttribute("x", "10");
-    text.setAttribute("y", "20");
-    text.textContent = nodeItem.label.length > 24 ? `${nodeItem.label.slice(0, 24)}…` : nodeItem.label;
+    const textTop = (nodeItem.height - nodeItem.lines.length * nodeItem.lineHeight) / 2 + nodeItem.lineHeight - 1;
+    nodeItem.lines.forEach((line, lineIndex) => {
+      const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+      tspan.setAttribute("x", "8");
+      tspan.setAttribute("y", String(textTop + lineIndex * nodeItem.lineHeight));
+      tspan.textContent = line;
+      text.appendChild(tspan);
+    });
 
     group.append(rect, text);
     group.addEventListener("click", () => navigateTo(nodeItem.id));

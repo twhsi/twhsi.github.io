@@ -612,14 +612,14 @@ body[data-view-mode="excalibrain"] .inspector {
 }
 
 body[data-view-mode="excalibrain"] .excal-panel {
-  background: linear-gradient(180deg, rgba(40, 65, 145, 0.96), rgba(27, 45, 112, 0.96));
-  border-color: rgba(187, 203, 255, 0.3);
+  background: var(--bg-panel);
+  border-color: var(--line);
   padding: 14px;
 }
 
 body[data-view-mode="excalibrain"] .excal-panel .eyebrow,
 body[data-view-mode="excalibrain"] .excal-panel h3 {
-  color: #dbe7ff;
+  color: var(--text);
 }
 
 .excal-controls {
@@ -631,11 +631,12 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 #excal-filter {
   width: 100%;
-  background: rgba(15, 23, 54, 0.75);
-  color: #eaf1ff;
-  border: 1px solid rgba(214, 224, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 8px 10px;
+  padding: 7px 9px;
+  font-size: 12px;
   outline: none;
 }
 
@@ -646,37 +647,40 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-toolbar button {
-  border: 1px solid rgba(195, 207, 250, 0.34);
+  border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 12px;
+  padding: 2px 7px;
+  font-size: 11px;
   line-height: 1.2;
-  color: #ebf2ff;
-  background: rgba(11, 21, 56, 0.68);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .excal-root {
-  min-height: 560px;
-  border-radius: 10px;
-  border: 1px solid rgba(176, 194, 252, 0.32);
-  background: linear-gradient(180deg, #20367d 0%, #20316d 100%);
+  min-height: 540px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 52% 36%, rgba(255, 77, 87, 0.1), transparent 36%),
+    radial-gradient(circle at 18% 76%, rgba(255, 140, 66, 0.08), transparent 40%),
+    rgba(7, 11, 18, 0.38);
   overflow: hidden;
 }
 
 .excal-root svg {
   width: 100%;
-  height: 560px;
+  height: 540px;
   display: block;
 }
 
 .excal-link {
-  stroke: rgba(190, 206, 255, 0.42);
-  stroke-width: 1.1;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
 }
 
 .excal-link.kind-hub {
   stroke-dasharray: 4 3;
-  stroke: rgba(240, 249, 255, 0.45);
+  stroke: rgba(255, 140, 66, 0.45);
 }
 
 .excal-node {
@@ -685,38 +689,39 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-node rect {
-  fill: #182a60;
-  stroke: rgba(207, 224, 255, 0.38);
-  stroke-width: 1.1;
+  fill: rgba(17, 21, 29, 0.9);
+  stroke: var(--line-strong);
+  stroke-width: 1;
 }
 
 .excal-node text {
-  fill: #ebf2ff;
-  font-family: "Menlo", "SF Mono", monospace;
-  font-size: 12px;
+  fill: var(--text);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
   pointer-events: none;
   letter-spacing: 0.01em;
 }
 
 .excal-node.kind-current rect {
-  fill: #cfd5df;
-  stroke: rgba(255, 255, 255, 0.88);
+  fill: var(--accent-soft);
+  stroke: rgba(255, 77, 87, 0.45);
 }
 
 .excal-node.kind-current text {
-  fill: #2a3038;
+  fill: var(--text);
   font-weight: 700;
 }
 
 .excal-node.kind-hub rect {
-  fill: #1a2f6a;
-  stroke: rgba(255, 197, 197, 0.65);
+  fill: rgba(255, 140, 66, 0.12);
+  stroke: rgba(255, 140, 66, 0.56);
 }
 
 .excal-status {
   margin-top: 10px;
-  color: rgba(237, 244, 255, 0.9);
-  font-size: 12px;
+  color: var(--muted);
+  font-size: 11px;
   letter-spacing: 0.02em;
 }
 
