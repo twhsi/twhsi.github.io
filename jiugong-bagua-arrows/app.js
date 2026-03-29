@@ -239,41 +239,24 @@
   function renderFileList() {
     const current = getNode(state.currentNodeId);
     fileListEl.innerHTML = "";
+    fileListEl.classList.add("nine-grid");
 
     const flattenedGrid = (state.data?.coreGrid || []).flat();
     flattenedGrid.forEach((id) => {
       const coreNode = getNode(id);
       if (!coreNode) return;
 
-      const groupEl = document.createElement("section");
-      groupEl.className = "file-group";
-
       const coreButton = document.createElement("button");
       const activeCore = current?.id === coreNode.id || current?.parentId === coreNode.id;
       coreButton.type = "button";
-      coreButton.className = `file-item core${activeCore ? " active" : ""}`;
+      coreButton.className = `file-item core nine-cell${activeCore ? " active" : ""}`;
       coreButton.innerHTML = `
-        <span>${escapeHtml(coreNode.filePath || `${coreNode.id}.md`)}</span>
-        <span class="file-meta">${escapeHtml(coreNode.title)}</span>
+        <span class="nine-num">${escapeHtml(String(coreNode.number))}</span>
+        <span class="nine-trigram">${escapeHtml(coreNode.trigram || "")}</span>
+        <span class="nine-id">${escapeHtml(coreNode.positionLabel || "")}</span>
       `;
       coreButton.addEventListener("click", () => setCurrentNode(coreNode.id));
-      groupEl.appendChild(coreButton);
-
-      (coreNode.children || []).forEach((childId) => {
-        const childNode = getNode(childId);
-        if (!childNode) return;
-        const childButton = document.createElement("button");
-        childButton.type = "button";
-        childButton.className = `file-item child${current?.id === childNode.id ? " active" : ""}`;
-        childButton.innerHTML = `
-          <span>${escapeHtml(childNode.filePath || `${childNode.id}.md`)}</span>
-          <span class="file-meta">${escapeHtml(childNode.title)}</span>
-        `;
-        childButton.addEventListener("click", () => setCurrentNode(childNode.id));
-        groupEl.appendChild(childButton);
-      });
-
-      fileListEl.appendChild(groupEl);
+      fileListEl.appendChild(coreButton);
     });
   }
 
