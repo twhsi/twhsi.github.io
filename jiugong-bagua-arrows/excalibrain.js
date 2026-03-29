@@ -1,16 +1,13 @@
 (() => {
   const SVG_NS = "http://www.w3.org/2000/svg";
-  const SLOT_SEQUENCE = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
-  const SLOT_VECTOR = {
-    N: [0, -1],
-    NE: [0.74, -0.74],
-    E: [1, 0],
-    SE: [0.74, 0.74],
-    S: [0, 1],
-    SW: [-0.74, 0.74],
-    W: [-1, 0],
-    NW: [-0.74, -0.74],
-  };
+  const GRID_UNIT_PERCENT = 100 / 6;
+
+  function gridCenterPercent(row, col) {
+    return {
+      x: (2 * Number(col) + 1) * GRID_UNIT_PERCENT,
+      y: (2 * Number(row) + 1) * GRID_UNIT_PERCENT,
+    };
+  }
 
   function uniqueById(nodes) {
     return [...new Map(nodes.filter(Boolean).map((node) => [node.id, node])).values()];
@@ -48,18 +45,15 @@
 
       const width = rootEl.clientWidth || 420;
       const height = rootEl.clientHeight || 540;
-      const padX = Math.max(62, width * 0.14);
-      const padY = Math.max(58, height * 0.14);
-      const stepX = (width - padX * 2) / 2;
-      const stepY = (height - padY * 2) / 2;
 
       const placements = new Map();
       coreNodes.forEach((node) => {
         const row = Number.isFinite(node.row) ? node.row : 1;
         const col = Number.isFinite(node.col) ? node.col : 1;
+        const centerPercent = gridCenterPercent(row, col);
         placements.set(node.id, {
-          x: padX + col * stepX,
-          y: padY + row * stepY,
+          x: (centerPercent.x / 100) * width,
+          y: (centerPercent.y / 100) * height,
         });
       });
 

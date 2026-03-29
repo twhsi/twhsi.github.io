@@ -37,6 +37,20 @@
     excalRenderer: null,
   };
 
+  const GRID_UNIT_PERCENT = 100 / 6;
+  const ARROW_VIEW_SIZE = 300;
+
+  function gridCenterPercent(row, col) {
+    return {
+      x: (2 * Number(col) + 1) * GRID_UNIT_PERCENT,
+      y: (2 * Number(row) + 1) * GRID_UNIT_PERCENT,
+    };
+  }
+
+  function percentToArrowCoord(percent) {
+    return (Number(percent) / 100) * ARROW_VIEW_SIZE;
+  }
+
   function escapeHtml(value) {
     return String(value || "")
       .replaceAll("&", "&amp;")
@@ -328,47 +342,54 @@
 
   function renderArrowLayer() {
     const steps = state.flowSteps || [];
-    const coreNodes = (state.data?.coreGrid || []).flat().map((id) => getNode(id)).filter(Boolean);
-    if (!steps.length || !coreNodes.length) {
+    if (!steps.length) {
       arrowLayerEl.innerHTML = "";
       return;
     }
 
     const defs = `
       <defs>
-        <marker id="arrow-tip" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <marker id="arrow-tip" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
           <path d="M0,0 L0,6 L6,3 z" fill="rgba(47, 127, 141, 0.86)"></path>
         </marker>
       </defs>
     `;
 
-    const svgRect = arrowLayerEl.getBoundingClientRect();
-    const pointMap = new Map();
-    boardGridEl.querySelectorAll(".board-cell").forEach((cell) => {
-      const nodeId = cell.dataset.nodeId;
-      if (!nodeId) return;
-      const rect = cell.getBoundingClientRect();
-      if (!svgRect.width || !svgRect.height) return;
-      pointMap.set(nodeId, {
-        x: ((rect.left + rect.width / 2 - svgRect.left) / svgRect.width) * 300,
-        y: ((rect.top + rect.height / 2 - svgRect.top) / svgRect.height) * 300,
-      });
-    });
+    const percentPoint = (id) => {
+      const node = getNode(id);
+      if (!node || !Number.isFinite(node.row) || !Number.isFinite(node.col)) return null;
+      return gridCenterPercent(node.row, node.col);
+    };
 
     const lines = [];
     const labels = [];
     for (let index = 0; index < steps.length; index += 1) {
       const step = steps[index];
-      const source = pointMap.get(step.from);
-      const target = pointMap.get(step.to);
+      const sourcePercent = percentPoint(step.from);
+      const targetPercent = percentPoint(step.to);
+      if (!sourcePercent || !targetPercent) continue;
+      const source = {
+        x: percentToArrowCoord(sourcePercent.x),
+        y: percentToArrowCoord(sourcePercent.y),
+      };
+      const target = {
+        x: percentToArrowCoord(targetPercent.x),
+        y: percentToArrowCoord(targetPercent.y),
+      };
       if (!source || !target) continue;
       const activeClass = index === state.activeStepIndex ? " active" : "";
       lines.push(`<line class="flow-line${activeClass}" x1="${source.x}" y1="${source.y}" x2="${target.x}" y2="${target.y}" marker-end="url(#arrow-tip)"></line>`);
       labels.push(`<text class="flow-label" x="${(source.x + target.x) / 2}" y="${(source.y + target.y) / 2 - 4}" text-anchor="middle">${index + 1}</text>`);
     }
 
-    const origin = pointMap.get(steps[0].from);
-    const originDot = origin ? `<circle class="origin" cx="${origin.x}" cy="${origin.y}" r="3"></circle>` : "";
+    const originPercent = percentPoint(steps[0].from);
+    const origin = originPercent
+      ? {
+          x: percentToArrowCoord(originPercent.x),
+          y: percentToArrowCoord(originPercent.y),
+        }
+      : null;
+    const originDot = origin ? `<circle class="origin" cx="${origin.x}" cy="${origin.y}" r="2.4"></circle>` : "";
     arrowLayerEl.innerHTML = `${defs}${lines.join("")}${labels.join("")}${originDot}`;
   }
 
