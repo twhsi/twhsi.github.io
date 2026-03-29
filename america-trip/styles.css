@@ -624,7 +624,7 @@ body[data-view-mode="excalibrain"] .inspector {
   display: block;
   padding: 10px 12px;
   background: var(--bg-canvas);
-  border-left: 1px solid color-mix(in srgb, var(--handle-light) 26%, transparent);
+  border-left: 1px solid rgba(244, 247, 250, 0.26);
 }
 
 body[data-view-mode="excalibrain"] .shell {
@@ -632,8 +632,8 @@ body[data-view-mode="excalibrain"] .shell {
 }
 
 body[data-view-mode="excalibrain"] .excal-panel {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-toolbar) 88%, black 12%) 0%, var(--bg-toolbar) 100%);
-  border-color: color-mix(in srgb, var(--handle-light) 28%, transparent);
+  background: linear-gradient(180deg, #2a3250 0%, var(--bg-toolbar) 100%);
+  border-color: rgba(244, 247, 250, 0.28);
   padding: 10px;
   border-radius: 14px;
 }
@@ -652,9 +652,9 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 #excal-filter {
   width: 100%;
-  background: color-mix(in srgb, var(--bg-toolbar) 85%, black 15%);
+  background: #252e4b;
   color: var(--text-primary);
-  border: 1px solid color-mix(in srgb, var(--edge-line) 60%, var(--handle-light) 40%);
+  border: 1px solid rgba(94, 108, 130, 0.85);
   border-radius: 8px;
   padding: 7px 10px;
   font-size: 12px;
@@ -668,19 +668,19 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-toolbar button {
-  border: 1px solid color-mix(in srgb, var(--edge-line) 55%, var(--handle-light) 45%);
+  border: 1px solid rgba(94, 108, 130, 0.9);
   border-radius: 6px;
   padding: 2px 7px;
   font-size: 11px;
   line-height: 1.2;
   color: var(--text-primary);
-  background: color-mix(in srgb, var(--node-primary) 92%, black 8%);
+  background: var(--node-primary);
 }
 
 .excal-root {
   min-height: min(640px, calc(100vh - 188px));
   border-radius: 10px;
-  border: 1px solid color-mix(in srgb, var(--handle-light) 24%, transparent);
+  border: 1px solid rgba(244, 247, 250, 0.24);
   background: linear-gradient(180deg, var(--bg-canvas) 0%, var(--bg-canvas) 100%);
   overflow: hidden;
 }
@@ -700,7 +700,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 .excal-link.kind-hub {
   stroke-dasharray: 4 3;
-  stroke: color-mix(in srgb, var(--edge-line) 65%, var(--handle-light) 35%);
+  stroke: #7b8da8;
 }
 
 .excal-node {
@@ -710,7 +710,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 .excal-node rect {
   fill: var(--node-secondary);
-  stroke: color-mix(in srgb, var(--node-primary) 45%, var(--handle-light) 55%);
+  stroke: #7f8997;
   stroke-width: 1;
 }
 
@@ -725,7 +725,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 .excal-node.kind-current rect {
   fill: var(--node-primary);
-  stroke: color-mix(in srgb, var(--handle-light) 78%, var(--edge-line) 22%);
+  stroke: rgba(244, 247, 250, 0.86);
 }
 
 .excal-node.kind-current text {
@@ -735,7 +735,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 
 .excal-node.kind-hub rect {
   fill: var(--node-primary);
-  stroke: color-mix(in srgb, var(--handle-light) 68%, var(--edge-line) 32%);
+  stroke: #9eabbf;
 }
 
 .excal-node.kind-hub text {
