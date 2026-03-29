@@ -15,6 +15,7 @@
   const focusTagNumberEl = document.getElementById("focus-tag-number");
   const focusTagTrigramEl = document.getElementById("focus-tag-trigram");
   const focusTagDirectionEl = document.getElementById("focus-tag-direction");
+  const flowStripEl = document.getElementById("flow-strip");
   const boardGridEl = document.getElementById("board-grid");
   const arrowLayerEl = document.getElementById("arrow-layer");
   const readerFileEl = document.getElementById("reader-file");
@@ -30,6 +31,9 @@
     sectionMap: new Map(),
     currentNodeId: null,
     activeRelations: new Set(),
+    flowSteps: [],
+    activeStepIndex: 0,
+    flowTimer: null,
     excalRenderer: null,
   };
 
@@ -152,9 +156,36 @@
     return node.id;
   }
 
+  function getCurrentCoreId() {
+    const node = getNode(state.currentNodeId);
+    if (!node) return null;
+    return node.kind === "child" ? node.parentId : node.id;
+  }
+
+  function buildFlowSteps() {
+    const sequence = state.data?.arrowSequence || [];
+    const steps = [];
+    for (let index = 0; index < sequence.length - 1; index += 1) {
+      steps.push({
+        index,
+        from: String(sequence[index]),
+        to: String(sequence[index + 1]),
+      });
+    }
+    return steps;
+  }
+
+  function syncActiveStepToCore(coreId) {
+    const stepIndex = state.flowSteps.findIndex((step) => step.from === coreId);
+    if (stepIndex >= 0) {
+      state.activeStepIndex = stepIndex;
+    }
+  }
+
   function setCurrentNode(nodeId) {
     if (!state.nodeMap.has(nodeId)) return;
     state.currentNodeId = nodeId;
+    syncActiveStepToCore(getCurrentCoreId());
     location.hash = encodeURIComponent(nodeId);
     renderAll();
   }
@@ -222,9 +253,44 @@
     });
   }
 
+  function renderFlowStrip() {
+    if (!flowStripEl) return;
+    flowStripEl.innerHTML = "";
+    const flatGrid = (state.data?.coreGrid || []).flat();
+
+    state.flowSteps.forEach((step, stepIndex) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `flow-step${stepIndex === state.activeStepIndex ? " active" : ""}`;
+      button.innerHTML = `
+        <span class="flow-step-title">${stepIndex + 1}. ${escapeHtml(step.from)}→${escapeHtml(step.to)}</span>
+        <span class="flow-mini">
+          ${flatGrid
+            .map((cellId) => {
+              const classes = [
+                "flow-dot",
+                cellId === step.from ? "from" : "",
+                cellId === step.to ? "to" : "",
+              ]
+                .filter(Boolean)
+                .join(" ");
+              return `<span class="${classes}"></span>`;
+            })
+            .join("")}
+        </span>
+      `;
+      button.addEventListener("click", () => {
+        state.activeStepIndex = stepIndex;
+        setCurrentNode(step.from);
+      });
+      flowStripEl.appendChild(button);
+    });
+  }
+
   function renderBoard() {
     const current = getNode(state.currentNodeId);
     const activeCoreId = current?.kind === "child" ? current.parentId : current?.id;
+    const flowStep = state.flowSteps[state.activeStepIndex] || null;
     const currentRelationIds = new Set();
 
     (state.data?.relationTypes || []).forEach((type) => {
@@ -245,7 +311,9 @@
       button.type = "button";
       const isActive = node.id === activeCoreId;
       const isRelated = currentRelationIds.has(node.id);
-      button.className = `board-cell${isActive ? " active" : ""}${isRelated && !isActive ? " related" : ""}`;
+      const isFlowFrom = flowStep && flowStep.from === node.id;
+      const isFlowTo = flowStep && flowStep.to === node.id;
+      button.className = `board-cell${isActive ? " active" : ""}${isRelated && !isActive ? " related" : ""}${isFlowFrom ? " flow-from" : ""}${isFlowTo ? " flow-to" : ""}`;
       button.innerHTML = `
         <span class="board-num">${escapeHtml(String(node.number))}</span>
         <span class="board-trigram">${escapeHtml(node.trigram || "")}</span>
@@ -258,9 +326,9 @@
   }
 
   function renderArrowLayer() {
-    const sequence = state.data?.arrowSequence || [];
+    const steps = state.flowSteps || [];
     const coreNodes = (state.data?.coreGrid || []).flat().map((id) => getNode(id)).filter(Boolean);
-    if (!sequence.length || !coreNodes.length) {
+    if (!steps.length || !coreNodes.length) {
       arrowLayerEl.innerHTML = "";
       return;
     }
@@ -273,7 +341,7 @@
       </defs>
     `;
 
-    const toPoint = (id) => {
+    const centerPoint = (id) => {
       const node = getNode(id);
       if (!node || typeof node.row !== "number" || typeof node.col !== "number") return null;
       return {
@@ -282,17 +350,30 @@
       };
     };
 
+    const topPoint = (id) => {
+      const node = getNode(id);
+      if (!node || typeof node.row !== "number" || typeof node.col !== "number") return null;
+      return {
+        x: (node.col + 0.5) * 100,
+        y: (node.row + 0.14) * 100,
+      };
+    };
+
     const lines = [];
-    for (let index = 0; index < sequence.length - 1; index += 1) {
-      const source = toPoint(sequence[index]);
-      const target = toPoint(sequence[index + 1]);
+    const labels = [];
+    for (let index = 0; index < steps.length; index += 1) {
+      const step = steps[index];
+      const source = centerPoint(step.from);
+      const target = topPoint(step.to);
       if (!source || !target) continue;
-      lines.push(`<line x1="${source.x}" y1="${source.y}" x2="${target.x}" y2="${target.y}" marker-end="url(#arrow-tip)"></line>`);
+      const activeClass = index === state.activeStepIndex ? " active" : "";
+      lines.push(`<line class="flow-line${activeClass}" x1="${source.x}" y1="${source.y}" x2="${target.x}" y2="${target.y}" marker-end="url(#arrow-tip)"></line>`);
+      labels.push(`<text class="flow-label" x="${(source.x + target.x) / 2}" y="${(source.y + target.y) / 2 - 3}" text-anchor="middle">${index + 1}</text>`);
     }
 
-    const origin = toPoint(sequence[0]);
+    const origin = centerPoint(steps[0].from);
     const originDot = origin ? `<circle class="origin" cx="${origin.x}" cy="${origin.y}" r="3"></circle>` : "";
-    arrowLayerEl.innerHTML = `${defs}${lines.join("")}${originDot}`;
+    arrowLayerEl.innerHTML = `${defs}${lines.join("")}${labels.join("")}${originDot}`;
   }
 
   function renderRelationSummary(node) {
@@ -364,6 +445,8 @@
   function renderExcalibrain() {
     const node = getNode(state.currentNodeId);
     if (!node || !state.excalRenderer) return;
+    const currentCoreId = getCurrentCoreId();
+    const flowStep = state.flowSteps[state.activeStepIndex] || null;
 
     const summary = [];
     ["next", "previous", "opposite"].forEach((type) => {
@@ -374,13 +457,14 @@
       }
     });
     excalCaptionEl.textContent = summary.length
-      ? `焦點 ${formatNodeName(node)} ｜ ${summary.join(" ｜ ")}`
-      : `焦點 ${formatNodeName(node)}`;
+      ? `焦點 ${formatNodeName(getNode(currentCoreId) || node)} ｜ ${summary.join(" ｜ ")} ｜ flow ${flowStep?.from || "-"}→${flowStep?.to || "-"}`
+      : `焦點 ${formatNodeName(getNode(currentCoreId) || node)} ｜ flow ${flowStep?.from || "-"}→${flowStep?.to || "-"}`;
 
     state.excalRenderer.render({
-      currentNodeId: node.id,
+      currentNodeId: currentCoreId || node.id,
       nodeMap: state.nodeMap,
       activeRelationTypes: [...state.activeRelations],
+      activeFlowEdge: flowStep,
     });
   }
 
@@ -388,10 +472,27 @@
     renderFocusHeader();
     renderFileList();
     renderFilters();
+    renderFlowStrip();
     renderBoard();
     renderArrowLayer();
     renderReader();
     renderExcalibrain();
+  }
+
+  function startFlowMotion() {
+    if (state.flowTimer) {
+      clearInterval(state.flowTimer);
+      state.flowTimer = null;
+    }
+    if (!state.flowSteps.length) return;
+
+    state.flowTimer = setInterval(() => {
+      state.activeStepIndex = (state.activeStepIndex + 1) % state.flowSteps.length;
+      renderFlowStrip();
+      renderBoard();
+      renderArrowLayer();
+      renderExcalibrain();
+    }, 1800);
   }
 
   async function loadData() {
@@ -407,6 +508,7 @@
 
     state.nodeMap = new Map((state.data.nodes || []).map((node) => [node.id, node]));
     state.sectionMap = new Map((state.data.sections || []).map((section) => [section.id, section]));
+    state.flowSteps = buildFlowSteps();
 
     const allRelations = state.data.relationTypes || ["next", "previous", "opposite", "center", "adjacent", "jump"];
     state.activeRelations = new Set(allRelations);
@@ -431,10 +533,14 @@
       ? hashId
       : state.data.featuredNodeId || state.data?.coreGrid?.[1]?.[1] || "5";
     state.currentNodeId = firstNode;
+    syncActiveStepToCore(getCurrentCoreId());
 
     renderAll();
+    startFlowMotion();
 
     window.addEventListener("resize", () => {
+      renderFlowStrip();
+      renderBoard();
       renderArrowLayer();
       renderExcalibrain();
     });
