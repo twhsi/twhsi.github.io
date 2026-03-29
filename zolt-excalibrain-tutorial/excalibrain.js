@@ -964,12 +964,14 @@ function renderExcalibrainStatus(note) {
 function renderExcalibrain(note) {
   if (!excalRootEl) return;
   const width = excalRootEl.clientWidth || 340;
-  const height = 540;
+  const measuredHeight = excalRootEl.clientHeight;
+  const fallbackHeight = isMobileViewport() ? 320 : 540;
+  const height = Math.max(220, measuredHeight || fallbackHeight);
   const sidePad = 10;
-  const topPad = 18;
-  const bottomPad = 14;
+  const topPad = height < 360 ? 12 : 18;
+  const bottomPad = height < 360 ? 10 : 14;
   const centerX = width * 0.52;
-  const centerY = height * 0.58;
+  const centerY = height * (isMobileViewport() ? 0.55 : 0.58);
   const layout = buildExcalibrainGraph(note);
   const nodeMap = new Map(layout.nodes.map((nodeItem) => [nodeItem.id, nodeItem]));
 
@@ -979,8 +981,8 @@ function renderExcalibrain(note) {
     center.y = centerY;
   }
 
-  const parentY = Math.max(topPad + 22, centerY - 172);
-  const childY = Math.min(height - bottomPad - 20, centerY + 120);
+  const parentY = Math.max(topPad + 18, centerY - Math.max(95, height * 0.31));
+  const childY = Math.min(height - bottomPad - 18, centerY + Math.max(70, height * 0.23));
   assignHorizontal(layout.buckets.parent, centerX, sidePad + 6, width - sidePad - 6, 12);
   layout.buckets.parent.forEach((nodeItem) => {
     nodeItem.y = parentY;
@@ -993,12 +995,12 @@ function renderExcalibrain(note) {
   layout.buckets.prev.forEach((nodeItem) => {
     nodeItem.x = sidePad + nodeItem.width / 2 + 2;
   });
-  assignVertical(layout.buckets.prev, centerY - 20, topPad + 44, height - bottomPad - 84, 14);
+  assignVertical(layout.buckets.prev, centerY - 16, topPad + 30, height - bottomPad - 52, 12);
 
   layout.buckets.next.forEach((nodeItem) => {
     nodeItem.x = width - sidePad - nodeItem.width / 2 - 2;
   });
-  assignVertical(layout.buckets.next, centerY - 10, topPad + 54, height - bottomPad - 66, 12);
+  assignVertical(layout.buckets.next, centerY - 10, topPad + 30, height - bottomPad - 52, 12);
 
   assignCompassRing(layout.buckets.compass, centerX, centerY - 6, width, height, sidePad + 10, topPad + 28, bottomPad + 28);
 
@@ -1051,14 +1053,15 @@ function renderExcalibrain(note) {
   drawGuide(sidePad + 50, topPad + 18, sidePad + 50, height - bottomPad - 18, "Prev", sidePad + 26, topPad + 14);
   drawGuide(width - sidePad - 50, topPad + 18, width - sidePad - 50, height - bottomPad - 18, "Next", width - sidePad - 74, topPad + 14);
   if (layout.buckets.compass.length) {
+    const compassGuideY = Math.max(topPad + 22, centerY - Math.max(84, height * 0.22));
     drawGuide(
       centerX - 80,
-      centerY - 122,
+      compassGuideY,
       centerX + 80,
-      centerY - 122,
+      compassGuideY,
       "Compass",
       centerX - 28,
-      centerY - 130,
+      compassGuideY - 8,
     );
   }
 
@@ -1177,6 +1180,19 @@ function setupSearch() {
   });
 }
 
+function setupResize() {
+  window.addEventListener("resize", () => {
+    if (!state.currentPath || !state.data) return;
+    const note = state.data.notes.find((item) => item.path === state.currentPath);
+    if (!note) return;
+    if (viewMode === "excalibrain") {
+      renderExcalibrain(note);
+    } else {
+      renderGraph(note);
+    }
+  });
+}
+
 async function init() {
   await loadData();
   applySiteMeta();
@@ -1188,6 +1204,7 @@ async function init() {
     renderGraphLegend();
   }
   setupSearch();
+  setupResize();
 
   const requestedPath = decodeURIComponent(location.hash.slice(1));
   const configuredPath =

@@ -890,6 +890,7 @@ body[data-view-mode="excalibrain"] .view-switch {
     --mobile-topbar-height: 46px;
     --mobile-gap: 10px;
     --mobile-board-size: calc(100vw - 12px);
+    --mobile-top-panel-h: min(var(--mobile-board-size), 52dvh);
   }
 
   html,
@@ -1110,5 +1111,94 @@ body[data-view-mode="excalibrain"] .view-switch {
 
   .graph-legend {
     display: none;
+  }
+
+  body[data-view-mode="excalibrain"] {
+    overflow: hidden;
+    background: #0f1426;
+    color: #eef2ff;
+  }
+
+  body[data-view-mode="excalibrain"] .sidebar,
+  body[data-view-mode="excalibrain"] .sidebar-backdrop {
+    display: none !important;
+  }
+
+  body[data-view-mode="excalibrain"] .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--mobile-top-panel-h) minmax(0, 1fr);
+    height: 100dvh;
+    min-height: 100dvh;
+    gap: 0;
+  }
+
+  body[data-view-mode="excalibrain"] .content {
+    padding: 6px 6px 2px;
+    min-height: 0;
+    overflow: hidden;
+    background: #ececec;
+  }
+
+  body[data-view-mode="excalibrain"] .note-header,
+  body[data-view-mode="excalibrain"] #mandala-shell,
+  body[data-view-mode="excalibrain"] .sidebar-btn,
+  body[data-view-mode="excalibrain"] .mobile-view-btn,
+  body[data-view-mode="excalibrain"] .panel-header,
+  body[data-view-mode="excalibrain"] .excal-controls,
+  body[data-view-mode="excalibrain"] .excal-status {
+    display: none !important;
+  }
+
+  body[data-view-mode="excalibrain"] .markdown-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    aspect-ratio: auto;
+    padding: 12px;
+    border: 1px solid rgba(84, 92, 112, 0.9);
+    background: #262a37;
+    color: #eef2ff;
+    font-size: 14px;
+    line-height: 1.48;
+    overflow: auto;
+  }
+
+  body[data-view-mode="excalibrain"] .markdown-body h1,
+  body[data-view-mode="excalibrain"] .markdown-body h2,
+  body[data-view-mode="excalibrain"] .markdown-body h3,
+  body[data-view-mode="excalibrain"] .markdown-body h4 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  body[data-view-mode="excalibrain"] .inspector {
+    display: block;
+    grid-column: auto;
+    width: auto;
+    padding: 2px 6px 6px;
+    min-height: 0;
+    background: #0f1426;
+  }
+
+  body[data-view-mode="excalibrain"] .excal-panel {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid rgba(84, 92, 112, 0.9);
+    background: #1f2d61;
+    padding: 0;
+  }
+
+  body[data-view-mode="excalibrain"] .excal-root {
+    min-height: 0;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+
+  body[data-view-mode="excalibrain"] .excal-root svg {
+    height: 100%;
   }
 }
