@@ -1,0 +1,1668 @@
+{
+  "generatedAt": "2026-03-29T01:29:30.099Z",
+  "sourceVault": "🇺🇸 美國之旅",
+  "featuredPath": "2026-04-01 Mill Valley.md",
+  "meta": {
+    "title": "2026 USA Trip",
+    "sidebarEyebrow": "Vault",
+    "readerEyebrow": "Publish-style Reader"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": false,
+    "collapse-color-groups": false,
+    "colorGroups": [],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.52,
+    "repelStrength": 12,
+    "linkStrength": 1,
+    "linkDistance": 220,
+    "scale": 1,
+    "close": true
+  },
+  "localGraphOptions": {
+    "localJumps": 1,
+    "localBacklinks": true,
+    "localForelinks": true
+  },
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "note",
+        "name": "🇺🇸　美國之旅",
+        "path": "🇺🇸　美國之旅.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-03-30 台中到桃園機場",
+        "path": "2026-03-30 台中到桃園機場.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-03-31 Mountain View",
+        "path": "2026-03-31 Mountain View.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-04-01 Mill Valley",
+        "path": "2026-04-01 Mill Valley.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-04-02 San Francisco",
+        "path": "2026-04-02 San Francisco.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-04-03 Monterey Bay",
+        "path": "2026-04-03 Monterey Bay.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-04-04-05 South Bay",
+        "path": "2026-04-04-05 South Bay.md"
+      },
+      {
+        "type": "note",
+        "name": "2026-04-06 舊金山回桃園",
+        "path": "2026-04-06 舊金山回桃園.md"
+      },
+      {
+        "type": "note",
+        "name": "南灣散步",
+        "path": "南灣散步.md"
+      },
+      {
+        "type": "note",
+        "name": "海港午餐",
+        "path": "海港午餐.md"
+      },
+      {
+        "type": "note",
+        "name": "親友午餐-淑津姑姑",
+        "path": "親友午餐-淑津姑姑.md"
+      },
+      {
+        "type": "note",
+        "name": "Alcatraz 惡魔島",
+        "path": "Alcatraz 惡魔島.md"
+      },
+      {
+        "type": "note",
+        "name": "Cannery Row",
+        "path": "Cannery Row.md"
+      },
+      {
+        "type": "note",
+        "name": "Cascade Falls",
+        "path": "Cascade Falls.md"
+      },
+      {
+        "type": "note",
+        "name": "Equator Coffee",
+        "path": "Equator Coffee.md"
+      },
+      {
+        "type": "note",
+        "name": "Golden Gate Bridge",
+        "path": "Golden Gate Bridge.md"
+      },
+      {
+        "type": "note",
+        "name": "Google Visitor Experience",
+        "path": "Google Visitor Experience.md"
+      },
+      {
+        "type": "note",
+        "name": "Livermore Outlets",
+        "path": "Livermore Outlets.md"
+      },
+      {
+        "type": "note",
+        "name": "Mill Valley Library",
+        "path": "Mill Valley Library.md"
+      },
+      {
+        "type": "note",
+        "name": "Monterey Bay",
+        "path": "Monterey Bay.md"
+      },
+      {
+        "type": "note",
+        "name": "Mountain View 自由活動",
+        "path": "Mountain View 自由活動.md"
+      },
+      {
+        "type": "note",
+        "name": "North Bay",
+        "path": "North Bay.md"
+      },
+      {
+        "type": "note",
+        "name": "Palo Alto Coffee",
+        "path": "Palo Alto Coffee.md"
+      },
+      {
+        "type": "note",
+        "name": "San Francisco",
+        "path": "San Francisco.md"
+      },
+      {
+        "type": "note",
+        "name": "SFMOMA",
+        "path": "SFMOMA.md"
+      },
+      {
+        "type": "note",
+        "name": "South Bay",
+        "path": "South Bay.md"
+      },
+      {
+        "type": "note",
+        "name": "Whale Watching",
+        "path": "Whale Watching.md"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "🇺🇸　美國之旅.md",
+      "path": "🇺🇸　美國之旅.md",
+      "basename": "🇺🇸　美國之旅",
+      "title": "2026 USA Trip",
+      "folder": "",
+      "frontmatter": {
+        "title": "2026 USA Trip",
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[2026-03-30 台中到桃園機場]]",
+          "[[2026-03-31 Mountain View]]",
+          "[[2026-04-01 Mill Valley]]",
+          "[[2026-04-02 San Francisco]]",
+          "[[2026-04-03 Monterey Bay]]",
+          "[[2026-04-04-05 South Bay]]",
+          "[[2026-04-06 舊金山回桃園]]"
+        ],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:27:18.073Z",
+      "content": "# 2026 美國旅行（Excalibrain Hub）\n\n## 旅行設定\n- 時間：3/30–4/6\n- 基地：[[Menlo Park]]\n- 風格：家庭慢旅行\n\n## 每日行程\n- [[2026-03-30 台中到桃園機場]]\n- [[2026-03-31 Mountain View]]\n- [[2026-04-01 Mill Valley]]\n- [[2026-04-02 San Francisco]]\n- [[2026-04-03 Monterey Bay]]\n- [[2026-04-04-05 South Bay]]\n- [[2026-04-06 舊金山回桃園]]\n\n## 核心亮點\n- [[Alcatraz 惡魔島]]\n- [[🐸 SFMOMA]]\n- [[Whale Watching]]",
+      "rawForLinks": "---\ntitle: 2026 USA Trip\nParent: []\nChild: []\nNext:\n  - \"[[2026-03-30 台中到桃園機場]]\"\n  - \"[[2026-03-31 Mountain View]]\"\n  - \"[[2026-04-01 Mill Valley]]\"\n  - \"[[2026-04-02 San Francisco]]\"\n  - \"[[2026-04-03 Monterey Bay]]\"\n  - \"[[2026-04-04-05 South Bay]]\"\n  - \"[[2026-04-06 舊金山回桃園]]\"\nPrev: []\n---\n\n# 2026 美國旅行（Excalibrain Hub）\n\n## 旅行設定\n- 時間：3/30–4/6\n- 基地：[[Menlo Park]]\n- 風格：家庭慢旅行\n\n## 每日行程\n- [[2026-03-30 台中到桃園機場]]\n- [[2026-03-31 Mountain View]]\n- [[2026-04-01 Mill Valley]]\n- [[2026-04-02 San Francisco]]\n- [[2026-04-03 Monterey Bay]]\n- [[2026-04-04-05 South Bay]]\n- [[2026-04-06 舊金山回桃園]]\n\n## 核心亮點\n- [[Alcatraz 惡魔島]]\n- [[🐸 SFMOMA]]\n- [[Whale Watching]]\n",
+      "links": [
+        {
+          "target": "2026-03-30 台中到桃園機場.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-06 舊金山回桃園.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Alcatraz 惡魔島.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Whale Watching.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "# 2026 美國旅行（Excalibrain Hub） ## 旅行設定 - 時間：3/30–4/6 - 基地：[[Menlo Park]] - 風格：家庭慢旅行 ## 每日行程 - [[2026-03-30 台中到桃園機場]] - [[2026-03-31 Mountain View]] - [[2026-04-01 Mill Valley]] - [[2026-04-02 San Francisco]] - [[2026-04-03"
+    },
+    {
+      "id": "2026-03-30 台中到桃園機場.md",
+      "path": "2026-03-30 台中到桃園機場.md",
+      "basename": "2026-03-30 台中到桃園機場",
+      "title": "2026-03-30 台中到桃園機場",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [
+          "[[2026-03-31 Mountain View]]"
+        ],
+        "Next": [],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:08:42.703Z",
+      "content": "![[截圖 2026-03-29 at 09.08.06.png]]\n# 2026-03-30 台中到桃園機場\n\n- 台中出發\n- 前往桃園機場\n- 龍騰卡貴賓卡可以去換麵包",
+      "rawForLinks": "---\nParent: []\nChild:\n  - \"[[2026-03-31 Mountain View]]\"\nNext: []\nPrev: []\n---\n![[截圖 2026-03-29 at 09.08.06.png]]\n# 2026-03-30 台中到桃園機場\n\n- 台中出發\n- 前往桃園機場\n- 龍騰卡貴賓卡可以去換麵包\n",
+      "links": [
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-03-31 Mountain View.md"
+      ],
+      "preview": "![[截圖 2026-03-29 at 09.08.06.png]] # 2026-03-30 台中到桃園機場 - 台中出發 - 前往桃園機場 - 龍騰卡貴賓卡可以去換麵包"
+    },
+    {
+      "id": "2026-03-31 Mountain View.md",
+      "path": "2026-03-31 Mountain View.md",
+      "basename": "2026-03-31 Mountain View",
+      "title": "D1 2026-03-31 Mountain View",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-03-30 台中到桃園機場]]"
+        ],
+        "Child": [
+          "[[2026-04-01 Mill Valley]]"
+        ],
+        "Next": [
+          "[[親友午餐-淑津姑姑]]",
+          "[[Mountain View 自由活動]]"
+        ],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:06:58.011Z",
+      "content": "# D1 2026-03-31 Mountain View\n\n- 親友午餐：淑津姑姑\n- 地點：Mountain View\n- 下午自由活動\n\n## Dataview 關係欄位\nParent:: [[2026-03-30 台中到桃園機場]]\nChild:: [[2026-04-01 Mill Valley]]\nPrev:: [[South Bay]]\nNext:: [[親友午餐-淑津姑姑]], [[Mountain View 自由活動]]\n\n## Dataview 關係表\n```dataview\nTABLE WITHOUT ID\n  file.link AS \"筆記\",\n  Parent AS \"上一天\",\n  Child AS \"下一天\",\n  Prev AS \"大區域\",\n  Next AS \"細微景點\"\nFROM \"\"\nWHERE file.path = this.file.path\n```\n\n## Dataview Mermaid 關係圖\n```dataviewjs\nconst p = dv.current();\nconst current = p.file.name;\nconst rels = [\"Parent\", \"Child\", \"Prev\", \"Next\"];\n\nfunction toNames(value) {\n  if (!value) return [];\n  const arr = Array.isArray(value) ? value : [value];\n  const names = [];\n\n  for (const item of arr) {\n    if (item && typeof item === \"object\" && item.path) {\n      names.push(item.path.split(\"/\").pop().replace(/\\.md$/, \"\"));\n      continue;\n    }\n\n    const raw = String(item)\n      .split(\",\")\n      .map(s => s.trim())\n      .filter(Boolean);\n\n    for (const token of raw) {\n      const match = token.match(/\\[\\[(.*?)\\]\\]/);\n      names.push(match ? match[1] : token);\n    }\n  }\n\n  return [...new Set(names)];\n}\n\nconst ids = new Map();\nlet seq = 0;\nconst idFor = (name) => {\n  if (!ids.has(name)) ids.set(name, `N${++seq}`);\n  return ids.get(name);\n};\n\nconst lines = [\"graph LR\"];\nidFor(current);\n\nfor (const key of rels) {\n  for (const target of toNames(p[key])) {\n    if (!target) continue;\n    lines.push(`${idFor(current)}[\"${current}\"] -->|${key}| ${idFor(target)}[\"${target}\"]`);\n  }\n}\n\ndv.paragraph(\"```mermaid\\n\" + lines.join(\"\\n\") + \"\\n```\");\n```",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-03-30 台中到桃園機場]]\"\nChild:\n  - \"[[2026-04-01 Mill Valley]]\"\nNext:\n  - \"[[親友午餐-淑津姑姑]]\"\n  - \"[[Mountain View 自由活動]]\"\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# D1 2026-03-31 Mountain View\n\n- 親友午餐：淑津姑姑\n- 地點：Mountain View\n- 下午自由活動\n\n## Dataview 關係欄位\nParent:: [[2026-03-30 台中到桃園機場]]\nChild:: [[2026-04-01 Mill Valley]]\nPrev:: [[South Bay]]\nNext:: [[親友午餐-淑津姑姑]], [[Mountain View 自由活動]]\n\n## Dataview 關係表\n```dataview\nTABLE WITHOUT ID\n  file.link AS \"筆記\",\n  Parent AS \"上一天\",\n  Child AS \"下一天\",\n  Prev AS \"大區域\",\n  Next AS \"細微景點\"\nFROM \"\"\nWHERE file.path = this.file.path\n```\n\n## Dataview Mermaid 關係圖\n```dataviewjs\nconst p = dv.current();\nconst current = p.file.name;\nconst rels = [\"Parent\", \"Child\", \"Prev\", \"Next\"];\n\nfunction toNames(value) {\n  if (!value) return [];\n  const arr = Array.isArray(value) ? value : [value];\n  const names = [];\n\n  for (const item of arr) {\n    if (item && typeof item === \"object\" && item.path) {\n      names.push(item.path.split(\"/\").pop().replace(/\\.md$/, \"\"));\n      continue;\n    }\n\n    const raw = String(item)\n      .split(\",\")\n      .map(s => s.trim())\n      .filter(Boolean);\n\n    for (const token of raw) {\n      const match = token.match(/\\[\\[(.*?)\\]\\]/);\n      names.push(match ? match[1] : token);\n    }\n  }\n\n  return [...new Set(names)];\n}\n\nconst ids = new Map();\nlet seq = 0;\nconst idFor = (name) => {\n  if (!ids.has(name)) ids.set(name, `N${++seq}`);\n  return ids.get(name);\n};\n\nconst lines = [\"graph LR\"];\nidFor(current);\n\nfor (const key of rels) {\n  for (const target of toNames(p[key])) {\n    if (!target) continue;\n    lines.push(`${idFor(current)}[\"${current}\"] -->|${key}| ${idFor(target)}[\"${target}\"]`);\n  }\n}\n\ndv.paragraph(\"```mermaid\\n\" + lines.join(\"\\n\") + \"\\n```\");\n```\n",
+      "links": [
+        {
+          "target": "2026-03-30 台中到桃園機場.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "親友午餐-淑津姑姑.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Mountain View 自由活動.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-03-30 台中到桃園機場.md",
+        "2026-04-01 Mill Valley.md",
+        "親友午餐-淑津姑姑.md",
+        "Mountain View 自由活動.md",
+        "South Bay.md"
+      ],
+      "preview": "# D1 2026-03-31 Mountain View - 親友午餐：淑津姑姑 - 地點：Mountain View - 下午自由活動 ## Dataview 關係欄位 Parent:: [[2026-03-30 台中到桃園機場]] Child:: [[2026-04-01 Mill Valley]] Prev:: [[South Bay]] Next:: [[親友午餐-淑津姑姑]], [[Mountain View 自由活動]] "
+    },
+    {
+      "id": "2026-04-01 Mill Valley.md",
+      "path": "2026-04-01 Mill Valley.md",
+      "basename": "2026-04-01 Mill Valley",
+      "title": "D2 2026-04-01 Mill Valley",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-03-31 Mountain View]]"
+        ],
+        "Child": [
+          "[[2026-04-02 San Francisco]]"
+        ],
+        "Next": [
+          "[[Cascade Falls]]",
+          "[[Mill Valley Library]]",
+          "[[Equator Coffee]]",
+          "[[Livermore Outlets]]"
+        ],
+        "Prev": [
+          "[[North Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.266Z",
+      "content": "# D2 2026-04-01 Mill Valley\n\n- [[Cascade Falls]]\n- [[Mill Valley Library]]\n- [[Equator Coffee]]\n- [[Livermore Outlets]]",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-03-31 Mountain View]]\"\nChild:\n  - \"[[2026-04-02 San Francisco]]\"\nNext:\n  - \"[[Cascade Falls]]\"\n  - \"[[Mill Valley Library]]\"\n  - \"[[Equator Coffee]]\"\n  - \"[[Livermore Outlets]]\"\nPrev:\n  - \"[[North Bay]]\"\n---\n\n# D2 2026-04-01 Mill Valley\n\n- [[Cascade Falls]]\n- [[Mill Valley Library]]\n- [[Equator Coffee]]\n- [[Livermore Outlets]]\n",
+      "links": [
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Cascade Falls.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Mill Valley Library.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Equator Coffee.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Livermore Outlets.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "North Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-03-31 Mountain View.md",
+        "2026-04-02 San Francisco.md",
+        "Cascade Falls.md",
+        "Equator Coffee.md",
+        "Livermore Outlets.md",
+        "Mill Valley Library.md",
+        "North Bay.md"
+      ],
+      "preview": "# D2 2026-04-01 Mill Valley - [[Cascade Falls]] - [[Mill Valley Library]] - [[Equator Coffee]] - [[Livermore Outlets]]"
+    },
+    {
+      "id": "2026-04-02 San Francisco.md",
+      "path": "2026-04-02 San Francisco.md",
+      "basename": "2026-04-02 San Francisco",
+      "title": "D3 2026-04-02 San Francisco",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-04-01 Mill Valley]]"
+        ],
+        "Child": [
+          "[[2026-04-03 Monterey Bay]]"
+        ],
+        "Next": [
+          "[[Alcatraz 惡魔島]]",
+          "[[🐸 SFMOMA]]",
+          "[[Golden Gate Bridge]]"
+        ],
+        "Prev": [
+          "[[San Francisco]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:27:18.079Z",
+      "content": "# D3 2026-04-02 San Francisco\n\n- [[Alcatraz 惡魔島]]\n- [[🐸 SFMOMA]]\n- [[Golden Gate Bridge]]",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-04-01 Mill Valley]]\"\nChild:\n  - \"[[2026-04-03 Monterey Bay]]\"\nNext:\n  - \"[[Alcatraz 惡魔島]]\"\n  - \"[[🐸 SFMOMA]]\"\n  - \"[[Golden Gate Bridge]]\"\nPrev:\n  - \"[[San Francisco]]\"\n---\n\n# D3 2026-04-02 San Francisco\n\n- [[Alcatraz 惡魔島]]\n- [[🐸 SFMOMA]]\n- [[Golden Gate Bridge]]\n",
+      "links": [
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Alcatraz 惡魔島.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Golden Gate Bridge.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-01 Mill Valley.md",
+        "2026-04-03 Monterey Bay.md",
+        "Alcatraz 惡魔島.md",
+        "Golden Gate Bridge.md",
+        "San Francisco.md",
+        "SFMOMA.md"
+      ],
+      "preview": "# D3 2026-04-02 San Francisco - [[Alcatraz 惡魔島]] - [[🐸 SFMOMA]] - [[Golden Gate Bridge]]"
+    },
+    {
+      "id": "2026-04-03 Monterey Bay.md",
+      "path": "2026-04-03 Monterey Bay.md",
+      "basename": "2026-04-03 Monterey Bay",
+      "title": "D4 2026-04-03 Monterey Bay",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-04-02 San Francisco]]"
+        ],
+        "Child": [
+          "[[2026-04-04-05 South Bay]]"
+        ],
+        "Next": [
+          "[[Whale Watching]]",
+          "[[Cannery Row]]",
+          "[[海港午餐]]"
+        ],
+        "Prev": [
+          "[[Monterey Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.270Z",
+      "content": "# D4 2026-04-03 Monterey Bay\n\n- [[Whale Watching]]\n- [[Cannery Row]]\n- [[海港午餐]]",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-04-02 San Francisco]]\"\nChild:\n  - \"[[2026-04-04-05 South Bay]]\"\nNext:\n  - \"[[Whale Watching]]\"\n  - \"[[Cannery Row]]\"\n  - \"[[海港午餐]]\"\nPrev:\n  - \"[[Monterey Bay]]\"\n---\n\n# D4 2026-04-03 Monterey Bay\n\n- [[Whale Watching]]\n- [[Cannery Row]]\n- [[海港午餐]]\n",
+      "links": [
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Whale Watching.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Cannery Row.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "海港午餐.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-02 San Francisco.md",
+        "2026-04-04-05 South Bay.md",
+        "海港午餐.md",
+        "Cannery Row.md",
+        "Monterey Bay.md",
+        "Whale Watching.md"
+      ],
+      "preview": "# D4 2026-04-03 Monterey Bay - [[Whale Watching]] - [[Cannery Row]] - [[海港午餐]]"
+    },
+    {
+      "id": "2026-04-04-05 South Bay.md",
+      "path": "2026-04-04-05 South Bay.md",
+      "basename": "2026-04-04-05 South Bay",
+      "title": "D5 2026-04-04-05 South Bay",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-04-03 Monterey Bay]]"
+        ],
+        "Child": [
+          "[[2026-04-06 舊金山回桃園]]"
+        ],
+        "Next": [
+          "[[Google Visitor Experience]]",
+          "[[Palo Alto Coffee]]",
+          "[[南灣散步]]"
+        ],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:06:58.013Z",
+      "content": "# D5 2026-04-04-05 South Bay\n\n- [[Google Visitor Experience]]\n- [[Palo Alto Coffee]]\n- [[南灣散步]]",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-04-03 Monterey Bay]]\"\nChild:\n  - \"[[2026-04-06 舊金山回桃園]]\"\nNext:\n  - \"[[Google Visitor Experience]]\"\n  - \"[[Palo Alto Coffee]]\"\n  - \"[[南灣散步]]\"\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# D5 2026-04-04-05 South Bay\n\n- [[Google Visitor Experience]]\n- [[Palo Alto Coffee]]\n- [[南灣散步]]\n",
+      "links": [
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-06 舊金山回桃園.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Google Visitor Experience.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Palo Alto Coffee.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "南灣散步.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-03 Monterey Bay.md",
+        "2026-04-06 舊金山回桃園.md",
+        "南灣散步.md",
+        "Google Visitor Experience.md",
+        "Palo Alto Coffee.md",
+        "South Bay.md"
+      ],
+      "preview": "# D5 2026-04-04-05 South Bay - [[Google Visitor Experience]] - [[Palo Alto Coffee]] - [[南灣散步]]"
+    },
+    {
+      "id": "2026-04-06 舊金山回桃園.md",
+      "path": "2026-04-06 舊金山回桃園.md",
+      "basename": "2026-04-06 舊金山回桃園",
+      "title": "2026-04-06 舊金山回桃園",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [
+          "[[2026-04-04-05 South Bay]]"
+        ],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[San Francisco]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:06:58.010Z",
+      "content": "# 2026-04-06 舊金山回桃園\n\n- 舊金山出發\n- 回到桃園",
+      "rawForLinks": "---\nParent:\n  - \"[[2026-04-04-05 South Bay]]\"\nChild: []\nNext: []\nPrev:\n  - \"[[San Francisco]]\"\n---\n\n# 2026-04-06 舊金山回桃園\n\n- 舊金山出發\n- 回到桃園\n",
+      "links": [
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-04-05 South Bay.md"
+      ],
+      "preview": "# 2026-04-06 舊金山回桃園 - 舊金山出發 - 回到桃園"
+    },
+    {
+      "id": "南灣散步.md",
+      "path": "南灣散步.md",
+      "basename": "南灣散步",
+      "title": "Spot 南灣散步",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.270Z",
+      "content": "# Spot 南灣散步\n\n- 所屬天數：[[2026-04-04-05 South Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# Spot 南灣散步\n\n- 所屬天數：[[2026-04-04-05 South Bay]]\n",
+      "links": [
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-04-05 South Bay.md"
+      ],
+      "preview": "# Spot 南灣散步 - 所屬天數：[[2026-04-04-05 South Bay]]"
+    },
+    {
+      "id": "海港午餐.md",
+      "path": "海港午餐.md",
+      "basename": "海港午餐",
+      "title": "Spot 海港午餐",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[Monterey Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.270Z",
+      "content": "# Spot 海港午餐\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[Monterey Bay]]\"\n---\n\n# Spot 海港午餐\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]\n",
+      "links": [
+        {
+          "target": "Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-03 Monterey Bay.md"
+      ],
+      "preview": "# Spot 海港午餐 - 所屬天數：[[2026-04-03 Monterey Bay]]"
+    },
+    {
+      "id": "親友午餐-淑津姑姑.md",
+      "path": "親友午餐-淑津姑姑.md",
+      "basename": "親友午餐-淑津姑姑",
+      "title": "Spot 親友午餐-淑津姑姑",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.269Z",
+      "content": "# Spot 親友午餐-淑津姑姑\n\n- 所屬天數：[[2026-03-31 Mountain View]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# Spot 親友午餐-淑津姑姑\n\n- 所屬天數：[[2026-03-31 Mountain View]]\n",
+      "links": [
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-03-31 Mountain View.md"
+      ],
+      "preview": "# Spot 親友午餐-淑津姑姑 - 所屬天數：[[2026-03-31 Mountain View]]"
+    },
+    {
+      "id": "Alcatraz 惡魔島.md",
+      "path": "Alcatraz 惡魔島.md",
+      "basename": "Alcatraz 惡魔島",
+      "title": "Spot Alcatraz",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[San Francisco]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:13:36.240Z",
+      "content": "10:10的船，大概要8點也一定要出門\n\n# Spot Alcatraz\n\n- 所屬天數：[[2026-04-02 San Francisco]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[San Francisco]]\"\n---\n10:10的船，大概要8點也一定要出門\n\n# Spot Alcatraz\n\n- 所屬天數：[[2026-04-02 San Francisco]]\n",
+      "links": [
+        {
+          "target": "San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-02 San Francisco.md"
+      ],
+      "preview": "10:10的船，大概要8點也一定要出門 # Spot Alcatraz - 所屬天數：[[2026-04-02 San Francisco]]"
+    },
+    {
+      "id": "Cannery Row.md",
+      "path": "Cannery Row.md",
+      "basename": "Cannery Row",
+      "title": "Spot Cannery Row",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[Monterey Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.270Z",
+      "content": "# Spot Cannery Row\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[Monterey Bay]]\"\n---\n\n# Spot Cannery Row\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]\n",
+      "links": [
+        {
+          "target": "Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-03 Monterey Bay.md"
+      ],
+      "preview": "# Spot Cannery Row - 所屬天數：[[2026-04-03 Monterey Bay]]"
+    },
+    {
+      "id": "Cascade Falls.md",
+      "path": "Cascade Falls.md",
+      "basename": "Cascade Falls",
+      "title": "Spot Cascade Falls",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[North Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.274Z",
+      "content": "# Spot Cascade Falls\n\n- 所屬天數：[[2026-04-01 Mill Valley]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[North Bay]]\"\n---\n\n# Spot Cascade Falls\n\n- 所屬天數：[[2026-04-01 Mill Valley]]\n",
+      "links": [
+        {
+          "target": "North Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-01 Mill Valley.md"
+      ],
+      "preview": "# Spot Cascade Falls - 所屬天數：[[2026-04-01 Mill Valley]]"
+    },
+    {
+      "id": "Equator Coffee.md",
+      "path": "Equator Coffee.md",
+      "basename": "Equator Coffee",
+      "title": "Spot Equator Coffee",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[North Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.272Z",
+      "content": "# Spot Equator Coffee\n\n- 所屬天數：[[2026-04-01 Mill Valley]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[North Bay]]\"\n---\n\n# Spot Equator Coffee\n\n- 所屬天數：[[2026-04-01 Mill Valley]]\n",
+      "links": [
+        {
+          "target": "North Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-01 Mill Valley.md"
+      ],
+      "preview": "# Spot Equator Coffee - 所屬天數：[[2026-04-01 Mill Valley]]"
+    },
+    {
+      "id": "Golden Gate Bridge.md",
+      "path": "Golden Gate Bridge.md",
+      "basename": "Golden Gate Bridge",
+      "title": "Spot Golden Gate Bridge",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[San Francisco]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.269Z",
+      "content": "# Spot Golden Gate Bridge\n\n- 所屬天數：[[2026-04-02 San Francisco]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[San Francisco]]\"\n---\n\n# Spot Golden Gate Bridge\n\n- 所屬天數：[[2026-04-02 San Francisco]]\n",
+      "links": [
+        {
+          "target": "San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-02 San Francisco.md"
+      ],
+      "preview": "# Spot Golden Gate Bridge - 所屬天數：[[2026-04-02 San Francisco]]"
+    },
+    {
+      "id": "Google Visitor Experience.md",
+      "path": "Google Visitor Experience.md",
+      "basename": "Google Visitor Experience",
+      "title": "Spot Google Visitor Experience",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.267Z",
+      "content": "# Spot Google Visitor Experience\n\n- 所屬天數：[[2026-04-04-05 South Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# Spot Google Visitor Experience\n\n- 所屬天數：[[2026-04-04-05 South Bay]]\n",
+      "links": [
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-04-05 South Bay.md"
+      ],
+      "preview": "# Spot Google Visitor Experience - 所屬天數：[[2026-04-04-05 South Bay]]"
+    },
+    {
+      "id": "Livermore Outlets.md",
+      "path": "Livermore Outlets.md",
+      "basename": "Livermore Outlets",
+      "title": "Spot Livermore Outlets",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[North Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:28:21.308Z",
+      "content": "![[購物清單]]\n\n\n\n# Spot Livermore Outlets\n\n- 所屬天數：[[2026-04-01 Mill Valley]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[North Bay]]\"\n---\n![[購物清單]]\n\n\n\n# Spot Livermore Outlets\n\n- 所屬天數：[[2026-04-01 Mill Valley]]\n",
+      "links": [
+        {
+          "target": "North Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-01 Mill Valley.md"
+      ],
+      "preview": "![[購物清單]] # Spot Livermore Outlets - 所屬天數：[[2026-04-01 Mill Valley]]"
+    },
+    {
+      "id": "Mill Valley Library.md",
+      "path": "Mill Valley Library.md",
+      "basename": "Mill Valley Library",
+      "title": "Spot Mill Valley Library",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[North Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.274Z",
+      "content": "# Spot Mill Valley Library\n\n- 所屬天數：[[2026-04-01 Mill Valley]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[North Bay]]\"\n---\n\n# Spot Mill Valley Library\n\n- 所屬天數：[[2026-04-01 Mill Valley]]\n",
+      "links": [
+        {
+          "target": "North Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-01 Mill Valley.md"
+      ],
+      "preview": "# Spot Mill Valley Library - 所屬天數：[[2026-04-01 Mill Valley]]"
+    },
+    {
+      "id": "Monterey Bay.md",
+      "path": "Monterey Bay.md",
+      "basename": "Monterey Bay",
+      "title": "Area Monterey Bay",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[2026-04-03 Monterey Bay]]"
+        ],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.275Z",
+      "content": "# Area Monterey Bay\n\n- 代表區域：Monterey Bay\n- 對應天數：[[2026-04-03 Monterey Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext:\n  - \"[[2026-04-03 Monterey Bay]]\"\nPrev: []\n---\n\n# Area Monterey Bay\n\n- 代表區域：Monterey Bay\n- 對應天數：[[2026-04-03 Monterey Bay]]\n",
+      "links": [
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-03 Monterey Bay.md",
+        "海港午餐.md",
+        "Cannery Row.md",
+        "Whale Watching.md"
+      ],
+      "preview": "# Area Monterey Bay - 代表區域：Monterey Bay - 對應天數：[[2026-04-03 Monterey Bay]]"
+    },
+    {
+      "id": "Mountain View 自由活動.md",
+      "path": "Mountain View 自由活動.md",
+      "basename": "Mountain View 自由活動",
+      "title": "Spot Mountain View 自由活動",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.268Z",
+      "content": "# Spot Mountain View 自由活動\n\n- 所屬天數：[[2026-03-31 Mountain View]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# Spot Mountain View 自由活動\n\n- 所屬天數：[[2026-03-31 Mountain View]]\n",
+      "links": [
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-03-31 Mountain View.md"
+      ],
+      "preview": "# Spot Mountain View 自由活動 - 所屬天數：[[2026-03-31 Mountain View]]"
+    },
+    {
+      "id": "North Bay.md",
+      "path": "North Bay.md",
+      "basename": "North Bay",
+      "title": "Area North Bay",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[2026-04-01 Mill Valley]]"
+        ],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.273Z",
+      "content": "# Area North Bay\n\n- 代表區域：Mill Valley\n- 對應天數：[[2026-04-01 Mill Valley]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext:\n  - \"[[2026-04-01 Mill Valley]]\"\nPrev: []\n---\n\n# Area North Bay\n\n- 代表區域：Mill Valley\n- 對應天數：[[2026-04-01 Mill Valley]]\n",
+      "links": [
+        {
+          "target": "2026-04-01 Mill Valley.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-01 Mill Valley.md",
+        "Cascade Falls.md",
+        "Equator Coffee.md",
+        "Livermore Outlets.md",
+        "Mill Valley Library.md"
+      ],
+      "preview": "# Area North Bay - 代表區域：Mill Valley - 對應天數：[[2026-04-01 Mill Valley]]"
+    },
+    {
+      "id": "Palo Alto Coffee.md",
+      "path": "Palo Alto Coffee.md",
+      "basename": "Palo Alto Coffee",
+      "title": "Spot Palo Alto Coffee",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[South Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.275Z",
+      "content": "# Spot Palo Alto Coffee\n\n- 所屬天數：[[2026-04-04-05 South Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[South Bay]]\"\n---\n\n# Spot Palo Alto Coffee\n\n- 所屬天數：[[2026-04-04-05 South Bay]]\n",
+      "links": [
+        {
+          "target": "South Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-04-05 South Bay.md"
+      ],
+      "preview": "# Spot Palo Alto Coffee - 所屬天數：[[2026-04-04-05 South Bay]]"
+    },
+    {
+      "id": "San Francisco.md",
+      "path": "San Francisco.md",
+      "basename": "San Francisco",
+      "title": "Area San Francisco",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[2026-04-02 San Francisco]]"
+        ],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.271Z",
+      "content": "# Area San Francisco\n\n- 代表區域：San Francisco 市區\n- 對應天數：[[2026-04-02 San Francisco]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext:\n  - \"[[2026-04-02 San Francisco]]\"\nPrev: []\n---\n\n# Area San Francisco\n\n- 代表區域：San Francisco 市區\n- 對應天數：[[2026-04-02 San Francisco]]\n",
+      "links": [
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-04-02 San Francisco.md",
+        "2026-04-06 舊金山回桃園.md",
+        "Alcatraz 惡魔島.md",
+        "Golden Gate Bridge.md",
+        "SFMOMA.md"
+      ],
+      "preview": "# Area San Francisco - 代表區域：San Francisco 市區 - 對應天數：[[2026-04-02 San Francisco]]"
+    },
+    {
+      "id": "SFMOMA.md",
+      "path": "SFMOMA.md",
+      "basename": "SFMOMA",
+      "title": "Spot SFMOMA",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[🐸 SFMOMA]]"
+        ],
+        "Prev": [
+          "[[San Francisco]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T01:27:18.083Z",
+      "content": "# Spot SFMOMA\n\n- 對應既有筆記：[[🐸 SFMOMA]]\n- 所屬天數：[[2026-04-02 San Francisco]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext:\n  - \"[[🐸 SFMOMA]]\"\nPrev:\n  - \"[[San Francisco]]\"\n---\n\n# Spot SFMOMA\n\n- 對應既有筆記：[[🐸 SFMOMA]]\n- 所屬天數：[[2026-04-02 San Francisco]]\n",
+      "links": [
+        {
+          "target": "San Francisco.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-02 San Francisco.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [],
+      "preview": "# Spot SFMOMA - 對應既有筆記：[[🐸 SFMOMA]] - 所屬天數：[[2026-04-02 San Francisco]]"
+    },
+    {
+      "id": "South Bay.md",
+      "path": "South Bay.md",
+      "basename": "South Bay",
+      "title": "Area South Bay",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [
+          "[[2026-03-31 Mountain View]]",
+          "[[2026-04-04-05 South Bay]]"
+        ],
+        "Prev": []
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.269Z",
+      "content": "# Area South Bay\n\n- 範圍：Menlo Park, Palo Alto, Mountain View\n- 對應天數：[[2026-03-31 Mountain View]], [[2026-04-04-05 South Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext:\n  - \"[[2026-03-31 Mountain View]]\"\n  - \"[[2026-04-04-05 South Bay]]\"\nPrev: []\n---\n\n# Area South Bay\n\n- 範圍：Menlo Park, Palo Alto, Mountain View\n- 對應天數：[[2026-03-31 Mountain View]], [[2026-04-04-05 South Bay]]\n",
+      "links": [
+        {
+          "target": "2026-03-31 Mountain View.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-04-05 South Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "2026-03-31 Mountain View.md",
+        "2026-04-04-05 South Bay.md",
+        "南灣散步.md",
+        "親友午餐-淑津姑姑.md",
+        "Google Visitor Experience.md",
+        "Mountain View 自由活動.md",
+        "Palo Alto Coffee.md"
+      ],
+      "preview": "# Area South Bay - 範圍：Menlo Park, Palo Alto, Mountain View - 對應天數：[[2026-03-31 Mountain View]], [[2026-04-04-05 South Bay]]"
+    },
+    {
+      "id": "Whale Watching.md",
+      "path": "Whale Watching.md",
+      "basename": "Whale Watching",
+      "title": "Spot Whale Watching",
+      "folder": "",
+      "frontmatter": {
+        "Parent": [],
+        "Child": [],
+        "Next": [],
+        "Prev": [
+          "[[Monterey Bay]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T00:57:18.272Z",
+      "content": "# Spot Whale Watching\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]",
+      "rawForLinks": "---\nParent: []\nChild: []\nNext: []\nPrev:\n  - \"[[Monterey Bay]]\"\n---\n\n# Spot Whale Watching\n\n- 所屬天數：[[2026-04-03 Monterey Bay]]\n",
+      "links": [
+        {
+          "target": "Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "2026-04-03 Monterey Bay.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "🇺🇸　美國之旅.md",
+        "2026-04-03 Monterey Bay.md"
+      ],
+      "preview": "# Spot Whale Watching - 所屬天數：[[2026-04-03 Monterey Bay]]"
+    }
+  ],
+  "edges": [
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-03-30 台中到桃園機場.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "2026-04-06 舊金山回桃園.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "Alcatraz 惡魔島.md"
+    },
+    {
+      "source": "🇺🇸　美國之旅.md",
+      "target": "Whale Watching.md"
+    },
+    {
+      "source": "2026-03-30 台中到桃園機場.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "2026-03-31 Mountain View.md",
+      "target": "2026-03-30 台中到桃園機場.md"
+    },
+    {
+      "source": "2026-03-31 Mountain View.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "2026-03-31 Mountain View.md",
+      "target": "親友午餐-淑津姑姑.md"
+    },
+    {
+      "source": "2026-03-31 Mountain View.md",
+      "target": "Mountain View 自由活動.md"
+    },
+    {
+      "source": "2026-03-31 Mountain View.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "Cascade Falls.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "Mill Valley Library.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "Equator Coffee.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "Livermore Outlets.md"
+    },
+    {
+      "source": "2026-04-01 Mill Valley.md",
+      "target": "North Bay.md"
+    },
+    {
+      "source": "2026-04-02 San Francisco.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "2026-04-02 San Francisco.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "2026-04-02 San Francisco.md",
+      "target": "Alcatraz 惡魔島.md"
+    },
+    {
+      "source": "2026-04-02 San Francisco.md",
+      "target": "Golden Gate Bridge.md"
+    },
+    {
+      "source": "2026-04-02 San Francisco.md",
+      "target": "San Francisco.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "Whale Watching.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "Cannery Row.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "海港午餐.md"
+    },
+    {
+      "source": "2026-04-03 Monterey Bay.md",
+      "target": "Monterey Bay.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "2026-04-06 舊金山回桃園.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "Google Visitor Experience.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "Palo Alto Coffee.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "南灣散步.md"
+    },
+    {
+      "source": "2026-04-04-05 South Bay.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "2026-04-06 舊金山回桃園.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "2026-04-06 舊金山回桃園.md",
+      "target": "San Francisco.md"
+    },
+    {
+      "source": "南灣散步.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "南灣散步.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "海港午餐.md",
+      "target": "Monterey Bay.md"
+    },
+    {
+      "source": "海港午餐.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "親友午餐-淑津姑姑.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "親友午餐-淑津姑姑.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "Alcatraz 惡魔島.md",
+      "target": "San Francisco.md"
+    },
+    {
+      "source": "Alcatraz 惡魔島.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "Cannery Row.md",
+      "target": "Monterey Bay.md"
+    },
+    {
+      "source": "Cannery Row.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "Cascade Falls.md",
+      "target": "North Bay.md"
+    },
+    {
+      "source": "Cascade Falls.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "Equator Coffee.md",
+      "target": "North Bay.md"
+    },
+    {
+      "source": "Equator Coffee.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "Golden Gate Bridge.md",
+      "target": "San Francisco.md"
+    },
+    {
+      "source": "Golden Gate Bridge.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "Google Visitor Experience.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "Google Visitor Experience.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "Livermore Outlets.md",
+      "target": "North Bay.md"
+    },
+    {
+      "source": "Livermore Outlets.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "Mill Valley Library.md",
+      "target": "North Bay.md"
+    },
+    {
+      "source": "Mill Valley Library.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "Monterey Bay.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    },
+    {
+      "source": "Mountain View 自由活動.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "Mountain View 自由活動.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "North Bay.md",
+      "target": "2026-04-01 Mill Valley.md"
+    },
+    {
+      "source": "Palo Alto Coffee.md",
+      "target": "South Bay.md"
+    },
+    {
+      "source": "Palo Alto Coffee.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "San Francisco.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "SFMOMA.md",
+      "target": "San Francisco.md"
+    },
+    {
+      "source": "SFMOMA.md",
+      "target": "2026-04-02 San Francisco.md"
+    },
+    {
+      "source": "South Bay.md",
+      "target": "2026-03-31 Mountain View.md"
+    },
+    {
+      "source": "South Bay.md",
+      "target": "2026-04-04-05 South Bay.md"
+    },
+    {
+      "source": "Whale Watching.md",
+      "target": "Monterey Bay.md"
+    },
+    {
+      "source": "Whale Watching.md",
+      "target": "2026-04-03 Monterey Bay.md"
+    }
+  ],
+  "assets": {}
+}
