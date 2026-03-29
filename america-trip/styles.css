@@ -612,9 +612,22 @@ body[data-view-mode="excalibrain"] {
   --bg-toolbar: #2e3554;
   --node-primary: #131c39;
   --node-secondary: #acacac;
+  --node-parent-bg: #f1d8af;
+  --node-parent-stroke: #b98f4b;
+  --node-child-bg: #c5d8ff;
+  --node-child-stroke: #6b8dc3;
+  --node-prev-bg: #d8cdfd;
+  --node-prev-stroke: #8a74ca;
+  --node-next-bg: #bfe8c8;
+  --node-next-stroke: #6da980;
+  --node-hub-bg: #10244f;
+  --node-hub-stroke: #9eb4d6;
+  --node-current-bg: #10244f;
+  --node-current-stroke: #f4f7fa;
   --text-primary: #e4e8ed;
   --text-secondary: #929ba9;
   --text-dark: #1a1a1a;
+  --text-light: #f4f7fa;
   --edge-line: #5e6c82;
   --edge-shadow: #26315c;
   --handle-light: #f4f7fa;
@@ -724,21 +737,57 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-node.kind-current rect {
-  fill: var(--node-primary);
-  stroke: rgba(244, 247, 250, 0.86);
+  fill: var(--node-current-bg);
+  stroke: var(--node-current-stroke);
 }
 
 .excal-node.kind-current text {
-  fill: var(--text-dark);
+  fill: var(--text-light);
   font-weight: 700;
 }
 
 .excal-node.kind-hub rect {
-  fill: var(--node-primary);
-  stroke: #9eabbf;
+  fill: var(--node-hub-bg);
+  stroke: var(--node-hub-stroke);
 }
 
 .excal-node.kind-hub text {
+  fill: var(--text-light);
+}
+
+.excal-node.kind-parent rect {
+  fill: var(--node-parent-bg);
+  stroke: var(--node-parent-stroke);
+}
+
+.excal-node.kind-parent text {
+  fill: var(--text-dark);
+}
+
+.excal-node.kind-child rect {
+  fill: var(--node-child-bg);
+  stroke: var(--node-child-stroke);
+}
+
+.excal-node.kind-child text {
+  fill: var(--text-dark);
+}
+
+.excal-node.kind-prev rect {
+  fill: var(--node-prev-bg);
+  stroke: var(--node-prev-stroke);
+}
+
+.excal-node.kind-prev text {
+  fill: var(--text-dark);
+}
+
+.excal-node.kind-next rect {
+  fill: var(--node-next-bg);
+  stroke: var(--node-next-stroke);
+}
+
+.excal-node.kind-next text {
   fill: var(--text-dark);
 }
 
