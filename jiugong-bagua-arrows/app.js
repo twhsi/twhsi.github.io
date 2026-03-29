@@ -8,6 +8,18 @@
     jump: "jump",
   };
 
+  const EXCAL_RULE_LABEL = {
+    parent: "Parent",
+    evidence: "證據",
+    child: "Child",
+    previous: "Previous",
+    next: "Next",
+    support: "支持意見",
+    oppose: "反對意見",
+  };
+
+  const EXCAL_RULE_ORDER = ["parent", "evidence", "child", "previous", "next", "support", "oppose"];
+
   const siteTitleEl = document.getElementById("site-title");
   const sourceFileEl = document.getElementById("source-file");
   const fileListEl = document.getElementById("file-list");
@@ -31,6 +43,7 @@
     sectionMap: new Map(),
     currentNodeId: null,
     activeRelations: new Set(),
+    activeRuleRelations: new Set(),
     flowSteps: [],
     activeStepIndex: 0,
     flowTimer: null,
@@ -206,19 +219,17 @@
 
   function renderFilters() {
     relationFiltersEl.innerHTML = "";
-    const relationTypes = state.data?.relationTypes || [];
-
-    relationTypes.forEach((type) => {
+    EXCAL_RULE_ORDER.forEach((type) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = `relation-chip${state.activeRelations.has(type) ? " active" : ""}`;
-      button.textContent = RELATION_LABEL[type] || type;
+      button.className = `relation-chip${state.activeRuleRelations.has(type) ? " active" : ""}`;
+      button.textContent = EXCAL_RULE_LABEL[type] || type;
       button.addEventListener("click", () => {
-        if (state.activeRelations.has(type)) {
-          if (state.activeRelations.size === 1) return;
-          state.activeRelations.delete(type);
+        if (state.activeRuleRelations.has(type)) {
+          if (state.activeRuleRelations.size === 1) return;
+          state.activeRuleRelations.delete(type);
         } else {
-          state.activeRelations.add(type);
+          state.activeRuleRelations.add(type);
         }
         renderAll();
       });
@@ -465,22 +476,14 @@
     const currentCoreId = getCurrentCoreId();
     const flowStep = state.flowSteps[state.activeStepIndex] || null;
 
-    const summary = [];
-    ["next", "previous", "opposite"].forEach((type) => {
-      if (!state.activeRelations.has(type)) return;
-      const first = relationTargets(node, type)[0];
-      if (first) {
-        summary.push(`${type}→${formatNodeName(first)}`);
-      }
-    });
-    excalCaptionEl.textContent = summary.length
-      ? `焦點 ${formatNodeName(getNode(currentCoreId) || node)} ｜ ${summary.join(" ｜ ")} ｜ flow ${flowStep?.from || "-"}→${flowStep?.to || "-"}`
-      : `焦點 ${formatNodeName(getNode(currentCoreId) || node)} ｜ flow ${flowStep?.from || "-"}→${flowStep?.to || "-"}`;
+    const visibleRules = EXCAL_RULE_ORDER.filter((type) => state.activeRuleRelations.has(type));
+    excalCaptionEl.textContent = `焦點 ${formatNodeName(getNode(currentCoreId) || node)} ｜ 規則 ${visibleRules.map((key) => EXCAL_RULE_LABEL[key]).join(" / ")} ｜ flow ${flowStep?.from || "-"}→${flowStep?.to || "-"}`;
 
     state.excalRenderer.render({
       currentNodeId: currentCoreId || node.id,
       nodeMap: state.nodeMap,
       activeRelationTypes: [...state.activeRelations],
+      activeRuleTypes: [...state.activeRuleRelations],
       activeFlowEdge: flowStep,
       flowSteps: state.flowSteps,
     });
@@ -530,6 +533,7 @@
 
     const allRelations = state.data.relationTypes || ["next", "previous", "opposite", "center", "adjacent", "jump"];
     state.activeRelations = new Set(allRelations);
+    state.activeRuleRelations = new Set(EXCAL_RULE_ORDER);
 
     if (siteTitleEl) {
       siteTitleEl.textContent = state.data?.meta?.title || "九宮八卦箭頭";

@@ -2,6 +2,22 @@
   const SVG_NS = "http://www.w3.org/2000/svg";
   const GRID_UNIT_PERCENT = 100 / 6;
 
+  const RULE_KEYS = {
+    parent: ["parent", "Parent"],
+    child: ["child", "Child"],
+    previous: ["previous", "prev", "Previous", "Prev"],
+    next: ["next", "Next"],
+    evidence: ["證據", "evidence", "Evidence"],
+    support: ["支持意見", "support", "Support"],
+    oppose: ["反對意見", "oppose", "Oppose", "opposition"],
+  };
+
+  const relationNameByKey = new Map(
+    Object.entries(RULE_KEYS).flatMap(([normalized, aliases]) =>
+      aliases.map((alias) => [alias.toLowerCase(), normalized]),
+    ),
+  );
+
   function gridCenterPercent(row, col) {
     return {
       x: (2 * Number(col) + 1) * GRID_UNIT_PERCENT,
@@ -9,8 +25,8 @@
     };
   }
 
-  function uniqueById(nodes) {
-    return [...new Map(nodes.filter(Boolean).map((node) => [node.id, node])).values()];
+  function uniqueArray(items) {
+    return [...new Set(items.filter(Boolean).map((item) => String(item)))];
   }
 
   function toCoreNode(node, nodeMap) {
@@ -19,17 +35,101 @@
     return nodeMap.get(node.parentId) || null;
   }
 
+  function normalizeToken(value) {
+    return String(value || "")
+      .trim()
+      .replace(/\.md$/i, "")
+      .replace(/^\[\[/, "")
+      .replace(/\]\]$/, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+  }
+
+  function resolveCoreToken(token, nodeMap) {
+    const normalized = normalizeToken(token);
+    if (!normalized) return null;
+
+    const coreNodes = [...nodeMap.values()].filter((node) => node.kind === "core");
+    for (const node of coreNodes) {
+      const candidates = [
+        node.id,
+        String(node.number || ""),
+        node.title,
+        node.trigram || "",
+        `${node.number || ""}${node.trigram || ""}`,
+      ];
+      if (candidates.some((candidate) => normalizeToken(candidate) === normalized)) {
+        return node;
+      }
+    }
+    return null;
+  }
+
+  function splitTargets(rawValue) {
+    const source = String(rawValue || "").trim();
+    if (!source) return [];
+
+    const wikiTargets = [...source.matchAll(/\[\[([^\]]+)\]\]/g)]
+      .map((match) => match[1].split("|")[0].split("#")[0].trim())
+      .filter(Boolean);
+    if (wikiTargets.length) return wikiTargets;
+
+    return source
+      .split(/[，,、；;\s]+/)
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  function parseExcalRules(text, nodeMap, currentCoreId) {
+    const result = {
+      parent: [],
+      child: [],
+      previous: [],
+      next: [],
+      evidence: [],
+      support: [],
+      oppose: [],
+      hasExplicitRelation: false,
+    };
+
+    const lines = String(text || "").split("\n");
+    lines.forEach((line) => {
+      const pair = line.match(/^\s*([^:\n]+)::\s*(.*)$/);
+      if (!pair) return;
+
+      const key = relationNameByKey.get(String(pair[1] || "").trim().toLowerCase());
+      if (!key) return;
+
+      const resolved = splitTargets(pair[2])
+        .map((token) => resolveCoreToken(token, nodeMap))
+        .filter(Boolean)
+        .map((node) => node.id)
+        .filter((id) => id !== currentCoreId);
+
+      result[key] = uniqueArray([...result[key], ...resolved]);
+    });
+
+    result.hasExplicitRelation =
+      result.parent.length > 0 ||
+      result.child.length > 0 ||
+      result.previous.length > 0 ||
+      result.next.length > 0;
+
+    return result;
+  }
+
   function relationCoreTargets(coreNode, relationType, nodeMap) {
-    return uniqueById(
+    return uniqueArray(
       (coreNode?.relations?.[relationType] || [])
         .map((id) => nodeMap.get(id))
         .map((node) => toCoreNode(node, nodeMap))
-        .filter((node) => node && node.id !== coreNode.id),
+        .filter((node) => node && node.id !== coreNode.id)
+        .map((node) => node.id),
     );
   }
 
   function createRenderer({ rootEl, onNodeClick }) {
-    function render({ currentNodeId, nodeMap, activeRelationTypes, activeFlowEdge, flowSteps }) {
+    function render({ currentNodeId, nodeMap, activeRelationTypes, activeRuleTypes, activeFlowEdge, flowSteps }) {
       if (!rootEl || !nodeMap?.size) return;
 
       const currentRaw = nodeMap.get(currentNodeId) || null;
@@ -44,17 +144,79 @@
         .sort((left, right) => Number(left.id) - Number(right.id));
 
       const width = rootEl.clientWidth || 420;
-      const height = rootEl.clientHeight || 540;
+      const height = rootEl.clientHeight || 520;
+
+      const rulesText = [currentCore.content, currentRaw?.content || ""].join("\n");
+      const parsedRules = parseExcalRules(rulesText, nodeMap, currentCore.id);
+
+      const fallbackBuckets = {
+        parent: relationCoreTargets(currentCore, "opposite", nodeMap),
+        child: relationCoreTargets(currentCore, "adjacent", nodeMap),
+        previous: relationCoreTargets(currentCore, "previous", nodeMap),
+        next: relationCoreTargets(currentCore, "next", nodeMap),
+      };
+
+      const buckets = parsedRules.hasExplicitRelation
+        ? {
+            parent: parsedRules.parent,
+            child: parsedRules.child,
+            previous: parsedRules.previous,
+            next: parsedRules.next,
+          }
+        : fallbackBuckets;
+
+      const enabledRules = new Set(
+        ((activeRuleTypes && activeRuleTypes.length
+          ? activeRuleTypes
+          : ["parent", "evidence", "child", "previous", "next", "support", "oppose"]) || []
+        ).map((item) => String(item)),
+      );
 
       const placements = new Map();
+      const placed = new Set();
+      const markPlaced = (id, x, y) => {
+        placements.set(id, { x, y });
+        placed.add(id);
+      };
+
+      const centerPercent = gridCenterPercent(1, 1);
+      markPlaced(currentCore.id, (centerPercent.x / 100) * width, (centerPercent.y / 100) * height);
+
+      const spreadHorizontal = (ids, yPercent) => {
+        if (!ids.length) return;
+        const start = 20;
+        const end = 80;
+        const span = ids.length === 1 ? 0 : (end - start) / (ids.length - 1);
+        ids.forEach((id, index) => {
+          if (placed.has(id)) return;
+          const xPercent = ids.length === 1 ? 50 : start + span * index;
+          markPlaced(id, (xPercent / 100) * width, (yPercent / 100) * height);
+        });
+      };
+
+      const spreadVertical = (ids, xPercent) => {
+        if (!ids.length) return;
+        const start = 22;
+        const end = 78;
+        const span = ids.length === 1 ? 0 : (end - start) / (ids.length - 1);
+        ids.forEach((id, index) => {
+          if (placed.has(id)) return;
+          const yPercent = ids.length === 1 ? 50 : start + span * index;
+          markPlaced(id, (xPercent / 100) * width, (yPercent / 100) * height);
+        });
+      };
+
+      spreadHorizontal(buckets.parent, gridCenterPercent(0, 1).y);
+      spreadHorizontal(buckets.child, gridCenterPercent(2, 1).y);
+      spreadVertical(buckets.previous, gridCenterPercent(1, 0).x);
+      spreadVertical(buckets.next, gridCenterPercent(1, 2).x);
+
       coreNodes.forEach((node) => {
+        if (placed.has(node.id)) return;
         const row = Number.isFinite(node.row) ? node.row : 1;
         const col = Number.isFinite(node.col) ? node.col : 1;
-        const centerPercent = gridCenterPercent(row, col);
-        placements.set(node.id, {
-          x: (centerPercent.x / 100) * width,
-          y: (centerPercent.y / 100) * height,
-        });
+        const point = gridCenterPercent(row, col);
+        markPlaced(node.id, (point.x / 100) * width, (point.y / 100) * height);
       });
 
       const edges = [];
@@ -66,14 +228,25 @@
         edges.push({ source, target, kind, active });
       };
 
-      (activeRelationTypes || []).forEach((type) => {
-        relationCoreTargets(currentCore, type, nodeMap).forEach((targetNode) => {
-          addEdge(currentCore.id, targetNode.id, type, false);
-        });
+      Object.entries(buckets).forEach(([kind, ids]) => {
+        if (!enabledRules.has(kind)) return;
+        ids.forEach((targetId) => addEdge(currentCore.id, targetId, kind, false));
       });
 
+      if (enabledRules.has("evidence")) {
+        parsedRules.evidence.forEach((targetId) => addEdge(currentCore.id, targetId, "evidence", false));
+      }
+      if (enabledRules.has("support")) {
+        parsedRules.support.forEach((targetId) => addEdge(currentCore.id, targetId, "support", false));
+      }
+      if (enabledRules.has("oppose")) {
+        parsedRules.oppose.forEach((targetId) => addEdge(currentCore.id, targetId, "oppose", false));
+      }
+
       (flowSteps || []).forEach((step) => {
-        const isActive = String(step.from) === String(activeFlowEdge?.from || "") && String(step.to) === String(activeFlowEdge?.to || "");
+        const isActive =
+          String(step.from) === String(activeFlowEdge?.from || "") &&
+          String(step.to) === String(activeFlowEdge?.to || "");
         addEdge(String(step.from), String(step.to), "flow", isActive);
       });
 
@@ -91,6 +264,7 @@
           <g data-nodes></g>
         </svg>
       `;
+
       const svg = rootEl.querySelector("svg");
       const linksLayer = svg.querySelector("[data-links]");
       const nodesLayer = svg.querySelector("[data-nodes]");
@@ -125,8 +299,8 @@
         const isCurrent = node.id === currentCore.id;
         const isFlowFrom = node.id === String(activeFlowEdge?.from || "");
         const isFlowTo = node.id === String(activeFlowEdge?.to || "");
-        const widthRect = isCurrent ? 88 : 74;
-        const heightRect = isCurrent ? 48 : 42;
+        const widthRect = isCurrent ? 92 : 78;
+        const heightRect = isCurrent ? 52 : 44;
 
         const group = document.createElementNS(SVG_NS, "g");
         const classes = [
@@ -155,7 +329,7 @@
 
         const t2 = document.createElementNS(SVG_NS, "tspan");
         t2.setAttribute("x", "9");
-        t2.setAttribute("y", "33");
+        t2.setAttribute("y", "34");
         t2.textContent = node.directionLabel || node.direction || "";
 
         text.append(t1, t2);
