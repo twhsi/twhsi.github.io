@@ -607,6 +607,119 @@ h2 {
   transition: stroke-opacity 160ms ease;
 }
 
+body[data-view-mode="excalibrain"] .inspector {
+  display: block;
+}
+
+body[data-view-mode="excalibrain"] .excal-panel {
+  background: linear-gradient(180deg, rgba(40, 65, 145, 0.96), rgba(27, 45, 112, 0.96));
+  border-color: rgba(187, 203, 255, 0.3);
+  padding: 14px;
+}
+
+body[data-view-mode="excalibrain"] .excal-panel .eyebrow,
+body[data-view-mode="excalibrain"] .excal-panel h3 {
+  color: #dbe7ff;
+}
+
+.excal-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#excal-filter {
+  width: 100%;
+  background: rgba(15, 23, 54, 0.75);
+  color: #eaf1ff;
+  border: 1px solid rgba(214, 224, 255, 0.3);
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+}
+
+.excal-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.excal-toolbar button {
+  border: 1px solid rgba(195, 207, 250, 0.34);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #ebf2ff;
+  background: rgba(11, 21, 56, 0.68);
+}
+
+.excal-root {
+  min-height: 560px;
+  border-radius: 10px;
+  border: 1px solid rgba(176, 194, 252, 0.32);
+  background: linear-gradient(180deg, #20367d 0%, #20316d 100%);
+  overflow: hidden;
+}
+
+.excal-root svg {
+  width: 100%;
+  height: 560px;
+  display: block;
+}
+
+.excal-link {
+  stroke: rgba(190, 206, 255, 0.42);
+  stroke-width: 1.1;
+}
+
+.excal-link.kind-hub {
+  stroke-dasharray: 4 3;
+  stroke: rgba(240, 249, 255, 0.45);
+}
+
+.excal-node {
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.excal-node rect {
+  fill: #182a60;
+  stroke: rgba(207, 224, 255, 0.38);
+  stroke-width: 1.1;
+}
+
+.excal-node text {
+  fill: #ebf2ff;
+  font-family: "Menlo", "SF Mono", monospace;
+  font-size: 12px;
+  pointer-events: none;
+  letter-spacing: 0.01em;
+}
+
+.excal-node.kind-current rect {
+  fill: #cfd5df;
+  stroke: rgba(255, 255, 255, 0.88);
+}
+
+.excal-node.kind-current text {
+  fill: #2a3038;
+  font-weight: 700;
+}
+
+.excal-node.kind-hub rect {
+  fill: #1a2f6a;
+  stroke: rgba(255, 197, 197, 0.65);
+}
+
+.excal-status {
+  margin-top: 10px;
+  color: rgba(237, 244, 255, 0.9);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 1180px) {
   .shell {
     grid-template-columns: 240px minmax(0, 1fr);
