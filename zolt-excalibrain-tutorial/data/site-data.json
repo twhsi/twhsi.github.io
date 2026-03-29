@@ -1,0 +1,1013 @@
+{
+  "generatedAt": "2026-03-29T02:55:13.699Z",
+  "sourceVault": "Zolt的Excalibrain教程",
+  "featuredPath": "◊  Remote Work Policy.md",
+  "meta": {
+    "title": "Remote Work Policy Lab",
+    "sidebarEyebrow": "Vault",
+    "readerEyebrow": "Debate Reader"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": false,
+    "collapse-color-groups": false,
+    "colorGroups": [],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.48,
+    "repelStrength": 14,
+    "linkStrength": 1,
+    "linkDistance": 200,
+    "scale": 1,
+    "close": true
+  },
+  "localGraphOptions": {
+    "localJumps": 2,
+    "localBacklinks": true,
+    "localForelinks": true
+  },
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "note",
+        "name": "◊  Remote Work Policy",
+        "path": "◊  Remote Work Policy.md"
+      },
+      {
+        "type": "note",
+        "name": "Chat GPT studies about stress, commute and productivity",
+        "path": "Chat GPT studies about stress, commute and productivity.md"
+      },
+      {
+        "type": "note",
+        "name": "How can remote work improve employee work-life balance?",
+        "path": "How can remote work improve employee work-life balance?.md"
+      },
+      {
+        "type": "note",
+        "name": "Improve work-life balance",
+        "path": "Improve work-life balance.md"
+      },
+      {
+        "type": "note",
+        "name": "In-person collaboration fosters creativity and innovation",
+        "path": "In-person collaboration fosters creativity and innovation.md"
+      },
+      {
+        "type": "note",
+        "name": "No to Remote Work",
+        "path": "No to Remote Work.md"
+      },
+      {
+        "type": "note",
+        "name": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue",
+        "path": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+      },
+      {
+        "type": "note",
+        "name": "Remote employees may experience isolation",
+        "path": "Remote employees may experience isolation.md"
+      },
+      {
+        "type": "note",
+        "name": "Remote work allows employees to adjust their work hours",
+        "path": "Remote work allows employees to adjust their work hours.md"
+      },
+      {
+        "type": "note",
+        "name": "Social Isolation",
+        "path": "Social Isolation.md"
+      },
+      {
+        "type": "note",
+        "name": "Studies indicate a correlation between reduced commute and stress",
+        "path": "Studies indicate a correlation between reduced commute and stress.md"
+      },
+      {
+        "type": "note",
+        "name": "Yes, the company should implement a remote work policy",
+        "path": "Yes, the company should implement a remote work policy.md"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "◊  Remote Work Policy.md",
+      "path": "◊  Remote Work Policy.md",
+      "basename": "◊  Remote Work Policy",
+      "title": "Remote Work Policy",
+      "folder": "",
+      "frontmatter": {
+        "title": "Remote Work Policy",
+        "Parent": [],
+        "Child": [
+          "[[Yes, the company should implement a remote work policy]]",
+          "[[No to Remote Work]]"
+        ],
+        "Prev": [],
+        "Next": [
+          "[[How can remote work improve employee work-life balance?]]"
+        ],
+        "Compass": [
+          "[[Improve work-life balance]]",
+          "[[In-person collaboration fosters creativity and innovation]]",
+          "[[Social Isolation]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:10.495Z",
+      "content": "# Question\n\nShould the company implement a remote work policy?\n\nPosition:: [[Yes, the company should implement a remote work policy]]\n\nPosition:: [[No to Remote Work|No, the company should not implement a remote work policy]]",
+      "rawForLinks": "---\ntitle: Remote Work Policy\nParent: []\nChild:\n  - \"[[Yes, the company should implement a remote work policy]]\"\n  - \"[[No to Remote Work]]\"\nPrev: []\nNext:\n  - \"[[How can remote work improve employee work-life balance?]]\"\nCompass:\n  - \"[[Improve work-life balance]]\"\n  - \"[[In-person collaboration fosters creativity and innovation]]\"\n  - \"[[Social Isolation]]\"\n---\n# Question\n\nShould the company implement a remote work policy?\n\nPosition:: [[Yes, the company should implement a remote work policy]]\n\nPosition:: [[No to Remote Work|No, the company should not implement a remote work policy]]\n",
+      "links": [
+        {
+          "target": "Yes, the company should implement a remote work policy.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "No to Remote Work.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "How can remote work improve employee work-life balance?.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "In-person collaboration fosters creativity and innovation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Social Isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "No to Remote Work.md",
+          "alias": "No, the company should not implement a remote work policy",
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "How can remote work improve employee work-life balance?.md",
+        "No to Remote Work.md",
+        "Yes, the company should implement a remote work policy.md"
+      ],
+      "preview": "# Question Should the company implement a remote work policy? Position:: [[Yes, the company should implement a remote work policy]] Position:: [[No to Remote Work|No, the company should not implement a remote work policy"
+    },
+    {
+      "id": "Chat GPT studies about stress, commute and productivity.md",
+      "path": "Chat GPT studies about stress, commute and productivity.md",
+      "basename": "Chat GPT studies about stress, commute and productivity",
+      "title": "Chat GPT studies about stress, commute and productivity",
+      "folder": "",
+      "frontmatter": {
+        "title": "Chat GPT studies about stress, commute and productivity",
+        "Parent": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Child": [
+          "[[Studies indicate a correlation between reduced commute and stress]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[Improve work-life balance]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:50:29.476Z",
+      "content": "# Evidence note\n\nThis note stores external references discussing commute time, stress, and productivity trends.\n\nSource:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)",
+      "rawForLinks": "---\ntitle: Chat GPT studies about stress, commute and productivity\nParent:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nChild:\n  - \"[[Studies indicate a correlation between reduced commute and stress]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[Improve work-life balance]]\"\n---\n# Evidence note\n\nThis note stores external references discussing commute time, stress, and productivity trends.\n\nSource:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n",
+      "links": [
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Studies indicate a correlation between reduced commute and stress.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+        "Studies indicate a correlation between reduced commute and stress.md"
+      ],
+      "preview": "# Evidence note This note stores external references discussing commute time, stress, and productivity trends. Source:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)"
+    },
+    {
+      "id": "How can remote work improve employee work-life balance?.md",
+      "path": "How can remote work improve employee work-life balance?.md",
+      "basename": "How can remote work improve employee work-life balance?",
+      "title": "How can remote work improve employee work-life balance?",
+      "folder": "",
+      "frontmatter": {
+        "title": "How can remote work improve employee work-life balance?",
+        "Parent": [
+          "[[◊  Remote Work Policy]]"
+        ],
+        "Child": [
+          "[[Remote work allows employees to adjust their work hours]]",
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Prev": [],
+        "Next": [
+          "[[Improve work-life balance]]"
+        ],
+        "Compass": [
+          "[[Studies indicate a correlation between reduced commute and stress]]",
+          "[[Remote employees may experience isolation]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:19.840Z",
+      "content": "# Question\n\nHow can remote work improve employee work-life balance?\n\nPosition:: [[Remote work allows employees to adjust their work hours]]\nPosition:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]",
+      "rawForLinks": "---\ntitle: How can remote work improve employee work-life balance?\nParent:\n  - \"[[◊  Remote Work Policy]]\"\nChild:\n  - \"[[Remote work allows employees to adjust their work hours]]\"\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nPrev: []\nNext:\n  - \"[[Improve work-life balance]]\"\nCompass:\n  - \"[[Studies indicate a correlation between reduced commute and stress]]\"\n  - \"[[Remote employees may experience isolation]]\"\n---\n# Question\n\nHow can remote work improve employee work-life balance?\n\nPosition:: [[Remote work allows employees to adjust their work hours]]\nPosition:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\n",
+      "links": [
+        {
+          "target": "◊  Remote Work Policy.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Remote work allows employees to adjust their work hours.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Studies indicate a correlation between reduced commute and stress.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Remote employees may experience isolation.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "Improve work-life balance.md",
+        "Remote employees may experience isolation.md",
+        "Remote work allows employees to adjust their work hours.md",
+        "Yes, the company should implement a remote work policy.md"
+      ],
+      "preview": "# Question How can remote work improve employee work-life balance? Position:: [[Remote work allows employees to adjust their work hours]] Position:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and f"
+    },
+    {
+      "id": "Improve work-life balance.md",
+      "path": "Improve work-life balance.md",
+      "basename": "Improve work-life balance",
+      "title": "Improve work-life balance",
+      "folder": "",
+      "frontmatter": {
+        "title": "Improve work-life balance",
+        "Parent": [
+          "[[Yes, the company should implement a remote work policy]]"
+        ],
+        "Child": [
+          "[[Remote work allows employees to adjust their work hours]]",
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Prev": [
+          "[[How can remote work improve employee work-life balance?]]"
+        ],
+        "Next": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Compass": [
+          "[[Studies indicate a correlation between reduced commute and stress]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:42.024Z",
+      "content": "# Argument\n\nRemote work increases employee flexibility and work-life balance.\n\nQuestion:: [[How can remote work improve employee work-life balance?]]",
+      "rawForLinks": "---\ntitle: Improve work-life balance\nParent:\n  - \"[[Yes, the company should implement a remote work policy]]\"\nChild:\n  - \"[[Remote work allows employees to adjust their work hours]]\"\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nPrev:\n  - \"[[How can remote work improve employee work-life balance?]]\"\nNext:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nCompass:\n  - \"[[Studies indicate a correlation between reduced commute and stress]]\"\n---\n# Argument\n\nRemote work increases employee flexibility and work-life balance.\n\nQuestion:: [[How can remote work improve employee work-life balance?]]\n",
+      "links": [
+        {
+          "target": "Yes, the company should implement a remote work policy.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Remote work allows employees to adjust their work hours.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "How can remote work improve employee work-life balance?.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Studies indicate a correlation between reduced commute and stress.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "Chat GPT studies about stress, commute and productivity.md",
+        "How can remote work improve employee work-life balance?.md",
+        "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+        "Remote work allows employees to adjust their work hours.md",
+        "Yes, the company should implement a remote work policy.md"
+      ],
+      "preview": "# Argument Remote work increases employee flexibility and work-life balance. Question:: [[How can remote work improve employee work-life balance?]]"
+    },
+    {
+      "id": "In-person collaboration fosters creativity and innovation.md",
+      "path": "In-person collaboration fosters creativity and innovation.md",
+      "basename": "In-person collaboration fosters creativity and innovation",
+      "title": "In-person collaboration fosters creativity and innovation",
+      "folder": "",
+      "frontmatter": {
+        "title": "In-person collaboration fosters creativity and innovation",
+        "Parent": [
+          "[[No to Remote Work]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[No to Remote Work]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[Social Isolation]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:50:04.839Z",
+      "content": "# Argument\n\nIn-person collaboration fosters creativity and innovation through spontaneous discussions and faster trust building.",
+      "rawForLinks": "---\ntitle: In-person collaboration fosters creativity and innovation\nParent:\n  - \"[[No to Remote Work]]\"\nChild: []\nPrev:\n  - \"[[No to Remote Work]]\"\nNext: []\nCompass:\n  - \"[[Social Isolation]]\"\n---\n# Argument\n\nIn-person collaboration fosters creativity and innovation through spontaneous discussions and faster trust building.\n",
+      "links": [
+        {
+          "target": "No to Remote Work.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Social Isolation.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "No to Remote Work.md",
+        "Social Isolation.md"
+      ],
+      "preview": "# Argument In-person collaboration fosters creativity and innovation through spontaneous discussions and faster trust building."
+    },
+    {
+      "id": "No to Remote Work.md",
+      "path": "No to Remote Work.md",
+      "basename": "No to Remote Work",
+      "title": "No to Remote Work",
+      "folder": "",
+      "frontmatter": {
+        "title": "No to Remote Work",
+        "Parent": [
+          "[[◊  Remote Work Policy]]"
+        ],
+        "Child": [
+          "[[In-person collaboration fosters creativity and innovation]]",
+          "[[Social Isolation]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[Remote employees may experience isolation]]",
+          "[[Yes, the company should implement a remote work policy]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:35.791Z",
+      "content": "# Position\n\nNo, the company should not implement a remote work policy.\n\nSupporting Argument:: [[In-person collaboration fosters creativity and innovation]]\nSupporting Argument:: [[Social Isolation]]",
+      "rawForLinks": "---\ntitle: No to Remote Work\nParent:\n  - \"[[◊  Remote Work Policy]]\"\nChild:\n  - \"[[In-person collaboration fosters creativity and innovation]]\"\n  - \"[[Social Isolation]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[Remote employees may experience isolation]]\"\n  - \"[[Yes, the company should implement a remote work policy]]\"\n---\n# Position\n\nNo, the company should not implement a remote work policy.\n\nSupporting Argument:: [[In-person collaboration fosters creativity and innovation]]\nSupporting Argument:: [[Social Isolation]]\n",
+      "links": [
+        {
+          "target": "◊  Remote Work Policy.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "In-person collaboration fosters creativity and innovation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Social Isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Remote employees may experience isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Yes, the company should implement a remote work policy.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "In-person collaboration fosters creativity and innovation.md",
+        "Remote employees may experience isolation.md",
+        "Social Isolation.md",
+        "Yes, the company should implement a remote work policy.md"
+      ],
+      "preview": "# Position No, the company should not implement a remote work policy. Supporting Argument:: [[In-person collaboration fosters creativity and innovation]] Supporting Argument:: [[Social Isolation]]"
+    },
+    {
+      "id": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "path": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "basename": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue",
+      "title": "Reduced commute reduces stress and fatigue",
+      "folder": "",
+      "frontmatter": {
+        "title": "Reduced commute reduces stress and fatigue",
+        "Parent": [
+          "[[Improve work-life balance]]"
+        ],
+        "Child": [
+          "[[Studies indicate a correlation between reduced commute and stress]]"
+        ],
+        "Prev": [
+          "[[Improve work-life balance]]"
+        ],
+        "Next": [
+          "[[Studies indicate a correlation between reduced commute and stress]]"
+        ],
+        "Compass": [
+          "[[Chat GPT studies about stress, commute and productivity]]",
+          "[[Remote employees may experience isolation]]",
+          "[[Social Isolation]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:51.864Z",
+      "content": "# Evidence-backed argument\n\nReduced commuting reduces stress and fatigue.\n\nEvidence:: [[Chat GPT studies about stress, commute and productivity]]\nEvidence Link:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n\nSupporting Argument:: [[Studies indicate a correlation between reduced commute and stress]]\n\nObjecting Argument:: [[Remote employees may experience isolation]]\nObjecting Argument:: [[Social Isolation]]",
+      "rawForLinks": "---\ntitle: Reduced commute reduces stress and fatigue\nParent:\n  - \"[[Improve work-life balance]]\"\nChild:\n  - \"[[Studies indicate a correlation between reduced commute and stress]]\"\nPrev:\n  - \"[[Improve work-life balance]]\"\nNext:\n  - \"[[Studies indicate a correlation between reduced commute and stress]]\"\nCompass:\n  - \"[[Chat GPT studies about stress, commute and productivity]]\"\n  - \"[[Remote employees may experience isolation]]\"\n  - \"[[Social Isolation]]\"\n---\n# Evidence-backed argument\n\nReduced commuting reduces stress and fatigue.\n\nEvidence:: [[Chat GPT studies about stress, commute and productivity]]\nEvidence Link:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n\nSupporting Argument:: [[Studies indicate a correlation between reduced commute and stress]]\n\nObjecting Argument:: [[Remote employees may experience isolation]]\nObjecting Argument:: [[Social Isolation]]\n",
+      "links": [
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Studies indicate a correlation between reduced commute and stress.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Chat GPT studies about stress, commute and productivity.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Remote employees may experience isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Social Isolation.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "Chat GPT studies about stress, commute and productivity.md",
+        "How can remote work improve employee work-life balance?.md",
+        "Improve work-life balance.md",
+        "Remote employees may experience isolation.md",
+        "Remote work allows employees to adjust their work hours.md",
+        "Studies indicate a correlation between reduced commute and stress.md",
+        "Yes, the company should implement a remote work policy.md"
+      ],
+      "preview": "# Evidence-backed argument Reduced commuting reduces stress and fatigue. Evidence:: [[Chat GPT studies about stress, commute and productivity]] Evidence Link:: [Chat GPT share link](https://chat.openai.com/share/fcc219ba"
+    },
+    {
+      "id": "Remote employees may experience isolation.md",
+      "path": "Remote employees may experience isolation.md",
+      "basename": "Remote employees may experience isolation",
+      "title": "Remote employees may experience isolation",
+      "folder": "",
+      "frontmatter": {
+        "title": "Remote employees may experience isolation",
+        "Parent": [
+          "[[No to Remote Work]]"
+        ],
+        "Child": [
+          "[[Social Isolation]]"
+        ],
+        "Prev": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Next": [
+          "[[Social Isolation]]"
+        ],
+        "Compass": [
+          "[[How can remote work improve employee work-life balance?]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:50:18.167Z",
+      "content": "# Objection\n\nRemote employees may experience isolation, which can affect collaboration quality and mental well-being.",
+      "rawForLinks": "---\ntitle: Remote employees may experience isolation\nParent:\n  - \"[[No to Remote Work]]\"\nChild:\n  - \"[[Social Isolation]]\"\nPrev:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nNext:\n  - \"[[Social Isolation]]\"\nCompass:\n  - \"[[How can remote work improve employee work-life balance?]]\"\n---\n# Objection\n\nRemote employees may experience isolation, which can affect collaboration quality and mental well-being.\n",
+      "links": [
+        {
+          "target": "No to Remote Work.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Social Isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "How can remote work improve employee work-life balance?.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "How can remote work improve employee work-life balance?.md",
+        "No to Remote Work.md",
+        "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+        "Social Isolation.md"
+      ],
+      "preview": "# Objection Remote employees may experience isolation, which can affect collaboration quality and mental well-being."
+    },
+    {
+      "id": "Remote work allows employees to adjust their work hours.md",
+      "path": "Remote work allows employees to adjust their work hours.md",
+      "basename": "Remote work allows employees to adjust their work hours",
+      "title": "Remote work allows employees to adjust their work hours",
+      "folder": "",
+      "frontmatter": {
+        "title": "Remote work allows employees to adjust their work hours",
+        "Parent": [
+          "[[Improve work-life balance]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[How can remote work improve employee work-life balance?]]"
+        ],
+        "Next": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Compass": [
+          "[[Yes, the company should implement a remote work policy]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:50:12.168Z",
+      "content": "# Argument\n\nRemote work allows employees to adjust their work hours around family and personal responsibilities.",
+      "rawForLinks": "---\ntitle: Remote work allows employees to adjust their work hours\nParent:\n  - \"[[Improve work-life balance]]\"\nChild: []\nPrev:\n  - \"[[How can remote work improve employee work-life balance?]]\"\nNext:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nCompass:\n  - \"[[Yes, the company should implement a remote work policy]]\"\n---\n# Argument\n\nRemote work allows employees to adjust their work hours around family and personal responsibilities.\n",
+      "links": [
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "How can remote work improve employee work-life balance?.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Yes, the company should implement a remote work policy.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "How can remote work improve employee work-life balance?.md",
+        "Improve work-life balance.md"
+      ],
+      "preview": "# Argument Remote work allows employees to adjust their work hours around family and personal responsibilities."
+    },
+    {
+      "id": "Social Isolation.md",
+      "path": "Social Isolation.md",
+      "basename": "Social Isolation",
+      "title": "Social Isolation",
+      "folder": "",
+      "frontmatter": {
+        "title": "Social Isolation",
+        "Parent": [
+          "[[Remote employees may experience isolation]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[No to Remote Work]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[In-person collaboration fosters creativity and innovation]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:50:22.827Z",
+      "content": "# Concern\n\nSocial isolation is a potential downside of fully remote work and should be mitigated with intentional team rituals.",
+      "rawForLinks": "---\ntitle: Social Isolation\nParent:\n  - \"[[Remote employees may experience isolation]]\"\nChild: []\nPrev:\n  - \"[[No to Remote Work]]\"\nNext: []\nCompass:\n  - \"[[In-person collaboration fosters creativity and innovation]]\"\n---\n# Concern\n\nSocial isolation is a potential downside of fully remote work and should be mitigated with intentional team rituals.\n",
+      "links": [
+        {
+          "target": "Remote employees may experience isolation.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "No to Remote Work.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "In-person collaboration fosters creativity and innovation.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "In-person collaboration fosters creativity and innovation.md",
+        "No to Remote Work.md",
+        "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+        "Remote employees may experience isolation.md"
+      ],
+      "preview": "# Concern Social isolation is a potential downside of fully remote work and should be mitigated with intentional team rituals."
+    },
+    {
+      "id": "Studies indicate a correlation between reduced commute and stress.md",
+      "path": "Studies indicate a correlation between reduced commute and stress.md",
+      "basename": "Studies indicate a correlation between reduced commute and stress",
+      "title": "Studies indicate a correlation between reduced commute and stress",
+      "folder": "",
+      "frontmatter": {
+        "title": "Studies indicate a correlation between reduced commute and stress",
+        "Parent": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[Chat GPT studies about stress, commute and productivity]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:58.201Z",
+      "content": "# Argument\n\nStudies indicate a correlation between reduced commute and stress.",
+      "rawForLinks": "---\ntitle: Studies indicate a correlation between reduced commute and stress\nParent:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nChild: []\nPrev:\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nNext: []\nCompass:\n  - \"[[Chat GPT studies about stress, commute and productivity]]\"\n---\n# Argument\n\nStudies indicate a correlation between reduced commute and stress.\n",
+      "links": [
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Chat GPT studies about stress, commute and productivity.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "Chat GPT studies about stress, commute and productivity.md",
+        "How can remote work improve employee work-life balance?.md",
+        "Improve work-life balance.md",
+        "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+      ],
+      "preview": "# Argument Studies indicate a correlation between reduced commute and stress."
+    },
+    {
+      "id": "Yes, the company should implement a remote work policy.md",
+      "path": "Yes, the company should implement a remote work policy.md",
+      "basename": "Yes, the company should implement a remote work policy",
+      "title": "Yes, the company should implement a remote work policy",
+      "folder": "",
+      "frontmatter": {
+        "title": "Yes, the company should implement a remote work policy",
+        "Parent": [
+          "[[◊  Remote Work Policy]]"
+        ],
+        "Child": [
+          "[[Improve work-life balance]]",
+          "[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[How can remote work improve employee work-life balance?]]",
+          "[[No to Remote Work]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T02:49:27.255Z",
+      "content": "# Position\n\nYes, the company should implement a remote work policy.\n\nSupporting Argument:: [[Improve work-life balance]]\nSupporting Argument:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]",
+      "rawForLinks": "---\ntitle: Yes, the company should implement a remote work policy\nParent:\n  - \"[[◊  Remote Work Policy]]\"\nChild:\n  - \"[[Improve work-life balance]]\"\n  - \"[[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[How can remote work improve employee work-life balance?]]\"\n  - \"[[No to Remote Work]]\"\n---\n# Position\n\nYes, the company should implement a remote work policy.\n\nSupporting Argument:: [[Improve work-life balance]]\nSupporting Argument:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]\n",
+      "links": [
+        {
+          "target": "◊  Remote Work Policy.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Improve work-life balance.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "How can remote work improve employee work-life balance?.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "No to Remote Work.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊  Remote Work Policy.md",
+        "Improve work-life balance.md",
+        "No to Remote Work.md",
+        "Remote work allows employees to adjust their work hours.md"
+      ],
+      "preview": "# Position Yes, the company should implement a remote work policy. Supporting Argument:: [[Improve work-life balance]] Supporting Argument:: [[Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue]]"
+    }
+  ],
+  "edges": [
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "Yes, the company should implement a remote work policy.md"
+    },
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "No to Remote Work.md"
+    },
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "How can remote work improve employee work-life balance?.md"
+    },
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "In-person collaboration fosters creativity and innovation.md"
+    },
+    {
+      "source": "◊  Remote Work Policy.md",
+      "target": "Social Isolation.md"
+    },
+    {
+      "source": "Chat GPT studies about stress, commute and productivity.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Chat GPT studies about stress, commute and productivity.md",
+      "target": "Studies indicate a correlation between reduced commute and stress.md"
+    },
+    {
+      "source": "Chat GPT studies about stress, commute and productivity.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "◊  Remote Work Policy.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "Remote work allows employees to adjust their work hours.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "Studies indicate a correlation between reduced commute and stress.md"
+    },
+    {
+      "source": "How can remote work improve employee work-life balance?.md",
+      "target": "Remote employees may experience isolation.md"
+    },
+    {
+      "source": "Improve work-life balance.md",
+      "target": "Yes, the company should implement a remote work policy.md"
+    },
+    {
+      "source": "Improve work-life balance.md",
+      "target": "Remote work allows employees to adjust their work hours.md"
+    },
+    {
+      "source": "Improve work-life balance.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Improve work-life balance.md",
+      "target": "How can remote work improve employee work-life balance?.md"
+    },
+    {
+      "source": "Improve work-life balance.md",
+      "target": "Studies indicate a correlation between reduced commute and stress.md"
+    },
+    {
+      "source": "In-person collaboration fosters creativity and innovation.md",
+      "target": "No to Remote Work.md"
+    },
+    {
+      "source": "In-person collaboration fosters creativity and innovation.md",
+      "target": "Social Isolation.md"
+    },
+    {
+      "source": "No to Remote Work.md",
+      "target": "◊  Remote Work Policy.md"
+    },
+    {
+      "source": "No to Remote Work.md",
+      "target": "In-person collaboration fosters creativity and innovation.md"
+    },
+    {
+      "source": "No to Remote Work.md",
+      "target": "Social Isolation.md"
+    },
+    {
+      "source": "No to Remote Work.md",
+      "target": "Remote employees may experience isolation.md"
+    },
+    {
+      "source": "No to Remote Work.md",
+      "target": "Yes, the company should implement a remote work policy.md"
+    },
+    {
+      "source": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "target": "Studies indicate a correlation between reduced commute and stress.md"
+    },
+    {
+      "source": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "target": "Chat GPT studies about stress, commute and productivity.md"
+    },
+    {
+      "source": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "target": "Remote employees may experience isolation.md"
+    },
+    {
+      "source": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md",
+      "target": "Social Isolation.md"
+    },
+    {
+      "source": "Remote employees may experience isolation.md",
+      "target": "No to Remote Work.md"
+    },
+    {
+      "source": "Remote employees may experience isolation.md",
+      "target": "Social Isolation.md"
+    },
+    {
+      "source": "Remote employees may experience isolation.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Remote employees may experience isolation.md",
+      "target": "How can remote work improve employee work-life balance?.md"
+    },
+    {
+      "source": "Remote work allows employees to adjust their work hours.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "Remote work allows employees to adjust their work hours.md",
+      "target": "How can remote work improve employee work-life balance?.md"
+    },
+    {
+      "source": "Remote work allows employees to adjust their work hours.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Remote work allows employees to adjust their work hours.md",
+      "target": "Yes, the company should implement a remote work policy.md"
+    },
+    {
+      "source": "Social Isolation.md",
+      "target": "Remote employees may experience isolation.md"
+    },
+    {
+      "source": "Social Isolation.md",
+      "target": "No to Remote Work.md"
+    },
+    {
+      "source": "Social Isolation.md",
+      "target": "In-person collaboration fosters creativity and innovation.md"
+    },
+    {
+      "source": "Studies indicate a correlation between reduced commute and stress.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Studies indicate a correlation between reduced commute and stress.md",
+      "target": "Chat GPT studies about stress, commute and productivity.md"
+    },
+    {
+      "source": "Yes, the company should implement a remote work policy.md",
+      "target": "◊  Remote Work Policy.md"
+    },
+    {
+      "source": "Yes, the company should implement a remote work policy.md",
+      "target": "Improve work-life balance.md"
+    },
+    {
+      "source": "Yes, the company should implement a remote work policy.md",
+      "target": "Reduced Commute Reduces Stress Reduced commuting reduces stress and fatigue.md"
+    },
+    {
+      "source": "Yes, the company should implement a remote work policy.md",
+      "target": "How can remote work improve employee work-life balance?.md"
+    },
+    {
+      "source": "Yes, the company should implement a remote work policy.md",
+      "target": "No to Remote Work.md"
+    }
+  ],
+  "assets": {}
+}
