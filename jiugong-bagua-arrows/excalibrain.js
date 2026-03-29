@@ -48,30 +48,18 @@
 
       const width = rootEl.clientWidth || 420;
       const height = rootEl.clientHeight || 540;
-      const centerX = width * 0.5;
-      const centerY = height * 0.5;
-      const radiusX = Math.min(240, width * 0.34);
-      const radiusY = Math.min(210, height * 0.34);
+      const padX = Math.max(62, width * 0.14);
+      const padY = Math.max(58, height * 0.14);
+      const stepX = (width - padX * 2) / 2;
+      const stepY = (height - padY * 2) / 2;
 
       const placements = new Map();
-      const taken = new Set();
-
-      placements.set(currentCore.id, {
-        x: centerX,
-        y: centerY,
-      });
-
-      coreNodes.forEach((node, index) => {
-        if (node.id === currentCore.id) return;
-        const preferred = SLOT_VECTOR[node.direction] ? node.direction : SLOT_SEQUENCE[index % SLOT_SEQUENCE.length];
-        const slot = !taken.has(preferred)
-          ? preferred
-          : SLOT_SEQUENCE.find((item) => !taken.has(item)) || preferred;
-        taken.add(slot);
-        const [vx, vy] = SLOT_VECTOR[slot] || [0, 0];
+      coreNodes.forEach((node) => {
+        const row = Number.isFinite(node.row) ? node.row : 1;
+        const col = Number.isFinite(node.col) ? node.col : 1;
         placements.set(node.id, {
-          x: centerX + vx * radiusX,
-          y: centerY + vy * radiusY,
+          x: padX + col * stepX,
+          y: padY + row * stepY,
         });
       });
 

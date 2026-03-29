@@ -309,6 +309,7 @@
       if (!node) return;
       const button = document.createElement("button");
       button.type = "button";
+      button.dataset.nodeId = node.id;
       const isActive = node.id === activeCoreId;
       const isRelated = currentRelationIds.has(node.id);
       const isFlowFrom = flowStep && flowStep.from === node.id;
@@ -341,28 +342,32 @@
       </defs>
     `;
 
-    const centerPoint = (id) => {
-      const node = getNode(id);
-      if (!node || typeof node.row !== "number" || typeof node.col !== "number") return null;
-      return {
-        x: (node.col + 0.5) * 100,
-        y: (node.row + 0.5) * 100,
-      };
-    };
+    const svgRect = arrowLayerEl.getBoundingClientRect();
+    const pointMap = new Map();
+    boardGridEl.querySelectorAll(".board-cell").forEach((cell) => {
+      const nodeId = cell.dataset.nodeId;
+      if (!nodeId) return;
+      const rect = cell.getBoundingClientRect();
+      if (!svgRect.width || !svgRect.height) return;
+      pointMap.set(nodeId, {
+        x: ((rect.left + rect.width / 2 - svgRect.left) / svgRect.width) * 300,
+        y: ((rect.top + rect.height / 2 - svgRect.top) / svgRect.height) * 300,
+      });
+    });
 
     const lines = [];
     const labels = [];
     for (let index = 0; index < steps.length; index += 1) {
       const step = steps[index];
-      const source = centerPoint(step.from);
-      const target = centerPoint(step.to);
+      const source = pointMap.get(step.from);
+      const target = pointMap.get(step.to);
       if (!source || !target) continue;
       const activeClass = index === state.activeStepIndex ? " active" : "";
       lines.push(`<line class="flow-line${activeClass}" x1="${source.x}" y1="${source.y}" x2="${target.x}" y2="${target.y}" marker-end="url(#arrow-tip)"></line>`);
       labels.push(`<text class="flow-label" x="${(source.x + target.x) / 2}" y="${(source.y + target.y) / 2 - 4}" text-anchor="middle">${index + 1}</text>`);
     }
 
-    const origin = centerPoint(steps[0].from);
+    const origin = pointMap.get(steps[0].from);
     const originDot = origin ? `<circle class="origin" cx="${origin.x}" cy="${origin.y}" r="3"></circle>` : "";
     arrowLayerEl.innerHTML = `${defs}${lines.join("")}${labels.join("")}${originDot}`;
   }
