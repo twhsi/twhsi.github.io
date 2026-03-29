@@ -226,6 +226,24 @@ h2 {
 .board-card {
   display: flex;
   flex-direction: column;
+  padding: 10px 12px 12px;
+}
+
+.board-card .card-head {
+  margin-bottom: 6px;
+}
+
+.board-card .eyebrow {
+  margin-bottom: 2px;
+}
+
+#focus-title {
+  font-size: clamp(19px, 1.9vw, 30px);
+}
+
+.focus-meta .tag {
+  padding: 5px 9px;
+  font-size: 12px;
 }
 
 .focus-meta {
@@ -246,67 +264,9 @@ h2 {
   font-size: 13px;
 }
 
-.flow-strip {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: 6px;
-}
-
-.flow-step {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.72);
-  padding: 5px;
-  cursor: pointer;
-  transition: border-color 120ms ease, transform 120ms ease, background-color 120ms ease;
-}
-
-.flow-step:hover {
-  transform: translateY(-1px);
-  border-color: rgba(47, 127, 141, 0.5);
-}
-
-.flow-step.active {
-  border-color: rgba(171, 79, 42, 0.72);
-  background: rgba(171, 79, 42, 0.14);
-}
-
-.flow-step-title {
-  display: block;
-  margin-bottom: 3px;
-  font-size: 11px;
-  color: #564327;
-  text-align: center;
-  font-weight: 600;
-}
-
-.flow-mini {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2px;
-}
-
-.flow-dot {
-  height: 9px;
-  border: 1px solid rgba(56, 45, 28, 0.24);
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.82);
-}
-
-.flow-dot.from {
-  background: rgba(171, 79, 42, 0.5);
-  border-color: rgba(171, 79, 42, 0.8);
-}
-
-.flow-dot.to {
-  background: rgba(47, 127, 141, 0.46);
-  border-color: rgba(47, 127, 141, 0.8);
-}
-
 .board-wrap {
   position: relative;
-  margin-top: 10px;
+  margin-top: 4px;
   width: min(100%, 780px);
   aspect-ratio: 1 / 1;
   margin-inline: auto;
@@ -649,11 +609,6 @@ h2 {
   .board-cell {
     min-height: 0;
   }
-
-  .flow-strip {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-  }
 }
 
 @media (max-width: 980px) {
@@ -696,10 +651,5 @@ h2 {
 
   .excal-root {
     min-height: min(50vh, 420px);
-  }
-
-  .flow-strip {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
   }
 }

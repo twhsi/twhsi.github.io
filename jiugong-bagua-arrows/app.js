@@ -27,7 +27,6 @@
   const focusTagNumberEl = document.getElementById("focus-tag-number");
   const focusTagTrigramEl = document.getElementById("focus-tag-trigram");
   const focusTagDirectionEl = document.getElementById("focus-tag-direction");
-  const flowStripEl = document.getElementById("flow-strip");
   const boardGridEl = document.getElementById("board-grid");
   const arrowLayerEl = document.getElementById("arrow-layer");
   const readerFileEl = document.getElementById("reader-file");
@@ -278,40 +277,6 @@
     });
   }
 
-  function renderFlowStrip() {
-    if (!flowStripEl) return;
-    flowStripEl.innerHTML = "";
-    const flatGrid = (state.data?.coreGrid || []).flat();
-
-    state.flowSteps.forEach((step, stepIndex) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = `flow-step${stepIndex === state.activeStepIndex ? " active" : ""}`;
-      button.innerHTML = `
-        <span class="flow-step-title">${stepIndex + 1}. ${escapeHtml(step.from)}→${escapeHtml(step.to)}</span>
-        <span class="flow-mini">
-          ${flatGrid
-            .map((cellId) => {
-              const classes = [
-                "flow-dot",
-                cellId === step.from ? "from" : "",
-                cellId === step.to ? "to" : "",
-              ]
-                .filter(Boolean)
-                .join(" ");
-              return `<span class="${classes}"></span>`;
-            })
-            .join("")}
-        </span>
-      `;
-      button.addEventListener("click", () => {
-        state.activeStepIndex = stepIndex;
-        setCurrentNode(step.from);
-      });
-      flowStripEl.appendChild(button);
-    });
-  }
-
   function renderBoard() {
     const current = getNode(state.currentNodeId);
     const activeCoreId = current?.kind === "child" ? current.parentId : current?.id;
@@ -493,7 +458,6 @@
     renderFocusHeader();
     renderFileList();
     renderFilters();
-    renderFlowStrip();
     renderBoard();
     renderArrowLayer();
     renderReader();
@@ -509,7 +473,6 @@
 
     state.flowTimer = setInterval(() => {
       state.activeStepIndex = (state.activeStepIndex + 1) % state.flowSteps.length;
-      renderFlowStrip();
       renderBoard();
       renderArrowLayer();
       renderExcalibrain();
@@ -561,7 +524,6 @@
     startFlowMotion();
 
     window.addEventListener("resize", () => {
-      renderFlowStrip();
       renderBoard();
       renderArrowLayer();
       renderExcalibrain();
