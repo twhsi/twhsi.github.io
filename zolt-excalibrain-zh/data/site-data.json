@@ -1,0 +1,1008 @@
+{
+  "generatedAt": "2026-03-29T11:45:39.155Z",
+  "sourceVault": "Zolt的Excalibrain教程（中文化）",
+  "featuredPath": "◊ 遠距工作政策.md",
+  "meta": {
+    "title": "遠距工作政策中文站",
+    "sidebarEyebrow": "知識庫",
+    "readerEyebrow": "中文閱讀"
+  },
+  "graphConfig": {
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": false,
+    "collapse-color-groups": false,
+    "colorGroups": [],
+    "collapse-display": false,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1,
+    "lineSizeMultiplier": 1,
+    "collapse-forces": true,
+    "centerStrength": 0.48,
+    "repelStrength": 14,
+    "linkStrength": 1,
+    "linkDistance": 200,
+    "scale": 1,
+    "close": true
+  },
+  "localGraphOptions": {
+    "localJumps": 2,
+    "localBacklinks": true,
+    "localForelinks": true
+  },
+  "tree": {
+    "type": "folder",
+    "name": "root",
+    "children": [
+      {
+        "type": "note",
+        "name": "◊ 遠距工作政策",
+        "path": "◊ 遠距工作政策.md"
+      },
+      {
+        "type": "note",
+        "name": "不支持遠距工作",
+        "path": "不支持遠距工作.md"
+      },
+      {
+        "type": "note",
+        "name": "公司應該推行遠距工作政策",
+        "path": "公司應該推行遠距工作政策.md"
+      },
+      {
+        "type": "note",
+        "name": "改善工作與生活平衡",
+        "path": "改善工作與生活平衡.md"
+      },
+      {
+        "type": "note",
+        "name": "社交孤立",
+        "path": "社交孤立.md"
+      },
+      {
+        "type": "note",
+        "name": "研究顯示通勤減少與壓力下降相關",
+        "path": "研究顯示通勤減少與壓力下降相關.md"
+      },
+      {
+        "type": "note",
+        "name": "通勤減少可降低壓力與疲勞",
+        "path": "通勤減少可降低壓力與疲勞.md"
+      },
+      {
+        "type": "note",
+        "name": "實體協作促進創意與創新",
+        "path": "實體協作促進創意與創新.md"
+      },
+      {
+        "type": "note",
+        "name": "遠距工作如何改善員工工作與生活平衡？",
+        "path": "遠距工作如何改善員工工作與生活平衡？.md"
+      },
+      {
+        "type": "note",
+        "name": "遠距工作讓員工可彈性調整工時",
+        "path": "遠距工作讓員工可彈性調整工時.md"
+      },
+      {
+        "type": "note",
+        "name": "遠距員工可能感到孤立",
+        "path": "遠距員工可能感到孤立.md"
+      },
+      {
+        "type": "note",
+        "name": "ChatGPT關於壓力通勤與生產力研究",
+        "path": "ChatGPT關於壓力通勤與生產力研究.md"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "◊ 遠距工作政策.md",
+      "path": "◊ 遠距工作政策.md",
+      "basename": "◊ 遠距工作政策",
+      "title": "遠距工作政策",
+      "folder": "",
+      "frontmatter": {
+        "title": "遠距工作政策",
+        "Parent": [],
+        "Child": [
+          "[[公司應該推行遠距工作政策]]",
+          "[[不支持遠距工作]]"
+        ],
+        "Prev": [],
+        "Next": [
+          "[[遠距工作如何改善員工工作與生活平衡？]]"
+        ],
+        "Compass": [
+          "[[改善工作與生活平衡]]",
+          "[[實體協作促進創意與創新]]",
+          "[[社交孤立]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.829Z",
+      "content": "# 問題\n\n公司是否應該推行遠距工作政策？\n\n立場:: [[公司應該推行遠距工作政策]]\n立場:: [[不支持遠距工作]]",
+      "rawForLinks": "---\ntitle: 遠距工作政策\nParent: []\nChild:\n  - \"[[公司應該推行遠距工作政策]]\"\n  - \"[[不支持遠距工作]]\"\nPrev: []\nNext:\n  - \"[[遠距工作如何改善員工工作與生活平衡？]]\"\nCompass:\n  - \"[[改善工作與生活平衡]]\"\n  - \"[[實體協作促進創意與創新]]\"\n  - \"[[社交孤立]]\"\n---\n# 問題\n\n公司是否應該推行遠距工作政策？\n\n立場:: [[公司應該推行遠距工作政策]]\n立場:: [[不支持遠距工作]]\n",
+      "links": [
+        {
+          "target": "公司應該推行遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "不支持遠距工作.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作如何改善員工工作與生活平衡？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "實體協作促進創意與創新.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "社交孤立.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "不支持遠距工作.md",
+        "公司應該推行遠距工作政策.md",
+        "遠距工作如何改善員工工作與生活平衡？.md"
+      ],
+      "preview": "# 問題 公司是否應該推行遠距工作政策？ 立場:: [[公司應該推行遠距工作政策]] 立場:: [[不支持遠距工作]]"
+    },
+    {
+      "id": "不支持遠距工作.md",
+      "path": "不支持遠距工作.md",
+      "basename": "不支持遠距工作",
+      "title": "不支持遠距工作",
+      "folder": "",
+      "frontmatter": {
+        "title": "不支持遠距工作",
+        "Parent": [
+          "[[◊ 遠距工作政策]]"
+        ],
+        "Child": [
+          "[[實體協作促進創意與創新]]",
+          "[[社交孤立]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[遠距員工可能感到孤立]]",
+          "[[公司應該推行遠距工作政策]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.835Z",
+      "content": "# 立場\n\n公司不應該全面推行遠距工作政策。\n\n支持論點:: [[實體協作促進創意與創新]]\n支持論點:: [[社交孤立]]",
+      "rawForLinks": "---\ntitle: 不支持遠距工作\nParent:\n  - \"[[◊ 遠距工作政策]]\"\nChild:\n  - \"[[實體協作促進創意與創新]]\"\n  - \"[[社交孤立]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[遠距員工可能感到孤立]]\"\n  - \"[[公司應該推行遠距工作政策]]\"\n---\n# 立場\n\n公司不應該全面推行遠距工作政策。\n\n支持論點:: [[實體協作促進創意與創新]]\n支持論點:: [[社交孤立]]\n",
+      "links": [
+        {
+          "target": "◊ 遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "實體協作促進創意與創新.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "社交孤立.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距員工可能感到孤立.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "公司應該推行遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "公司應該推行遠距工作政策.md",
+        "社交孤立.md",
+        "實體協作促進創意與創新.md",
+        "遠距員工可能感到孤立.md"
+      ],
+      "preview": "# 立場 公司不應該全面推行遠距工作政策。 支持論點:: [[實體協作促進創意與創新]] 支持論點:: [[社交孤立]]"
+    },
+    {
+      "id": "公司應該推行遠距工作政策.md",
+      "path": "公司應該推行遠距工作政策.md",
+      "basename": "公司應該推行遠距工作政策",
+      "title": "公司應該推行遠距工作政策",
+      "folder": "",
+      "frontmatter": {
+        "title": "公司應該推行遠距工作政策",
+        "Parent": [
+          "[[◊ 遠距工作政策]]"
+        ],
+        "Child": [
+          "[[改善工作與生活平衡]]",
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[遠距工作如何改善員工工作與生活平衡？]]",
+          "[[不支持遠距工作]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.833Z",
+      "content": "# 立場\n\n公司應該推行遠距工作政策。\n\n支持論點:: [[改善工作與生活平衡]]\n支持論點:: [[通勤減少可降低壓力與疲勞]]",
+      "rawForLinks": "---\ntitle: 公司應該推行遠距工作政策\nParent:\n  - \"[[◊ 遠距工作政策]]\"\nChild:\n  - \"[[改善工作與生活平衡]]\"\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[遠距工作如何改善員工工作與生活平衡？]]\"\n  - \"[[不支持遠距工作]]\"\n---\n# 立場\n\n公司應該推行遠距工作政策。\n\n支持論點:: [[改善工作與生活平衡]]\n支持論點:: [[通勤減少可降低壓力與疲勞]]\n",
+      "links": [
+        {
+          "target": "◊ 遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作如何改善員工工作與生活平衡？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "不支持遠距工作.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "不支持遠距工作.md",
+        "改善工作與生活平衡.md",
+        "遠距工作讓員工可彈性調整工時.md"
+      ],
+      "preview": "# 立場 公司應該推行遠距工作政策。 支持論點:: [[改善工作與生活平衡]] 支持論點:: [[通勤減少可降低壓力與疲勞]]"
+    },
+    {
+      "id": "改善工作與生活平衡.md",
+      "path": "改善工作與生活平衡.md",
+      "basename": "改善工作與生活平衡",
+      "title": "改善工作與生活平衡",
+      "folder": "",
+      "frontmatter": {
+        "title": "改善工作與生活平衡",
+        "Parent": [
+          "[[公司應該推行遠距工作政策]]"
+        ],
+        "Child": [
+          "[[遠距工作讓員工可彈性調整工時]]",
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Prev": [
+          "[[遠距工作如何改善員工工作與生活平衡？]]"
+        ],
+        "Next": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Compass": [
+          "[[研究顯示通勤減少與壓力下降相關]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.837Z",
+      "content": "# 論點\n\n遠距工作提高了時間自主性，有助於兼顧家庭、休息與工作責任。\n\n問題:: [[遠距工作如何改善員工工作與生活平衡？]]",
+      "rawForLinks": "---\ntitle: 改善工作與生活平衡\nParent:\n  - \"[[公司應該推行遠距工作政策]]\"\nChild:\n  - \"[[遠距工作讓員工可彈性調整工時]]\"\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nPrev:\n  - \"[[遠距工作如何改善員工工作與生活平衡？]]\"\nNext:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nCompass:\n  - \"[[研究顯示通勤減少與壓力下降相關]]\"\n---\n# 論點\n\n遠距工作提高了時間自主性，有助於兼顧家庭、休息與工作責任。\n\n問題:: [[遠距工作如何改善員工工作與生活平衡？]]\n",
+      "links": [
+        {
+          "target": "公司應該推行遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作讓員工可彈性調整工時.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作如何改善員工工作與生活平衡？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "研究顯示通勤減少與壓力下降相關.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "公司應該推行遠距工作政策.md",
+        "通勤減少可降低壓力與疲勞.md",
+        "遠距工作如何改善員工工作與生活平衡？.md",
+        "遠距工作讓員工可彈性調整工時.md",
+        "ChatGPT關於壓力通勤與生產力研究.md"
+      ],
+      "preview": "# 論點 遠距工作提高了時間自主性，有助於兼顧家庭、休息與工作責任。 問題:: [[遠距工作如何改善員工工作與生活平衡？]]"
+    },
+    {
+      "id": "社交孤立.md",
+      "path": "社交孤立.md",
+      "basename": "社交孤立",
+      "title": "社交孤立",
+      "folder": "",
+      "frontmatter": {
+        "title": "社交孤立",
+        "Parent": [
+          "[[遠距員工可能感到孤立]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[不支持遠距工作]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[實體協作促進創意與創新]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.849Z",
+      "content": "# 風險\n\n社交孤立是遠距制度的常見風險，需要透過實體聚會與同步儀式來補強。",
+      "rawForLinks": "---\ntitle: 社交孤立\nParent:\n  - \"[[遠距員工可能感到孤立]]\"\nChild: []\nPrev:\n  - \"[[不支持遠距工作]]\"\nNext: []\nCompass:\n  - \"[[實體協作促進創意與創新]]\"\n---\n# 風險\n\n社交孤立是遠距制度的常見風險，需要透過實體聚會與同步儀式來補強。\n",
+      "links": [
+        {
+          "target": "遠距員工可能感到孤立.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "不支持遠距工作.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "實體協作促進創意與創新.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "不支持遠距工作.md",
+        "通勤減少可降低壓力與疲勞.md",
+        "實體協作促進創意與創新.md",
+        "遠距員工可能感到孤立.md"
+      ],
+      "preview": "# 風險 社交孤立是遠距制度的常見風險，需要透過實體聚會與同步儀式來補強。"
+    },
+    {
+      "id": "研究顯示通勤減少與壓力下降相關.md",
+      "path": "研究顯示通勤減少與壓力下降相關.md",
+      "basename": "研究顯示通勤減少與壓力下降相關",
+      "title": "研究顯示通勤減少與壓力下降相關",
+      "folder": "",
+      "frontmatter": {
+        "title": "研究顯示通勤減少與壓力下降相關",
+        "Parent": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[ChatGPT關於壓力通勤與生產力研究]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.841Z",
+      "content": "# 論點\n\n研究指出，通勤時間越短，壓力指標與情緒耗竭程度通常越低。",
+      "rawForLinks": "---\ntitle: 研究顯示通勤減少與壓力下降相關\nParent:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nChild: []\nPrev:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nNext: []\nCompass:\n  - \"[[ChatGPT關於壓力通勤與生產力研究]]\"\n---\n# 論點\n\n研究指出，通勤時間越短，壓力指標與情緒耗竭程度通常越低。\n",
+      "links": [
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "ChatGPT關於壓力通勤與生產力研究.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "改善工作與生活平衡.md",
+        "通勤減少可降低壓力與疲勞.md",
+        "遠距工作如何改善員工工作與生活平衡？.md",
+        "ChatGPT關於壓力通勤與生產力研究.md"
+      ],
+      "preview": "# 論點 研究指出，通勤時間越短，壓力指標與情緒耗竭程度通常越低。"
+    },
+    {
+      "id": "通勤減少可降低壓力與疲勞.md",
+      "path": "通勤減少可降低壓力與疲勞.md",
+      "basename": "通勤減少可降低壓力與疲勞",
+      "title": "通勤減少可降低壓力與疲勞",
+      "folder": "",
+      "frontmatter": {
+        "title": "通勤減少可降低壓力與疲勞",
+        "Parent": [
+          "[[改善工作與生活平衡]]"
+        ],
+        "Child": [
+          "[[研究顯示通勤減少與壓力下降相關]]"
+        ],
+        "Prev": [
+          "[[改善工作與生活平衡]]"
+        ],
+        "Next": [
+          "[[研究顯示通勤減少與壓力下降相關]]"
+        ],
+        "Compass": [
+          "[[ChatGPT關於壓力通勤與生產力研究]]",
+          "[[遠距員工可能感到孤立]]",
+          "[[社交孤立]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.839Z",
+      "content": "# 證據導向論點\n\n通勤時間減少可降低慢性壓力與疲勞感。\n\n證據來源:: [[ChatGPT關於壓力通勤與生產力研究]]\n外部連結:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n\n支持論點:: [[研究顯示通勤減少與壓力下降相關]]\n反對論點:: [[遠距員工可能感到孤立]]\n反對論點:: [[社交孤立]]",
+      "rawForLinks": "---\ntitle: 通勤減少可降低壓力與疲勞\nParent:\n  - \"[[改善工作與生活平衡]]\"\nChild:\n  - \"[[研究顯示通勤減少與壓力下降相關]]\"\nPrev:\n  - \"[[改善工作與生活平衡]]\"\nNext:\n  - \"[[研究顯示通勤減少與壓力下降相關]]\"\nCompass:\n  - \"[[ChatGPT關於壓力通勤與生產力研究]]\"\n  - \"[[遠距員工可能感到孤立]]\"\n  - \"[[社交孤立]]\"\n---\n# 證據導向論點\n\n通勤時間減少可降低慢性壓力與疲勞感。\n\n證據來源:: [[ChatGPT關於壓力通勤與生產力研究]]\n外部連結:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n\n支持論點:: [[研究顯示通勤減少與壓力下降相關]]\n反對論點:: [[遠距員工可能感到孤立]]\n反對論點:: [[社交孤立]]\n",
+      "links": [
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "研究顯示通勤減少與壓力下降相關.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "ChatGPT關於壓力通勤與生產力研究.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距員工可能感到孤立.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "社交孤立.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "公司應該推行遠距工作政策.md",
+        "改善工作與生活平衡.md",
+        "研究顯示通勤減少與壓力下降相關.md",
+        "遠距工作如何改善員工工作與生活平衡？.md",
+        "遠距工作讓員工可彈性調整工時.md",
+        "遠距員工可能感到孤立.md",
+        "ChatGPT關於壓力通勤與生產力研究.md"
+      ],
+      "preview": "# 證據導向論點 通勤時間減少可降低慢性壓力與疲勞感。 證據來源:: [[ChatGPT關於壓力通勤與生產力研究]] 外部連結:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9) 支持論點:: [[研究顯示通勤減少與壓力下降相關]] 反對論點:: [[遠距員工可能感到孤立]] 反對論點:: [[社交孤立]]"
+    },
+    {
+      "id": "實體協作促進創意與創新.md",
+      "path": "實體協作促進創意與創新.md",
+      "basename": "實體協作促進創意與創新",
+      "title": "實體協作促進創意與創新",
+      "folder": "",
+      "frontmatter": {
+        "title": "實體協作促進創意與創新",
+        "Parent": [
+          "[[不支持遠距工作]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[不支持遠距工作]]"
+        ],
+        "Next": [],
+        "Compass": [
+          "[[社交孤立]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.843Z",
+      "content": "# 論點\n\n實體協作更容易形成即時討論與跨部門碰撞，能提升創意與決策速度。",
+      "rawForLinks": "---\ntitle: 實體協作促進創意與創新\nParent:\n  - \"[[不支持遠距工作]]\"\nChild: []\nPrev:\n  - \"[[不支持遠距工作]]\"\nNext: []\nCompass:\n  - \"[[社交孤立]]\"\n---\n# 論點\n\n實體協作更容易形成即時討論與跨部門碰撞，能提升創意與決策速度。\n",
+      "links": [
+        {
+          "target": "不支持遠距工作.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "社交孤立.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "不支持遠距工作.md",
+        "社交孤立.md"
+      ],
+      "preview": "# 論點 實體協作更容易形成即時討論與跨部門碰撞，能提升創意與決策速度。"
+    },
+    {
+      "id": "遠距工作如何改善員工工作與生活平衡？.md",
+      "path": "遠距工作如何改善員工工作與生活平衡？.md",
+      "basename": "遠距工作如何改善員工工作與生活平衡？",
+      "title": "遠距工作如何改善員工工作與生活平衡？",
+      "folder": "",
+      "frontmatter": {
+        "title": "遠距工作如何改善員工工作與生活平衡？",
+        "Parent": [
+          "[[◊ 遠距工作政策]]"
+        ],
+        "Child": [
+          "[[遠距工作讓員工可彈性調整工時]]",
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Prev": [],
+        "Next": [
+          "[[改善工作與生活平衡]]"
+        ],
+        "Compass": [
+          "[[研究顯示通勤減少與壓力下降相關]]",
+          "[[遠距員工可能感到孤立]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.831Z",
+      "content": "# 問題\n\n遠距工作如何改善員工工作與生活平衡？\n\n立場:: [[遠距工作讓員工可彈性調整工時]]\n立場:: [[通勤減少可降低壓力與疲勞]]",
+      "rawForLinks": "---\ntitle: 遠距工作如何改善員工工作與生活平衡？\nParent:\n  - \"[[◊ 遠距工作政策]]\"\nChild:\n  - \"[[遠距工作讓員工可彈性調整工時]]\"\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nPrev: []\nNext:\n  - \"[[改善工作與生活平衡]]\"\nCompass:\n  - \"[[研究顯示通勤減少與壓力下降相關]]\"\n  - \"[[遠距員工可能感到孤立]]\"\n---\n# 問題\n\n遠距工作如何改善員工工作與生活平衡？\n\n立場:: [[遠距工作讓員工可彈性調整工時]]\n立場:: [[通勤減少可降低壓力與疲勞]]\n",
+      "links": [
+        {
+          "target": "◊ 遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作讓員工可彈性調整工時.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "研究顯示通勤減少與壓力下降相關.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距員工可能感到孤立.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "◊ 遠距工作政策.md",
+        "公司應該推行遠距工作政策.md",
+        "改善工作與生活平衡.md",
+        "遠距工作讓員工可彈性調整工時.md",
+        "遠距員工可能感到孤立.md"
+      ],
+      "preview": "# 問題 遠距工作如何改善員工工作與生活平衡？ 立場:: [[遠距工作讓員工可彈性調整工時]] 立場:: [[通勤減少可降低壓力與疲勞]]"
+    },
+    {
+      "id": "遠距工作讓員工可彈性調整工時.md",
+      "path": "遠距工作讓員工可彈性調整工時.md",
+      "basename": "遠距工作讓員工可彈性調整工時",
+      "title": "遠距工作讓員工可彈性調整工時",
+      "folder": "",
+      "frontmatter": {
+        "title": "遠距工作讓員工可彈性調整工時",
+        "Parent": [
+          "[[改善工作與生活平衡]]"
+        ],
+        "Child": [],
+        "Prev": [
+          "[[遠距工作如何改善員工工作與生活平衡？]]"
+        ],
+        "Next": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Compass": [
+          "[[公司應該推行遠距工作政策]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.845Z",
+      "content": "# 論點\n\n遠距工作讓員工可以依照家庭與個人節奏調整工作時段，提高可持續性。",
+      "rawForLinks": "---\ntitle: 遠距工作讓員工可彈性調整工時\nParent:\n  - \"[[改善工作與生活平衡]]\"\nChild: []\nPrev:\n  - \"[[遠距工作如何改善員工工作與生活平衡？]]\"\nNext:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nCompass:\n  - \"[[公司應該推行遠距工作政策]]\"\n---\n# 論點\n\n遠距工作讓員工可以依照家庭與個人節奏調整工作時段，提高可持續性。\n",
+      "links": [
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作如何改善員工工作與生活平衡？.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "公司應該推行遠距工作政策.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "改善工作與生活平衡.md",
+        "遠距工作如何改善員工工作與生活平衡？.md"
+      ],
+      "preview": "# 論點 遠距工作讓員工可以依照家庭與個人節奏調整工作時段，提高可持續性。"
+    },
+    {
+      "id": "遠距員工可能感到孤立.md",
+      "path": "遠距員工可能感到孤立.md",
+      "basename": "遠距員工可能感到孤立",
+      "title": "遠距員工可能感到孤立",
+      "folder": "",
+      "frontmatter": {
+        "title": "遠距員工可能感到孤立",
+        "Parent": [
+          "[[不支持遠距工作]]"
+        ],
+        "Child": [
+          "[[社交孤立]]"
+        ],
+        "Prev": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Next": [
+          "[[社交孤立]]"
+        ],
+        "Compass": [
+          "[[遠距工作如何改善員工工作與生活平衡？]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.847Z",
+      "content": "# 反對論點\n\n長期遠距可能降低社會互動品質，帶來歸屬感下降與心理壓力。",
+      "rawForLinks": "---\ntitle: 遠距員工可能感到孤立\nParent:\n  - \"[[不支持遠距工作]]\"\nChild:\n  - \"[[社交孤立]]\"\nPrev:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nNext:\n  - \"[[社交孤立]]\"\nCompass:\n  - \"[[遠距工作如何改善員工工作與生活平衡？]]\"\n---\n# 反對論點\n\n長期遠距可能降低社會互動品質，帶來歸屬感下降與心理壓力。\n",
+      "links": [
+        {
+          "target": "不支持遠距工作.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "社交孤立.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "遠距工作如何改善員工工作與生活平衡？.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "不支持遠距工作.md",
+        "社交孤立.md",
+        "通勤減少可降低壓力與疲勞.md",
+        "遠距工作如何改善員工工作與生活平衡？.md"
+      ],
+      "preview": "# 反對論點 長期遠距可能降低社會互動品質，帶來歸屬感下降與心理壓力。"
+    },
+    {
+      "id": "ChatGPT關於壓力通勤與生產力研究.md",
+      "path": "ChatGPT關於壓力通勤與生產力研究.md",
+      "basename": "ChatGPT關於壓力通勤與生產力研究",
+      "title": "ChatGPT關於壓力通勤與生產力研究",
+      "folder": "",
+      "frontmatter": {
+        "title": "ChatGPT關於壓力通勤與生產力研究",
+        "Parent": [
+          "[[通勤減少可降低壓力與疲勞]]"
+        ],
+        "Child": [
+          "[[研究顯示通勤減少與壓力下降相關]]"
+        ],
+        "Prev": [],
+        "Next": [],
+        "Compass": [
+          "[[改善工作與生活平衡]]"
+        ]
+      },
+      "mandala": false,
+      "modifiedAt": "2026-03-29T11:43:00.851Z",
+      "content": "# 證據節點\n\n此筆記彙整通勤、壓力與生產力的研究摘要，作為政策討論的證據入口。\n\n來源:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)",
+      "rawForLinks": "---\ntitle: ChatGPT關於壓力通勤與生產力研究\nParent:\n  - \"[[通勤減少可降低壓力與疲勞]]\"\nChild:\n  - \"[[研究顯示通勤減少與壓力下降相關]]\"\nPrev: []\nNext: []\nCompass:\n  - \"[[改善工作與生活平衡]]\"\n---\n# 證據節點\n\n此筆記彙整通勤、壓力與生產力的研究摘要，作為政策討論的證據入口。\n\n來源:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)\n",
+      "links": [
+        {
+          "target": "通勤減少可降低壓力與疲勞.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "研究顯示通勤減少與壓力下降相關.md",
+          "alias": null,
+          "heading": null
+        },
+        {
+          "target": "改善工作與生活平衡.md",
+          "alias": null,
+          "heading": null
+        }
+      ],
+      "embeds": [],
+      "backlinks": [
+        "研究顯示通勤減少與壓力下降相關.md",
+        "通勤減少可降低壓力與疲勞.md"
+      ],
+      "preview": "# 證據節點 此筆記彙整通勤、壓力與生產力的研究摘要，作為政策討論的證據入口。 來源:: [ChatGPT 分享連結](https://chat.openai.com/share/fcc219ba-cdf4-47a8-a782-4c24001714b9)"
+    }
+  ],
+  "edges": [
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "公司應該推行遠距工作政策.md"
+    },
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "不支持遠距工作.md"
+    },
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "遠距工作如何改善員工工作與生活平衡？.md"
+    },
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "改善工作與生活平衡.md"
+    },
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "實體協作促進創意與創新.md"
+    },
+    {
+      "source": "◊ 遠距工作政策.md",
+      "target": "社交孤立.md"
+    },
+    {
+      "source": "不支持遠距工作.md",
+      "target": "◊ 遠距工作政策.md"
+    },
+    {
+      "source": "不支持遠距工作.md",
+      "target": "實體協作促進創意與創新.md"
+    },
+    {
+      "source": "不支持遠距工作.md",
+      "target": "社交孤立.md"
+    },
+    {
+      "source": "不支持遠距工作.md",
+      "target": "遠距員工可能感到孤立.md"
+    },
+    {
+      "source": "不支持遠距工作.md",
+      "target": "公司應該推行遠距工作政策.md"
+    },
+    {
+      "source": "公司應該推行遠距工作政策.md",
+      "target": "◊ 遠距工作政策.md"
+    },
+    {
+      "source": "公司應該推行遠距工作政策.md",
+      "target": "改善工作與生活平衡.md"
+    },
+    {
+      "source": "公司應該推行遠距工作政策.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "公司應該推行遠距工作政策.md",
+      "target": "遠距工作如何改善員工工作與生活平衡？.md"
+    },
+    {
+      "source": "公司應該推行遠距工作政策.md",
+      "target": "不支持遠距工作.md"
+    },
+    {
+      "source": "改善工作與生活平衡.md",
+      "target": "公司應該推行遠距工作政策.md"
+    },
+    {
+      "source": "改善工作與生活平衡.md",
+      "target": "遠距工作讓員工可彈性調整工時.md"
+    },
+    {
+      "source": "改善工作與生活平衡.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "改善工作與生活平衡.md",
+      "target": "遠距工作如何改善員工工作與生活平衡？.md"
+    },
+    {
+      "source": "改善工作與生活平衡.md",
+      "target": "研究顯示通勤減少與壓力下降相關.md"
+    },
+    {
+      "source": "社交孤立.md",
+      "target": "遠距員工可能感到孤立.md"
+    },
+    {
+      "source": "社交孤立.md",
+      "target": "不支持遠距工作.md"
+    },
+    {
+      "source": "社交孤立.md",
+      "target": "實體協作促進創意與創新.md"
+    },
+    {
+      "source": "研究顯示通勤減少與壓力下降相關.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "研究顯示通勤減少與壓力下降相關.md",
+      "target": "ChatGPT關於壓力通勤與生產力研究.md"
+    },
+    {
+      "source": "通勤減少可降低壓力與疲勞.md",
+      "target": "改善工作與生活平衡.md"
+    },
+    {
+      "source": "通勤減少可降低壓力與疲勞.md",
+      "target": "研究顯示通勤減少與壓力下降相關.md"
+    },
+    {
+      "source": "通勤減少可降低壓力與疲勞.md",
+      "target": "ChatGPT關於壓力通勤與生產力研究.md"
+    },
+    {
+      "source": "通勤減少可降低壓力與疲勞.md",
+      "target": "遠距員工可能感到孤立.md"
+    },
+    {
+      "source": "通勤減少可降低壓力與疲勞.md",
+      "target": "社交孤立.md"
+    },
+    {
+      "source": "實體協作促進創意與創新.md",
+      "target": "不支持遠距工作.md"
+    },
+    {
+      "source": "實體協作促進創意與創新.md",
+      "target": "社交孤立.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "◊ 遠距工作政策.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "遠距工作讓員工可彈性調整工時.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "改善工作與生活平衡.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "研究顯示通勤減少與壓力下降相關.md"
+    },
+    {
+      "source": "遠距工作如何改善員工工作與生活平衡？.md",
+      "target": "遠距員工可能感到孤立.md"
+    },
+    {
+      "source": "遠距工作讓員工可彈性調整工時.md",
+      "target": "改善工作與生活平衡.md"
+    },
+    {
+      "source": "遠距工作讓員工可彈性調整工時.md",
+      "target": "遠距工作如何改善員工工作與生活平衡？.md"
+    },
+    {
+      "source": "遠距工作讓員工可彈性調整工時.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "遠距工作讓員工可彈性調整工時.md",
+      "target": "公司應該推行遠距工作政策.md"
+    },
+    {
+      "source": "遠距員工可能感到孤立.md",
+      "target": "不支持遠距工作.md"
+    },
+    {
+      "source": "遠距員工可能感到孤立.md",
+      "target": "社交孤立.md"
+    },
+    {
+      "source": "遠距員工可能感到孤立.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "遠距員工可能感到孤立.md",
+      "target": "遠距工作如何改善員工工作與生活平衡？.md"
+    },
+    {
+      "source": "ChatGPT關於壓力通勤與生產力研究.md",
+      "target": "通勤減少可降低壓力與疲勞.md"
+    },
+    {
+      "source": "ChatGPT關於壓力通勤與生產力研究.md",
+      "target": "研究顯示通勤減少與壓力下降相關.md"
+    },
+    {
+      "source": "ChatGPT關於壓力通勤與生產力研究.md",
+      "target": "改善工作與生活平衡.md"
+    }
+  ],
+  "assets": {}
+}
