@@ -729,7 +729,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-node.kind-current text {
-  fill: var(--text-primary);
+  fill: var(--text-dark);
   font-weight: 700;
 }
 
@@ -739,7 +739,7 @@ body[data-view-mode="excalibrain"] .excal-panel h3 {
 }
 
 .excal-node.kind-hub text {
-  fill: var(--text-primary);
+  fill: var(--text-dark);
 }
 
 .excal-status {
