@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>洛書九宮 × 後天八卦 × 箭頭路徑</title>
+  <link rel="stylesheet" href="./styles.css?v=20260329a">
+</head>
+<body>
+  <div class="shell">
+    <aside class="left-panel">
+      <header class="panel-head">
+        <p class="eyebrow">Markdown Split</p>
+        <h1 id="site-title">九宮八卦箭頭</h1>
+        <p class="panel-copy">左欄顯示拆解後 section 檔，點選後中欄與右欄同步。</p>
+      </header>
+      <div class="source-box">
+        <p class="source-label">主筆記</p>
+        <p id="source-file" class="source-file">+ 九宮－八卦－箭頭.md</p>
+      </div>
+      <nav id="file-list" class="file-list" aria-label="拆解後 Markdown 檔案列表"></nav>
+    </aside>
+
+    <main class="middle-panel">
+      <section class="card board-card">
+        <header class="card-head">
+          <div>
+            <p class="eyebrow">Jiugong Feixing</p>
+            <h2 id="focus-title">載入中</h2>
+          </div>
+          <div class="focus-meta">
+            <span id="focus-tag-number" class="tag">數字</span>
+            <span id="focus-tag-trigram" class="tag">卦</span>
+            <span id="focus-tag-direction" class="tag">方位</span>
+          </div>
+        </header>
+
+        <div class="board-wrap" id="board-wrap">
+          <div id="board-grid" class="board-grid" aria-label="九宮飛星格"></div>
+          <svg id="arrow-layer" class="arrow-layer" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        </div>
+      </section>
+
+      <section class="card reader-card">
+        <header class="card-head compact">
+          <div>
+            <p class="eyebrow">Reader</p>
+            <h3 id="reader-file">split/5.md</h3>
+          </div>
+          <p id="reader-meta" class="reader-meta"></p>
+        </header>
+        <article id="reader-content" class="reader-content"></article>
+      </section>
+    </main>
+
+    <aside class="right-panel">
+      <section class="card filter-card">
+        <header class="card-head compact">
+          <div>
+            <p class="eyebrow">Relation Filter</p>
+            <h3>Excalibrain 節點關係</h3>
+          </div>
+        </header>
+        <div id="relation-filters" class="relation-filters"></div>
+      </section>
+
+      <section class="card excal-card">
+        <header class="card-head compact">
+          <div>
+            <p class="eyebrow">Idea Compass</p>
+            <h3>Excalibrain View</h3>
+            <p id="excal-caption" class="panel-copy">中心節點與九數關係</p>
+          </div>
+        </header>
+        <div id="excal-root" class="excal-root" aria-label="Excalibrain 關係圖"></div>
+      </section>
+    </aside>
+  </div>
+
+  <script src="./excalibrain.js?v=20260329a"></script>
+  <script src="./app.js?v=20260329a"></script>
+</body>
+</html>
