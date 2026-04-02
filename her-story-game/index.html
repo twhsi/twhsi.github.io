@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Her Story 卡片文字遊戲</title>
+  <style>
+    :root {
+      --bg: #111827;
+      --panel: #0f172a;
+      --panel-2: #1e293b;
+      --border: #334155;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #ef4444;
+      --accent-2: #38bdf8;
+      --choice: #1d4ed8;
+      --choice-hover: #2563eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 42vw);
+      min-height: 100vh;
+    }
+
+    .story-panel {
+      padding: 22px;
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+    }
+
+    .right-panel {
+      display: grid;
+      grid-template-rows: 58% 42%;
+      min-height: 100vh;
+    }
+
+    .story-title {
+      font-size: 2rem;
+      margin: 0 0 12px 0;
+      line-height: 1.2;
+    }
+
+    .story-meta {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .story-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+      align-items: center;
+    }
+
+    .utility-btn {
+      border: 1px solid var(--border);
+      background: #172554;
+      color: #dbeafe;
+      font-size: 0.95rem;
+      line-height: 1.1;
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .utility-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .utility-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .save-status {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .story-text {
+      font-size: 1.28rem;
+      line-height: 1.9;
+      white-space: pre-line;
+      margin-bottom: 24px;
+      min-height: 5.6em;
+    }
+
+    .choices {
+      display: grid;
+      gap: 12px;
+    }
+
+    .choice-btn {
+      border: 1px solid #3b82f6;
+      background: var(--choice);
+      color: white;
+      font-size: 1.08rem;
+      line-height: 1.5;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .choice-btn:hover {
+      background: var(--choice-hover);
+      transform: translateY(-1px);
+    }
+
+    .graph-panel {
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(circle at center, rgba(56,189,248,0.08), transparent 42%),
+        #0b1120;
+      overflow: hidden;
+    }
+
+    .graph-title {
+      position: absolute;
+      left: 16px;
+      top: 10px;
+      z-index: 2;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+
+    #graph-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .node {
+      position: absolute;
+      z-index: 1;
+      min-width: 110px;
+      max-width: 180px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.35;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+    }
+
+    .node.center {
+      background: var(--accent);
+      border-color: #f87171;
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    .node.small {
+      font-size: 0.94rem;
+      background: #13233d;
+    }
+
+    .grid-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      background: #0f172a;
+      min-height: 0;
+    }
+
+    .grid-cell {
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .grid-cell:hover {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .grid-center {
+      background: rgba(239,68,68,0.14);
+      font-weight: 700;
+      color: #fecaca;
+    }
+
+    @media (max-width: 980px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+
+      .story-panel {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .right-panel {
+        grid-template-rows: 30vh 32vh;
+        min-height: 62vh;
+      }
+
+      .story-title { font-size: 1.7rem; }
+      .story-text { font-size: 1.12rem; line-height: 1.8; }
+      .choice-btn { font-size: 1rem; }
+      .grid-cell { font-size: 1rem; }
+      .node { min-width: 88px; max-width: 130px; font-size: 0.88rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="story-panel">
+      <h1 class="story-title" id="story-title"></h1>
+      <div class="story-meta" id="story-meta"></div>
+      <div class="story-toolbar">
+        <button class="utility-btn" id="btn-back" type="button">上一段 / 返回</button>
+        <button class="utility-btn" id="btn-restart" type="button">重新開始</button>
+        <button class="utility-btn" id="btn-save" type="button">儲存進度</button>
+        <button class="utility-btn" id="btn-load" type="button">讀取續玩</button>
+        <span class="save-status" id="save-status"></span>
+      </div>
+      <div class="story-text" id="story-text"></div>
+      <div class="choices" id="choices"></div>
+    </section>
+
+    <aside class="right-panel">
+      <section class="graph-panel" id="graph-panel">
+        <div class="graph-title">Graph / Excalibrain 風導航</div>
+        <svg id="graph-svg"></svg>
+      </section>
+
+      <section class="grid-panel">
+        <div class="grid-cell" onclick="jumpToMOC('identity')">Identity</div>
+        <div class="grid-cell" onclick="jumpToMOC('timeline')">Timeline</div>
+        <div class="grid-cell" onclick="jumpToMOC('relationship')">Relationship</div>
+
+        <div class="grid-cell" onclick="jumpToMOC('keywords')">Keywords</div>
+        <div class="grid-cell grid-center" onclick="goTo('HS_G_001')">HER STORY</div>
+        <div class="grid-cell" onclick="jumpToMOC('narrative')">Narrative</div>
+
+        <div class="grid-cell" onclick="jumpToMOC('clues')">Clues</div>
+        <div class="grid-cell" onclick="jumpToMOC('inference')">Inference</div>
+        <div class="grid-cell" onclick="jumpToMOC('contradiction')">Contradiction</div>
+      </section>
+    </aside>
+  </div>
+
+  <script>
+    const story = {
+      HS_G_001: {
+        title: "審訊開場",
+        text: "螢幕亮起時，畫面有些顆粒感。\n一名女子端坐在桌前，雙手交疊，神情平靜得近乎刻意。\n她說自己叫漢娜．史密斯，她的丈夫西蒙失蹤了。\n她的語氣不像求助，更像是在重複一段早已準備好的答案。",
+        tags: ["Narrative", "Interrogation"],
+        choices: [
+          { label: "追問西蒙的下落", target: "HS_G_002" },
+          { label: "查看婚姻狀況", target: "HS_G_003" },
+          { label: "調閱格拉斯哥相關紀錄", target: "HS_G_004" }
+        ]
+      },
+      HS_G_002: {
+        title: "西蒙遇害",
+        text: "失蹤只是最外層的說法。\n隨著更多資料浮現，案件不再只是尋人，而是謀殺。\n西蒙死了。\n而畫面中的女人，也從報案者，變成最接近真相的人。",
+        tags: ["Narrative", "Event"],
+        choices: [
+          { label: "返回審訊開場", target: "HS_G_001" },
+          { label: "查看婚姻緊張", target: "HS_G_003" },
+          { label: "查看不在場證明", target: "HS_G_004" }
+        ]
+      },
+      HS_G_003: {
+        title: "婚姻緊張",
+        text: "漢娜承認她和西蒙關係不佳。\n那不是普通的口角，而是一種被長期壓縮的緊繃感。\n她承認得太順，像是故意讓你以為答案就藏在那裡。",
+        tags: ["Relationship"],
+        choices: [
+          { label: "查看格拉斯哥不在場證明", target: "HS_G_004" },
+          { label: "比對口供破綻", target: "HS_G_005" },
+          { label: "回看案件表層", target: "HS_G_002" }
+        ]
+      },
+      HS_G_004: {
+        title: "格拉斯哥不在場",
+        text: "她說爭吵之後，自己離開並去了格拉斯哥。\n如果她真的離開了，那她就不在現場。\n可太完美的不在場證明，常常更像是設計出來的。",
+        tags: ["Timeline", "Contradiction", "Keywords"],
+        choices: [
+          { label: "檢查其中矛盾", target: "HS_G_005" },
+          { label: "追查真正去格拉斯哥的人", target: "HS_G_017" },
+          { label: "退回婚姻背景", target: "HS_G_003" }
+        ]
+      },
+      HS_G_005: {
+        title: "身分異常",
+        text: "有些不對勁，一開始只是灰塵般細小。\n一句用字、一個眼神、前後時間的不自然黏合。\n你還說不清是哪裡錯了，但你知道，這個名字底下藏著不只一種人生。",
+        tags: ["Inference", "Contradiction"],
+        choices: [
+          { label: "揭露真正的身分", target: "HS_G_006" },
+          { label: "回看格拉斯哥線", target: "HS_G_004" },
+          { label: "追索更早的家庭真相", target: "HS_G_007" }
+        ]
+      },
+      HS_G_006: {
+        title: "雙胞胎揭露",
+        text: "『漢娜』不是一個人。\n這個名字底下，藏著兩個幾乎完全相同的女人：漢娜與伊娃。\n先前很多不合理的地方，突然都合理了；但故事也因此變得更可怕。",
+        tags: ["Identity", "Inference"],
+        choices: [
+          { label: "追查她們為何分開長大", target: "HS_G_007" },
+          { label: "查看伊娃如何得知真相", target: "HS_G_010" },
+          { label: "查看共同身份規則", target: "HS_G_012" }
+        ]
+      },
+      HS_G_007: {
+        title: "助產士弗洛倫絲",
+        text: "故事回到她們出生那一天。\n接生的助產士弗洛倫絲，是退伍軍人的遺孀。\n她想要一個孩子，卻不想再婚。\n這份渴望，最終改變了兩個人的一生。",
+        tags: ["Timeline"],
+        choices: [
+          { label: "查看她做了什麼決定", target: "HS_G_008" },
+          { label: "查看她如何把伊娃關在室內", target: "HS_G_021" },
+          { label: "返回雙胞胎揭露", target: "HS_G_006" }
+        ]
+      },
+      HS_G_008: {
+        title: "伊娃被帶走",
+        text: "弗洛倫絲謊稱其中一名嬰兒夭折。\n但那不是真的。\n她把伊娃帶回自己家裡。\n從這一刻起，一對雙胞胎被切成兩段人生。",
+        tags: ["Timeline"],
+        choices: [
+          { label: "查看分離成長", target: "HS_G_009" },
+          { label: "追查伊娃如何知道真相", target: "HS_G_010" },
+          { label: "返回助產士動機", target: "HS_G_007" }
+        ]
+      },
+      HS_G_009: {
+        title: "分離成長",
+        text: "八年。足足八年。\n漢娜與伊娃都不知道世界上還有另一個自己。\n同一張臉，卻不是同一個人。\n這八年的空白，後來變成整個故事最深的裂縫。",
+        tags: ["Timeline"],
+        choices: [
+          { label: "查看命運如何讓她們重逢", target: "HS_G_010" },
+          { label: "查看父母眼中的「想像朋友」", target: "HS_G_022" },
+          { label: "返回被帶走的起點", target: "HS_G_008" }
+        ]
+      },
+      HS_G_010: {
+        title: "日記揭露",
+        text: "弗洛倫絲意外滑下樓梯身亡。\n死亡把她帶走，也把秘密留在紙上。\n伊娃從她的日記裡，知道了自己真正的身世。\n真相不會帶來安穩，只會讓人再也回不去。",
+        tags: ["Clues", "Timeline"],
+        choices: [
+          { label: "查看伊娃去找漢娜", target: "HS_G_011" },
+          { label: "返回雙胞胎總覽", target: "HS_G_006" },
+          { label: "查看共同身份規則", target: "HS_G_012" }
+        ]
+      },
+      HS_G_011: {
+        title: "閣樓生活",
+        text: "伊娃找到了漢娜。\n而漢娜沒有把她趕走。\n她把伊娃藏進家裡的閣樓，像把另一個自己塞進生活的背面。\n閣樓不是避難所，更像秘密本身的形狀。",
+        tags: ["Clues", "Narrative"],
+        choices: [
+          { label: "查看共同身份規則", target: "HS_G_012" },
+          { label: "查看共同日記與分工細則", target: "HS_G_023" },
+          { label: "查看漢娜與西蒙交往", target: "HS_G_013" }
+        ]
+      },
+      HS_G_012: {
+        title: "共同身份規則",
+        text: "她們決定只以一個人的身份活下去。\n那個名字叫『漢娜』。\n她們共用一本日記，也制定一套規則，規定誰在何時出現、如何說話、如何行動。\n原本用來保護她們的規則，後來反而開始吞噬她們。",
+        tags: ["Identity", "Clues"],
+        choices: [
+          { label: "查看規則第一次被打破", target: "HS_G_014" },
+          { label: "查看戀情如何衝撞規則", target: "HS_G_013" },
+          { label: "查看最終規則崩壞", target: "HS_G_018" }
+        ]
+      },
+      HS_G_013: {
+        title: "漢娜與西蒙交往",
+        text: "後來，漢娜和玻璃工同事西蒙約會。\n在一個必須由兩人共同維持的身份體系裡，戀愛從來不可能只是戀愛。\n西蒙以為自己在愛一個女人，實際上卻走進了一個雙重人生的迷宮。",
+        tags: ["Relationship"],
+        choices: [
+          { label: "查看兩人在玻璃工廠如何相識", target: "HS_G_024" },
+          { label: "查看規則如何被打破", target: "HS_G_014" },
+          { label: "查看伊娃與西蒙的外遇", target: "HS_G_017" },
+        ]
+      },
+      HS_G_014: {
+        title: "規則被打破",
+        text: "漢娜與西蒙上床，並且懷孕了。\n對一般人來說，這只是戀情的延伸；對她們來說，卻是共同身份的崩壞。\n按照規則，伊娃也應該懷孕，這樣兩人看起來才會一致。\n但人的身體不是規則的附屬品。",
+        tags: ["Contradiction", "Relationship"],
+        choices: [
+          { label: "查看伊娃如何面對失衡", target: "HS_G_015" },
+          { label: "查看伊娃搬離與假髮", target: "HS_G_025" },
+          { label: "查看漢娜後來的命運", target: "HS_G_016" }
+        ]
+      },
+      HS_G_015: {
+        title: "伊娃無法懷孕",
+        text: "伊娃拼命想讓自己也懷孕。\n她不是單純想要孩子，而是想追回對稱。\n可她越努力，越失敗。\n有些差異不是靠意志就能抹平的。",
+        tags: ["Contradiction", "Emotion"],
+        choices: [
+          { label: "查看漢娜懷孕的結果", target: "HS_G_016" },
+          { label: "查看多年後如何反轉", target: "HS_G_017" },
+          { label: "返回規則崩壞", target: "HS_G_014" }
+        ]
+      },
+      HS_G_016: {
+        title: "漢娜流產",
+        text: "懷孕八個月時，漢娜流產了。\n孩子沒有留下，痛苦卻留下了。\n更殘酷的是，流產帶來的併發症，讓漢娜後來無法再懷孕。\n規則沒有恢復平衡，只是把傷口重新分配。",
+        tags: ["Timeline", "Relationship"],
+        choices: [
+          { label: "查看酒吧重逢", target: "HS_G_026" },
+          { label: "查看這場失衡如何引爆衝突", target: "HS_G_018" },
+          { label: "返回伊娃的失衡", target: "HS_G_015" }
+        ]
+      },
+      HS_G_017: {
+        title: "伊娃與西蒙外遇",
+        text: "多年後，西蒙在酒吧遇見伊娃。\n他不知道眼前這個女人和漢娜有一模一樣的臉。\n兩人開始了外遇，而懷孕的人，這次變成伊娃。\n命運像故意把她們推向彼此最疼的地方。",
+        tags: ["Relationship", "Contradiction", "Timeline"],
+        choices: [
+          { label: "查看伊娃如何隱瞞孩子父親", target: "HS_G_027" },
+          { label: "查看生日當天的爆炸點", target: "HS_G_028" },
+          { label: "返回漢娜與西蒙的戀情", target: "HS_G_013" },
+        ]
+      },
+      HS_G_018: {
+        title: "鏡子衝突",
+        text: "生日那天，西蒙送給漢娜一面手工客製化的鏡子。\n那面鏡子像在宣告她是唯一的。\n可在這個故事裡，唯一從來都是最脆弱的幻覺。\n當漢娜說出：她有一個懷孕的姐妹，而孩子的父親就是你。\n空氣立刻裂開了。",
+        tags: ["Clues", "Contradiction", "Keywords"],
+        choices: [
+          { label: "查看生日攤牌完整版", target: "HS_G_028" },
+          { label: "查看第二天真正發生的事", target: "HS_G_019" },
+          { label: "返回共同身份規則", target: "HS_G_012" },
+        ]
+      },
+      HS_G_019: {
+        title: "鏡子殺人",
+        text: "第二天，伊娃與西蒙吵架後離開格拉斯哥。\n之後，漢娜戴上伊娃的假髮去見西蒙。\n西蒙沒有認出她，甚至又送給她另一面鏡子。\n漢娜打碎了鏡子，飛濺的碎片意外射進西蒙喉嚨。\n他倒下時，還來不及看清面前的人到底是誰。",
+        tags: ["Clues", "Keywords", "Event"],
+        choices: [
+          { label: "查看鏡中誤認瞬間", target: "HS_G_029" },
+          { label: "查看她們如何掩蓋真相", target: "HS_G_020" },
+          { label: "重新思考格拉斯哥不在場證明", target: "HS_G_004" }
+        ]
+      },
+      HS_G_020: {
+        title: "掩蓋真相",
+        text: "伊娃回家後，兩人決定一起藏匿西蒙的屍體。\n她們利用伊娃去格拉斯哥這件事，構築出一個不在場證明。\n到了審訊最後，伊娃甚至說：漢娜已經失蹤了。\n然後，她要求見律師。\n最後一道真相才打開：追查這一切的人，其實是伊娃的女兒，莎拉。\n她問你：你理解你母親的行為嗎？",
+        tags: ["Inference", "Timeline", "Ending"],
+        choices: [
+          { label: "聽她說「你能逮捕不存在的人嗎」", target: "HS_G_032" },
+          { label: "查看三種理論與證據", target: "HS_G_030" },
+          { label: "進入莎拉的對話視窗", target: "HS_G_031" }
+        ]
+      },
+      HS_G_021: {
+        title: "被關在室內的伊娃",
+        text: "弗洛倫絲知道，一旦伊娃被鄰居看見，整個謊言就會崩塌。\n她刻意讓伊娃長時間待在屋內，幾乎不讓她與外界接觸。\n這不是單純的保護，而是把孩子活成一個必須被藏起來的證物。\n伊娃學會了沉默，也學會了把孤獨當成日常。",
+        tags: ["Timeline", "Clues", "Contradiction"],
+        choices: [
+          { label: "查看父母眼中的「想像朋友」", target: "HS_G_022" },
+          { label: "追查伊娃如何知道真相", target: "HS_G_010" },
+          { label: "返回助產士背景", target: "HS_G_007" }
+        ]
+      },
+      HS_G_022: {
+        title: "想像朋友掩護",
+        text: "伊娃後來出現在漢娜家時，最危險的不是被看到，而是被認出。\n漢娜的父母對異常視而不見，把伊娃當成漢娜的「想像朋友」。\n這個誤判，反而成了雙胞胎共享身份最早期、最有效的遮蔽。\n大人以為孩子在編故事，故事卻正在決定所有人的命運。",
+        tags: ["Identity", "Clues"],
+        choices: [
+          { label: "查看同住閣樓後的生活", target: "HS_G_011" },
+          { label: "查看共同日記與分工細則", target: "HS_G_023" },
+          { label: "返回分離成長", target: "HS_G_009" }
+        ]
+      },
+      HS_G_023: {
+        title: "共同日記與分工細則",
+        text: "兩人共用一本日記，像共享一套作業系統。\n內容不只是心情，而是嚴格行程：誰去上班、誰去買菜、誰要回訊息。\n她們甚至統一語氣、詞彙與停頓，確保「漢娜」始終只像一個人。\n規則讓她們活下來，也把她們的人格邊界磨得越來越薄。",
+        tags: ["Identity", "Clues", "Inference"],
+        choices: [
+          { label: "回到共同身份規則總覽", target: "HS_G_012" },
+          { label: "查看規則第一次被打破", target: "HS_G_014" },
+          { label: "查看伊娃搬離與假髮", target: "HS_G_025" }
+        ]
+      },
+      HS_G_024: {
+        title: "玻璃工廠初遇",
+        text: "漢娜和西蒙在玻璃工場相識。\n同一間工廠、同一個班表，讓親近看起來再自然不過。\n西蒙以為自己認識的是一個完整的人，卻不知道她背後有另一個共享身分者。\n從這一刻開始，戀愛與偽裝被綁進同一條時間線。",
+        tags: ["Relationship", "Timeline"],
+        choices: [
+          { label: "回到戀情主線", target: "HS_G_013" },
+          { label: "查看規則如何被打破", target: "HS_G_014" },
+          { label: "查看酒吧重逢如何反轉", target: "HS_G_026" }
+        ]
+      },
+      HS_G_025: {
+        title: "伊娃搬離與假髮",
+        text: "漢娜懷孕、結婚並和西蒙同住後，伊娃搬到自己的公寓。\n她開始戴假髮，讓自己和「漢娜」看起來有可辨識差異。\n那像是一種自保：她不再只是備份身分，而是試著成為獨立個體。\n但分開居住並沒有切斷糾纏，反而讓秘密走向另一種失控。",
+        tags: ["Timeline", "Relationship", "Identity"],
+        choices: [
+          { label: "查看酒吧重逢", target: "HS_G_026" },
+          { label: "查看伊娃與西蒙外遇", target: "HS_G_017" },
+          { label: "返回規則崩壞", target: "HS_G_014" }
+        ]
+      },
+      HS_G_026: {
+        title: "酒吧重逢",
+        text: "在一間酒吧裡，西蒙再次遇見伊娃，當時她正在台上唱歌。\n他被那張熟悉的臉吸引，卻誤以為自己只是遇見「另一種漢娜」。\n重逢很快演變成外遇，過去未解的慾望與怨恨一起回來。\n這段關係從一開始就建立在誤認與隱瞞之上。",
+        tags: ["Relationship", "Clues", "Timeline"],
+        choices: [
+          { label: "接到外遇主線", target: "HS_G_017" },
+          { label: "查看父親身份被隱瞞", target: "HS_G_027" },
+          { label: "返回伊娃搬離後生活", target: "HS_G_025" }
+        ]
+      },
+      HS_G_027: {
+        title: "父親身份被隱瞞",
+        text: "伊娃懷孕後，沒有把父親是西蒙的事告訴任何人。\n她也刻意不讓漢娜知道，等於把最危險的資訊藏在沉默裡。\n在這段時間裡，所有人都在說話，唯獨最關鍵的真相被封口。\n隱瞞不是停滯，而是在倒數。",
+        tags: ["Clues", "Contradiction", "Inference"],
+        choices: [
+          { label: "前往生日攤牌", target: "HS_G_028" },
+          { label: "回看鏡子衝突摘要", target: "HS_G_018" },
+          { label: "返回外遇線", target: "HS_G_017" }
+        ]
+      },
+      HS_G_028: {
+        title: "生日攤牌完整版",
+        text: "生日當天，西蒙先送漢娜一面手工鏡子。\n隨後漢娜攤牌：她有一個雙胞胎姐妹，且那姐妹已懷孕。\n當她確認孩子父親是西蒙時，現場秩序徹底崩壞。\n這不是單一背叛，而是多年規則、慾望與嫉妒同時爆炸。",
+        tags: ["Relationship", "Contradiction", "Keywords"],
+        choices: [
+          { label: "查看西蒙如何把漢娜誤認成伊娃", target: "HS_G_029" },
+          { label: "進入鏡子殺人當天", target: "HS_G_019" },
+          { label: "返回父親身份隱瞞", target: "HS_G_027" }
+        ]
+      },
+      HS_G_029: {
+        title: "鏡中誤認",
+        text: "衝突後，西蒙回來時把漢娜誤認成伊娃。\n他又送了一面近似的手工鏡子，並直說自己想和伊娃在一起。\n當漢娜揭露身分，語言已經失去修補能力。\n接下來每一個動作，都把事件推向無法回收的結果。",
+        tags: ["Clues", "Keywords", "Relationship"],
+        choices: [
+          { label: "接續到鏡子殺人", target: "HS_G_019" },
+          { label: "返回生日攤牌", target: "HS_G_028" },
+          { label: "回頭整理鏡子衝突", target: "HS_G_018" }
+        ]
+      },
+      HS_G_030: {
+        title: "三種理論與證據",
+        text: "最後版本留下三種解釋：\n一、雙胞胎故事完全屬實；\n二、雙胞胎只是伊娃為干擾警方而編造；\n三、所謂「漢娜 / 伊娃」其實指向解離性身分障礙。\n訪談中的細節會同時支持與削弱這三種理論，真相因此保持開放。",
+        tags: ["Inference", "Contradiction", "Identity"],
+        choices: [
+          { label: "進入莎拉的最終提問", target: "HS_G_031" },
+          { label: "回到掩蓋真相", target: "HS_G_020" },
+          { label: "回頭整理雙胞胎線", target: "HS_G_006" }
+        ]
+      },
+      HS_G_031: {
+        title: "莎拉的聊天室",
+        text: "當你解鎖足夠片段，畫面會跳出聊天室問你是否結束。\n你若回答「是」，才揭露玩家其實是莎拉，伊娃的女兒。\n聊天室問莎拉是否理解母親的選擇，並邀請她到外面見面。\n故事在此不給定論，只把責任交還給觀看者。",
+        tags: ["Ending", "Inference", "Narrative"],
+        choices: [
+          { label: "回看三種理論", target: "HS_G_030" },
+          { label: "聽伊娃最終法律挑釁", target: "HS_G_032" },
+          { label: "回到審訊開場重跑一次", target: "HS_G_001" }
+        ]
+      },
+      HS_G_032: {
+        title: "不存在的人",
+        text: "最終訪談裡，伊娃說漢娜「已經消失，不會再回來」。\n她反問：你能逮捕一個不存在的人嗎？\n接著她要求律師，並把先前供述稱作「故事」。\n這段話同時像認罪、脫罪、也像一場精準操控。",
+        tags: ["Ending", "Inference", "Contradiction"],
+        choices: [
+          { label: "回到三種理論比對", target: "HS_G_030" },
+          { label: "進入莎拉最終提問", target: "HS_G_031" },
+          { label: "回到審訊開場", target: "HS_G_001" }
+        ]
+      }
+    };
+
+    const mocMap = {
+      identity: ["HS_G_006", "HS_G_012", "HS_G_022", "HS_G_023", "HS_G_030", "HS_G_032"],
+      timeline: ["HS_G_004", "HS_G_007", "HS_G_008", "HS_G_009", "HS_G_010", "HS_G_016", "HS_G_017", "HS_G_020", "HS_G_021", "HS_G_025", "HS_G_026", "HS_G_028", "HS_G_029", "HS_G_031"],
+      relationship: ["HS_G_003", "HS_G_013", "HS_G_014", "HS_G_017", "HS_G_018", "HS_G_024", "HS_G_025", "HS_G_026", "HS_G_027", "HS_G_028", "HS_G_029"],
+      keywords: ["HS_G_004", "HS_G_018", "HS_G_019", "HS_G_028", "HS_G_029", "HS_G_032"],
+      narrative: ["HS_G_001", "HS_G_002", "HS_G_003", "HS_G_004", "HS_G_005", "HS_G_006", "HS_G_007", "HS_G_008", "HS_G_009", "HS_G_010", "HS_G_011", "HS_G_012", "HS_G_013", "HS_G_014", "HS_G_015", "HS_G_016", "HS_G_017", "HS_G_018", "HS_G_019", "HS_G_020", "HS_G_021", "HS_G_022", "HS_G_023", "HS_G_024", "HS_G_025", "HS_G_026", "HS_G_027", "HS_G_028", "HS_G_029", "HS_G_030", "HS_G_031", "HS_G_032"],
+      clues: ["HS_G_010", "HS_G_011", "HS_G_012", "HS_G_018", "HS_G_019", "HS_G_021", "HS_G_022", "HS_G_023", "HS_G_027", "HS_G_029", "HS_G_030"],
+      inference: ["HS_G_005", "HS_G_006", "HS_G_020", "HS_G_030", "HS_G_031", "HS_G_032"],
+      contradiction: ["HS_G_004", "HS_G_005", "HS_G_014", "HS_G_015", "HS_G_017", "HS_G_018", "HS_G_021", "HS_G_027", "HS_G_030", "HS_G_032"]
+    };
+
+    const SAVE_KEY = "her_story_progress_v1";
+    const TYPE_INTERVAL_MS = 24;
+
+    let currentId = "HS_G_001";
+    let historyStack = ["HS_G_001"];
+    let typeTimer = null;
+    let statusTimer = null;
+    let audioContext = null;
+    let lastTickAt = 0;
+
+    function parseSavedProgress() {
+      try {
+        const raw = localStorage.getItem(SAVE_KEY);
+        if (!raw) return null;
+        const data = JSON.parse(raw);
+        if (!data || typeof data.currentId !== "string" || !story[data.currentId]) return null;
+        const safeHistory = Array.isArray(data.historyStack)
+          ? data.historyStack.filter(id => typeof id === "string" && story[id])
+          : [];
+        if (!safeHistory.length || safeHistory[safeHistory.length - 1] !== data.currentId) {
+          safeHistory.push(data.currentId);
+        }
+        return {
+          currentId: data.currentId,
+          historyStack: safeHistory,
+          savedAt: data.savedAt || ""
+        };
+      } catch (err) {
+        return null;
+      }
+    }
+
+    function updateBackButtonState() {
+      const backBtn = document.getElementById("btn-back");
+      backBtn.disabled = historyStack.length <= 1;
+    }
+
+    function updateLoadButtonState() {
+      const loadBtn = document.getElementById("btn-load");
+      loadBtn.disabled = !parseSavedProgress();
+    }
+
+    function setStatus(message, timeoutMs = 2200) {
+      const el = document.getElementById("save-status");
+      el.textContent = message;
+      if (statusTimer) clearTimeout(statusTimer);
+      if (timeoutMs > 0) {
+        statusTimer = setTimeout(() => {
+          el.textContent = "";
+        }, timeoutMs);
+      }
+    }
+
+    function saveProgress(showMessage = false) {
+      try {
+        const payload = {
+          currentId,
+          historyStack,
+          savedAt: new Date().toISOString()
+        };
+        localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
+        updateLoadButtonState();
+        if (showMessage) setStatus("已儲存目前進度");
+      } catch (err) {
+        if (showMessage) setStatus("儲存失敗（瀏覽器限制）");
+      }
+    }
+
+    function loadProgress(showMessage = false) {
+      const data = parseSavedProgress();
+      if (!data) {
+        updateLoadButtonState();
+        if (showMessage) setStatus("目前沒有可讀取的存檔");
+        return false;
+      }
+      currentId = data.currentId;
+      historyStack = data.historyStack;
+      renderScene(showMessage ? "讀取續玩進度" : "已續玩上次進度");
+      renderGraph();
+      updateBackButtonState();
+      if (showMessage) setStatus("已讀取存檔");
+      return true;
+    }
+
+    function primeAudio() {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      if (!audioContext) audioContext = new AudioCtx();
+      if (audioContext.state === "suspended") {
+        audioContext.resume().catch(() => {});
+      }
+    }
+
+    function playTypeTick(index, char) {
+      if (!audioContext || audioContext.state !== "running") return;
+      const now = audioContext.currentTime;
+      if (now - lastTickAt < 0.03) return;
+      lastTickAt = now;
+
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      const punctuationBoost = /[，。！？；：,.!?]/.test(char) ? 24 : 0;
+
+      oscillator.type = "triangle";
+      oscillator.frequency.setValueAtTime(460 + (index % 5) * 28 + punctuationBoost, now);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.018, now + 0.006);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.048);
+
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start(now);
+      oscillator.stop(now + 0.05);
+    }
+
+    function stopTypewriter() {
+      if (typeTimer) {
+        clearTimeout(typeTimer);
+        typeTimer = null;
+      }
+    }
+
+    function typewriteText(text) {
+      const textEl = document.getElementById("story-text");
+      stopTypewriter();
+      textEl.textContent = "";
+      let i = 0;
+
+      const writeNext = () => {
+        if (i >= text.length) {
+          typeTimer = null;
+          return;
+        }
+
+        const char = text[i];
+        textEl.textContent += char;
+        if (/\S/.test(char)) playTypeTick(i, char);
+        i += 1;
+
+        let delay = TYPE_INTERVAL_MS;
+        if (/[，。！？；：,.!?]/.test(char)) delay += 90;
+        if (char === "\n") delay += 120;
+        typeTimer = setTimeout(writeNext, delay);
+      };
+
+      writeNext();
+    }
+
+    function navigateTo(id, extraMeta = "", pushHistory = true) {
+      if (!story[id]) return;
+      currentId = id;
+      if (pushHistory && historyStack[historyStack.length - 1] !== id) {
+        historyStack.push(id);
+      }
+      renderScene(extraMeta);
+      renderGraph();
+      updateBackButtonState();
+      saveProgress(false);
+    }
+
+    function goTo(id) {
+      primeAudio();
+      navigateTo(id);
+    }
+
+    function jumpToMOC(mocKey) {
+      const list = mocMap[mocKey];
+      if (!list || !list.length) return;
+      primeAudio();
+      navigateTo(list[0], `九宮入口：${mocKey}`);
+    }
+
+    function goBack() {
+      if (historyStack.length <= 1) {
+        updateBackButtonState();
+        setStatus("已在故事起點");
+        return;
+      }
+      historyStack.pop();
+      const previousId = historyStack[historyStack.length - 1];
+      navigateTo(previousId, "返回上一段", false);
+    }
+
+    function restartStory() {
+      currentId = "HS_G_001";
+      historyStack = ["HS_G_001"];
+      renderScene("重新開始");
+      renderGraph();
+      updateBackButtonState();
+      saveProgress(true);
+    }
+
+    function renderScene(extraMeta = "") {
+      const node = story[currentId];
+      document.getElementById("story-title").textContent = node.title;
+      document.getElementById("story-meta").textContent =
+        `編號：${currentId}　|　標籤：${node.tags.join(" / ")}${extraMeta ? "　|　" + extraMeta : ""}`;
+      typewriteText(node.text);
+
+      const choicesEl = document.getElementById("choices");
+      choicesEl.innerHTML = "";
+
+      node.choices.forEach(choice => {
+        const btn = document.createElement("button");
+        btn.className = "choice-btn";
+        btn.textContent = `→ ${choice.label}`;
+        btn.onclick = () => goTo(choice.target);
+        choicesEl.appendChild(btn);
+      });
+    }
+
+    function renderGraph() {
+      const panel = document.getElementById("graph-panel");
+      const svg = document.getElementById("graph-svg");
+
+      panel.querySelectorAll(".node").forEach(n => n.remove());
+      svg.innerHTML = "";
+
+      const center = { x: 50, y: 50 };
+      const positions = [
+        { x: 50, y: 18 },
+        { x: 20, y: 50 },
+        { x: 80, y: 50 },
+        { x: 50, y: 82 },
+        { x: 28, y: 22 },
+        { x: 72, y: 22 }
+      ];
+
+      const centerNode = makeNode(currentId, story[currentId].title, center.x, center.y, true);
+      panel.appendChild(centerNode);
+
+      const targets = story[currentId].choices.slice(0, 6).map(c => c.target);
+
+      targets.forEach((targetId, i) => {
+        const p = positions[i];
+        const n = makeNode(targetId, story[targetId].title, p.x, p.y, false);
+        panel.appendChild(n);
+        drawLine(center.x, center.y, p.x, p.y, svg);
+      });
+    }
+
+    function makeNode(id, label, x, y, isCenter) {
+      const div = document.createElement("div");
+      div.className = `node ${isCenter ? "center" : "small"}`;
+      div.style.left = `${x}%`;
+      div.style.top = `${y}%`;
+      div.textContent = label;
+      div.title = id;
+      div.onclick = () => goTo(id);
+      return div;
+    }
+
+    function drawLine(x1p, y1p, x2p, y2p, svg) {
+      const w = svg.clientWidth || svg.parentElement.clientWidth;
+      const h = svg.clientHeight || svg.parentElement.clientHeight;
+
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", (x1p / 100) * w);
+      line.setAttribute("y1", (y1p / 100) * h);
+      line.setAttribute("x2", (x2p / 100) * w);
+      line.setAttribute("y2", (y2p / 100) * h);
+      line.setAttribute("stroke", "#64748b");
+      line.setAttribute("stroke-width", "2");
+      line.setAttribute("opacity", "0.9");
+      svg.appendChild(line);
+    }
+
+    window.addEventListener("resize", renderGraph);
+    window.addEventListener("pointerdown", primeAudio, { once: true });
+    window.addEventListener("keydown", primeAudio, { once: true });
+
+    document.getElementById("btn-back").addEventListener("click", goBack);
+    document.getElementById("btn-restart").addEventListener("click", restartStory);
+    document.getElementById("btn-save").addEventListener("click", () => saveProgress(true));
+    document.getElementById("btn-load").addEventListener("click", () => loadProgress(true));
+
+    updateLoadButtonState();
+    const resumed = loadProgress(false);
+    if (!resumed) {
+      renderScene();
+      renderGraph();
+      updateBackButtonState();
+      saveProgress(false);
+    }
+  </script>
+</body>
+</html>
