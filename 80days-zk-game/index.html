@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>80 Days × 卡片盒遊戲原型</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header panel">
+        <p class="eyebrow">Prototype</p>
+        <h1>80 Days × 卡片盒轉遊戲</h1>
+        <p class="subtitle">Her Story 的關鍵字調查感 × 80 Days 的長程資源策略</p>
+      </header>
+
+      <main class="main-grid">
+        <section class="panel search-panel">
+          <div class="panel-title-wrap">
+            <h2>搜尋終端</h2>
+            <span id="search-budget" class="badge"></span>
+          </div>
+          <div class="search-row">
+            <input id="search-input" type="search" placeholder="輸入關鍵字：人物、領域、事件" />
+            <button id="search-btn" class="primary-btn" type="button">搜尋</button>
+          </div>
+          <div class="quick-tags" id="quick-tags"></div>
+          <p class="hint">每次搜尋會消耗時間與精力，並扣除本期深度搜尋次數。</p>
+          <ul id="search-results" class="search-results"></ul>
+        </section>
+
+        <section class="panel story-panel">
+          <div class="panel-title-wrap">
+            <h2>事件卡片</h2>
+            <span id="decade-label" class="badge"></span>
+          </div>
+          <article id="story-card" class="story-card">
+            <h3>尚未選擇卡片</h3>
+            <p>先從左側搜尋一張記憶卡，再選擇你的行動。</p>
+          </article>
+          <div id="choice-list" class="choice-list"></div>
+          <div class="route-box">
+            <h3>十年路線</h3>
+            <div id="route-buttons" class="route-buttons"></div>
+            <p id="route-note" class="hint"></p>
+          </div>
+        </section>
+
+        <aside class="panel status-panel">
+          <div class="panel-title-wrap">
+            <h2>策略儀表</h2>
+            <span id="turn-label" class="badge"></span>
+          </div>
+
+          <section class="resource-wrap">
+            <h3>資源</h3>
+            <div id="resource-bars" class="resource-bars"></div>
+          </section>
+
+          <section class="domain-wrap">
+            <h3>八領域進度</h3>
+            <div id="domain-grid" class="domain-grid"></div>
+          </section>
+
+          <section class="timeline-wrap">
+            <h3>百年路線</h3>
+            <ol id="timeline" class="timeline"></ol>
+          </section>
+
+          <section class="log-wrap">
+            <h3>行動紀錄</h3>
+            <ul id="event-log" class="event-log"></ul>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="panel app-footer">
+        <button id="advance-btn" class="primary-btn" type="button">結算本期十年</button>
+        <button id="save-btn" type="button">儲存進度</button>
+        <button id="load-btn" type="button">讀取進度</button>
+        <button id="reset-btn" type="button">重新開始</button>
+        <p class="hint">MVP：先做可玩原型（搜尋、卡片、路線、八領域、跨期結算）</p>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
