@@ -94,6 +94,37 @@
       font-size: 0.9rem;
     }
 
+    .story-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      min-height: 28px;
+    }
+
+    .keyword-chip {
+      border: 1px solid #1d4ed8;
+      background: rgba(30, 64, 175, 0.26);
+      color: #bfdbfe;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.82rem;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .keyword-chip:hover {
+      background: rgba(37, 99, 235, 0.44);
+      transform: translateY(-1px);
+    }
+
+    .keyword-chip.lexicon {
+      border-color: #475569;
+      background: rgba(15, 23, 42, 0.62);
+      color: #cbd5e1;
+    }
+
     .story-text {
       font-size: 1.28rem;
       line-height: 1.9;
@@ -213,6 +244,104 @@
       color: #fecaca;
     }
 
+    .tree-modal[hidden] {
+      display: none;
+    }
+
+    .tree-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(6px);
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .tree-dialog {
+      width: min(980px, 100%);
+      max-height: 90vh;
+      overflow: auto;
+      background: linear-gradient(180deg, #0b1220 0%, #121b2e 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .tree-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .tree-title {
+      margin: 0;
+      font-size: 1.12rem;
+      color: #f8fafc;
+    }
+
+    .tree-summary {
+      margin: 0 0 14px 0;
+      font-size: 0.94rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tree-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .tree-card {
+      border: 1px solid #334155;
+      background: rgba(15, 23, 42, 0.66);
+      border-radius: 12px;
+      padding: 10px;
+      transition: 0.2s ease;
+      min-height: 112px;
+    }
+
+    .tree-card.locked {
+      opacity: 0.44;
+      filter: grayscale(0.7);
+    }
+
+    .tree-card.unlocked {
+      border-color: #38bdf8;
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.26);
+    }
+
+    .tree-name {
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f1f5f9;
+    }
+
+    .tree-role {
+      color: #94a3b8;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .tree-links {
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .tree-links span {
+      color: #38bdf8;
+    }
+
     @media (max-width: 980px) {
       .app {
         grid-template-columns: 1fr;
@@ -233,6 +362,7 @@
       .choice-btn { font-size: 1rem; }
       .grid-cell { font-size: 1rem; }
       .node { min-width: 88px; max-width: 130px; font-size: 0.88rem; }
+      .tree-dialog { padding: 12px; }
     }
   </style>
 </head>
@@ -246,8 +376,10 @@
         <button class="utility-btn" id="btn-restart" type="button">重新開始</button>
         <button class="utility-btn" id="btn-save" type="button">儲存進度</button>
         <button class="utility-btn" id="btn-load" type="button">讀取續玩</button>
+        <button class="utility-btn" id="btn-tree" type="button">故事樹</button>
         <span class="save-status" id="save-status"></span>
       </div>
+      <div class="story-keywords" id="story-keywords"></div>
       <div class="story-text" id="story-text"></div>
       <div class="choices" id="choices"></div>
     </section>
@@ -274,6 +406,17 @@
     </aside>
   </div>
 
+  <div class="tree-modal" id="tree-modal" hidden>
+    <div class="tree-dialog" role="dialog" aria-modal="true" aria-labelledby="tree-title">
+      <div class="tree-header">
+        <h2 class="tree-title" id="tree-title">故事樹 / 人物圖譜</h2>
+        <button class="utility-btn" id="btn-tree-close" type="button">關閉</button>
+      </div>
+      <p class="tree-summary" id="tree-summary"></p>
+      <div class="tree-grid" id="tree-grid"></div>
+    </div>
+  </div>
+
   <script>
     const story = {
       HS_G_001: {
@@ -283,7 +426,8 @@
         choices: [
           { label: "追問西蒙的下落", target: "HS_G_002" },
           { label: "查看婚姻狀況", target: "HS_G_003" },
-          { label: "調閱格拉斯哥相關紀錄", target: "HS_G_004" }
+          { label: "調閱格拉斯哥相關紀錄", target: "HS_G_004" },
+          { label: "查看 271 段訪談帶設定", target: "HS_G_033" }
         ]
       },
       HS_G_002: {
@@ -333,7 +477,8 @@
         choices: [
           { label: "追查她們為何分開長大", target: "HS_G_007" },
           { label: "查看伊娃如何得知真相", target: "HS_G_010" },
-          { label: "查看共同身份規則", target: "HS_G_012" }
+          { label: "查看共同身份規則", target: "HS_G_012" },
+          { label: "查看五歲前後的雙生童年", target: "HS_G_036" }
         ]
       },
       HS_G_007: {
@@ -362,7 +507,7 @@
         tags: ["Timeline"],
         choices: [
           { label: "查看命運如何讓她們重逢", target: "HS_G_010" },
-          { label: "查看父母眼中的「想像朋友」", target: "HS_G_022" },
+          { label: "查看父母眼中的『想像朋友』", target: "HS_G_022" },
           { label: "返回被帶走的起點", target: "HS_G_008" }
         ]
       },
@@ -403,7 +548,7 @@
         choices: [
           { label: "查看兩人在玻璃工廠如何相識", target: "HS_G_024" },
           { label: "查看規則如何被打破", target: "HS_G_014" },
-          { label: "查看伊娃與西蒙的外遇", target: "HS_G_017" },
+          { label: "查看伊娃與西蒙的外遇", target: "HS_G_017" }
         ]
       },
       HS_G_014: {
@@ -443,7 +588,7 @@
         choices: [
           { label: "查看伊娃如何隱瞞孩子父親", target: "HS_G_027" },
           { label: "查看生日當天的爆炸點", target: "HS_G_028" },
-          { label: "返回漢娜與西蒙的戀情", target: "HS_G_013" },
+          { label: "返回漢娜與西蒙的戀情", target: "HS_G_013" }
         ]
       },
       HS_G_018: {
@@ -453,7 +598,7 @@
         choices: [
           { label: "查看生日攤牌完整版", target: "HS_G_028" },
           { label: "查看第二天真正發生的事", target: "HS_G_019" },
-          { label: "返回共同身份規則", target: "HS_G_012" },
+          { label: "返回共同身份規則", target: "HS_G_012" }
         ]
       },
       HS_G_019: {
@@ -468,27 +613,28 @@
       },
       HS_G_020: {
         title: "掩蓋真相",
-        text: "伊娃回家後，兩人決定一起藏匿西蒙的屍體。\n她們利用伊娃去格拉斯哥這件事，構築出一個不在場證明。\n到了審訊最後，伊娃甚至說：漢娜已經失蹤了。\n然後，她要求見律師。\n最後一道真相才打開：追查這一切的人，其實是伊娃的女兒，莎拉。\n她問你：你理解你母親的行為嗎？",
+        text: "伊娃回家後，兩人決定一起藏匿西蒙的屍體。\n她們利用伊娃去格拉斯哥這件事，構築出一個不在場證明。\n到了審訊最後，伊娃甚至說：漢娜已經失蹤了。\n然後，她要求見律師。\n最後一道真相才打開：追查這一切的人，其實是伊娃的女兒，莎拉。",
         tags: ["Inference", "Timeline", "Ending"],
         choices: [
-          { label: "聽她說「你能逮捕不存在的人嗎」", target: "HS_G_032" },
+          { label: "聽她說『你能逮捕不存在的人嗎』", target: "HS_G_032" },
           { label: "查看三種理論與證據", target: "HS_G_030" },
-          { label: "進入莎拉的對話視窗", target: "HS_G_031" }
+          { label: "進入莎拉的對話視窗", target: "HS_G_031" },
+          { label: "查看『看夠片段可結束』機制", target: "HS_G_048" }
         ]
       },
       HS_G_021: {
         title: "被關在室內的伊娃",
-        text: "弗洛倫絲知道，一旦伊娃被鄰居看見，整個謊言就會崩塌。\n她刻意讓伊娃長時間待在屋內，幾乎不讓她與外界接觸。\n這不是單純的保護，而是把孩子活成一個必須被藏起來的證物。\n伊娃學會了沉默，也學會了把孤獨當成日常。",
+        text: "弗洛倫絲知道，一旦伊娃被鄰居看見，整個謊言就會崩塌。\n她刻意讓伊娃長時間待在屋內，幾乎不讓她與外界接觸。\n這不是單純的保護，而是把孩子活成一個必須被藏起來的證物。",
         tags: ["Timeline", "Clues", "Contradiction"],
         choices: [
-          { label: "查看父母眼中的「想像朋友」", target: "HS_G_022" },
+          { label: "查看父母眼中的『想像朋友』", target: "HS_G_022" },
           { label: "追查伊娃如何知道真相", target: "HS_G_010" },
           { label: "返回助產士背景", target: "HS_G_007" }
         ]
       },
       HS_G_022: {
         title: "想像朋友掩護",
-        text: "伊娃後來出現在漢娜家時，最危險的不是被看到，而是被認出。\n漢娜的父母對異常視而不見，把伊娃當成漢娜的「想像朋友」。\n這個誤判，反而成了雙胞胎共享身份最早期、最有效的遮蔽。\n大人以為孩子在編故事，故事卻正在決定所有人的命運。",
+        text: "伊娃後來出現在漢娜家時，最危險的不是被看到，而是被認出。\n漢娜的父母對異常視而不見，把伊娃當成漢娜的『想像朋友』。\n大人以為孩子在編故事，故事卻正在決定所有人的命運。",
         tags: ["Identity", "Clues"],
         choices: [
           { label: "查看同住閣樓後的生活", target: "HS_G_011" },
@@ -498,7 +644,7 @@
       },
       HS_G_023: {
         title: "共同日記與分工細則",
-        text: "兩人共用一本日記，像共享一套作業系統。\n內容不只是心情，而是嚴格行程：誰去上班、誰去買菜、誰要回訊息。\n她們甚至統一語氣、詞彙與停頓，確保「漢娜」始終只像一個人。\n規則讓她們活下來，也把她們的人格邊界磨得越來越薄。",
+        text: "兩人共用一本日記，像共享一套作業系統。\n內容不只是心情，而是嚴格行程：誰去上班、誰去買菜、誰要回訊息。\n規則讓她們活下來，也把她們的人格邊界磨得越來越薄。",
         tags: ["Identity", "Clues", "Inference"],
         choices: [
           { label: "回到共同身份規則總覽", target: "HS_G_012" },
@@ -508,7 +654,7 @@
       },
       HS_G_024: {
         title: "玻璃工廠初遇",
-        text: "漢娜和西蒙在玻璃工場相識。\n同一間工廠、同一個班表，讓親近看起來再自然不過。\n西蒙以為自己認識的是一個完整的人，卻不知道她背後有另一個共享身分者。\n從這一刻開始，戀愛與偽裝被綁進同一條時間線。",
+        text: "漢娜和西蒙在玻璃工場相識。\n同一間工廠、同一個班表，讓親近看起來再自然不過。\n從這一刻開始，戀愛與偽裝被綁進同一條時間線。",
         tags: ["Relationship", "Timeline"],
         choices: [
           { label: "回到戀情主線", target: "HS_G_013" },
@@ -518,7 +664,7 @@
       },
       HS_G_025: {
         title: "伊娃搬離與假髮",
-        text: "漢娜懷孕、結婚並和西蒙同住後，伊娃搬到自己的公寓。\n她開始戴假髮，讓自己和「漢娜」看起來有可辨識差異。\n那像是一種自保：她不再只是備份身分，而是試著成為獨立個體。\n但分開居住並沒有切斷糾纏，反而讓秘密走向另一種失控。",
+        text: "漢娜懷孕、結婚並和西蒙同住後，伊娃搬到自己的公寓。\n她開始戴假髮，讓自己和『漢娜』看起來有可辨識差異。\n分開居住並沒有切斷糾纏，反而讓秘密走向另一種失控。",
         tags: ["Timeline", "Relationship", "Identity"],
         choices: [
           { label: "查看酒吧重逢", target: "HS_G_026" },
@@ -528,7 +674,7 @@
       },
       HS_G_026: {
         title: "酒吧重逢",
-        text: "在一間酒吧裡，西蒙再次遇見伊娃，當時她正在台上唱歌。\n他被那張熟悉的臉吸引，卻誤以為自己只是遇見「另一種漢娜」。\n重逢很快演變成外遇，過去未解的慾望與怨恨一起回來。\n這段關係從一開始就建立在誤認與隱瞞之上。",
+        text: "在一間酒吧裡，西蒙再次遇見伊娃，當時她正在台上唱歌。\n他被那張熟悉的臉吸引，卻誤以為自己只是遇見『另一種漢娜』。\n重逢很快演變成外遇。",
         tags: ["Relationship", "Clues", "Timeline"],
         choices: [
           { label: "接到外遇主線", target: "HS_G_017" },
@@ -538,7 +684,7 @@
       },
       HS_G_027: {
         title: "父親身份被隱瞞",
-        text: "伊娃懷孕後，沒有把父親是西蒙的事告訴任何人。\n她也刻意不讓漢娜知道，等於把最危險的資訊藏在沉默裡。\n在這段時間裡，所有人都在說話，唯獨最關鍵的真相被封口。\n隱瞞不是停滯，而是在倒數。",
+        text: "伊娃懷孕後，沒有把父親是西蒙的事告訴任何人。\n她也刻意不讓漢娜知道，等於把最危險的資訊藏在沉默裡。\n隱瞞不是停滯，而是在倒數。",
         tags: ["Clues", "Contradiction", "Inference"],
         choices: [
           { label: "前往生日攤牌", target: "HS_G_028" },
@@ -548,7 +694,7 @@
       },
       HS_G_028: {
         title: "生日攤牌完整版",
-        text: "生日當天，西蒙先送漢娜一面手工鏡子。\n隨後漢娜攤牌：她有一個雙胞胎姐妹，且那姐妹已懷孕。\n當她確認孩子父親是西蒙時，現場秩序徹底崩壞。\n這不是單一背叛，而是多年規則、慾望與嫉妒同時爆炸。",
+        text: "生日當天，西蒙先送漢娜一面手工鏡子。\n隨後漢娜攤牌：她有一個雙胞胎姐妹，且那姐妹已懷孕。\n當她確認孩子父親是西蒙時，現場秩序徹底崩壞。",
         tags: ["Relationship", "Contradiction", "Keywords"],
         choices: [
           { label: "查看西蒙如何把漢娜誤認成伊娃", target: "HS_G_029" },
@@ -558,7 +704,7 @@
       },
       HS_G_029: {
         title: "鏡中誤認",
-        text: "衝突後，西蒙回來時把漢娜誤認成伊娃。\n他又送了一面近似的手工鏡子，並直說自己想和伊娃在一起。\n當漢娜揭露身分，語言已經失去修補能力。\n接下來每一個動作，都把事件推向無法回收的結果。",
+        text: "衝突後，西蒙回來時把漢娜誤認成伊娃。\n他又送了一面近似的手工鏡子，並直說自己想和伊娃在一起。\n接下來每一個動作，都把事件推向無法回收的結果。",
         tags: ["Clues", "Keywords", "Relationship"],
         choices: [
           { label: "接續到鏡子殺人", target: "HS_G_019" },
@@ -568,52 +714,335 @@
       },
       HS_G_030: {
         title: "三種理論與證據",
-        text: "最後版本留下三種解釋：\n一、雙胞胎故事完全屬實；\n二、雙胞胎只是伊娃為干擾警方而編造；\n三、所謂「漢娜 / 伊娃」其實指向解離性身分障礙。\n訪談中的細節會同時支持與削弱這三種理論，真相因此保持開放。",
+        text: "最後版本留下三種解釋：\n一、雙胞胎故事完全屬實；\n二、雙胞胎只是伊娃為干擾警方而編造；\n三、所謂『漢娜 / 伊娃』其實指向解離性身分障礙。\n訪談中的細節會同時支持與削弱這三種理論。",
         tags: ["Inference", "Contradiction", "Identity"],
         choices: [
           { label: "進入莎拉的最終提問", target: "HS_G_031" },
           { label: "回到掩蓋真相", target: "HS_G_020" },
-          { label: "回頭整理雙胞胎線", target: "HS_G_006" }
+          { label: "回頭整理雙胞胎線", target: "HS_G_006" },
+          { label: "延伸：不存在唯一正解", target: "HS_G_049" }
         ]
       },
       HS_G_031: {
         title: "莎拉的聊天室",
-        text: "當你解鎖足夠片段，畫面會跳出聊天室問你是否結束。\n你若回答「是」，才揭露玩家其實是莎拉，伊娃的女兒。\n聊天室問莎拉是否理解母親的選擇，並邀請她到外面見面。\n故事在此不給定論，只把責任交還給觀看者。",
+        text: "當你解鎖足夠片段，畫面會跳出聊天室問你是否結束。\n你若回答『是』，才揭露玩家其實是莎拉，伊娃的女兒。\n聊天室問莎拉是否理解母親的選擇，並邀請她到外面見面。",
         tags: ["Ending", "Inference", "Narrative"],
         choices: [
           { label: "回看三種理論", target: "HS_G_030" },
           { label: "聽伊娃最終法律挑釁", target: "HS_G_032" },
-          { label: "回到審訊開場重跑一次", target: "HS_G_001" }
+          { label: "回到審訊開場重跑一次", target: "HS_G_001" },
+          { label: "觀看者心證與收束", target: "HS_G_050" }
         ]
       },
       HS_G_032: {
         title: "不存在的人",
-        text: "最終訪談裡，伊娃說漢娜「已經消失，不會再回來」。\n她反問：你能逮捕一個不存在的人嗎？\n接著她要求律師，並把先前供述稱作「故事」。\n這段話同時像認罪、脫罪、也像一場精準操控。",
+        text: "最終訪談裡，伊娃說漢娜『已經消失，不會再回來』。\n她反問：你能逮捕一個不存在的人嗎？\n接著她要求律師，並把先前供述稱作『故事』。",
         tags: ["Ending", "Inference", "Contradiction"],
         choices: [
           { label: "回到三種理論比對", target: "HS_G_030" },
           { label: "進入莎拉最終提問", target: "HS_G_031" },
+          { label: "回到審訊開場", target: "HS_G_001" },
+          { label: "延伸：不存在唯一正解", target: "HS_G_049" }
+        ]
+      },
+      HS_G_033: {
+        title: "271 段錄影設定",
+        text: "所有可檢索片段都來自訪談帶，總數 271 段。\n畫面裡永遠只有受訪者『漢娜』一個人，警方提問軌道全數缺失。\n這個不合理設定反而推高推理難度：你只能從同一張臉、不同語氣裡拼真相。",
+        tags: ["Narrative", "Keywords", "Inference"],
+        choices: [
+          { label: "查看為何只剩單邊問答", target: "HS_G_034" },
+          { label: "查看演員如何留下細節", target: "HS_G_035" },
           { label: "回到審訊開場", target: "HS_G_001" }
+        ]
+      },
+      HS_G_034: {
+        title: "缺失的警察提問",
+        text: "一般問訊紀錄常見一問一答，但這裡偏偏只剩回答。\n當提問消失，語句的前後關係就成為最大陷阱。\n同一句話放進不同問題裡，意義會完全反轉。",
+        tags: ["Inference", "Keywords", "Contradiction"],
+        choices: [
+          { label: "查看伊娃如何冒充去警局", target: "HS_G_042" },
+          { label: "查看咖啡與糖的微線索", target: "HS_G_043" },
+          { label: "返回 271 段設定", target: "HS_G_033" }
+        ]
+      },
+      HS_G_035: {
+        title: "單人演繹的細節",
+        text: "全片幾乎只有一位演員出鏡。\nViva Seifert 透過語調、停頓、眼神與姿態，製造了可供比對的細部差異。\n同一張臉的『兩種性格』，在微小表演上反覆露出接縫。",
+        tags: ["Narrative", "Clues"],
+        choices: [
+          { label: "查看臉上紅印與瘀傷線索", target: "HS_G_040" },
+          { label: "回到錄影設定", target: "HS_G_033" },
+          { label: "查看咖啡與糖杯差異", target: "HS_G_043" }
+        ]
+      },
+      HS_G_036: {
+        title: "五歲才知道彼此",
+        text: "雙胞胎直到五歲才意識到對方的存在。\n那之前，漢娜擁有父母與家庭的完整愛；伊娃則活在隔絕裡。\n兩條童年在同一張臉上，長成完全不同的情感肌理。",
+        tags: ["Timeline", "Identity"],
+        choices: [
+          { label: "查看漢娜的玩具屋童年", target: "HS_G_037" },
+          { label: "查看伊娃的封閉童年", target: "HS_G_038" },
+          { label: "查看兩人後來如何交換身份", target: "HS_G_039" }
+        ]
+      },
+      HS_G_037: {
+        title: "漢娜的玩具屋",
+        text: "漢娜的童年有溫暖家庭、學校與朋友，也有一座精緻玩具屋。\n她得到的是被看見、被命名、被祝福的人生。\n這份完整感，後來成為伊娃最想複製也最難複製的東西。",
+        tags: ["Timeline", "Family", "Clues"],
+        choices: [
+          { label: "查看交換身份遊戲", target: "HS_G_039" },
+          { label: "查看『想像朋友』掩護", target: "HS_G_022" },
+          { label: "返回五歲分流", target: "HS_G_036" }
+        ]
+      },
+      HS_G_038: {
+        title: "伊娃的封閉童年",
+        text: "伊娃被關在房子裡，幾乎不能和外界接觸。\n窗、門、鎖成了她童年的邊界。\n她的『社會不存在』，不是比喻，而是被人為維持的現實。",
+        tags: ["Timeline", "Contradiction", "Clues"],
+        choices: [
+          { label: "回到室內囚禁主線", target: "HS_G_021" },
+          { label: "查看交換身份遊戲", target: "HS_G_039" },
+          { label: "返回五歲分流", target: "HS_G_036" }
+        ]
+      },
+      HS_G_039: {
+        title: "交換身份遊戲",
+        text: "她們開始偷偷交換身份：共享玩具、共享上學、共享朋友，甚至共享戀愛對象。\n每次切換後，兩人都把經歷記進日記，讓對方『補完』那天人生。\n這個遊戲同時是親密、也是危險的訓練。",
+        tags: ["Identity", "Timeline", "Clues"],
+        choices: [
+          { label: "查看共同日記與規則化", target: "HS_G_023" },
+          { label: "查看人為傷痕線索", target: "HS_G_040" },
+          { label: "查看王子西蒙如何改變規則", target: "HS_G_041" }
+        ]
+      },
+      HS_G_040: {
+        title: "人為傷痕線索",
+        text: "為了讓角色互換不被看破，她們有時會故意做出相似傷口。\n你在影片中看到臉上時有時無的紅印、前後不一致的瘀痕。\n微小外傷，成了雙生戲法最誠實的證人。",
+        tags: ["Clues", "Contradiction", "Keywords"],
+        choices: [
+          { label: "查看咖啡與糖杯差異", target: "HS_G_043" },
+          { label: "查看伊娃冒充去警局", target: "HS_G_042" },
+          { label: "返回交換身份遊戲", target: "HS_G_039" }
+        ]
+      },
+      HS_G_041: {
+        title: "王子西蒙",
+        text: "在漢娜心裡，西蒙像童話裡的王子。\n但王子一旦進入雙生規則，規則就不再穩定。\n愛情不是新增角色，而是改寫整套身份演算法。",
+        tags: ["Relationship", "Timeline", "Inference"],
+        choices: [
+          { label: "接回戀情主線", target: "HS_G_013" },
+          { label: "查看規則被打破", target: "HS_G_014" },
+          { label: "查看玻璃工廠初遇", target: "HS_G_024" }
+        ]
+      },
+      HS_G_042: {
+        title: "伊娃冒充報案",
+        text: "雙胞胎身份不是主動坦白給警方，而是伊娃先去警局冒充漢娜提供線索。\n問題是：社會上原本不存在『伊娃』這個合法身份。\n當人格特徵前後不一、證詞互相撞擊，裂縫就出現了。",
+        tags: ["Clues", "Contradiction", "Identity"],
+        choices: [
+          { label: "返回審訊現場", target: "HS_G_001" },
+          { label: "回看口供破綻", target: "HS_G_005" },
+          { label: "查看咖啡與糖杯線索", target: "HS_G_043" }
+        ]
+      },
+      HS_G_043: {
+        title: "咖啡與糖杯",
+        text: "某些片段桌上只有一杯咖啡；某些片段卻是咖啡加一杯糖。\n再對照紅印、語氣、姿態，你會開始懷疑鏡頭前是否真是同一個人。\n這些細節都很小，小到只要分心就會錯過。",
+        tags: ["Clues", "Keywords", "Inference"],
+        choices: [
+          { label: "查看鏡像與回文隱喻", target: "HS_G_044" },
+          { label: "返回口供矛盾核心", target: "HS_G_005" },
+          { label: "返回缺失提問議題", target: "HS_G_034" }
+        ]
+      },
+      HS_G_044: {
+        title: "鏡像與回文隱喻",
+        text: "Mirror（鏡子）、Reflection（倒影）、Palindrome（回文）在本作反覆出現。\n雙胞胎名字、對稱關係、可逆敘事，都在提醒你：真相可能不是單向直線。\n你看見的不只是事件，還有事件的映射。",
+        tags: ["Keywords", "Inference", "Clues"],
+        choices: [
+          { label: "查看制鏡工西蒙", target: "HS_G_045" },
+          { label: "返回鏡子衝突主線", target: "HS_G_018" },
+          { label: "回到三種理論", target: "HS_G_030" }
+        ]
+      },
+      HS_G_045: {
+        title: "制鏡工西蒙",
+        text: "這些隱喻之所以更刺眼，因為西蒙本職正是與鏡子工藝相關。\n他的工作是打磨反射；他的感情卻困在誤認與投射裡。\n鏡子既是禮物，也是凶器，更是整個案件的語法中心。",
+        tags: ["Keywords", "Relationship", "Clues"],
+        choices: [
+          { label: "返回生日攤牌", target: "HS_G_028" },
+          { label: "回到鏡中誤認", target: "HS_G_029" },
+          { label: "返回隱喻總覽", target: "HS_G_044" }
+        ]
+      },
+      HS_G_046: {
+        title: "旁支人物網",
+        text: "故事不只三個人。以她們為中心，還牽出西蒙父母、老闆與同事、老闆妻子、雙胞胎父母、同學、計程車司機，甚至承辦警察的家庭。\n另外還浮現 Diane、Doug、Eric、Eleana 等名字。\n越多旁支，越像真實人生而非單線懸疑。",
+        tags: ["Narrative", "Clues", "Family"],
+        choices: [
+          { label: "查看中文搜索詞詞典", target: "HS_G_047" },
+          { label: "回到三種理論", target: "HS_G_030" },
+          { label: "返回掩蓋真相", target: "HS_G_020" }
+        ]
+      },
+      HS_G_047: {
+        title: "中文搜索詞詞典",
+        text: "你提供的英文搜索詞已全部轉成中文，並可直接點擊上方標籤跳轉相關卡片。\n這些詞不只是索引，也對應敘事節奏：物件、關係、身體、時間、地點、證詞與隱喻。",
+        tags: ["Keywords", "Tooling", "Inference"],
+        choices: [
+          { label: "回到錄影帶設定", target: "HS_G_033" },
+          { label: "返回旁支人物網", target: "HS_G_046" },
+          { label: "回到口供破綻", target: "HS_G_005" }
+        ]
+      },
+      HS_G_048: {
+        title: "可結束提示機制",
+        text: "本作不強制你得出唯一正解。\n當你看過足量片段，系統就會主動提示：你可以結束了。\n這個設計不是縮短內容，而是把『何時停止追問』交還給玩家。",
+        tags: ["Narrative", "Inference", "Ending"],
+        choices: [
+          { label: "進入莎拉聊天室", target: "HS_G_031" },
+          { label: "延伸：不存在唯一正解", target: "HS_G_049" },
+          { label: "回到審訊開場", target: "HS_G_001" }
+        ]
+      },
+      HS_G_049: {
+        title: "不存在唯一正解",
+        text: "Her Story 並不要求玩家提交標準答案。\n它要你做的是：在破碎片段中建立能自洽的心證。\n如果你只求『官方解答』，會錯過這部作品最深的參與感。",
+        tags: ["Inference", "Contradiction", "Narrative"],
+        choices: [
+          { label: "回到三種理論", target: "HS_G_030" },
+          { label: "查看觀看者心證", target: "HS_G_050" },
+          { label: "返回可結束提示", target: "HS_G_048" }
+        ]
+      },
+      HS_G_050: {
+        title: "觀看者心證",
+        text: "若你細看表情、語調、道具與細節，這會是一場高密度推理體驗。\n若你只是快速略過，它也可能像一部普通肥皂劇。\n同一組影片，最後看見什麼，取決於你如何觀看。",
+        tags: ["Ending", "Inference", "Narrative"],
+        choices: [
+          { label: "回到莎拉聊天室", target: "HS_G_031" },
+          { label: "回到審訊開場", target: "HS_G_001" },
+          { label: "返回中文搜索詞詞典", target: "HS_G_047" }
         ]
       }
     };
 
+    const allCardIds = Object.keys(story).sort();
+
     const mocMap = {
-      identity: ["HS_G_006", "HS_G_012", "HS_G_022", "HS_G_023", "HS_G_030", "HS_G_032"],
-      timeline: ["HS_G_004", "HS_G_007", "HS_G_008", "HS_G_009", "HS_G_010", "HS_G_016", "HS_G_017", "HS_G_020", "HS_G_021", "HS_G_025", "HS_G_026", "HS_G_028", "HS_G_029", "HS_G_031"],
-      relationship: ["HS_G_003", "HS_G_013", "HS_G_014", "HS_G_017", "HS_G_018", "HS_G_024", "HS_G_025", "HS_G_026", "HS_G_027", "HS_G_028", "HS_G_029"],
-      keywords: ["HS_G_004", "HS_G_018", "HS_G_019", "HS_G_028", "HS_G_029", "HS_G_032"],
-      narrative: ["HS_G_001", "HS_G_002", "HS_G_003", "HS_G_004", "HS_G_005", "HS_G_006", "HS_G_007", "HS_G_008", "HS_G_009", "HS_G_010", "HS_G_011", "HS_G_012", "HS_G_013", "HS_G_014", "HS_G_015", "HS_G_016", "HS_G_017", "HS_G_018", "HS_G_019", "HS_G_020", "HS_G_021", "HS_G_022", "HS_G_023", "HS_G_024", "HS_G_025", "HS_G_026", "HS_G_027", "HS_G_028", "HS_G_029", "HS_G_030", "HS_G_031", "HS_G_032"],
-      clues: ["HS_G_010", "HS_G_011", "HS_G_012", "HS_G_018", "HS_G_019", "HS_G_021", "HS_G_022", "HS_G_023", "HS_G_027", "HS_G_029", "HS_G_030"],
-      inference: ["HS_G_005", "HS_G_006", "HS_G_020", "HS_G_030", "HS_G_031", "HS_G_032"],
-      contradiction: ["HS_G_004", "HS_G_005", "HS_G_014", "HS_G_015", "HS_G_017", "HS_G_018", "HS_G_021", "HS_G_027", "HS_G_030", "HS_G_032"]
+      identity: ["HS_G_006", "HS_G_012", "HS_G_022", "HS_G_023", "HS_G_030", "HS_G_032", "HS_G_036", "HS_G_039", "HS_G_042", "HS_G_049"],
+      timeline: ["HS_G_004", "HS_G_007", "HS_G_008", "HS_G_009", "HS_G_010", "HS_G_016", "HS_G_017", "HS_G_020", "HS_G_021", "HS_G_025", "HS_G_026", "HS_G_028", "HS_G_029", "HS_G_031", "HS_G_033", "HS_G_036", "HS_G_037", "HS_G_038", "HS_G_041", "HS_G_048"],
+      relationship: ["HS_G_003", "HS_G_013", "HS_G_014", "HS_G_017", "HS_G_018", "HS_G_024", "HS_G_025", "HS_G_026", "HS_G_027", "HS_G_028", "HS_G_029", "HS_G_041", "HS_G_045"],
+      keywords: ["HS_G_004", "HS_G_018", "HS_G_019", "HS_G_028", "HS_G_029", "HS_G_032", "HS_G_033", "HS_G_034", "HS_G_043", "HS_G_044", "HS_G_047"],
+      narrative: allCardIds,
+      clues: ["HS_G_010", "HS_G_011", "HS_G_012", "HS_G_018", "HS_G_019", "HS_G_021", "HS_G_022", "HS_G_023", "HS_G_027", "HS_G_029", "HS_G_030", "HS_G_034", "HS_G_040", "HS_G_043", "HS_G_044", "HS_G_046"],
+      inference: ["HS_G_005", "HS_G_006", "HS_G_020", "HS_G_030", "HS_G_031", "HS_G_032", "HS_G_034", "HS_G_047", "HS_G_048", "HS_G_049", "HS_G_050"],
+      contradiction: ["HS_G_004", "HS_G_005", "HS_G_014", "HS_G_015", "HS_G_017", "HS_G_018", "HS_G_021", "HS_G_027", "HS_G_030", "HS_G_032", "HS_G_034", "HS_G_040", "HS_G_049"]
     };
+
+    const SEARCH_KEYWORD_MAP = Object.fromEntries([
+      ["murder", "謀殺"], ["simon", "西蒙"], ["glass", "玻璃"], ["mirror", "鏡子"], ["silver", "銀色"], ["wallet", "錢包"], ["throat", "喉嚨"], ["body", "屍體"], ["bruises", "瘀傷"], ["same", "相同"],
+      ["diary", "日記"], ["hannah", "漢娜"], ["florence", "弗洛倫絲"], ["girl", "女孩"], ["story", "故事"], ["happy", "快樂"], ["death", "死亡"], ["lie", "謊言"], ["hurt", "受傷"], ["phone", "電話"],
+      ["way", "方式"], ["sex", "性"], ["sex with", "發生關係"], ["drive", "開車"], ["important", "重要"], ["wedding", "婚禮"], ["hotel", "旅館"], ["weekend", "週末"], ["saturday", "星期六"], ["morning", "早晨"],
+      ["pregnant", "懷孕"], ["find", "找到"], ["find out", "查明"], ["oxford", "牛津"], ["singing", "唱歌"], ["moved out", "搬出去"], ["move", "搬家"], ["school", "學校"], ["kids", "孩子"], ["friend", "朋友"],
+      ["eve", "伊娃"], ["kill", "殺害"], ["wife", "妻子"], ["pub", "酒吧"], ["love", "愛"], ["crying", "哭泣"], ["himself", "他自己"], ["husband", "丈夫"], ["waiting", "等待"], ["cellar", "地窖"],
+      ["wrong", "錯誤"], ["bags", "袋子"], ["infertile", "不孕"], ["police", "警察"], ["summer", "夏天"], ["window", "窗戶"], ["reflection", "倒影"], ["hide", "藏匿"], ["TV", "電視"], ["place", "地方"],
+      ["once", "曾經"], ["her place", "她的住處"], ["wait", "等一下"], ["help", "幫助"], ["sister", "姐妹"], ["gone", "消失"], ["detective", "偵探"], ["never", "從未"], ["guitar", "吉他"], ["cat", "貓"],
+      ["house", "房子"], ["home", "家"], ["doll house", "玩具屋"], ["best", "最好"], ["each other", "彼此"], ["tattoo", "刺青"], ["money", "金錢"], ["night", "夜晚"], ["sleep", "睡覺"], ["slept", "睡過"],
+      ["bar", "酒吧"], ["kiss", "親吻"], ["name", "名字"], ["work", "工作"], ["test", "檢驗"], ["question", "提問"], ["twins", "雙胞胎"], ["talk", "談話"], ["shock", "震驚"], ["blood", "血"],
+      ["dream", "夢"], ["witch", "女巫"], ["married", "已婚"], ["job", "職業"], ["diane", "黛安"], ["hard", "艱難"], ["hospital", "醫院"], ["wig", "假髮"], ["right", "正確"], ["bedroom", "臥室"],
+      ["seventeen", "十七歲"], ["prince", "王子"], ["dead", "死亡"], ["children", "孩子"], ["old", "年老"], ["my parents", "我的父母"], ["fingerprint", "指紋"], ["six month", "六個月"], ["family", "家庭"], ["rule", "規則"],
+      ["attic", "閣樓"], ["hair", "頭髮"], ["three", "三個"], ["first", "第一"], ["present", "禮物"], ["birthday", "生日"], ["coffee", "咖啡"], ["keys", "鑰匙"], ["lock", "鎖"], ["sugar", "糖"],
+      ["tea", "茶"], ["february", "二月"], ["eight", "八"], ["poison", "毒藥"], ["doug", "道格"], ["eric", "艾瑞克"], ["eleana", "艾莉安娜"], ["watch", "手錶"], ["broken", "破碎"], ["baby", "嬰兒"],
+      ["car", "汽車"], ["secret", "秘密"], ["tale", "傳聞"], ["arrest", "逮捕"], ["life", "人生"], ["exist", "存在"], ["glasgow", "格拉斯哥"], ["different", "不同"], ["difference", "差異"]
+    ]);
+
+    const SEARCH_KEYWORD_ZH = [...new Set(Object.values(SEARCH_KEYWORD_MAP))];
+
+    const cardKeywords = {
+      HS_G_001: ["警察", "提問", "丈夫", "失蹤", "西蒙"],
+      HS_G_002: ["謀殺", "屍體", "喉嚨", "血", "死亡"],
+      HS_G_003: ["妻子", "丈夫", "愛", "受傷", "婚禮"],
+      HS_G_004: ["格拉斯哥", "開車", "週末", "星期六", "早晨"],
+      HS_G_005: ["問題", "差異", "錯誤", "證詞", "提問"],
+      HS_G_006: ["雙胞胎", "相同", "姐妹", "名字", "震驚"],
+      HS_G_007: ["弗洛倫絲", "女孩", "謊言", "死亡", "家庭"],
+      HS_G_008: ["嬰兒", "謊言", "秘密", "家", "死亡"],
+      HS_G_009: ["學校", "孩子", "朋友", "家庭", "差異"],
+      HS_G_010: ["日記", "查明", "秘密", "死亡", "警察"],
+      HS_G_011: ["閣樓", "房子", "家", "等待", "幫助"],
+      HS_G_012: ["規則", "彼此", "名字", "生活", "秘密"],
+      HS_G_013: ["工作", "玻璃", "愛", "丈夫", "妻子"],
+      HS_G_014: ["發生關係", "懷孕", "規則", "受傷", "差異"],
+      HS_G_015: ["不孕", "孩子", "哭泣", "受傷", "不同"],
+      HS_G_016: ["八", "醫院", "血", "受傷", "孩子"],
+      HS_G_017: ["酒吧", "愛", "懷孕", "親吻", "夜晚"],
+      HS_G_018: ["生日", "禮物", "鏡子", "震驚", "血"],
+      HS_G_019: ["鏡子", "破碎", "喉嚨", "屍體", "死亡"],
+      HS_G_020: ["藏匿", "屍體", "格拉斯哥", "逮捕", "故事"],
+      HS_G_021: ["女孩", "房子", "窗戶", "鎖", "等待"],
+      HS_G_022: ["我的父母", "家庭", "朋友", "故事", "不同"],
+      HS_G_023: ["日記", "規則", "彼此", "工作", "名字"],
+      HS_G_024: ["工作", "玻璃", "第一", "愛", "王子"],
+      HS_G_025: ["搬出去", "搬家", "假髮", "鑰匙", "她的住處"],
+      HS_G_026: ["酒吧", "唱歌", "親吻", "愛", "夜晚"],
+      HS_G_027: ["懷孕", "秘密", "謊言", "從未", "差異"],
+      HS_G_028: ["生日", "鏡子", "禮物", "血", "震驚"],
+      HS_G_029: ["倒影", "鏡子", "名字", "不同", "錯誤"],
+      HS_G_030: ["雙胞胎", "故事", "警察", "差異", "存在"],
+      HS_G_031: ["孩子", "提問", "人生", "故事", "夢"],
+      HS_G_032: ["逮捕", "存在", "故事", "偵探", "從未"],
+      HS_G_033: ["故事", "警察", "提問", "重要", "查明"],
+      HS_G_034: ["提問", "警察", "偵探", "錯誤", "問題"],
+      HS_G_035: ["震驚", "哭泣", "談話", "故事", "重要"],
+      HS_G_036: ["第一", "孩子", "姐妹", "家庭", "學校"],
+      HS_G_037: ["玩具屋", "家", "我的父母", "快樂", "孩子"],
+      HS_G_038: ["女孩", "房子", "鎖", "窗戶", "等待"],
+      HS_G_039: ["彼此", "學校", "朋友", "日記", "規則"],
+      HS_G_040: ["瘀傷", "受傷", "血", "錯誤", "證詞"],
+      HS_G_041: ["王子", "愛", "丈夫", "妻子", "第一"],
+      HS_G_042: ["警察", "提問", "名字", "謊言", "偵探"],
+      HS_G_043: ["咖啡", "糖", "茶", "重要", "問題"],
+      HS_G_044: ["鏡子", "倒影", "名字", "不同", "差異"],
+      HS_G_045: ["玻璃", "鏡子", "工作", "禮物", "破碎"],
+      HS_G_046: ["家庭", "父母", "職業", "道格", "艾瑞克"],
+      HS_G_048: ["找到", "故事", "等待", "重要", "提問"],
+      HS_G_049: ["故事", "問題", "差異", "重要", "人生"],
+      HS_G_050: ["夢", "人生", "愛", "震驚", "故事"]
+    };
+    cardKeywords.HS_G_047 = SEARCH_KEYWORD_ZH;
+
+    const STORY_TREE = [
+      { id: "hannah", label: "漢娜", role: "受訪者 / 妻子", unlockCards: ["HS_G_001"], links: ["eve", "simon", "sarah"] },
+      { id: "eve", label: "伊娃", role: "雙胞胎妹妹", unlockCards: ["HS_G_006"], links: ["hannah", "simon", "sarah", "florence"] },
+      { id: "simon", label: "西蒙", role: "丈夫 / 制鏡工", unlockCards: ["HS_G_002"], links: ["hannah", "eve"] },
+      { id: "florence", label: "弗洛倫絲", role: "接生婆", unlockCards: ["HS_G_007"], links: ["eve", "hannah"] },
+      { id: "sarah", label: "莎拉", role: "玩家身份 / 伊娃之女", unlockCards: ["HS_G_031"], links: ["eve", "hannah"] },
+      { id: "detective", label: "承辦警探", role: "缺席提問端", unlockCards: ["HS_G_034"], links: ["hannah", "eve"] },
+      { id: "hannah_parents", label: "漢娜父母", role: "將伊娃誤認為想像朋友", unlockCards: ["HS_G_037"], links: ["hannah", "eve"] },
+      { id: "simon_parents", label: "西蒙父母", role: "旁支生活圈", unlockCards: ["HS_G_046"], links: ["simon"] },
+      { id: "boss", label: "西蒙老闆", role: "工作場域角色", unlockCards: ["HS_G_046"], links: ["simon", "coworkers"] },
+      { id: "coworkers", label: "同事群", role: "工廠與酒吧周邊關係", unlockCards: ["HS_G_024"], links: ["simon", "hannah", "eve"] },
+      { id: "diane", label: "Diane", role: "旁支姓名線索", unlockCards: ["HS_G_046"], links: ["boss"] },
+      { id: "doug", label: "Doug", role: "旁支姓名線索", unlockCards: ["HS_G_046"], links: ["boss"] },
+      { id: "eric", label: "Eric", role: "旁支姓名線索", unlockCards: ["HS_G_046"], links: ["boss"] },
+      { id: "eleana", label: "Eleana", role: "旁支姓名線索", unlockCards: ["HS_G_046"], links: ["boss"] },
+      { id: "taxi", label: "計程車司機", role: "城市移動目擊線", unlockCards: ["HS_G_046"], links: ["hannah", "eve"] },
+      { id: "viva", label: "Viva Seifert", role: "單人表演載體", unlockCards: ["HS_G_035"], links: ["hannah", "eve"] }
+    ];
+
+    const treeLabelById = Object.fromEntries(STORY_TREE.map(node => [node.id, node.label]));
+
+    Object.entries(cardKeywords).forEach(([id, keywords]) => {
+      if (story[id]) story[id].keywords = keywords;
+    });
 
     const SAVE_KEY = "her_story_progress_v1";
     const TYPE_INTERVAL_MS = 24;
 
     let currentId = "HS_G_001";
     let historyStack = ["HS_G_001"];
+    let visitedCards = new Set(["HS_G_001"]);
     let typeTimer = null;
     let statusTimer = null;
     let audioContext = null;
@@ -625,16 +1054,23 @@
         if (!raw) return null;
         const data = JSON.parse(raw);
         if (!data || typeof data.currentId !== "string" || !story[data.currentId]) return null;
+
         const safeHistory = Array.isArray(data.historyStack)
           ? data.historyStack.filter(id => typeof id === "string" && story[id])
           : [];
         if (!safeHistory.length || safeHistory[safeHistory.length - 1] !== data.currentId) {
           safeHistory.push(data.currentId);
         }
+
+        const safeVisited = Array.isArray(data.visitedCards)
+          ? data.visitedCards.filter(id => typeof id === "string" && story[id])
+          : [];
+        const mergedVisited = [...new Set([...safeVisited, ...safeHistory, data.currentId])];
+
         return {
           currentId: data.currentId,
           historyStack: safeHistory,
-          savedAt: data.savedAt || ""
+          visitedCards: mergedVisited
         };
       } catch (err) {
         return null;
@@ -667,6 +1103,7 @@
         const payload = {
           currentId,
           historyStack,
+          visitedCards: Array.from(visitedCards),
           savedAt: new Date().toISOString()
         };
         localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
@@ -686,8 +1123,11 @@
       }
       currentId = data.currentId;
       historyStack = data.historyStack;
+      visitedCards = new Set(data.visitedCards);
+      visitedCards.add(currentId);
       renderScene(showMessage ? "讀取續玩進度" : "已續玩上次進度");
       renderGraph();
+      renderStoryTreeIfOpen();
       updateBackButtonState();
       if (showMessage) setStatus("已讀取存檔");
       return true;
@@ -757,14 +1197,63 @@
       writeNext();
     }
 
+    function getCurrentKeywords() {
+      const node = story[currentId];
+      if (!node) return [];
+      if (currentId === "HS_G_047") return SEARCH_KEYWORD_ZH;
+      return Array.isArray(node.keywords) ? node.keywords : [];
+    }
+
+    function findCardsByKeyword(keyword) {
+      const results = [];
+      allCardIds.forEach(id => {
+        const node = story[id];
+        const keywords = Array.isArray(node.keywords) ? node.keywords : [];
+        const searchableText = `${node.title}\n${node.text}\n${node.tags.join(" / ")}`;
+        if (keywords.includes(keyword) || searchableText.includes(keyword)) {
+          results.push(id);
+        }
+      });
+      return results;
+    }
+
+    function jumpByKeyword(keyword) {
+      const results = findCardsByKeyword(keyword);
+      if (!results.length) {
+        setStatus(`找不到「${keyword}」`);
+        return;
+      }
+      const nextId = results.find(id => id !== currentId) || results[0];
+      navigateTo(nextId, `搜索詞：${keyword}`);
+      setStatus(`「${keyword}」共匹配 ${results.length} 張卡`);
+    }
+
+    function renderKeywordChips() {
+      const keywordEl = document.getElementById("story-keywords");
+      const keywords = getCurrentKeywords();
+      keywordEl.innerHTML = "";
+      if (!keywords.length) return;
+
+      keywords.forEach(keyword => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = `keyword-chip ${currentId === "HS_G_047" ? "lexicon" : ""}`;
+        chip.textContent = keyword;
+        chip.onclick = () => jumpByKeyword(keyword);
+        keywordEl.appendChild(chip);
+      });
+    }
+
     function navigateTo(id, extraMeta = "", pushHistory = true) {
       if (!story[id]) return;
       currentId = id;
       if (pushHistory && historyStack[historyStack.length - 1] !== id) {
         historyStack.push(id);
       }
+      visitedCards.add(id);
       renderScene(extraMeta);
       renderGraph();
+      renderStoryTreeIfOpen();
       updateBackButtonState();
       saveProgress(false);
     }
@@ -795,8 +1284,10 @@
     function restartStory() {
       currentId = "HS_G_001";
       historyStack = ["HS_G_001"];
+      visitedCards = new Set(["HS_G_001"]);
       renderScene("重新開始");
       renderGraph();
+      renderStoryTreeIfOpen();
       updateBackButtonState();
       saveProgress(true);
     }
@@ -806,6 +1297,7 @@
       document.getElementById("story-title").textContent = node.title;
       document.getElementById("story-meta").textContent =
         `編號：${currentId}　|　標籤：${node.tags.join(" / ")}${extraMeta ? "　|　" + extraMeta : ""}`;
+      renderKeywordChips();
       typewriteText(node.text);
 
       const choicesEl = document.getElementById("choices");
@@ -876,14 +1368,66 @@
       svg.appendChild(line);
     }
 
+    function getUnlockedTreeNodeIds() {
+      const unlocked = new Set();
+      STORY_TREE.forEach(node => {
+        if (node.unlockCards.some(cardId => visitedCards.has(cardId))) unlocked.add(node.id);
+      });
+      return unlocked;
+    }
+
+    function renderStoryTree() {
+      const unlocked = getUnlockedTreeNodeIds();
+      const grid = document.getElementById("tree-grid");
+      const summary = document.getElementById("tree-summary");
+      grid.innerHTML = "";
+
+      STORY_TREE.forEach(node => {
+        const isUnlocked = unlocked.has(node.id);
+        const card = document.createElement("article");
+        card.className = `tree-card ${isUnlocked ? "unlocked" : "locked"}`;
+        const linkNames = node.links.map(linkId => treeLabelById[linkId] || linkId).join("、");
+        card.innerHTML = `
+          <div class="tree-name">${node.label}</div>
+          <div class="tree-role">${node.role}</div>
+          <div class="tree-links"><span>關聯：</span>${linkNames || "尚未建立"}</div>
+        `;
+        grid.appendChild(card);
+      });
+
+      summary.textContent = `已解鎖 ${unlocked.size} / ${STORY_TREE.length} 位人物。每解開新段落，圖譜會同步更新。`;
+    }
+
+    function openStoryTree() {
+      renderStoryTree();
+      document.getElementById("tree-modal").hidden = false;
+    }
+
+    function closeStoryTree() {
+      document.getElementById("tree-modal").hidden = true;
+    }
+
+    function renderStoryTreeIfOpen() {
+      const modal = document.getElementById("tree-modal");
+      if (!modal.hidden) renderStoryTree();
+    }
+
     window.addEventListener("resize", renderGraph);
     window.addEventListener("pointerdown", primeAudio, { once: true });
     window.addEventListener("keydown", primeAudio, { once: true });
+    window.addEventListener("keydown", evt => {
+      if (evt.key === "Escape") closeStoryTree();
+    });
 
     document.getElementById("btn-back").addEventListener("click", goBack);
     document.getElementById("btn-restart").addEventListener("click", restartStory);
     document.getElementById("btn-save").addEventListener("click", () => saveProgress(true));
     document.getElementById("btn-load").addEventListener("click", () => loadProgress(true));
+    document.getElementById("btn-tree").addEventListener("click", openStoryTree);
+    document.getElementById("btn-tree-close").addEventListener("click", closeStoryTree);
+    document.getElementById("tree-modal").addEventListener("click", evt => {
+      if (evt.target.id === "tree-modal") closeStoryTree();
+    });
 
     updateLoadButtonState();
     const resumed = loadProgress(false);
