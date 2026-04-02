@@ -6,173 +6,308 @@
   <title>Her Story 卡片文字遊戲</title>
   <style>
     :root {
-      --bg: #111827;
-      --panel: #0f172a;
-      --panel-2: #1e293b;
-      --border: #334155;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #ef4444;
-      --accent-2: #38bdf8;
-      --choice: #1d4ed8;
-      --choice-hover: #2563eb;
+      --bg: #05080c;
+      --panel: #0c141c;
+      --panel-2: #101b26;
+      --panel-3: #0e1722;
+      --border: #2d3d4f;
+      --text: #d5e0ea;
+      --muted: #7e93a8;
+      --accent: #d34848;
+      --accent-2: #7fb5d6;
+      --choice: #1a3248;
+      --choice-hover: #254863;
+      --ok: #8ac07a;
+      --warn: #f0b25e;
+      --danger: #de6464;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(127,181,214,0.08), transparent 36%),
+        radial-gradient(circle at 83% 72%, rgba(211,72,72,0.08), transparent 38%),
+        linear-gradient(180deg, #05080c 0%, #03060a 100%);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .crt-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.03) 0px,
+          rgba(255,255,255,0.03) 1px,
+          rgba(0,0,0,0.06) 2px,
+          rgba(0,0,0,0.06) 3px
+        );
+      mix-blend-mode: soft-light;
+      opacity: 0.34;
+      animation: scanShift 6s linear infinite;
+    }
+
+    @keyframes scanShift {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(4px); }
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      41% { opacity: 0.95; }
+      42% { opacity: 0.91; }
+      43% { opacity: 0.98; }
+      80% { opacity: 0.96; }
     }
 
     .app {
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(360px, 42vw);
+      grid-template-columns: minmax(0, 58fr) minmax(390px, 42fr);
       min-height: 100vh;
+      padding: 12px;
+      gap: 12px;
     }
 
-    .story-panel {
-      padding: 22px;
-      overflow-y: auto;
-      border-right: 1px solid var(--border);
-      background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+    .left-panel,
+    .graph-panel,
+    .search-panel,
+    .case-panel,
+    .grid-panel {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(12,20,28,0.98) 0%, rgba(8,12,18,0.98) 100%);
+      box-shadow: inset 0 0 0 1px rgba(127,181,214,0.06);
     }
 
-    .right-panel {
+    .left-panel {
+      padding: 14px;
       display: grid;
-      grid-template-rows: 58% 42%;
-      min-height: 100vh;
+      grid-template-rows: auto minmax(320px, 1fr) auto auto;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    .system-bar {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #122030 0%, #0c1724 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 10px;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      color: #bdd2e4;
+    }
+
+    .system-bar .sys-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #98afc3;
+    }
+
+    .rec-dot {
+      color: var(--danger);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .player-frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #44596f;
+      background:
+        radial-gradient(circle at 72% 30%, rgba(127,181,214,0.1), transparent 38%),
+        linear-gradient(180deg, #121f2c 0%, #0b141f 100%);
+      display: grid;
+      grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+      padding: 12px;
+      gap: 8px;
+      animation: flicker 8s linear infinite;
+      min-height: 0;
+    }
+
+    .player-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.34) 100%);
+      z-index: 0;
+    }
+
+    .video-noise {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.15;
+      background-image:
+        radial-gradient(rgba(255,255,255,0.55) 0.42px, transparent 0.42px),
+        radial-gradient(rgba(255,255,255,0.35) 0.36px, transparent 0.36px);
+      background-size: 3px 3px, 4px 4px;
+      background-position: 0 0, 1px 1px;
+    }
+
+    .player-hud {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: #a8bfd3;
+      border-bottom: 1px dashed rgba(127,181,214,0.32);
+      padding-bottom: 6px;
+    }
+
+    .player-hud.bottom {
+      border-bottom: 0;
+      border-top: 1px dashed rgba(127,181,214,0.32);
+      padding: 6px 0 0 0;
+      color: #8ea4b9;
+    }
+
+    .story-title,
+    .story-meta,
+    .story-text {
+      position: relative;
+      z-index: 1;
+      margin: 0;
     }
 
     .story-title {
-      font-size: 2rem;
-      margin: 0 0 12px 0;
-      line-height: 1.2;
+      color: #ecf4fb;
+      font-size: clamp(1.2rem, 2.3vw, 1.8rem);
+      line-height: 1.3;
+      letter-spacing: 0.02em;
     }
 
     .story-meta {
       color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 14px;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      min-height: 1.45em;
+    }
+
+    .story-text {
+      font-size: clamp(1rem, 1.7vw, 1.18rem);
+      line-height: 1.85;
+      white-space: pre-line;
+      overflow-y: auto;
+      padding-right: 4px;
     }
 
     .story-toolbar {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
       align-items: center;
+      gap: 8px;
     }
 
     .utility-btn {
-      border: 1px solid var(--border);
-      background: #172554;
-      color: #dbeafe;
-      font-size: 0.95rem;
-      line-height: 1.1;
-      border-radius: 10px;
-      padding: 8px 12px;
+      border: 1px solid #40576d;
+      background: linear-gradient(180deg, #17314a 0%, #12263b 100%);
+      color: #d5e7f6;
+      font-size: 0.84rem;
+      line-height: 1;
+      padding: 8px 11px;
+      border-radius: 2px;
       cursor: pointer;
-      transition: 0.2s ease;
+      transition: 0.14s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
     }
 
     .utility-btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
+      background: linear-gradient(180deg, #234663 0%, #19364f 100%);
     }
 
     .utility-btn:disabled {
-      opacity: 0.45;
+      opacity: 0.4;
       cursor: not-allowed;
-      transform: none;
     }
 
     .save-status {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      min-height: 1.2em;
     }
 
-    .story-keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-      min-height: 28px;
-    }
-
-    .keyword-chip {
-      border: 1px solid #1d4ed8;
-      background: rgba(30, 64, 175, 0.26);
-      color: #bfdbfe;
-      border-radius: 999px;
-      padding: 5px 10px;
+    .choices-label {
+      color: #9fb6cb;
       font-size: 0.82rem;
-      line-height: 1.2;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .keyword-chip:hover {
-      background: rgba(37, 99, 235, 0.44);
-      transform: translateY(-1px);
-    }
-
-    .keyword-chip.lexicon {
-      border-color: #475569;
-      background: rgba(15, 23, 42, 0.62);
-      color: #cbd5e1;
-    }
-
-    .story-text {
-      font-size: 1.28rem;
-      line-height: 1.9;
-      white-space: pre-line;
-      margin-bottom: 24px;
-      min-height: 5.6em;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .choices {
       display: grid;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      min-height: 0;
+      overflow: auto;
+      padding-right: 2px;
     }
 
     .choice-btn {
-      border: 1px solid #3b82f6;
-      background: var(--choice);
-      color: white;
-      font-size: 1.08rem;
-      line-height: 1.5;
-      border-radius: 12px;
-      padding: 14px 16px;
+      border: 1px solid #36526a;
+      background: linear-gradient(180deg, var(--choice) 0%, #14283a 100%);
+      color: #d8e9f7;
+      font-size: 0.95rem;
+      line-height: 1.45;
       text-align: left;
+      padding: 10px 12px;
+      border-radius: 2px;
       cursor: pointer;
-      transition: 0.2s ease;
+      transition: 0.14s ease;
     }
 
     .choice-btn:hover {
-      background: var(--choice-hover);
-      transform: translateY(-1px);
+      background: linear-gradient(180deg, var(--choice-hover) 0%, #1a3349 100%);
+      border-color: #4f6d88;
+    }
+
+    .right-panel {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: minmax(180px, 34%) minmax(220px, 36%) minmax(230px, 30%);
+      gap: 12px;
     }
 
     .graph-panel {
       position: relative;
-      border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(circle at center, rgba(56,189,248,0.08), transparent 42%),
-        #0b1120;
       overflow: hidden;
+      background:
+        radial-gradient(circle at center, rgba(127,181,214,0.12), transparent 40%),
+        linear-gradient(180deg, #0e1723 0%, #09121b 100%);
+    }
+
+    .graph-title,
+    .panel-title {
+      color: #a4bccf;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     .graph-title {
       position: absolute;
-      left: 16px;
-      top: 10px;
+      left: 10px;
+      top: 8px;
       z-index: 2;
-      color: var(--muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
+      font-weight: 700;
     }
 
     #graph-svg {
@@ -186,62 +321,275 @@
     .node {
       position: absolute;
       z-index: 1;
-      min-width: 110px;
-      max-width: 180px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: var(--panel-2);
-      color: var(--text);
+      min-width: 102px;
+      max-width: 165px;
+      padding: 9px 11px;
+      border-radius: 2px;
+      border: 1px solid #385067;
+      background: #132334;
+      color: #deecf9;
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.82rem;
       line-height: 1.35;
       cursor: pointer;
       transform: translate(-50%, -50%);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
 
     .node.center {
-      background: var(--accent);
-      border-color: #f87171;
+      background: #80363a;
+      border-color: #d26b70;
       font-weight: 700;
-      font-size: 1.08rem;
+      font-size: 0.87rem;
     }
 
     .node.small {
-      font-size: 0.94rem;
-      background: #13233d;
+      background: #11283f;
+    }
+
+    .search-panel {
+      padding: 10px;
+      display: grid;
+      grid-template-rows: auto auto auto auto minmax(0, 1fr);
+      gap: 8px;
+      min-height: 0;
+    }
+
+    .search-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .search-input {
+      width: 100%;
+      border: 1px solid #425b73;
+      background: #08111a;
+      color: #dfebf7;
+      padding: 9px 10px;
+      font-size: 0.92rem;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: #6790b2;
+      box-shadow: 0 0 0 1px rgba(103, 144, 178, 0.25);
+    }
+
+    .search-btn {
+      min-width: 86px;
+    }
+
+    .quick-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-height: 28px;
+      max-height: 66px;
+      overflow-y: auto;
+      padding-right: 2px;
+    }
+
+    .keyword-chip {
+      border: 1px solid #3f5970;
+      background: rgba(26,50,72,0.9);
+      color: #c7ddf0;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 0.74rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .keyword-chip:hover {
+      background: rgba(37,72,99,0.92);
+    }
+
+    .keyword-chip.lexicon {
+      border-color: #586a7a;
+      background: rgba(24,34,44,0.9);
+      color: #afc0cf;
+    }
+
+    .search-meta {
+      color: #90a8bc;
+      font-size: 0.78rem;
+      min-height: 1.25em;
+      line-height: 1.45;
+    }
+
+    .result-list {
+      border: 1px solid #304253;
+      background: rgba(5,9,14,0.95);
+      min-height: 0;
+      overflow-y: auto;
+      padding: 4px;
+      display: grid;
+      gap: 4px;
+      align-content: flex-start;
+    }
+
+    .result-item {
+      width: 100%;
+      border: 1px solid #2f465b;
+      background: linear-gradient(180deg, #111f2d 0%, #0d1824 100%);
+      color: #d3e5f4;
+      text-align: left;
+      padding: 7px 8px;
+      border-radius: 2px;
+      cursor: pointer;
+      display: grid;
+      gap: 4px;
+      font-size: 0.79rem;
+      line-height: 1.4;
+    }
+
+    .result-item:hover {
+      border-color: #4d6a84;
+      background: linear-gradient(180deg, #17293a 0%, #122031 100%);
+    }
+
+    .result-item.active {
+      border-color: #7fb5d6;
+      box-shadow: inset 0 0 0 1px rgba(127,181,214,0.4);
+    }
+
+    .result-id {
+      color: #8cb6d8;
+      font-size: 0.74rem;
+    }
+
+    .result-title {
+      color: #ecf4fb;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .result-foot {
+      display: flex;
+      justify-content: space-between;
+      color: #91a7ba;
+      font-size: 0.72rem;
+    }
+
+    .result-state {
+      color: var(--warn);
+    }
+
+    .result-state.viewed {
+      color: var(--ok);
+    }
+
+    .no-result {
+      color: #9eb4c8;
+      font-size: 0.8rem;
+      padding: 8px;
+      border: 1px dashed #314457;
+    }
+
+    .bottom-panel {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(220px, 56%) minmax(180px, 44%);
+      gap: 12px;
+    }
+
+    .case-panel {
+      padding: 10px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr);
+      gap: 8px;
+      min-height: 0;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 10px;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: #c0d3e2;
+    }
+
+    .case-grid dt {
+      color: #93aac0;
+      margin: 0;
+    }
+
+    .case-grid dd {
+      margin: 0;
+      color: #e3edf5;
+      word-break: break-word;
+    }
+
+    .note-block {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 6px;
+    }
+
+    .note-label {
+      color: #94abc0;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .note-input {
+      width: 100%;
+      min-height: 74px;
+      resize: vertical;
+      border: 1px solid #3d5368;
+      background: #09111a;
+      color: #d8e6f3;
+      font-family: inherit;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      border-radius: 2px;
+      padding: 8px;
+      outline: none;
+    }
+
+    .note-input:focus {
+      border-color: #6790b2;
+      box-shadow: 0 0 0 1px rgba(103, 144, 178, 0.24);
     }
 
     .grid-panel {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      background: #0f172a;
       min-height: 0;
+      overflow: hidden;
     }
 
     .grid-cell {
-      border: 1px solid var(--border);
+      border: 1px solid #304253;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 10px;
-      font-size: 1.15rem;
-      line-height: 1.35;
+      padding: 8px;
+      font-size: 0.78rem;
+      line-height: 1.3;
       cursor: pointer;
-      transition: 0.2s ease;
+      color: #c8d9e8;
+      background: rgba(14,23,34,0.95);
+      transition: 0.14s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .grid-cell:hover {
-      background: rgba(255,255,255,0.04);
+      background: rgba(27,43,60,0.95);
     }
 
     .grid-center {
-      background: rgba(239,68,68,0.14);
+      background: rgba(109,41,46,0.64);
+      color: #ffd7d9;
       font-weight: 700;
-      color: #fecaca;
     }
 
     .tree-modal[hidden] {
@@ -251,9 +599,9 @@
     .tree-modal {
       position: fixed;
       inset: 0;
-      background: rgba(2, 6, 23, 0.72);
-      backdrop-filter: blur(6px);
-      z-index: 60;
+      background: rgba(3, 8, 14, 0.76);
+      backdrop-filter: blur(4px);
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -264,144 +612,230 @@
       width: min(980px, 100%);
       max-height: 90vh;
       overflow: auto;
-      background: linear-gradient(180deg, #0b1220 0%, #121b2e 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      background: linear-gradient(180deg, #0c1622 0%, #0a121b 100%);
+      border: 1px solid #31475d;
+      border-radius: 4px;
+      padding: 14px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
 
     .tree-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
     .tree-title {
       margin: 0;
-      font-size: 1.12rem;
-      color: #f8fafc;
+      color: #e6f1fa;
+      font-size: 1rem;
     }
 
     .tree-summary {
-      margin: 0 0 14px 0;
-      font-size: 0.94rem;
-      color: var(--muted);
-      line-height: 1.6;
+      margin: 0 0 10px 0;
+      color: #97adc2;
+      font-size: 0.85rem;
+      line-height: 1.45;
     }
 
     .tree-grid {
       display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
 
     .tree-card {
-      border: 1px solid #334155;
-      background: rgba(15, 23, 42, 0.66);
-      border-radius: 12px;
-      padding: 10px;
-      transition: 0.2s ease;
-      min-height: 112px;
+      border: 1px solid #354b60;
+      background: rgba(15, 24, 35, 0.92);
+      padding: 8px;
+      min-height: 96px;
+      border-radius: 2px;
+      display: grid;
+      gap: 5px;
+      transition: 0.16s ease;
     }
 
     .tree-card.locked {
-      opacity: 0.44;
-      filter: grayscale(0.7);
+      opacity: 0.42;
+      filter: grayscale(0.6);
     }
 
     .tree-card.unlocked {
-      border-color: #38bdf8;
-      background: rgba(15, 23, 42, 0.9);
-      box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.26);
+      border-color: #72a6c5;
+      box-shadow: inset 0 0 0 1px rgba(114,166,197,0.32);
     }
 
     .tree-name {
-      font-size: 0.98rem;
+      font-size: 0.88rem;
       font-weight: 700;
-      margin-bottom: 4px;
-      color: #f1f5f9;
+      color: #e9f3fb;
     }
 
     .tree-role {
-      color: #94a3b8;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      margin-bottom: 8px;
+      color: #95abc0;
+      font-size: 0.76rem;
+      line-height: 1.4;
     }
 
     .tree-links {
-      color: #cbd5e1;
-      font-size: 0.78rem;
-      line-height: 1.5;
+      color: #bdcfde;
+      font-size: 0.72rem;
+      line-height: 1.35;
     }
 
     .tree-links span {
-      color: #38bdf8;
+      color: #86bad9;
+    }
+
+    @media (max-width: 1200px) {
+      .app {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 44vw);
+      }
+
+      .bottom-panel {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(150px, 1fr);
+      }
     }
 
     @media (max-width: 980px) {
+      body { overflow: auto; }
+
       .app {
         grid-template-columns: 1fr;
+        min-height: auto;
       }
 
-      .story-panel {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
+      .left-panel {
+        min-height: 70vh;
       }
 
       .right-panel {
-        grid-template-rows: 30vh 32vh;
-        min-height: 62vh;
+        grid-template-rows: 250px minmax(250px, 44vh) minmax(300px, auto);
       }
 
-      .story-title { font-size: 1.7rem; }
-      .story-text { font-size: 1.12rem; line-height: 1.8; }
-      .choice-btn { font-size: 1rem; }
-      .grid-cell { font-size: 1rem; }
-      .node { min-width: 88px; max-width: 130px; font-size: 0.88rem; }
-      .tree-dialog { padding: 12px; }
+      .node {
+        min-width: 80px;
+        max-width: 120px;
+        font-size: 0.74rem;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .left-panel {
+        padding: 10px;
+      }
+
+      .system-bar,
+      .story-toolbar {
+        gap: 6px;
+      }
+
+      .utility-btn {
+        font-size: 0.74rem;
+        padding: 7px 9px;
+      }
+
+      .story-text {
+        font-size: 0.98rem;
+      }
+
+      .choices {
+        max-height: 240px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+
   <div class="app">
-    <section class="story-panel">
-      <h1 class="story-title" id="story-title"></h1>
-      <div class="story-meta" id="story-meta"></div>
+    <section class="left-panel">
+      <header class="system-bar">
+        <div>GLASGOW POLICE / INTERVIEW ARCHIVE</div>
+        <div class="sys-right">
+          <span id="case-stat">已解鎖 1 / 50</span>
+          <span class="rec-dot">● REC</span>
+        </div>
+      </header>
+
+      <section class="player-frame" aria-live="polite">
+        <div class="video-noise" aria-hidden="true"></div>
+        <div class="player-hud">
+          <span id="hud-file">FILE HS_G_001</span>
+          <span id="hud-timecode">TC 00:00:00:00</span>
+        </div>
+        <h1 class="story-title" id="story-title"></h1>
+        <div class="story-meta" id="story-meta"></div>
+        <div class="story-text" id="story-text"></div>
+        <div class="player-hud bottom">
+          <span>PLAYBACK READY</span>
+          <span id="hud-keyword">QUERY: --</span>
+        </div>
+      </section>
+
       <div class="story-toolbar">
         <button class="utility-btn" id="btn-back" type="button">上一段 / 返回</button>
-        <button class="utility-btn" id="btn-restart" type="button">重新開始</button>
-        <button class="utility-btn" id="btn-save" type="button">儲存進度</button>
-        <button class="utility-btn" id="btn-load" type="button">讀取續玩</button>
+        <button class="utility-btn" id="btn-restart" type="button">重啟案件</button>
+        <button class="utility-btn" id="btn-save" type="button">儲存</button>
+        <button class="utility-btn" id="btn-load" type="button">讀取</button>
         <button class="utility-btn" id="btn-tree" type="button">故事樹</button>
         <span class="save-status" id="save-status"></span>
       </div>
-      <div class="story-keywords" id="story-keywords"></div>
-      <div class="story-text" id="story-text"></div>
+
+      <div class="choices-label">可執行敘事行動</div>
       <div class="choices" id="choices"></div>
     </section>
 
     <aside class="right-panel">
       <section class="graph-panel" id="graph-panel">
-        <div class="graph-title">Graph / Excalibrain 風導航</div>
+        <div class="graph-title">Compass / Story Relations</div>
         <svg id="graph-svg"></svg>
       </section>
 
-      <section class="grid-panel">
-        <div class="grid-cell" onclick="jumpToMOC('identity')">Identity</div>
-        <div class="grid-cell" onclick="jumpToMOC('timeline')">Timeline</div>
-        <div class="grid-cell" onclick="jumpToMOC('relationship')">Relationship</div>
+      <section class="search-panel">
+        <div class="panel-title">Archive Query</div>
+        <form class="search-form" id="search-form">
+          <input class="search-input" id="search-input" type="text" autocomplete="off" placeholder="輸入關鍵詞（中或英）例如：鏡子 / mirror" />
+          <button class="utility-btn search-btn" type="submit">Search</button>
+        </form>
+        <div class="quick-keywords" id="quick-keywords"></div>
+        <div class="search-meta" id="search-meta">輸入關鍵詞後，從片段庫中檢索證物訪談。</div>
+        <div class="result-list" id="result-list"></div>
+      </section>
 
-        <div class="grid-cell" onclick="jumpToMOC('keywords')">Keywords</div>
-        <div class="grid-cell grid-center" onclick="goTo('HS_G_001')">HER STORY</div>
-        <div class="grid-cell" onclick="jumpToMOC('narrative')">Narrative</div>
+      <section class="bottom-panel">
+        <section class="case-panel">
+          <div class="panel-title">Case File Metadata</div>
+          <dl class="case-grid">
+            <dt>案件編號</dt><dd id="case-id">HS-1994-GLA-0712</dd>
+            <dt>檔案日期</dt><dd id="case-range">1994-02-01 ~ 1994-03-22</dd>
+            <dt>目前片段</dt><dd id="case-current">HS_G_001</dd>
+            <dt>片段標題</dt><dd id="case-current-title">審訊開場</dd>
+            <dt>已觀看片段</dt><dd id="case-viewed">1 / 50</dd>
+            <dt>最近查詢</dt><dd id="case-last-query">--</dd>
+          </dl>
+          <div class="note-block">
+            <label class="note-label" for="note-input">Investigator Notes</label>
+            <textarea class="note-input" id="note-input" placeholder="記下矛盾點、名字、時間與你自己的推論…"></textarea>
+          </div>
+        </section>
 
-        <div class="grid-cell" onclick="jumpToMOC('clues')">Clues</div>
-        <div class="grid-cell" onclick="jumpToMOC('inference')">Inference</div>
-        <div class="grid-cell" onclick="jumpToMOC('contradiction')">Contradiction</div>
+        <section class="grid-panel">
+          <div class="grid-cell" onclick="jumpToMOC('identity')">Identity</div>
+          <div class="grid-cell" onclick="jumpToMOC('timeline')">Timeline</div>
+          <div class="grid-cell" onclick="jumpToMOC('relationship')">Relationship</div>
+
+          <div class="grid-cell" onclick="jumpToMOC('keywords')">Keywords</div>
+          <div class="grid-cell grid-center" onclick="goTo('HS_G_001')">Her Story</div>
+          <div class="grid-cell" onclick="jumpToMOC('narrative')">Narrative</div>
+
+          <div class="grid-cell" onclick="jumpToMOC('clues')">Clues</div>
+          <div class="grid-cell" onclick="jumpToMOC('inference')">Inference</div>
+          <div class="grid-cell" onclick="jumpToMOC('contradiction')">Contradiction</div>
+        </section>
       </section>
     </aside>
   </div>
@@ -1043,10 +1477,44 @@
     let currentId = "HS_G_001";
     let historyStack = ["HS_G_001"];
     let visitedCards = new Set(["HS_G_001"]);
+    let currentQuery = "";
+    let lastSearchResults = [];
     let typeTimer = null;
     let statusTimer = null;
+    let noteTimer = null;
     let audioContext = null;
     let lastTickAt = 0;
+
+    function getClipNumber(id) {
+      return Number((String(id).match(/(\d+)$/) || [0, 0])[1]);
+    }
+
+    function getClipDate(id) {
+      const num = getClipNumber(id);
+      const date = new Date(1994, 1, 1);
+      date.setDate(date.getDate() + Math.max(0, num - 1));
+      const yyyy = date.getFullYear();
+      const mm = String(date.getMonth() + 1).padStart(2, "0");
+      const dd = String(date.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function getTimecode(id) {
+      const n = getClipNumber(id);
+      const hh = String((8 + (n % 11)) % 24).padStart(2, "0");
+      const mm = String((n * 7) % 60).padStart(2, "0");
+      const ss = String((n * 13) % 60).padStart(2, "0");
+      const ff = String((n * 3) % 25).padStart(2, "0");
+      return `${hh}:${mm}:${ss}:${ff}`;
+    }
+
+    function estimateClipLength(id) {
+      const textLen = (story[id]?.text || "").length;
+      const sec = Math.max(12, Math.round(textLen / 7));
+      const mm = String(Math.floor(sec / 60)).padStart(2, "0");
+      const ss = String(sec % 60).padStart(2, "0");
+      return `${mm}:${ss}`;
+    }
 
     function parseSavedProgress() {
       try {
@@ -1067,10 +1535,15 @@
           : [];
         const mergedVisited = [...new Set([...safeVisited, ...safeHistory, data.currentId])];
 
+        const safeQuery = typeof data.currentQuery === "string" ? data.currentQuery : "";
+        const safeNote = typeof data.noteText === "string" ? data.noteText : "";
+
         return {
           currentId: data.currentId,
           historyStack: safeHistory,
-          visitedCards: mergedVisited
+          visitedCards: mergedVisited,
+          currentQuery: safeQuery,
+          noteText: safeNote
         };
       } catch (err) {
         return null;
@@ -1104,6 +1577,8 @@
           currentId,
           historyStack,
           visitedCards: Array.from(visitedCards),
+          currentQuery,
+          noteText: document.getElementById("note-input")?.value || "",
           savedAt: new Date().toISOString()
         };
         localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
@@ -1121,14 +1596,29 @@
         if (showMessage) setStatus("目前沒有可讀取的存檔");
         return false;
       }
+
       currentId = data.currentId;
       historyStack = data.historyStack;
       visitedCards = new Set(data.visitedCards);
       visitedCards.add(currentId);
+      currentQuery = data.currentQuery;
+
+      const noteInput = document.getElementById("note-input");
+      noteInput.value = data.noteText;
+
       renderScene(showMessage ? "讀取續玩進度" : "已續玩上次進度");
       renderGraph();
       renderStoryTreeIfOpen();
       updateBackButtonState();
+
+      if (currentQuery) {
+        document.getElementById("search-input").value = currentQuery;
+        performSearch(currentQuery, { openFirst: false, suppressStatus: true, fromLoad: true });
+      } else {
+        renderSearchResults([], "");
+      }
+
+      updateCasePanel();
       if (showMessage) setStatus("已讀取存檔");
       return true;
     }
@@ -1204,44 +1694,151 @@
       return Array.isArray(node.keywords) ? node.keywords : [];
     }
 
+    function renderQuickKeywords() {
+      const holder = document.getElementById("quick-keywords");
+      holder.innerHTML = "";
+
+      let keywords = getCurrentKeywords();
+      if (!keywords.length && currentQuery) keywords = [currentQuery];
+      if (!keywords.length) return;
+
+      const limit = currentId === "HS_G_047" ? 24 : 10;
+      keywords.slice(0, limit).forEach(keyword => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = `keyword-chip ${currentId === "HS_G_047" ? "lexicon" : ""}`;
+        chip.textContent = keyword;
+        chip.onclick = () => {
+          primeAudio();
+          document.getElementById("search-input").value = keyword;
+          performSearch(keyword, { openFirst: true });
+        };
+        holder.appendChild(chip);
+      });
+    }
+
+    function normalizeQuery(rawQuery) {
+      const clean = String(rawQuery || "").trim();
+      if (!clean) return "";
+
+      const lower = clean.toLowerCase();
+      if (SEARCH_KEYWORD_MAP[lower]) return SEARCH_KEYWORD_MAP[lower];
+      if (SEARCH_KEYWORD_MAP[clean]) return SEARCH_KEYWORD_MAP[clean];
+
+      for (const [key, value] of Object.entries(SEARCH_KEYWORD_MAP)) {
+        if (key.toLowerCase() === lower) return value;
+      }
+
+      return clean;
+    }
+
     function findCardsByKeyword(keyword) {
+      const q = String(keyword || "").trim();
+      if (!q) return [];
+      const qLower = q.toLowerCase();
+
       const results = [];
       allCardIds.forEach(id => {
         const node = story[id];
         const keywords = Array.isArray(node.keywords) ? node.keywords : [];
-        const searchableText = `${node.title}\n${node.text}\n${node.tags.join(" / ")}`;
-        if (keywords.includes(keyword) || searchableText.includes(keyword)) {
+        const searchableText = `${node.title}
+${node.text}
+${node.tags.join(" / ")}
+${keywords.join(" / ")}`.toLowerCase();
+        if (searchableText.includes(qLower)) {
           results.push(id);
         }
       });
       return results;
     }
 
-    function jumpByKeyword(keyword) {
-      const results = findCardsByKeyword(keyword);
-      if (!results.length) {
-        setStatus(`找不到「${keyword}」`);
+    function renderSearchResults(results, query) {
+      const listEl = document.getElementById("result-list");
+      listEl.innerHTML = "";
+
+      if (!query) {
+        const warmup = document.createElement("div");
+        warmup.className = "no-result";
+        warmup.textContent = "READY. 請輸入關鍵詞執行查詢。";
+        listEl.appendChild(warmup);
         return;
       }
-      const nextId = results.find(id => id !== currentId) || results[0];
-      navigateTo(nextId, `搜索詞：${keyword}`);
-      setStatus(`「${keyword}」共匹配 ${results.length} 張卡`);
+
+      if (!results.length) {
+        const empty = document.createElement("div");
+        empty.className = "no-result";
+        empty.textContent = `NO MATCHES FOUND / 「${query}」`;
+        listEl.appendChild(empty);
+        return;
+      }
+
+      results.slice(0, 30).forEach(id => {
+        const node = story[id];
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `result-item ${id === currentId ? "active" : ""}`;
+
+        const viewed = visitedCards.has(id);
+        btn.innerHTML = `
+          <div class="result-id">${id} · ${getClipDate(id)} · TC ${getTimecode(id)}</div>
+          <div class="result-title">${node.title}</div>
+          <div class="result-foot">
+            <span>${estimateClipLength(id)}</span>
+            <span class="result-state ${viewed ? "viewed" : ""}">${viewed ? "VIEWED" : "NEW"}</span>
+          </div>
+        `;
+        btn.onclick = () => {
+          primeAudio();
+          navigateTo(id, query ? `搜索命中：${query}` : "");
+        };
+        listEl.appendChild(btn);
+      });
+
+      if (results.length > 30) {
+        const hint = document.createElement("div");
+        hint.className = "no-result";
+        hint.textContent = `共 ${results.length} 筆，僅顯示前 30 筆。`;
+        listEl.appendChild(hint);
+      }
     }
 
-    function renderKeywordChips() {
-      const keywordEl = document.getElementById("story-keywords");
-      const keywords = getCurrentKeywords();
-      keywordEl.innerHTML = "";
-      if (!keywords.length) return;
+    function performSearch(rawQuery, options = {}) {
+      const normalized = normalizeQuery(rawQuery);
+      const searchMeta = document.getElementById("search-meta");
+      const query = normalized;
 
-      keywords.forEach(keyword => {
-        const chip = document.createElement("button");
-        chip.type = "button";
-        chip.className = `keyword-chip ${currentId === "HS_G_047" ? "lexicon" : ""}`;
-        chip.textContent = keyword;
-        chip.onclick = () => jumpByKeyword(keyword);
-        keywordEl.appendChild(chip);
-      });
+      if (!query) {
+        currentQuery = "";
+        lastSearchResults = [];
+        renderSearchResults([], "");
+        searchMeta.textContent = "輸入關鍵詞後，從片段庫中檢索證物訪談。";
+        updateCasePanel();
+        if (!options.suppressStatus) setStatus("請輸入搜索詞", 1200);
+        return;
+      }
+
+      const results = findCardsByKeyword(query);
+      currentQuery = query;
+      lastSearchResults = results;
+      renderSearchResults(results, query);
+
+      if (!results.length) {
+        searchMeta.textContent = `NO MATCHES FOUND · 查詢詞：${query}`;
+        if (!options.suppressStatus) setStatus(`找不到「${query}」`, 1400);
+      } else {
+        const viewedCount = results.filter(id => visitedCards.has(id)).length;
+        searchMeta.textContent = `查詢詞：${query} · 命中 ${results.length} 段 · 已觀看 ${viewedCount} 段`;
+        if (options.openFirst) {
+          const nextId = results.find(id => !visitedCards.has(id)) || results.find(id => id !== currentId) || results[0];
+          navigateTo(nextId, `搜索命中：${query}`);
+        } else if (!options.fromLoad) {
+          updateCasePanel();
+          saveProgress(false);
+        }
+      }
+
+      updateCasePanel();
+      if (!options.fromLoad) saveProgress(false);
     }
 
     function navigateTo(id, extraMeta = "", pushHistory = true) {
@@ -1254,7 +1851,9 @@
       renderScene(extraMeta);
       renderGraph();
       renderStoryTreeIfOpen();
+      renderSearchResults(lastSearchResults, currentQuery);
       updateBackButtonState();
+      updateCasePanel();
       saveProgress(false);
     }
 
@@ -1273,7 +1872,7 @@
     function goBack() {
       if (historyStack.length <= 1) {
         updateBackButtonState();
-        setStatus("已在故事起點");
+        setStatus("已在故事起點", 1400);
         return;
       }
       historyStack.pop();
@@ -1285,24 +1884,44 @@
       currentId = "HS_G_001";
       historyStack = ["HS_G_001"];
       visitedCards = new Set(["HS_G_001"]);
+      currentQuery = "";
+      lastSearchResults = [];
+      document.getElementById("search-input").value = "";
+      document.getElementById("note-input").value = "";
       renderScene("重新開始");
       renderGraph();
       renderStoryTreeIfOpen();
+      renderSearchResults([], "");
       updateBackButtonState();
+      updateCasePanel();
       saveProgress(true);
+    }
+
+    function updateCasePanel() {
+      const node = story[currentId];
+      const total = allCardIds.length;
+      document.getElementById("case-stat").textContent = `已解鎖 ${visitedCards.size} / ${total}`;
+      document.getElementById("case-current").textContent = currentId;
+      document.getElementById("case-current-title").textContent = node.title;
+      document.getElementById("case-viewed").textContent = `${visitedCards.size} / ${total}`;
+      document.getElementById("case-last-query").textContent = currentQuery || "--";
+      document.getElementById("case-range").textContent = `${getClipDate(allCardIds[0])} ~ ${getClipDate(allCardIds[allCardIds.length - 1])}`;
+      document.getElementById("hud-file").textContent = `FILE ${currentId} / ${getClipDate(currentId)}`;
+      document.getElementById("hud-timecode").textContent = `TC ${getTimecode(currentId)}`;
+      document.getElementById("hud-keyword").textContent = `QUERY: ${currentQuery || "--"}`;
     }
 
     function renderScene(extraMeta = "") {
       const node = story[currentId];
       document.getElementById("story-title").textContent = node.title;
       document.getElementById("story-meta").textContent =
-        `編號：${currentId}　|　標籤：${node.tags.join(" / ")}${extraMeta ? "　|　" + extraMeta : ""}`;
-      renderKeywordChips();
+        `編號：${currentId} | 標籤：${node.tags.join(" / ")}${extraMeta ? " | " + extraMeta : ""}`;
+
+      renderQuickKeywords();
       typewriteText(node.text);
 
       const choicesEl = document.getElementById("choices");
       choicesEl.innerHTML = "";
-
       node.choices.forEach(choice => {
         const btn = document.createElement("button");
         btn.className = "choice-btn";
@@ -1321,10 +1940,10 @@
 
       const center = { x: 50, y: 50 };
       const positions = [
-        { x: 50, y: 18 },
-        { x: 20, y: 50 },
-        { x: 80, y: 50 },
-        { x: 50, y: 82 },
+        { x: 50, y: 15 },
+        { x: 19, y: 50 },
+        { x: 81, y: 50 },
+        { x: 50, y: 85 },
         { x: 28, y: 22 },
         { x: 72, y: 22 }
       ];
@@ -1333,7 +1952,6 @@
       panel.appendChild(centerNode);
 
       const targets = story[currentId].choices.slice(0, 6).map(c => c.target);
-
       targets.forEach((targetId, i) => {
         const p = positions[i];
         const n = makeNode(targetId, story[targetId].title, p.x, p.y, false);
@@ -1362,9 +1980,9 @@
       line.setAttribute("y1", (y1p / 100) * h);
       line.setAttribute("x2", (x2p / 100) * w);
       line.setAttribute("y2", (y2p / 100) * h);
-      line.setAttribute("stroke", "#64748b");
-      line.setAttribute("stroke-width", "2");
-      line.setAttribute("opacity", "0.9");
+      line.setAttribute("stroke", "#5b7388");
+      line.setAttribute("stroke-width", "1.8");
+      line.setAttribute("opacity", "0.85");
       svg.appendChild(line);
     }
 
@@ -1412,29 +2030,48 @@
       if (!modal.hidden) renderStoryTree();
     }
 
-    window.addEventListener("resize", renderGraph);
-    window.addEventListener("pointerdown", primeAudio, { once: true });
-    window.addEventListener("keydown", primeAudio, { once: true });
-    window.addEventListener("keydown", evt => {
-      if (evt.key === "Escape") closeStoryTree();
-    });
+    function bindEvents() {
+      window.addEventListener("resize", renderGraph);
+      window.addEventListener("pointerdown", primeAudio, { once: true });
+      window.addEventListener("keydown", primeAudio, { once: true });
+      window.addEventListener("keydown", evt => {
+        if (evt.key === "Escape") closeStoryTree();
+      });
 
-    document.getElementById("btn-back").addEventListener("click", goBack);
-    document.getElementById("btn-restart").addEventListener("click", restartStory);
-    document.getElementById("btn-save").addEventListener("click", () => saveProgress(true));
-    document.getElementById("btn-load").addEventListener("click", () => loadProgress(true));
-    document.getElementById("btn-tree").addEventListener("click", openStoryTree);
-    document.getElementById("btn-tree-close").addEventListener("click", closeStoryTree);
-    document.getElementById("tree-modal").addEventListener("click", evt => {
-      if (evt.target.id === "tree-modal") closeStoryTree();
-    });
+      document.getElementById("btn-back").addEventListener("click", goBack);
+      document.getElementById("btn-restart").addEventListener("click", restartStory);
+      document.getElementById("btn-save").addEventListener("click", () => saveProgress(true));
+      document.getElementById("btn-load").addEventListener("click", () => loadProgress(true));
+      document.getElementById("btn-tree").addEventListener("click", openStoryTree);
+      document.getElementById("btn-tree-close").addEventListener("click", closeStoryTree);
+      document.getElementById("tree-modal").addEventListener("click", evt => {
+        if (evt.target.id === "tree-modal") closeStoryTree();
+      });
 
+      document.getElementById("search-form").addEventListener("submit", evt => {
+        evt.preventDefault();
+        primeAudio();
+        const input = document.getElementById("search-input").value;
+        performSearch(input, { openFirst: false });
+      });
+
+      const noteInput = document.getElementById("note-input");
+      noteInput.addEventListener("input", () => {
+        if (noteTimer) clearTimeout(noteTimer);
+        noteTimer = setTimeout(() => saveProgress(false), 320);
+      });
+    }
+
+    bindEvents();
     updateLoadButtonState();
+
     const resumed = loadProgress(false);
     if (!resumed) {
-      renderScene();
+      renderScene("系統初始化完成");
       renderGraph();
+      renderSearchResults([], "");
       updateBackButtonState();
+      updateCasePanel();
       saveProgress(false);
     }
   </script>
