@@ -6,15 +6,16 @@
   <title>年計劃九宮入口</title>
   <style>
     :root {
-      --bg: #090907;
-      --panel: #15130f;
-      --panel-2: #1d1a14;
-      --text: #f5efe3;
-      --muted: #b8aa91;
-      --gold: #d8ad63;
-      --line: rgba(216,173,99,.24);
-      --shadow: 0 18px 45px rgba(0,0,0,.45);
-      --radius: 22px;
+      --bg: #f5f5f7;
+      --surface: rgba(255, 255, 255, .74);
+      --surface-strong: rgba(255, 255, 255, .92);
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: rgba(0, 0, 0, .08);
+      --accent: #0071e3;
+      --accent-soft: rgba(0, 113, 227, .09);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .07);
+      --radius: 26px;
     }
 
     * { box-sizing: border-box; }
@@ -23,71 +24,19 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
       background:
-        radial-gradient(circle at 20% 0%, rgba(216,173,99,.16), transparent 36%),
-        linear-gradient(120deg, #090907, #11100d 55%, #050505);
+        radial-gradient(circle at 50% -10%, rgba(255,255,255,.95), transparent 38%),
+        linear-gradient(180deg, #fbfbfd 0%, var(--bg) 56%, #ececf0 100%);
       color: var(--text);
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; text-decoration: none; }
 
     .layout {
-      display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
-      gap: 16px;
-      max-width: 1180px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 14px 16px 24px;
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 14px;
-      align-self: start;
-      border: 1px solid var(--line);
-      background: rgba(15,14,11,.72);
-      backdrop-filter: blur(14px);
-      border-radius: var(--radius);
-      padding: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand {
-      font-size: 10px;
-      letter-spacing: .22em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .side-title {
-      font-size: 20px;
-      line-height: 1.08;
-      font-weight: 700;
-      margin: 0 0 10px;
-    }
-
-    .nav {
-      display: grid;
-      gap: 2px;
-    }
-
-    .nav a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 7px 8px;
-      border-radius: 14px;
-      color: var(--muted);
-      background: transparent;
-      border: 1px solid transparent;
-      font-size: 12px;
-    }
-
-    .nav a:hover {
-      color: var(--text);
-      border-color: var(--line);
-      background: rgba(216,173,99,.08);
+      padding: 20px 18px 28px;
     }
 
     .main {
@@ -97,76 +46,51 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
+      gap: 10px;
     }
 
     .card {
-      min-height: 128px;
-      border-radius: 16px;
+      min-height: 130px;
+      border-radius: 22px;
       border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.01)),
-        var(--panel);
-      padding: 11px 12px;
+      background: var(--surface-strong);
+      padding: 13px 14px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 12px 32px rgba(0,0,0,.24);
+      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 20% 10%, rgba(216,173,99,.18), transparent 42%);
-      opacity: .8;
-      pointer-events: none;
-    }
-
     .card > * { position: relative; z-index: 1; }
 
     .num {
-      color: var(--gold);
-      font-size: 9px;
-      letter-spacing: .16em;
-      opacity: .9;
-    }
-
-    .tag {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      border: 1px solid rgba(245,239,227,.24);
-      color: rgba(245,239,227,.82);
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      color: var(--muted);
+      background: rgba(0,0,0,.035);
       border-radius: 999px;
-      padding: 3px 7px;
-      font-size: 8px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      padding: 3px 7px 4px;
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: .04em;
     }
 
     .card h2 {
-      margin: 16px 0 3px;
-      font-size: 23px;
-      line-height: 1;
-      letter-spacing: -.04em;
-    }
-
-    .repo {
-      color: var(--gold);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 9px;
-      margin-bottom: 4px;
-      word-break: break-all;
+      margin: 12px 0 5px;
+      font-size: 28px;
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 760;
     }
 
     .desc {
       color: var(--muted);
-      line-height: 1.35;
-      font-size: 10px;
-      margin: 0 0 6px;
+      line-height: 1.4;
+      font-size: 11px;
+      margin: 0 0 10px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -174,69 +98,43 @@
 
     .actions {
       display: flex;
-      gap: 5px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
     .btn {
-      border: 1px solid var(--line);
-      background: rgba(216,173,99,.08);
+      border: 1px solid transparent;
+      background: rgba(0,0,0,.045);
       border-radius: 999px;
-      padding: 4px 7px;
-      font-size: 9px;
-      color: var(--text);
+      padding: 5px 8px;
+      font-size: 10px;
+      color: #3a3a3c;
+      font-weight: 560;
       white-space: nowrap;
-      transition: border-color .18s ease, background .18s ease;
+      transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease;
     }
 
     .btn:hover,
     .btn:focus-visible {
-      border-color: rgba(216,173,99,.68);
-      background: rgba(216,173,99,.18);
+      color: var(--accent);
+      border-color: rgba(0,113,227,.22);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
       outline: none;
     }
 
     .center-card {
-      background:
-        radial-gradient(circle at 50% 30%, rgba(216,173,99,.30), transparent 48%),
-        linear-gradient(180deg, rgba(216,173,99,.18), rgba(255,255,255,.02)),
-        var(--panel-2);
-      border-color: rgba(216,173,99,.45);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+      border-color: rgba(0,113,227,.18);
     }
 
     .center-card h2 {
-      color: var(--gold);
-      font-size: 25px;
+      color: var(--accent);
     }
 
     @media (max-width: 860px) {
       .layout {
-        display: block;
-        padding: 16px 12px 44px;
-      }
-
-      .sidebar {
-        position: static;
-        margin-bottom: 16px;
-        padding: 14px;
-      }
-
-      .side-title {
-        font-size: 20px;
-        margin-bottom: 12px;
-      }
-
-      .nav {
-        display: flex;
-        overflow-x: auto;
-        gap: 8px;
-        padding-bottom: 4px;
-      }
-
-      .nav a {
-        white-space: nowrap;
-        flex: 0 0 auto;
-        font-size: 13px;
+        padding: 14px 12px 34px;
       }
 
       .grid {
@@ -244,28 +142,18 @@
       }
 
       .card {
-        min-height: 180px;
+        min-height: 160px;
         padding: 16px;
-        border-radius: 20px;
       }
 
       .card h2 {
-        margin-top: 30px;
-        font-size: 34px;
-      }
-
-      .center-card h2 {
-        font-size: 38px;
-      }
-
-      .repo {
-        font-size: 11px;
-        margin-bottom: 8px;
+        margin-top: 18px;
+        font-size: 32px;
       }
 
       .desc {
         font-size: 13px;
-        line-height: 1.55;
+        line-height: 1.5;
         margin-bottom: 12px;
         white-space: normal;
       }
@@ -279,102 +167,13 @@
 </head>
 <body>
   <div class="layout">
-    <aside class="sidebar">
-      <div class="brand">Project Menu</div>
-      <h2 class="side-title">左邊目錄<br>中間卡片</h2>
-      <nav class="nav">
-        <a href="#book">寫書 <span>01</span></a>
-        <a href="#guitar">吉他 <span>02</span></a>
-        <a href="#japanese">日文 <span>03</span></a>
-        <a href="#reading">讀書筆記 <span>04</span></a>
-        <a href="#life">年計劃 <span>05</span></a>
-        <a href="#buddhism">佛教 <span>06</span></a>
-        <a href="#family">家庭 <span>07</span></a>
-        <a href="#health">健康 <span>08</span></a>
-        <a href="#choir">合唱團 <span>09</span></a>
-      </nav>
-    </aside>
-
     <main class="main">
       <section class="grid">
-        <article class="card" id="book">
-          <div>
-            <div class="num">01</div>
-            <div class="tag">Writing</div>
-            <h2>寫書</h2>
-            <div class="repo">book-mandala-system</div>
-            <p class="desc">第三本書、九宮格、AI 協作、章節卡片與長文整理。</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20book-mandala-system">book-mandala</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20third-book-writing-system">third-book</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20article-outline-system">建立文章大綱</a>
-          </div>
-        </article>
-
-        <article class="card" id="guitar">
-          <div>
-            <div class="num">02</div>
-            <div class="tag">Music</div>
-            <h2>吉他</h2>
-            <div class="repo">guitar-score-site</div>
-            <p class="desc">歌詞、和弦、小抄、演出曲目，做成可以練習與教學的網站。</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="codex://threads/019e95b4-a340-75f2-82ad-83324f5dbc8a">吉他譜＋AI</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20guitar-score-revision">吉他修正建議</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20yongxi-guitar-site">永錫吉他網站</a>
-          </div>
-        </article>
-
-        <article class="card" id="japanese">
-          <div>
-            <div class="num">03</div>
-            <div class="tag">Language</div>
-            <h2>日文</h2>
-            <div class="repo">japanese-learning-notes</div>
-            <p class="desc">JLPT N5/N4、大家的日本語、歌曲學日文與文型整理。</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20japanese-learning-notes">japanese-learning</a>
-          </div>
-        </article>
-
-        <article class="card" id="reading">
-          <div>
-            <div class="num">04</div>
-            <div class="tag">Notes</div>
-            <h2>讀書筆記</h2>
-            <div class="repo">reading-notes-system</div>
-            <p class="desc">把書、卡片盒與重點摘要整理成可回看的知識網絡。</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20reading-notes-system">reading-notes</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20ai-knowledge-library">AI 向量庫</a>
-          </div>
-        </article>
-
-        <article class="card center-card" id="life">
-          <div>
-            <div class="num">05</div>
-            <div class="tag">Core</div>
-            <h2>年計劃</h2>
-            <div class="repo">2026-life-map</div>
-            <p class="desc">中心是「絆」。把健康、工作、家庭、社群、學習等八領域串成生命地圖。</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%202026-life-map">2026-life-map</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20mandala-diary">mandala-diary</a>
-          </div>
-        </article>
-
         <article class="card" id="buddhism">
           <div>
-            <div class="num">06</div>
-            <div class="tag">Faith</div>
-            <h2>佛教</h2>
-            <div class="repo">buddhist-notes</div>
-            <p class="desc">法會、修行、東密、焰口與佛教資料整理入口。</p>
+            <div class="num">F</div>
+            <h2>人格／佛法</h2>
+            <p class="desc">修行、人格、佛法資料。</p>
           </div>
           <div class="actions">
             <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20buddhist-notes">buddhist-notes</a>
@@ -384,13 +183,60 @@
           </div>
         </article>
 
+        <article class="card" id="finance">
+          <div>
+            <div class="num">C</div>
+            <h2>財務／人脈</h2>
+            <p class="desc">收入、關係、資源流動。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20domain%3A%20finance-network">finance-network</a>
+          </div>
+        </article>
+
+        <article class="card" id="learning">
+          <div>
+            <div class="num">G</div>
+            <h2>學習</h2>
+            <p class="desc">語言、讀書、知識網絡。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20japanese-learning-notes">japanese-learning</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20reading-notes-system">reading-notes</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20ai-knowledge-library">AI 向量庫</a>
+          </div>
+        </article>
+
+        <article class="card" id="work">
+          <div>
+            <div class="num">B</div>
+            <h2>工作／寫書</h2>
+            <p class="desc">工作產出、書稿、文章。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20book-mandala-system">book-mandala</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20third-book-writing-system">third-book</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20article-outline-system">建立文章大綱</a>
+          </div>
+        </article>
+
+        <article class="card center-card" id="life">
+          <div>
+            <div class="num">2026</div>
+            <h2>2026年計劃</h2>
+            <p class="desc">以「絆」串起八領域。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%202026-life-map">2026-life-map</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20mandala-diary">mandala-diary</a>
+          </div>
+        </article>
+
         <article class="card" id="family">
           <div>
-            <div class="num">07</div>
-            <div class="tag">Family</div>
+            <div class="num">D</div>
             <h2>家庭</h2>
-            <div class="repo">family-travel-map</div>
-            <p class="desc">家庭旅行、照片故事、陪伴與共同記憶的整理網站。</p>
+            <p class="desc">旅行、照片、共同記憶。</p>
           </div>
           <div class="actions">
             <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20family-travel-map">family-travel</a>
@@ -398,13 +244,23 @@
           </div>
         </article>
 
+        <article class="card" id="society">
+          <div>
+            <div class="num">E</div>
+            <h2>社會</h2>
+            <p class="desc">社群、合唱、公共參與。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20choir-music-site">choir-music</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20choir-performance-system">choir-performance</a>
+          </div>
+        </article>
+
         <article class="card" id="health">
           <div>
-            <div class="num">08</div>
-            <div class="tag">Health</div>
+            <div class="num">A</div>
             <h2>健康</h2>
-            <div class="repo">health-recovery-log</div>
-            <p class="desc">羽球、跑步、網球肘、復健與身心狀態的追蹤紀錄。</p>
+            <p class="desc">運動、復健、身心紀錄。</p>
           </div>
           <div class="actions">
             <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20health-recovery-log">health-recovery</a>
@@ -413,17 +269,16 @@
           </div>
         </article>
 
-        <article class="card" id="choir">
+        <article class="card" id="leisure">
           <div>
-            <div class="num">09</div>
-            <div class="tag">Choir</div>
-            <h2>合唱團</h2>
-            <div class="repo">choir-music-site</div>
-            <p class="desc">合唱、曲目、演出與社區音樂活動整理。</p>
+            <div class="num">H</div>
+            <h2>休閒</h2>
+            <p class="desc">吉他、音樂、旅行休息。</p>
           </div>
           <div class="actions">
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20choir-music-site">choir-music</a>
-            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20choir-performance-system">choir-performance</a>
+            <a class="btn" href="codex://threads/019e95b4-a340-75f2-82ad-83324f5dbc8a">吉他譜＋AI</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20guitar-score-revision">吉他修正建議</a>
+            <a class="btn" href="codex://threads/new?path=%2FUsers%2Ftwhsi%2F%2B%2B%2B%20000%20AI%E5%90%91%E9%87%8F%E5%BA%AB&amp;prompt=Open%20project%3A%20yongxi-guitar-site">永錫吉他網站</a>
           </div>
         </article>
       </section>
